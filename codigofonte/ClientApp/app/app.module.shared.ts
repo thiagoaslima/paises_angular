@@ -27,6 +27,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'sandbox', loadChildren: './sandbox/sandbox.module#SandboxModule' },
             { path: '**', redirectTo: 'home' }
         ])
     ]
