@@ -1,12 +1,15 @@
 {
-  "name": "Paises",
+  "name": "paises",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "webpack": "./node_modules/.bin/webpack",
     "test": "karma start ClientApp/test/karma.conf.js",
-    "prestart": "npm run webpack -- --config webpack.config.vendor.js && webpack --config webpack.config.js",
-    "start": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
+    "prestart": "npm run webpack -- --config webpack.config.vendor.js",
+    "dev:build": "webpack --config webpack.config.js --watch",
+    "dev:serve": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
+    "start": "./node_modules/.bin/concurrently \"npm run dev:build\" \"npm run dev:serve\"",
+    "start:prerender": "./node_modules/.bin/concurrently \"npm run dev:build\" \"dotnet run\"",
     "build": "npm run version && npm run webpack -- --env.prod --config webpack.config.vendor.js && npm run webpack -- --env.prod --config webpack.config.js",
     "version": "./node_modules/.bin/ibge-version ./ClientApp/app/version.json"
   },
@@ -55,10 +58,13 @@
     "zone.js": "0.8.12"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.2.5.tgz",
+    "@angular/platform-server": "https://registry.npmjs.org/@angular/platform-server/-/platform-server-4.2.5.tgz",
     "@types/chai": "4.0.1",
     "@types/jasmine": "2.5.53",
     "angular-router-loader": "^0.6.0",
     "chai": "4.0.2",
+    "concurrently": "^3.5.0",
     "ibge-version": "^0.1.2",
     "jasmine-core": "2.6.4",
     "karma": "1.7.0",
