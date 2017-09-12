@@ -1,3 +1,4 @@
+import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
 import { PaisesService } from './paises.service';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { NgModule } from '@angular/core';
     declarations: [],
     providers: [
         PaisesService,
-        PesquisasService
+        PesquisasService,
+        TraducaoService
     ],
 })
 export class ServicesModule { }

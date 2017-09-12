@@ -1,3 +1,4 @@
+import { TemaComponent } from './tema/tema.component';
 import { TabelaComponent } from './tabela.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,8 @@ export const ROUTES: Routes = [
 
 export const COMPONENTS = [
     SandboxComponent,
-    TabelaComponent
+    TabelaComponent,
+    TemaComponent
 ];
 
 @NgModule({

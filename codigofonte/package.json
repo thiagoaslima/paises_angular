@@ -73,6 +73,7 @@
     "karma-cli": "1.0.1",
     "karma-jasmine": "1.1.0",
     "karma-webpack": "2.0.3",
+    "properties-loader": "0.0.1",
     "webpack-dev-server": "^2.7.1"
   }
 }
