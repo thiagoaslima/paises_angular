@@ -1,2 +1,3 @@
 hello_world:
-  script: "npm run hello_world"
+  script: "cd codigofonte && npm run hello_world"
+  when: manual
