@@ -1,0 +1,2 @@
+hello_world:
+  script: "npm run hello_world"
