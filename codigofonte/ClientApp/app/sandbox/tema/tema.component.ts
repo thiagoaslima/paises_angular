@@ -1,36 +1,51 @@
+import { Observable } from 'rxjs/Rx';
 import { PaisesService } from '../../services/paises.service';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
     selector: 'ibge-tema',
     template: `
-        <ibge-tabela *ngIf="model.retorno" [metadata]="model.retorno.metadata" [resultados]="model.retorno.resultados"></ibge-tabela>
-
-        <span>{{ model | json }}</span>
+        <ibge-item-tema *ngFor="let item of model.itens" [config]="item.config" [resultado]="item.retorno"></ibge-item-tema>
     `
 })
 
-export class TemaComponent implements OnInit {
+export class TemaComponent implements OnInit, OnChanges {
 
-    public model: any;
+    public model: any = {
+        itens: []
+    };
+
+    @Input() config: any[];
 
     constructor(
         private _paisesServ: PaisesService
     ) { }
 
     ngOnInit() {
-        this.model = {};
-        this._paisesServ.getResultados(
-            {
-                servico: "pesquisas",
-                identificador: {
-                    pesquisaId: "10058",
-                    indicadorId: "0",
-                    localidadeId: "280030"
-                }
-            }
-        ).subscribe((retorno) => {
-            this.model.retorno = retorno;
+    }
+    
+    public ngOnChanges(changes: SimpleChanges): void {
+        if(changes.config) {
+            this.atualizaTema();
+        }
+    }
+
+    atualizaTema() {
+        this.model.itens = [];
+
+        let itens$ = this.config.map((item) => {
+            return this._paisesServ.getResultados(item)
+        });
+
+        Observable.zip(
+            ...itens$
+        ).subscribe((retornos) => {
+            retornos.forEach((retorno, index) => {
+                this.model.itens.push({
+                    config: this.config[index],
+                    retorno: retorno
+                });
+            });
         });
     }
 }

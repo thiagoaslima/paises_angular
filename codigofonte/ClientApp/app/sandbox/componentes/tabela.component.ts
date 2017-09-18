@@ -1,5 +1,6 @@
+import { ItemTema } from './item-tema.component';
 import { SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
-import { MetadataResultado, Resultado } from '../services/resultado.model';
+import { MetadataResultado, Resultado } from '../../services/resultado.model';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
@@ -16,7 +17,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
             <td>{{ resultado.id }}</td>
             <td>{{ resultado.valor }}</td>
             <td>{{ resultado.periodo }}</td>
-            <td>{{ metadataPorId[resultado.id] | json }}</td>
+            <td>{{ metadata[resultado.id] | json }}</td>
         </tr>
     </table>
     `,
@@ -27,21 +28,15 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
     ]
 })
 
-export class TabelaComponent implements OnInit, OnChanges {
+export class TabelaComponent implements ItemTema, OnInit, OnChanges {
     @Input() resultados: Resultado[];
-    @Input() metadata: MetadataResultado[];
+    @Input() metadata: { [metadataId: number]: MetadataResultado };
 
-    public metadataPorId: any;
-    
     constructor() { }
 
     ngOnInit() { }
 
 
-    public ngOnChanges(changes: SimpleChanges): void {
-        this.metadataPorId = {};
-        this.metadata.forEach((metadata) => {
-            this.metadataPorId[metadata.id] = metadata;
-        });
-    }
+    public ngOnChanges(changes: SimpleChanges): void { }
+    
 }

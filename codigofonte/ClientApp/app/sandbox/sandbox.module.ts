@@ -1,5 +1,8 @@
+import { ItemTemaDirective } from './componentes/item-tema.host';
+import { ItemTemaComponent } from './componentes/item-tema.component';
+import { ListaComponent } from './componentes/lista.component';
 import { TemaComponent } from './tema/tema.component';
-import { TabelaComponent } from './tabela.component';
+import { TabelaComponent } from './componentes/tabela.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,7 +16,10 @@ export const ROUTES: Routes = [
 export const COMPONENTS = [
     SandboxComponent,
     TabelaComponent,
-    TemaComponent
+    ListaComponent,
+    TemaComponent,
+    ItemTemaComponent,
+    ItemTemaDirective
 ];
 
 @NgModule({
@@ -23,7 +29,8 @@ export const COMPONENTS = [
     ],
     declarations: [
         ...COMPONENTS
-    ]
+    ],
+    entryComponents: [ TabelaComponent, ListaComponent ]
 })
 export class SandboxModule {
 
