@@ -1,0 +1,90 @@
+Países
+Site que reune conteúdo sobre todos os países e sobre ODS e ODM.
+
+1. Histórico
+Já existe uma versão do site desde XX e que foi reformulada com acréscimo dos dados e layout das olimpíadas na época da mesma.
+
+2. Objetivo
+Reformulação do site atual:
+	Retirar conteúdo sobre Olimpíadas
+	Acrescentar Conteúdo ODS e ODM (relevante, mas sem destaque)
+	Avaliar do conteúdo atual (acrescentar mais dados sobre os países?)
+	Avaliar layout e torná-lo mais atrativo
+	Criar Logotipo Países
+
+3. Público
+??
+Tudo mundo do mundo (internacional)
+
+4. Conceitos
+
+Conhecimento
+Relacionar / Concatenar
+Tecnologia
+Compartilhamento (disseminação de dados)
+
+
+5. Sugestões
+	Adicionar comparativos (ranking)
+	Adicionais gráficos
+	Avaliar possibilidades de interação
+	Tirar o link da fonte (links tiram a pessoa do site e pouco provável que ela retorno, melhor usar informações para download em pdf etc.)
+	Idioma ES
+
+
+6. Estrutura de Conteúdo
+	Síntese
+	Fuso Horário
+	Histórico
+	ODM
+	ODS
+	Etimologia
+	Meio Ambiente (Relevo, Hidrografia, Vegetação, Fauna)
+	Demografia (Cidades mais populosas, religiões)
+	Política
+	Cultura
+	Educação
+	Saúde
+	Fotos
+	...
+
+7. Plano de Divulgação
+Divulgar dentro do IBGE
+Making of
+Divulgar nas redes sociais do IBGE
+Divulgação escolas
+#
+Metadados (paises, para cada nome de paises), etc.
+
+8. Conteúdo Páginas
+
+	1.Página de entrada (conceito):
+		Gov
+		IBGE
+		Logo paises
+		Redes Sociais (Do IBGE ou do Site Países?)
+		Busca por Países, Busca por Indicador??
+		*Texto de Apresentação
+
+	2.1 Página Mapa (click na tela): (obs: ainda não apareceu sobre ODM ODS)
+		Gov
+		IBGE
+		Logo paises
+		Redes Sociais (Do IBGE ou do Site Países?)
+		Busca por Países, Busca por Indicador??
+		*Mapa Cartográfico (pode selecionar por país nou na ferramenta de busca)(link lateral de opções para bandeiras e alterações de cores?)
+		*Cards com chamadas para Dados, ODS e ODM
+	2.2 Página País
+		Gov
+		IBGE
+		Logo paises
+		Redes Sociais (Do IBGE ou do Site Países?)
+		Busca por Países, Busca por Indicador??
+		Nome do País selecionado (estrela como opção de favoritar)
+		Nome do Indicador (inicia com síntese caso não tenha sido escolhido um indicador anteriormente)
+		Imagens: Bandeira, Mapa país, Moeda
+
+
+
+
+
