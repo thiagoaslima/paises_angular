@@ -1,0 +1,372 @@
+html,body{
+margin:0px;
+height:100%;
+}
+
+body {
+    font-size: 62.5%;
+    line-height: 1.5;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+}
+
+*:focus {outline:none;}
+
+span.some {
+	display:none;
+}
+
+th {
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	font-style:normal;
+}
+
+h2 {
+	font-size:1.5em;
+	margin:0;
+	font-weight:normal;
+	display:inline;
+}
+
+@font-face {
+     font-family: Roboto;
+     src: url('../Roboto.ttf');
+}
+@font-face {
+     font-family: RobotoMedium;
+     src: url('../Roboto-Medium.ttf');
+}
+@font-face {
+     font-family: RobotoBold;
+     src: url('../Roboto-Bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #4f4f4f;;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+	height:100%;
+	width:100%;
+	background-color:#4f4f4f;
+}
+
+header {
+	width:100%;
+}
+
+header div.topo-logomobile {
+	float:left;
+	background:url(../imagens/topo-logomobile.svg) no-repeat;
+	height:20px;
+	width:155px;
+	margin:10px 0 0 5px;
+}
+
+.grad {
+	height:40px;
+  background: #3bb2b8; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #42e695, #3bb2b8); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #42e695, #3bb2b8); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #42e695, #3bb2b8); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #42e695, #3bb2b8); /* Standard syntax */  
+}
+
+
+.container-home {
+	background:#4f4f4f url(../imagens/home-bgmobile.png) no-repeat center;
+	min-height:520px;
+}
+
+section.home {
+	background:url(../imagens/home-info-icone.svg) no-repeat top center;
+	margin-top:30px;
+}
+
+section.home p {
+	color:#fff;
+	font-size:1.4em;
+	text-align:center;
+	padding:75px 50px 0 50px;
+	line-height:1.8em;
+}
+
+.topo-tit {
+	background-color:#4f4f4f;
+	height:40px;
+	color:#fff;
+	padding:0px 0 0 8px;
+}
+
+.topo-tit span {
+	font-size:2.5em;
+	font-weight:bold;
+}
+
+.topo-tit span:first-child  {
+	margin:0 10px 0 0;
+}
+
+span.right {
+	float:right;
+	margin:0 10px;
+	font-size:1em;
+}
+
+table {
+	font-size:1.3em;
+	width:100%;
+	background-color:#fff;
+}
+.pure-table-horizontal tbody>tr:last-child>th {
+	border-bottom-width:0;
+}
+
+/********** RANKING **********/
+.container-ranking table thead tr th {
+	padding-top:30px !important;
+}
+.container-ranking  table tr.selecionado {
+	background-color:#f9f9f9;
+	font-weight:bold;
+	border-top:2px solid #c0c0c0;	
+}
+.container-ranking table tr.destaque {
+	font-weight:bold;
+}
+.container-ranking table thead tr {
+	background-color:#fff;
+	font-weight:normal;	
+}
+.container-ranking table tr td:first-child, table thead tr th:first-child {
+	text-align:right;
+}
+/********** FIM DO RANKING **********/
+
+
+
+
+/********** PAIS **********/
+.container-pais div.sintese-tabela {
+	background-color:#4f4f4f;
+	width:100%;
+}
+.container-pais div.sintese-tabela table {
+	width:90%;
+	background-color:#4f4f4f;
+	color:#fff;
+	margin:0 auto;
+}
+.container-pais th {
+	text-align:left;	
+}
+.container-pais table.pure-table {
+	border:0;
+	margin-top:10px;
+}
+.container-pais table.pure-table-horizontal td, .container-pais table.pure-table-horizontal th {
+	border-bottom:1px solid #cbcbcb;
+}
+.container-pais .topo-tit h2 {
+	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
+	background-size:30%;
+	display:inline-block;
+	padding-left:35px;
+	font-size:1.6em;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
+.container-pais table {
+	background-color:transparent;
+}
+.grafico-economia {
+	background-image:url(../imagens/grafico_economia.svg);
+	width:260px;
+	height:125px;
+	margin:10px auto 30px auto;
+}
+/********** FIM DO PAIS **********/
+
+
+
+
+/********** ODS **********/
+.container-ods nav {
+	display:block;
+	background-image:url(../imagens/ods-icones.svg);
+	height:50px;
+	border-bottom:1px solid #f1f1f1;
+}
+.container-ods section, .container-sintese section {
+	background-color:#fff;
+	height:100%;
+}
+/********** FIM DO RANKING **********/
+
+
+
+/********** BUSCA **********/
+header div.topo-busca {
+	width:100%;
+	height:34px;
+	border:0;
+}
+header div.topo-busca input {
+	width:100%;
+	height:34px;
+	border:0;
+	margin:0;
+	padding:10px;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+input[type=text] {
+  width: 188px;
+  height: 16px;
+  font-family: serif;
+}
+/* webkit solution */
+::-webkit-input-placeholder { 
+  font-family: FontAwesome;
+  text-align:right; 
+}
+/* mozilla solution */
+input:-moz-placeholder { 
+  font-family: FontAwesome;
+  text-align:right; 
+}
+/********** FIM DA BUSCA **********/
+
+
+
+
+/********** DROPDOWN MENU **********/
+.dropbtn {
+    color: #fff;
+	font-size:2.3em;
+	line-height:1.2em;
+	font-weight:bold;
+    padding: 0 10px 0 0;
+    border: none;
+    cursor: pointer;
+	background-color:transparent;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+	float:right;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+	font-size:1.2em;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/********** FIM DO DROPDOWNMENU **********/
+
+
+/********** SUBMENU **********/
+button.accordion {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 15px 15px;
+    width: 100%;
+	border:none;
+	border-bottom: 1px solid #6bd1b4;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    transition: 0.4s;
+	text-transform:uppercase;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
+button.accordion:last-child {
+	border-bottom:none;
+}
+
+button.accordion:first-child {
+	padding-top:20px;
+}
+button.accordion.active, button.accordion:hover {
+    background-color: #42e695;
+}
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active:after {
+    content: "\2212";
+}
+div.panel {
+    padding: 0 18px;
+    background-color: #f1f1f1;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+div.panel p {
+	font-size:1.3em;
+	line-height:1.8em;
+}
+/********** FIM DO SUBMENU **********/
+
+
+
+  
+
+
+
+/* ==========================================================================
+   Media Queries - Mobile First
+   ========================================================================== */
+
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }

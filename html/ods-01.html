@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PAÍSES - ODS - Objetivo 01</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				
+	<script src="https://use.fontawesome.com/b472298bec.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+<div class="container container-ods">
+
+	<header>
+    	<div class="grad">
+        	<div class="topo-logomobile"><span class="some">PAÍSES IBGE</span></div>
+        	<div class="dropdown">
+        		<button class="dropbtn">...</button>
+                <div class="dropdown-content">
+                <a href="#">TELA INICIAL</a>
+                <a href="#">ODS</a>
+                <a href="#">ENGLISH</a>
+                <a href="#">ESPAÑOL</a>
+                </div>
+			</div>
+        </div>
+        
+        <div class="topo-busca"><input type="text" placeholder="&#xF002;" class="fa-2x" value="" tabindex="1" autocomplete="off"></div>
+        <div class="topo-tit"><span>‹</span><h2>Objetivos do Desenvolvimento Sustentável</h2>        
+    </header>
+    
+    <nav></nav>
+    
+    <section>
+	<p><h3>Objetivo 1. Acabar com a pobreza em todas as suas formas, em todos os lugares</h3></p>
+    </section>
+    
+    
+    
+</div><!-- FECHA CONTAINER -->
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+</body>
+</html>
