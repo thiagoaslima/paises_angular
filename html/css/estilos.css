@@ -325,7 +325,7 @@ button.accordion.active:after {
 div.panel {
     padding: 0 18px;
     background-color: #f1f1f1;
-    max-height: 0;
+    max-height: 100%; /********** AQUI **********/
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
