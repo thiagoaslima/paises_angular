@@ -28,6 +28,9 @@ h2 {
 	font-weight:normal;
 	display:inline;
 }
+h3 {
+	font-weight:normal;
+}
 .topo-tit h2 {
 	display:inline-block;	
 }
@@ -208,6 +211,38 @@ button#myBtn {
 	margin:10px auto 30px auto;
 }
 /********** FIM DO PAIS **********/
+
+
+
+
+/********** COMPARAR PAIS **********/
+.container-comparar {
+	background-color:#4f4f4f;
+}
+.container-comparar h3 {
+	color:#fff;
+}
+.container-comparar form select {
+	width:100%;
+	padding:7px;
+	font-size:1.3em;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
+.container-comparar form select option {
+	height:30px;
+}
+.container-comparar fieldset {
+	margin:0;
+	border:0;
+	padding:0;
+}
+.comparar-grafico {
+	background-image:url(../imagens/grafico-comparar.svg);
+	height:367px;
+	width:350px;
+	margin:20px auto;
+}
+/********** FIM DO COMPARAR PAIS **********/
 
 
 
