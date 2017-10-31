@@ -28,7 +28,9 @@ h2 {
 	font-weight:normal;
 	display:inline;
 }
-
+.topo-tit h2 {
+	display:inline-block;	
+}
 @font-face {
      font-family: Roboto;
      src: url('../Roboto.ttf');
@@ -106,11 +108,13 @@ section.home p {
 	height:40px;
 	color:#fff;
 	padding:0px 0 0 8px;
+	display:inline-block;
 }
 
 .topo-tit span {
 	font-size:2.5em;
 	font-weight:bold;
+	display:inline-block;
 }
 
 .topo-tit span:first-child  {
@@ -335,10 +339,18 @@ div.panel p {
 }
 /********** FIM DO SUBMENU **********/
 
-
-
-  
-
+/********** ODS 1 **********/
+.texto-ods{
+	font-size:1.3em;
+	line-height:1.8em;
+	padding:0 18px;
+}
+h3 {
+	font-size:1.3em;
+	margin:12px 18px 0 18px;
+	display:inline-block;
+}
+/********** FIM ODS 1 **********/
 
 
 /* ==========================================================================
