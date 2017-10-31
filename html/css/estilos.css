@@ -139,14 +139,21 @@ table {
 	border-bottom-width:0;
 }
 
-button#myBtn {
+/*button#myBtn {
 	background-color:#fff;
 	border:0;
 	margin:5px;
 	float:right;
 	font-weight:bold;
 }
-
+*/
+button#myBtn {
+	background:url(../imagens/bandeiras/brasil.gif) no-repeat 1%;
+	width:30px;
+	height:21px;
+	border:0;
+	background-size:contain;
+	}
 
 /********** RANKING **********/
 .container-ranking table thead tr th {
@@ -194,10 +201,8 @@ button#myBtn {
 	border-bottom:1px solid #cbcbcb;
 }
 .container-pais .topo-tit h2 {
-	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
-	background-size:30%;
 	display:inline-block;
-	padding-left:35px;
+	padding-left:7px;
 	font-size:1.6em;
 	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
 }
@@ -417,8 +422,6 @@ h3 {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 0 20px 20px 20px;
-    border: 1px solid #888;
     width: 90%;
 	font-size:1.1em;
 }
@@ -439,6 +442,92 @@ h3 {
 }
 /********** FIM DO MODAL **********/
 
+/********** MODAL BANDEIRA**********/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    top: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #4f4f4f;
+    color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	background-image:url(../imagens/bandeiras/brasil.gif);
+	width:429px;
+	height:302px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+/********** FIM DO MODAL BANDEIRA**********/
 
 
 
