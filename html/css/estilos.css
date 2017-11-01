@@ -148,7 +148,7 @@ table {
 }
 */
 button#myBtn {
-	background:url(../imagens/bandeiras/brasil.gif) no-repeat 1%;
+	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
 	width:30px;
 	height:21px;
 	border:0;
