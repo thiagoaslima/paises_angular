@@ -139,21 +139,20 @@ table {
 	border-bottom-width:0;
 }
 
-/*button#myBtn {
-	background-color:#fff;
-	border:0;
-	margin:5px;
-	float:right;
-	font-weight:bold;
-}
-*/
 button#myBtn {
 	background:url(../imagens/bandeiras/brasil.gif) no-repeat 1%;
 	width:30px;
 	height:21px;
 	border:0;
 	background-size:contain;
-	}
+}
+button#myBtnFontes {
+	background-color:#fff;
+	border:0;
+	margin:5px;
+	float:right;
+	font-weight:bold;
+}
 
 /********** RANKING **********/
 .container-ranking table thead tr th {
@@ -436,7 +435,7 @@ h3 {
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #42e695!important; 
     text-decoration: none;
     cursor: pointer;
 }
@@ -473,6 +472,9 @@ h3 {
 }
 
 /* The Close Button */
+span.close {
+    font-size: 20px;
+}
 .close {
     color: white;
     float: right;
@@ -490,7 +492,8 @@ h3 {
 .modal-header {
     padding: 2px 16px;
     background-color: #4f4f4f;
-    color: white;
+    color: #fff;
+	font-size:1.2em;
 }
 
 .modal-body {
