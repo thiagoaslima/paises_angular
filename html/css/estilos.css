@@ -550,8 +550,22 @@ span.close {
 
     }
 
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
+    /* Small Devices, Tablets 768px*/
+    @media only screen and (min-width : 48em) {
+		.container-home {
+			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;
+		}
+		section.home {
+			background-size: contain;
+		}
+		section.home p {
+		font-size:1.8em;
+		padding:60px;
+		line-height:1.8em;
+		}
+
+		
+		
 
     }
 
