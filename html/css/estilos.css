@@ -12,10 +12,10 @@ body {
 
 *:focus {outline:none;}
 
-span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira, .historico-desktop  {
+span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .encolve-indicadores, .envolve-card  {
 	display:none;
 }
-
 th {
 	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
 	font-weight:normal;
@@ -186,10 +186,33 @@ table {
 }
 .historico-desktop {
 	background-color:#f4f4f4;
+	font-size:1.3em;
+	line-height:1.8em;
+	padding:10px 40px;
+	clear:both;
+	float:none;
+}
+.historico-desktop h3 {
+	font-size:1.1em;
+	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+	margin:0 0 5px 0;	
 }
 .historico-desktop p {
 	margin:0;
 	padding:0;
+}
+.historico-desktop p.centralizar {
+	text-align:center;
+	font-weight:bold;
+	font-size:0.9em;
+}
+.envolve-indicadores {
+	margin-top:50px;
+}
+.envolve-card {
+	width:97%;
+	border:1px solid #4f4f4f;
+	margin:7px auto;
 }
 button#myBtn {
 	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
@@ -623,7 +646,8 @@ span.close {
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .pais-foto {
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
+		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores {
 			display:block;
 		}
 		button.accordion, #myBtnFontes {
@@ -688,7 +712,7 @@ span.close {
 			float:right;						
 		}
 		.pais-foto {
-			background:url(../imagens/brasil-foto.jpg) center;
+			background:url(../imagens/brasil-foto.jpg) center left;
 			background-size:cover;
 			width:55%;
 			height:230px;
