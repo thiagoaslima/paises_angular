@@ -30,6 +30,11 @@ h2 {
 }
 h3 {
 	font-weight:normal;
+	font-size:1.4em;
+}
+h4 {
+	font-weight:normal;
+	font-size:1.3em;
 }
 .topo-tit h2 {
 	display:inline-block;	
@@ -185,21 +190,20 @@ table {
 	border-bottom-width:0;
 }
 .historico-desktop {
-	background-color:#f4f4f4;
-	font-size:1.3em;
-	line-height:1.8em;
+	background-color:#f4f4f4;	
 	padding:10px 40px;
 	clear:both;
 	float:none;
 }
 .historico-desktop h3 {
-	font-size:1.1em;
 	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
 	margin:0 0 5px 0;	
 }
 .historico-desktop p {
 	margin:0;
 	padding:0;
+	font-size:1.3em;
+	line-height:1.8em;
 }
 .historico-desktop p.centralizar {
 	text-align:center;
@@ -213,6 +217,36 @@ table {
 	width:97%;
 	border:1px solid #4f4f4f;
 	margin:7px auto;
+}
+.envolve-card small {
+    font-size: 1em;
+    line-height: 1.3em;
+    padding: 1em 2em;
+    display: block;
+	min-height:6em;
+}
+.envolve-card p {
+	font-size:2.3em;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	margin:0 15px 0 0;
+	text-align:right;
+	line-height:0.8em;
+}
+.envolve-card p span {
+	font-size:0.6em;
+	font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
+}
+.envolve-card .grafico-economia {
+	margin:0;
+}
+.envolve-card h3 {
+	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+}
+.envolve-card select.select-card {
+	font-size:1.3em;
+	margin-left:15px;
+	min-width:94%;
+	max-width:94%;
 }
 button#myBtn {
 	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
@@ -255,7 +289,7 @@ button#myBtnFontes {
 
 /********** PAIS **********/
 .pais-foto {
-	background:url(../imagens/brasil-foto.jpg) center;
+	background:url(../imagens/brasil-foto.jpg) center left;
 	background-size:cover;
 	float:left;
 
@@ -304,9 +338,15 @@ button#myBtnFontes {
 	background-color:transparent;
 }
 .grafico-economia {
-	background-image:url(../imagens/grafico_economia.svg);
-	width:260px;
-	height:125px;
+	background:url(../imagens/grafico_economia.svg) no-repeat;
+	width:400px;
+	height:200px;
+	margin:10px auto;
+}
+.envolve-card .grafico-economia {
+	background-size:100%;
+	width:auto;
+	height:300px;
 	margin:10px auto 30px auto;
 }
 /********** FIM DO PAIS **********/
@@ -489,7 +529,6 @@ div.panel p {
 	padding:0 18px;
 }
 h3 {
-	font-size:1.3em;
 	margin:12px 18px 0 18px;
 	display:inline-block;
 }
@@ -712,8 +751,6 @@ span.close {
 			float:right;						
 		}
 		.pais-foto {
-			background:url(../imagens/brasil-foto.jpg) center left;
-			background-size:cover;
 			width:55%;
 			height:230px;
 		}
