@@ -350,32 +350,32 @@ button#myBtnFontes {
 
 /********** FIM DO PAIS **********/
 
-/********** SINTESE HOME ******************************************************************************************/
+/********** SINTESE HOME ********/
 .sintese-home {
-	width:22%;
+	width:28em;
 	float:right;
-	margin:50px 70px auto auto;
-	background-color:#fff;
+	margin:3em 5em auto auto;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 .sintese-home .pais-bandeira {
 	width:92%;
-	background-size:100%;
-	height:100px;
-	margin:0 auto;
+	background-size:contain;
+	height:180px;
+	margin:0 auto 1em auto;
 }
 .sintese-home h2{
-	font-size:2.5em;
-	font-weight:500;
-	margin:4%;
+	font-size:1.8em;
+	font-weight:600;
+	margin:0.7em;
 }
 .sintese-home span.close {
-	font-size: 20px;
+	font-size:20px;
 	color:#4f4f4f;
 	text-align:right;
 	display:block;
 	float:none;
 	line-height:0;
-	padding:10px 6px 10px 10px;
+	padding:10px;
 }
 .sintese-home .pure-table {
 	border:none;
@@ -383,13 +383,23 @@ button#myBtnFontes {
 	margin:0 auto;
 	text-align:left;
 }
+.sintese-home .pure-table th{
+	padding-left:0;
+}
+.sintese-home table{
+	background-color: rgba(255, 255, 255, 0.0);
+}
+.sintese-home .pure-table-horizontal td, .sintese-home .pure-table-horizontal th {
+	border-bottom: 1px solid rgba(153,153,153,0.6);
+	
+}
 .leiamais {
 	background-color:#4f4f4f;
 	color:#fff;
 	border:none;
 	width:92%;
-	height: 30px;
-	font-size:1.5em;
+	height:26px;
+	font-size:1.1em;
 	display:block;
 	margin:10px auto;
 
@@ -726,16 +736,6 @@ span.close {
    Media Queries - Mobile First
    ========================================================================== */
 
-
-
-   /* Custom, iPhone Retina */ 
-   
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 768px) {
-
-
-    }
-
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
 		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
@@ -811,14 +811,12 @@ span.close {
 			height:42px;
 			width:60px;
 		}
-		.sintese-tabela span.close {
-   			font-size: 20px;
-			color:#4f4f4f;
-			border: 1px solid red;
-		}
-		
     }
 
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 768px) {
+
+    }
 
 
     /* Medium Devices, Desktops */
@@ -838,16 +836,18 @@ span.close {
 		}
 		.container-pais div.sintese-tabela table {
 			line-height:1.6em;
-	
 		}
 		.pais-bandeira h2 {
 			padding:25px 0 0 150px;
 			font-size:3em;
 		}
-		
+		.sintese-home {
+			margin:4.5em 9em auto auto;
+		}
     }
 
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
+
 
     }
