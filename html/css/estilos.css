@@ -13,7 +13,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .encolve-indicadores, .envolve-card  {
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home {
 	display:none;
 }
 th {
@@ -21,7 +21,6 @@ th {
 	font-weight:normal;
 	font-style:normal;
 }
-
 h2 {
 	font-size:1.5em;
 	margin:0;
@@ -258,10 +257,9 @@ button#myBtnFontes {
 	background:url(../imagens/brasil-foto.jpg) center;
 	background-size:cover;
 	float:left;
-
 }
 .pais-bandeira {
-	background:url(../imagens/bandeiras/brasil.gif);
+	background:url(../imagens/bandeiras/brasil.gif) no-repeat;
 }
 .pais-foto p {
 	font-size:7em;
@@ -309,9 +307,54 @@ button#myBtnFontes {
 	height:125px;
 	margin:10px auto 30px auto;
 }
+
 /********** FIM DO PAIS **********/
 
+/********** SINTESE HOME ******************************************************************************************/
+.sintese-home {
+	width:22%;
+	float:right;
+	margin:50px 70px auto auto;
+	background-color:#fff;
+}
+.sintese-home .pais-bandeira {
+	width:92%;
+	background-size:100%;
+	height:100px;
+	margin:0 auto;
+}
+.sintese-home h2{
+	font-size:2.5em;
+	font-weight:500;
+	margin:4%;
+}
+.sintese-home span.close {
+	font-size: 20px;
+	color:#4f4f4f;
+	text-align:right;
+	display:block;
+	float:none;
+	line-height:0;
+	padding:10px 6px 10px 10px;
+}
+.sintese-home .pure-table {
+	border:none;
+	width:92%;
+	margin:0 auto;
+	text-align:left;
+}
+.leiamais {
+	background-color:#4f4f4f;
+	color:#fff;
+	border:none;
+	width:92%;
+	height: 30px;
+	font-size:1.5em;
+	display:block;
+	margin:10px auto;
 
+}
+/********** FIM DA SINTESE HOME **********/
 
 
 /********** COMPARAR PAIS **********/
@@ -375,6 +418,7 @@ header div.topo-busca input, header div.topo-busca-desktop input {
 	padding:10px;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
+
 input[type=text] {
   width: 188px;
   height: 16px;
@@ -647,7 +691,7 @@ span.close {
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
 		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores {
+		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira{
 			display:block;
 		}
 		button.accordion, #myBtnFontes {
@@ -666,7 +710,6 @@ span.close {
 			line-height:1.9em;
 			padding:200px 50px 0 50px;
 		}
-		
 		header div.topo-busca, .topo-tit {
 			display:none;
 		}
@@ -721,7 +764,11 @@ span.close {
 			background-size:100%;
 			height:42px;
 			width:60px;
-			display:block;	
+		}
+		.sintese-tabela span.close {
+   			font-size: 20px;
+			color:#4f4f4f;
+			border: 1px solid red;
 		}
 		
     }
@@ -730,13 +777,12 @@ span.close {
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-		
 		.pais-bandeira {
-			background-size:100%;
-			height:98px;
-			width:140px;
-			display:block;	
-		}
+            background-size:100%;
+            height:98px;
+            width:140px;
+            display:block;    
+        }
 		.pais-foto {
 			height:300px;
 			width:60%;
