@@ -13,7 +13,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g {
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .container-ods nav ul {
 	display:none;
 }
 th {
@@ -450,8 +450,8 @@ button#myBtnFontes {
 
 /********** ODS **********/
 .container-ods nav {
-	display:block;
 	background-image:url(../imagens/ods-icones.svg);
+	display:block;
 	height:50px;
 	border-bottom:1px solid #f1f1f1;
 }
@@ -459,6 +459,38 @@ button#myBtnFontes {
 	background-color:#fff;
 	height:100%;
 }
+.container-ods nav ul {
+	margin:50px auto;
+	width:90%
+}
+.container-ods nav ul li {
+	background-image:url(../imagens/ods-icones-desktop.svg);
+	width:100px;
+	height:100px;
+	display:inline-block;
+	margin:1px;
+}
+.container-ods nav ul li.obj-geral {
+	background:url(../imagens/ods-logo-gde.png) no-repeat center center;
+	width:204px;
+}
+.container-ods nav ul li.obj-um {background-position:-100px 0;}
+.container-ods nav ul li.obj-dois {background-position:-200px 0;}
+.container-ods nav ul li.obj-tres {background-position:-300px 0;}
+.container-ods nav ul li.obj-quatro {background-position:-400px 0;}
+.container-ods nav ul li.obj-cinco {background-position:-500px 0;}
+.container-ods nav ul li.obj-seis {background-position:-600px 0;}
+.container-ods nav ul li.obj-sete {background-position:-700px 0;}
+.container-ods nav ul li.obj-oito {background-position:-800px 0;}
+.container-ods nav ul li.obj-nove {background-position:-900px 0;}
+.container-ods nav ul li.obj-dez {background-position:-1000px 0;}
+.container-ods nav ul li.obj-onze {background-position:-1100px 0;}
+.container-ods nav ul li.obj-doze {background-position:-1200px 0;}
+.container-ods nav ul li.obj-treze {background-position:-1300px 0;}
+.container-ods nav ul li.obj-quatorze {background-position:-1400px 0;}
+.container-ods nav ul li.obj-quinze {background-position:-1500px 0;}
+.container-ods nav ul li.obj-dezesseis {background-position:-1600px 0;}
+.container-ods nav ul li.obj-dezessete {background-position:-1700px 0;}
 /********** FIM DO RANKING **********/
 
 
@@ -739,8 +771,12 @@ span.close {
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
 		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g{
+		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .container-ods nav ul {
 			display:block;
+		}
+		.container-ods nav {
+			background-image:none;
+			border:none;
 		}
 		button.accordion, #myBtnFontes {
 			display:none;
