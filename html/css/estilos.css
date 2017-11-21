@@ -461,7 +461,8 @@ button#myBtnFontes {
 }
 .container-ods nav ul {
 	margin:50px auto;
-	width:90%
+	width:90%;
+	padding-left:10px;
 }
 .container-ods nav ul li {
 	background-image:url(../imagens/ods-icones-desktop.svg);
