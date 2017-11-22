@@ -13,7 +13,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .container-ods nav ul {
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .container-ods nav ul, .menu-ods-geral {
 	display:none;
 }
 th {
@@ -460,7 +460,7 @@ button#myBtnFontes {
 	height:100%;
 }
 .container-ods nav ul {
-	margin:50px auto;
+	margin:50px auto;	
 	width:90%;
 	padding-left:10px;
 }
@@ -492,6 +492,36 @@ button#myBtnFontes {
 .container-ods nav ul li.obj-quinze {background-position:-1500px 0;}
 .container-ods nav ul li.obj-dezesseis {background-position:-1600px 0;}
 .container-ods nav ul li.obj-dezessete {background-position:-1700px 0;}
+
+.menu-ods-geral {
+	margin:0 auto;	
+	width:90%;
+	padding-left:10px;
+}
+.menu-ods-geral ul {
+	padding:0;
+}
+.menu-ods-geral ul li {
+	display:inline-block;
+	margin:10px 0;
+	margin-right:5px;
+}
+.menu-ods-geral ul li a {
+	text-decoration:none;
+	font-size:1.2em;
+	text-transform:uppercase;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+	padding:9px;	
+	background-color:#f4f4f4;
+	border-radius: 15px;
+	border:1px solid #f4f4f4;;
+}
+.menu-ods-geral ul li:last-child {
+	margin-right:0;
+}
+.menu-ods-geral ul li a:hover, .menu-ods-geral ul li a.selecionado {
+	border:1px solid grey;
+}
 /********** FIM DO RANKING **********/
 
 
@@ -772,14 +802,23 @@ span.close {
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
 		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .container-ods nav ul {
+		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .container-ods nav ul, .menu-ods-geral {
 			display:block;
+		}
+		div.panel {
+			overflow:visible;
+			width:90%;
+			margin:0 auto;			
+		}
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro  {
+			display:none;
 		}
 		.container-ods nav {
 			background-image:none;
 			border:none;
+			height:auto;
 		}
-		button.accordion, #myBtnFontes {
+		button.accordion, #myBtnFontes, header div.topo-busca, .topo-tit {
 			display:none;
 		}
 		.container-home {
@@ -794,11 +833,7 @@ span.close {
 			font-size:1.5em;
 			line-height:1.9em;
 			padding:200px 50px 0 50px;
-		}
-		header div.topo-busca, .topo-tit {
-			display:none;
-		}
-		
+		}		
 		header div.topo-busca-desktop {
 			display:inline-block;
 			width:55%;
