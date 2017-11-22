@@ -13,7 +13,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop {
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral{
 	display:none;
 }
 th {
@@ -465,8 +465,8 @@ button#myBtnFontes {
 
 /********** ODS **********/
 .container-ods nav {
-	display:block;
 	background-image:url(../imagens/ods-icones.svg);
+	display:block;
 	height:50px;
 	border-bottom:1px solid #f1f1f1;
 }
@@ -474,9 +474,69 @@ button#myBtnFontes {
 	background-color:#fff;
 	height:100%;
 }
-/********** FIM DO ODS **********/
+.container-ods nav ul {
+	margin:50px auto;	
+	width:90%;
+	padding-left:10px;
+}
+.container-ods nav ul li {
+	background-image:url(../imagens/ods-icones-desktop.svg);
+	width:100px;
+	height:100px;
+	display:inline-block;
+	margin:1px;
+}
+.container-ods nav ul li.obj-geral {
+	background:url(../imagens/ods-logo-gde.png) no-repeat center center;
+	width:204px;
+}
+.container-ods nav ul li.obj-um {background-position:-100px 0;}
+.container-ods nav ul li.obj-dois {background-position:-200px 0;}
+.container-ods nav ul li.obj-tres {background-position:-300px 0;}
+.container-ods nav ul li.obj-quatro {background-position:-400px 0;}
+.container-ods nav ul li.obj-cinco {background-position:-500px 0;}
+.container-ods nav ul li.obj-seis {background-position:-600px 0;}
+.container-ods nav ul li.obj-sete {background-position:-700px 0;}
+.container-ods nav ul li.obj-oito {background-position:-800px 0;}
+.container-ods nav ul li.obj-nove {background-position:-900px 0;}
+.container-ods nav ul li.obj-dez {background-position:-1000px 0;}
+.container-ods nav ul li.obj-onze {background-position:-1100px 0;}
+.container-ods nav ul li.obj-doze {background-position:-1200px 0;}
+.container-ods nav ul li.obj-treze {background-position:-1300px 0;}
+.container-ods nav ul li.obj-quatorze {background-position:-1400px 0;}
+.container-ods nav ul li.obj-quinze {background-position:-1500px 0;}
+.container-ods nav ul li.obj-dezesseis {background-position:-1600px 0;}
+.container-ods nav ul li.obj-dezessete {background-position:-1700px 0;}
 
-
+.menu-ods-geral {
+	margin:0 auto;	
+	width:90%;
+	padding-left:10px;
+}
+.menu-ods-geral ul {
+	padding:0;
+}
+.menu-ods-geral ul li {
+	display:inline-block;
+	margin:10px 0;
+	margin-right:5px;
+}
+.menu-ods-geral ul li a {
+	text-decoration:none;
+	font-size:1.2em;
+	text-transform:uppercase;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+	padding:9px;	
+	background-color:#f4f4f4;
+	border-radius: 15px;
+	border:1px solid #f4f4f4;;
+}
+.menu-ods-geral ul li:last-child {
+	margin-right:0;
+}
+.menu-ods-geral ul li a:hover, .menu-ods-geral ul li a.selecionado {
+	border:1px solid grey;
+}
 
 /********** BUSCA **********/
 header div.topo-busca, header div.topo-busca-desktop {
@@ -754,11 +814,22 @@ span.close {
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
 		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop {
+		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral {
 			display:block;
 		}
-		button.accordion, #myBtnFontes, .topo-tit-ranking span {
+		button.accordion, #myBtnFontes, .topo-tit-ranking span
+		div.panel {
+			overflow:visible;
+			width:90%;
+			margin:0 auto;			
+		}
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .topo-tit, header div.topo-busca, .topo-tit-pais {
 			display:none;
+		}
+		.container-ods nav {
+			background-image:none;
+			border:none;
+			height:auto;
 		}
 		.container-home, .container-ranking {
 			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;
@@ -772,10 +843,7 @@ span.close {
 			font-size:1.5em;
 			line-height:1.9em;
 			padding:200px 50px 0 50px;
-		}
-		header div.topo-busca, .topo-tit-pais {
-			display:none;
-		}
+		}	
 		header div.topo-busca-desktop {
 			display:inline-block;
 			width:55%;
@@ -846,7 +914,6 @@ span.close {
     @media only screen and (min-width : 768px) {
 
     }
-
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
