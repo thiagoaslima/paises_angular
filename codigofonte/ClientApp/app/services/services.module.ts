@@ -1,6 +1,7 @@
 import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
 import { PaisesService } from './paises.service';
+import { BuscaService } from './busca.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -10,7 +11,8 @@ import { NgModule } from '@angular/core';
     providers: [
         PaisesService,
         PesquisasService,
-        TraducaoService
+        TraducaoService,
+        BuscaService
     ],
 })
 export class ServicesModule { }
