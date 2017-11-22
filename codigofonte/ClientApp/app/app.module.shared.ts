@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
 import { ServicesModule } from './services/services.module';
+import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './components/app/app.component';
+import { AppComponent } from './app-component/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
@@ -25,14 +25,7 @@ import { CounterComponent } from './components/counter/counter.component';
         HttpModule,
         FormsModule,
         ServicesModule,
-        RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
-            { path: 'sandbox', loadChildren: './sandbox/sandbox.module#SandboxModule' },
-            { path: '**', redirectTo: 'home' }
-        ])
+        AppRoutingModule
     ]
 })
 export class AppModuleShared {
