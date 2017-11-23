@@ -814,13 +814,20 @@ span.close {
 		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral {
 			display:block;
 		}
-		div.panel {
+		button.accordion, #myBtnFontes, .topo-tit-ranking span, div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit span { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit span, .topo-tit, header div.topo-busca, .topo-tit-pais { 
 			display:none;
+		}
+		.texto-ods {
+			width:90%;
+			margin:0 auto;			
+		}
+		.texto-ods h3 {
+			margin-left:0;			
 		}
 		.container-ods nav {
 			background-image:none;
