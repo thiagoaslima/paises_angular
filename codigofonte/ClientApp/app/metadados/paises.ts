@@ -1,4 +1,4 @@
-[
+export const PAISES = [
   {
     "sigla": "AG",
     "continente": "América",
