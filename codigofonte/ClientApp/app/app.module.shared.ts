@@ -12,13 +12,16 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
+import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
+
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        BarraGovComponent
     ],
     imports: [
         CommonModule,
