@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var ajax = function(url) {
+            return new Promise(resolve => {
+                var oReq = new XMLHttpRequest();
+                oReq.onload = function (e) {
+                    resolve(e.target.response);
+                };
+                oReq.open('GET', url + '?' + new Date().getTime(), true);
+                oReq.responseType = 'json';
+                oReq.send();  
+            })
+        }
+
+        async function getJson() {
+            var topojson = await ajax('metadados/topologies/mundo.topojson')
+            var lista = await ajax('metadados/paises.json')
+
+            return {
+                topojson: topojson.objects.countries.geometries,
+                lista: lista
+            }
+        }
+
+        function filtrar(obj) {
+            return obj.lista.filter(pais => {
+                return !obj.topojson.find(geo => {
+                    return geo.properties.ADM0_A3 === pais.sigla3 || geo.properties.ADMIN === pais.nome.en
+                })
+            })
+        }
+
+        getJson().then(obj => {
+            l = filtrar(obj)
+            console.log(l.map(p => p.nome.pt))
+        })
+     
+    </script>
+    
+</body>
+</html>

@@ -15,7 +15,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Emirados Árabes Unidos",
-      "en": "United Arab Emirates ",
+      "en": "United Arab Emirates",
       "es": "Emiratos Árabes Unidos"
     },
     "sigla3": "ARE",
@@ -213,8 +213,8 @@ export const PAISES = [
     "continente": "Europa",
     "nome": {
       "pt": "Bósnia e Herzegovina",
-      "en": "Bosnia and Herzegovina ",
-      "es": "Bosnia y Herzegovina "
+      "en": "Bosnia and Herzegovina",
+      "es": "Bosnia y Herzegovina"
     },
     "sigla3": "BIH",
     "ddi": "387"
@@ -312,7 +312,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Brunei",
-      "en": "Brunei Darussalam ",
+      "en": "Brunei Darussalam",
       "es": "Brunéi"
     },
     "sigla3": "BRN",
@@ -323,8 +323,8 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Burundi",
-      "en": "Burundi ",
-      "es": "Burundi "
+      "en": "Burundi",
+      "es": "Burundi"
     },
     "sigla3": "BDI",
     "ddi": "257"
@@ -345,7 +345,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Camboja",
-      "en": "Cambodia ",
+      "en": "Cambodia",
       "es": "Camboya"
     },
     "sigla3": "KHM",
@@ -356,7 +356,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Chade",
-      "en": "Chad ",
+      "en": "Chad",
       "es": "Chad"
     },
     "sigla3": "TCD",
@@ -400,8 +400,8 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "China",
-      "en": "China ",
-      "es": "China "
+      "en": "China",
+      "es": "China"
     },
     "sigla3": "CHN",
     "ddi": "86"
@@ -422,7 +422,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Camarões",
-      "en": "Cameroon ",
+      "en": "Cameroon",
       "es": "Camerún"
     },
     "sigla3": "CMR",
@@ -455,8 +455,8 @@ export const PAISES = [
     "continente": "América",
     "nome": {
       "pt": "Costa Rica",
-      "en": "Costa Rica ",
-      "es": "Costa Rica "
+      "en": "Costa Rica",
+      "es": "Costa Rica"
     },
     "sigla3": "CRI",
     "ddi": "506"
@@ -917,7 +917,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Costa do Marfim",
-      "en": "Côte d'Ivoire ",
+      "en": "Côte d'Ivoire",
       "es": "Costa de Marfil"
     },
     "sigla3": "CIV",
@@ -994,7 +994,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "República Popular Democrática da Coreia",
-      "en": "Democratic People's Republic of Korea ",
+      "en": "Democratic People's Republic of Korea",
       "es": "República Popular Democrática de Corea"
     },
     "sigla3": "PRK",
@@ -1038,7 +1038,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Cazaquistão",
-      "en": "Kazakhstan ",
+      "en": "Kazakhstan",
       "es": "Kazajistán"
     },
     "sigla3": "KAZ",
@@ -1049,7 +1049,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Laos",
-      "en": "Lao People's Democratic Republic ",
+      "en": "Lao People's Democratic Republic",
       "es": "Laos"
     },
     "sigla3": "LAO",
@@ -1115,7 +1115,7 @@ export const PAISES = [
     "continente": "Europa",
     "nome": {
       "pt": "Liechtenstein",
-      "en": "Liechtenstein ",
+      "en": "Liechtenstein",
       "es": "Liechtenstein"
     },
     "sigla3": "LIE",
@@ -1258,7 +1258,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Maurício",
-      "en": "Mauritius ",
+      "en": "Mauritius",
       "es": "Mauricio"
     },
     "sigla3": "MUS",
@@ -1269,8 +1269,8 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Mauritânia",
-      "en": "Mauritania ",
-      "es": "Mauritania "
+      "en": "Mauritania",
+      "es": "Mauritania"
     },
     "sigla3": "MRT",
     "ddi": "222"
@@ -1335,8 +1335,8 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Moçambique",
-      "en": "Mozambique ",
-      "es": "Mozambique "
+      "en": "Mozambique",
+      "es": "Mozambique"
     },
     "sigla3": "MOZ",
     "ddi": "258"
@@ -1412,7 +1412,7 @@ export const PAISES = [
     "continente": "Oceania",
     "nome": {
       "pt": "Nauru",
-      "en": "Nauru ",
+      "en": "Nauru",
       "es": "Nauru"
     },
     "sigla3": "NRU",
@@ -1533,7 +1533,7 @@ export const PAISES = [
     "continente": "Oceania",
     "nome": {
       "pt": "Papua Nova Guiné",
-      "en": "Papua New Guinea ",
+      "en": "Papua New Guinea",
       "es": "Papúa Nueva Guinea"
     },
     "sigla3": "PNG",
@@ -1566,8 +1566,8 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Catar",
-      "en": "Qatar ",
-      "es": "Qatar "
+      "en": "Qatar",
+      "es": "Qatar"
     },
     "sigla3": "QAT",
     "ddi": "974"
@@ -1654,7 +1654,7 @@ export const PAISES = [
     "continente": "América",
     "nome": {
       "pt": "São Cristóvão e Névis",
-      "en": "Saint Kitts and Nevis ",
+      "en": "Saint Kitts and Nevis",
       "es": "San Cristóbal y Nieves"
     },
     "sigla3": "KNA",
@@ -1709,7 +1709,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Serra Leoa",
-      "en": "Sierra Leone ",
+      "en": "Sierra Leone",
       "es": "Sierra Leona"
     },
     "sigla3": "SLE",
@@ -1819,7 +1819,7 @@ export const PAISES = [
     "continente": "América",
     "nome": {
       "pt": "Trinidad e Tobago",
-      "en": "Trinidad and Tobago ",
+      "en": "Trinidad and Tobago",
       "es": "Trinidad y Tobago"
     },
     "sigla3": "TTO",
@@ -1841,8 +1841,8 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Tajidquistão",
-      "en": "Tajikistan ",
-      "es": "Tayikistán "
+      "en": "Tajikistan",
+      "es": "Tayikistán"
     },
     "sigla3": "TJK",
     "ddi": "992"
@@ -1852,7 +1852,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Timor Leste",
-      "en": "Timor-Leste ",
+      "en": "Timor-Leste",
       "es": "Timor Oriental"
     },
     "sigla3": "TLS",
@@ -1863,7 +1863,7 @@ export const PAISES = [
     "continente": "Oceania",
     "nome": {
       "pt": "Tonga",
-      "en": "Tonga ",
+      "en": "Tonga",
       "es": "Tonga"
     },
     "sigla3": "TON",
@@ -1885,7 +1885,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "São Tomé e Príncipe",
-      "en": "Sao Tome and Principe ",
+      "en": "Sao Tome and Principe",
       "es": "Santo Tomé y Príncipe"
     },
     "sigla3": "STP",
@@ -1896,7 +1896,7 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Tunísia",
-      "en": "Tunisia ",
+      "en": "Tunisia",
       "es": "Túnez"
     },
     "sigla3": "TUN",
@@ -1907,7 +1907,7 @@ export const PAISES = [
     "continente": "Ásia",
     "nome": {
       "pt": "Turquia",
-      "en": "Turkey ",
+      "en": "Turkey",
       "es": "Turquía"
     },
     "sigla3": "TUR",
@@ -1973,7 +1973,7 @@ export const PAISES = [
     "continente": "Europa",
     "nome": {
       "pt": "Ucrânia",
-      "en": "Ukraine ",
+      "en": "Ukraine",
       "es": "Ucrania"
     },
     "sigla3": "UKR",
@@ -1995,8 +1995,8 @@ export const PAISES = [
     "continente": "África",
     "nome": {
       "pt": "Burkina Faso",
-      "en": "Burkina Faso ",
-      "es": "Burkina Faso "
+      "en": "Burkina Faso",
+      "es": "Burkina Faso"
     },
     "sigla3": "BFA",
     "ddi": "226"
@@ -2028,7 +2028,7 @@ export const PAISES = [
     "continente": "América",
     "nome": {
       "pt": "São Vicente e Granadinas",
-      "en": "Saint Vincent and the Grenadines ",
+      "en": "Saint Vincent and the Grenadines",
       "es": "San Vicente y las Granadinas"
     },
     "sigla3": "VCT",
