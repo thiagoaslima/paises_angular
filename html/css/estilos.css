@@ -90,9 +90,9 @@ header {
 header div.topo-logomobile {
 	float:left;
 	background:url(../imagens/topo-logomobile.svg) no-repeat;
-	height:20px;
-	width:155px;
-	margin:10px 0 0 5px;
+	height:30px;
+	width:160px;
+	margin:5px 0 0 5px;
 }
 .grad {
 	height:40px;
@@ -862,11 +862,12 @@ span.close {
 			text-align:center;
 		}
 		header div.topo-logomobile {
-			margin:13px 0 0 5px;
+			margin:7px 0 0 10px;
 			display:inline-block;
 			background-size:contain;
-			width:175px;
-			height:20px;
+			background-size:100%;
+			width:190px;
+			height:40px;
 		}
 		.dropbtn {
 			font-size:2.6em;
