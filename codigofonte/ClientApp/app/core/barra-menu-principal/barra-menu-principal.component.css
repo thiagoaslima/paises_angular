@@ -40,6 +40,10 @@ input[type=text] {
   height: 16px;
   font-family: serif;
 }
+
+input.campo-busca{
+    font-size: 2rem;
+}
 /* webkit solution */
 ::-webkit-input-placeholder { 
   font-family: FontAwesome;
@@ -52,7 +56,7 @@ input:-moz-placeholder {
 }
 /********** FIM DA BUSCA **********/
 
-span.some{
+span.some, .topo-busca-desktop{
     display: none;
 }
 
@@ -86,7 +90,7 @@ span.some{
     padding: 5px 10px;
     text-decoration: none;
     display: block;
-	font-size:1.2em;
+	font-size:1.2rem;
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
 
@@ -122,8 +126,16 @@ span.some{
     header div.topo-busca{
         display: none;
     }
+    
+    header div.topo-busca-desktop input {
+        border-radius: 10px;
+        border:0;
+        margin-top:8px;
+        height:32px;			
+    }
+
     .dropbtn {
-        font-size:2.6em;
+        font-size:2.6rem;
         padding: 2px 10px 0 0;
     }
 }

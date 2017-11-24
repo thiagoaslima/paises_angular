@@ -19,6 +19,7 @@
 	<header>
     	<div class="grad">
         	<div class="topo-logomobile"><span class="some">PAÍSES IBGE</span></div>
+            <div class="topo-busca-desktop"><input type="text" placeholder="&#xF002;" class="fa-2x" value="" tabindex="1" autocomplete="off"></div>
         	<div class="dropdown">
         		<button class="dropbtn">...</button>
                 <div class="dropdown-content">
@@ -30,10 +31,20 @@
 			</div>
         </div>
         
-        <div class="topo-busca"><input type="text" placeholder="&#xF002;" class="fa-2x" value="" tabindex="1" autocomplete="off"></div>
-        <div class="topo-tit"><span>‹</span><h2>Comparar Países</h2></div>
+        <div class="topo-busca"><input type="text" placeholder="&#xF002;" class="fa-2x" value="" tabindex="1" autocomplete="off"></div>      
     </header>
-        <section>
+        <section class="comparar">
+            <span class="close"><a href="#">&times;</a></span>
+            <div class="topo-tit">
+                <span>&#8249;</span>
+                <h2>COMPARAR PAÍSES</h2>
+            </div>
+            <div class="menu-aux-desktop">
+                <ul>
+                <li><a href="#">IMPRIMIR</a></li>
+                <li><a href="#">DOWNLOAD</a></li>                       
+                </ul> 
+            </div>
     	<form>
     	<fieldset>
         <select>
@@ -45,6 +56,15 @@
         <option>Brasil</option>
         </select>
         
+        <div>
+        <select>
+        <option>População</option>
+        <option>Economia</option>
+        <option>Indicadores Sociais</option>
+        <option>Indicadores Olímpicos</option>
+        <option>Computadores e Telefonia</option>
+        </select>
+        
         <select>
         <option>População Total</option>
         <option>Total do PIB</option>
@@ -52,6 +72,7 @@
         <option>Linhas Telefônicas</option>
         <option>Índice de Desenvolvimento Humano</option>
         </select>
+        </div>
         </fieldset>
         </form>
        

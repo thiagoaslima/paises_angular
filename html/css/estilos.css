@@ -13,7 +13,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral{
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking span.close, .ranking button, .comparar span.close, .comparar button {
 	display:none;
 }
 th {
@@ -93,6 +93,9 @@ header div.topo-logomobile {
 	height:20px;
 	width:155px;
 	margin:10px 0 0 5px;
+	height:30px;
+	width:160px;
+	margin:5px 0 0 5px;
 }
 .grad {
 	height:40px;
@@ -160,6 +163,10 @@ span.right {
 	padding:0;	
 	width:98%;	
 }
+.menu-aux-desktop ul li:first-child {
+	background:url(../imagens/voltar-bullet.png) no-repeat 0 21px;
+	padding-left:15px;
+}
 .menu-aux-desktop ul li {
 	display:inline-block;
 	padding:20px 10px 10px 10px;
@@ -169,30 +176,48 @@ span.right {
 	float:right;
 	padding-left:28px;
 }
-.ranking .menu-aux-desktop {
-	height: 22px;
-	border: 1px solid #8f8f8f;
+.ranking span.close, .comparar span.close {
+	width:100%;
+	background-color:#3f3f3f;
+	text-align:right;
+	cursor:default;	
 }
-.ranking .menu-aux-desktop ul {
-	width: 100%;
-	margin-left: 5px;
+.ranking span.close a, .comparar span.close a {
+	color:#fff;
+	padding:2px 8px;
+	line-height:1em;	
+	width:30px;
+	background-color:#3f3f3f;		
 }
-.ranking .menu-aux-desktop ul li {
-	padding: 3px 6px;
+.ranking .topo-tit, .comparar .topo-tit {
+	clear:both;
 }
-.ranking span.close {
-	margin-right: 12px;
-	line-height: 20px;
+.ranking .menu-aux-desktop, .comparar .menu-aux-desktop {
+	background-color:transparent;
+	text-align:right;
+	height:30px;
 }
-.ranking .menu-aux-desktop:last-child {
-	height: 35px;
+.ranking .menu-aux-desktop ul li, .comparar .menu-aux-desktop ul li {
+	background-image:none;
+	padding:0;
+	float:none;
+	margin:8px;
 }
-.ranking .menu-aux-desktop:last-child a {
-	background:url(../imagens/comparar_icon.png) no-repeat; 
-padding: 10px;
-text-align: center;
+.ranking .menu-aux-desktop ul li a, .comparar .menu-aux-desktop ul li a {
+	color:#4f4f4f;
 }
-
+.ranking table .pure-table-horizontal, .ranking table .pure-table  {
+	background-color:transparent;
+}
+.ranking button.leiamais {
+	background-repeat:no-repeat;
+	background-image:url(../imagens/comparar_icon.png);
+	background-position:85px 4px;
+	height:33px;
+}
+.ranking button {
+	padding:9px 0 0 30px;
+}
 table {
 	font-size:1.3em;
 	width:100%;
@@ -368,7 +393,7 @@ button#myBtnFontes {
 	width:28em;
 	float:right;
 	margin:3em 5em auto auto;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.85);
 }
 .sintese-home .pais-bandeira {
 	width:92%;
@@ -383,12 +408,17 @@ button#myBtnFontes {
 }
 .sintese-home span.close {
 	font-size:20px;
-	color:#4f4f4f;
 	text-align:right;
 	display:block;
 	float:none;
 	line-height:0;
-	padding:10px;
+	padding:11px 12px 12px 12px;
+	margin-bottom:12px;
+	background-color:#3f3f3f;
+	cursor:default;
+}
+.sintese-home span.close a {
+	color:#fff;
 }
 .sintese-home .pure-table {
 	border:none;
@@ -406,7 +436,7 @@ button#myBtnFontes {
 	border-bottom: 1px solid rgba(153,153,153,0.6);
 }
 .leiamais {
-	background-color:#4f4f4f;
+	background-color:#3f3f3f;
 	color:#fff;
 	border:none;
 	width:92%;
@@ -414,7 +444,6 @@ button#myBtnFontes {
 	font-size:1.1em;
 	display:block;
 	margin:10px auto;
-
 }
 /********** FIM DA SINTESE HOME **********/
 
@@ -810,16 +839,15 @@ span.close {
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral {
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close {
 			display:block;
 		}
-		button.accordion, #myBtnFontes, .topo-tit-ranking span, div.panel {
+		button.accordion, #myBtnFontes, div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit span, .topo-tit, header div.topo-busca, .topo-tit-pais { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais { 
 			display:none;
 		}
 		.texto-ods {
@@ -862,11 +890,12 @@ span.close {
 			text-align:center;
 		}
 		header div.topo-logomobile {
-			margin:13px 0 0 5px;
+			margin:7px 0 0 10px;
 			display:inline-block;
 			background-size:contain;
-			width:175px;
-			height:20px;
+			background-size:100%;
+			width:190px;
+			height:40px;
 		}
 		.dropbtn {
 			font-size:2.6em;
@@ -895,22 +924,41 @@ span.close {
 			height:42px;
 			width:60px;
 		}
+		.comparar {
+			width:90%;
+			margin:3em auto;
+			background-color: rgba(255, 255, 255, 0.85);
+			border:1px solid #7f7f7f;
+		}
+		.container-comparar form div {
+			float:right;
+			width:100%;
+		}
+		.container-comparar form div select {
+			width:30%;
+			display:inline-block;
+			background-color:transparent;
+		}
 		.ranking {
 			width:32em;
-			margin:3em 5em auto auto;
-			background-color: rgba(255, 255, 255, 0.9);
+			margin:3em 5em 0 0;
+			background-color: rgba(255, 255, 255, 0.85);
+			border:1px solid #7f7f7f;
 		}
-		.ranking .pure-table {
+		.ranking .pure-table, .container-ranking .pure-table thead, .container-ranking table thead tr {
 			border: none;
+			background-color:transparent;
 		}
 		.topo-tit {
 			background-color:#fff;
 			color:#4f4f4f;
 		}
-		.ranking .topo-tit {
-			padding:15px 12px;
+		.ranking .topo-tit, .comparar .topo-tit {
+			padding:5px 12px;
+			background-color:#3f3f3f;
+			color:#fff;
 		}
-		.ranking .topo-tit h2 {
+		.ranking .topo-tit h2, .comparar .topo-tit h2 {
 			font-size: 1.8em;
 		}
 		.ranking .pure-table td, .ranking .pure-table th {
@@ -946,6 +994,7 @@ span.close {
 		}
 		.sintese-home {
 			margin:4.5em 9em auto auto;
+			border:1px solid #9f9f9f;
 		}
 		.ranking {
 			margin:6.2em 8em auto auto;
