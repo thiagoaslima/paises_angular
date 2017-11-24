@@ -90,6 +90,9 @@ header {
 header div.topo-logomobile {
 	float:left;
 	background:url(../imagens/topo-logomobile.svg) no-repeat;
+	height:20px;
+	width:155px;
+	margin:10px 0 0 5px;
 	height:30px;
 	width:160px;
 	margin:5px 0 0 5px;
