@@ -84,55 +84,6 @@ a:hover {
 	top:70px;
 	left:5px;
 }
-.menu-aux-desktop {
-	height:50px;
-	background-color:#000;
-	color:#fff;
-}
-.menu-aux-desktop a {
-	color:#fff;
-	font-size:1.1em;
-	font-family:"RobotoMedium", Helvetica, Arial, sans-serif;;
-}
-
-.menu-aux-desktop a:hover {
-	color:#ccc;
-}
-.menu-aux-desktop ul {
-	margin:0 auto;
-	padding:0;	
-	width:98%;	
-}
-.menu-aux-desktop ul li {
-	display:inline-block;
-	padding:20px 10px 10px 10px;
-}
-.menu-aux-desktop ul li:first-child {
-	background:url(../imagens/voltar-bullet.png) no-repeat 12px 21px;
-	padding-left:30px;
-	margin-right:35px;
-}
-.menu-aux-desktop ul li:last-child {
-	background:url(../imagens/comparar_icon.png) no-repeat 0 10px;
-	float:right;
-	padding-left:28px;
-}
-.ranking .menu-aux-desktop {
-	border-radius:1em;
-	text-align:center;
-}
-.ranking .menu-aux-desktop ul {
-	width:100%;
-	text-align:center;
-}
-.ranking .menu-aux-desktop .comparar-ranking li:first-child {
-	margin:0;
-	background-image:url(../imagens/comparar_icon.png);
-	padding-left: 40px;
-}
-.ranking .menu-aux-desktop ul li:first-child, .ranking .menu-aux-desktop ul li:last-child {
-	background-image:none;	
-}
 header {
 	width:100%;
 }
@@ -143,7 +94,6 @@ header div.topo-logomobile {
 	width:155px;
 	margin:10px 0 0 5px;
 }
-
 .grad {
 	height:40px;
   background: #3bb2b8; /* For browsers that do not support gradients */
@@ -184,7 +134,6 @@ section.home p {
 	font-weight:bold;
 	display:inline-block;
 }
-
 .topo-tit span:first-child  {
 	margin:0 10px 0 0;
 }
@@ -193,6 +142,55 @@ span.right {
 	float:right;
 	margin:0 10px;
 	font-size:1em;
+}
+.menu-aux-desktop {
+	height:50px;
+	background-color:#3f3f3f;
+}
+.menu-aux-desktop a {
+	color:#fff;
+	font-size:1.1em;
+	font-family:"RobotoMedium", Helvetica, Arial, sans-serif;;
+}
+.menu-aux-desktop a:hover {
+	color:#ccc;
+}
+.menu-aux-desktop ul {
+	margin:0 auto;
+	padding:0;	
+	width:98%;	
+}
+.menu-aux-desktop ul li {
+	display:inline-block;
+	padding:20px 10px 10px 10px;
+}
+.menu-aux-desktop ul li:last-child {
+	background:url(../imagens/comparar_icon.png) no-repeat 0 10px;
+	float:right;
+	padding-left:28px;
+}
+.ranking .menu-aux-desktop {
+	height: 22px;
+	border: 1px solid #8f8f8f;
+}
+.ranking .menu-aux-desktop ul {
+	width: 100%;
+	margin-left: 5px;
+}
+.ranking .menu-aux-desktop ul li {
+	padding: 3px 6px;
+}
+.ranking span.close {
+	margin-right: 12px;
+	line-height: 20px;
+}
+.ranking .menu-aux-desktop:last-child {
+	height: 35px;
+}
+.ranking .menu-aux-desktop:last-child a {
+	background:url(../imagens/comparar_icon.png) no-repeat; 
+padding: 10px;
+text-align: center;
 }
 
 table {
@@ -406,7 +404,6 @@ button#myBtnFontes {
 }
 .sintese-home .pure-table-horizontal td, .sintese-home .pure-table-horizontal th {
 	border-bottom: 1px solid rgba(153,153,153,0.6);
-	
 }
 .leiamais {
 	background-color:#4f4f4f;
@@ -822,15 +819,15 @@ span.close {
 			width:90%;
 			margin:0 auto;			
 		}
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit span, .topo-tit, header div.topo-busca, .topo-tit-pais { 
+			display:none;
+		}
 		.texto-ods {
 			width:90%;
 			margin:0 auto;			
 		}
 		.texto-ods h3 {
 			margin-left:0;			
-		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .topo-tit, header div.topo-busca, .topo-tit-pais {
-			display:none;
 		}
 		.container-ods nav {
 			background-image:none;
@@ -865,7 +862,6 @@ span.close {
 			text-align:center;
 		}
 		header div.topo-logomobile {
-			float:none;
 			margin:13px 0 0 5px;
 			display:inline-block;
 			background-size:contain;
@@ -899,7 +895,6 @@ span.close {
 			height:42px;
 			width:60px;
 		}
-		
 		.ranking {
 			width:32em;
 			margin:3em 5em auto auto;
@@ -909,13 +904,19 @@ span.close {
 			border: none;
 		}
 		.topo-tit {
-			background-color:transparent;
+			background-color:#fff;
 			color:#4f4f4f;
 		}
-		.topo-tit-ranking h2 {
-			font-size:2em;
+		.ranking .topo-tit {
+			padding:15px 12px;
 		}
-
+		.ranking .topo-tit h2 {
+			font-size: 1.8em;
+		}
+		.ranking .pure-table td, .ranking .pure-table th {
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 768px) {
 
