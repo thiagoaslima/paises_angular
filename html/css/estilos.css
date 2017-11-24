@@ -181,8 +181,10 @@ span.right {
 	padding: 3px 6px;
 }
 .ranking span.close {
-	margin-right: 12px;
-	line-height: 20px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	displ
 }
 .ranking .menu-aux-desktop:last-child {
 	height: 35px;
@@ -810,16 +812,15 @@ span.close {
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto,
-		.olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral {
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit {
 			display:block;
 		}
-		button.accordion, #myBtnFontes, .topo-tit-ranking span, div.panel {
+		button.accordion, #myBtnFontes, div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit span, .topo-tit, header div.topo-busca, .topo-tit-pais { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, header div.topo-busca, .topo-tit-pais { 
 			display:none;
 		}
 		.texto-ods {
