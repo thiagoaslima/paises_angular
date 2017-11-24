@@ -25,9 +25,8 @@
 
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
         crossorigin=""></script>
-    <!-- <script src="https://d3js.org/topojson.v1.min.js"></script> -->
     <script src="https://unpkg.com/topojson-client@3"></script>
-    <script src="https://unpkg.com/topojson-simplify@3"></script>
+
     <script>
         // https://gist.githubusercontent.com/brendanvinson/0e3c3c86d96863f1c33f55454705bca7/raw/1a087d64c4ba6c32f39e8a9f72ec8ab6abef39f4/L.TopoJSON.js
         /*
@@ -95,19 +94,21 @@
             // topology = topojson.simplify(topology, 0.0001);
             createMap(topology)
         };
-        oReq.open('GET', 'metadados/topologies/mundo.topojson' + '?' + new Date().getTime(), true);
+        oReq.open('GET', 'metadados/topologies/paises.topojson' + '?' + new Date().getTime(), true);
         oReq.responseType = 'json';
         oReq.send();
 
         function createMap(json) {
+            window._topo = json;
+
             var _bounds = {
                 "_southWest": {
-                    "lat": -35.88905007936092,
-                    "lng": 41.13281250000001
+                    "lat": json.bbox[1],
+                    "lng": json.bbox[0]
                 },
                 "_northEast": {
-                    "lat": 30.29701788337205,
-                    "lng": 229.57031250000003
+                    "lat": json.bbox[3],
+                    "lng": json.bbox[2]
                 }
             }
             var bounds = new L.LatLngBounds(
@@ -117,13 +118,13 @@
 
             var mymap = L.map('mapid', {
                 center: [0,0],
-                // center: bounds.getCenter(),
-                zoom: 5,
+                center: bounds.getCenter(),
+                zoom: 1,
                 layers: [],
-                // maxBounds: bounds,
-                // maxBoundsViscosity: 1.0,
+                maxBounds: bounds,
+                maxBoundsViscosity: 0.5,
                 maxZoom: 8,
-                minZoom: 3
+                minZoom: 1
             })
 
             function style(feature) {
@@ -157,11 +158,11 @@
                 }
 
                 var popup = L.popup({
-                    closeButton: false,
-                    autoClose: false
+                        closeButton: false,
+                        autoClose: true
                     })
-                    .setLatLng([39.7392, -104.9903])
-                    .setContent('<p>Text box on a map</p>')
+                    .setLatLng(new L.LatLng(feature.labelPosition.precision02[1], feature.labelPosition.precision02[0]))
+                    .setContent('<p>' + feature.nome.pt + '</p>')
                     .openOn(map);
             }
 
@@ -170,11 +171,13 @@
             }
 
             function onEachFeature(feature, layer) {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                    click: zoomToFeature
-                });
+                if (feature.properties.mostrar) {
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight,
+                        click: zoomToFeature
+                    });
+                }
             }
 
             var geojson = L.topoJson(json, {

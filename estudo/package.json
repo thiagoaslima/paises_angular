@@ -1,0 +1,19 @@
+{
+  "name": "paises-estudo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/polylabel": "^1.0.5",
+    "area-polygon": "^1.0.1",
+    "leaflet": "^1.2.0",
+    "polylabel": "^1.0.2",
+    "tinyqueue": "^1.2.3",
+    "turf": "^3.0.14"
+  }
+}
