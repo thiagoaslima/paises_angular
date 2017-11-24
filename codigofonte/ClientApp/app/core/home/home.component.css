@@ -1,11 +1,10 @@
 .home__container{
-    /*background-image:url(../imagens/home-info-icone.svg) no-repeat top center;*/
     position: absolute;
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.75);
 }
 
 .home__texto{
@@ -13,16 +12,20 @@
     font-size: 1.5em;
     line-height:1.8em;
     text-align:center;
-    margin: 75px 50px 0px 50px;
+    margin: 30px 50px;
 }
 
 /*desktop*/
 @media only screen and (min-width : 568px) {
 
+    .home__image{
+        width: 230px;
+        height: auto;
+    }
+
     .home__texto{
         max-width: 630px;
-        margin: 200px auto 0px auto;
-        background-size: 230px;
+        margin: 30px auto;
     }
 
 }
