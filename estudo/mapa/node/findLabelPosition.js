@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const polylabel = require('polylabel');
 const area = require('area-polygon')
-const geoJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'metadados', 'topologies', 'ne_10m_admin_0_countries.geojson'), 'utf8'));
+const geoJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'metadados', 'topologies', 'ne_110m_admin_0_countries.geojson'), 'utf8'));
 
 const locais = geoJSON.features.map(f => {
 
@@ -17,22 +17,21 @@ const locais = geoJSON.features.map(f => {
         }, {p: null, a: 0})['p'];
     }
 
-    let position02 = polylabel(coord, 0.2);
-    let position04 = polylabel(coord, 0.4);
-    let position06 = polylabel(coord, 0.6);
-    let position08 = polylabel(coord, 0.8);
-    let position10 = polylabel(coord, 1.0);
+    let position1 = polylabel(coord, 1.0);
+    let position01 = polylabel(coord, 0.1);
+    let position001 = polylabel(coord, 0.01);
+    let position0001 = polylabel(coord, 0.001);
+    
 
     let sigla = f.properties['ADM0_A3']
 
     return {
         sigla: sigla,
         labelPosition: {
-            precision02: position02, 
-            precision04: position04, 
-            precision06: position06, 
-            precision08: position08, 
-            precision10: position10
+            precision1: position1, 
+            precision01: position01, 
+            precision001: position001, 
+            precision0001: position0001 
         }
     }
 }).reduce((agg, obj) => Object.assign(agg, {[obj.sigla]: obj}), Object.create(null));

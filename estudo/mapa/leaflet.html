@@ -100,29 +100,30 @@
 
         function createMap(json) {
             window._topo = json;
+            // json.bbox = topojson.bbox(json);
 
-            var _bounds = {
-                "_southWest": {
-                    "lat": json.bbox[1],
-                    "lng": json.bbox[0]
-                },
-                "_northEast": {
-                    "lat": json.bbox[3],
-                    "lng": json.bbox[2]
-                }
-            }
-            var bounds = new L.LatLngBounds(
-                new L.LatLng(_bounds._southWest.lat, _bounds._southWest.lng), 
-                new L.LatLng(_bounds._northEast.lat, _bounds._northEast.lng)
-            )
+            // var _bounds = {
+            //     "_southWest": {
+            //         "lat": json.bbox[1],
+            //         "lng": json.bbox[0]
+            //     },
+            //     "_northEast": {
+            //         "lat": json.bbox[3],
+            //         "lng": json.bbox[2]
+            //     }
+            // }
+            // var bounds = new L.LatLngBounds(
+            //     new L.LatLng(_bounds._southWest.lat, _bounds._southWest.lng), 
+            //     new L.LatLng(_bounds._northEast.lat, _bounds._northEast.lng)
+            // )
 
             var mymap = L.map('mapid', {
                 center: [0,0],
-                center: bounds.getCenter(),
+                // center: bounds.getCenter(),
                 zoom: 1,
                 layers: [],
-                maxBounds: bounds,
-                maxBoundsViscosity: 0.5,
+                // maxBounds: bounds,
+                // maxBoundsViscosity: 0.5,
                 maxZoom: 8,
                 minZoom: 1
             })
@@ -161,7 +162,7 @@
                         closeButton: false,
                         autoClose: true
                     })
-                    .setLatLng(new L.LatLng(feature.labelPosition.precision02[1], feature.labelPosition.precision02[0]))
+                    .setLatLng(new L.LatLng(feature.labelPosition[1], feature.labelPosition[0]))
                     .setContent('<p>' + feature.nome.pt + '</p>')
                     .openOn(map);
             }
