@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "npx http-server -p 9000 mapa/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,9 +12,12 @@
   "devDependencies": {
     "@types/polylabel": "^1.0.5",
     "area-polygon": "^1.0.1",
+    "http-server": "^0.10.0",
     "leaflet": "^1.2.0",
     "polylabel": "^1.0.2",
     "tinyqueue": "^1.2.3",
+    "topojson": "^3.0.2",
+    "topojson-server": "^3.0.0",
     "turf": "^3.0.14"
   }
 }
