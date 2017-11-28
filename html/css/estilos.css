@@ -1,6 +1,8 @@
 html,body{
-margin:0px;
-height:100%;
+	margin:0;
+	height:100%;
+	width:100%;
+	background-color:#4f4f4f;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
 *:focus {outline:none;}
 
 span.some, .ods-logo, .pais-foto, .menu-aux-desktop, .topo-busca-desktop, .pais-bandeira,
-.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking span.close, .ranking button, .comparar span.close, .comparar button {
+.historico-desktop, .economia-desktop, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-indicadores, .envolve-card, .sintese-home, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking span.close, .ranking button, .comparar span.close, .comparar button, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop {
 	display:none;
 }
 th {
@@ -108,7 +110,6 @@ header div.topo-logomobile {
 
 .container-home {
 	background:#4f4f4f url(../imagens/home-bgmobile.png) no-repeat center;
-	min-height:520px;
 	background-color:#4f4f4f;
 }
 
@@ -276,7 +277,7 @@ table {
 .envolve-card .grafico-economia {
 	margin:0;
 }
-.envolve-card h3 {
+.envolve-card h3, .objetivos-milenio h3 {
 	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
 }
 .envolve-card select.select-card {
@@ -298,6 +299,17 @@ button#myBtnFontes {
 	margin:5px;
 	float:right;
 	font-weight:bold;
+}
+.objetivos-milenio {
+	margin-top:30px;
+	background:url(../imagens/objetivos-milenio-grafico.png) no-repeat 0 50px;
+	width:812px;
+	height:430px;
+}
+div.fontes {
+	background-color:#fff;
+	width:100%;
+	height:50px;
 }
 
 /********** RANKING **********/
@@ -369,6 +381,9 @@ button#myBtnFontes {
 	display:block;
 	font-size:1.6em;
 	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+}
+.container-pais section {
+	background-color:#fff;
 }
 .container-pais table {
 	background-color:transparent;
@@ -459,6 +474,7 @@ button#myBtnFontes {
 
 /********** COMPARAR PAIS **********/
 .container-comparar {
+	height:auto;
 	background-color:#4f4f4f;
 }
 .container-comparar h3 {
@@ -479,11 +495,72 @@ button#myBtnFontes {
 	padding:0;
 }
 .comparar-grafico {
-	background-image:url(../imagens/grafico-comparar.svg);
+	background-image:url(../imagens/comparar-grafico.svg);
 	height:367px;
 	width:350px;
 	margin:20px auto;
 }
+.comparar-grafico-icones {
+	width:105px;
+	height:45px;
+	margin:0 auto;
+}
+.comparar-grafico-icones ul {
+	width:105px;
+	height:45px;
+	padding:0;
+}
+.comparar-grafico-icones li {
+	display:inline-block;
+}
+.comparar-grafico-icones li a {
+	background-image:url(../imagens/comparar-grafico-icones.png);
+	display:block;
+	height:45px;
+	width:36px;
+	margin:7px;
+}
+.comparar-grafico-icones ul li:first-child a {background-position:-72px 0;}
+.comparar-grafico-icones ul li:first-child a:hover {background-position:-72px 0;}
+.comparar-grafico-icones ul li:last-child a {background-position:-36px 0;}
+.comparar-grafico-icones ul li:last-child a:hover {background-position:-180px 0;}
+
+.comparar-lista-paises-desktop {
+	width:20%;
+	margin-left:5%;
+	float:left;
+	background-color:#f4f4f4;
+}
+.comparar-lista-paises-desktop ul {
+	padding:0;
+	margin:0;
+	font-size:1.2em;
+}
+.comparar-lista-paises-desktop ul li {
+	list-style-type:none;
+	padding:0.5em;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
+.comparar-lista-paises-desktop ul li input {
+	margin-right:0.2em;
+}
+.comparar-lista-paises-desktop ul li:first-child {
+  height:50px;
+  background: #3bb2b8; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #42e695, #3bb2b8); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #42e695, #3bb2b8); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #42e695, #3bb2b8); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #42e695, #3bb2b8); /* Standard syntax */  
+  margin-bottom:10px;
+}
+.comparar-lista-paises-desktop ul li:first-child input {
+	border-radius: 5px;
+	border:0;
+	margin-top:3px;
+	height:32px;
+	width:100%;
+}
+
 /********** FIM DO COMPARAR PAIS **********/
 
 
@@ -839,15 +916,15 @@ span.close {
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close {
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop {
 			display:block;
 		}
-		button.accordion, #myBtnFontes, div.panel {
+		button.accordion, #myBtnFontes, .container-ods div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes { 
 			display:none;
 		}
 		.texto-ods {
@@ -863,8 +940,9 @@ span.close {
 			height:auto;
 		}
 		.container-home, .container-ranking {
-			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;
+			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;			
 		}
+
 		section.home {
 			background-size: 230px;
 		}
@@ -930,20 +1008,28 @@ span.close {
 			background-color: rgba(255, 255, 255, 0.85);
 			border:1px solid #7f7f7f;
 		}
-		.container-comparar form div {
+		.comparar-paises-desktop-main {
+			width:75%;
 			float:right;
-			width:100%;
+			text-align:center;
 		}
-		.container-comparar form div select {
-			width:30%;
+		.container-comparar div.comparar-lista-indicadores select {
+			margin:0.6em;
+		}
+		div.comparar-lista-indicadores select {
+			width:40%;
 			display:inline-block;
-			background-color:transparent;
+			background-color:#f4f4f4;
+		}
+		.comparar-grafico {
+			margin-top:5em;
 		}
 		.ranking {
 			width:32em;
-			margin:3em 5em 0 0;
+			margin:2em 2em 0 0;
 			background-color: rgba(255, 255, 255, 0.85);
 			border:1px solid #7f7f7f;
+			float:right;
 		}
 		.ranking .pure-table, .container-ranking .pure-table thead, .container-ranking table thead tr {
 			border: none;
