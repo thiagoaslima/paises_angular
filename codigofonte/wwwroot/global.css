@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+}
+
+.gradiente{
+    background: #3bb2b8; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #42e695, #3bb2b8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #42e695, #3bb2b8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #42e695, #3bb2b8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #42e695, #3bb2b8); /* Standard syntax */  
+}
+
+.overlay{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+/*****************************************
+Classes para organizar o z-index.
+Sempre utilizar a menor altura necessária.
+******************************************/
+
+/*usada em menus flutuantes*/
+.altura1{
+    z-index: 100;
+}
+
+/*usada em overlays transparentes de fundo dos popups*/
+.altura2{
+    z-index: 200;
+}
+
+/*usada nos popups*/
+.altura3{
+    z-index: 300;
+}
+
+.altura4{
+    z-index: 400;
+}
+
+.altura5{
+    z-index: 500;
+}
+

@@ -88,8 +88,10 @@ export class BuscaService {
                 sug3.push(places[i]);
             }else if(words2 && slug.indexOf(words2) == 0){
                 sug2.push(places[i]);
-            }else if(words1 && slug.indexOf(words1) == 0){
-                sug1.push(places[i]);
+            }else if(words1){
+                var index = slug.indexOf(words1);
+                if(index == 0 || slug.charAt(index - 1) == '-') //só considera se encontrou o texto no início da palavra(não no meio)
+                    sug1.push(places[i]);
             }
         }
         //usa somente as sugestões com mais palavras (melhores)
@@ -97,31 +99,32 @@ export class BuscaService {
         else if(sug3.length) placesFound = placesFound.concat(sug3);
         else if(sug2.length) placesFound = placesFound.concat(sug2);
         else if(sug1.length) placesFound = placesFound.concat(sug1);
-        //encontra o local via sigla
-        for(i = 0; i < textWords.length; i++){
-            if(textWords[i].length == 2){
-                for(var j = 0; j < places.length; j++){
-                    if(placesFound.indexOf(places[j]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
-                    if(places[j].sigla.indexOf(textWords[i].toUpperCase()) == 0){
-                        placesFound.push(places[j]);
+        //encontra o local via sigla/sigla3(apenas se não encontrou nada usando o nome)
+        /*if(placesFound.length == 0){
+            for(i = 0; i < textWords.length; i++){
+                if(textWords[i].length == 2){
+                    for(var j = 0; j < places.length; j++){
+                        if(placesFound.indexOf(places[j]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
+                        if(places[j].sigla.indexOf(textWords[i].toUpperCase()) == 0){
+                            placesFound.push(places[j]);
+                        }
                     }
                 }
             }
-        }
-        //encontra o local via sigla3
-        for(i = 0; i < textWords.length; i++){
-            if(textWords[i].length >= 2 && textWords[i].length <= 3){
-                for(var j = 0; j < places.length; j++){
-                    if(placesFound.indexOf(places[j]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
-                    if(places[j].sigla3.indexOf(textWords[i].toUpperCase()) == 0){
-                        placesFound.push(places[j]);
+            for(i = 0; i < textWords.length; i++){
+                if(textWords[i].length == 2 || textWords[i].length == 3){
+                    for(var j = 0; j < places.length; j++){
+                        if(placesFound.indexOf(places[j]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
+                        if(places[j].sigla3.indexOf(textWords[i].toUpperCase()) == 0){
+                            placesFound.push(places[j]);
+                        }
                     }
                 }
             }
-        }
+        }*/
         //remove resultados excessivos
-        if(places.length > this.MAX_RESULTS)
-            places = places.slice(0, this.MAX_RESULTS);
+        if(placesFound.length > this.MAX_RESULTS)
+            placesFound = placesFound.slice(0, this.MAX_RESULTS);
         return placesFound;
     }
     
