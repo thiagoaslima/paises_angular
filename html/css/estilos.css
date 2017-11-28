@@ -931,7 +931,7 @@ span.close {
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span { 
 			display:none;
 		}
 		.sintese-home {
@@ -940,8 +940,11 @@ span.close {
 		}
 		.video-ods {
 			background:url(../imagens/video_thumb.png) no-repeat;
-			height:67px;
-			width:118px;
+			background-size:contain;
+			width:100%;
+			height:240px;
+			float:left;
+			margin:10px 0;
 		}
 		.texto-ods {
 			width:90%;
