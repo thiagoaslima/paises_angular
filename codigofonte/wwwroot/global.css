@@ -2,6 +2,27 @@
     box-sizing: border-box;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-size: 100%;
+    color: #4f4f4f;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('fonte/Roboto.ttf');
+}
+@font-face {
+    font-family: RobotoMedium;
+    src: url('fonte/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url('fonte/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: RobotoBlack;
+    src: url('fonte/Roboto-Black.ttf');
 }
 
 .gradiente{
@@ -48,3 +69,36 @@ Sempre utilizar a menor altura necessária.
     z-index: 500;
 }
 
+/*-----------------*/
+
+a {
+    color: #4f4f4f;;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+th {
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	font-weight:normal;
+	font-style:normal;
+}
+
+h2 {
+	font-size:1.5rem;
+	margin:0;
+	font-weight:normal;
+	display:inline;
+}
+
+h3 {
+	font-weight:normal;
+	font-size:1.4rem;
+}
+
+h4 {
+	font-weight:normal;
+	font-size:1.3rem;
+}
