@@ -4,12 +4,13 @@
     width: 100%;
     height: 40px;
     position: relative;
-    padding: 3px 0px;
 }
 
 .cabecalho__logo{
     float: left;
-    padding: 6px 5px;
+    width: 160px;
+    height: 30px;
+    margin: 5px 0 0 5px;
 }
 
 .cabecalho__campo-busca-container{
@@ -20,11 +21,19 @@
 
 .cabecalho__campo-busca{
     border: none;
-    padding: 0px 10px;
+    padding: 0 34px 0 10px;
     display: inline-block;
     height: 34px;
     width: 100%;
     position: relative; /*precisa de uma 'position' explicita para o 'z-index' funcionar*/
+    box-sizing: border-box;
+}
+
+.cabecalho__campo-busca-icone{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
 }
 
 .cabecalho__sugestao{
@@ -52,14 +61,15 @@
 }
 
 .cabecalho__menu-button{
-    color: #fff;
-	font-size:2.3em;
-	line-height:1.2em;
-	font-weight:bold;
-    padding: 0 10px 0 0;
     border: none;
     cursor: pointer;
 	background-color:transparent;
+    padding: 10px 10px 0 10px;
+}
+
+.cabecalho__menu-icone{
+    color: #fff;
+    font-size: 1.5em;
 }
 
 .cabecalho__menu{
@@ -91,14 +101,20 @@
     .cabecalho{
         height: 50px;
         text-align: center;
-        padding: 8px 0px;
     }
     
+    .cabecalho__logo{
+        width: 190px;
+        height: 40px;
+        margin: 5px 0 0 10px;
+    }
+
     .cabecalho__campo-busca-container{
         display: inline-block;
         position: relative;
         width: 55%;
         top: 0;
+        margin-top: 8px;
     }
 
     .cabecalho__campo-busca{
@@ -107,5 +123,12 @@
 
     .cabecalho__sugestao{
         border-radius: 10px;
+    }
+
+    .cabecalho__menu-button{
+        border: none;
+        cursor: pointer;
+        background-color:transparent;
+        padding: 15px 10px 0 15px;
     }
 }

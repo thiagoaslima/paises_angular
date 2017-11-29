@@ -41,6 +41,13 @@
     bottom: 0px;
 }
 
+.area-aplicacao{
+    position: absolute;
+    width: 100%;
+    min-height: calc(100% - 104px);
+    top: 104px;
+}
+
 /*****************************************
 Classes para organizar o z-index.
 Sempre utilizar a menor altura necessária.
@@ -101,4 +108,15 @@ h3 {
 h4 {
 	font-weight:normal;
 	font-size:1.3rem;
+}
+
+/*desktop*/
+@media only screen and (min-width : 568px) {
+
+    .area-aplicacao{
+        width: 100%;
+        min-height: calc(100% - 80px);
+        top: 80px;
+    }
+    
 }

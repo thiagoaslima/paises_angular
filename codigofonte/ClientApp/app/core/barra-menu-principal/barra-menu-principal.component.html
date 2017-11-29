@@ -5,6 +5,7 @@
     <div class="cabecalho__campo-busca-container">
         <div class="overlay altura2" *ngIf="resultados && resultados.length>0" (click)="limpaResultados()"></div>
         <input type="search" class="cabecalho__campo-busca" [class.altura3]="resultados && resultados.length>0" autocomplete="off" (focus)="busca($event)" (input)="busca($event)">
+        <i class="fa fa-search cabecalho__campo-busca-icone" [class.altura3]="resultados && resultados.length>0" aria-hidden="true"></i>
         <ul class="cabecalho__sugestao altura3" *ngIf="resultados && resultados.length>0">
             <li *ngFor="let resultado of resultados" class="cabecalho__sugestao-item" (click)="navegarPara(resultado.nome[lang])">{{ resultado.nome[lang] }}</li>
         </ul>
@@ -12,7 +13,7 @@
     <!-->menu<-->
     <div class="cabecalho__menu-container">
         <div class="overlay altura2" *ngIf="mostraMenu==true" (click)="mostraMenu=false"></div>
-        <button class="cabecalho__menu-button" (click)="mostraMenu=true">...</button>
+        <button class="cabecalho__menu-button" (click)="mostraMenu=true"><i class="fa fa-ellipsis-h cabecalho__menu-icone" aria-hidden="true"></i></button>
         <ul class="cabecalho__menu altura3" *ngIf="mostraMenu">
             <li><a class="cabecalho__menu-item" href="#">TELA INICIAL</a></li>
             <li><a class="cabecalho__menu-item" href="#">ODS</a></li>
