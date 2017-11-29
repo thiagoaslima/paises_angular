@@ -1,13 +1,17 @@
 <header class="cabecalho gradiente">
     <!-->logo<-->
-    <img src="../../../img/topo-logomobile.svg" class="cabecalho__logo">
+    <h1 class="cabecalho__logo">
+        <a href="#"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
+    </h1>
     <!-->campo de busca com lista de sugestões<-->
     <div class="cabecalho__campo-busca-container">
         <div class="overlay altura2" *ngIf="resultados && resultados.length>0" (click)="limpaResultados()"></div>
         <input type="search" class="cabecalho__campo-busca" [class.altura3]="resultados && resultados.length>0" autocomplete="off" (focus)="busca($event)" (input)="busca($event)">
         <i class="fa fa-search cabecalho__campo-busca-icone" [class.altura3]="resultados && resultados.length>0" aria-hidden="true"></i>
         <ul class="cabecalho__sugestao altura3" *ngIf="resultados && resultados.length>0">
-            <li *ngFor="let resultado of resultados" class="cabecalho__sugestao-item" (click)="navegarPara(resultado.nome[lang])">{{ resultado.nome[lang] }}</li>
+            <li *ngFor="let resultado of resultados" (click)="navegarPara(resultado.nome[lang])">
+                <a href="#" class="cabecalho__sugestao-item">{{ resultado.nome[lang] }}</a>
+            </li>
         </ul>
     </div>
     <!-->menu<-->
@@ -20,5 +24,9 @@
             <li><a class="cabecalho__menu-item" href="#">ENGLISH</a></li>
             <li><a class="cabecalho__menu-item" href="#">ESPAÑOL</a></li>
         </ul>
+    </div>
+    <!-->logo ODS<-->
+    <div class="cabecalho__logo-ods altura1">
+        <a href="#"><img src="../../../img/ods-logo.png"></a>
     </div>
 </header>

@@ -78,14 +78,11 @@ Sempre utilizar a menor altura necessária.
 
 /*-----------------*/
 
-a {
-    color: #4f4f4f;;
+a, a:hover, a:visited {
+    color: #4f4f4f;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: none;
-}
 
 th {
 	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
