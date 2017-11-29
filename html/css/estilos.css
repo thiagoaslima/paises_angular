@@ -400,6 +400,15 @@ div.fontes {
 	height:200px;
 	margin:10px auto 30px auto;
 }
+.grafico-odm {
+	background:url(../imagens/grafico-odm.svg) no-repeat;
+	width:100%;
+	height:100px;
+	background-size: cover;
+}
+.grafico-odm~h4 {
+	font-weight: 600;
+}
 
 /********** FIM DO PAIS **********/
 
