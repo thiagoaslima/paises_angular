@@ -7,10 +7,17 @@
 }
 
 .cabecalho__logo{
-    float: left;
-    width: 160px;
-    height: 30px;
     margin: 5px 0 0 5px;
+    display: inline-block;
+}
+
+.cabecalho__logo-imagem{
+    height: 30px;
+    margin-top: -4px;
+}
+
+.cabecalho__logo-ods{
+    display: none;
 }
 
 .cabecalho__campo-busca-container{
@@ -48,7 +55,7 @@
 
 .cabecalho__sugestao-item{
     padding: 8px 24px;
-    cursor: pointer;
+    display: block;
 }
 
 .cabecalho__sugestao-item:hover{
@@ -88,7 +95,7 @@
     color: #4f4f4f;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 .cabecalho__menu-item:hover{
@@ -102,11 +109,21 @@
         height: 50px;
         text-align: center;
     }
-    
+
     .cabecalho__logo{
-        width: 190px;
-        height: 40px;
-        margin: 5px 0 0 10px;
+        margin: 0 20px 0 0;
+    }
+
+    .cabecalho__logo-imagem{
+        height: 30px;
+        margin-top: 4px;
+    }
+
+    .cabecalho__logo-ods{
+        position: absolute;
+        top: 70px;
+        left: 5px;
+        display: inline;
     }
 
     .cabecalho__campo-busca-container{
