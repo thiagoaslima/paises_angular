@@ -1,0 +1,1745 @@
+[
+  {
+    "cod": "012",
+    "parent": "015",
+    "en": "Algeria",
+    "es": "Argelia",
+    "sigla": "DZA"
+  },
+  {
+    "cod": "818",
+    "parent": "015",
+    "en": "Egypt",
+    "es": "Egipto",
+    "sigla": "EGY"
+  },
+  {
+    "cod": "434",
+    "parent": "015",
+    "en": "Libya",
+    "es": "Libia",
+    "sigla": "LBY"
+  },
+  {
+    "cod": "504",
+    "parent": "015",
+    "en": "Morocco",
+    "es": "Marruecos",
+    "sigla": "MAR"
+  },
+  {
+    "cod": "732",
+    "parent": "015",
+    "en": "Western Sahara",
+    "es": "Sáhara Occidental",
+    "sigla": "ESH"
+  },
+  {
+    "cod": "729",
+    "parent": "015",
+    "en": "Sudan",
+    "es": "Sudán",
+    "sigla": "SDN"
+  },
+  {
+    "cod": "788",
+    "parent": "015",
+    "en": "Tunisia",
+    "es": "Túnez",
+    "sigla": "TUN"
+  },
+  {
+    "cod": "024",
+    "parent": "017",
+    "en": "Angola",
+    "es": "Angola",
+    "sigla": "AGO"
+  },
+  {
+    "cod": "120",
+    "parent": "017",
+    "en": "Cameroon",
+    "es": "Camerún",
+    "sigla": "CMR"
+  },
+  {
+    "cod": "140",
+    "parent": "017",
+    "en": "Central African Republic",
+    "es": "República Centroafricana",
+    "sigla": "CAF"
+  },
+  {
+    "cod": "148",
+    "parent": "017",
+    "en": "Chad",
+    "es": "Chad",
+    "sigla": "TCD"
+  },
+  {
+    "cod": "178",
+    "parent": "017",
+    "en": "Congo",
+    "es": "Congo",
+    "sigla": "COG"
+  },
+  {
+    "cod": "180",
+    "parent": "017",
+    "en": "Democratic Republic of the Congo",
+    "es": "República Democrática del Congo",
+    "sigla": "COD"
+  },
+  {
+    "cod": "226",
+    "parent": "017",
+    "en": "Equatorial Guinea",
+    "es": "Guinea Ecuatorial",
+    "sigla": "GNQ"
+  },
+  {
+    "cod": "266",
+    "parent": "017",
+    "en": "Gabon",
+    "es": "Gabón",
+    "sigla": "GAB"
+  },
+  {
+    "cod": "678",
+    "parent": "017",
+    "en": "Sao Tome and Principe",
+    "es": "Santo Tomé y Príncipe",
+    "sigla": "STP"
+  },
+  {
+    "cod": "072",
+    "parent": "018",
+    "en": "Botswana",
+    "es": "Botswana",
+    "sigla": "BWA"
+  },
+  {
+    "cod": "426",
+    "parent": "018",
+    "en": "Lesotho",
+    "es": "Lesotho",
+    "sigla": "LSO"
+  },
+  {
+    "cod": "516",
+    "parent": "018",
+    "en": "Namibia",
+    "es": "Namibia",
+    "sigla": "NAM"
+  },
+  {
+    "cod": "710",
+    "parent": "018",
+    "en": "South Africa",
+    "es": "Sudáfrica",
+    "sigla": "ZAF"
+  },
+  {
+    "cod": "748",
+    "parent": "018",
+    "en": "Swaziland",
+    "es": "Swazilandia",
+    "sigla": "SWZ"
+  },
+  {
+    "cod": "204",
+    "parent": "011",
+    "en": "Benin",
+    "es": "Benin",
+    "sigla": "BEN"
+  },
+  {
+    "cod": "854",
+    "parent": "011",
+    "en": "Burkina Faso",
+    "es": "Burkina Faso",
+    "sigla": "BFA"
+  },
+  {
+    "cod": "132",
+    "parent": "011",
+    "en": "Cabo Verde",
+    "es": "Cabo Verde",
+    "sigla": "CPV"
+  },
+  {
+    "cod": "384",
+    "parent": "011",
+    "en": "Côte d'Ivoire",
+    "es": "Côte d'Ivoire",
+    "sigla": "CIV"
+  },
+  {
+    "cod": "270",
+    "parent": "011",
+    "en": "Gambia",
+    "es": "Gambia",
+    "sigla": "GMB"
+  },
+  {
+    "cod": "288",
+    "parent": "011",
+    "en": "Ghana",
+    "es": "Ghana",
+    "sigla": "GHA"
+  },
+  {
+    "cod": "324",
+    "parent": "011",
+    "en": "Guinea",
+    "es": "Guinea",
+    "sigla": "GIN"
+  },
+  {
+    "cod": "624",
+    "parent": "011",
+    "en": "Guinea-Bissau",
+    "es": "Guinea-Bissau",
+    "sigla": "GNB"
+  },
+  {
+    "cod": "430",
+    "parent": "011",
+    "en": "Liberia",
+    "es": "Liberia",
+    "sigla": "LBR"
+  },
+  {
+    "cod": "466",
+    "parent": "011",
+    "en": "Mali",
+    "es": "Malí",
+    "sigla": "MLI"
+  },
+  {
+    "cod": "478",
+    "parent": "011",
+    "en": "Mauritania",
+    "es": "Mauritania",
+    "sigla": "MRT"
+  },
+  {
+    "cod": "562",
+    "parent": "011",
+    "en": "Niger",
+    "es": "Níger",
+    "sigla": "NER"
+  },
+  {
+    "cod": "566",
+    "parent": "011",
+    "en": "Nigeria",
+    "es": "Nigeria",
+    "sigla": "NGA"
+  },
+  {
+    "cod": "654",
+    "parent": "011",
+    "en": "Saint Helena",
+    "es": "Santa Elena",
+    "sigla": "SHN"
+  },
+  {
+    "cod": "686",
+    "parent": "011",
+    "en": "Senegal",
+    "es": "Senegal",
+    "sigla": "SEN"
+  },
+  {
+    "cod": "694",
+    "parent": "011",
+    "en": "Sierra Leone",
+    "es": "Sierra Leona",
+    "sigla": "SLE"
+  },
+  {
+    "cod": "768",
+    "parent": "011",
+    "en": "Togo",
+    "es": "Togo",
+    "sigla": "TGO"
+  },
+  {
+    "cod": "086",
+    "parent": "014",
+    "en": "British Indian Ocean Territory",
+    "es": "Territorio Británico del Océano Índico",
+    "sigla": "IOT"
+  },
+  {
+    "cod": "108",
+    "parent": "014",
+    "en": "Burundi",
+    "es": "Burundi",
+    "sigla": "BDI"
+  },
+  {
+    "cod": "174",
+    "parent": "014",
+    "en": "Comoros",
+    "es": "Comoras",
+    "sigla": "COM"
+  },
+  {
+    "cod": "262",
+    "parent": "014",
+    "en": "Djibouti",
+    "es": "Djibouti",
+    "sigla": "DJI"
+  },
+  {
+    "cod": "232",
+    "parent": "014",
+    "en": "Eritrea",
+    "es": "Eritrea",
+    "sigla": "ERI"
+  },
+  {
+    "cod": "231",
+    "parent": "014",
+    "en": "Ethiopia",
+    "es": "Etiopía",
+    "sigla": "ETH"
+  },
+  {
+    "cod": "260",
+    "parent": "014",
+    "en": "French Southern Territories",
+    "es": "Territorio de las Tierras Australes Francesas",
+    "sigla": "ATF"
+  },
+  {
+    "cod": "404",
+    "parent": "014",
+    "en": "Kenya",
+    "es": "Kenya",
+    "sigla": "KEN"
+  },
+  {
+    "cod": "450",
+    "parent": "014",
+    "en": "Madagascar",
+    "es": "Madagascar",
+    "sigla": "MDG"
+  },
+  {
+    "cod": "454",
+    "parent": "014",
+    "en": "Malawi",
+    "es": "Malawi",
+    "sigla": "MWI"
+  },
+  {
+    "cod": "480",
+    "parent": "014",
+    "en": "Mauritius",
+    "es": "Mauricio",
+    "sigla": "MUS"
+  },
+  {
+    "cod": "175",
+    "parent": "014",
+    "en": "Mayotte",
+    "es": "Mayotte",
+    "sigla": "MYT"
+  },
+  {
+    "cod": "508",
+    "parent": "014",
+    "en": "Mozambique",
+    "es": "Mozambique",
+    "sigla": "MOZ"
+  },
+  {
+    "cod": "638",
+    "parent": "014",
+    "en": "Réunion",
+    "es": "Reunión",
+    "sigla": "REU"
+  },
+  {
+    "cod": "646",
+    "parent": "014",
+    "en": "Rwanda",
+    "es": "Rwanda",
+    "sigla": "RWA"
+  },
+  {
+    "cod": "690",
+    "parent": "014",
+    "en": "Seychelles",
+    "es": "Seychelles",
+    "sigla": "SYC"
+  },
+  {
+    "cod": "706",
+    "parent": "014",
+    "en": "Somalia",
+    "es": "Somalia",
+    "sigla": "SOM"
+  },
+  {
+    "cod": "728",
+    "parent": "014",
+    "en": "South Sudan",
+    "es": "Sudán del Sur",
+    "sigla": "SSD"
+  },
+  {
+    "cod": "800",
+    "parent": "014",
+    "en": "Uganda",
+    "es": "Uganda",
+    "sigla": "UGA"
+  },
+  {
+    "cod": "834",
+    "parent": "014",
+    "en": "United Republic of Tanzania",
+    "es": "República Unida de Tanzanía",
+    "sigla": "TZA"
+  },
+  {
+    "cod": "894",
+    "parent": "014",
+    "en": "Zambia",
+    "es": "Zambia",
+    "sigla": "ZMB"
+  },
+  {
+    "cod": "716",
+    "parent": "014",
+    "en": "Zimbabwe",
+    "es": "Zimbabwe",
+    "sigla": "ZWE"
+  },
+  {
+    "cod": "084",
+    "parent": "013",
+    "en": "Belize",
+    "es": "Belice",
+    "sigla": "BLZ"
+  },
+  {
+    "cod": "188",
+    "parent": "013",
+    "en": "Costa Rica",
+    "es": "Costa Rica",
+    "sigla": "CRI"
+  },
+  {
+    "cod": "222",
+    "parent": "013",
+    "en": "El Salvador",
+    "es": "El Salvador",
+    "sigla": "SLV"
+  },
+  {
+    "cod": "320",
+    "parent": "013",
+    "en": "Guatemala",
+    "es": "Guatemala",
+    "sigla": "GTM"
+  },
+  {
+    "cod": "340",
+    "parent": "013",
+    "en": "Honduras",
+    "es": "Honduras",
+    "sigla": "HND"
+  },
+  {
+    "cod": "484",
+    "parent": "013",
+    "en": "Mexico",
+    "es": "México",
+    "sigla": "MEX"
+  },
+  {
+    "cod": "558",
+    "parent": "013",
+    "en": "Nicaragua",
+    "es": "Nicaragua",
+    "sigla": "NIC"
+  },
+  {
+    "cod": "591",
+    "parent": "013",
+    "en": "Panama",
+    "es": "Panamá",
+    "sigla": "PAN"
+  },
+  {
+    "cod": "032",
+    "parent": "005",
+    "en": "Argentina",
+    "es": "Argentina",
+    "sigla": "ARG"
+  },
+  {
+    "cod": "068",
+    "parent": "005",
+    "en": "Bolivia (Plurinational State of)",
+    "es": "Bolivia (Estado Plurinacional de)",
+    "sigla": "BOL"
+  },
+  {
+    "cod": "074",
+    "parent": "005",
+    "en": "Bouvet Island",
+    "es": "Isla Bouvet",
+    "sigla": "BVT"
+  },
+  {
+    "cod": "076",
+    "parent": "005",
+    "en": "Brazil",
+    "es": "Brasil",
+    "sigla": "BRA"
+  },
+  {
+    "cod": "152",
+    "parent": "005",
+    "en": "Chile",
+    "es": "Chile",
+    "sigla": "CHL"
+  },
+  {
+    "cod": "170",
+    "parent": "005",
+    "en": "Colombia",
+    "es": "Colombia",
+    "sigla": "COL"
+  },
+  {
+    "cod": "218",
+    "parent": "005",
+    "en": "Ecuador",
+    "es": "Ecuador",
+    "sigla": "ECU"
+  },
+  {
+    "cod": "238",
+    "parent": "005",
+    "en": "Falkland Islands (Malvinas)",
+    "es": "Islas Malvinas (Falkland)",
+    "sigla": "FLK"
+  },
+  {
+    "cod": "254",
+    "parent": "005",
+    "en": "French Guiana",
+    "es": "Guayana Francesa",
+    "sigla": "GUF"
+  },
+  {
+    "cod": "328",
+    "parent": "005",
+    "en": "Guyana",
+    "es": "Guyana",
+    "sigla": "GUY"
+  },
+  {
+    "cod": "600",
+    "parent": "005",
+    "en": "Paraguay",
+    "es": "Paraguay",
+    "sigla": "PRY"
+  },
+  {
+    "cod": "604",
+    "parent": "005",
+    "en": "Peru",
+    "es": "Perú",
+    "sigla": "PER"
+  },
+  {
+    "cod": "239",
+    "parent": "005",
+    "en": "South Georgia and the South Sandwich Islands",
+    "es": "Georgia del Sur y las Islas Sandwich del Sur",
+    "sigla": "SGS"
+  },
+  {
+    "cod": "740",
+    "parent": "005",
+    "en": "Suriname",
+    "es": "Suriname",
+    "sigla": "SUR"
+  },
+  {
+    "cod": "858",
+    "parent": "005",
+    "en": "Uruguay",
+    "es": "Uruguay",
+    "sigla": "URY"
+  },
+  {
+    "cod": "862",
+    "parent": "005",
+    "en": "Venezuela (Bolivarian Republic of)",
+    "es": "Venezuela (República Bolivariana de)",
+    "sigla": "VEN"
+  },
+  {
+    "cod": "660",
+    "parent": "029",
+    "en": "Anguilla",
+    "es": "Anguila",
+    "sigla": "AIA"
+  },
+  {
+    "cod": "028",
+    "parent": "029",
+    "en": "Antigua and Barbuda",
+    "es": "Antigua y Barbuda",
+    "sigla": "ATG"
+  },
+  {
+    "cod": "533",
+    "parent": "029",
+    "en": "Aruba",
+    "es": "Aruba",
+    "sigla": "ABW"
+  },
+  {
+    "cod": "044",
+    "parent": "029",
+    "en": "Bahamas",
+    "es": "Bahamas",
+    "sigla": "BHS"
+  },
+  {
+    "cod": "052",
+    "parent": "029",
+    "en": "Barbados",
+    "es": "Barbados",
+    "sigla": "BRB"
+  },
+  {
+    "cod": "535",
+    "parent": "029",
+    "en": "Bonaire, Sint Eustatius and Saba",
+    "es": "Bonaire, San Eustaquio y Saba",
+    "sigla": "BES"
+  },
+  {
+    "cod": "092",
+    "parent": "029",
+    "en": "British Virgin Islands",
+    "es": "Islas Vírgenes Británicas",
+    "sigla": "VGB"
+  },
+  {
+    "cod": "136",
+    "parent": "029",
+    "en": "Cayman Islands",
+    "es": "Islas Caimán",
+    "sigla": "CYM"
+  },
+  {
+    "cod": "192",
+    "parent": "029",
+    "en": "Cuba",
+    "es": "Cuba",
+    "sigla": "CUB"
+  },
+  {
+    "cod": "531",
+    "parent": "029",
+    "en": "Curaçao",
+    "es": "Curaçao",
+    "sigla": "CUW"
+  },
+  {
+    "cod": "212",
+    "parent": "029",
+    "en": "Dominica",
+    "es": "Dominica",
+    "sigla": "DMA"
+  },
+  {
+    "cod": "214",
+    "parent": "029",
+    "en": "Dominican Republic",
+    "es": "República Dominicana",
+    "sigla": "DOM"
+  },
+  {
+    "cod": "308",
+    "parent": "029",
+    "en": "Grenada",
+    "es": "Granada",
+    "sigla": "GRD"
+  },
+  {
+    "cod": "312",
+    "parent": "029",
+    "en": "Guadeloupe",
+    "es": "Guadalupe",
+    "sigla": "GLP"
+  },
+  {
+    "cod": "332",
+    "parent": "029",
+    "en": "Haiti",
+    "es": "Haití",
+    "sigla": "HTI"
+  },
+  {
+    "cod": "388",
+    "parent": "029",
+    "en": "Jamaica",
+    "es": "Jamaica",
+    "sigla": "JAM"
+  },
+  {
+    "cod": "474",
+    "parent": "029",
+    "en": "Martinique",
+    "es": "Martinica",
+    "sigla": "MTQ"
+  },
+  {
+    "cod": "500",
+    "parent": "029",
+    "en": "Montserrat",
+    "es": "Montserrat",
+    "sigla": "MSR"
+  },
+  {
+    "cod": "630",
+    "parent": "029",
+    "en": "Puerto Rico",
+    "es": "Puerto Rico",
+    "sigla": "PRI"
+  },
+  {
+    "cod": "652",
+    "parent": "029",
+    "en": "Saint Barthélemy",
+    "es": "San Bartolomé",
+    "sigla": "BLM"
+  },
+  {
+    "cod": "659",
+    "parent": "029",
+    "en": "Saint Kitts and Nevis",
+    "es": "Saint Kitts y Nevis",
+    "sigla": "KNA"
+  },
+  {
+    "cod": "662",
+    "parent": "029",
+    "en": "Saint Lucia",
+    "es": "Santa Lucía",
+    "sigla": "LCA"
+  },
+  {
+    "cod": "663",
+    "parent": "029",
+    "en": "Saint Martin (French Part)",
+    "es": "San Martín (parte francesa)",
+    "sigla": "MAF"
+  },
+  {
+    "cod": "670",
+    "parent": "029",
+    "en": "Saint Vincent and the Grenadines",
+    "es": "San Vicente y las Granadinas",
+    "sigla": "VCT"
+  },
+  {
+    "cod": "534",
+    "parent": "029",
+    "en": "Sint Maarten (Dutch part)",
+    "es": "San Martín (parte holandés)",
+    "sigla": "SXM"
+  },
+  {
+    "cod": "780",
+    "parent": "029",
+    "en": "Trinidad and Tobago",
+    "es": "Trinidad y Tabago",
+    "sigla": "TTO"
+  },
+  {
+    "cod": "796",
+    "parent": "029",
+    "en": "Turks and Caicos Islands",
+    "es": "Islas Turcas y Caicos",
+    "sigla": "TCA"
+  },
+  {
+    "cod": "850",
+    "parent": "029",
+    "en": "United States Virgin Islands",
+    "es": "Islas Vírgenes de los Estados Unidos",
+    "sigla": "VIR"
+  },
+  {
+    "cod": "060",
+    "parent": "021",
+    "en": "Bermuda",
+    "es": "Bermuda",
+    "sigla": "BMU"
+  },
+  {
+    "cod": "124",
+    "parent": "021",
+    "en": "Canada",
+    "es": "Canadá",
+    "sigla": "CAN"
+  },
+  {
+    "cod": "840",
+    "parent": "021",
+    "en": "United States of America",
+    "es": "Estados Unidos de América",
+    "sigla": "USA"
+  },
+  {
+    "cod": "304",
+    "parent": "021",
+    "en": "Greenland",
+    "es": "Groenlandia",
+    "sigla": "GRL"
+  },
+  {
+    "cod": "666",
+    "parent": "021",
+    "en": "Saint Pierre and Miquelon",
+    "es": "Saint Pierre y Miquelon",
+    "sigla": "SPM"
+  },
+  {
+    "cod": "010",
+    "parent": "001",
+    "en": "Antarctica",
+    "es": "Antártida",
+    "sigla": "ATA"
+  },
+  {
+    "cod": "398",
+    "parent": "143",
+    "en": "Kazakhstan",
+    "es": "Kazajstán",
+    "sigla": "KAZ"
+  },
+  {
+    "cod": "417",
+    "parent": "143",
+    "en": "Kyrgyzstan",
+    "es": "Kirguistán",
+    "sigla": "KGZ"
+  },
+  {
+    "cod": "762",
+    "parent": "143",
+    "en": "Tajikistan",
+    "es": "Tayikistán",
+    "sigla": "TJK"
+  },
+  {
+    "cod": "795",
+    "parent": "143",
+    "en": "Turkmenistan",
+    "es": "Turkmenistán",
+    "sigla": "TKM"
+  },
+  {
+    "cod": "860",
+    "parent": "143",
+    "en": "Uzbekistan",
+    "es": "Uzbekistán",
+    "sigla": "UZB"
+  },
+  {
+    "cod": "004",
+    "parent": "034",
+    "en": "Afghanistan",
+    "es": "Afganistán",
+    "sigla": "AFG"
+  },
+  {
+    "cod": "050",
+    "parent": "034",
+    "en": "Bangladesh",
+    "es": "Bangladesh",
+    "sigla": "BGD"
+  },
+  {
+    "cod": "064",
+    "parent": "034",
+    "en": "Bhutan",
+    "es": "Bhután",
+    "sigla": "BTN"
+  },
+  {
+    "cod": "356",
+    "parent": "034",
+    "en": "India",
+    "es": "India",
+    "sigla": "IND"
+  },
+  {
+    "cod": "364",
+    "parent": "034",
+    "en": "Iran (Islamic Republic of)",
+    "es": "Irán (República Islámica del)",
+    "sigla": "IRN"
+  },
+  {
+    "cod": "462",
+    "parent": "034",
+    "en": "Maldives",
+    "es": "Maldivas",
+    "sigla": "MDV"
+  },
+  {
+    "cod": "524",
+    "parent": "034",
+    "en": "Nepal",
+    "es": "Nepal",
+    "sigla": "NPL"
+  },
+  {
+    "cod": "586",
+    "parent": "034",
+    "en": "Pakistan",
+    "es": "Pakistán",
+    "sigla": "PAK"
+  },
+  {
+    "cod": "144",
+    "parent": "034",
+    "en": "Sri Lanka",
+    "es": "Sri Lanka",
+    "sigla": "LKA"
+  },
+  {
+    "cod": "682",
+    "parent": "145",
+    "en": "Saudi Arabia",
+    "es": "Arabia Saudita",
+    "sigla": "SAU"
+  },
+  {
+    "cod": "051",
+    "parent": "145",
+    "en": "Armenia",
+    "es": "Armenia",
+    "sigla": "ARM"
+  },
+  {
+    "cod": "031",
+    "parent": "145",
+    "en": "Azerbaijan",
+    "es": "Azerbaiyán",
+    "sigla": "AZE"
+  },
+  {
+    "cod": "048",
+    "parent": "145",
+    "en": "Bahrain",
+    "es": "Bahrein",
+    "sigla": "BHR"
+  },
+  {
+    "cod": "196",
+    "parent": "145",
+    "en": "Cyprus",
+    "es": "Chipre",
+    "sigla": "CYP"
+  },
+  {
+    "cod": "784",
+    "parent": "145",
+    "en": "United Arab Emirates",
+    "es": "Emiratos Árabes Unidos",
+    "sigla": "ARE"
+  },
+  {
+    "cod": "275",
+    "parent": "145",
+    "en": "State of Palestine",
+    "es": "Estado de Palestina",
+    "sigla": "PSE"
+  },
+  {
+    "cod": "268",
+    "parent": "145",
+    "en": "Georgia",
+    "es": "Georgia",
+    "sigla": "GEO"
+  },
+  {
+    "cod": "368",
+    "parent": "145",
+    "en": "Iraq",
+    "es": "Iraq",
+    "sigla": "IRQ"
+  },
+  {
+    "cod": "376",
+    "parent": "145",
+    "en": "Israel",
+    "es": "Israel",
+    "sigla": "ISR"
+  },
+  {
+    "cod": "400",
+    "parent": "145",
+    "en": "Jordan",
+    "es": "Jordania",
+    "sigla": "JOR"
+  },
+  {
+    "cod": "414",
+    "parent": "145",
+    "en": "Kuwait",
+    "es": "Kuwait",
+    "sigla": "KWT"
+  },
+  {
+    "cod": "422",
+    "parent": "145",
+    "en": "Lebanon",
+    "es": "Líbano",
+    "sigla": "LBN"
+  },
+  {
+    "cod": "512",
+    "parent": "145",
+    "en": "Oman",
+    "es": "Omán",
+    "sigla": "OMN"
+  },
+  {
+    "cod": "634",
+    "parent": "145",
+    "en": "Qatar",
+    "es": "Qatar",
+    "sigla": "QAT"
+  },
+  {
+    "cod": "760",
+    "parent": "145",
+    "en": "Syrian Arab Republic",
+    "es": "República Árabe Siria",
+    "sigla": "SYR"
+  },
+  {
+    "cod": "792",
+    "parent": "145",
+    "en": "Turkey",
+    "es": "Turquía",
+    "sigla": "TUR"
+  },
+  {
+    "cod": "887",
+    "parent": "145",
+    "en": "Yemen",
+    "es": "Yemen",
+    "sigla": "YEM"
+  },
+  {
+    "cod": "156",
+    "parent": "030",
+    "en": "China",
+    "es": "China",
+    "sigla": "CHN"
+  },
+  {
+    "cod": "344",
+    "parent": "030",
+    "en": "China, Hong Kong Special Administrative Region",
+    "es": "China, región administrativa especial de Hong Kong",
+    "sigla": "HKG"
+  },
+  {
+    "cod": "446",
+    "parent": "030",
+    "en": "China, Macao Special Administrative Region",
+    "es": "China, región administrativa especial de Macao",
+    "sigla": "MAC"
+  },
+  {
+    "cod": "392",
+    "parent": "030",
+    "en": "Japan",
+    "es": "Japón",
+    "sigla": "JPN"
+  },
+  {
+    "cod": "496",
+    "parent": "030",
+    "en": "Mongolia",
+    "es": "Mongolia",
+    "sigla": "MNG"
+  },
+  {
+    "cod": "410",
+    "parent": "030",
+    "en": "Republic of Korea",
+    "es": "República de Corea",
+    "sigla": "KOR"
+  },
+  {
+    "cod": "408",
+    "parent": "030",
+    "en": "Democratic People's Republic of Korea",
+    "es": "República Popular Democrática de Corea",
+    "sigla": "PRK"
+  },
+  {
+    "cod": "096",
+    "parent": "035",
+    "en": "Brunei Darussalam",
+    "es": "Brunei Darussalam",
+    "sigla": "BRN"
+  },
+  {
+    "cod": "116",
+    "parent": "035",
+    "en": "Cambodia",
+    "es": "Camboya",
+    "sigla": "KHM"
+  },
+  {
+    "cod": "608",
+    "parent": "035",
+    "en": "Philippines",
+    "es": "Filipinas",
+    "sigla": "PHL"
+  },
+  {
+    "cod": "360",
+    "parent": "035",
+    "en": "Indonesia",
+    "es": "Indonesia",
+    "sigla": "IDN"
+  },
+  {
+    "cod": "458",
+    "parent": "035",
+    "en": "Malaysia",
+    "es": "Malasia",
+    "sigla": "MYS"
+  },
+  {
+    "cod": "104",
+    "parent": "035",
+    "en": "Myanmar",
+    "es": "Myanmar",
+    "sigla": "MMR"
+  },
+  {
+    "cod": "418",
+    "parent": "035",
+    "en": "Lao People's Democratic Republic",
+    "es": "República Democrática Popular Lao",
+    "sigla": "LAO"
+  },
+  {
+    "cod": "702",
+    "parent": "035",
+    "en": "Singapore",
+    "es": "Singapur",
+    "sigla": "SGP"
+  },
+  {
+    "cod": "764",
+    "parent": "035",
+    "en": "Thailand",
+    "es": "Tailandia",
+    "sigla": "THA"
+  },
+  {
+    "cod": "626",
+    "parent": "035",
+    "en": "Timor-Leste",
+    "es": "Timor-Leste",
+    "sigla": "TLS"
+  },
+  {
+    "cod": "704",
+    "parent": "035",
+    "en": "Viet Nam",
+    "es": "Viet Nam",
+    "sigla": "VNM"
+  },
+  {
+    "cod": "008",
+    "parent": "039",
+    "en": "Albania",
+    "es": "Albania",
+    "sigla": "ALB"
+  },
+  {
+    "cod": "020",
+    "parent": "039",
+    "en": "Andorra",
+    "es": "Andorra",
+    "sigla": "AND"
+  },
+  {
+    "cod": "070",
+    "parent": "039",
+    "en": "Bosnia and Herzegovina",
+    "es": "Bosnia y Herzegovina",
+    "sigla": "BIH"
+  },
+  {
+    "cod": "191",
+    "parent": "039",
+    "en": "Croatia",
+    "es": "Croacia",
+    "sigla": "HRV"
+  },
+  {
+    "cod": "705",
+    "parent": "039",
+    "en": "Slovenia",
+    "es": "Eslovenia",
+    "sigla": "SVN"
+  },
+  {
+    "cod": "724",
+    "parent": "039",
+    "en": "Spain",
+    "es": "España",
+    "sigla": "ESP"
+  },
+  {
+    "cod": "807",
+    "parent": "039",
+    "en": "The former Yugoslav Republic of Macedonia",
+    "es": "ex República Yugoslava de Macedonia",
+    "sigla": "MKD"
+  },
+  {
+    "cod": "292",
+    "parent": "039",
+    "en": "Gibraltar",
+    "es": "Gibraltar",
+    "sigla": "GIB"
+  },
+  {
+    "cod": "300",
+    "parent": "039",
+    "en": "Greece",
+    "es": "Grecia",
+    "sigla": "GRC"
+  },
+  {
+    "cod": "380",
+    "parent": "039",
+    "en": "Italy",
+    "es": "Italia",
+    "sigla": "ITA"
+  },
+  {
+    "cod": "470",
+    "parent": "039",
+    "en": "Malta",
+    "es": "Malta",
+    "sigla": "MLT"
+  },
+  {
+    "cod": "499",
+    "parent": "039",
+    "en": "Montenegro",
+    "es": "Montenegro",
+    "sigla": "MNE"
+  },
+  {
+    "cod": "620",
+    "parent": "039",
+    "en": "Portugal",
+    "es": "Portugal",
+    "sigla": "PRT"
+  },
+  {
+    "cod": "674",
+    "parent": "039",
+    "en": "San Marino",
+    "es": "San Marino",
+    "sigla": "SMR"
+  },
+  {
+    "cod": "336",
+    "parent": "039",
+    "en": "Holy See",
+    "es": "Santa Sede",
+    "sigla": "VAT"
+  },
+  {
+    "cod": "688",
+    "parent": "039",
+    "en": "Serbia",
+    "es": "Serbia",
+    "sigla": "SRB"
+  },
+  {
+    "cod": "276",
+    "parent": "155",
+    "en": "Germany",
+    "es": "Alemania",
+    "sigla": "DEU"
+  },
+  {
+    "cod": "040",
+    "parent": "155",
+    "en": "Austria",
+    "es": "Austria",
+    "sigla": "AUT"
+  },
+  {
+    "cod": "056",
+    "parent": "155",
+    "en": "Belgium",
+    "es": "Bélgica",
+    "sigla": "BEL"
+  },
+  {
+    "cod": "250",
+    "parent": "155",
+    "en": "France",
+    "es": "Francia",
+    "sigla": "FRA"
+  },
+  {
+    "cod": "438",
+    "parent": "155",
+    "en": "Liechtenstein",
+    "es": "Liechtenstein",
+    "sigla": "LIE"
+  },
+  {
+    "cod": "442",
+    "parent": "155",
+    "en": "Luxembourg",
+    "es": "Luxemburgo",
+    "sigla": "LUX"
+  },
+  {
+    "cod": "492",
+    "parent": "155",
+    "en": "Monaco",
+    "es": "Mónaco",
+    "sigla": "MCO"
+  },
+  {
+    "cod": "528",
+    "parent": "155",
+    "en": "Netherlands",
+    "es": "Países Bajos",
+    "sigla": "NLD"
+  },
+  {
+    "cod": "756",
+    "parent": "155",
+    "en": "Switzerland",
+    "es": "Suiza",
+    "sigla": "CHE"
+  },
+  {
+    "cod": "112",
+    "parent": "151",
+    "en": "Belarus",
+    "es": "Belarús",
+    "sigla": "BLR"
+  },
+  {
+    "cod": "100",
+    "parent": "151",
+    "en": "Bulgaria",
+    "es": "Bulgaria",
+    "sigla": "BGR"
+  },
+  {
+    "cod": "203",
+    "parent": "151",
+    "en": "Czechia",
+    "es": "Chequia",
+    "sigla": "CZE"
+  },
+  {
+    "cod": "703",
+    "parent": "151",
+    "en": "Slovakia",
+    "es": "Eslovaquia",
+    "sigla": "SVK"
+  },
+  {
+    "cod": "643",
+    "parent": "151",
+    "en": "Russian Federation",
+    "es": "Federación de Rusia",
+    "sigla": "RUS"
+  },
+  {
+    "cod": "348",
+    "parent": "151",
+    "en": "Hungary",
+    "es": "Hungría",
+    "sigla": "HUN"
+  },
+  {
+    "cod": "616",
+    "parent": "151",
+    "en": "Poland",
+    "es": "Polonia",
+    "sigla": "POL"
+  },
+  {
+    "cod": "498",
+    "parent": "151",
+    "en": "Republic of Moldova",
+    "es": "República de Moldova",
+    "sigla": "MDA"
+  },
+  {
+    "cod": "642",
+    "parent": "151",
+    "en": "Romania",
+    "es": "Rumania",
+    "sigla": "ROU"
+  },
+  {
+    "cod": "804",
+    "parent": "151",
+    "en": "Ukraine",
+    "es": "Ucrania",
+    "sigla": "UKR"
+  },
+  {
+    "cod": "208",
+    "parent": "154",
+    "en": "Denmark",
+    "es": "Dinamarca",
+    "sigla": "DNK"
+  },
+  {
+    "cod": "233",
+    "parent": "154",
+    "en": "Estonia",
+    "es": "Estonia",
+    "sigla": "EST"
+  },
+  {
+    "cod": "246",
+    "parent": "154",
+    "en": "Finland",
+    "es": "Finlandia",
+    "sigla": "FIN"
+  },
+  {
+    "cod": "372",
+    "parent": "154",
+    "en": "Ireland",
+    "es": "Irlanda",
+    "sigla": "IRL"
+  },
+  {
+    "cod": "833",
+    "parent": "154",
+    "en": "Isle of Man",
+    "es": "Isla de Man",
+    "sigla": "IMN"
+  },
+  {
+    "cod": "352",
+    "parent": "154",
+    "en": "Iceland",
+    "es": "Islandia",
+    "sigla": "ISL"
+  },
+  {
+    "cod": "248",
+    "parent": "154",
+    "en": "Åland Islands",
+    "es": "Islas Åland",
+    "sigla": "ALA"
+  },
+  {
+    "cod": "831",
+    "parent": "830",
+    "en": "Guernsey",
+    "es": "Guernsey",
+    "sigla": "GGY"
+  },
+  {
+    "cod": "832",
+    "parent": "830",
+    "en": "Jersey",
+    "es": "Jersey",
+    "sigla": "JEY"
+  },
+  {
+    "cod": "680",
+    "parent": "830",
+    "en": "Sark",
+    "es": "Sark",
+    "sigla": ""
+  },
+  {
+    "cod": "234",
+    "parent": "154",
+    "en": "Faroe Islands",
+    "es": "Islas Feroe",
+    "sigla": "FRO"
+  },
+  {
+    "cod": "744",
+    "parent": "154",
+    "en": "Svalbard and Jan Mayen Islands",
+    "es": "Islas Svalbard y Jan Mayen",
+    "sigla": "SJM"
+  },
+  {
+    "cod": "428",
+    "parent": "154",
+    "en": "Latvia",
+    "es": "Letonia",
+    "sigla": "LVA"
+  },
+  {
+    "cod": "440",
+    "parent": "154",
+    "en": "Lithuania",
+    "es": "Lituania",
+    "sigla": "LTU"
+  },
+  {
+    "cod": "578",
+    "parent": "154",
+    "en": "Norway",
+    "es": "Noruega",
+    "sigla": "NOR"
+  },
+  {
+    "cod": "826",
+    "parent": "154",
+    "en": "United Kingdom of Great Britain and Northern Ireland",
+    "es": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "sigla": "GBR"
+  },
+  {
+    "cod": "752",
+    "parent": "154",
+    "en": "Sweden",
+    "es": "Suecia",
+    "sigla": "SWE"
+  },
+  {
+    "cod": "036",
+    "parent": "053",
+    "en": "Australia",
+    "es": "Australia",
+    "sigla": "AUS"
+  },
+  {
+    "cod": "162",
+    "parent": "053",
+    "en": "Christmas Island",
+    "es": "Isla de Navidad",
+    "sigla": "CXR"
+  },
+  {
+    "cod": "166",
+    "parent": "053",
+    "en": "Cocos (Keeling) Islands",
+    "es": "Islas Cocos (Keeling)",
+    "sigla": "CCK"
+  },
+  {
+    "cod": "334",
+    "parent": "053",
+    "en": "Heard Island and McDonald Islands",
+    "es": "Islas Heard y McDonald",
+    "sigla": "HMD"
+  },
+  {
+    "cod": "574",
+    "parent": "053",
+    "en": "Norfolk Island",
+    "es": "Islas Norfolk",
+    "sigla": "NFK"
+  },
+  {
+    "cod": "554",
+    "parent": "053",
+    "en": "New Zealand",
+    "es": "Nueva Zelandia",
+    "sigla": "NZL"
+  },
+  {
+    "cod": "242",
+    "parent": "054",
+    "en": "Fiji",
+    "es": "Fiji",
+    "sigla": "FJI"
+  },
+  {
+    "cod": "090",
+    "parent": "054",
+    "en": "Solomon Islands",
+    "es": "Islas Salomón",
+    "sigla": "SLB"
+  },
+  {
+    "cod": "540",
+    "parent": "054",
+    "en": "New Caledonia",
+    "es": "Nueva Caledonia",
+    "sigla": "NCL"
+  },
+  {
+    "cod": "598",
+    "parent": "054",
+    "en": "Papua New Guinea",
+    "es": "Papua Nueva Guinea",
+    "sigla": "PNG"
+  },
+  {
+    "cod": "548",
+    "parent": "054",
+    "en": "Vanuatu",
+    "es": "Vanuatu",
+    "sigla": "VUT"
+  },
+  {
+    "cod": "316",
+    "parent": "057",
+    "en": "Guam",
+    "es": "Guam",
+    "sigla": "GUM"
+  },
+  {
+    "cod": "580",
+    "parent": "057",
+    "en": "Northern Mariana Islands",
+    "es": "Islas Marianas Septentrionales",
+    "sigla": "MNP"
+  },
+  {
+    "cod": "584",
+    "parent": "057",
+    "en": "Marshall Islands",
+    "es": "Islas Marshall",
+    "sigla": "MHL"
+  },
+  {
+    "cod": "581",
+    "parent": "057",
+    "en": "United States Minor Outlying Islands",
+    "es": "Islas menores alejadas de Estados Unidos",
+    "sigla": "UMI"
+  },
+  {
+    "cod": "296",
+    "parent": "057",
+    "en": "Kiribati",
+    "es": "Kiribati",
+    "sigla": "KIR"
+  },
+  {
+    "cod": "583",
+    "parent": "057",
+    "en": "Micronesia (Federated States of)",
+    "es": "Micronesia (Estados Federados de)",
+    "sigla": "FSM"
+  },
+  {
+    "cod": "520",
+    "parent": "057",
+    "en": "Nauru",
+    "es": "Nauru",
+    "sigla": "NRU"
+  },
+  {
+    "cod": "585",
+    "parent": "057",
+    "en": "Palau",
+    "es": "Palau",
+    "sigla": "PLW"
+  },
+  {
+    "cod": "184",
+    "parent": "061",
+    "en": "Cook Islands",
+    "es": "Islas Cook",
+    "sigla": "COK"
+  },
+  {
+    "cod": "876",
+    "parent": "061",
+    "en": "Wallis and Futuna Islands",
+    "es": "Islas Wallis y Futuna",
+    "sigla": "WLF"
+  },
+  {
+    "cod": "570",
+    "parent": "061",
+    "en": "Niue",
+    "es": "Niue",
+    "sigla": "NIU"
+  },
+  {
+    "cod": "612",
+    "parent": "061",
+    "en": "Pitcairn",
+    "es": "Pitcairn",
+    "sigla": "PCN"
+  },
+  {
+    "cod": "258",
+    "parent": "061",
+    "en": "French Polynesia",
+    "es": "Polinesia Francesa",
+    "sigla": "PYF"
+  },
+  {
+    "cod": "882",
+    "parent": "061",
+    "en": "Samoa",
+    "es": "Samoa",
+    "sigla": "WSM"
+  },
+  {
+    "cod": "016",
+    "parent": "061",
+    "en": "American Samoa",
+    "es": "Samoa Americana",
+    "sigla": "ASM"
+  },
+  {
+    "cod": "772",
+    "parent": "061",
+    "en": "Tokelau",
+    "es": "Tokelau",
+    "sigla": "TKL"
+  },
+  {
+    "cod": "776",
+    "parent": "061",
+    "en": "Tonga",
+    "es": "Tonga",
+    "sigla": "TON"
+  },
+  {
+    "cod": "798",
+    "parent": "061",
+    "en": "Tuvalu",
+    "es": "Tuvalu",
+    "sigla": "TUV"
+  }
+]
