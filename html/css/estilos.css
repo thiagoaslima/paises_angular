@@ -263,6 +263,17 @@ table {
     display: block;
 	min-height:6em;
 }
+.envolve-card__btn--flip a {
+	background-image:url(../imagens/flip-icon.svg);
+	display:block;
+	width:19px;
+	height:16px;
+	float:right;
+	margin:10px;
+}
+.envolve-card__btn--flip a:hover {
+	background-image:url(../imagens/flip-icon--hover.svg);	
+}
 .envolve-card p {
 	font-size:2.3em;
 	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
@@ -279,6 +290,9 @@ table {
 }
 .envolve-card h3, .objetivos-milenio h3 {
 	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+}
+.envolve-card h3 {
+	float:left;
 }
 .envolve-card select.select-card {
 	font-size:1.3em;
