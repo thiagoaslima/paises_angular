@@ -567,6 +567,14 @@ div.fontes {
 
 
 /********** ODS **********/
+.video-ods {
+	background:url(../imagens/video_icon.png) 0 2px no-repeat;
+	height:20px;
+	float:right;
+	padding-left:22px;
+	margin:0 10px;
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
 .container-ods nav {
 	background-image:url(../imagens/ods-icones.svg);
 	display:block;
@@ -655,7 +663,6 @@ header div.topo-busca input, header div.topo-busca-desktop input {
 	padding:10px;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
-
 input[type=text] {
   width: 188px;
   height: 16px;
@@ -924,8 +931,20 @@ span.close {
 			width:90%;
 			margin:0 auto;			
 		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes { 
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span { 
 			display:none;
+		}
+		.sintese-home {
+			border:1px solid #9f9f9f;
+			margin:2em 2em 0 0;
+		}
+		.video-ods {
+			background:url(../imagens/video_thumb.png) no-repeat;
+			background-size:contain;
+			width:100%;
+			height:240px;
+			float:left;
+			margin:10px 0;
 		}
 		.texto-ods {
 			width:90%;
@@ -942,7 +961,6 @@ span.close {
 		.container-home, .container-ranking {
 			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;			
 		}
-
 		section.home {
 			background-size: 230px;
 		}
@@ -952,10 +970,22 @@ span.close {
 			font-size:1.5em;
 			line-height:1.9em;
 			padding:200px 50px 0 50px;
-		}	
+		}
+		.envolve-busca {
+			width:100%;
+			margin:0 auto;
+			text-align:left;
+		}
 		header div.topo-busca-desktop {
 			display:inline-block;
-			width:55%;
+			width:50%;
+		}
+		header div.topo-logomobile {
+			display:inline-block;
+			background-position:right;
+			width:35%;
+			height:40px;
+			margin-right:2em;
 		}
 		header div.topo-busca-desktop input {
 			border-radius: 10px;
@@ -966,15 +996,7 @@ span.close {
 		.grad {
 			height:50px;
 			text-align:center;
-		}
-		header div.topo-logomobile {
-			margin:7px 0 0 10px;
-			display:inline-block;
-			background-size:contain;
-			background-size:100%;
-			width:190px;
-			height:40px;
-		}
+		}		
 		.dropbtn {
 			font-size:2.6em;
 			padding: 2px 10px 0 0;
@@ -1047,7 +1069,7 @@ span.close {
 		.ranking .topo-tit h2, .comparar .topo-tit h2 {
 			font-size: 1.8em;
 		}
-		.ranking .pure-table td, .ranking .pure-table th {
+		.ranking .pure-table td, .topo-logomobileranking .pure-table th {
 			padding-top: 3px;
 			padding-bottom: 3px;
 		}
@@ -1058,6 +1080,16 @@ span.close {
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
+		header div.topo-busca-desktop {
+			width:60%;
+		}
+		header div.topo-logomobile {
+			width:31%;
+			background-size:contain;
+		}
+		header div.topo-busca-desktop input {
+			width:80%;
+		}
 		.pais-bandeira {
             background-size:100%;
             height:98px;
@@ -1078,11 +1110,7 @@ span.close {
 			padding:25px 0 0 150px;
 			font-size:3em;
 		}
-		.sintese-home {
-			margin:4.5em 9em auto auto;
-			border:1px solid #9f9f9f;
-		}
-		.ranking {
+		.ranking, .sintese-home {
 			margin:6.2em 8em auto auto;
 		}
     }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+        crossorigin="" />
+    <style>
+        #mapid {
+            box-sizing: border-box;
+            width: 80%;
+            height: 400px;
+            margin: 10% auto;
+            background-color: rgb(78,78,78)
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mapid"></div>
+
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+
+    <script>
+        // https://gist.githubusercontent.com/brendanvinson/0e3c3c86d96863f1c33f55454705bca7/raw/1a087d64c4ba6c32f39e8a9f72ec8ab6abef39f4/L.TopoJSON.js
+        /*
+        First run npm install topojson --save and then link "node_modules/topojson/build/topojson.min.js" 
+        above this snippet in your html.
+
+        Usage: http://leafletjs.com/reference.html#geojson
+        */
+
+        L.TopoJSON = L.GeoJSON.extend({
+            addData: function (data) {
+                var geojson, key;
+                if (data.type === "Topology") {
+                    for (key in data.objects) {
+                        if (data.objects.hasOwnProperty(key)) {
+                            geojson = topojson.feature(data, data.objects[key]);
+                            L.GeoJSON.prototype.addData.call(this, geojson);
+                        }
+                    }
+
+                    return this;
+                }
+
+                L.GeoJSON.prototype.addData.call(this, data);
+
+                return this;
+            }
+        });
+
+        L.topoJson = function (data, options) {
+            return new L.TopoJSON(data, options);
+        };
+
+        /* 
+        The MIT License (MIT)
+
+        Copyright (c) 2016 Brendan Vinson
+
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        */
+
+    </script>
+
+    <script>
+        var oReq = new XMLHttpRequest();
+        oReq.onload = function (e) {
+            topology = e.target.response
+            // topology = topojson.presimplify(topology, topojson.sphericalTriangleArea);
+            // topology = topojson.simplify(topology, 0.0001);
+            createMap(topology)
+        };
+        oReq.open('GET', 'metadados/topologies/paises.topojson' + '?' + new Date().getTime(), true);
+        oReq.responseType = 'json';
+        oReq.send();
+
+        function createMap(json) {
+            window._topo = json;
+            // json.bbox = topojson.bbox(json);
+
+            // var _bounds = {
+            //     "_southWest": {
+            //         "lat": json.bbox[1],
+            //         "lng": json.bbox[0]
+            //     },
+            //     "_northEast": {
+            //         "lat": json.bbox[3],
+            //         "lng": json.bbox[2]
+            //     }
+            // }
+            // var bounds = new L.LatLngBounds(
+            //     new L.LatLng(_bounds._southWest.lat, _bounds._southWest.lng), 
+            //     new L.LatLng(_bounds._northEast.lat, _bounds._northEast.lng)
+            // )
+
+            var mymap = L.map('mapid', {
+                center: [0,0],
+                // center: bounds.getCenter(),
+                zoom: 1,
+                layers: [],
+                // maxBounds: bounds,
+                // maxBoundsViscosity: 0.5,
+                maxZoom: 8,
+                minZoom: 1
+            })
+
+            function style(feature) {
+                return {
+                    fillColor: 'rgb(118, 118, 118)',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'rgb(78,78,78)',
+                    // dashArray: '3',
+                    fillOpacity: 1
+                }
+            }
+
+            // create the tile layer with correct attribution
+            // var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?locale=pt-BR';
+            // var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+            // var osm = new L.tileLayer(osmUrl, { minZoom: 1, maxZoom: 5, attribution: osmAttrib });
+
+            // mymap.addLayer(osm);
+
+            function highlightFeature(e) {
+                var layer = e.target;
+                var feature = layer.feature.properties
+            
+                layer.setStyle({
+                    fillColor: 'rgb(222,222,222)'
+                });
+            
+                if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                    layer.bringToFront();
+                }
+
+                var popup = L.popup({
+                        closeButton: false,
+                        autoClose: true
+                    })
+                    .setLatLng(new L.LatLng(feature.labelPosition[1], feature.labelPosition[0]))
+                    .setContent('<p>' + feature.nome.pt + '</p>')
+                    .openOn(map);
+            }
+
+            function zoomToFeature(e) {
+                map.fitBounds(e.target.getBounds());
+            }
+
+            function onEachFeature(feature, layer) {
+                if (feature.properties.mostrar) {
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight,
+                        click: zoomToFeature
+                    });
+                }
+            }
+
+            var geojson = L.topoJson(json, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(mymap)
+
+            function resetHighlight(e) {
+                geojson.resetStyle(e.target);
+            }
+
+            window.map = mymap
+        }
+    </script>
+</body>
+
+</html>
