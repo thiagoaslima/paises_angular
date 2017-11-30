@@ -229,7 +229,7 @@ table {
 }
 .historico-desktop {
 	background-color:#f4f4f4;	
-	padding:10px 40px;
+	padding:15px 40px;
 	clear:both;
 	float:none;
 }
@@ -256,12 +256,15 @@ table {
 	border:1px solid #4f4f4f;
 	margin:7px auto;
 }
-.envolve-card small {
+.envolve-card small, .objetivos-milenio small {
     font-size: 1em;
     line-height: 1.3em;
     padding: 1em 2em;
     display: block;
 	min-height:6em;
+}
+.objetivos-milenio small {
+    padding: 0;
 }
 .envolve-card__btn--flip a {
 	background-image:url(../imagens/flip-icon.svg);
@@ -288,10 +291,8 @@ table {
 .envolve-card .grafico-economia {
 	margin:0;
 }
-.envolve-card h3, .objetivos-milenio h3 {
-	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
-}
 .envolve-card h3 {
+	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
 	float:left;
 }
 .envolve-card select.select-card {
@@ -313,12 +314,6 @@ button#myBtnFontes {
 	margin:5px;
 	float:right;
 	font-weight:bold;
-}
-.objetivos-milenio {
-	margin-top:30px;
-	background:url(../imagens/objetivos-milenio-grafico.png) no-repeat 0 50px;
-	width:812px;
-	height:430px;
 }
 div.fontes {
 	background-color:#fff;
@@ -420,8 +415,44 @@ div.fontes {
 	height:100px;
 	background-size: cover;
 }
-.grafico-odm~h4 {
-	font-weight: 600;
+.objetivos-milenio {
+	padding: 15px 40px;
+}
+.objetivos-milenio button.accordion {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%
+}
+.objetivos-milenio h3 {
+	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+.objetivos-milenio button.accordion h4{
+	padding:0;
+	margin:0;
+	font-size: 1.2em;
+	text-transform:none;
+}
+.objetivos-milenio strong {
+	font-size: 1.3em;
+	line-height: 1.8em;
+}
+.objetivos-milenio h4 {
+	line-height: 2em;
+}
+.objetivos-milenio button.accordion.active h4, button.accordion h4:hover {
+    background-color: #42e695;
+}
+.objetivos-milenio button.accordion h4::before {
+	content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+.objetivos-milenio button.accordion h4.active::before {
+	content: "\2212";
 }
 
 /********** FIM DO PAIS **********/
@@ -938,24 +969,22 @@ span.close {
 /********** FIM DO MODAL BANDEIRA**********/
 
 
-
-
 /* ==========================================================================
    Media Queries - Mobile First
    ========================================================================== */
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop {
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span, .container-pais div.panel, button.accordion:after, button.accordion.active:after { 
+			display:none;
+		}		
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop, .objetivos-milenio button.accordion, .objetivos-milenio div.panel, .objetivos-milenio button.accordion h4::before, .objetivos-milenio button.accordion h4.active::before {
 			display:block;
 		}
 		button.accordion, #myBtnFontes, .container-ods div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
-		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span { 
-			display:none;
 		}
 		.sintese-home {
 			border:1px solid #9f9f9f;
