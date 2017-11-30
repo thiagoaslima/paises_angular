@@ -163,14 +163,13 @@ span.right {
 	margin:0 auto;
 	padding:0;	
 	width:98%;	
+}.menu-aux-desktop ul li {
+	display:inline-block;
+	padding:20px 10px 10px 10px;
 }
 .menu-aux-desktop ul li:first-child {
 	background:url(../imagens/voltar-bullet.png) no-repeat 0 21px;
 	padding-left:15px;
-}
-.menu-aux-desktop ul li {
-	display:inline-block;
-	padding:20px 10px 10px 10px;
 }
 .menu-aux-desktop ul li:last-child {
 	background:url(../imagens/comparar_icon.png) no-repeat 0 10px;
@@ -246,10 +245,10 @@ table {
 .historico-desktop p.centralizar {
 	text-align:center;
 	font-weight:bold;
-	font-size:0.9em;
+	font-size:1em;
 }
 .envolve-indicadores {
-	margin-top:50px;
+	margin:40px;
 }
 .envolve-card {
 	width:97%;
@@ -262,9 +261,6 @@ table {
     padding: 1em 2em;
     display: block;
 	min-height:6em;
-}
-.objetivos-milenio small {
-    padding: 0;
 }
 .envolve-card__btn--flip a {
 	background-image:url(../imagens/flip-icon.svg);
@@ -416,7 +412,10 @@ div.fontes {
 	background-size: cover;
 }
 .objetivos-milenio {
-	padding: 15px 40px;
+	padding: 0 40px;
+}
+.objetivos-milenio small {
+    padding: 15px 0;
 }
 .objetivos-milenio button.accordion {
 	padding: 0;
@@ -431,28 +430,38 @@ div.fontes {
 .objetivos-milenio button.accordion h4{
 	padding:0;
 	margin:0;
-	font-size: 1.2em;
+	font-size: 1.12em;
 	text-transform:none;
 }
-.objetivos-milenio strong {
+.objetivos-milenio>p {
 	font-size: 1.3em;
 	line-height: 1.8em;
 }
 .objetivos-milenio h4 {
-	line-height: 2em;
+	line-height: 2.2em;
+	font-weight:0;
+}
+.panel h4 {
+	font-weight: 600;
+}
+.objetivos-milenio h4>span{
+	font-weight: 600;
 }
 .objetivos-milenio button.accordion.active h4, button.accordion h4:hover {
-    background-color: #42e695;
+    background-color: #fff;
 }
 .objetivos-milenio button.accordion h4::before {
 	content: '\002B';
-    color: #777;
+    color: #3ecca7;
     font-weight: bold;
     float: left;
     margin-right: 10px;
 }
-.objetivos-milenio button.accordion h4.active::before {
+.objetivos-milenio button.accordion.active h4::before {
 	content: "\2212";
+}
+.objetivos-milenio div.panel{
+	background-color: #fff;
 }
 
 /********** FIM DO PAIS **********/
