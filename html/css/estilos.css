@@ -408,8 +408,9 @@ div.fontes {
 .grafico-odm {
 	background:url(../imagens/grafico-odm.svg) no-repeat;
 	width:100%;
-	height:100px;
-	background-size: cover;
+	height:170px;
+	background-size: 100% 100%;
+	margin:0 auto;
 }
 .objetivos-milenio {
 	padding: 0 40px;
@@ -1134,6 +1135,10 @@ span.close {
 			padding-top: 3px;
 			padding-bottom: 3px;
 		}
+		.grafico-odm {
+			height:300px;
+			margin-bottom:15px;;
+		}
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 768px) {
 
@@ -1173,6 +1178,10 @@ span.close {
 		}
 		.ranking, .sintese-home {
 			margin:6.2em 8em auto auto;
+		}
+		.grafico-odm {
+			height:350px;
+			margin-bottom:25px;;
 		}
     }
 
