@@ -111,6 +111,11 @@
         "tsickle": "0.21.6"
       }
     },
+    "@asymmetrik/ngx-leaflet": {
+      "version": "2.5.3",
+      "resolved": "https://registry.npmjs.org/@asymmetrik/ngx-leaflet/-/ngx-leaflet-2.5.3.tgz",
+      "integrity": "sha1-G5iAHkBThHv4U9kA9DVgN6cGQvo="
+    },
     "@ngtools/webpack": {
       "version": "1.5.0",
       "resolved": "https://registry.npmjs.org/@ngtools/webpack/-/webpack-1.5.0.tgz",
@@ -140,10 +145,31 @@
       "integrity": "sha512-DWrdkraJO+KvBB7+Jc6AuDd2+fwV6Z9iK8cqEEoYpcurYrH7GiUZmwjFuQIIWj5HhFz6NsSxdN72YMIHT7Fy2Q==",
       "dev": true
     },
+    "@types/geojson": {
+      "version": "7946.0.0",
+      "resolved": "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.0.tgz",
+      "integrity": "sha512-lbWmXFxIpEzpH7OprsCRvxj7kie+248Y2ItjeVsF+0+IqvwG+R+0xgZmxq1ofYNTszvuihDahas7O5dscfxTsw==",
+      "dev": true
+    },
     "@types/jasmine": {
       "version": "2.5.53",
       "resolved": "https://registry.npmjs.org/@types/jasmine/-/jasmine-2.5.53.tgz",
       "integrity": "sha512-2YNL0jXYuN7w07mb1sMZQ6T6zOvGi83v8UbjhBZ8mhvI1VkQ2STU9XOrTFyvWswMyh5rW1evS+e7qltYJvTqPA==",
+      "dev": true
+    },
+    "@types/leaflet": {
+      "version": "1.2.3",
+      "resolved": "https://registry.npmjs.org/@types/leaflet/-/leaflet-1.2.3.tgz",
+      "integrity": "sha512-ancdZhtqOp64/ZXuvKuadFCUmXDhRDGiBSqM6MhARk4kET9UKAdkWY76hn0VlwvknmynMB8wbDMJSGXYRbQFEg==",
+      "dev": true,
+      "requires": {
+        "@types/geojson": "7946.0.0"
+      }
+    },
+    "@types/topojson": {
+      "version": "3.0.2",
+      "resolved": "https://registry.npmjs.org/@types/topojson/-/topojson-3.0.2.tgz",
+      "integrity": "sha1-g+/SHQW5Y7b6nbL+3+6Q82ZZH6E=",
       "dev": true
     },
     "@types/webpack-env": {
@@ -4398,6 +4424,11 @@
         "invert-kv": "1.0.0"
       }
     },
+    "leaflet": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/leaflet/-/leaflet-1.2.0.tgz",
+      "integrity": "sha512-Bold8phAE6WcRsuwhofrQ7cOK1REFHaYIkKuj7+TBYK3ONKRpGGIb5oXR5akYotFnrWN0TWKh6Svlhflm3dogg=="
+    },
     "load-json-file": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz",
@@ -7007,6 +7038,43 @@
       "integrity": "sha1-e3qheJG3u0lHp6Eb+wO1/enG5pU=",
       "requires": {
         "loader-utils": "0.2.17"
+      }
+    },
+    "topojson": {
+      "version": "3.0.2",
+      "resolved": "https://registry.npmjs.org/topojson/-/topojson-3.0.2.tgz",
+      "integrity": "sha512-u3zeuL6WEVL0dmsRn7uHZKc4Ao4gpW3sORUv+N3ezLTvY3JdCuyg0hvpWiIfFw8p/JwVN++SvAsFgcFEeR15rQ==",
+      "requires": {
+        "topojson-client": "3.0.0",
+        "topojson-server": "3.0.0",
+        "topojson-simplify": "3.0.2"
+      },
+      "dependencies": {
+        "topojson-client": {
+          "version": "3.0.0",
+          "resolved": "https://registry.npmjs.org/topojson-client/-/topojson-client-3.0.0.tgz",
+          "integrity": "sha1-H5kpOnfvQqRI0DKoGqmCtz82DS8=",
+          "requires": {
+            "commander": "2.9.0"
+          }
+        },
+        "topojson-server": {
+          "version": "3.0.0",
+          "resolved": "https://registry.npmjs.org/topojson-server/-/topojson-server-3.0.0.tgz",
+          "integrity": "sha1-N4546Hw5cqe1vixdYENptrrmnF4=",
+          "requires": {
+            "commander": "2.9.0"
+          }
+        },
+        "topojson-simplify": {
+          "version": "3.0.2",
+          "resolved": "https://registry.npmjs.org/topojson-simplify/-/topojson-simplify-3.0.2.tgz",
+          "integrity": "sha512-gyYSVRt4jO/0RJXKZQPzTDQRWV+D/nOfiljNUv0HBXslFLtq3yxRHrl7jbrjdbda5Ytdr7M8BZUI4OxU7tnbRQ==",
+          "requires": {
+            "commander": "2.9.0",
+            "topojson-client": "3.0.0"
+          }
+        }
       }
     },
     "tree-kill": {

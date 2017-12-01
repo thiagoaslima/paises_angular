@@ -1,4 +1,13 @@
-<h3>Mapa Mundi</h3>
-<h4>{{teste}}</h4>
+<div leaflet 
+    [leafletOptions]="{center: [0,0], zoom: 3, layers: [], maxZoom: 8, minZoom: 3}"
+    [leafletFitBoundsOptions] = "fitBounds"
+    (leafletMapReady)="onMapReady($event)">
+    <div 
+        ibgeLeaflet
+        [topology]="topology"
+        [styles]="mapStyle"
+    >
+    </div> 
+</div>
 
 <router-outlet></router-outlet>

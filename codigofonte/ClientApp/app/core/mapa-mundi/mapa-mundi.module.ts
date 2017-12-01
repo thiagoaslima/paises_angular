@@ -4,21 +4,23 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MapaMundiComponent } from './mapa-mundi.component';
 import { HomeComponent } from '../home/home.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
+import { IBGELeafletModule } from '../../components/ibge-leaflet/index';
 
 const routes: Routes = [
     {
         path: '',
-        component: MapaMundiComponent,
-        children: [
-            { path: '', pathMatch: 'full', component: HomeComponent }
-        ]
+        component: MapaMundiComponent
     }
 ];
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        LeafletModule.forRoot(),
+        IBGELeafletModule.forRoot()
     ],
     declarations: [
         MapaMundiComponent,

@@ -4,7 +4,7 @@ const topojson = require('topojson-server');
 const polylabel = require('polylabel');
 
 const orig = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'metadados', 'topologies', 'countries.json'), 'utf8'));
-const PAISES = require('../metadados/paises.json');
+const PAISES = require('../metadados/paises.json').paises;
 const labelPosition = require('./labelPosition.json');
 
 const DICT = PAISES.reduce((agg, pais) => Object.assign(agg, {[pais.sigla3]: pais}), Object.create(null));
@@ -33,14 +33,20 @@ topo.objects.countries.geometries = orig.objects[prop].geometries.map(geometry =
     }
 
     if (DICT[sigla]) {
-        obj.properties = DICT[sigla];
+        obj.properties = Object.assign({}, DICT[sigla]);
+        delete obj.properties.parents;
         obj.properties.labelPosition = [].concat(labelPosition[sigla].labelPosition.precision0001)
         obj.properties.mostrar = true
+    } else if (geometry.properties['ADMIN'] !== 'ATA') {
+        obj.properties = { 
+            nome: geometry.properties['ADMIN'],
+            mostrar: false 
+        }
     } else {
-        obj.properties = { mostrar: false }
+        return {}
     }
 
     return obj;
-});
+}).filter(Boolean);
 
-fs.writeFileSync(path.resolve(__dirname, '..', 'metadados', 'topologies', 'paises.topojson'), JSON.stringify(topo), {encoding: 'utf8'});
+fs.writeFileSync(path.resolve(__dirname, '..', 'metadados', 'topologies', 'paises2.topojson'), JSON.stringify(topo), {encoding: 'utf8'});
