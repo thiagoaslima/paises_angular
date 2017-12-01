@@ -206,6 +206,9 @@ span.right {
 .ranking .menu-aux-desktop ul li a, .comparar .menu-aux-desktop ul li a {
 	color:#4f4f4f;
 }
+.ranking .menu-aux-desktop ul li a:hover, .comparar .menu-aux-desktop ul li a:hover {
+	color:#000;
+}
 .ranking table .pure-table-horizontal, .ranking table .pure-table  {
 	background-color:transparent;
 }
@@ -246,6 +249,10 @@ table {
 	text-align:center;
 	font-weight:bold;
 	font-size:1em;
+}
+.historico-desktop a:hover {
+	color:#000;
+	font-size: 1.03em;
 }
 .envolve-indicadores {
 	margin:40px;
@@ -524,6 +531,9 @@ div.fontes {
 	display:block;
 	margin:10px auto;
 }
+.leiamais:hover {
+	color:#ccc;
+}
 /********** FIM DA SINTESE HOME **********/
 
 
@@ -623,6 +633,10 @@ div.fontes {
 	margin-top:3px;
 	height:32px;
 	width:100%;
+}
+.comparar-lista-paises-desktop p {
+	padding-left:0.7em;
+	margin: 0.5em 0;
 }
 
 /********** FIM DO COMPARAR PAIS **********/
@@ -1134,6 +1148,9 @@ span.close {
 		.ranking .pure-table td, .topo-logomobileranking .pure-table th {
 			padding-top: 3px;
 			padding-bottom: 3px;
+		}
+		.ranking tbody a:hover {
+			color:#000;
 		}
 		.grafico-odm {
 			height:300px;
