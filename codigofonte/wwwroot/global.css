@@ -50,61 +50,23 @@
 
 /*****************************************
 Classes para organizar o z-index.
-Sempre utilizar a menor altura necessária.
 ******************************************/
 
-/*usada em menus flutuantes*/
+/*usada no logo ODS e na caixa flutuante da síntese*/
 .altura1{
     z-index: 100;
 }
 
-/*usada em overlays transparentes de fundo dos popups*/
+/*usada nos menus popups e caixas de sugestão (setar essa classe dinamicamente, apenas quando o menu/sugestão estiver aberto)*/
 .altura2{
     z-index: 200;
 }
 
-/*usada nos popups*/
-.altura3{
-    z-index: 300;
-}
-
-.altura4{
-    z-index: 400;
-}
-
-.altura5{
-    z-index: 500;
-}
-
-/*-----------------*/
+/*******************************************/
 
 a, a:hover, a:visited {
     color: #4f4f4f;
     text-decoration: none;
-}
-
-
-th {
-	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
-	font-weight:normal;
-	font-style:normal;
-}
-
-h2 {
-	font-size:1.5rem;
-	margin:0;
-	font-weight:normal;
-	display:inline;
-}
-
-h3 {
-	font-weight:normal;
-	font-size:1.4rem;
-}
-
-h4 {
-	font-weight:normal;
-	font-size:1.3rem;
 }
 
 /*desktop*/

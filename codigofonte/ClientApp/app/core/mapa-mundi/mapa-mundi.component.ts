@@ -20,11 +20,11 @@ export class MapaMundiComponent {
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1,
-            className: ''
+            className: 'teste'
         };
         if (!feature.properties.mostrar) {
             style.fillColor = 'red';
-            style['className'] = 'no-interactive';
+            style.className = 'no-interactive';
         }
 
         return style;

@@ -1,60 +1,90 @@
-/********** SINTESE HOME ********/
-table {
-	font-size:1.3rem;
-	width:100%;
-	background-color:#fff;
+/*mobile*/
+
+.sintese{
+	display: none;
 }
 
-.sintese-home {
-	width:28rem;
-	float:right;
-	margin:3rem 5rem auto auto;
-	background-color: rgba(255, 255, 255, 0.8);
-}
-.sintese-home .pais-bandeira {
-	width:92%;
-	background-size:contain;
-	height:180px;
-	margin:0 auto 1rem auto;
-}
-.sintese-home h2{
-	font-size:1.8rem;
-	font-weight:600;
-	margin:1rem;
-}
-.sintese-home span.close {
-	font-size:20px;
-	color:#4f4f4f;
-	text-align:right;
-	display:block;
-	float:none;
-	line-height:0;
-	padding:10px;
-}
-.sintese-home .pure-table {
-	border:none;
-	width:92%;
-	margin:0 auto;
-	text-align:left;
-}
-.sintese-home .pure-table th{
-	padding-left:0;
-}
-.sintese-home table{
-	background-color: rgba(255, 255, 255, 0.0);
-}
-.sintese-home .pure-table-horizontal td, .sintese-home .pure-table-horizontal th {
-	border-bottom: 1px solid rgba(153,153,153,0.6);
-}
-.leiamais {
-	background-color:#4f4f4f;
-	color:#fff;
-	border:none;
-	width:92%;
-	height:26px;
-	font-size:1.1rem;
-	display:block;
-	margin:10px auto;
+/*desktop*/
+@media only screen and (min-width : 568px) {
+	.sintese{
+		display: block;
+		width: 280px;
+		position: absolute;
+		top: 180px;
+		right: 80px;
+		border: 1px solid #9f9f9f;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
 
+	.sintese__barra-titulo{
+		text-align: right;
+		background-color: #3f3f3f;
+	}
+
+	.sintese__botao-fechar{
+		background-color: transparent;
+		border: none;
+		padding: 2px 8px;
+	}
+
+	.sintese__icone-fechar{
+		color: #fff;
+	}
+
+	.sintese__info-container{
+		padding: 10px;
+	}
+
+	.sintese__bandeira-container{
+		
+	}
+
+	.sintese__bandeira-imagem{
+		width: 100%;
+		height: auto;
+	}
+
+	.sintese__titulo{
+		font-size: 1.3em;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+
+	.sintese__tabela{
+		background-color: transparent;
+		font-size:1.3rem;
+		width: 100%;
+	}
+
+	.sintese__tabela-linha{
+		border-bottom: 1px solid rgba(153,153,153,0.6);
+	}
+
+	.sintese__tabela-linha:last-child{
+		border-bottom: none;
+	}
+
+	.sintese__tabela-nome{
+		padding: 5px 0;
+		font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+	}
+
+	.sintese__tabela-valor{
+		
+	}
+
+	.sintese__leia-mais{
+		margin-top: 10px;
+	}
+
+	.sintese__leia-mais-link{
+		display: block;
+		text-align: center;
+		padding: 5px;
+		background-color: #3f3f3f;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 0.8em;
+	}
 }
-/********** FIM DA SINTESE HOME **********/
