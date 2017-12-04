@@ -1,0 +1,302 @@
+{
+    "142": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Asia",
+            "es": "Asia",
+            "pt": "Ásia"
+        },
+        "codigo": "142",
+        "parent": ""
+    },
+    "143": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Central Asia",
+            "es": "Asia central",
+            "pt": "Ásia Central"
+        },
+        "codigo": "143",
+        "parent": "142"
+    },
+    "145": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Western Asia",
+            "es": "Asia occidental",
+            "pt": "Ásia Ocidental"
+        },
+        "codigo": "145",
+        "parent": "034"
+    },
+    "150": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Europe",
+            "es": "Europa",
+            "pt": "Europa"
+        },
+        "codigo": "150",
+        "parent": ""
+    },
+    "151": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Eastern Europe",
+            "es": "Europa oriental",
+            "pt": "Europa Oriental"
+        },
+        "codigo": "151",
+        "parent": "150"
+    },
+    "154": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Northern Europe",
+            "es": "Europa septentrional",
+            "pt": "Europa Setentrional"
+        },
+        "codigo": "154",
+        "parent": "151"
+    },
+    "155": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Western Europe",
+            "es": "Europa occidental",
+            "pt": "Europa Ocidental"
+        },
+        "codigo": "155",
+        "parent": "039"
+    },
+    "202": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Sub-Saharan Africa",
+            "es": "África Subsahariana",
+            "pt": "África Subsaariana"
+        },
+        "codigo": "202",
+        "parent": "015"
+    },
+    "419": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Latin America and the Caribbean",
+            "es": "América Latina y el Caribe",
+            "pt": "América Latina e o Caribe"
+        },
+        "codigo": "419",
+        "parent": "019"
+    },
+    "002": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Africa",
+            "es": "África",
+            "pt": "África"
+        },
+        "codigo": "002",
+        "parent": ""
+    },
+    "015": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Northern Africa",
+            "es": "África septentrional",
+            "pt": "Norte da África"
+        },
+        "codigo": "015",
+        "parent": "002"
+    },
+    "011": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Western Africa",
+            "es": "África occidental",
+            "pt": "África Ocidental"
+        },
+        "codigo": "011",
+        "parent": "202"
+    },
+    "014": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Eastern Africa",
+            "es": "África oriental",
+            "pt": "África Oriental"
+        },
+        "codigo": "014",
+        "parent": "011"
+    },
+    "017": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Middle Africa",
+            "es": "África central",
+            "pt": "África Central"
+        },
+        "codigo": "017",
+        "parent": "014"
+    },
+    "018": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Southern Africa",
+            "es": "África meridional",
+            "pt": "África Austral"
+        },
+        "codigo": "018",
+        "parent": "017"
+    },
+    "019": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Americas",
+            "es": "Américas",
+            "pt": "América"
+        },
+        "codigo": "019",
+        "parent": ""
+    },
+    "029": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Caribbean",
+            "es": "El Caribe",
+            "pt": "Caribe"
+        },
+        "codigo": "029",
+        "parent": "419"
+    },
+    "013": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "Central America",
+            "es": "América central",
+            "pt": "América Central"
+        },
+        "codigo": "013",
+        "parent": "029"
+    },
+    "005": {
+        "tipo": "subregiao",
+        "nome": {
+            "en": "South America",
+            "es": "América del Sur",
+            "pt": "América do Sul"
+        },
+        "codigo": "005",
+        "parent": "013"
+    },
+    "021": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Northern America",
+            "es": "América septentrional",
+            "pt": "América do Norte"
+        },
+        "codigo": "021",
+        "parent": "005"
+    },
+    "010": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Antarctica",
+            "es": "Antártida",
+            "pt": "Antártida"
+        },
+        "codigo": "010",
+        "parent": ""
+    },
+    "030": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Eastern Asia",
+            "es": "Asia oriental",
+            "pt": "Ásia Oriental"
+        },
+        "codigo": "030",
+        "parent": "143"
+    },
+    "035": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "South-eastern Asia",
+            "es": "Asia sudoriental",
+            "pt": "Sudeste Asiático"
+        },
+        "codigo": "035",
+        "parent": "030"
+    },
+    "034": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Southern Asia",
+            "es": "Asia meridional",
+            "pt": "Ásia Meridional"
+        },
+        "codigo": "034",
+        "parent": "035"
+    },
+    "039": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Southern Europe",
+            "es": "Europa meridional",
+            "pt": "Europa Meridional"
+        },
+        "codigo": "039",
+        "parent": "154"
+    },
+    "009": {
+        "tipo": "continente",
+        "nome": {
+            "en": "Oceania",
+            "es": "Oceanía",
+            "pt": "Oceania"
+        },
+        "codigo": "009",
+        "parent": ""
+    },
+    "053": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Australia and New Zealand",
+            "es": "Australia y Nueva Zelandia",
+            "pt": "Austrália e Nova Zelândia"
+        },
+        "codigo": "053",
+        "parent": "009"
+    },
+    "054": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Melanesia",
+            "es": "Melanesia",
+            "pt": "Melanésia"
+        },
+        "codigo": "054",
+        "parent": "053"
+    },
+    "057": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Micronesia",
+            "es": "Micronesia",
+            "pt": "Micronésia"
+        },
+        "codigo": "057",
+        "parent": "054"
+    },
+    "061": {
+        "tipo": "regiao",
+        "nome": {
+            "en": "Polynesia",
+            "es": "Polinesia",
+            "pt": "Polinésia"
+        },
+        "codigo": "061",
+        "parent": "057"
+    }
+}

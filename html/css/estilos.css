@@ -163,14 +163,13 @@ span.right {
 	margin:0 auto;
 	padding:0;	
 	width:98%;	
+}.menu-aux-desktop ul li {
+	display:inline-block;
+	padding:20px 10px 10px 10px;
 }
 .menu-aux-desktop ul li:first-child {
 	background:url(../imagens/voltar-bullet.png) no-repeat 0 21px;
 	padding-left:15px;
-}
-.menu-aux-desktop ul li {
-	display:inline-block;
-	padding:20px 10px 10px 10px;
 }
 .menu-aux-desktop ul li:last-child {
 	background:url(../imagens/comparar_icon.png) no-repeat 0 10px;
@@ -207,6 +206,9 @@ span.right {
 .ranking .menu-aux-desktop ul li a, .comparar .menu-aux-desktop ul li a {
 	color:#4f4f4f;
 }
+.ranking .menu-aux-desktop ul li a:hover, .comparar .menu-aux-desktop ul li a:hover {
+	color:#000;
+}
 .ranking table .pure-table-horizontal, .ranking table .pure-table  {
 	background-color:transparent;
 }
@@ -229,7 +231,7 @@ table {
 }
 .historico-desktop {
 	background-color:#f4f4f4;	
-	padding:10px 40px;
+	padding:15px 40px;
 	clear:both;
 	float:none;
 }
@@ -246,22 +248,37 @@ table {
 .historico-desktop p.centralizar {
 	text-align:center;
 	font-weight:bold;
-	font-size:0.9em;
+	font-size:1em;
+}
+.historico-desktop a:hover {
+	color:#000;
+	font-size: 1.03em;
 }
 .envolve-indicadores {
-	margin-top:50px;
+	margin:40px;
 }
 .envolve-card {
 	width:97%;
 	border:1px solid #4f4f4f;
 	margin:7px auto;
 }
-.envolve-card small {
+.envolve-card small, .objetivos-milenio small {
     font-size: 1em;
     line-height: 1.3em;
     padding: 1em 2em;
     display: block;
 	min-height:6em;
+}
+.envolve-card__btn--flip a {
+	background-image:url(../imagens/flip-icon.svg);
+	display:block;
+	width:19px;
+	height:16px;
+	float:right;
+	margin:10px;
+}
+.envolve-card__btn--flip a:hover {
+	background-image:url(../imagens/flip-icon--hover.svg);	
 }
 .envolve-card p {
 	font-size:2.3em;
@@ -277,8 +294,9 @@ table {
 .envolve-card .grafico-economia {
 	margin:0;
 }
-.envolve-card h3, .objetivos-milenio h3 {
+.envolve-card h3 {
 	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+	float:left;
 }
 .envolve-card select.select-card {
 	font-size:1.3em;
@@ -299,12 +317,6 @@ button#myBtnFontes {
 	margin:5px;
 	float:right;
 	font-weight:bold;
-}
-.objetivos-milenio {
-	margin-top:30px;
-	background:url(../imagens/objetivos-milenio-grafico.png) no-repeat 0 50px;
-	width:812px;
-	height:430px;
 }
 div.fontes {
 	background-color:#fff;
@@ -403,11 +415,61 @@ div.fontes {
 .grafico-odm {
 	background:url(../imagens/grafico-odm.svg) no-repeat;
 	width:100%;
-	height:100px;
-	background-size: cover;
+	height:170px;
+	background-size: 100% 100%;
+	margin:0 auto;
 }
-.grafico-odm~h4 {
+.objetivos-milenio {
+	padding: 0 40px;
+}
+.objetivos-milenio small {
+    padding: 15px 0;
+}
+.objetivos-milenio button.accordion {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%
+}
+.objetivos-milenio h3 {
+	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+.objetivos-milenio button.accordion h4{
+	padding:0;
+	margin:0;
+	font-size: 1.12em;
+	text-transform:none;
+}
+.objetivos-milenio>p {
+	font-size: 1.3em;
+	line-height: 1.8em;
+}
+.objetivos-milenio h4 {
+	line-height: 2.2em;
+	font-weight:0;
+}
+.panel h4 {
 	font-weight: 600;
+}
+.objetivos-milenio h4>span{
+	font-weight: 600;
+}
+.objetivos-milenio button.accordion.active h4, button.accordion h4:hover {
+    background-color: #fff;
+}
+.objetivos-milenio button.accordion h4::before {
+	content: '\002B';
+    color: #3ecca7;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+.objetivos-milenio button.accordion.active h4::before {
+	content: "\2212";
+}
+.objetivos-milenio div.panel{
+	background-color: #fff;
 }
 
 /********** FIM DO PAIS **********/
@@ -468,6 +530,9 @@ div.fontes {
 	font-size:1.1em;
 	display:block;
 	margin:10px auto;
+}
+.leiamais:hover {
+	color:#ccc;
 }
 /********** FIM DA SINTESE HOME **********/
 
@@ -568,6 +633,10 @@ div.fontes {
 	margin-top:3px;
 	height:32px;
 	width:100%;
+}
+.comparar-lista-paises-desktop p {
+	padding-left:0.7em;
+	margin: 0.5em 0;
 }
 
 /********** FIM DO COMPARAR PAIS **********/
@@ -924,24 +993,22 @@ span.close {
 /********** FIM DO MODAL BANDEIRA**********/
 
 
-
-
 /* ==========================================================================
    Media Queries - Mobile First
    ========================================================================== */
 
     /* Small Devices, Tablets 768px*/
     @media only screen and (min-width : 568px) {
-		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop {
+		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span, .container-pais div.panel, button.accordion:after, button.accordion.active:after { 
+			display:none;
+		}		
+		.ods-logo, .menu-aux-desktop, .historico-desktop, .economia-desktop, .pais-foto, .olimpicos-desktop, .sociais-desktop, .meioambiente-desktop, .populacao-desktop, .telefonia-desktop, .envolve-card, .envolve-indicadores, .sintese-home, .pais-bandeira, .container-pais .pure-g, .ranking .menu-aux-desktop, .container-ods nav ul, .menu-ods-geral, .ranking .topo-tit, .ranking span.close, .ranking button, .comparar .topo-tit, .comparar span.close, .objetivos-milenio, .comparar-grafico-icones, .comparar-lista-paises-desktop, .objetivos-milenio button.accordion, .objetivos-milenio div.panel, .objetivos-milenio button.accordion h4::before, .objetivos-milenio button.accordion h4.active::before {
 			display:block;
 		}
 		button.accordion, #myBtnFontes, .container-ods div.panel {
 			overflow:visible;
 			width:90%;
 			margin:0 auto;			
-		}
-		.sub-ods-geral-dois, .sub-ods-geral-tres, .sub-ods-geral-quatro, button.accordion, #myBtnFontes, header div.topo-busca, .container-pais .topo-tit-pais, .topo-tit, .topo-tit span, header div.topo-busca, .topo-tit-pais, select.comparar-lista-paises, div.fontes, .video-ods span { 
-			display:none;
 		}
 		.sintese-home {
 			border:1px solid #9f9f9f;
@@ -1082,6 +1149,13 @@ span.close {
 			padding-top: 3px;
 			padding-bottom: 3px;
 		}
+		.ranking tbody a:hover {
+			color:#000;
+		}
+		.grafico-odm {
+			height:300px;
+			margin-bottom:15px;;
+		}
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 768px) {
 
@@ -1121,6 +1195,10 @@ span.close {
 		}
 		.ranking, .sintese-home {
 			margin:6.2em 8em auto auto;
+		}
+		.grafico-odm {
+			height:350px;
+			margin-bottom:25px;;
 		}
     }
 
