@@ -11,10 +11,10 @@ import * as T from 'topojson';
 @Directive({
     selector: '[ibgeLeaflet]',
 })
-export class IBGELeafletDirective
+export class PaisesLeafletDirective
     implements OnChanges, OnInit {
 
-    leafletDirective: LeafletDirectiveWrapper;
+    private leafletDirective: LeafletDirectiveWrapper;
 
     // Hexbin data binding
     @Input('topology')
@@ -60,8 +60,12 @@ export class IBGELeafletDirective
     }
 
     private _addGeoJSONLayer(geojson: any, options = {}) {
+        const _default = {
+            onEachFeature: this._setOnEachFeatureListeners
+        };
+
         if (this.map && geojson) {
-            this._layer = new L.GeoJSON(this.geojson, options);
+            this._layer = new L.GeoJSON(this.geojson, Object.assign({}, options, _default));
             this._layer.addTo(this.map);
         }
         console.log(this._layer);
@@ -70,6 +74,18 @@ export class IBGELeafletDirective
     private _setStyle() {
         if (this.map && this._layer && this.styles) {
             this._layer.setStyle(this.styles);
+        }
+    }
+
+    private _onClickMap(evt: L.LeafletEvent) {
+        this.map.fitBounds(evt.target.getBounds());
+    }
+
+    private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        if (feature.properties.mostrar) {
+            layer.on({
+                click: this._onClickMap
+            });
         }
     }
 
