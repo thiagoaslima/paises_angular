@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+import {transformText} from '../utils/transformText';
 import { PAISES } from '../metadados/paises'
 
 @Injectable()
@@ -11,43 +12,12 @@ export class BuscaService {
     constructor() {}
 
     /*
-        Transforma o texto passado via argumento, removendo acentos e convertendo os espaços em '-'.
-        É necessária tal transformação para comparar os textos de maneira menos rígida.
-        Usado internamente.
-    */
-    private transformText(text:string):string{
-        var a = "áàãâä";
-        var e = "éèêë";
-        var i = "íìîï";
-        var o = "óòõôö";
-        var u = "úùûü";
-        var newText = "";
-        text = text.toLowerCase().trim();
-        for(var k = 0; k < text.length; k++){
-            var c = text.charAt(k);
-            if((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')){
-                newText += c;
-            }else{
-                if(c == ' ' && k - 1 >= 0 && text.charAt(k - 1) == ' ') continue; //ignora espaços consecutivos
-                else if(c == ' ') newText += '-';
-                else if(c == 'ç') newText += 'c';
-                else if(a.indexOf(c) >= 0) newText += 'a';
-                else if(e.indexOf(c) >= 0) newText += 'e';
-                else if(i.indexOf(c) >= 0) newText += 'i';
-                else if(o.indexOf(c) >= 0) newText += 'o';
-                else if(u.indexOf(c) >= 0) newText += 'u';
-            }
-        }
-        return newText;
-    }
-
-    /*
         Método público de busca.
     */
     public search(text:string, lang="pt"){
         var i;
         var placesFound = [];
-        var transformedText = this.transformText(text); 
+        var transformedText = transformText(text); 
         var textWords = transformedText.split('-');
         var places = PAISES;
         //encontra local via ddi
@@ -64,7 +34,7 @@ export class BuscaService {
         //encontra local pelo nome exato
         for(i = 0; i < places.length; i++){
             if(placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
-            var slug = this.transformText((<any>places[i].nome)[lang]);
+            var slug = transformText((<any>places[i].nome)[lang]);
             var index = transformedText.indexOf(slug);
             var length = slug.length;
             if((index == 0 || transformedText.charAt(index - 1) == '-') && 
@@ -80,7 +50,7 @@ export class BuscaService {
         if(textWords.length >= 2) words2 = textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
         if(textWords.length >= 1 && textWords[textWords.length - 1].length >= this.MIN_WORD_SIZE) words1 = textWords[textWords.length - 1];
         for(i = 0; i < places.length; i++){
-            var slug = this.transformText((<any>places[i].nome)[lang]);
+            var slug = transformText((<any>places[i].nome)[lang]);
             if(placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
             if(words4 && slug.indexOf(words4) == 0){
                 sug4.push(places[i]);

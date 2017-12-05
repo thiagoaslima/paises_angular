@@ -2,6 +2,7 @@ import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
 import { PaisesService } from './paises.service';
 import { BuscaService } from './busca.service';
+import { LocalidadeService } from './localidade.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { NgModule } from '@angular/core';
         PaisesService,
         PesquisasService,
         TraducaoService,
-        BuscaService
+        BuscaService,
+        LocalidadeService
     ],
 })
 export class ServicesModule { }
