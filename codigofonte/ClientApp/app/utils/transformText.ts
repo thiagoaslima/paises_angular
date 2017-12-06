@@ -8,7 +8,7 @@ export function transformText(text: string): string {
     let o = 'óòõôö';
     let u = 'úùûü';
     let newText = '';
-    
+
     text = text.toLowerCase().trim();
     for (let k = 0; k < text.length; k++) {
         let c = text.charAt(k);

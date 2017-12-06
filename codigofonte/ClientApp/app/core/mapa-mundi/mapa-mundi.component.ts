@@ -1,3 +1,4 @@
+import { LocalidadeService } from '../../services/localidade/localidade.service';
 import { Component, OnInit } from '@angular/core';
 
 import { topojson } from '../../metadados/paises.topojson';
@@ -40,13 +41,15 @@ export class MapaMundiComponent implements OnInit {
     };
 
     constructor(
-        private _routerParams: RouterParamsService
+        private _routerParams: RouterParamsService,
+        private _localidadeService: LocalidadeService
     ) { }
 
     ngOnInit() {
         this._routerParams.params$.subscribe(({ params }) => {
             if (params.pais) {
                 this.paisSelecionado = params.pais;
+                console.log(this._localidadeService.getPaisBySlug(params.pais));
             }
         });
     }

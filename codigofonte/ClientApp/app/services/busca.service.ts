@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import {transformText} from '../utils/transformText';
-import { PAISES } from '../metadados/paises'
+import { LocalidadeService } from './localidade/localidade.service';
 
 @Injectable()
 export class BuscaService {
@@ -9,7 +9,9 @@ export class BuscaService {
     MAX_RESULTS = 6;
     MIN_WORD_SIZE = 3;
 
-    constructor() {}
+    constructor(
+        private _localidadeService: LocalidadeService
+    ) {}
 
     /*
         Método público de busca.
@@ -19,7 +21,7 @@ export class BuscaService {
         var placesFound = [];
         var transformedText = transformText(text); 
         var textWords = transformedText.split('-');
-        var places = PAISES;
+        var places = this._localidadeService.getAllPaises();
         //encontra local via ddi
         for(i = 0; i < textWords.length; i++){
             if(!isNaN(parseFloat(textWords[i]))){

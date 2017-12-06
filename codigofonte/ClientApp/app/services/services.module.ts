@@ -17,9 +17,8 @@ import { LocalidadeService } from './localidade/localidade.service';
         PaisesService,
         PesquisasService,
         TraducaoService,
-        BuscaService,
-        LocalidadeService
-    ],
+        BuscaService
+    ]
 })
 export class ServicesModule {
 
