@@ -7,32 +7,23 @@ import { ServicesModule } from './services/services.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app-component/app.component';
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
-import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
 
 import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
 import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-menu-principal.component';
-import { SinteseHomeComponent } from './core/sintese-home/sintese-home.component'
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
-        HomeComponent,
         BarraGovComponent,
-        BarraMenuPrincipalComponent,
-        SinteseHomeComponent
+        BarraMenuPrincipalComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
         ServicesModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ServicesModule.forRoot()
     ]
 })
 export class AppModuleShared {

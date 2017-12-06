@@ -34441,7 +34441,9 @@ export const topojson = {
                             66.77695324364794,
                             34.36405793183843
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "afeganistao",
+                        "id": "afeganistao"
                     }
                 },
                 {
@@ -34478,7 +34480,9 @@ export const topojson = {
                             17.7141680195181,
                             -13.098996710221599
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "angola",
+                        "id": "angola"
                     }
                 },
                 {
@@ -34507,7 +34511,9 @@ export const topojson = {
                             20.031167401370038,
                             40.69512485912788
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "albania",
+                        "id": "albania"
                     }
                 },
                 {
@@ -34536,7 +34542,9 @@ export const topojson = {
                             54.46690393915807,
                             23.42958123189108
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "emirados-arabes-unidos",
+                        "id": "emirados-arabes-unidos"
                     }
                 },
                 {
@@ -34574,7 +34582,9 @@ export const topojson = {
                             -64.09011894407205,
                             -31.599749536622458
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "argentina",
+                        "id": "argentina"
                     }
                 },
                 {
@@ -34603,7 +34613,9 @@ export const topojson = {
                             44.69054317096468,
                             40.57365746211311
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "armenia",
+                        "id": "armenia"
                     }
                 },
                 {
@@ -34647,7 +34659,9 @@ export const topojson = {
                             132.28111106498662,
                             -23.046533840478173
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "australia",
+                        "id": "australia"
                     }
                 },
                 {
@@ -34678,7 +34692,9 @@ export const topojson = {
                             15.211988113847626,
                             47.79209758857099
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "austria",
+                        "id": "austria"
                     }
                 },
                 {
@@ -34715,7 +34731,9 @@ export const topojson = {
                             48.501858387277814,
                             40.454270719625065
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "azerbaijao",
+                        "id": "azerbaijao"
                     }
                 },
                 {
@@ -34742,7 +34760,9 @@ export const topojson = {
                             29.867497821334183,
                             -3.449931922838476
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "burundi",
+                        "id": "burundi"
                     }
                 },
                 {
@@ -34771,7 +34791,9 @@ export const topojson = {
                             4.824376958991512,
                             50.7041224192618
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "belgica",
+                        "id": "belgica"
                     }
                 },
                 {
@@ -34800,7 +34822,9 @@ export const topojson = {
                             2.4076793487625334,
                             10.528305328728777
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "benin",
+                        "id": "benin"
                     }
                 },
                 {
@@ -34830,7 +34854,9 @@ export const topojson = {
                             -1.0055545489867923,
                             12.844674426219202
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "burkina-faso",
+                        "id": "burkina-faso"
                     }
                 },
                 {
@@ -34857,7 +34883,9 @@ export const topojson = {
                             89.95569983673916,
                             23.968162916199493
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "bangladesh",
+                        "id": "bangladesh"
                     }
                 },
                 {
@@ -34887,7 +34915,9 @@ export const topojson = {
                             25.19197039178754,
                             42.53692178162029
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "bulgaria",
+                        "id": "bulgaria"
                     }
                 },
                 {
@@ -34924,7 +34954,9 @@ export const topojson = {
                             -78.0325837988281,
                             24.68750079101562
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "bahamas",
+                        "id": "bahamas"
                     }
                 },
                 {
@@ -34951,7 +34983,9 @@ export const topojson = {
                             18.13320688668756,
                             44.049125208651326
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "bosnia-e-herzegovina",
+                        "id": "bosnia-e-herzegovina"
                     }
                 },
                 {
@@ -34980,7 +35014,9 @@ export const topojson = {
                             28.278222541044027,
                             53.76740453945212
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "belarus",
+                        "id": "belarus"
                     }
                 },
                 {
@@ -35007,7 +35043,9 @@ export const topojson = {
                             -88.69043538723501,
                             17.431756114780708
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "belize",
+                        "id": "belize"
                     }
                 },
                 {
@@ -35036,7 +35074,9 @@ export const topojson = {
                             -64.77471066175136,
                             -16.697735434204457
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "bolivia",
+                        "id": "bolivia"
                     }
                 },
                 {
@@ -35071,7 +35111,9 @@ export const topojson = {
                             -49.004739281411055,
                             -11.911149174153401
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "brasil",
+                        "id": "brasil"
                     }
                 },
                 {
@@ -35097,7 +35139,9 @@ export const topojson = {
                             115.0069410140108,
                             4.7155982720540015
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "brunei",
+                        "id": "brunei"
                     }
                 },
                 {
@@ -35123,7 +35167,9 @@ export const topojson = {
                             90.06286328308651,
                             27.532176903894033
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "butao",
+                        "id": "butao"
                     }
                 },
                 {
@@ -35151,7 +35197,9 @@ export const topojson = {
                             24.165505571080548,
                             -21.931863460877242
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "botswana",
+                        "id": "botswana"
                     }
                 },
                 {
@@ -35181,7 +35229,9 @@ export const topojson = {
                             21.552603141991074,
                             6.908144433699486
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-centro-africana",
+                        "id": "republica-centro-africana"
                     }
                 },
                 {
@@ -35356,7 +35406,9 @@ export const topojson = {
                             -120.34481048403782,
                             59.123359172351115
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "canada",
+                        "id": "canada"
                     }
                 },
                 {
@@ -35384,7 +35436,9 @@ export const topojson = {
                             7.480282484438134,
                             46.65094981395948
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "suica",
+                        "id": "suica"
                     }
                 },
                 {
@@ -35420,7 +35474,9 @@ export const topojson = {
                             -73.13818539602407,
                             -45.89175981698954
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "chile",
+                        "id": "chile"
                     }
                 },
                 {
@@ -35469,7 +35525,9 @@ export const topojson = {
                             109.42388064770945,
                             32.4993256142803
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "china",
+                        "id": "china"
                     }
                 },
                 {
@@ -35499,7 +35557,9 @@ export const topojson = {
                             -5.622722558274013,
                             7.505742942434884
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "costa-do-marfim",
+                        "id": "costa-do-marfim"
                     }
                 },
                 {
@@ -35531,7 +35591,9 @@ export const topojson = {
                             12.164957824736815,
                             4.606590304467242
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "camaroes",
+                        "id": "camaroes"
                     }
                 },
                 {
@@ -35566,7 +35628,9 @@ export const topojson = {
                             23.325467364903474,
                             -1.7061795031165092
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-democratica-do-congo",
+                        "id": "republica-democratica-do-congo"
                     }
                 },
                 {
@@ -35596,7 +35660,9 @@ export const topojson = {
                             15.845601085478874,
                             0.0767753695695987
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "congo",
+                        "id": "congo"
                     }
                 },
                 {
@@ -35627,7 +35693,9 @@ export const topojson = {
                             -73.29964199332315,
                             3.373265220486323
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "colombia",
+                        "id": "colombia"
                     }
                 },
                 {
@@ -35655,7 +35723,9 @@ export const topojson = {
                             -83.98072225406486,
                             10.068422100757724
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "costa-rica",
+                        "id": "costa-rica"
                     }
                 },
                 {
@@ -35680,7 +35750,9 @@ export const topojson = {
                             -77.86963186591623,
                             21.372722235556125
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "cuba",
+                        "id": "cuba"
                     }
                 },
                 {
@@ -35719,7 +35791,9 @@ export const topojson = {
                             32.96478613073501,
                             34.83844158121934
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "chipre",
+                        "id": "chipre"
                     }
                 },
                 {
@@ -35747,7 +35821,9 @@ export const topojson = {
                             14.199737207465542,
                             49.82064954802417
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-tcheca",
+                        "id": "republica-tcheca"
                     }
                 },
                 {
@@ -35782,7 +35858,9 @@ export const topojson = {
                             9.680360624869731,
                             51.26514949573187
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "alemanha",
+                        "id": "alemanha"
                     }
                 },
                 {
@@ -35810,7 +35888,9 @@ export const topojson = {
                             42.236702238272834,
                             11.550339137550806
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "djibuti",
+                        "id": "djibuti"
                     }
                 },
                 {
@@ -35843,7 +35923,9 @@ export const topojson = {
                             9.044262465986051,
                             56.19855994371184
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "dinamarca",
+                        "id": "dinamarca"
                     }
                 },
                 {
@@ -35869,7 +35951,9 @@ export const topojson = {
                             -70.89515668096094,
                             19.121864862716805
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-dominicana",
+                        "id": "republica-dominicana"
                     }
                 },
                 {
@@ -35901,7 +35985,9 @@ export const topojson = {
                             3.032001166595235,
                             27.50196969835497
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "argelia",
+                        "id": "argelia"
                     }
                 },
                 {
@@ -35928,7 +36014,9 @@ export const topojson = {
                             -78.40242529146346,
                             -1.209462119917329
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "equador",
+                        "id": "equador"
                     }
                 },
                 {
@@ -35957,7 +36045,9 @@ export const topojson = {
                             29.251278784179693,
                             26.251656284179692
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "egito",
+                        "id": "egito"
                     }
                 },
                 {
@@ -35985,7 +36075,9 @@ export const topojson = {
                             37.94508416827787,
                             16.157217536856383
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "eritreia",
+                        "id": "eritreia"
                     }
                 },
                 {
@@ -36013,7 +36105,9 @@ export const topojson = {
                             -3.4546297528325787,
                             39.98996723901298
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "espanha",
+                        "id": "espanha"
                     }
                 },
                 {
@@ -36040,7 +36134,9 @@ export const topojson = {
                             26.46430877558646,
                             58.53550665079091
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "estonia",
+                        "id": "estonia"
                     }
                 },
                 {
@@ -36071,7 +36167,9 @@ export const topojson = {
                             38.32500037292489,
                             8.674577262573322
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "etiopia",
+                        "id": "etiopia"
                     }
                 },
                 {
@@ -36099,7 +36197,9 @@ export const topojson = {
                             27.34550042756013,
                             63.226240078165326
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "finlandia",
+                        "id": "finlandia"
                     }
                 },
                 {
@@ -36136,7 +36236,9 @@ export const topojson = {
                             177.78222124023435,
                             -17.835249541015624
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "fiji",
+                        "id": "fiji"
                     }
                 },
                 {
@@ -36194,7 +36296,9 @@ export const topojson = {
                             2.393598292135421,
                             46.64437269004679
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "franca",
+                        "id": "franca"
                     }
                 },
                 {
@@ -36222,7 +36326,9 @@ export const topojson = {
                             10.92409293985366,
                             -0.8401711598572777
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "gabao",
+                        "id": "gabao"
                     }
                 },
                 {
@@ -36255,7 +36361,9 @@ export const topojson = {
                             -1.4746869373470015,
                             52.527324673321026
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "reino-unido",
+                        "id": "reino-unido"
                     }
                 },
                 {
@@ -36284,7 +36392,9 @@ export const topojson = {
                             42.4029599910346,
                             42.37135545707769
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "georgia",
+                        "id": "georgia"
                     }
                 },
                 {
@@ -36312,7 +36422,9 @@ export const topojson = {
                             -1.2229614062497285,
                             6.955712800947455
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "gana",
+                        "id": "gana"
                     }
                 },
                 {
@@ -36343,7 +36455,9 @@ export const topojson = {
                             -9.893749173058904,
                             10.57955351277413
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "guine",
+                        "id": "guine"
                     }
                 },
                 {
@@ -36369,7 +36483,9 @@ export const topojson = {
                             -15.994025078662641,
                             13.372947365645043
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "gambia",
+                        "id": "gambia"
                     }
                 },
                 {
@@ -36396,7 +36512,9 @@ export const topojson = {
                             -15.205984466518185,
                             11.950581776894868
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "guine-bissau",
+                        "id": "guine-bissau"
                     }
                 },
                 {
@@ -36423,7 +36541,9 @@ export const topojson = {
                             10.096729250010524,
                             1.671870666500284
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "guine-equatorial",
+                        "id": "guine-equatorial"
                     }
                 },
                 {
@@ -36459,7 +36579,9 @@ export const topojson = {
                             21.64045813287617,
                             39.52181072588641
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "grecia",
+                        "id": "grecia"
                     }
                 },
                 {
@@ -36501,7 +36623,9 @@ export const topojson = {
                             -90.47446702231798,
                             14.985680623114087
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "guatemala",
+                        "id": "guatemala"
                     }
                 },
                 {
@@ -36529,7 +36653,9 @@ export const topojson = {
                             -58.877330848198234,
                             5.637167782557324
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "guiana",
+                        "id": "guiana"
                     }
                 },
                 {
@@ -36558,7 +36684,9 @@ export const topojson = {
                             -87.1943518948655,
                             14.726983391229304
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "honduras",
+                        "id": "honduras"
                     }
                 },
                 {
@@ -36588,7 +36716,9 @@ export const topojson = {
                             16.548070360951257,
                             45.83869105317613
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "croacia",
+                        "id": "croacia"
                     }
                 },
                 {
@@ -36614,7 +36744,9 @@ export const topojson = {
                             -72.17947145012486,
                             19.25677820625619
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "haiti",
+                        "id": "haiti"
                     }
                 },
                 {
@@ -36645,7 +36777,9 @@ export const topojson = {
                             20.446409424144335,
                             47.27768269503118
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "hungria",
+                        "id": "hungria"
                     }
                 },
                 {
@@ -36735,7 +36869,9 @@ export const topojson = {
                             114.28763683177652,
                             -1.0458799224640936
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "indonesia",
+                        "id": "indonesia"
                     }
                 },
                 {
@@ -36768,7 +36904,9 @@ export const topojson = {
                             78.87786922993375,
                             22.413615477931863
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "india",
+                        "id": "india"
                     }
                 },
                 {
@@ -36794,7 +36932,9 @@ export const topojson = {
                             -8.047704002476143,
                             53.03318184054213
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "irlanda",
+                        "id": "irlanda"
                     }
                 },
                 {
@@ -36828,7 +36968,9 @@ export const topojson = {
                             55.50154711985538,
                             32.14730043121087
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "ira",
+                        "id": "ira"
                     }
                 },
                 {
@@ -36859,7 +37001,9 @@ export const topojson = {
                             43.11601314328822,
                             33.26085719378893
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "iraque",
+                        "id": "iraque"
                     }
                 },
                 {
@@ -36884,7 +37028,9 @@ export const topojson = {
                             -18.97006870742676,
                             64.88174465448743
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "islandia",
+                        "id": "islandia"
                     }
                 },
                 {
@@ -36916,7 +37062,9 @@ export const topojson = {
                             34.878323945359845,
                             30.898164387021488
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "israel",
+                        "id": "israel"
                     }
                 },
                 {
@@ -36957,7 +37105,9 @@ export const topojson = {
                             10.912117830313688,
                             45.16158742290635
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "italia",
+                        "id": "italia"
                     }
                 },
                 {
@@ -36982,7 +37132,9 @@ export const topojson = {
                             -77.25056523908682,
                             18.08654349508131
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "jamaica",
+                        "id": "jamaica"
                     }
                 },
                 {
@@ -37013,7 +37165,9 @@ export const topojson = {
                             36.349168871951484,
                             30.769014340861162
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "jordania",
+                        "id": "jordania"
                     }
                 },
                 {
@@ -37050,7 +37204,9 @@ export const topojson = {
                             139.15168994541105,
                             36.27544616269145
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "japao",
+                        "id": "japao"
                     }
                 },
                 {
@@ -37080,7 +37236,9 @@ export const topojson = {
                             68.97543027258824,
                             48.41783048462834
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "cazaquistao",
+                        "id": "cazaquistao"
                     }
                 },
                 {
@@ -37110,7 +37268,9 @@ export const topojson = {
                             37.83399365370141,
                             0.44641380118083546
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "quenia",
+                        "id": "quenia"
                     }
                 },
                 {
@@ -37138,7 +37298,9 @@ export const topojson = {
                             74.63222363175608,
                             41.74759868305697
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "quirguistao",
+                        "id": "quirguistao"
                     }
                 },
                 {
@@ -37166,7 +37328,9 @@ export const topojson = {
                             104.3631982971591,
                             12.603344755669804
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "camboja",
+                        "id": "camboja"
                     }
                 },
                 {
@@ -37192,7 +37356,9 @@ export const topojson = {
                             128.0885916021782,
                             36.27615797211297
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-da-coreia",
+                        "id": "republica-da-coreia"
                     }
                 },
                 {
@@ -37234,7 +37400,9 @@ export const topojson = {
                             47.61142778466913,
                             29.498414466548365
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "kuwait",
+                        "id": "kuwait"
                     }
                 },
                 {
@@ -37263,7 +37431,9 @@ export const topojson = {
                             102.60550124826943,
                             19.57842213633504
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "laos",
+                        "id": "laos"
                     }
                 },
                 {
@@ -37290,7 +37460,9 @@ export const topojson = {
                             36.16197843329274,
                             34.293267433134424
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "libano",
+                        "id": "libano"
                     }
                 },
                 {
@@ -37318,7 +37490,9 @@ export const topojson = {
                             -10.217942062715831,
                             6.9768668405738685
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "liberia",
+                        "id": "liberia"
                     }
                 },
                 {
@@ -37349,7 +37523,9 @@ export const topojson = {
                             20.56038866366616,
                             26.07864962726736
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "libia",
+                        "id": "libia"
                     }
                 },
                 {
@@ -37374,7 +37550,9 @@ export const topojson = {
                             80.7798831102662,
                             7.37701926626693
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "sri-lanka",
+                        "id": "sri-lanka"
                     }
                 },
                 {
@@ -37399,7 +37577,9 @@ export const topojson = {
                             28.37310247672622,
                             -29.48682710644515
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "lesoto",
+                        "id": "lesoto"
                     }
                 },
                 {
@@ -37428,7 +37608,9 @@ export const topojson = {
                             24.251954337868767,
                             55.10599141555182
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "lituania",
+                        "id": "lituania"
                     }
                 },
                 {
@@ -37455,7 +37637,9 @@ export const topojson = {
                             5.963399855732971,
                             49.700914308180124
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "luxemburgo",
+                        "id": "luxemburgo"
                     }
                 },
                 {
@@ -37484,7 +37668,9 @@ export const topojson = {
                             26.58982304535618,
                             56.5758707460537
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "letonia",
+                        "id": "letonia"
                     }
                 },
                 {
@@ -37511,7 +37697,9 @@ export const topojson = {
                             -6.549989919803192,
                             31.84216154877998
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "marrocos",
+                        "id": "marrocos"
                     }
                 },
                 {
@@ -37537,7 +37725,9 @@ export const topojson = {
                             28.39347522887626,
                             47.48205262674966
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "moldavia",
+                        "id": "moldavia"
                     }
                 },
                 {
@@ -37562,7 +37752,9 @@ export const topojson = {
                             46.68330444785852,
                             -18.261386361717094
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "madagascar",
+                        "id": "madagascar"
                     }
                 },
                 {
@@ -37591,7 +37783,9 @@ export const topojson = {
                             -101.78059277554442,
                             23.43839894689186
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mexico",
+                        "id": "mexico"
                     }
                 },
                 {
@@ -37620,7 +37814,9 @@ export const topojson = {
                             21.45949952374139,
                             41.56057113996844
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "macedonia",
+                        "id": "macedonia"
                     }
                 },
                 {
@@ -37651,7 +37847,9 @@ export const topojson = {
                             -1.9751240829671026,
                             18.607472487724873
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mali",
+                        "id": "mali"
                     }
                 },
                 {
@@ -37681,7 +37879,9 @@ export const topojson = {
                             95.96631112694983,
                             21.49865979535998
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mianmar",
+                        "id": "mianmar"
                     }
                 },
                 {
@@ -37711,7 +37911,9 @@ export const topojson = {
                             19.179110834894093,
                             42.87191586001194
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "montenegro",
+                        "id": "montenegro"
                     }
                 },
                 {
@@ -37737,7 +37939,9 @@ export const topojson = {
                             100.34236477101352,
                             46.803891176693725
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mongolia",
+                        "id": "mongolia"
                     }
                 },
                 {
@@ -37769,7 +37973,9 @@ export const topojson = {
                             38.09996092567286,
                             -13.98289193315477
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mocambique",
+                        "id": "mocambique"
                     }
                 },
                 {
@@ -37798,7 +38004,9 @@ export const topojson = {
                             -9.674079584166865,
                             19.312744499981285
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "mauritania",
+                        "id": "mauritania"
                     }
                 },
                 {
@@ -37825,7 +38033,9 @@ export const topojson = {
                             33.67291413640143,
                             -13.30498971055347
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "malawi",
+                        "id": "malawi"
                     }
                 },
                 {
@@ -37861,7 +38071,9 @@ export const topojson = {
                             113.79897365376286,
                             2.36032277279513
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "malasia",
+                        "id": "malasia"
                     }
                 },
                 {
@@ -37890,7 +38102,9 @@ export const topojson = {
                             17.008326407382345,
                             -20.5074184729238
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "namibia",
+                        "id": "namibia"
                     }
                 },
                 {
@@ -37934,7 +38148,9 @@ export const topojson = {
                             10.169683690643023,
                             17.537441557287167
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "niger",
+                        "id": "niger"
                     }
                 },
                 {
@@ -37962,7 +38178,9 @@ export const topojson = {
                             7.27348557242033,
                             9.482709524706273
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "nigeria",
+                        "id": "nigeria"
                     }
                 },
                 {
@@ -37990,7 +38208,9 @@ export const topojson = {
                             -85.05985928453657,
                             12.583566642056198
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "nicaragua",
+                        "id": "nicaragua"
                     }
                 },
                 {
@@ -38017,7 +38237,9 @@ export const topojson = {
                             5.280884215223043,
                             52.35728794943347
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "holanda",
+                        "id": "holanda"
                     }
                 },
                 {
@@ -38062,7 +38284,9 @@ export const topojson = {
                             7.59635690450328,
                             60.63276535396159
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "noruega",
+                        "id": "noruega"
                     }
                 },
                 {
@@ -38088,7 +38312,9 @@ export const topojson = {
                             81.85272197146772,
                             29.179209087508053
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "nepal",
+                        "id": "nepal"
                     }
                 },
                 {
@@ -38120,7 +38346,9 @@ export const topojson = {
                             168.99484292941443,
                             -45.305148995476735
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "nova-zelandia",
+                        "id": "nova-zelandia"
                     }
                 },
                 {
@@ -38156,7 +38384,9 @@ export const topojson = {
                             57.407122922238926,
                             22.107727076698005
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "oma",
+                        "id": "oma"
                     }
                 },
                 {
@@ -38185,7 +38415,9 @@ export const topojson = {
                             67.22971341445967,
                             27.661772026890034
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "paquistao",
+                        "id": "paquistao"
                     }
                 },
                 {
@@ -38213,7 +38445,9 @@ export const topojson = {
                             -80.9477352246741,
                             8.329095963620297
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "panama",
+                        "id": "panama"
                     }
                 },
                 {
@@ -38243,7 +38477,9 @@ export const topojson = {
                             -72.85859617407979,
                             -13.08244968493464
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "peru",
+                        "id": "peru"
                     }
                 },
                 {
@@ -38300,7 +38536,9 @@ export const topojson = {
                             121.39671690394965,
                             17.01675288102832
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "filipinas",
+                        "id": "filipinas"
                     }
                 },
                 {
@@ -38343,7 +38581,9 @@ export const topojson = {
                             143.24674224609424,
                             -5.781468190276244
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "papua-nova-guine",
+                        "id": "papua-nova-guine"
                     }
                 },
                 {
@@ -38375,7 +38615,9 @@ export const topojson = {
                             20.170957373874554,
                             51.89467549995442
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "polonia",
+                        "id": "polonia"
                     }
                 },
                 {
@@ -38424,7 +38666,9 @@ export const topojson = {
                             126.4013664521526,
                             39.93849903271641
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "republica-popular-democratica-da-coreia",
+                        "id": "republica-popular-democratica-da-coreia"
                     }
                 },
                 {
@@ -38450,7 +38694,9 @@ export const topojson = {
                             -8.321289998608336,
                             39.09754731139248
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "portugal",
+                        "id": "portugal"
                     }
                 },
                 {
@@ -38477,7 +38723,9 @@ export const topojson = {
                             -60.116251968742496,
                             -21.58600624890358
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "paraguai",
+                        "id": "paraguai"
                     }
                 },
                 {
@@ -38516,7 +38764,9 @@ export const topojson = {
                             51.176990753235515,
                             25.39721382166136
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "catar",
+                        "id": "catar"
                     }
                 },
                 {
@@ -38547,7 +38797,9 @@ export const topojson = {
                             24.357589998755948,
                             45.767655722234565
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "romenia",
+                        "id": "romenia"
                     }
                 },
                 {
@@ -38660,7 +38912,9 @@ export const topojson = {
                             93.35808057351643,
                             63.27583621031863
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "federacao-russa",
+                        "id": "federacao-russa"
                     }
                 },
                 {
@@ -38688,7 +38942,9 @@ export const topojson = {
                             30.246521944143176,
                             -1.8373160017110677
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "ruanda",
+                        "id": "ruanda"
                     }
                 },
                 {
@@ -38737,7 +38993,9 @@ export const topojson = {
                             44.97350104087676,
                             23.483772937407526
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "arabia-saudita",
+                        "id": "arabia-saudita"
                     }
                 },
                 {
@@ -38769,7 +39027,9 @@ export const topojson = {
                             29.278189271994073,
                             16.59682218214965
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "sudao",
+                        "id": "sudao"
                     }
                 },
                 {
@@ -38817,7 +39077,9 @@ export const topojson = {
                             -14.90191985003055,
                             15.21352783236492
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "senegal",
+                        "id": "senegal"
                     }
                 },
                 {
@@ -38864,7 +39126,9 @@ export const topojson = {
                             159.21824636226614,
                             -7.972578675034137
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "ilhas-salomao",
+                        "id": "ilhas-salomao"
                     }
                 },
                 {
@@ -38891,7 +39155,9 @@ export const topojson = {
                             -11.868671719662139,
                             8.449533970141061
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "serra-leoa",
+                        "id": "serra-leoa"
                     }
                 },
                 {
@@ -38918,7 +39184,9 @@ export const topojson = {
                             -89.24568479949576,
                             13.905494321987627
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "el-salvador",
+                        "id": "el-salvador"
                     }
                 },
                 {
@@ -38961,7 +39229,9 @@ export const topojson = {
                             43.0012033935547,
                             2.4834712939453114
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "somalia",
+                        "id": "somalia"
                     }
                 },
                 {
@@ -38993,7 +39263,9 @@ export const topojson = {
                             20.617170839554696,
                             44.305776999550595
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "servia",
+                        "id": "servia"
                     }
                 },
                 {
@@ -39021,7 +39293,9 @@ export const topojson = {
                             -55.9774242796594,
                             4.204206758903014
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "suriname",
+                        "id": "suriname"
                     }
                 },
                 {
@@ -39050,7 +39324,9 @@ export const topojson = {
                             18.80025238393914,
                             48.76504313056269
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "eslovaquia",
+                        "id": "eslovaquia"
                     }
                 },
                 {
@@ -39079,7 +39355,9 @@ export const topojson = {
                             14.925221744652692,
                             46.02314554267619
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "eslovenia",
+                        "id": "eslovenia"
                     }
                 },
                 {
@@ -39106,7 +39384,9 @@ export const topojson = {
                             17.8665700457622,
                             65.50481733713387
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "suecia",
+                        "id": "suecia"
                     }
                 },
                 {
@@ -39132,7 +39412,9 @@ export const topojson = {
                             31.380267618638637,
                             -26.514102288044636
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "suazilandia",
+                        "id": "suazilandia"
                     }
                 },
                 {
@@ -39162,7 +39444,9 @@ export const topojson = {
                             38.17307034750255,
                             35.03249716641077
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "siria",
+                        "id": "siria"
                     }
                 },
                 {
@@ -39191,7 +39475,9 @@ export const topojson = {
                             19.298410781607974,
                             17.299848016885196
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "chade",
+                        "id": "chade"
                     }
                 },
                 {
@@ -39219,7 +39505,9 @@ export const topojson = {
                             1.0531314255994964,
                             8.88693421878957
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "togo",
+                        "id": "togo"
                     }
                 },
                 {
@@ -39249,7 +39537,9 @@ export const topojson = {
                             101.3205506798367,
                             15.457022674145167
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "tailandia",
+                        "id": "tailandia"
                     }
                 },
                 {
@@ -39277,7 +39567,9 @@ export const topojson = {
                             72.53371787824538,
                             38.27762924480315
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "tajidquistao",
+                        "id": "tajidquistao"
                     }
                 },
                 {
@@ -39306,7 +39598,9 @@ export const topojson = {
                             58.64369087582049,
                             39.808326042999745
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "turcomenistao",
+                        "id": "turcomenistao"
                     }
                 },
                 {
@@ -39332,7 +39626,9 @@ export const topojson = {
                             125.37385473581242,
                             -8.93441532958186
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "timor-leste",
+                        "id": "timor-leste"
                     }
                 },
                 {
@@ -39357,7 +39653,9 @@ export const topojson = {
                             -61.29075683593749,
                             10.464555664062502
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "trinidad-e-tobago",
+                        "id": "trinidad-e-tobago"
                     }
                 },
                 {
@@ -39384,7 +39682,9 @@ export const topojson = {
                             9.033840757759787,
                             33.82036074438275
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "tunisia",
+                        "id": "tunisia"
                     }
                 },
                 {
@@ -39423,7 +39723,9 @@ export const topojson = {
                             33.09279786027887,
                             39.01476230713896
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "turquia",
+                        "id": "turquia"
                     }
                 },
                 {
@@ -39468,7 +39770,9 @@ export const topojson = {
                             34.01086639816125,
                             -5.48938762847664
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "tanzania",
+                        "id": "tanzania"
                     }
                 },
                 {
@@ -39497,7 +39801,9 @@ export const topojson = {
                             32.983798851442145,
                             1.9650067064786
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "uganda",
+                        "id": "uganda"
                     }
                 },
                 {
@@ -39532,7 +39838,9 @@ export const topojson = {
                             32.35685696415251,
                             49.31361345541799
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "ucrania",
+                        "id": "ucrania"
                     }
                 },
                 {
@@ -39559,7 +39867,9 @@ export const topojson = {
                             -56.11082437804334,
                             -32.79483350006982
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "uruguai",
+                        "id": "uruguai"
                     }
                 },
                 {
@@ -39635,7 +39945,9 @@ export const topojson = {
                             -97.77388395919802,
                             38.99679759140015
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "estados-unidos",
+                        "id": "estados-unidos"
                     }
                 },
                 {
@@ -39664,7 +39976,9 @@ export const topojson = {
                             63.96728900740418,
                             41.58487922086531
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "uzbequistao",
+                        "id": "uzbequistao"
                     }
                 },
                 {
@@ -39692,7 +40006,9 @@ export const topojson = {
                             -64.19250532075016,
                             7.138000324545659
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "venezuela",
+                        "id": "venezuela"
                     }
                 },
                 {
@@ -39720,7 +40036,9 @@ export const topojson = {
                             105.32822795216262,
                             21.740390513377516
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "vietna",
+                        "id": "vietna"
                     }
                 },
                 {
@@ -39752,7 +40070,9 @@ export const topojson = {
                             166.9145338216307,
                             -15.324443015964901
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "vanuatu",
+                        "id": "vanuatu"
                     }
                 },
                 {
@@ -39779,7 +40099,9 @@ export const topojson = {
                             44.941633049457764,
                             15.28052600984639
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "iemen",
+                        "id": "iemen"
                     }
                 },
                 {
@@ -39813,7 +40135,9 @@ export const topojson = {
                             23.266291026867627,
                             -30.07302246161698
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "africa-do-sul",
+                        "id": "africa-do-sul"
                     }
                 },
                 {
@@ -39845,7 +40169,9 @@ export const topojson = {
                             26.18377753823642,
                             -14.732304809574991
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "zambia",
+                        "id": "zambia"
                     }
                 },
                 {
@@ -39873,7 +40199,9 @@ export const topojson = {
                             29.916006624039486,
                             -18.884745422131253
                         ],
-                        "mostrar": true
+                        "mostrar": true,
+                        "slug": "zimbabue",
+                        "id": "zimbabue"
                     }
                 }
             ]

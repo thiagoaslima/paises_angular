@@ -1,13 +1,12 @@
 <div leaflet 
-    [leafletOptions]="{center: [0,0], zoom: 3, layers: [], maxZoom: 8, minZoom: 3}"
-    [leafletFitBoundsOptions] = "fitBounds"
+    [leafletOptions]="mapOptions"
+    
     (leafletMapReady)="onMapReady($event)">
     <div 
         ibgeLeaflet
         [topology]="topology"
         [styles]="mapStyle"
-    >
-    </div> 
+    ></div> 
 </div>
 
 <router-outlet></router-outlet>

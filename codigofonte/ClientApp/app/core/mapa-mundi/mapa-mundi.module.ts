@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MapaMundiComponent } from './mapa-mundi.component';
 import { SinteseHomeComponent } from '../sintese-home/sintese-home.component';
-import { HomeComponent } from '../home/home.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { PaisesLeafletModule } from '../../components/paises-leaflet/index';
@@ -31,7 +30,7 @@ const routes: Routes = [
     ],
     declarations: [
         MapaMundiComponent,
-        HomeComponent
+        SinteseHomeComponent
     ],
     providers: []
 })

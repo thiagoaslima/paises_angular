@@ -29,7 +29,7 @@ export class PaisesLeafletDirective
 
     public map: L.Map;
     private _geojson = <any>[];
-    private _layer: L.GeoJSON;
+    private _geojsonLayer: L.GeoJSON;
 
     constructor(leafletDirective: LeafletDirective) {
         this.leafletDirective = new LeafletDirectiveWrapper(leafletDirective);
@@ -60,21 +60,40 @@ export class PaisesLeafletDirective
     }
 
     private _addGeoJSONLayer(geojson: any, options = {}) {
+        const _that = this;
+
         const _default = {
-            onEachFeature: this._setOnEachFeatureListeners
+            onEachFeature: this._setOnEachFeatureListeners.bind(_that)
         };
 
         if (this.map && geojson) {
-            this._layer = new L.GeoJSON(this.geojson, Object.assign({}, options, _default));
-            this._layer.addTo(this.map);
+            this._geojsonLayer = new L.GeoJSON(this.geojson, Object.assign({}, options, _default));
+            this._geojsonLayer.addTo(this.map);
+            this._setCustomIDforEachLayer(this._geojsonLayer);
         }
-        console.log(this._layer);
     }
 
     private _setStyle() {
-        if (this.map && this._layer && this.styles) {
-            this._layer.setStyle(this.styles);
+        if (this.map && this._geojsonLayer && this.styles) {
+            this._geojsonLayer.setStyle(this.styles);
         }
+    }
+
+    /**
+     * serve para passar um id próprio para cada layer criado 
+     * a partir do GeoJSON, facilitando o acesso a layers específicos
+     * através do método getLayer(id)
+     *
+     * TODO:
+     * Refatorar o método, pois ele acessa propriedades privadas
+     * diretamente.
+     */
+    private _setCustomIDforEachLayer(layerGroup: any) {
+        layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
+            l._path.id = l.feature.properties.slug;
+            l._leaflet_id = l.feature.properties.slug;
+            return Object.assign(agg, { [l.feature.properties.slug]: l });
+        }, Object.create(null));
     }
 
     private _onClickMap(evt: L.LeafletEvent) {
@@ -82,9 +101,10 @@ export class PaisesLeafletDirective
     }
 
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        const _that = this;
         if (feature.properties.mostrar) {
             layer.on({
-                click: this._onClickMap
+                click: this._onClickMap.bind(_that)
             });
         }
     }
