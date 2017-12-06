@@ -4,8 +4,10 @@ import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
 import { PaisesService } from './paises.service';
 import { BuscaService } from './busca.service';
+
 import { RouterParamsService } from './router-params.service';
 import { LocalidadeService } from './localidade/localidade.service';
+
 
 @NgModule({
     imports: [],
@@ -15,7 +17,8 @@ import { LocalidadeService } from './localidade/localidade.service';
         PaisesService,
         PesquisasService,
         TraducaoService,
-        BuscaService
+        BuscaService,
+        LocalidadeService
     ],
 })
 export class ServicesModule {
