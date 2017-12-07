@@ -1,3 +1,4 @@
 # VisualStudio Code
 
 .vscode/
+tslint.json
