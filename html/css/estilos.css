@@ -71,6 +71,14 @@ a:hover {
     text-decoration: none;
 }
 
+.pure-u-md-1-2 {
+	width:50%;
+}
+
+.pure-u-xl-1-3 {
+	width:33,33%;
+}
+
 .container {
 	height:100%;
 	width:100%;
@@ -247,7 +255,7 @@ table {
 }
 .historico-desktop p.centralizar {
 	text-align:center;
-	font-weight:bold;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
 	font-size:1em;
 }
 .historico-desktop a:hover {
@@ -448,12 +456,10 @@ div.fontes {
 .objetivos-milenio h4 {
 	line-height: 2.2em;
 	font-weight:0;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
-.panel h4 {
-	font-weight: 600;
-}
-.objetivos-milenio h4>span{
-	font-weight: 600;
+.panel h4, .objetivos-milenio h4>span{
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
 }
 .objetivos-milenio button.accordion.active h4, button.accordion h4:hover {
     background-color: #fff;
@@ -461,7 +467,7 @@ div.fontes {
 .objetivos-milenio button.accordion h4::before {
 	content: '\002B';
     color: #3ecca7;
-    font-weight: bold;
+    font-family: "RobotoBold", Helvetica, Arial, sans-serif;
     float: left;
     margin-right: 10px;
 }
@@ -489,7 +495,7 @@ div.fontes {
 }
 .sintese-home h2{
 	font-size:1.8em;
-	font-weight:600;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
 	margin:0.7em;
 }
 .sintese-home span.close {
@@ -890,7 +896,7 @@ h3 {
     color: #aaaaaa;
     float: right;
     font-size: 2em;
-	font-weight:bold;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
 }
 
 .close:hover,
