@@ -6,7 +6,7 @@ import { Directive, Input, OnChanges, OnInit, SimpleChange } from '@angular/core
 import { LeafletDirective, LeafletDirectiveWrapper } from '@asymmetrik/ngx-leaflet';
 
 import * as L from 'leaflet';
-import * as T from 'topojson';
+import { GeoJsonObject } from 'geojson';
 
 @Directive({
     selector: '[ibgeLeaflet]',
@@ -14,22 +14,13 @@ import * as T from 'topojson';
 export class PaisesLeafletDirective
     implements OnChanges, OnInit {
 
-    private leafletDirective: LeafletDirectiveWrapper;
-
-    // Hexbin data binding
-    @Input('topology')
-    set geojson(json: any) {
-        this._geojson = this._topoJSON(json);
-    }
-    get geojson() {
-        return this._geojson;
-    }
-
-    @Input('styles') styles: any;
+    @Input('styles') public styles: any;
+    @Input('topology') public geojson: GeoJsonObject;
 
     public map: L.Map;
-    private _geojson = <any>[];
+
     private _geojsonLayer: L.GeoJSON;
+    private leafletDirective: LeafletDirectiveWrapper;
 
     constructor(leafletDirective: LeafletDirective) {
         this.leafletDirective = new LeafletDirectiveWrapper(leafletDirective);
@@ -59,15 +50,13 @@ export class PaisesLeafletDirective
         }
     }
 
-    private _addGeoJSONLayer(geojson: any, options = {}) {
-        const _that = this;
-
-        const _default = {
-            onEachFeature: this._setOnEachFeatureListeners.bind(_that)
-        };
+    private _addGeoJSONLayer(geojson: GeoJsonObject, options = {}) {
+        const that = this;
 
         if (this.map && geojson) {
-            this._geojsonLayer = new L.GeoJSON(this.geojson, Object.assign({}, options, _default));
+            this._geojsonLayer = new L.GeoJSON(geojson, Object.assign({}, options, {
+                onEachFeature: this._setOnEachFeatureListeners.bind(that)
+            }));
             this._geojsonLayer.addTo(this.map);
             this._setCustomIDforEachLayer(this._geojsonLayer);
         }
@@ -101,24 +90,12 @@ export class PaisesLeafletDirective
     }
 
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
-        const _that = this;
+        const that = this;
         if (feature.properties.mostrar) {
             layer.on({
-                click: this._onClickMap.bind(_that)
+                click: this._onClickMap.bind(that)
             });
         }
-    }
-
-    private _topoJSON(data = <any>[]): any[] {
-        if (data.type === 'Topology') {
-            for (let key in data.objects) {
-                if (data.objects.hasOwnProperty(key)) {
-                    data = T.feature(data, data.objects[key]);
-                }
-            }
-        }
-
-        return data;
     }
 
 }

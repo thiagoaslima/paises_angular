@@ -42,6 +42,7 @@
 }
 
 .area-aplicacao{
+    display: table;
     position: absolute;
     width: 100%;
     min-height: calc(100% - 104px);

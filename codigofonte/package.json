@@ -79,6 +79,7 @@
     "karma-jasmine": "1.1.0",
     "karma-webpack": "2.0.3",
     "properties-loader": "0.0.1",
+    "ts-node": "^3.3.0",
     "webpack-dev-server": "^2.7.1"
   },
   "others": {

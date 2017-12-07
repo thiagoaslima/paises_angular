@@ -1,12 +1,9 @@
-<div leaflet 
+<div style="display: table-cell; overflow: hidden">
+    <div leaflet 
     [leafletOptions]="mapOptions"
-    
+    [leafletFitBounds]="paisBounds"
     (leafletMapReady)="onMapReady($event)">
-    <div 
-        ibgeLeaflet
-        [topology]="topology"
-        [styles]="mapStyle"
-    ></div> 
-</div>
+    </div>
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</div>

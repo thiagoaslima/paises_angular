@@ -1,7 +1,12 @@
+:host {
+    display: table-row;
+    overflow: hidden;
+    height: 100%;
+}
+
 [leaflet] {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    /* overwrite the leaflet's default position */
+    position: static !important;
+    height: calc(100% - 104px);
     width: 100%;
-    min-height: 100%;
 }

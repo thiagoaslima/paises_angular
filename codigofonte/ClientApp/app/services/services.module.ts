@@ -7,7 +7,7 @@ import { BuscaService } from './busca.service';
 
 import { RouterParamsService } from './router-params.service';
 import { LocalidadeService } from './localidade/localidade.service';
-
+import { MalhaService } from './malha/malha.service';
 
 @NgModule({
     imports: [],
@@ -17,12 +17,13 @@ import { LocalidadeService } from './localidade/localidade.service';
         PaisesService,
         PesquisasService,
         TraducaoService,
-        BuscaService
+        BuscaService,
+        MalhaService
     ]
 })
 export class ServicesModule {
 
-    static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders {
         return {
             ngModule: ServicesModule,
             providers: [
@@ -32,10 +33,10 @@ export class ServicesModule {
         };
     }
     constructor( @Optional() @SkipSelf() parentModule: ServicesModule) {
-        if (parentModule) {
-            throw new Error(
-                'ServicesModule is already loaded. Import it in the AppModule only');
-        }
+        // if (parentModule) {
+        //     throw new Error(
+        //         'ServicesModule is already loaded. Import it in the AppModule only');
+        // }
     }
 
 }

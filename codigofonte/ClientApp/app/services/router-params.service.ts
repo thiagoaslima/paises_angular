@@ -1,19 +1,13 @@
-import { Injectable } from '@angular/core';
-import {
-    ActivatedRoute,
-    ActivatedRouteSnapshot,
-    NavigationEnd,
-    RouteConfigLoadEnd,
-    RouteConfigLoadStart,
-    Router
-} from '@angular/router';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { Router, ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd } from '@angular/router';
+
+import { isPlatformBrowser } from '@angular/common';
 
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
-import { RouterEvent, ChildActivationStart, ChildActivationEnd, ActivationStart, ActivationEnd } from '@angular/router/src/events';
 
 export interface RouterParams {
     params: { [key: string]: string };
@@ -21,39 +15,64 @@ export interface RouterParams {
     url: string;
 }
 
-type RouterEvents = RouterEvent | RouteConfigLoadStart | RouteConfigLoadEnd |
-    ChildActivationStart | ChildActivationEnd | ActivationStart | ActivationEnd;
-
 @Injectable()
 export class RouterParamsService {
 
-    public params$: Observable<RouterParams>;
+    public params$: Observable<any>;
+    private isBrowser: boolean;
 
     constructor(
         private _router: Router,
-        private _route: ActivatedRoute
+        private _route: ActivatedRoute,
+        @Inject(PLATFORM_ID) platformId: Object,
     ) {
+        this.isBrowser = isPlatformBrowser(platformId);
+
         this.params$ = this._router.events
-            .filter<RouterEvents, NavigationEnd>( (evt): evt is NavigationEnd => evt instanceof NavigationEnd)
+            .filter((evt) => evt instanceof NavigationEnd)
             .distinctUntilChanged()
-            .map((evt) => {
-                return this.extractParamsFromTree(this._route.snapshot, {});
+            .map((e: any) => {
+
+                let params = this.extractParamsFromTree(this._route.snapshot, {});
+                if (e.url != null) {
+
+                    params.params.url = e.url
+                }
+                return params;
+            })
+            .do((params) => {
+
+                if (this.isBrowser && params && params.params && params.params.uf && params.params.municipio) {
+                    try {
+                        localStorage.setItem('lastParams', JSON.stringify(params));
+                    } catch (err) {
+                        // ignore
+                    }
+                }
+
             });
+
+        // this._router.events
+        //     .filter(e => e instanceof NavigationEnd)
+        //     .distinctUntilChanged()
+        //     .subscribe(e => {
+        //         if (isBrowser && (<any>window).ga) {
+        //             (<any>window).ga('set', 'page', e.url);
+        //             (<any>window).ga('send', 'pageview');
+        //         }
+        //     })
     }
 
+
     private getActiveChildOnOutlet(route: ActivatedRouteSnapshot, outlet = 'primary'): ActivatedRouteSnapshot | null {
+        // return route.children.reduce((agg, rota) => rota.outlet === outlet ? rota : agg, null);
         return route.children.find(rota => {
             return rota.outlet === outlet;
         }) || null;
     }
 
-    private extractParamsFromTree(
-        route: ActivatedRouteSnapshot | null,
-        { params = {}, queryParams = {}, url = '' },
-        outlet = 'primary'
-    ): RouterParams {
-
-        let _params: RouterParams = {
+    private extractParamsFromTree(route: ActivatedRouteSnapshot | null, { params = {}, queryParams = {}, url = '' }, outlet = 'primary'): RouterParams {
+        let _params = {
             params,
             queryParams,
             url
@@ -63,15 +82,15 @@ export class RouterParamsService {
 
         Object.assign(_params.params, Object.keys(route.params).reduce((agg, key) => {
             let val = decodeURIComponent(route.params[key]);
-            return Object.assign(agg, { [key]: val });
-        }, <RouterParams>{}));
+            agg[key] = val;
+            return agg;
+        }, <any>{}));
 
         Object.assign(_params.queryParams, route.queryParams);
 
-        if (route.url != null) {
+        if (route.url) {
             Object.assign(_params.url, route.url);
         }
-
 
         return this.extractParamsFromTree(this.getActiveChildOnOutlet(route), _params, outlet);
     }

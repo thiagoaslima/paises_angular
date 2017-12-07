@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { MapaMundiComponent } from './mapa-mundi.component';
 import { SinteseHomeComponent } from '../sintese-home/sintese-home.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-
+import { ServicesModule } from '../../services/services.module';
+import { MalhaService } from '../../services/malha/malha.service';
 import { PaisesLeafletModule } from '../../components/paises-leaflet/index';
 
 const routes: Routes = [
@@ -26,12 +27,15 @@ const routes: Routes = [
         CommonModule,
         RouterModule.forChild(routes),
         LeafletModule.forRoot(),
-        PaisesLeafletModule.forRoot()
+        PaisesLeafletModule.forRoot(),
+        ServicesModule
     ],
     declarations: [
         MapaMundiComponent,
         SinteseHomeComponent
     ],
-    providers: []
+    providers: [
+        // MalhaService
+    ]
 })
 export class MapaMundiModule { }
