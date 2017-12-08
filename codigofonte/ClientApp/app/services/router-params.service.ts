@@ -1,5 +1,5 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { Router, ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, RouterState, RouterStateSnapshot } from '@angular/router';
 
 import { isPlatformBrowser } from '@angular/common';
 
@@ -8,6 +8,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/share';
+
 
 export interface RouterParams {
     params: { [key: string]: string };
@@ -32,25 +33,26 @@ export class RouterParamsService {
             .filter((evt) => evt instanceof NavigationEnd)
             .distinctUntilChanged()
             .map((e: any) => {
+                debugger;
 
-                let params = this.extractParamsFromTree(this._route.snapshot, {});
+                let params = this.extractParamsFromTree(this._router.routerState.snapshot.root, {});
                 if (e.url != null) {
 
                     params.params.url = e.url
                 }
                 return params;
             })
-            .do((params) => {
+            // .do((params) => {
 
-                if (this.isBrowser && params && params.params && params.params.uf && params.params.municipio) {
-                    try {
-                        localStorage.setItem('lastParams', JSON.stringify(params));
-                    } catch (err) {
-                        // ignore
-                    }
-                }
+            //     if (this.isBrowser && params && params.params && params.params.uf && params.params.municipio) {
+            //         try {
+            //             localStorage.setItem('lastParams', JSON.stringify(params));
+            //         } catch (err) {
+            //             // ignore
+            //         }
+            //     }
 
-            });
+            // });
 
         // this._router.events
         //     .filter(e => e instanceof NavigationEnd)
@@ -87,10 +89,6 @@ export class RouterParamsService {
         }, <any>{}));
 
         Object.assign(_params.queryParams, route.queryParams);
-
-        if (route.url) {
-            Object.assign(_params.url, route.url);
-        }
 
         return this.extractParamsFromTree(this.getActiveChildOnOutlet(route), _params, outlet);
     }

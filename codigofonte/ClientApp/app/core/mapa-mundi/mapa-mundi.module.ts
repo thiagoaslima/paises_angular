@@ -8,6 +8,7 @@ import { SinteseHomeComponent } from '../sintese-home/sintese-home.component';
 import { ServicesModule } from '../../services/services.module';
 import { MalhaService } from '../../services/malha/malha.service';
 import { PaisesLeafletModule } from '../../components/paises-leaflet/index';
+import { RouterParamsService } from '../../services/index';
 
 const routes: Routes = [
     {
@@ -27,15 +28,14 @@ const routes: Routes = [
         CommonModule,
         RouterModule.forChild(routes),
         LeafletModule.forRoot(),
-        PaisesLeafletModule.forRoot(),
-        ServicesModule
+        PaisesLeafletModule.forRoot()
     ],
     declarations: [
         MapaMundiComponent,
         SinteseHomeComponent
     ],
     providers: [
-        // MalhaService
+        MalhaService
     ]
 })
 export class MapaMundiModule { }

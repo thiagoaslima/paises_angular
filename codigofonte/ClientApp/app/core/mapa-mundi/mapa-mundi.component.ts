@@ -5,6 +5,7 @@ import * as G from 'geojson';
 import * as L from 'leaflet';
 import { RouterParamsService } from '../../services';
 import { MalhaService } from '../../services/malha';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
     selector: 'mapa-mundi',
@@ -28,20 +29,20 @@ export class MapaMundiComponent implements OnInit {
     private _geojsonLayer: L.GeoJSON;
 
     constructor(
-        private _routerParams: RouterParamsService,
+        private _route: ActivatedRoute,
+        private _params: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService
-    ) { }
-
-    ngOnInit() {
-        this._routerParams.params$.subscribe(o => {
-            console.log('DENTRO', o)
-            // if (params.pais) {
-            //     this.paisSelecionado  = params.pais;
-            //     this.setZoomOnPaisSelecionado();
-            // }
+    ) { 
+        this._params.params$.subscribe((params: any)  => {
+            if (params.pais) {
+                 this.paisSelecionado  = params.pais;
+                 this.setZoomOnPaisSelecionado();
+            }
         });
     }
+
+    ngOnInit() {}
 
     onMapReady(map: L.Map) {
         this.map = map;
