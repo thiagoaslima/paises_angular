@@ -2,3 +2,9 @@
 
 .vscode/
 tslint.json
+*tslint*
+quokka.js
+
+
+# Problemas entre OS 
+*/npm-shrinkwrap.json
