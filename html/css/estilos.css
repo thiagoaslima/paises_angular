@@ -565,6 +565,7 @@ div.fontes {
 	padding:7px;
 	font-size:1.3em;
 	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	height: 33px;
 }
 .container-comparar form select option {
 	height:30px;
@@ -1119,6 +1120,7 @@ span.close {
 		}
 		.container-comparar div.comparar-lista-indicadores select {
 			margin:0.6em;
+			border: 0.5px solid rgb(170,170,170);
 		}
 		div.comparar-lista-indicadores select {
 			width:40%;
