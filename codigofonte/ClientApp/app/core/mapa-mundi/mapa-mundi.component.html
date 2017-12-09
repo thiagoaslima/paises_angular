@@ -1,5 +1,6 @@
 <!-- <div style="display: table-cell; overflow: hidden"></div> -->
     <div leaflet 
+    [leafletBaseLayers]="{'layer1': geojsonLayer}"
     [leafletOptions]="mapOptions"
     [leafletFitBounds]="paisBounds"
     (leafletMapReady)="onMapReady($event)">

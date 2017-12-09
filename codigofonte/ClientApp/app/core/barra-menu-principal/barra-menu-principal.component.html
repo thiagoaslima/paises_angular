@@ -10,7 +10,7 @@
         <i class="fa fa-search cabecalho__campo-busca-icone" aria-hidden="true"></i>
         <ul class="cabecalho__sugestao" *ngIf="resultados && resultados.length>0">
             <li *ngFor="let resultado of resultados" (click)="navegarPara(resultado.nome[lang])">
-                <a [routerLink]="resultado.slug" class="cabecalho__sugestao-item">{{ resultado.nome[lang] }}</a>
+                <a [routerLink]="'mapa/' + resultado.slug" class="cabecalho__sugestao-item">{{ resultado.nome[lang] }}</a>
             </li>
         </ul>
     </div>

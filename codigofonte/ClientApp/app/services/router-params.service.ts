@@ -33,8 +33,6 @@ export class RouterParamsService {
             .filter((evt) => evt instanceof NavigationEnd)
             .distinctUntilChanged()
             .map((e: any) => {
-                debugger;
-
                 let params = this.extractParamsFromTree(this._router.routerState.snapshot.root, {});
                 if (e.url != null) {
 

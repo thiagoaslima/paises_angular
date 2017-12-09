@@ -1,5 +1,5 @@
 import { LocalidadeService } from '../../services/localidade/localidade.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 import * as G from 'geojson';
 import * as L from 'leaflet';
@@ -14,7 +14,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
         './mapa-mundi.component.css'
     ]
 })
-export class MapaMundiComponent implements OnInit {
+export class MapaMundiComponent {
     public map: L.Map;
     public paisSelecionado: string;
     public paisBounds: L.LatLngBounds;
@@ -26,15 +26,29 @@ export class MapaMundiComponent implements OnInit {
         maxZoom: 8,
         minZoom: 3
     };
-    private _geojsonLayer: L.GeoJSON;
+    public get geojsonLayer(): L.GeoJSON | null {
+        return this._geojsonLayer;
+    }
+    public set geojsonLayer(value: L.GeoJSON | null ) {
+        this._geojsonLayer = value;
+        this._setCustomIDforEachLayer(this._geojsonLayer);
+        setTimeout(() => {
+            this.setZoomOnPaisSelecionado()
+        }, 10);
+    }
+    
+    private _geojsonLayer: L.GeoJSON | null = null;
 
     constructor(
+        private _router: Router,
         private _route: ActivatedRoute,
         private _params: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService
     ) { 
-        this._params.params$.subscribe((params: any)  => {
+        this.topology = this._malhaService.getMalhaGeoJSON();
+
+        this._params.params$.subscribe(({params}: any)  => {
             if (params.pais) {
                  this.paisSelecionado  = params.pais;
                  this.setZoomOnPaisSelecionado();
@@ -42,34 +56,23 @@ export class MapaMundiComponent implements OnInit {
         });
     }
 
-    ngOnInit() {}
-
     onMapReady(map: L.Map) {
         this.map = map;
-        this.topology = this._malhaService.getMalhaGeoJSON();
-        this.setZoomOnPaisSelecionado()
+        
+        const that = this;
+        this.geojsonLayer = new L.GeoJSON(this.topology, {
+            style: this._featureStyle,
+            onEachFeature: this._setOnEachFeatureListeners.bind(that)
+        });
     }
 
     setZoomOnPaisSelecionado() {
-        if (this.map) {
+        if (this.map && this.paisSelecionado) {
             this.map.eachLayer((layer: any) => {
                 if (layer._leaflet_id === this.paisSelecionado) {
                     this.paisBounds = layer.getBounds();
                 }
             });
-        }
-    }
-
-    private _addGeoJSONLayer(geojson: G.GeoJsonObject) {
-        const that = this;
-
-        if (this.map && geojson) {
-            this._geojsonLayer = new L.GeoJSON(geojson, {
-                style: this._featureStyle,
-                onEachFeature: this._setOnEachFeatureListeners.bind(that)
-            });
-            this._geojsonLayer.addTo(this.map);
-            this._setCustomIDforEachLayer(this._geojsonLayer);
         }
     }
 
@@ -84,14 +87,14 @@ export class MapaMundiComponent implements OnInit {
     */
     private _setCustomIDforEachLayer(layerGroup: any) {
         layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
-            l._path.id = l.feature.properties.slug;
+            // l._path.id = l.feature.properties.slug;
             l._leaflet_id = l.feature.properties.slug;
             return Object.assign(agg, { [l.feature.properties.slug]: l });
         }, Object.create(null));
     }
 
     private _onClickMap(evt: L.LeafletEvent) {
-        this.map.fitBounds(evt.target.getBounds());
+        this._router.navigate(['.', evt.target.feature.properties.slug], {relativeTo: this._route});
     }
 
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
@@ -104,7 +107,6 @@ export class MapaMundiComponent implements OnInit {
     }
 
     private _featureStyle = function style(feature: any) {
-        debugger;
         // if (feature.properties.mostrar) {
             return {
                 fillColor: 'rgb(118, 118, 118)',
