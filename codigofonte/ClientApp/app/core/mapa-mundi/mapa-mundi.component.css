@@ -5,9 +5,6 @@
 }
 
 [leaflet] {
-    /* overwrite the leaflet's default position */
-    /* position: static !important;
-    height: calc(100% - 104px); */
     width: 100%;
     display: table-cell; 
     overflow: hidden
