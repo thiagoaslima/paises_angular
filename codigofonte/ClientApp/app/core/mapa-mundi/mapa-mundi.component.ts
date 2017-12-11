@@ -23,11 +23,10 @@ export class MapaMundiComponent {
     public paisBounds: L.LatLngBounds;
     public topology: any;
     public mapOptions = {
-        center: [0, 0],
-        zoom: 3,
+        zoom: 4,
         layers: [],
         maxZoom: 8,
-        minZoom: 3
+        minZoom: 3        
     };
     public get geojsonLayer(): L.GeoJSON | null {
         return this._geojsonLayer;
@@ -61,7 +60,11 @@ export class MapaMundiComponent {
 
     onMapReady(map: L.Map) {
         this.map = map;
-        
+        (<any>window).map = map;
+
+        map.fitWorld({maxZoom: 8});
+        map.setMaxBounds(new L.LatLngBounds(new L.LatLng(-60, -179), new L.LatLng(90, 179)));
+
         const that = this;
         this.geojsonLayer = new L.GeoJSON(this.topology, {
             style: this._featureStyle,
@@ -110,16 +113,12 @@ export class MapaMundiComponent {
     }
 
     private _featureStyle = function style(feature: any) {
-        // if (feature.properties.mostrar) {
-            return {
-                fillColor: 'rgb(118, 118, 118)',
-                weight: 2,
-                opacity: 1,
-                color: 'rgb(78,78,78)',
-                fillOpacity: 1
-            };
-        // } else {
-        //     return {}
-        // }
+        return {
+            fillColor: 'rgb(118, 118, 118)',
+            weight: 2,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
+        };
     };
 }

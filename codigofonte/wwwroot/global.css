@@ -57,18 +57,31 @@ Classes para organizar o z-index.
     z-index: 0;
 }
 
-.altura0 {
-    z-index: 1;
+/*
+    o z-index básico será 400 devido a
+    biblioteca leaflet, que coloca este valor
+    para o svg dos países
+*/
+.main-layer {
+    z-index: 400;
 }
 
 /*usada no logo ODS e na caixa flutuante da síntese*/
-.altura1{
-    z-index: 100;
+.highlight-layer {
+    z-index: 600;
 }
 
 /*usada nos menus popups e caixas de sugestão (setar essa classe dinamicamente, apenas quando o menu/sugestão estiver aberto)*/
-.altura2{
-    z-index: 200;
+.popup-layer {
+    z-index: 800;
+}
+
+/*
+    só deve ser usada dinamicamente
+    e apenas em um elemento por vez
+*/
+.highest-layer {
+    z-index: 999;
 }
 
 /*******************************************/

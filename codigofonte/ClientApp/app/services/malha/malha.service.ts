@@ -6,13 +6,14 @@ import * as T from 'topojson';
 @Injectable()
 export class MalhaService {
     private geojson: any;
+    private malha = malha;
 
     constructor() {
-        this.geojson = T.feature(malha, malha.objects.countries);
+        this.geojson = T.feature(this.malha, this.malha.objects.countries);
     }
 
     public getMalhaTopoJSON() {
-        return malha;
+        return this.malha;
     }
 
     public getMalhaGeoJSON() {
