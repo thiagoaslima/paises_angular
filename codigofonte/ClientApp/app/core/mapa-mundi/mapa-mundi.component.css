@@ -7,5 +7,6 @@
 [leaflet] {
     width: 100%;
     display: table-cell; 
-    overflow: hidden
+    overflow: hidden;
+    background-color: #4F4F4F;
 }

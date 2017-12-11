@@ -1,7 +1,7 @@
 <div leaflet 
     [leafletBaseLayers]="{'layer1': geojsonLayer}" 
     [leafletOptions]="mapOptions" 
-    [leafletFitBounds]="paisBounds"
+    [leafletFitBounds]="paisSelecionado.bounds"
     (leafletMapReady)="onMapReady($event)">
 </div>
 

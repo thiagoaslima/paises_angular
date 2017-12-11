@@ -1,11 +1,12 @@
-import { LocalidadeService } from '../../services/localidade/localidade.service';
+import { Pais } from '../../services/localidade/localidade.model';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 import * as G from 'geojson';
 import * as L from 'leaflet';
-import { RouterParamsService } from '../../services';
-import { MalhaService } from '../../services/malha';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+
+import { MAP_STYLES } from './mapa.configurations';
+import { RouterParamsService, MalhaService, LocalidadeService } from '../../services';
 
 @Component({
     selector: 'mapa-mundi',
@@ -19,26 +20,27 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class MapaMundiComponent {
     public map: L.Map;
-    public paisSelecionado: string;
-    public paisBounds: L.LatLngBounds;
-    public topology: any;
-    public mapOptions = {
-        zoom: 4,
-        layers: [],
-        maxZoom: 8,
-        minZoom: 3        
+    public mapOptions = MAP_STYLES.options;
+
+    public paisSelecionado = {
+        slug: '', 
+        layer: <L.Layer | null>null, 
+        bounds: <L.LatLngBounds | null>null
     };
+    
+    public topology: any;
     public get geojsonLayer(): L.GeoJSON | null {
         return this._geojsonLayer;
     }
-    public set geojsonLayer(value: L.GeoJSON | null ) {
+    public set geojsonLayer(value: L.GeoJSON | null) {
         this._geojsonLayer = value;
         this._setCustomIDforEachLayer(this._geojsonLayer);
         setTimeout(() => {
-            this.setZoomOnPaisSelecionado()
+            debugger;
+            this._selectPais(this.paisSelecionado.slug);
         }, 10);
     }
-    
+
     private _geojsonLayer: L.GeoJSON | null = null;
 
     constructor(
@@ -47,13 +49,14 @@ export class MapaMundiComponent {
         private _params: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService
-    ) { 
+    ) {
         this.topology = this._malhaService.getMalhaGeoJSON();
 
-        this._params.params$.subscribe(({params}: any)  => {
+        this._params.params$.subscribe(({ params }: any) => {
             if (params.pais) {
-                 this.paisSelecionado  = params.pais;
-                 this.setZoomOnPaisSelecionado();
+                this._selectPais(params.pais);
+                // this.paisSelecionado.slug = params.pais;
+                // this.setZoomOnPaisSelecionado();
             }
         });
     }
@@ -62,23 +65,30 @@ export class MapaMundiComponent {
         this.map = map;
         (<any>window).map = map;
 
-        map.fitWorld({maxZoom: 8});
+        map.fitWorld({ maxZoom: 8 });
         map.setMaxBounds(new L.LatLngBounds(new L.LatLng(-60, -179), new L.LatLng(90, 179)));
 
         const that = this;
         this.geojsonLayer = new L.GeoJSON(this.topology, {
-            style: this._featureStyle,
+            style: this._featureStyle.bind(that),
             onEachFeature: this._setOnEachFeatureListeners.bind(that)
         });
     }
 
     setZoomOnPaisSelecionado() {
-        if (this.map && this.paisSelecionado) {
-            this.map.eachLayer((layer: any) => {
-                if (layer._leaflet_id === this.paisSelecionado) {
-                    this.paisBounds = layer.getBounds();
-                }
-            });
+        if (this.map && this._geojsonLayer && this.paisSelecionado.slug) {
+            let layer = this.paisSelecionado.layer;
+
+            if (!layer) {
+                let pais = this._localidadeService.getPaisBySlug(this.paisSelecionado.slug);
+                if (pais) {
+                    layer = this._geojsonLayer.getLayer(parseInt(pais.codigo, 10)) || null;;
+                } 
+            }
+            
+            if (layer) {
+                this.paisSelecionado.bounds = (<any>layer).getBounds();
+            }
         }
     }
 
@@ -94,31 +104,72 @@ export class MapaMundiComponent {
     private _setCustomIDforEachLayer(layerGroup: any) {
         layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
             // l._path.id = l.feature.properties.slug;
-            l._leaflet_id = l.feature.properties.slug || l._leaflet_id;
-            return Object.assign(agg, { [l.feature.properties.slug || l._leaflet_id]: l });
+            l._leaflet_id = parseInt(l.feature.properties.codigo, 10) || l._leaflet_id * -1;
+            return Object.assign(agg, { [l._leaflet_id]: l });
         }, Object.create(null));
     }
 
-    private _onClickMap(evt: L.LeafletEvent) {
-        this._router.navigate(['.', evt.target.feature.properties.slug], {relativeTo: this._route});
-    }
+    private _selectPais(slug: string) {
+        this._unselectLayer(this.paisSelecionado.layer);
+        this.paisSelecionado.slug = slug;
 
-    private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
-        const that = this;
-        if (feature.properties.mostrar) {
-            layer.on({
-                click: this._onClickMap.bind(that)
-            });
+        if (this._geojsonLayer) {
+            let pais = this._localidadeService.getPaisBySlug(slug);
+
+            if (pais) {
+                let layer = this._geojsonLayer.getLayer(parseInt(pais.codigo, 10));
+                this.paisSelecionado.layer = layer || null;
+
+                this._selectLayer(layer);
+                this.setZoomOnPaisSelecionado();
+            }
+        } else {
+            this.paisSelecionado.layer = null;
+            this.paisSelecionado.bounds = null;
         }
     }
 
-    private _featureStyle = function style(feature: any) {
-        return {
-            fillColor: 'rgb(118, 118, 118)',
-            weight: 2,
-            opacity: 1,
-            color: 'rgb(78,78,78)',
-            fillOpacity: 1
-        };
+    private _selectLayer(layer: any) {
+        if (layer) {
+            layer.setStyle(MAP_STYLES.polygons.selected);
+        }
+    }
+    private _unselectLayer(layer: any) {
+        if (layer) {
+            layer.setStyle(MAP_STYLES.polygons.default);
+        }
+    }
+
+    private _onClickMap(layer: L.Layer) {
+        const that = this;
+        layer.on({
+            click: (evt) => this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route })
+        });
+    }
+
+    private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        layer.bindTooltip(feature.properties.nome.pt, {
+            offset: L.point(0, -20)
+        });
+        layer.on({
+            mouseover: () => layer.openTooltip(),
+            mouseout: () => layer.closeTooltip()
+        });
+    }
+
+    private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        if (feature.properties.mostrar) {
+            this._handleTooltip(feature, layer);
+            this._onClickMap(layer)
+        }
+    }
+
+    private _featureStyle(feature: any) {
+        if (feature.properties.slug === this.paisSelecionado) {
+            return MAP_STYLES.polygons.selected;
+        }
+        return MAP_STYLES.polygons.default;
     };
 }
+
+
