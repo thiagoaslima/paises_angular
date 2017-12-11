@@ -53,6 +53,14 @@
 Classes para organizar o z-index.
 ******************************************/
 
+.bg-layer {
+    z-index: 0;
+}
+
+.altura0 {
+    z-index: 1;
+}
+
 /*usada no logo ODS e na caixa flutuante da síntese*/
 .altura1{
     z-index: 100;

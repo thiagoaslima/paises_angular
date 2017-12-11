@@ -12,7 +12,10 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
     templateUrl: './mapa-mundi.component.html',
     styleUrls: [
         './mapa-mundi.component.css'
-    ]
+    ],
+    host: {
+        'class': 'bg-layer'
+    }
 })
 export class MapaMundiComponent {
     public map: L.Map;
@@ -88,8 +91,8 @@ export class MapaMundiComponent {
     private _setCustomIDforEachLayer(layerGroup: any) {
         layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
             // l._path.id = l.feature.properties.slug;
-            l._leaflet_id = l.feature.properties.slug;
-            return Object.assign(agg, { [l.feature.properties.slug]: l });
+            l._leaflet_id = l.feature.properties.slug || l._leaflet_id;
+            return Object.assign(agg, { [l.feature.properties.slug || l._leaflet_id]: l });
         }, Object.create(null));
     }
 
@@ -113,7 +116,7 @@ export class MapaMundiComponent {
                 weight: 2,
                 opacity: 1,
                 color: 'rgb(78,78,78)',
-                fillOpacity: 1,
+                fillOpacity: 1
             };
         // } else {
         //     return {}
