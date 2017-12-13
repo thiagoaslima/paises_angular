@@ -14,8 +14,6 @@ import { MalhaService } from './malha/malha.service';
     exports: [],
     declarations: [],
     providers: [
-        PaisesService,
-        PesquisasService,
         TraducaoService,
         BuscaService,
         MalhaService
@@ -28,7 +26,9 @@ export class ServicesModule {
             ngModule: ServicesModule,
             providers: [
                 RouterParamsService,
-                LocalidadeService
+                LocalidadeService,
+                PaisesService,
+                PesquisasService
             ]
         };
     }

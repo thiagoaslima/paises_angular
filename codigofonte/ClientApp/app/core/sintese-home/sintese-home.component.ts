@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { ParamMap, ActivatedRoute } from '@angular/router';
+
+import { RouterParamsService, LocalidadeService, Pais } from "../../services";
+import { PaisesService } from "../../services/paises.service";
 
 @Component({
     selector: 'sintese-home',
@@ -7,20 +10,34 @@ import { ParamMap, ActivatedRoute } from '@angular/router';
     styleUrls: ['./sintese-home.component.css']
 })
 export class SinteseHomeComponent {
-    public teste = 'hello world';
+    public sintese = [];
 
     constructor(
-        private _route: ActivatedRoute
-    ) {}
-    
-    ngOnInit() {
-        this._route.paramMap
-        .subscribe((params: ParamMap)  => {
-            console.log('DENTRO', params)
-            // if (params.pais) {
-            //     this.paisSelecionado  = params.pais;
-            //     this.setZoomOnPaisSelecionado();
-            // }
-        });
+        private _routerParams: RouterParamsService,
+        private _localidadeService: LocalidadeService,
+        private _paisService: PaisesService
+    ) {
+        this._routerParams.params$.subscribe(({ params }) => {
+            if (params.pais) {
+                this.getSintese(this._localidadeService.getPaisBySlug(params.pais));
+            }
+        })
+    }
+
+    getSintese(pais: Pais | null) {
+        if (pais) {
+            this._paisService
+                .getResultados({ 
+                    servico: 'pesquisas', 
+                    identificador: { 
+                        pesquisaId: "10071", 
+                        indicadorId: "1", 
+                        localidadeId: pais.sigla 
+                    } 
+                }).subscribe(resultados => console.log(resultados));
+
+        } else {
+            this.sintese = [];
+        }
     }
 }

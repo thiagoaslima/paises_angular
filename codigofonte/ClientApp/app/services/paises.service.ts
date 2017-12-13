@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
 
 type TipoServico = "pesquisas" | "conjunturais";
 
-export interface ConsultaResultado {
-    servico: TipoServico;
-    identificador: any;
-}
+export type ConsultaResultado = 
+    { servico: "pesquisas", identificador: { pesquisaId: string, indicadorId: string, localidadeId: string } } |
+    { servico: 'conjunturais', identificador: any } 
+
 
 @Injectable()
 export class PaisesService {

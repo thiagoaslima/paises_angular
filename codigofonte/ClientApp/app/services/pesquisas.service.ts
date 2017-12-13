@@ -64,7 +64,7 @@ export class PesquisasService {
         }
     }
     
-    get(identificador: any): Observable<RetornoPesquisa> {
+    get(identificador: {pesquisaId: string, indicadorId: string, localidadeId: string}): Observable<RetornoPesquisa> {
         return Observable.zip(
             this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}/resultados/${identificador.localidadeId}`),
             this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}`)

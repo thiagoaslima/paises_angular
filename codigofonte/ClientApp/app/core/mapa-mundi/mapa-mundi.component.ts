@@ -37,7 +37,7 @@ export class MapaMundiComponent {
         this._setCustomIDforEachLayer(this._geojsonLayer);
         setTimeout(() => {
             debugger;
-            this._selectPais(this.paisSelecionado.slug);
+            this.selectPais(this.paisSelecionado.slug);
         }, 10);
     }
 
@@ -54,9 +54,7 @@ export class MapaMundiComponent {
 
         this._params.params$.subscribe(({ params }: any) => {
             if (params.pais) {
-                this._selectPais(params.pais);
-                // this.paisSelecionado.slug = params.pais;
-                // this.setZoomOnPaisSelecionado();
+                this.selectPais(params.pais);
             }
         });
     }
@@ -92,24 +90,7 @@ export class MapaMundiComponent {
         }
     }
 
-    /**
-    * serve para passar um id próprio para cada layer criado 
-    * a partir do GeoJSON, facilitando o acesso a layers específicos
-    * através do método getLayer(id)
-    *
-    * TODO:
-    * Refatorar o método, pois ele acessa propriedades privadas
-    * diretamente.
-    */
-    private _setCustomIDforEachLayer(layerGroup: any) {
-        layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
-            // l._path.id = l.feature.properties.slug;
-            l._leaflet_id = parseInt(l.feature.properties.codigo, 10) || l._leaflet_id * -1;
-            return Object.assign(agg, { [l._leaflet_id]: l });
-        }, Object.create(null));
-    }
-
-    private _selectPais(slug: string) {
+    public selectPais(slug: string) {
         this._unselectLayer(this.paisSelecionado.layer);
         this.paisSelecionado.slug = slug;
 
@@ -170,6 +151,24 @@ export class MapaMundiComponent {
         }
         return MAP_STYLES.polygons.default;
     };
+
+
+    /**
+    * serve para passar um id próprio para cada layer criado 
+    * a partir do GeoJSON, facilitando o acesso a layers específicos
+    * através do método getLayer(id)
+    *
+    * TODO:
+    * Refatorar o método, pois ele acessa propriedades privadas
+    * diretamente.
+    */
+    private _setCustomIDforEachLayer(layerGroup: any) {
+        layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
+            // l._path.id = l.feature.properties.slug;
+            l._leaflet_id = parseInt(l.feature.properties.codigo, 10) || l._leaflet_id * -1;
+            return Object.assign(agg, { [l._leaflet_id]: l });
+        }, Object.create(null));
+    }
 }
 
 

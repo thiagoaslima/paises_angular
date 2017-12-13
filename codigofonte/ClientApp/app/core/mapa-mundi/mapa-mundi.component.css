@@ -1,7 +1,7 @@
 :host {
     display: table-row;
     overflow: hidden;
-    height: 100%;
+    min-height: 100%;
 }
 
 [leaflet] {
