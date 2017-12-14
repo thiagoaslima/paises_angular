@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ParamMap, ActivatedRoute } from '@angular/router';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../../services";
@@ -9,15 +9,17 @@ import { PaisesService } from "../../services/paises.service";
     templateUrl: './sintese-home.component.html',
     styleUrls: ['./sintese-home.component.css']
 })
-export class SinteseHomeComponent {
+export class SinteseHomeComponent implements OnInit {
     public sintese = [];
 
     constructor(
         private _routerParams: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _paisService: PaisesService
-    ) {
-        this._routerParams.params$.subscribe(({ params }) => {
+    ) {}
+
+    ngOnInit() {
+        this._routerParams.params$.subscribe(({ params, url }) => {
             if (params.pais) {
                 this.getSintese(this._localidadeService.getPaisBySlug(params.pais));
             }

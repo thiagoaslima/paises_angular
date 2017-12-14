@@ -51,12 +51,15 @@ export class MapaMundiComponent {
         private _malhaService: MalhaService
     ) {
         this.topology = this._malhaService.getMalhaGeoJSON();
-
-        this._params.params$.subscribe(({ params }: any) => {
+    }
+    
+    ngOnInit() {
+        this._params.params$.subscribe(({ params, url }: any) => {
             if (params.pais) {
                 this.selectPais(params.pais);
             }
         });
+
     }
 
     onMapReady(map: L.Map) {

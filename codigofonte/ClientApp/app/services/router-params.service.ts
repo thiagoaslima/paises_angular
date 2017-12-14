@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, RouterSt
 import { isPlatformBrowser } from '@angular/common';
 
 import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
@@ -19,7 +20,7 @@ export interface RouterParams {
 @Injectable()
 export class RouterParamsService {
 
-    public params$: Observable<any>;
+    public params$: BehaviorSubject<RouterParams>;
     private isBrowser: boolean;
 
     constructor(
@@ -29,7 +30,9 @@ export class RouterParamsService {
     ) {
         this.isBrowser = isPlatformBrowser(platformId);
 
-        this.params$ = this._router.events
+        this.params$ = new BehaviorSubject({ params: {}, queryParams: {}, url: '' });
+
+        this._router.events
             .filter((evt) => evt instanceof NavigationEnd)
             .distinctUntilChanged()
             .map((e: any) => {
@@ -39,18 +42,8 @@ export class RouterParamsService {
                     params.params.url = e.url
                 }
                 return params;
-            })
-            // .do((params) => {
+            }).subscribe(params => this.params$.next(params));
 
-            //     if (this.isBrowser && params && params.params && params.params.uf && params.params.municipio) {
-            //         try {
-            //             localStorage.setItem('lastParams', JSON.stringify(params));
-            //         } catch (err) {
-            //             // ignore
-            //         }
-            //     }
-
-            // });
 
         // this._router.events
         //     .filter(e => e instanceof NavigationEnd)
