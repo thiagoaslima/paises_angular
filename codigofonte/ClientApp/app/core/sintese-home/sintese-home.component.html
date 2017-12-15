@@ -2,23 +2,29 @@
     <!--barra de título-->
     <div class="sintese__barra-titulo">
         <!--botão de fechar-->
-        <button class="sintese__botao-fechar"><i class="fa fa-times sintese__icone-fechar" aria-hidden="true"></i></button>
+        <a class="button sintese__botao-fechar" routerLink="/mapa">
+            <!-- <button class="sintese__botao-fechar"> -->
+                <i class="fa fa-times sintese__icone-fechar" aria-hidden="true"></i>
+            <!-- </button> -->
+        </a>
     </div>
     <!--dados-->
     <div class="sintese__info-container">
         <!--bandeira-->
         <div class="sintese__bandeira-container">
-            <img alt="bandeira" src="../../../img/bandeiras/brasil.gif" class="sintese__bandeira-imagem">
+            <img alt="bandeira" [src]="imageSrc" class="sintese__bandeira-imagem">
         </div>
         <!--título-->
-        <h2 class="sintese__titulo">BRASIL</h2>   
-        <!--tabela de valores-->
+        <h2 class="sintese__titulo">{{ pais?.nome.pt }}</h2>
+
+        <!--tabela de valores-->      
         <table class="sintese__tabela"> 
             <tbody>
-                <tr class="sintese__tabela-linha">
-                    <th class="sintese__tabela-nome">Capital</th>
-                    <td class="sintese__tabela-valor">Brasília</td>
+                <tr class="sintese__tabela-linha" *ngFor="let item of itens">
+                    <th class="sintese__tabela-nome">{{ item.titulo }}</th>
+                    <td class="sintese__tabela-valor">{{ item.valor }}</td>
                 </tr>
+                <!--
                 <tr class="sintese__tabela-linha">
                     <th class="sintese__tabela-nome">Extensão territorial</th>
                     <td class="sintese__tabela-valor">8.515.759.090 km</td>
@@ -39,6 +45,7 @@
                     <th class="sintese__tabela-nome">Presidente</th>
                     <td class="sintese__tabela-valor">Michel Temer</td>
                 </tr>
+                -->
             </tbody>
         </table>
         <!--leia mais-->

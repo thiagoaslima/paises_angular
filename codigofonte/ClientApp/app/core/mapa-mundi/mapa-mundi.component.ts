@@ -36,7 +36,6 @@ export class MapaMundiComponent {
         this._geojsonLayer = value;
         this._setCustomIDforEachLayer(this._geojsonLayer);
         setTimeout(() => {
-            debugger;
             this.selectPais(this.paisSelecionado.slug);
         }, 10);
     }
@@ -57,6 +56,9 @@ export class MapaMundiComponent {
         this._params.params$.subscribe(({ params, url }: any) => {
             if (params.pais) {
                 this.selectPais(params.pais);
+            } else {
+                this.selectPais('');
+                this.map && this.map.fitWorld({ maxZoom: 8 });
             }
         });
 

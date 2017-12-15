@@ -1,14 +1,14 @@
-import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
-import { Observable } from 'rxjs/Rx';
-import { Resultado } from './resultado.model';
 import { Injectable } from '@angular/core';
 
-type TipoServico = "pesquisas" | "conjunturais";
+import { Observable } from 'rxjs';
 
+import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
+import { Resultado } from './resultado.model';
+
+export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
     { servico: "pesquisas", identificador: { pesquisaId: string, indicadorId: string, localidadeId: string } } |
     { servico: 'conjunturais', identificador: any }
-
 
 @Injectable()
 export class PaisesService {
@@ -35,11 +35,11 @@ export class PaisesService {
 
     }
 
-    getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa[]> {
+    getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa> {
         const requestsObj = <{ [key: string]: ConsultaResultado }>{};
 
         consultas.forEach(consulta => {
-            let key = this._buildkey(consulta);
+            let key = this.buildkey(consulta);
 
             if (!requestsObj[key]) {
                 requestsObj[key] = <ConsultaResultado>{
@@ -51,20 +51,25 @@ export class PaisesService {
             }
         });
 
-        return Observable.zip(
-            consultas.map(consulta => this.getResultados(consulta))
-        );
+        const observables = Object.keys(requestsObj).map(key => this.getResultados(requestsObj[key]));
+        return Observable.zip(...observables).map(resultados => {
+            return resultados.reduce((agg, res) => {
+                agg.metadata.push(...res.metadata);
+                agg.resultados.push(...res.resultados);
+                return agg;
+            }, {metadata: [], resultados: []});
+        });
     }
 
-    _buildkey(consulta: ConsultaResultado) {
+    public buildkey(consulta: ConsultaResultado) {
         const servico = consulta.servico
-        const { pesquisaId, localidadeId } = consulta.identificador;
+        const { pesquisaId } = consulta.identificador;
 
-        return `${servico}-${pesquisaId}-${localidadeId}`;
+        return `${servico}-${pesquisaId}`;
     }
 
 
-    _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
+    private _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
         switch (consulta.servico) {
             case 'pesquisas':
                 const indicadores = agg.identificador.indicadorId;
@@ -73,8 +78,8 @@ export class PaisesService {
                 }
 
                 const localidades = agg.identificador.localidadeId;
-                if (indicadores.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
-                    agg.identificador.localidadeId += `,${consulta.identificador.localidadeId}`
+                if (localidades.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
+                    agg.identificador.localidadeId += `|${consulta.identificador.localidadeId}`
                 }
         }
 
