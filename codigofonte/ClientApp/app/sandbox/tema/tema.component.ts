@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Rx';
-import { PaisesService } from '../../services/paises.service';
+import { PaisesService } from '../../shared/paises.service';
 import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({

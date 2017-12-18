@@ -1,23 +1,27 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-// const MODULES = [],
-//     PIPES = [],
-//     COMPONENTS = [],
-//     PROVIDERS = []
+import { TraducaoService } from './traducao.service';
+import { PesquisasService } from './pesquisas.service';
+import { PaisesService } from './paises.service';
+import { BuscaService } from './busca.service';
+
+import { RouterParamsService } from './router-params.service';
+import { LocalidadeService } from './localidade/localidade.service';
+import { MalhaService } from './malha/malha.service';
 
 
 @NgModule({
-    imports: [
-        // ...MODULES
-    ],
+    imports: [],
     declarations: [
-        // ...PIPES,
-        // ...COMPONENTS
+        
     ],
     exports: [
-        // ...MODULES,
-        // ...PIPES,
-        // ...COMPONENTS
+        
+    ],
+    providers: [
+        TraducaoService,
+        BuscaService,
+        MalhaService
     ]
 })
 export class SharedModule {
@@ -25,7 +29,10 @@ export class SharedModule {
         return {
             ngModule: SharedModule,
             providers: [
-                // ...PROVIDERS
+                RouterParamsService,
+                LocalidadeService,
+                PaisesService,
+                PesquisasService
             ]
         };
     }

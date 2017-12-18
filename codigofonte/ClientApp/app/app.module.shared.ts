@@ -3,13 +3,14 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ServicesModule } from './services/services.module';
+import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app-component/app.component';
 
 import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
 import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-menu-principal.component';
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
     declarations: [
@@ -21,9 +22,8 @@ import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-m
         CommonModule,
         HttpModule,
         FormsModule,
-        ServicesModule,
         AppRoutingModule,
-        ServicesModule.forRoot()
+        SharedModule.forRoot()
     ]
 })
 export class AppModuleShared {

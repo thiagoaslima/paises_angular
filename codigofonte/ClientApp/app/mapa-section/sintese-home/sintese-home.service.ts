@@ -1,10 +1,13 @@
 import { Injectable, Inject } from '@angular/core';
-import { ListaComponent } from "../../sandbox/componentes/lista.component";
 
 import { SinteseHomeConfig } from './sintese-home.config'
-import { PaisesService } from "../../services";
-import { ConsultaResultado } from "../../services/paises.service";
-import { MetadataResultado, Resultado } from "../../services/resultado.model";
+import { 
+    ConsultaResultado, 
+    MetadataResultado,
+    PaisesService,
+    Resultado
+} from "../../shared";
+
 
 @Injectable()
 export class SinteseHomeService {

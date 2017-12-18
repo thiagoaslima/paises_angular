@@ -2,27 +2,35 @@ import {
     ModuleWithProviders, NgModule,
     Optional, SkipSelf
 } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
-import { ServicesModule } from '../services/services.module';
+
+import { BarraMenuPrincipalComponent } from "./barra-menu-principal/barra-menu-principal.component";
+import { BarraGovComponent } from "./barra-gov/barra-gov.component";
+import { SharedModule } from "../shared";
+
 
 @NgModule({
     imports: [
         CommonModule,
-        ServicesModule
+        SharedModule
     ],
-    declarations: [],
-    exports: [],
-    providers: []
+    declarations: [
+        BarraGovComponent,
+        BarraMenuPrincipalComponent
+    ],
+    exports: [
+        BarraGovComponent,
+        BarraMenuPrincipalComponent
+    ],
+    providers: [
+    ]
 })
 export class CoreModule {
 
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: CoreModule,
-            providers: [
-
-            ]
+            providers: []
         };
     }
     constructor( @Optional() @SkipSelf() parentModule: CoreModule) {

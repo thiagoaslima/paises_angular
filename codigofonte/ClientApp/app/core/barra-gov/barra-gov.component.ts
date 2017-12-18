@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./barra-gov.component.css']
 })
 export class BarraGovComponent {
-    public teste = 'hello world';
+    
 }

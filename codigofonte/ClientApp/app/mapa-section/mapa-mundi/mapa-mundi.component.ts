@@ -1,4 +1,3 @@
-import { Pais } from '../../services/localidade/localidade.model';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
@@ -6,7 +5,12 @@ import * as G from 'geojson';
 import * as L from 'leaflet';
 
 import { MAP_STYLES } from './mapa.configurations';
-import { RouterParamsService, MalhaService, LocalidadeService } from '../../services';
+import { 
+    LocalidadeService, 
+    MalhaService, 
+    Pais,
+    RouterParamsService
+} from '../../shared';
 
 @Component({
     selector: 'mapa-mundi',

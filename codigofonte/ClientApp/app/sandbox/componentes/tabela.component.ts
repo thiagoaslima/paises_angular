@@ -1,6 +1,6 @@
 import { ItemTema } from './item-tema.component';
 import { SimpleChanges } from '@angular/core/src/metadata/lifecycle_hooks';
-import { MetadataResultado, Resultado } from '../../services/resultado.model';
+import { MetadataResultado, Resultado } from '../../shared/resultado.model';
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({

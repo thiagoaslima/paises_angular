@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {BuscaService} from '../../services/busca.service';
+import { BuscaService } from '../../shared';
 
 @Component({
     selector: 'barra-menu-principal',
@@ -11,24 +11,24 @@ import {BuscaService} from '../../services/busca.service';
     }
 })
 export class BarraMenuPrincipalComponent {
-    
+
     lang = "pt";
 
-    resultados:Array<any> = [];
+    resultados: Array<any> = [];
 
     mostraMenu = false;
 
-    constructor(private _buscaService:BuscaService){}
+    constructor(private _buscaService: BuscaService) { }
 
-    busca(event:any){
+    busca(event: any) {
         this.resultados = this._buscaService.search(event.target.value, this.lang);
     }
 
-    limpaResultados(){
+    limpaResultados() {
         this.resultados = [];
     }
 
-    navegarPara(event:any){
+    navegarPara(event: any) {
         console.log(event);
     }
 
