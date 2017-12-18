@@ -5,9 +5,9 @@ import * as G from 'geojson';
 import * as L from 'leaflet';
 
 import { MAP_STYLES } from './mapa.configurations';
-import { 
-    LocalidadeService, 
-    MalhaService, 
+import {
+    LocalidadeService,
+    MalhaService,
     Pais,
     RouterParamsService
 } from '../../shared';
@@ -27,11 +27,11 @@ export class MapaMundiComponent {
     public mapOptions = MAP_STYLES.options;
 
     public paisSelecionado = {
-        slug: '', 
-        layer: <L.Layer | null>null, 
+        slug: '',
+        layer: <L.Layer | null>null,
         bounds: <L.LatLngBounds | null>null
     };
-    
+
     public topology: any;
     public get geojsonLayer(): L.GeoJSON | null {
         return this._geojsonLayer;
@@ -55,7 +55,7 @@ export class MapaMundiComponent {
     ) {
         this.topology = this._malhaService.getMalhaGeoJSON();
     }
-    
+
     ngOnInit() {
         this._params.params$.subscribe(({ params, url }: any) => {
             if (params.pais) {
@@ -90,9 +90,9 @@ export class MapaMundiComponent {
                 let pais = this._localidadeService.getPaisBySlug(this.paisSelecionado.slug);
                 if (pais) {
                     layer = this._geojsonLayer.getLayer(parseInt(pais.codigo, 10)) || null;;
-                } 
+                }
             }
-            
+
             if (layer) {
                 this.paisSelecionado.bounds = (<any>layer).getBounds();
             }
@@ -112,10 +112,10 @@ export class MapaMundiComponent {
 
                 this._selectLayer(layer);
                 this.setZoomOnPaisSelecionado();
+            } else {
+                this.paisSelecionado.layer = null;
+                this.paisSelecionado.bounds = null;
             }
-        } else {
-            this.paisSelecionado.layer = null;
-            this.paisSelecionado.bounds = null;
         }
     }
 
