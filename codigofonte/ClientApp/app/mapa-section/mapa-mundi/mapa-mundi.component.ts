@@ -71,6 +71,7 @@ export class MapaMundiComponent {
     onMapReady(map: L.Map) {
         this.map = map;
         (<any>window).map = map;
+        map.invalidateSize();
 
         map.fitWorld({ maxZoom: 8 });
         map.setMaxBounds(new L.LatLngBounds(new L.LatLng(-60, -179), new L.LatLng(90, 179)));
@@ -130,6 +131,18 @@ export class MapaMundiComponent {
         }
     }
 
+    private _onHoverLayer(layer: any) {
+        const that = this;
+        layer.on({
+            mouseover: () => layer.setStyle(MAP_STYLES.polygons.hover),
+            mouseout: () => {
+                that.paisSelecionado.layer == layer 
+                    ? layer.setStyle(MAP_STYLES.polygons.selected)
+                    : layer.setStyle(MAP_STYLES.polygons.default)
+            }
+        })
+    }
+
     private _onClickMap(layer: L.Layer) {
         const that = this;
         layer.on({
@@ -150,7 +163,8 @@ export class MapaMundiComponent {
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
         if (feature.properties.mostrar) {
             this._handleTooltip(feature, layer);
-            this._onClickMap(layer)
+            this._onClickMap(layer);
+            this._onHoverLayer(layer);
         }
     }
 

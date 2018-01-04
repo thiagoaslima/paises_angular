@@ -16,6 +16,14 @@ export const MAP_STYLES = {
             fillOpacity: 1
         },
     
+        hover: {
+            fillColor: '#909090',
+            weight: 0,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
+        },
+
         selected: {
             fillColor: '#DDDDDD',
             weight: 0,

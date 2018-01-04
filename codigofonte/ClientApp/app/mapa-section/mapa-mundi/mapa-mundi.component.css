@@ -1,13 +1,17 @@
 :host {
-    display: table-row;
-    overflow: hidden;
-    height: 100%;
-    min-height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    display: flex;
+    /* overflow: hidden; */
 }
 
 [leaflet] {
     width: 100%;
-    display: table-cell; 
     overflow: hidden;
     background-color: #4F4F4F;
+}
+
+@media only screen and (min-width : 568px) {
+
 }
