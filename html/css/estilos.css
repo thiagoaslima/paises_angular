@@ -270,11 +270,14 @@ table {
 	border:1px solid #4f4f4f;
 	margin:7px auto;
 }
+
 .envolve-card small, .objetivos-milenio small {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.3em;
     padding: 1em 2em;
     display: block;
+}
+.envolve-card small {
 	min-height:6em;
 }
 .envolve-card__btn--flip a {
@@ -443,20 +446,21 @@ div.fontes {
 	font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
 	margin: 0;
 }
+.objetivos-milenio h4 {
+	line-height: 2.2em;
+	font-weight:0;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+}
 .objetivos-milenio button.accordion h4{
 	padding:0;
 	margin:0;
 	font-size: 1.12em;
 	text-transform:none;
+	font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
 }
 .objetivos-milenio>p {
 	font-size: 1.3em;
 	line-height: 1.8em;
-}
-.objetivos-milenio h4 {
-	line-height: 2.2em;
-	font-weight:0;
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
 .panel h4, .objetivos-milenio h4>span{
 	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
@@ -477,7 +481,86 @@ div.fontes {
 .objetivos-milenio div.panel{
 	background-color: #fff;
 }
-
+/*
+.container-pais .panel {
+	max-height: 100%;
+}
+*/
+.container-pais .panel .accordion {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	text-transform: none;
+}
+.container-pais .panel h5 {
+	font-size: 1.12em;
+    line-height: 1.8em;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	display: inline;
+}
+.container-pais .panel h5 span{
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+}
+.container-pais .panel button.accordion {
+	border-bottom: none;
+	margin-top: 15px;
+}
+.container-pais .panel button.accordion::before {
+	content: '\002B';
+    color: #3ecca7;
+    font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+    margin-right: 10px;
+}
+.container-pais .panel button.accordion.active::before {
+	content: "\2212";
+}
+.container-pais .panel button.accordion::after {
+	content: none;
+}
+.container-pais div.panel p {
+	margin-bottom: 0;
+}
+.container-pais .objetivos-milenio table, .container-pais .panel-indicadores table {
+	border-collapse: collapse;
+	margin: 15px 15px 5px 15px;
+}
+.container-pais .objetivos-milenio table caption, .container-pais section .panel.odm-mobile table caption {
+	background-color: #3ecca7;
+	text-align: left;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	padding: 0.8em;
+	border-right: 2px solid #fff;
+	border-left: 2px solid #fff;
+}
+.container-pais .objetivos-milenio table tbody {
+	background-color: #f4f4f4;
+}
+.container-pais .objetivos-milenio table tbody th, .container-pais .objetivos-milenio table tbody td {
+	padding: 1em;
+	border: 2px solid #fff;
+}
+.container-pais .objetivos-milenio .panel small {
+	margin: 0 0 15px 15px;
+	padding: 0;
+}
+.container-pais section .panel.odm-mobile table caption {
+	border-right: 2px solid #f4f4f4;
+	border-left: 2px solid #f4f4f4;
+}
+.container-pais section .panel.odm-mobile table tbody {
+	background-color: #fff;
+}
+.container-pais section .panel.odm-mobile table tbody th, .container-pais section .panel.odm-mobile table tbody td {
+	padding: 0.8em;
+	border: 2px solid #f4f4f4;
+}
+.container-pais section .panel.odm-mobile small {
+	font-size: 1.1em;
+	display: inline-block;
+	padding: 10px 0;
+}
 /********** FIM DO PAIS **********/
 
 /********** SINTESE HOME ********/
@@ -703,7 +786,6 @@ div.fontes {
 .container-ods nav ul li.obj-quinze {background-position:-1500px 0;}
 .container-ods nav ul li.obj-dezesseis {background-position:-1600px 0;}
 .container-ods nav ul li.obj-dezessete {background-position:-1700px 0;}
-
 .menu-ods-geral {
 	margin:0 auto;	
 	width:90%;
@@ -721,11 +803,12 @@ div.fontes {
 	text-decoration:none;
 	font-size:1.2em;
 	text-transform:uppercase;
-	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
-	padding:9px;	
-	background-color:#f4f4f4;
+	font-family: "RobotoBold", Helvetica, Arial, sans-serif;	
+}
+.menu-ods-geral ul li a {
+	padding:9px;
 	border-radius: 15px;
-	border:1px solid #f4f4f4;;
+	font-size:1.2em;
 }
 .menu-ods-geral ul li:last-child {
 	margin-right:0;
@@ -733,7 +816,28 @@ div.fontes {
 .menu-ods-geral ul li a:hover, .menu-ods-geral ul li a.selecionado {
 	border:1px solid grey;
 }
-
+.menu-odm-geral ul{
+	margin: 30px 0 0 0;
+	padding: 0;
+}
+.menu-odm-geral ul li {
+	background:url(../imagens/odm-icones-cinza.svg) no-repeat center center;
+	display:inline-block;
+	height: 85px;
+	width: 85px;
+	background-size: cover;
+}
+.menu-odm-geral ul li:hover, .menu-odm-geral ul li.selecionado {
+	background:url(../imagens/odm-icones.svg) no-repeat center center;
+}
+.menu-odm-geral ul li.odm-um {background-position:0 0;}
+.menu-odm-geral ul li.odm-dois {background-position:-85px 0;}
+.menu-odm-geral ul li.odm-tres {background-position:-170px 0;}
+.menu-odm-geral ul li.odm-quatro {background-position:-255px 0;}
+.menu-odm-geral ul li.odm-cinco {background-position:-340px 0;}
+.menu-odm-geral ul li.odm-seis {background-position:-425px 0;}
+.menu-odm-geral ul li.odm-sete {background-position:-510px 0;}
+.menu-odm-geral ul li.odm-oito {background-position:-595px 0;}
 /********** BUSCA **********/
 header div.topo-busca, header div.topo-busca-desktop {
 	width:100%;
@@ -1041,6 +1145,9 @@ span.close {
 			border:none;
 			height:auto;
 		}
+		.menu-odm-geral ul li {
+			background-image:url(../imagens/odm-icones-cinzaesc.svg);
+		}
 		.container-home, .container-ranking {
 			background:#4f4f4f url(../imagens/mapa.png) no-repeat center;			
 		}
@@ -1215,21 +1322,3 @@ span.close {
 
 
     }
-
-
-
-.button {
-	cursor: pointer;
-	display: inline-block;
-	vertical-align: baseline;
-	-webkit-appearance: button;
-	text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: start;
-    margin: 0em;
-}
