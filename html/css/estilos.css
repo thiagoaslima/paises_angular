@@ -481,6 +481,11 @@ div.fontes {
 .objetivos-milenio div.panel{
 	background-color: #fff;
 }
+/*
+.container-pais .panel {
+	max-height: 100%;
+}
+*/
 .container-pais .panel .accordion {
 	background-color: transparent;
 	padding: 0;
@@ -520,7 +525,7 @@ div.fontes {
 	border-collapse: collapse;
 	margin: 15px 15px 5px 15px;
 }
-.container-pais .objetivos-milenio table caption {
+.container-pais .objetivos-milenio table caption, .container-pais section .panel.odm-mobile table caption {
 	background-color: #3ecca7;
 	text-align: left;
 	font-family: "RobotoBold", Helvetica, Arial, sans-serif;
@@ -532,17 +537,29 @@ div.fontes {
 .container-pais .objetivos-milenio table tbody {
 	background-color: #f4f4f4;
 }
-.container-pais .objetivos-milenio table tbody th {
-	padding: 1em;
-	border: 2px solid #fff;
-}
-.container-pais .objetivos-milenio table tbody td {
+.container-pais .objetivos-milenio table tbody th, .container-pais .objetivos-milenio table tbody td {
 	padding: 1em;
 	border: 2px solid #fff;
 }
 .container-pais .objetivos-milenio .panel small {
 	margin: 0 0 15px 15px;
 	padding: 0;
+}
+.container-pais section .panel.odm-mobile table caption {
+	border-right: 2px solid #f4f4f4;
+	border-left: 2px solid #f4f4f4;
+}
+.container-pais section .panel.odm-mobile table tbody {
+	background-color: #fff;
+}
+.container-pais section .panel.odm-mobile table tbody th, .container-pais section .panel.odm-mobile table tbody td {
+	padding: 0.8em;
+	border: 2px solid #f4f4f4;
+}
+.container-pais section .panel.odm-mobile small {
+	font-size: 1.1em;
+	display: inline-block;
+	padding: 10px 0;
 }
 /********** FIM DO PAIS **********/
 
