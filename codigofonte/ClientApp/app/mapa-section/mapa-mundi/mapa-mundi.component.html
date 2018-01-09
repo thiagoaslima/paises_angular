@@ -1,5 +1,5 @@
-<div leaflet 
-    [leafletBaseLayers]="{'layer1': geojsonLayer}" 
+<div *ngIf="isBrowser" leaflet 
+    [leafletLayers]="[geojsonLayer]" 
     [leafletOptions]="mapOptions" 
     [leafletFitBounds]="paisSelecionado.bounds"
     (leafletMapReady)="onMapReady($event)">

@@ -7,8 +7,8 @@ import { AppComponent } from './app-component/app.component';
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
-        ServerModule,
         AppModuleShared,
+        ServerModule,
         ModuleMapLoaderModule
     ]
 })

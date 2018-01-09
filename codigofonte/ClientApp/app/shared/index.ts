@@ -7,5 +7,7 @@ export { MetadataResultado, Resultado } from './resultado.model';
 export { RouterParamsService, RouterParams } from './router-params.service';
 export { TraducaoService } from './traducao.service';
 
+export * from './base-class';
+
 // módulo por último
 export { SharedModule } from './shared.module'

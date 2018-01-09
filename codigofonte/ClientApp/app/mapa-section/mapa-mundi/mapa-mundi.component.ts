@@ -1,5 +1,6 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import * as G from 'geojson';
 import * as L from 'leaflet';
@@ -9,7 +10,8 @@ import {
     LocalidadeService,
     MalhaService,
     Pais,
-    RouterParamsService
+    RouterParamsService,
+    isBrowser
 } from '../../shared';
 
 @Component({
@@ -22,7 +24,7 @@ import {
         'class': 'bg-layer'
     }
 })
-export class MapaMundiComponent {
+export class MapaMundiComponent extends isBrowser {
     public map: L.Map;
     public mapOptions = MAP_STYLES.options;
 
@@ -51,9 +53,13 @@ export class MapaMundiComponent {
         private _route: ActivatedRoute,
         private _params: RouterParamsService,
         private _localidadeService: LocalidadeService,
-        private _malhaService: MalhaService
+        private _malhaService: MalhaService,
+        @Inject(PLATFORM_ID) platform_id: Object
     ) {
+        super(platform_id);
         this.topology = this._malhaService.getMalhaGeoJSON();
+        debugger;
+        console.log(isPlatformBrowser(platform_id))
     }
 
     ngOnInit() {

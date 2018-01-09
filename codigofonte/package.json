@@ -28,6 +28,8 @@
     "@angular/router": "5.0.5",
     "@asymmetrik/ngx-leaflet": "^2.5.3",
     "@ngtools/webpack": "1.6.0-rc.1",
+    "@nguniversal/express-engine": "^1.0.0-beta.3",
+    "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3",
     "@types/webpack-env": "1.13.0",
     "angular2-template-loader": "0.6.2",
     "aspnet-prerendering": "^3.0.1",
@@ -54,14 +56,13 @@
     "style-loader": "0.18.2",
     "to-string-loader": "1.1.5",
     "topojson": "^3.0.2",
+    "ts-loader": "^3.2.0",
     "typescript": "2.6.1",
     "url-loader": "0.5.9",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2",
     "webpack-merge": "4.1.0",
-    "zone.js": "0.8.12",
-    "@nguniversal/express-engine": "^1.0.0-beta.3",
-    "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3"
+    "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@types/chai": "4.0.1",
