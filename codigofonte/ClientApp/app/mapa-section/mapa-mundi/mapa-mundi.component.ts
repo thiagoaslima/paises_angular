@@ -58,8 +58,6 @@ export class MapaMundiComponent extends isBrowser {
     ) {
         super(platform_id);
         this.topology = this._malhaService.getMalhaGeoJSON();
-        debugger;
-        console.log(isPlatformBrowser(platform_id))
     }
 
     ngOnInit() {

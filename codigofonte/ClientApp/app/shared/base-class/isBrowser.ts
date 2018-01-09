@@ -8,7 +8,6 @@ export class isBrowser {
   constructor(
     private platformId: Object
   ) {
-    debugger;
     this.isBrowser =  isPlatformBrowser(platformId);
     this.isServer =  isPlatformServer(platformId);
   }

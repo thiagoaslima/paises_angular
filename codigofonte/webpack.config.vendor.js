@@ -13,14 +13,18 @@ const treeShakableModules = [
     '@angular/platform-browser-dynamic',
     '@angular/router',
     'zone.js',
+    'leaflet'
 ];
 const nonTreeShakableModules = [
     'bootstrap',
     'bootstrap/dist/css/bootstrap.css',
-    'es6-promise',
-    'es6-shim',
+    './node_modules/leaflet/dist/leaflet.css',
+    // 'es6-promise',
+    // 'es6-shim',
     'event-source-polyfill',
     'jquery',
+    'core-js',
+    'classlist-polyfill'
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
