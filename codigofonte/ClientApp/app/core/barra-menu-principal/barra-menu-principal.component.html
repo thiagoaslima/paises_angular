@@ -1,7 +1,7 @@
 <header class="cabecalho gradiente">
     <!-->logo<-->
     <h1 class="cabecalho__logo">
-        <a href="#"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
+        <a routerLink="/"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
     </h1>
     <!-->campo de busca com lista de sugestões<-->
     <div class="cabecalho__campo-busca-container" [class.altura2]="resultados && resultados.length>0">
@@ -9,7 +9,7 @@
         <input type="search" class="cabecalho__campo-busca" autocomplete="off" (focus)="busca($event)" (input)="busca($event)">
         <i class="fa fa-search cabecalho__campo-busca-icone" aria-hidden="true"></i>
         <ul class="cabecalho__sugestao" *ngIf="resultados && resultados.length>0">
-            <li *ngFor="let resultado of resultados" (click)="navegarPara(resultado.nome[lang])">
+            <li *ngFor="let resultado of resultados" (click)="limpaResultados()">
                 <a [routerLink]="'mapa/' + resultado.slug" class="cabecalho__sugestao-item">{{ resultado.nome[lang] }}</a>
             </li>
         </ul>
