@@ -16,21 +16,48 @@ const treeShakableModules = [
     'leaflet'
 ];
 const nonTreeShakableModules = [
-    'bootstrap',
-    'bootstrap/dist/css/bootstrap.css',
+    // 'bootstrap',
+    // 'bootstrap/dist/css/bootstrap.css',
     './node_modules/leaflet/dist/leaflet.css',
     // 'es6-promise',
     // 'es6-shim',
     'event-source-polyfill',
     'jquery',
-    'core-js',
-    'classlist-polyfill'
 ];
-const allModules = treeShakableModules.concat(nonTreeShakableModules);
+const allModules = nonTreeShakableModules.concat(treeShakableModules);
+
+const polyfills = [
+    'core-js/library/es6',
+    'core-js/library/es7/array',
+    'core-js/library/es7/reflect',
+    'classlist-polyfill',
+]
 
 module.exports = (env) => {
+    debugger;
     const extractCSS = new ExtractTextPlugin('vendor.css');
     const isDevBuild = !(env && env.prod);
+    
+    const polyfillsConfig = {
+        stats: { modules: false },
+        resolve: { extensions: [ '.js' ] },
+        entry: {
+            main: polyfills
+        },
+        output: {
+            path: path.join(__dirname, 'wwwroot', 'dist'),
+            filename: 'polyfills.js',
+        },
+        plugins: [
+            new webpack.DllPlugin({
+                path: path.join(__dirname, 'wwwroot', 'dist', 'polyfills-manifest.json'),
+                name: '[name]_[hash]'
+            })
+        ].concat(isDevBuild ? [] : [
+            new webpack.optimize.UglifyJsPlugin()
+        ])
+    }
+
     const sharedConfig = {
         stats: { modules: false },
         resolve: { extensions: [ '.js' ] },
@@ -70,7 +97,7 @@ module.exports = (env) => {
                 path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
                 name: '[name]_[hash]'
             })
-        ].concat(isDevBuild ? [] : [
+        ].concat([
             new webpack.optimize.UglifyJsPlugin()
         ])
     });
@@ -94,5 +121,5 @@ module.exports = (env) => {
         ]
     });
 
-    return [clientBundleConfig, serverBundleConfig];
+    return [polyfillsConfig, clientBundleConfig, serverBundleConfig];
 }
