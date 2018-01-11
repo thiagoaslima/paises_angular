@@ -16,8 +16,8 @@ const treeShakableModules = [
     'leaflet'
 ];
 const nonTreeShakableModules = [
-    // 'bootstrap',
-    // 'bootstrap/dist/css/bootstrap.css',
+    'bootstrap',
+    'bootstrap/dist/css/bootstrap.css',
     './node_modules/leaflet/dist/leaflet.css',
     // 'es6-promise',
     // 'es6-shim',
