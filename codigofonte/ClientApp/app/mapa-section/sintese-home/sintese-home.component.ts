@@ -48,7 +48,7 @@ export class SinteseHomeComponent implements OnInit {
 
     setImageSrc(pais: Pais | null) {
         if (pais) {
-            this.imageSrc = 'img/bandeiras/' + pais.slug + '.gif';
+            this.imageSrc = 'img/bandeiras/' + pais.sigla.toUpperCase() + '.gif';
         } else {
             this.imageSrc = '';
         }

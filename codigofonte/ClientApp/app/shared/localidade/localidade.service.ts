@@ -10,7 +10,7 @@ const PAISES_BY_ID = localidades.paises.reduce((agg, pais) => {
 @Injectable()
 export class LocalidadeService {
 
-    getAllPaises() {
+    public getAllPaises() {
         return localidades.paises;
     }
 
