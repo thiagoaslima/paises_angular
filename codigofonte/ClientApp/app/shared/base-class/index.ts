@@ -1,1 +1,1 @@
-export { isBrowser } from "./isBrowser";
+export { PlatformDetectionComponent } from "./platformDetection.component";

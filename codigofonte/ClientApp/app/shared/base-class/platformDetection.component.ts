@@ -1,7 +1,7 @@
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
-export class isBrowser {
+export class PlatformDetectionComponent {
   public isBrowser: boolean;
   public isServer: boolean;
 

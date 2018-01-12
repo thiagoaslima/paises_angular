@@ -35398,7 +35398,7 @@ export const topojson = {
                         "nome": {
                             "en": "Canada",
                             "es": "Canadá",
-                            "pt": "Canadá "
+                            "pt": "Canadá"
                         },
                         "parent": "029",
                         "ddi": "1",
@@ -38437,7 +38437,7 @@ export const topojson = {
                         "nome": {
                             "en": "Panama",
                             "es": "Panamá",
-                            "pt": "Panamá "
+                            "pt": "Panamá"
                         },
                         "parent": "029",
                         "ddi": "507",
