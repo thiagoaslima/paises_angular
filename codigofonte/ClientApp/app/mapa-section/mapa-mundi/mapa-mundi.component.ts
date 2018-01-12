@@ -153,7 +153,9 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
     private _onClickMap(layer: L.Layer) {
         const that = this;
         layer.on({
-            click: (evt) => this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route })
+            click: (evt) => {
+				this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+			}
         });
     }
 
