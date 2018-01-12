@@ -6,7 +6,7 @@ import { AppComponent } from './app-component/app.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: './home/home.module#HomeModule' },
-  { path: 'mapa', loadChildren: './mapa-section/mapa-mundi/mapa-mundi.module#MapaMundiModule' },
+  { path: 'mapa', loadChildren: './mapa-section/mapa-section.module#MapaSectionModule' },
   {
     path: 'dados/:pais', canActivate: [isPaisGuard], children: [
       { path: '', loadChildren: './dados-pais/dados-pais.module#DadosPaisModule' }
@@ -26,7 +26,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
   exports: [RouterModule],
   providers: [
     isPaisGuard,
