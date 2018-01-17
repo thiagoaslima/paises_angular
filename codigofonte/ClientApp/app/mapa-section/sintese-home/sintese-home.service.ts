@@ -1,10 +1,14 @@
 import { Injectable, Inject } from '@angular/core';
 
-import { SinteseHomeConfig } from './sintese-home.config'
+import { Observable } from 'rxjs/Observable';
+
+import { SinteseHomeConfig } from './sintese-home.config';
 import { 
+    ConsultaService,
     ConsultaResultado, 
     MetadataResultado,
     PaisesService,
+    TipoServico,
     Resultado
 } from "../../shared";
 
@@ -14,7 +18,8 @@ export class SinteseHomeService {
     private _itemsConfig = SinteseHomeConfig
 
     constructor(
-        private _paisesService: PaisesService
+        private _paisesService: PaisesService,
+        private _consultaService: ConsultaService
     ) { }
 
     getSinteseConfiguration(localidadeId?: string) {
@@ -25,7 +30,7 @@ export class SinteseHomeService {
             return {
                 titulo: item.titulo,
                 config: item.config.map(o => {
-                    let item = Object.assign({}, o, { servico: <'pesquisas' | 'conjunturais'>o.servico })
+                    let item = Object.assign({}, o)
                     if (item.identificador.hasOwnProperty('localidadeId')) {
                         item.identificador.localidadeId = localidadeId;
                     }
@@ -33,6 +38,14 @@ export class SinteseHomeService {
                 })
             };
         });
+    }
+
+    getSintese2(localidadeId: string) {
+        const configuration = this.getSinteseConfiguration(localidadeId);
+        const consultas = this._consultaService.toConsultaModel(configuration);
+        Observable.zip(
+            ...flatten(consultas).map(this._paisesService.fetch)
+        )
     }
 
     getSintese(localidadeId: string) {

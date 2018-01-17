@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { ParamMap, ActivatedRoute } from '@angular/router';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
-import { PaisesService } from "../../shared/paises.service";
+import { PaisesService } from "../../shared/paises-service";
 import { SinteseHomeService } from "./sintese-home.service";
 import { ItemTemaComponent } from "../../sandbox/componentes/item-tema.component";
 

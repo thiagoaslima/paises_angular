@@ -1,5 +1,5 @@
 import { TraducaoService } from '../shared/traducao.service';
-import { PaisesService } from '../shared/paises.service';
+import { PaisesService } from '../shared/paises-service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

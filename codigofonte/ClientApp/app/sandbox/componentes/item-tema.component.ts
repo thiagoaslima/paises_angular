@@ -1,9 +1,9 @@
 import { ListaComponent } from './lista.component';
 import { TabelaComponent } from './tabela.component';
 import { ItemTemaDirective } from './item-tema.host';
-import { RetornoPesquisa } from '../../shared/pesquisas.service';
+import { RetornoPesquisa } from '../../shared/pesquisas-service';
 import { AfterViewInit, Component, ComponentFactoryResolver, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-import { MetadataResultado, Resultado } from '../../shared/resultado.model';
+import { MetadataResultado, Resultado } from '../../shared/paises-service';
 
 export interface ItemTema {
     resultados: Resultado[];

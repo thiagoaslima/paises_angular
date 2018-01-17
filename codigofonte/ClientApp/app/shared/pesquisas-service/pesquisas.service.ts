@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { MetadataResultado, Resultado } from './resultado.model';
+import { MetadataResultado, Resultado } from '../paises-service';
 
 export interface RetornoPesquisa {
     metadata: MetadataResultado[];
@@ -77,4 +77,5 @@ export class PesquisasService {
                 };
             });
     }
+
 }

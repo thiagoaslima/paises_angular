@@ -1,8 +1,8 @@
 import { NgModule, ModuleWithProviders, Injector } from '@angular/core';
 
 import { TraducaoService } from './traducao.service';
-import { PesquisasService } from './pesquisas.service';
-import { PaisesService } from './paises.service';
+import { PesquisasService } from './pesquisas-service';
+import { PaisesService, ConsultaService } from './paises-service';
 import { BuscaService } from './busca.service';
 
 import { RouterParamsService } from './router-params.service';
@@ -33,6 +33,7 @@ export class SharedModule {
             providers: [
                 RouterParamsService,
                 LocalidadeService,
+                ConsultaService,
                 PaisesService,
                 PesquisasService
             ]

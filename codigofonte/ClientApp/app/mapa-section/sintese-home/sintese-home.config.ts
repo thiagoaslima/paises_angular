@@ -1,3 +1,5 @@
+import { TipoServico } from "../../shared/paises-service/paises-types";
+
 export const SinteseHomeConfig = [
     {
         titulo: 'Capital',
@@ -73,4 +75,17 @@ export const SinteseHomeConfig = [
             }
         ]
     }
-];
+] as Array<{
+    titulo: string,
+    config: [
+        {
+            servico: TipoServico,
+            identificador: {
+                pesquisaId: string,
+                indicadorId: string,
+                localidadeId: string
+            },
+            componente: string
+        }
+    ]
+}>;
