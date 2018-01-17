@@ -10,7 +10,7 @@ export class PesquisaConsultaFactory {
         return `${servico}-${pesquisaId}`;
     }
 
-    toConsultaModel(configuration: PesquisaConfiguration | PesquisaConfiguration[]) {
+    toConsultaModel(configuration: PesquisaConfiguration | PesquisaConfiguration[]): PesquisaConsulta[] {
         configuration = Array.isArray(configuration) ? configuration : [configuration];
         const consultasObject = {} as { [key: string]: PesquisaConsulta };
 

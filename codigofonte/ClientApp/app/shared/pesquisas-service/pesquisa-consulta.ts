@@ -1,8 +1,9 @@
 import { PesquisaConfigurationConfig } from "./pesquisa-configuration.interface";
 import { Consulta } from "../paises-service";
+import { TipoServico } from "../paises-service/paises-types";
 
 export class PesquisaConsulta implements Consulta {
-    public servico: "pesquisas";
+    public servico: TipoServico = "pesquisas";
 
     public get identificador() {
         return {
@@ -19,7 +20,6 @@ export class PesquisaConsulta implements Consulta {
     constructor(
         dados?: PesquisaConfigurationConfig
     ) {
-
         if (dados) {
             let { pesquisaId, indicadorId, localidadeId } = dados.identificador;
 
@@ -37,11 +37,17 @@ export class PesquisaConsulta implements Consulta {
         }
 
         if (this._pesquisaId !== pesquisaId) {
-            throw new Error('PesquisaConsulta já possui uma pesquisaId, diferente da passada');
+            throw new Error(`PesquisaConsulta já possui pesquisaId (${this._pesquisaId}) diferente da passada (${pesquisaId})`);
         }
 
-        this._indicadoresId.push(indicadorId);
-        this._localidadesId.push(localidadeId);
+        if (!this._indicadoresId.includes(indicadorId)) {
+            this._indicadoresId.push(indicadorId);
+        }
+
+        if (!this._localidadesId.includes(localidadeId)) {
+            this._localidadesId.push(localidadeId);
+        }
+
     }
 
 }

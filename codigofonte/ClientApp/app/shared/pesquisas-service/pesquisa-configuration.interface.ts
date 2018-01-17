@@ -10,7 +10,7 @@ export interface PesquisaConfiguration extends Configuration {
 }
 
 export interface PesquisaConfigurationConfig extends Consulta {
-    servico: TipoServico,
+    servico: 'pesquisas',
     identificador: {
         pesquisaId: string,
         indicadorId: string,
