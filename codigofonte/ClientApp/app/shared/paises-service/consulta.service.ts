@@ -29,9 +29,14 @@ export class ConsultaService {
             switch (servico) {
                 case 'pesquisas':
                     consulta = this._pesquisaConsultaFactory.toConsultaModel(perServico.pesquisas);
+                    break;
                     
                 default:
-                    consulta = this._pesquisaConsultaFactory.toConsultaModel(perServico.pesquisas);
+                    throw new Error(
+                        servico 
+                        ? `Serviço ${servico} não reconhecido. Favor conferir a configuração.`
+                        : `Serviço não informado.. Favor conferir a configuração.`
+                    );
             }
 
             consultas.push(...consulta);

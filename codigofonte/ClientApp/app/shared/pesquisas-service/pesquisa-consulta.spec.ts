@@ -25,6 +25,21 @@ describe('classe PesquisaConsulta', () => {
             const expected = getPesquisaConfiguration.emptyValues().consultas;
             expect(pesquisaConsulta.identificador).toEqual(expected);
         });
+
+        describe('ao adicionar uma pesquisaConfiguration', () => {
+            
+            it('recebe a pesquisaId da primeira configuração', () => {
+                let mockConfiguration = getPesquisaConfiguration.mesmaPesquisa.umItem();
+                let pesquisaConfiguration = mockConfiguration.configuration;
+                let [identificador] = pesquisaConfiguration.config;
+                let expected = mockConfiguration.consultas.pesquisaId;
+                
+                pesquisaConsulta.addIdentificador(identificador);
+                let pesquisaId = pesquisaConsulta.identificador.pesquisaId;
+                expect(pesquisaId).toBe(expected);
+            });
+
+        });
     });
 
     describe('instância recebendo pesquisaConfiguration como parâmetro', () => {
@@ -47,6 +62,20 @@ describe('classe PesquisaConsulta', () => {
         it('possui getter #identificador com valores corretos', () => {
             const expected = getPesquisaConfiguration.mesmaPesquisa.umItem().consultas;
             expect(pesquisaConsulta.identificador).toEqual(expected);
+        });
+
+        describe('ao adicionar uma pesquisaConfiguration com uma pesquisaId diferente', () => {
+            
+            it('retorna erro', () => {
+                let mockConfiguration = getPesquisaConfiguration.pesquisasDiferentes.duasPesquisas.umItemCada();
+                let pesquisaConfiguration = mockConfiguration.configuration;
+                let [identificadorA] = pesquisaConfiguration.config;
+               
+                expect(() => {
+                    pesquisaConsulta.addIdentificador(identificadorA)
+                }).toThrowError();
+            });
+
         });
         
     });

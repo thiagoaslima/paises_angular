@@ -13,7 +13,7 @@ describe('class ConsultaService', () => {
     });
 
     describe('recebendo configuração só do tipo PesquisaConfiguration', () => {
-        let consultas: Consulta[][];
+        let consultas: Consulta[];
 
         beforeEach(() => {
             let configuration = getPesquisaConfiguration.pesquisasDiferentes.duasPesquisas.umItemCada().configuration;
@@ -21,9 +21,9 @@ describe('class ConsultaService', () => {
         });
 
         it('retorna array com 2 itens', () => {
-            console.log(consultas);
             expect(consultas).toHaveLength(2);
-        })
+        });
+        
     });
 
 });

@@ -95,18 +95,23 @@
     },
     "preset": "jest-preset-angular",
     "setupTestFrameworkScriptFile": "<rootDir>/ClientApp/jest/setupJest.ts",
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "ClientApp/**/*.{ts}",
+      "ClientApp/app/**/*.{ts}",
       "!**/node_modules/**",
       "!**/vendor/**",
       "!**/*.{d.ts}"
     ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "mapCoverage": true,
+    "testRegex": null,
+    "testMatch": [
+      "<rootDir>/ClientApp/app/**/(*.)(spec|test).(t|j)s?(x)"
+    ],
     "transform": {
       "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js",
       "\\.(properties)$": "<rootDir>/ClientApp/jest/jestTransform.js"
-    },
-    "coverageDirectory": "coverage"
+    }
   },
   "others": {
     "@angular/compiler-cli": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-5.0.5.tgz",

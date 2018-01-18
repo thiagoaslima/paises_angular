@@ -44,7 +44,7 @@ export class SinteseHomeService {
         const configuration = this.getSinteseConfiguration(localidadeId);
         const consultas = this._consultaService.toConsultaModel(configuration);
         Observable.zip(
-            ...flatten(consultas).map(this._paisesService.fetch)
+            consultas.map(this._paisesService.fetch)
         )
     }
 
