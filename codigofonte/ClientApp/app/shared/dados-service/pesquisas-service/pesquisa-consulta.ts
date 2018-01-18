@@ -1,6 +1,6 @@
 import { PesquisaConfigurationConfig } from "./pesquisa-configuration.interface";
 import { Consulta } from "../paises-service";
-import { TipoServico } from "../paises-service/paises-types";
+import { TipoServico } from "../paises-service/paises.interface";
 
 export class PesquisaConsulta implements Consulta {
     public servico: TipoServico = "pesquisas";
