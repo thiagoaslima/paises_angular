@@ -1,7 +1,7 @@
 export interface EscopoConsulta {
-    servico: string
-    id?: string | number,
-    nome?: string,
+    servico: string;
+    id?: string | number;
+    nome?: string;
 }
 
 export interface Configuration {
@@ -12,12 +12,12 @@ export interface Configuration {
 export interface Consulta {
     escopo: EscopoConsulta;
     identificador: any;
-    views?: Array<{ componente: string }>
+    views?: { componente: string }
 };
 
 export interface Resposta {
-    resultados: Resultado[],
-    metadata: MetadataResultado[]
+    resultados: any[],
+    metadata: any[]
 }
 
 export interface Resultado {

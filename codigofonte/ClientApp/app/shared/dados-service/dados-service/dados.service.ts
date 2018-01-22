@@ -1,13 +1,19 @@
 import { Injectable } from "@angular/core";
 
-import { Configuration } from "../dados.interface";
-import { getDadosConfiguration } from "./dados.service.mock";
+import { Configuration, Consulta } from "../dados.interface";
+import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class DadosService {
-    
-    getDados(configuration: Configuration) {
-        return getDadosConfiguration.umServico.umaPesquisa.semLocalidade().resposta;
+   
+    getDados(configuration: Configuration | Configuration[]) {
+        const _configuration = Array.isArray(configuration) ? configuration : [configuration];
+        
+        let itens = _configuration.reduce( (agg, config) => agg.concat(config.itens), [] as Consulta[])
+
+        return Observable.zip(
+            ...itens.map(item => this.callService(item))
+        ).pipe
     }
 
 }

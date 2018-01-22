@@ -100,6 +100,7 @@
       "ClientApp/app/**/*.{ts}",
       "!ClientApp/app/**/index.ts",
       "!ClientApp/app/**/*.enum.ts",
+      "!ClientApp/app/**/*.topojson.ts",
       "!ClientApp/app/**/*.interface.ts",
       "!ClientApp/app/**/*.spec.ts",
       "!**/node_modules/**",
