@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject, NgZone } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
@@ -11,8 +11,9 @@ import {
     MalhaService,
     Pais,
     RouterParamsService,
-    isBrowser
+    PlatformDetectionComponent
 } from '../../shared';
+
 
 @Component({
     selector: 'mapa-mundi',
@@ -24,7 +25,7 @@ import {
         'class': 'bg-layer'
     }
 })
-export class MapaMundiComponent extends isBrowser {
+export class MapaMundiComponent extends PlatformDetectionComponent {
     public map: L.Map;
     public mapOptions = MAP_STYLES.options;
 
@@ -47,6 +48,7 @@ export class MapaMundiComponent extends isBrowser {
     }
 
     private _geojsonLayer: L.GeoJSON | null = null;
+    private _layerWithVisibleTooltip: L.Layer | null = null;
 
     constructor(
         private _router: Router,
@@ -54,6 +56,7 @@ export class MapaMundiComponent extends isBrowser {
         private _params: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService,
+        private _ngzone: NgZone,
         @Inject(PLATFORM_ID) platform_id: Object
     ) {
         super(platform_id);
@@ -140,7 +143,7 @@ export class MapaMundiComponent extends isBrowser {
         layer.on({
             mouseover: () => layer.setStyle(MAP_STYLES.polygons.hover),
             mouseout: () => {
-                that.paisSelecionado.layer == layer 
+                that.paisSelecionado.layer == layer
                     ? layer.setStyle(MAP_STYLES.polygons.selected)
                     : layer.setStyle(MAP_STYLES.polygons.default)
             }
@@ -150,17 +153,65 @@ export class MapaMundiComponent extends isBrowser {
     private _onClickMap(layer: L.Layer) {
         const that = this;
         layer.on({
-            click: (evt) => this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route })
+            click: (evt) => {
+				this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+			}
         });
     }
 
+
+    private _createAndShowTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer, latlng: L.LatLng) {
+        const that = this;
+
+        let tooltip = L.tooltip({
+            sticky: true,
+            interactive: false
+        })
+            .setLatLng(latlng)
+            .setContent(feature.properties.nome.pt)
+
+        layer.bindTooltip(tooltip);
+        layer.openTooltip();
+
+        let tryouts = 0;
+        this._ngzone.runOutsideAngular(() =>
+            requestAnimationFrame(() => {
+                if (!layer.isTooltipOpen()) {
+                    layer.unbindTooltip();
+                    if (tryouts < 5) {
+                        this._createAndShowTooltip(feature, layer, latlng);
+                    }
+                } else {
+                    that._layerWithVisibleTooltip = layer;
+                }
+            })
+        );
+    }
     private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
-        layer.bindTooltip(feature.properties.nome.pt, {
-            offset: L.point(0, -20)
-        });
+
         layer.on({
-            mouseover: () => layer.openTooltip(),
-            mouseout: () => layer.closeTooltip()
+            mouseover: (evt: any) => {
+                if (
+                    this._layerWithVisibleTooltip &&
+                    this._layerWithVisibleTooltip.isTooltipOpen()
+                ) {
+                    this._layerWithVisibleTooltip.closeTooltip();
+                    this._layerWithVisibleTooltip = null;
+                }
+
+                let tooltip = layer.getTooltip();
+
+                if (!tooltip) {
+                    this._createAndShowTooltip(feature, layer, evt.latlng)
+                } else {
+                    layer.openTooltip();
+                    this._layerWithVisibleTooltip = layer;
+                }
+
+            },
+            mouseout: () => {
+                layer.closeTooltip();
+            }
         });
     }
 
@@ -173,9 +224,14 @@ export class MapaMundiComponent extends isBrowser {
     }
 
     private _featureStyle(feature: any) {
+        if (!feature.properties.mostrar) {
+            return MAP_STYLES.polygons.uninteractive;
+        }
+
         if (feature.properties.slug === this.paisSelecionado) {
             return MAP_STYLES.polygons.selected;
         }
+
         return MAP_STYLES.polygons.default;
     };
 

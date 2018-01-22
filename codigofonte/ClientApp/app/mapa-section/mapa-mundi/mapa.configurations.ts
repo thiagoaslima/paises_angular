@@ -30,6 +30,15 @@ export const MAP_STYLES = {
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1
+        },
+
+        uninteractive: {
+            fillColor: '#505050',
+            weight: 0,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1,
+            className: 'no-interaction'
         }
     }
 };
