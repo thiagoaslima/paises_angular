@@ -6,14 +6,20 @@ export interface EscopoConsulta {
 
 export interface Configuration {
     titulo?: string;
-    itens: Consulta[];
+    itens: ConfigurationItem[];
 };
 
-export interface Consulta {
+export interface ConfigurationItem {
+    _id?: number;
     escopo: EscopoConsulta;
     identificador: any;
     views?: { componente: string }
 };
+
+export interface Consulta {
+    escopo: EscopoConsulta;
+    identificador: any
+}
 
 export interface Resposta {
     resultados: any[],

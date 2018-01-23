@@ -1,0 +1,1 @@
+export { Configuration, ConfigurationItem, Consulta, EscopoConsulta, Resposta } from './dados.interface';
