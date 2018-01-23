@@ -10,6 +10,7 @@ export interface Configuration {
 };
 
 export interface Consulta {
+    _id?: number;
     escopo: EscopoConsulta;
     identificador: any;
     views?: Array<{ componente: string }>
