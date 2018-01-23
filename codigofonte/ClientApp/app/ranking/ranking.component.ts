@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'paises-ranking',
-    template: '<h1>Ranking</h1>'
+    templateUrl: './ranking.component.html',
+    styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent {
 
