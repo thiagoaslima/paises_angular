@@ -1,6 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject, NgZone, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
 
 import * as G from 'geojson';
@@ -11,9 +10,9 @@ import {
     LocalidadeService,
     MalhaService,
     Pais,
-    RouterParamsService,
-    PlatformDetectionComponent
+    RouterParamsService
 } from '../../shared';
+import { PlatformDetectionService } from '../../shared/platformDetection/platform-detection.service';
 
 
 @Component({
@@ -27,7 +26,8 @@ import {
     },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MapaMundiComponent extends PlatformDetectionComponent {
+export class MapaMundiComponent {
+    public isBrowser: boolean;
     public map: L.Map;
     public mapOptions = MAP_STYLES.options;
 
@@ -50,10 +50,10 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
     }
 
     private _geojsonLayer: L.GeoJSON | null = null;
-    private _layerWithVisibleTooltip: L.Layer | null = null;
+    private _layersWithVisibleTooltip: L.Layer[] = [];
     private _subscriptions: {
         [key: string]: Subscription
-    } =  Object.create(null);
+    } = Object.create(null);
 
     constructor(
         private _router: Router,
@@ -63,9 +63,9 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
         private _malhaService: MalhaService,
         private _ngzone: NgZone,
         private _changeDetector: ChangeDetectorRef,
-        @Inject(PLATFORM_ID) platform_id: Object
+        platform: PlatformDetectionService
     ) {
-        super(platform_id);
+        this.isBrowser = platform.isBrowser;
         this.topology = this._malhaService.getMalhaGeoJSON();
     }
 
@@ -166,62 +166,87 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
         layer.on({
             click: (evt) => {
                 this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
-			}
+            }
         });
     }
 
 
-    private _createAndShowTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer, latlng: L.LatLng) {
+    private _createAndShowTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer, latlng: L.LatLng, tryouts = 0) {
         const that = this;
 
-        let tooltip = L.tooltip({
-            sticky: true,
-            interactive: false
-        })
-            .setLatLng(latlng)
-            .setContent(feature.properties.nome.pt)
+        let tooltipProxy: any = layer.getTooltip();
 
-        layer.bindTooltip(tooltip);
+        if (!tooltipProxy) {
+            let tooltip = L.tooltip({
+                sticky: true,
+                interactive: false
+            })
+                .setLatLng(latlng)
+                .setContent(feature.properties.nome.pt);
+
+            layer.bindTooltip(tooltip);
+
+            tooltipProxy = tooltip;
+            tooltipProxy.status = 'created';
+        }
+
         layer.openTooltip();
+        tooltipProxy.status = 'opening';
 
-        let tryouts = 0;
         this._ngzone.runOutsideAngular(() =>
             requestAnimationFrame(() => {
-                if (!layer.isTooltipOpen()) {
+                if (!layer.isTooltipOpen() && tooltipProxy.status === 'opening') {
                     layer.unbindTooltip();
                     if (tryouts < 5) {
-                        this._createAndShowTooltip(feature, layer, latlng);
+                        this._createAndShowTooltip(feature, layer, latlng, tryouts + 1);
                     }
-                } else {
-                    that._layerWithVisibleTooltip = layer;
                 }
             })
         );
     }
-    private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
 
+    private _hideTooltip(layer: L.Layer, tryouts = 0) {
+        const that = this;
+        this._ngzone.runOutsideAngular(() =>
+            requestAnimationFrame(() => {
+                if (layer.isTooltipOpen()) {
+                    layer.closeTooltip();
+                    if (tryouts < 5) {
+                        this._hideTooltip(layer, tryouts + 1);
+                    }
+                }
+            })
+        );
+    }
+
+    private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        
         layer.on({
             mouseover: (evt: any) => {
-                if (
-                    this._layerWithVisibleTooltip &&
-                    this._layerWithVisibleTooltip.isTooltipOpen()
-                ) {
-                    this._layerWithVisibleTooltip.closeTooltip();
-                    this._layerWithVisibleTooltip = null;
+                if (this._layersWithVisibleTooltip.length > 0) {
+                    this._layersWithVisibleTooltip.forEach(layer => {
+                        this._hideTooltip(layer);
+                    });
                 }
 
-                let tooltip = layer.getTooltip();
-
-                if (!tooltip) {
-                    this._createAndShowTooltip(feature, layer, evt.latlng)
-                } else {
-                    layer.openTooltip();
-                    this._layerWithVisibleTooltip = layer;
-                }
-
+                this._createAndShowTooltip(feature, layer, evt.latlng);
             },
             mouseout: () => {
-                layer.closeTooltip();
+                this._hideTooltip(layer);
+            },
+
+            tooltipopen: (event: any) => {
+                let tooltipProxy: any = event.tooltip; 
+                tooltipProxy.status = 'open';
+                this._layersWithVisibleTooltip.push(layer);
+            },
+            tooltipclose: (event: any) => {
+                let tooltipProxy: any = event.tooltip; 
+                tooltipProxy.status = 'close';
+                let idx = this._layersWithVisibleTooltip.indexOf(layer);
+                if (idx >= 0) {
+                    this._layersWithVisibleTooltip.splice(idx, 1);
+                }
             }
         });
     }
