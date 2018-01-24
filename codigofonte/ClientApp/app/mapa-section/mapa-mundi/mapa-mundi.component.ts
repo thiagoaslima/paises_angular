@@ -10,9 +10,9 @@ import {
     LocalidadeService,
     MalhaService,
     Pais,
-    RouterParamsService
+    RouterParamsService,
+    PlatformDetectionService
 } from '../../shared';
-import { PlatformDetectionService } from '../../shared/platformDetection/platform-detection.service';
 
 
 @Component({

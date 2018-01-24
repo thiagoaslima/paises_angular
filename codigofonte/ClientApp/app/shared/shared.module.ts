@@ -8,7 +8,7 @@ import { BuscaService } from './busca.service';
 import { RouterParamsService } from './router-params.service';
 import { LocalidadeService } from './localidade/localidade.service';
 import { MalhaService } from './malha/malha.service';
-import { PlatformDetectionService } from './platformDetection/platform-detection.service';
+import { PlatformDetectionService } from './platform-detection.service';
 
 @NgModule({
     imports: [],
