@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@angular/core';
 
-import { SinteseHomeConfig } from './sintese-home.config'
+import { SinteseHomeConfig } from './sintese-home.configuration'
 import { 
     ConsultaResultado, 
     MetadataResultado,
