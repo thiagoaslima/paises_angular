@@ -1,6 +1,7 @@
-import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject, NgZone } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject, NgZone, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { Subscription } from 'rxjs/Subscription';
 
 import * as G from 'geojson';
 import * as L from 'leaflet';
@@ -23,7 +24,8 @@ import {
     ],
     host: {
         'class': 'bg-layer'
-    }
+    },
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MapaMundiComponent extends PlatformDetectionComponent {
     public map: L.Map;
@@ -49,6 +51,9 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
 
     private _geojsonLayer: L.GeoJSON | null = null;
     private _layerWithVisibleTooltip: L.Layer | null = null;
+    private _subscriptions: {
+        [key: string]: Subscription
+    } =  Object.create(null);
 
     constructor(
         private _router: Router,
@@ -57,6 +62,7 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService,
         private _ngzone: NgZone,
+        private _changeDetector: ChangeDetectorRef,
         @Inject(PLATFORM_ID) platform_id: Object
     ) {
         super(platform_id);
@@ -64,15 +70,20 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
     }
 
     ngOnInit() {
-        this._params.params$.subscribe(({ params, url }: any) => {
+        this._subscriptions.params = this._params.params$.subscribe(({ params, url }: any) => {
             if (params.pais) {
                 this.selectPais(params.pais);
             } else {
                 this.selectPais('');
                 this.map && this.map.fitWorld({ maxZoom: 8 });
             }
+            this._changeDetector.detectChanges();
         });
+    }
 
+    ngOnDestroy() {
+        this._changeDetector.detach();
+        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
     }
 
     onMapReady(map: L.Map) {
@@ -147,14 +158,14 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
                     ? layer.setStyle(MAP_STYLES.polygons.selected)
                     : layer.setStyle(MAP_STYLES.polygons.default)
             }
-        })
+        });
     }
 
     private _onClickMap(layer: L.Layer) {
         const that = this;
         layer.on({
             click: (evt) => {
-				this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+                this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
 			}
         });
     }

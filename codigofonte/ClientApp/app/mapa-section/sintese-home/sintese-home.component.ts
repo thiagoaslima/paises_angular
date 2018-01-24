@@ -1,5 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { ParamMap, ActivatedRoute } from '@angular/router';
+
+import { Subscription } from 'rxjs/Subscription';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
 import { PaisesService } from "../../shared/paises.service";
@@ -13,20 +15,24 @@ import { ItemTemaComponent } from "../../sandbox/componentes/item-tema.component
     providers: [SinteseHomeService],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SinteseHomeComponent implements OnInit {
+export class SinteseHomeComponent implements OnInit, OnDestroy {
     public pais: Pais | null = null;
     public imageSrc = ''
     public itens = <any[]>[];
+
+    private _subscriptions: {
+        [key: string]: Subscription
+    } =  Object.create(null);
 
     constructor(
         private _routerParams: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _sinteseService: SinteseHomeService,
-		private cdr: ChangeDetectorRef
+		private _changeDetector: ChangeDetectorRef
     ) { }
 
     ngOnInit() {
-        this._routerParams.params$.subscribe(({ params, url }) => {
+        this._subscriptions.params = this._routerParams.params$.subscribe(({ params, url }) => {
             let pais = this._localidadeService.getPaisBySlug(params.pais);
             this.itens.length = 0;
             this.setImageSrc(pais);
@@ -34,16 +40,20 @@ export class SinteseHomeComponent implements OnInit {
             if (pais) {
                 this.pais = pais;
 
-                this._sinteseService.getSintese(pais.sigla).subscribe(resultados => {
+                this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
-					this.cdr.detectChanges();
+					this._changeDetector.detectChanges();
                 });
             } else {
                 this.pais = null;
-				this.cdr.detectChanges();
             }
 
         });
+    }
+
+    ngOnDestroy() {
+        this._changeDetector.detach();
+        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {
