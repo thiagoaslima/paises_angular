@@ -113,6 +113,11 @@
 .dados-pais__historico-paragrafos-container{
     padding: 15px;
     background-color: #f1f1f1;
+    display: none;
+}
+
+.dados-pais__historico-paragrafos-container--aberto{
+    display: block;
 }
 
 .dados-pais__historico-paragrafo{
@@ -171,7 +176,7 @@
 
     .dados-pais__sintese-capa{
         display: table-cell;
-        background-image: url("../../img/bandeiras/brasil.gif");
+        /*background-image: url("../../img/bandeiras/brasil.gif");*/
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;
@@ -216,7 +221,6 @@
         padding: 15px 40px 10px 40px;
         background-color: #f1f1f1;
         border-bottom: none;
-        cursor: default;
     }
 
     .dados-pais__historico-titulo-container:hover{
@@ -226,20 +230,31 @@
     .dados-pais__historico-paragrafos-container{
         padding: 0px 40px 15px 40px;
         background-color: #f1f1f1;
+        max-height: calc(1.8em * 4); /*4 linhas*/
+        overflow: hidden;
+        display: block;
+    }
+
+    .dados-pais__historico-paragrafos-container--aberto{
+        max-height: unset;
     }
 
     .dados-pais__historico-mais-container{
         text-align: center;
+        background-color: #f1f1f1;
     }
 
     .dados-pais__historico-mais{
         display: inline-block;
         background: none;
         border: none;
+        padding: 5px 0px;
+    }
+
+    .dados-pais__historico-mais-label{
         text-transform: uppercase;
         font-family: "RobotoBold", Helvetica;
         font-size: 0.8em;
-        padding-top: 5px;
     }
 
 }

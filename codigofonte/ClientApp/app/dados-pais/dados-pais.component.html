@@ -17,39 +17,19 @@
     <!--síntese-->
     <div class="dados-pais__sintese">
         <!--capa-->
-        <div class="dados-pais__sintese-capa"></div>
+        <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrc + ')'"></div>
         <!--tabela da síntese-->
         <div class="dados-pais__sintese-container">
             <div class="dados-pais__sintese-titulo-container">
                 <i class="fa fa-caret-left dados-pais__sintese-voltar" aria-hidden="true"></i>
-                <img class="dados-pais__sintese-bandeira" src="../../img/bandeiras/brasil.gif">
-                <h2 class="dados-pais__sintese-titulo">República Popular Da China</h2>
+                <img class="dados-pais__sintese-bandeira" [src]="imageSrc">
+                <h2 class="dados-pais__sintese-titulo">{{ pais?.nome.pt }}</h2>
             </div>
             <table class="dados-pais__sintese-tabela">
                 <tbody>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Capital</th>
-                        <td class="dados-pais__sintese-valor">Brasília</td>
-                    </tr>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Extensão territorial</th>
-                        <td class="dados-pais__sintese-valor">8.515.759.090 km</td>
-                    </tr>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Idioma</th>
-                        <td class="dados-pais__sintese-valor">Português</td>
-                    </tr>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Localização</th>
-                        <td class="dados-pais__sintese-valor">América do Sul</td>
-                    </tr>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Moeda</th>
-                        <td class="dados-pais__sintese-valor">Real</td>
-                    </tr>
-                    <tr class="dados-pais__sintese-linha">
-                        <th class="dados-pais__sintese-nome">Presidente</th>
-                        <td class="dados-pais__sintese-valor">Michel Temer</td>
+                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens">
+                        <th class="dados-pais__sintese-nome">{{ item.titulo }}</th>
+                        <td class="dados-pais__sintese-valor">{{ item.valor }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -57,11 +37,11 @@
     </div>
     <!--histórico-->
     <div class="dados-pais__historico">
-        <div class="dados-pais__historico-titulo-container">
+        <div class="dados-pais__historico-titulo-container" (click)="historico_aberto = !historico_aberto">
             <h3 class="dados-pais__historico-titulo">HISTÓRICO</h3>
             <i class="fa fa-plus dados-pais__historico-icone" aria-hidden="true"></i>
         </div>
-        <div class="dados-pais__historico-paragrafos-container">
+        <div class="dados-pais__historico-paragrafos-container" [class.dados-pais__historico-paragrafos-container--aberto]="historico_aberto">
             <p class="dados-pais__historico-paragrafo">
                 Maior país da América do Sul, com vasta área de litoral banhada pelo Atlântico. Tem fronteiras com Venezuela, Guiana, Suriname, Guiana Francesa, Colômbia, Peru, Bolívia, Paraguai, Argentina e 
                 Uruguai. O topônimo Brasil tem sua origem muito discutida, embora boa parte das explicações se reram ao pau-brasil daqui extraído. Para alguns lólogos, vem do tupi ibira-ciri, "pau eriçado". 
@@ -70,7 +50,12 @@
             <p class="dados-pais__historico-paragrafo">
                 As extensas porções de terras, que hoje constituem o país, foram habitadas por tribos que pertenciam ao tronco tupi-guarani, caribe e arawak.
             </p>
-            <div class="dados-pais__historico-mais-container"><button class="dados-pais__historico-mais">Mostrar mais</button></div>
+        </div>
+        <div class="dados-pais__historico-mais-container">
+            <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">
+                <span class="dados-pais__historico-mais-label" *ngIf="!historico_aberto">Mostrar mais</span>
+                <span class="dados-pais__historico-mais-label" *ngIf="historico_aberto">Mostrar menos</span>
+            </button>
         </div>
     </div>
 </div>
