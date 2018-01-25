@@ -1,18 +1,18 @@
 export interface Configuration {
-    titulo?: string;
-    dados: Consulta[];
-    exibicao?: {
-        componente: string
+    title?: string;
+    queries: Query[];
+    view?: {
+        component: string
     }
 }
 
-export interface Consulta {
-    escopo: EscopoConsulta;
-    identificador: any
+export interface Query {
+    scope: QueryScope;
+    details: any
 }
 
-export interface EscopoConsulta {
-    servico: string;
+export interface QueryScope {
+    service: string;
     id?: string | number;
-    nome?: string
+    name?: string
 }

@@ -3,8 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "test": "node --inspect node_modules/.bin/jest --runInBand",
+    "test:watch": "jest --watch",
     "webpack": "./node_modules/.bin/webpack",
-    "test": "karma start ClientApp/test/karma.conf.js",
+    "test:karma": "karma start ClientApp/test/karma.conf.js",
     "prestart": "npm run webpack -- --config webpack.config.vendor.js",
     "dev:build": "webpack --config webpack.config.js --watch",
     "dev:serve": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
@@ -84,6 +86,34 @@
     "properties-loader": "0.0.1",
     "ts-node": "^3.3.0",
     "webpack-dev-server": "^2.7.1"
+  },
+  "jest": {
+    "globals": {
+      "__TS_CONFIG__": "<rootDir>/tsconfig.json"
+    },
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/ClientApp/jest/setupJest.ts",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "ClientApp/app/**/*.{ts}",
+      "!ClientApp/app/**/index.ts",
+      "!ClientApp/app/**/*.(enum|lista).ts",
+      "!ClientApp/app/**/*.interface.ts",
+      "!ClientApp/app/**/*.spec.ts",
+      "!**/node_modules/**",
+      "!**/vendor/**",
+      "!**/*.{d.ts}"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "mapCoverage": true,
+    "testRegex": null,
+    "testMatch": [
+      "<rootDir>/ClientApp/app/**/(*.)(spec|test).(t|j)s?(x)"
+    ],
+    "transform": {
+      "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js",
+      "\\.(properties)$": "<rootDir>/ClientApp/jest/jestTransform.js"
+    }
   },
   "others": {
     "@angular/compiler-cli": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-5.0.5.tgz",

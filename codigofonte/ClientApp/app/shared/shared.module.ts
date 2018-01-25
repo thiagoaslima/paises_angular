@@ -9,9 +9,14 @@ import { RouterParamsService } from './router-params.service';
 import { LocalidadeService } from './localidade/localidade.service';
 import { MalhaService } from './malha/malha.service';
 import { PlatformDetectionService } from './platform-detection.service';
+import { PaisesFacadeModule } from './paises-service/paises-facade.module';
+import { PesquisasAdapter } from './paises-service/adapters/pesquisas-adapter.service';
+import { PaisesFacadeService } from './paises-service/paises-service';
 
 @NgModule({
-    imports: [],
+    imports: [
+        
+    ],
     declarations: [
         
     ],
@@ -27,7 +32,6 @@ import { PlatformDetectionService } from './platform-detection.service';
 export class SharedModule {
 
     static forRoot(): ModuleWithProviders {
-        
 
         return {
             ngModule: SharedModule,
@@ -36,6 +40,8 @@ export class SharedModule {
                 LocalidadeService,
                 PaisesService,
                 PesquisasService,
+                PaisesFacadeService,
+                PesquisasAdapter,
                 {
                     provide: PlatformDetectionService,
                     deps: [PLATFORM_ID],

@@ -1,279 +1,279 @@
-import { EscopoConsulta } from "./paises.interface";
+import { QueryScope } from "./paises.interface";
 
 export const PESQUISAS = {
     "munic": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 1,
-        "nome": "MUNIC"
+        "name": "MUNIC"
     },
     "snig_pesquisa_nacional_de_informacao_de_genero": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 11,
-        "nome": "SNIG - Pesquisa Nacional de Informação de Gênero"
+        "name": "SNIG - Pesquisa Nacional de Informação de Gênero"
     },
     "ensino_matriculas_docentes_e_rede_escolar": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 13,
-        "nome": "Ensino - matrículas, docentes e rede escolar"
+        "name": "Ensino - matrículas, docentes e rede escolar"
     },
     "producao_agricola_lavoura_temporaria": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 14,
-        "nome": "Produção Agrícola - Lavoura Temporária"
+        "name": "Produção Agrícola - Lavoura Temporária"
     },
     "producao_agricola_lavoura_permanente": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 15,
-        "nome": "Produção Agrícola - Lavoura Permanente"
+        "name": "Produção Agrícola - Lavoura Permanente"
     },
     "extracao_vegetal_e_silvicultura": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 16,
-        "nome": "Extração vegetal e Silvicultura"
+        "name": "Extração vegetal e Silvicultura"
     },
     "morbidade_hospitalar": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 17,
-        "nome": "Morbidade hospitalar"
+        "name": "Morbidade hospitalar"
     },
     "pecuaria": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 18,
-        "nome": "Pecuária"
+        "name": "Pecuária"
     },
     "cadastro_central_de_empresas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 19,
-        "nome": "Cadastro Central de Empresas"
+        "name": "Cadastro Central de Empresas"
     },
     "registro_civil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 20,
-        "nome": "Registro civil"
+        "name": "Registro civil"
     },
     "financas_publicas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 21,
-        "nome": "Finanças públicas"
+        "name": "Finanças públicas"
     },
     "frota": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 22,
-        "nome": "Frota"
+        "name": "Frota"
     },
     "censo": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 23,
-        "nome": "Censo"
+        "name": "Censo"
     },
     "censo_agropecuario": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 24,
-        "nome": "Censo agropecuário"
+        "name": "Censo agropecuário"
     },
     "instituicoes_financeiras": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 29,
-        "nome": "Instituições financeiras"
+        "name": "Instituições financeiras"
     },
     "pesquisa_nacional_de_saneamento_basico": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 30,
-        "nome": "Pesquisa nacional de saneamento básico"
+        "name": "Pesquisa nacional de saneamento básico"
     },
     "producao_agricola_cereais_leguminosas_e_oleaginosas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 31,
-        "nome": "Produção agrícola - Cereais, leguminosas e oleaginosas"
+        "name": "Produção agrícola - Cereais, leguminosas e oleaginosas"
     },
     "servicos_de_saude": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 32,
-        "nome": "Serviços de saúde"
+        "name": "Serviços de saúde"
     },
     "sinopse_municipal": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 33,
-        "nome": "Sinopse municipal"
+        "name": "Sinopse municipal"
     },
     "pesquisa_de_servicos_de_hospedagem": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 34,
-        "nome": "Pesquisa de serviços de hospedagem"
+        "name": "Pesquisa de serviços de hospedagem"
     },
     "fundacoes_privadas_e_associacoes_sem_fins_lucrativos": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 35,
-        "nome": "Fundações privadas e associações sem fins lucrativos"
+        "name": "Fundações privadas e associações sem fins lucrativos"
     },
     "mapa_de_pobreza_e_desigualdade": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 36,
-        "nome": "Mapa de pobreza e desigualdade"
+        "name": "Mapa de pobreza e desigualdade"
     },
     "indice_de_desenvolvimento_humano": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 37,
-        "nome": "Índice de Desenvolvimento Humano"
+        "name": "Índice de Desenvolvimento Humano"
     },
     "produto_interno_bruto_dos_municipios": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 38,
-        "nome": "Produto Interno Bruto dos Municípios"
+        "name": "Produto Interno Bruto dos Municípios"
     },
     "taxa_de_mortalidade_infantil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 39,
-        "nome": "Taxa de mortalidade infantil"
+        "name": "Taxa de mortalidade infantil"
     },
     "indice_de_desenvolvimento_da_educacao_basica": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 40,
-        "nome": "Índice de Desenvolvimento da Educação Básica"
+        "name": "Índice de Desenvolvimento da Educação Básica"
     },
     "notificacoes_de_dengue_registradas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 42,
-        "nome": "Notificações de dengue registradas"
+        "name": "Notificações de dengue registradas"
     },
     "censo_series_historicas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 43,
-        "nome": "Censo - Séries históricas"
+        "name": "Censo - Séries históricas"
     },
     "pnad_pesquisa_nacional_por_amostra_de_domicilios": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 44,
-        "nome": "PNAD - Pesquisa Nacional por Amostra de Domicílios"
+        "name": "PNAD - Pesquisa Nacional por Amostra de Domicílios"
     },
     "sintese_de_indicadores_sociais": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 45,
-        "nome": "Síntese de Indicadores Sociais"
+        "name": "Síntese de Indicadores Sociais"
     },
     "pof_pesquisa_de_orcamentos_familiares": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 46,
-        "nome": "POF - Pesquisa de Orçamentos Familiares"
+        "name": "POF - Pesquisa de Orçamentos Familiares"
     },
     "pesquisa_nacional_de_saude": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 47,
-        "nome": "Pesquisa Nacional de Saúde"
+        "name": "Pesquisa Nacional de Saúde"
     },
     "sinopse_estadual": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 48,
-        "nome": "Sinopse estadual"
+        "name": "Sinopse estadual"
     },
     "pesquisa_anual_da_industria_da_construcao": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 49,
-        "nome": "Pesquisa Anual da Indústria da Construção"
+        "name": "Pesquisa Anual da Indústria da Construção"
     },
     "pesquisa_anual_de_comercio": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 50,
-        "nome": "Pesquisa Anual de Comércio"
+        "name": "Pesquisa Anual de Comércio"
     },
     "pesquisa_industrial_anual_empresa": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 51,
-        "nome": "Pesquisa Industrial Anual - Empresa"
+        "name": "Pesquisa Industrial Anual - Empresa"
     },
     "pesquisa_anual_de_servicos": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 52,
-        "nome": "Pesquisa Anual de Serviços"
+        "name": "Pesquisa Anual de Serviços"
     },
     "projecao_da_populacao": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 53,
-        "nome": "Projeção da população"
+        "name": "Projeção da população"
     },
     "migracoes": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10053,
-        "nome": "Migrações"
+        "name": "Migrações"
     },
     "tabuas_abreviadas_de_mortalidade_por_sexo_e_idade": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10054,
-        "nome": "Tábuas abreviadas de mortalidade por sexo e idade"
+        "name": "Tábuas abreviadas de mortalidade por sexo e idade"
     },
     "indicadores_sociodemograficos_e_de_saude_no_brasil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10055,
-        "nome": "Indicadores sociodemográficos e de saúde no Brasil"
+        "name": "Indicadores sociodemográficos e de saúde no Brasil"
     },
     "pesquisa_nacional_de_saude_do_escolar": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10056,
-        "nome": "Pesquisa Nacional de Saúde do Escolar"
+        "name": "Pesquisa Nacional de Saúde do Escolar"
     },
     "relacoes_entre_as_alteracoes_historicas_na_dinamica_demografica_brasileira_e_impactos_decorrentes_do_processo_de_envelhecimento_da_populacao": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10057,
-        "nome": "Relações entre as alterações históricas na dinâmica demográfica brasileira e impactos decorrentes do processo de envelhecimento da população"
+        "name": "Relações entre as alterações históricas na dinâmica demográfica brasileira e impactos decorrentes do processo de envelhecimento da população"
     },
     "panorama_municipal": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10058,
-        "nome": "Panorama municipal"
+        "name": "Panorama municipal"
     },
     "sinopse_brasil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10059,
-        "nome": "Sinopse Brasil"
+        "name": "Sinopse Brasil"
     },
     "contas_regionais_do_brasil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10060,
-        "nome": "Contas regionais do Brasil"
+        "name": "Contas regionais do Brasil"
     },
     "pesquisa_industrial_anual_produto": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10061,
-        "nome": "Pesquisa Industrial Anual - Produto"
+        "name": "Pesquisa Industrial Anual - Produto"
     },
     "serie_estudos_e_pesquisas_estatisticas_de_empreendedorismo": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10062,
-        "nome": "Série estudos e pesquisas: estatísticas de empreendedorismo"
+        "name": "Série estudos e pesquisas: estatísticas de empreendedorismo"
     },
     "serie_estudos_e_pesquisas_demografia_das_empresas": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10063,
-        "nome": "Série estudos e pesquisas: demografia das empresas"
+        "name": "Série estudos e pesquisas: demografia das empresas"
     },
     "pesquisa_de_inovacao": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10064,
-        "nome": "Pesquisa de inovação"
+        "name": "Pesquisa de inovação"
     },
     "panorama_brasil": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10065,
-        "nome": "Panorama Brasil"
+        "name": "Panorama Brasil"
     },
     "entidades_de_assistencia_social_privadas_sem_fins_lucrativos": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10066,
-        "nome": "Entidades de assistência social privadas sem fins lucrativos"
+        "name": "Entidades de assistência social privadas sem fins lucrativos"
     },
     "pnadc_pesquisa_nacional_por_amostra_de_domicilios_continua": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10070,
-        "nome": "PNADC - Pesquisa Nacional por Amostra de Domicílios Contínua"
+        "name": "PNADC - Pesquisa Nacional por Amostra de Domicílios Contínua"
     },
     "paises": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10071,
-        "nome": "Países"
+        "name": "Países"
     },
     "estadic": {
-        "servico": "pesquisas",
+        "service": "pesquisas",
         "id": 10072,
-        "nome": "ESTADIC"
+        "name": "ESTADIC"
     }
-} as { [key: string]: EscopoConsulta };
+} as { [key: string]: QueryScope };
