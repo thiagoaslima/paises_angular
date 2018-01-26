@@ -12,7 +12,7 @@ import {
     MalhaService,
     Pais,
     RouterParamsService,
-    PlatformDetectionComponent
+    PlatformDetectionService
 } from '../../shared';
 
 
@@ -27,7 +27,8 @@ import {
     },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MapaMundiComponent extends PlatformDetectionComponent {
+export class MapaMundiComponent {
+    public isBrowser: boolean;
     public map: L.Map;
     public mapOptions = MAP_STYLES.options;
 
@@ -63,9 +64,10 @@ export class MapaMundiComponent extends PlatformDetectionComponent {
         private _malhaService: MalhaService,
         private _ngzone: NgZone,
         private _changeDetector: ChangeDetectorRef,
-        @Inject(PLATFORM_ID) platform_id: Object
+        platform: PlatformDetectionService
+
     ) {
-        super(platform_id);
+        this.isBrowser = platform.isBrowser;
         this.topology = this._malhaService.getMalhaGeoJSON();
     }
 
