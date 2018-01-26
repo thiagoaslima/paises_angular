@@ -23,10 +23,6 @@
     margin-top: -15px;
 }
 
-.cabecalho__logo-ods{
-    display: none;
-}
-
 .cabecalho__campo-busca-container{
     position: absolute;
     width: 100%;
@@ -124,13 +120,6 @@
     .cabecalho__logo-imagem{
         height: 30px;
         margin-top: 5px;
-    }
-
-    .cabecalho__logo-ods{
-        position: absolute;
-        top: 70px;
-        left: 60px;
-        display: inline;
     }
 
     .cabecalho__campo-busca-container{
