@@ -228,7 +228,7 @@
     }
 
     .dados-pais__historico-paragrafos-container{
-        padding: 0px 40px 15px 40px;
+        padding: 0px 40px;
         background-color: #f1f1f1;
         max-height: calc(1.8em * 4); /*4 linhas*/
         overflow: hidden;

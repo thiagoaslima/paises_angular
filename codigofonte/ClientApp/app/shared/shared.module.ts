@@ -9,13 +9,15 @@ import { RouterParamsService } from './router-params.service';
 import { LocalidadeService } from './localidade/localidade.service';
 import { MalhaService } from './malha/malha.service';
 
+import { LogoODSComponent } from './logo-ods/logo-ods.component';
+
 @NgModule({
     imports: [],
     declarations: [
-        
+        LogoODSComponent
     ],
     exports: [
-        
+        LogoODSComponent
     ],
     providers: [
         TraducaoService,
