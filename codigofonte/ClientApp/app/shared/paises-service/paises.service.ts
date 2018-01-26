@@ -72,7 +72,7 @@ export class PaisesFacadeService {
                     agg.metadata.push(...res.metadata);
                     agg.resultados.push(...res.resultados);
                     return agg;
-                }, { metadata: [], resultados: [] });
+                }, { metadata: [] as any[], resultados: [] as any[] });
             }));
     }
 }

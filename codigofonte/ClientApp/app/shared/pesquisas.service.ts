@@ -64,17 +64,59 @@ export class PesquisasService {
         }
     }
     
-    get(identificador: {pesquisaId: string, indicadorId: string, localidadeId: string}): Observable<RetornoPesquisa> {
+    get(identificador: { pesquisaId: string, indicadorId: string, localidadeId: string }) {
+        let { pesquisaId, indicadorId, localidadeId } = identificador;    
+
         return Observable.zip(
-            this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}/resultados/${identificador.localidadeId}`),
-            this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}`)
+            this._getPesquisa(pesquisaId),
+            this._getMetadata(pesquisaId, indicadorId),
+            this._getResultado(pesquisaId, indicadorId, localidadeId)
         )
-            .map(([resResultado, resMetadata]) => [resResultado.json(), resMetadata.json()])
-            .map(([resultados, metadata]) => {
+            .map(([pesquisa, metadata, resultados]) => {
                 return {
-                    metadata: this.flatMetadata(metadata).map(this.toMetadataModel),
-                    resultados: resultados.map(this.toResultadoModel)
+                    pesquisa,
+                    metadata,
+                    resultados
                 };
             });
+    }
+
+    private _getPesquisa(pesquisaId = '') {
+        return this._request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}`);
+    }
+
+    private _getMetadata(pesquisaId: string, indicadorId: string) {
+        if (!indicadorId) {
+            return [];
+        }
+        return this._request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}/indicadores/${indicadorId}`)
+            .map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel));
+
+    }
+
+    private _getResultado(pesquisaId: string, indicadorId: string, localidadeId: string) {
+        if (!localidadeId) {
+            return []
+        }
+        return this._request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}/indicadores/${indicadorId}/resultados/${localidadeId}`)
+            .map(resultados => resultados.map(this.toResultadoModel));
+    }
+
+    private _request(url: string) {
+
+        return this._http.get(url)
+            .retry(3)
+            .map(res => {
+                if (res.status === 404) {
+                    throw new Error(`Não foi encontrado o endereço solicitado. [url: ${url}]`);
+                }
+
+                if (res.status === 400 || res.status === 500) {
+                    throw new Error(`status: ${res.status}`);
+                }
+
+                return res.json();
+            })
+            .share();
     }
 }

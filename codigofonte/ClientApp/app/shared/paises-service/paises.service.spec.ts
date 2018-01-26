@@ -1,13 +1,9 @@
 /// <reference types='jest' />
 
 import { TestBed, inject } from "@angular/core/testing";
-import { Http, HttpModule } from '@angular/http';
-import { PaisesFacadeService } from "./paises-service";
-import { PesquisasAdapter } from "./adapters/pesquisas-adapter.service";
-import { PesquisasService } from "../pesquisas.service";
+import { HttpModule } from '@angular/http';
+import { PaisesFacadeService } from "./paises.service";
 import { Configuration } from "./paises.interface";
-import { PaisesService } from "../paises.service";
-import { PaisesFacadeModule } from "./paises-facade.module";
 import { SharedModule } from "../shared.module";
 
 
