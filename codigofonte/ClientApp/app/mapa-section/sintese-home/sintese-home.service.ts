@@ -20,23 +20,23 @@ export class SinteseHomeService {
         private _paisesService: PaisesService
     ) { }
 
-    getSinteseConfiguration(localidadeId?: string) {
-        if (!localidadeId) {
-            return this._itemsConfig.slice();
-        }
-        return this._itemsConfig.map(item => {
-            return {
-                titulo: item.titulo,
-                config: item.config.map(o => {
-                    let item = Object.assign({}, o, { servico: <'pesquisas' | 'conjunturais'>o.servico })
-                    if (item.identificador.hasOwnProperty('localidadeId')) {
-                        item.identificador.localidadeId = localidadeId;
-                    }
-                    return item;
-                })
-            };
-        });
-    }
+    // getSinteseConfiguration(localidadeId?: string) {
+    //     if (!localidadeId) {
+    //         return this._itemsConfig.slice();
+    //     }
+    //     return this._itemsConfig.map(item => {
+    //         return {
+    //             titulo: item.titulo,
+    //             config: item.config.map(o => {
+    //                 let item = Object.assign({}, o, { servico: <'pesquisas' | 'conjunturais'>o.servico })
+    //                 if (item.identificador.hasOwnProperty('localidadeId')) {
+    //                     item.identificador.localidadeId = localidadeId;
+    //                 }
+    //                 return item;
+    //             })
+    //         };
+    //     });
+    // }
 
     getSintese(siglaPais: string) {
         const order = [
@@ -66,7 +66,7 @@ export class SinteseHomeService {
 
                     return {
                         titulo: metadataMap[id].indicador,
-                        valor: resultadosMap[id].valor,
+                        valor: resultadosMap[id].valorMaisRecente,
                         unidade
                     };
                 })

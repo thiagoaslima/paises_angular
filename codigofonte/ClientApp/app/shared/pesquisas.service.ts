@@ -51,7 +51,7 @@ export class PesquisasService extends RequestService {
         };
     };
     
-    toResultadoModel(resultado: { id:number, res:{localidade:string, res:any}[] }): Resultado {
+    toResultadoModel(resultado: { id:number, res:{localidade:string, res:any}[] }) {
         let valorMaisRecente = Object.keys(resultado.res[0].res).reduce((agg, key) => {
             if(resultado.res[0].res[key] && key > agg.periodo) {
                 agg.periodo = key;
@@ -63,8 +63,8 @@ export class PesquisasService extends RequestService {
 
         return {
             id: resultado.id,
-            valor: valorMaisRecente.valor,
-            periodo: valorMaisRecente.periodo,
+            valorMaisRecente: valorMaisRecente.valor,
+            periodoMaisRecente: valorMaisRecente.periodo,
             localidade: resultado.res[0].localidade
         }
     }

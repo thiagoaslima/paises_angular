@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
-
 import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
 import { Resultado } from './resultado.model';
 import { RequestService } from './request.service';
+import { Observable } from 'rxjs/Observable';
 import { map, zip } from 'rxjs/operators';
 
 export type TipoServico = "pesquisas" | "conjunturais";
@@ -30,18 +29,28 @@ export class PaisesService extends RequestService {
 
         const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', params)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
-        
+
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map(this.toResultadoModel)));
 
-        
-        return Observable.zip(metadataObservable,resultadosObservable)
+
+        return Observable.zip(metadataObservable, resultadosObservable)
             .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
     }
 
     getHistorico(siglaPais: string) {
         return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
             .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))
+    }
+
+    getTodosDados(siglaPais: string) {
+        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
+
+        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
+            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+
+        return Observable.zip(metadataObservable, resultadosObservable)
+            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
     }
 
     getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
@@ -113,7 +122,7 @@ export class PaisesService extends RequestService {
         return agg;
     }
 
-    private flatMetadata(metadatas: any[]): any[] {
+     flatMetadata(metadatas: any[]): any[] {
         let flatMetadatas: any[] = [];
 
         metadatas.forEach((metadata) => {
@@ -127,7 +136,7 @@ export class PaisesService extends RequestService {
         return flatMetadatas;
     }
 
-    private toMetadataModel(metadata: any) {
+     toMetadataModel(metadata: any) {
         return {
             id: metadata.id,
             indicador: metadata.indicador,
@@ -142,21 +151,31 @@ export class PaisesService extends RequestService {
         };
     };
 
-    private toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
-        let valorMaisRecente = Object.keys(resultado.res[0].res).reduce((agg, key) => {
-            if (resultado.res[0].res[key] && key > agg.periodo) {
-                agg.periodo = key;
-                agg.valor = resultado.res[0].res[key];
+     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+        let valores = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
+            if (resultado.res[0].res[periodo]) {
+                agg[periodo] = resultado.res[0].res[periodo];
             }
 
             return agg;
-        }, { periodo: "", valor: undefined });
+        }, {} as { [periodo: string]: string });
+
+        let valorMaisRecente = Object.keys(valores).reduce((agg, periodo) => {
+            if (valores[periodo] && periodo > agg.periodo) {
+                agg.periodo = periodo;
+                agg.valor = valores[periodo];
+            }
+
+            return agg;
+        }, { periodo: "", valor: '' });
 
         return {
             id: resultado.id,
-            valor: valorMaisRecente.valor,
-            periodo: valorMaisRecente.periodo,
-            localidade: resultado.res[0].localidade
+            valorMaisRecente: valorMaisRecente.valor,
+            periodoMaisRecente: valorMaisRecente.periodo,
+            localidade: resultado.res[0].localidade,
+            valores: Object.values(valores),
+            periodos: Object.keys(valores)
         }
     }
 

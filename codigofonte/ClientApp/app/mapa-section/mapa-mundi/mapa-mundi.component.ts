@@ -44,13 +44,14 @@ export class MapaMundiComponent {
     }
     public set geojsonLayer(value: L.GeoJSON | null) {
         this._geojsonLayer = value;
-        this._setCustomIDforEachLayer(this._geojsonLayer);
+        this._setPaisLayerId(this._geojsonLayer);
         setTimeout(() => {
             this.selectPais(this.paisSelecionado.slug);
         }, 10);
     }
 
     private _geojsonLayer: L.GeoJSON | null = null;
+    private _paisLayerId = {} as {[pais: string]: number}
     private _layerWithVisibleTooltip: L.Layer | null = null;
     private _subscriptions: {
         [key: string]: Subscription
@@ -110,7 +111,7 @@ export class MapaMundiComponent {
             if (!layer) {
                 let pais = this._localidadeService.getPaisBySlug(this.paisSelecionado.slug);
                 if (pais) {
-                    layer = this._geojsonLayer.getLayer(parseInt(pais.codigo, 10)) || null;;
+                    layer = this._geojsonLayer.getLayer(this._paisLayerId[this.paisSelecionado.slug]) || null;;
                 }
             }
 
@@ -128,7 +129,7 @@ export class MapaMundiComponent {
             let pais = this._localidadeService.getPaisBySlug(slug);
 
             if (pais) {
-                let layer = this._geojsonLayer.getLayer(parseInt(pais.codigo, 10));
+                let layer = this._geojsonLayer.getLayer(this._paisLayerId[this.paisSelecionado.slug]);
                 this.paisSelecionado.layer = layer || null;
 
                 this._selectLayer(layer);
@@ -249,21 +250,10 @@ export class MapaMundiComponent {
     };
 
 
-    /**
-    * serve para passar um id próprio para cada layer criado 
-    * a partir do GeoJSON, facilitando o acesso a layers específicos
-    * através do método getLayer(id)
-    *
-    * TODO:
-    * Refatorar o método, pois ele acessa propriedades privadas
-    * diretamente.
-    */
-    private _setCustomIDforEachLayer(layerGroup: any) {
-        layerGroup._layers = layerGroup.getLayers().reduce((agg: any, l: any) => {
-            // l._path.id = l.feature.properties.slug;
-            l._leaflet_id = parseInt(l.feature.properties.codigo, 10) || l._leaflet_id * -1;
-            return Object.assign(agg, { [l._leaflet_id]: l });
-        }, Object.create(null));
+   private _setPaisLayerId(layerGroup: any) {
+        layerGroup.getLayers().forEach((l: any) => {
+            this._paisLayerId[l.feature.properties.slug] = l._leaflet_id   
+        });
     }
 }
 
