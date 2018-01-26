@@ -29,8 +29,6 @@ import { LogoODSComponent } from './logo-ods/logo-ods.component';
 export class SharedModule {
 
     static forRoot(): ModuleWithProviders {
-
-
         return {
             ngModule: SharedModule,
             providers: [
