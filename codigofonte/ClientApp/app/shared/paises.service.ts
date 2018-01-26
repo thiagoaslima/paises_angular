@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
 import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
 import { Resultado } from './resultado.model';
+import { RequestService } from './request.service';
+import { map, zip } from 'rxjs/operators';
 
 export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
@@ -11,11 +15,34 @@ export type ConsultaResultado =
     { servico: 'conjunturais', identificador: any }
 
 @Injectable()
-export class PaisesService {
+export class PaisesService extends RequestService {
 
     constructor(
+        _httpClient: HttpClient,
+        private _http: Http,
         private _pesquisasServ: PesquisasService
-    ) { }
+    ) {
+        super(_httpClient);
+    }
+
+    getSintese(siglaPais: string) {
+        const params = new HttpParams().set('scope', 'one');
+
+        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', params)
+            .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
+        
+        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
+            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+
+        
+        return Observable.zip(metadataObservable,resultadosObservable)
+            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
+    }
+
+    getHistorico(siglaPais: string) {
+        return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
+            .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))
+    }
 
     getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
         let observable;
@@ -57,7 +84,7 @@ export class PaisesService {
                 agg.metadata.push(...res.metadata);
                 agg.resultados.push(...res.resultados);
                 return agg;
-            }, {metadata: [], resultados: []});
+            }, { metadata: [], resultados: [] });
         });
     }
 
@@ -85,4 +112,52 @@ export class PaisesService {
 
         return agg;
     }
+
+    private flatMetadata(metadatas: any[]): any[] {
+        let flatMetadatas: any[] = [];
+
+        metadatas.forEach((metadata) => {
+            flatMetadatas.push(metadata);
+            flatMetadatas.push(...this.flatMetadata(metadata.children).map((m) => {
+                m.pai = metadata.id;
+                return m;
+            }));
+        });
+
+        return flatMetadatas;
+    }
+
+    private toMetadataModel(metadata: any) {
+        return {
+            id: metadata.id,
+            indicador: metadata.indicador,
+            unidade: metadata.unidade ? {
+                identificador: metadata.unidade.id,
+                classe: metadata.unidade.classe,
+                multiplicador: metadata.unidade.multiplicador
+            } : undefined,
+            notas: metadata.nota,
+            fontes: metadata.fontes,
+            pai: metadata.pai
+        };
+    };
+
+    private toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+        let valorMaisRecente = Object.keys(resultado.res[0].res).reduce((agg, key) => {
+            if (resultado.res[0].res[key] && key > agg.periodo) {
+                agg.periodo = key;
+                agg.valor = resultado.res[0].res[key];
+            }
+
+            return agg;
+        }, { periodo: "", valor: undefined });
+
+        return {
+            id: resultado.id,
+            valor: valorMaisRecente.valor,
+            periodo: valorMaisRecente.periodo,
+            localidade: resultado.res[0].localidade
+        }
+    }
+
 }

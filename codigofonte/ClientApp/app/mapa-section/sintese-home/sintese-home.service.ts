@@ -7,6 +7,9 @@ import {
     PaisesService,
     Resultado
 } from "../../shared";
+import { PaisesEnum } from '../../shared/paises.enum';
+import { map } from 'rxjs/operators';
+import { objArrayToMap } from '../../../utils/objArrayToMap';
 
 
 @Injectable()
@@ -35,7 +38,41 @@ export class SinteseHomeService {
         });
     }
 
-    getSintese(localidadeId: string) {
+    getSintese(siglaPais: string) {
+        const order = [
+            PaisesEnum.sintese.capital,
+            PaisesEnum.sintese.extensao,
+            PaisesEnum.sintese.idioma,
+            PaisesEnum.sintese.localizacao,
+            PaisesEnum.sintese.moeda
+        ];
+
+        return this._paisesService.getSintese(siglaPais).pipe(
+            map((response: any) => {
+                const metadataMap = objArrayToMap(response.metadata);
+                const resultadosMap = objArrayToMap(response.resultados);
+
+                return order.map(id => {
+                    let metaUnidade = metadataMap[id].unidade;
+                    let unidade = '';
+
+                    if (metaUnidade) {
+                        let identificador = metaUnidade.identificador;
+                        let multiplicador = metaUnidade.multiplicador && metaUnidade.multiplicador != 1 
+                            ? ` (× ${metaUnidade.multiplicador})` : '';
+
+                        unidade = identificador + unidade
+                    }
+
+                    return {
+                        titulo: metadataMap[id].indicador,
+                        valor: resultadosMap[id].valor,
+                        unidade
+                    };
+                })
+            })
+        )
+        /*
         const configuration = this.getSinteseConfiguration(localidadeId);
         const consultas = configuration.reduce((agg, item) => {
             return agg.concat((<any>item).config);
@@ -74,6 +111,7 @@ export class SinteseHomeService {
                     };
                 })
             })
+            */
     }
 
 }

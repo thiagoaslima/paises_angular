@@ -1,6 +1,7 @@
 import { NgModule, Inject, PLATFORM_ID, APP_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
 import { SharedModule } from './shared/shared.module';
@@ -21,6 +22,7 @@ import { CoreModule } from "./core/core.module";
     imports: [
         CommonModule,
         HttpModule,
+        HttpClientModule,
         FormsModule,
         AppRoutingModule,
         SharedModule.forRoot()
