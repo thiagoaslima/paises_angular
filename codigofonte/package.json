@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test": "node --inspect node_modules/.bin/jest --runInBand",
+    "test:server": "node node_modules/.bin/jest --bail --ci",
+    "test:dev": "node --inspect node_modules/.bin/jest --runInBand",
     "test:watch": "jest --watch",
     "webpack": "./node_modules/.bin/webpack",
     "test:karma": "karma start ClientApp/test/karma.conf.js",
