@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test:jenkins": "node node_modules/jest/bin/jest.js --runInBand --bail --ci",
+    "test:jenkins": "node node_modules/jest/bin/jest.js --bail --ci --testResultsProcessor=\"jest-junit\"",
     "test:dev": "node --inspect node_modules/.bin/jest --runInBand",
     "test:watch": "jest --watch",
     "webpack": "./node_modules/.bin/webpack",
@@ -80,6 +80,7 @@
     "concurrently": "^3.5.0",
     "jasmine-core": "2.6.4",
     "jest": "^22.1.4",
+    "jest-junit": "^3.4.1",
     "jest-preset-angular": "^5.0.0",
     "karma": "1.7.0",
     "karma-chai": "0.1.0",
@@ -114,6 +115,7 @@
     "testMatch": [
       "<rootDir>/ClientApp/app/**/(*.)(spec|test).(t|j)s?(x)"
     ],
+    "testResultsProcessor": "jest-junit",
     "transform": {
       "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js",
       "\\.(properties)$": "<rootDir>/ClientApp/jest/jestTransform.js"
