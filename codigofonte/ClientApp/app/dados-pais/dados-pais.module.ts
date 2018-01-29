@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { SharedModule } from "../shared";
 import { DadosPaisComponent } from "./dados-pais.component";
+import { DadosPaisService } from "./dados-pais.service";
 
 const routes: Routes = [
     {
@@ -20,6 +21,9 @@ const routes: Routes = [
     ],
     declarations: [
         DadosPaisComponent
+    ],
+    providers: [
+        DadosPaisService
     ]
 })
 export class DadosPaisModule {

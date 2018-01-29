@@ -1,8 +1,10 @@
 export interface Resultado {
     id: number | string;
-    valor?: number | string;
-    periodo: string;
+    valorMaisRecente?: number | string;
+    periodoMaisRecente: string;
     localidade: string;
+    valores?: Array<number | string>,
+    periodos: string[]
 }
 
 export interface MetadataResultado {
