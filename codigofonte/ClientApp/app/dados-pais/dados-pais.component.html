@@ -53,9 +53,7 @@
             <p class="dados-pais__historico-paragrafo">
                 As extensas porções de terras, que hoje constituem o país, foram habitadas por tribos que pertenciam ao tronco tupi-guarani, caribe e arawak.
             </p>
-            <p class="dados-pais__historico-paragrafo">
-               {{ dados | json }}
-            </p>
+            
         </div>
         <div class="dados-pais__historico-mais-container">
             <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">
@@ -64,4 +62,20 @@
             </button>
         </div>
     </div>
+
+    <div>
+        <h2>Gráficos</h2>
+        <div *ngFor="let tema of temas">
+            <h4>{{ tema.tema }}</h4>
+            <table>
+                <tr *ngFor="let obj of tema.valores">
+                    <th>{{obj.titulo}}</th>
+                    <td *ngFor="let periodo of obj.periodos; let idx = index">
+                        {{ obj.valores[idx] }} {{ obj.unidade?.identificador }} ({{periodo}}) 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
 </div>

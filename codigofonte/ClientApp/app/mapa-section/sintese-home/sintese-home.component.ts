@@ -52,7 +52,7 @@ export class SinteseHomeComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {

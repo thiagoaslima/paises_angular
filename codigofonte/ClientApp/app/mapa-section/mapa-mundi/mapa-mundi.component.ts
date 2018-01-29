@@ -86,7 +86,7 @@ export class MapaMundiComponent {
 
     ngOnDestroy() {
         this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     onMapReady(map: L.Map) {

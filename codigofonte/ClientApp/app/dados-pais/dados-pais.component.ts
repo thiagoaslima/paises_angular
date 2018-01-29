@@ -22,7 +22,7 @@ export class DadosPaisComponent {
     public imageSrc = ''
     public itens = <any[]>[];
     public historico= '';
-    public dados: any = {};
+    public temas: any = [];
 
     historico_aberto = false;
 
@@ -40,7 +40,7 @@ export class DadosPaisComponent {
 
     ngOnInit() {
         this._subscriptions.params = this._routerParams.params$.subscribe(({ params, url }) => {
-            debugger;
+            
             let pais = this._localidadeService.getPaisBySlug(params.pais);
             this.itens.length = 0;
             this.setImageSrc(pais);
@@ -57,7 +57,7 @@ export class DadosPaisComponent {
                 })
 
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
-                    this.dados = resultados;
+                    this.temas = resultados;
                 });
                 
             } else {
@@ -70,7 +70,7 @@ export class DadosPaisComponent {
 
     ngOnDestroy() {
         this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {
