@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test:server": "node node_modules/.bin/jest --bail --ci",
+    "test:jenkins": "node node_modules/jest/bin/jest.js --runInBand --bail --ci",
     "test:dev": "node --inspect node_modules/.bin/jest --runInBand",
     "test:watch": "jest --watch",
     "webpack": "./node_modules/.bin/webpack",
