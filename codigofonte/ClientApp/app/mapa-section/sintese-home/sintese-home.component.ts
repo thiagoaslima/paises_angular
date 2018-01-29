@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
 import { PaisesService } from "../../shared/paises.service";
 import { SinteseHomeService } from "./sintese-home.service";
-import { ItemTemaComponent } from "../../sandbox/componentes/item-tema.component";
 
 @Component({
     selector: 'sintese-home',

@@ -6,7 +6,10 @@ import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
 import { Resultado } from './resultado.model';
 import { RequestService } from './request.service';
 import { Observable } from 'rxjs/Observable';
-import { map, zip } from 'rxjs/operators';
+import { map } from 'rxjs/operators/map';
+import { zip } from 'rxjs/operators/zip';
+import { tap } from 'rxjs/operators/tap';
+import { PaisesEnum } from './paises.enum';
 
 export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
@@ -18,8 +21,8 @@ export class PaisesService extends RequestService {
 
     constructor(
         _httpClient: HttpClient,
-        private _http: Http,
-        private _pesquisasServ: PesquisasService
+        // private _http: Http,
+        // private _pesquisasServ: PesquisasService
     ) {
         super(_httpClient);
     }
@@ -34,8 +37,10 @@ export class PaisesService extends RequestService {
             .pipe(map(resultados => resultados.map(this.toResultadoModel)));
 
 
-        return Observable.zip(metadataObservable, resultadosObservable)
-            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
+        return metadataObservable.pipe(
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados }))
+        );
     }
 
     getHistorico(siglaPais: string) {
@@ -49,80 +54,87 @@ export class PaisesService extends RequestService {
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map(this.toResultadoModel)));
 
-        return Observable.zip(metadataObservable, resultadosObservable)
-            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
+
+        return metadataObservable.pipe(
+            tap(_ => console.time('#getDados')),
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados })),
+            tap(obj => { console.timeEnd('#getDados'); console.log(obj); }),
+        );
     }
 
-    getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
-        let observable;
-
-        switch (consulta.servico) {
-            case "pesquisas":
-                observable = this._pesquisasServ.get(consulta.identificador);
-                break;
-            case "conjunturais":
-                break;
-        }
-
-        return observable ? observable : Observable.of({
-            metadata: [],
-            resultados: []
-        });
-
-    }
-
-    getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa> {
-        const requestsObj = <{ [key: string]: ConsultaResultado }>{};
-
-        consultas.forEach(consulta => {
-            let key = this.buildkey(consulta);
-
-            if (!requestsObj[key]) {
-                requestsObj[key] = <ConsultaResultado>{
-                    servico: consulta.servico,
-                    identificador: Object.assign({}, consulta.identificador)
-                }
-            } else {
-                this._mergeConsultas(requestsObj[key], consulta);
+    /*
+        getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
+            let observable;
+    
+            switch (consulta.servico) {
+                case "pesquisas":
+                    observable = this._pesquisasServ.get(consulta.identificador);
+                    break;
+                case "conjunturais":
+                    break;
             }
-        });
-
-        const observables = Object.keys(requestsObj).map(key => this.getResultados(requestsObj[key]));
-        return Observable.zip(...observables).map(resultados => {
-            return resultados.reduce((agg, res) => {
-                agg.metadata.push(...res.metadata);
-                agg.resultados.push(...res.resultados);
-                return agg;
-            }, { metadata: [], resultados: [] });
-        });
-    }
-
-    public buildkey(consulta: ConsultaResultado) {
-        const servico = consulta.servico
-        const { pesquisaId } = consulta.identificador;
-
-        return `${servico}-${pesquisaId}`;
-    }
-
-
-    private _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
-        switch (consulta.servico) {
-            case 'pesquisas':
-                const indicadores = agg.identificador.indicadorId;
-                if (indicadores.split('|').indexOf(consulta.identificador.indicadorId) == -1) {
-                    agg.identificador.indicadorId += `|${consulta.identificador.indicadorId}`
-                }
-
-                const localidades = agg.identificador.localidadeId;
-                if (localidades.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
-                    agg.identificador.localidadeId += `|${consulta.identificador.localidadeId}`
-                }
+    
+            return observable ? observable : Observable.of({
+                metadata: [],
+                resultados: []
+            });
+    
         }
+    
+        getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa> {
+            const requestsObj = <{ [key: string]: ConsultaResultado }>{};
+    
+            consultas.forEach(consulta => {
+                let key = this.buildkey(consulta);
+    
+                if (!requestsObj[key]) {
+                    requestsObj[key] = <ConsultaResultado>{
+                        servico: consulta.servico,
+                        identificador: Object.assign({}, consulta.identificador)
+                    }
+                } else {
+                    this._mergeConsultas(requestsObj[key], consulta);
+                }
+            });
+    
+            const observables = Object.keys(requestsObj).map(key => this.getResultados(requestsObj[key]));
+            return Observable.zip(...observables).map(resultados => {
+                return resultados.reduce((agg, res) => {
+                    agg.metadata.push(...res.metadata);
+                    agg.resultados.push(...res.resultados);
+                    return agg;
+                }, { metadata: [], resultados: [] });
+            });
+        }
+    
+        public buildkey(consulta: ConsultaResultado) {
+            const servico = consulta.servico
+            const { pesquisaId } = consulta.identificador;
+    
+            return `${servico}-${pesquisaId}`;
+        }
+    
+    
+        private _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
+            switch (consulta.servico) {
+                case 'pesquisas':
+                    const indicadores = agg.identificador.indicadorId;
+                    if (indicadores.split('|').indexOf(consulta.identificador.indicadorId) == -1) {
+                        agg.identificador.indicadorId += `|${consulta.identificador.indicadorId}`
+                    }
+    
+                    const localidades = agg.identificador.localidadeId;
+                    if (localidades.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
+                        agg.identificador.localidadeId += `|${consulta.identificador.localidadeId}`
+                    }
+            }
+    
+            return agg;
+        }
+    */
 
-        return agg;
-    }
-
-     flatMetadata(metadatas: any[]): any[] {
+    flatMetadata(metadatas: any[]): any[] {
         let flatMetadatas: any[] = [];
 
         metadatas.forEach((metadata) => {
@@ -136,7 +148,7 @@ export class PaisesService extends RequestService {
         return flatMetadatas;
     }
 
-     toMetadataModel(metadata: any) {
+    toMetadataModel(metadata: any) {
         return {
             id: metadata.id,
             indicador: metadata.indicador,
@@ -151,7 +163,7 @@ export class PaisesService extends RequestService {
         };
     };
 
-     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
         let valores = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
                 agg[periodo] = resultado.res[0].res[periodo];

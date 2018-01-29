@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { RouterParamsService, LocalidadeService, Pais } from "../shared";
 import { PaisesService } from "../shared/paises.service";
 import { SinteseHomeService } from "../mapa-section/sintese-home/sintese-home.service";
-import { ItemTemaComponent } from "../sandbox/componentes/item-tema.component";
 import { DadosPaisService } from './dados-pais.service';
 
 @Component({
@@ -41,6 +40,7 @@ export class DadosPaisComponent {
 
     ngOnInit() {
         this._subscriptions.params = this._routerParams.params$.subscribe(({ params, url }) => {
+            debugger;
             let pais = this._localidadeService.getPaisBySlug(params.pais);
             this.itens.length = 0;
             this.setImageSrc(pais);
@@ -59,6 +59,7 @@ export class DadosPaisComponent {
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
                     this.dados = resultados;
                 });
+                
             } else {
                 this.pais = null;
             }

@@ -2,8 +2,8 @@
 import { TestBed, inject } from "@angular/core/testing";
 import { SharedModule } from "./shared.module";
 import { PaisesService } from "./paises.service";
-import { HttpClientModule } from "@angular/common/http";
-import { HttpModule } from "@angular/http";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { ConnectionBackend, HttpModule, Http } from "@angular/http";
 
 
 describe('PaisesService E2E', () => {
@@ -12,9 +12,17 @@ describe('PaisesService E2E', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpModule,
         HttpClientModule,
-        SharedModule.forRoot()
+      ],
+      providers: [
+        HttpClient,
+        PaisesService,
+        // {
+        //   provide: PaisesService,
+        //   deps: [HttpClient, Http],
+        //   useFactory: (httpClient: HttpClient, http: Http) => new PaisesService(httpClient, http)
+        // }
+        
       ]
     })
   });
@@ -29,7 +37,7 @@ describe('PaisesService E2E', () => {
     expect(paisesService).toBeInstanceOf(PaisesService);
   });
 
-  it('run #getHsitorico correctly', (done) => {
+  it('run #getHistorico correctly', (done) => {
     const expected = {
       "pais": "BR",
       "periodo": "",
@@ -44,7 +52,7 @@ describe('PaisesService E2E', () => {
     });
   });
 
-  it('should get Sintese correctly', (done) => {
+  it('run #getSintese correctly', (done) => {
     paisesService.getSintese('BR').subscribe(response => {
       const expected = {
         "metadata": [{ "id": 62941, "indicador": "Capital", "notas": [] }, { "id": 62942, "indicador": "Extensão territorial", "unidade": { "identificador": "km²", "classe": "N", "multiplicador": 1 }, "notas": [] }, { "id": 62943, "indicador": "Idioma", "notas": [] }, { "id": 62944, "indicador": "Localização", "notas": [] }, { "id": 62945, "indicador": "Moeda", "notas": [] }], "resultados": [{ "id": 62941, "valorMaisRecente": "Brasília", "periodoMaisRecente": "-", "localidade": "BR", "valores": ["Brasília"], "periodos": ["-"] }, { "id": 62942, "valorMaisRecente": "8515759.090", "periodoMaisRecente": "-", "localidade": "BR", "valores": ["8515759.090"], "periodos": ["-"] }, { "id": 62943, "valorMaisRecente": "Português", "periodoMaisRecente": "-", "localidade": "BR", "valores": ["Português"], "periodos": ["-"] }, { "id": 62944, "valorMaisRecente": "América do Sul", "periodoMaisRecente": "-", "localidade": "BR", "valores": ["América do Sul"], "periodos": ["-"] }, { "id": 62945, "valorMaisRecente": "Real", "periodoMaisRecente": "-", "localidade": "BR", "valores": ["Real"], "periodos": ["-"] }]
@@ -61,1968 +69,6296 @@ describe('PaisesService E2E', () => {
         "metadata": [
           {
             "id": 62934,
+            "posicao": "1",
             "indicador": "Síntese",
-            "notas": []
-          },
-          {
-            "id": 62941,
-            "indicador": "Capital",
-            "notas": [],
-            "pai": 62934
-          },
-          {
-            "id": 62942,
-            "indicador": "Extensão territorial",
-            "unidade": {
-              "identificador": "km²",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62934
-          },
-          {
-            "id": 62943,
-            "indicador": "Idioma",
-            "notas": [],
-            "pai": 62934
-          },
-          {
-            "id": 62944,
-            "indicador": "Localização",
-            "notas": [],
-            "pai": 62934
-          },
-          {
-            "id": 62945,
-            "indicador": "Moeda",
-            "notas": [],
-            "pai": 62934
+            "classe": "T",
+            "children": [
+              {
+                "id": 62941,
+                "posicao": "1.1",
+                "indicador": "Capital",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62942,
+                "posicao": "1.2",
+                "indicador": "Extensão territorial",
+                "classe": "I",
+                "unidade": {
+                  "id": "km²",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62943,
+                "posicao": "1.3",
+                "indicador": "Idioma",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62944,
+                "posicao": "1.4",
+                "indicador": "Localização",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62945,
+                "posicao": "1.5",
+                "indicador": "Moeda",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              }
+            ],
+            "nota": []
           },
           {
             "id": 62935,
+            "posicao": "2",
             "indicador": "Dados olímpicos",
-            "notas": []
-          },
-          {
-            "id": 62946,
-            "indicador": "Primeira participação",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62947,
-            "indicador": "Última participação",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62948,
-            "indicador": "Atletas",
-            "unidade": {
-              "identificador": "atletas",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "-",
-                "notas": [
-                  "Considerando todas as Olimpíadas"
+                "id": 62946,
+                "posicao": "2.1",
+                "indicador": "Primeira participação",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62947,
+                "posicao": "2.2",
+                "indicador": "Última participação",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62948,
+                "posicao": "2.3",
+                "indicador": "Atletas",
+                "classe": "I",
+                "unidade": {
+                  "id": "atletas",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Considerando todas as Olimpíadas"
+                    ]
+                  }
                 ]
+              },
+              {
+                "id": 62949,
+                "posicao": "2.4",
+                "indicador": "Modalidades disputadas",
+                "classe": "I",
+                "children": [],
+                "nota": []
+              },
+              {
+                "id": 62950,
+                "posicao": "2.5",
+                "indicador": "Medalhas",
+                "classe": "I",
+                "children": [
+                  {
+                    "id": 62951,
+                    "posicao": "2.5.1",
+                    "indicador": "Ouro",
+                    "classe": "I",
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62952,
+                    "posicao": "2.5.2",
+                    "indicador": "Prata",
+                    "classe": "I",
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62953,
+                    "posicao": "2.5.3",
+                    "indicador": "Bronze",
+                    "classe": "I",
+                    "children": [],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 62954,
+                "posicao": "2.6",
+                "indicador": "Esportes que conquistaram medalhas",
+                "classe": null,
+                "children": [
+                  {
+                    "id": 62955,
+                    "posicao": "2.6.1",
+                    "indicador": "Aquáticos",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62993,
+                    "posicao": "2.6.2",
+                    "indicador": "Arco e Flecha",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62956,
+                    "posicao": "2.6.3",
+                    "indicador": "Atletismo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62994,
+                    "posicao": "2.6.4",
+                    "indicador": "Badminton",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62995,
+                    "posicao": "2.6.5",
+                    "indicador": "Basquetebol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62996,
+                    "posicao": "2.6.6",
+                    "indicador": "Beisebol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62997,
+                    "posicao": "2.6.7",
+                    "indicador": "Boxe",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62998,
+                    "posicao": "2.6.8",
+                    "indicador": "Cabo de Guerra",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 62999,
+                    "posicao": "2.6.9",
+                    "indicador": "Canoagem",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63000,
+                    "posicao": "2.6.10",
+                    "indicador": "Canoagem Slalom",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63001,
+                    "posicao": "2.6.11",
+                    "indicador": "Canoagem Sprint",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63002,
+                    "posicao": "2.6.12",
+                    "indicador": "Ciclismo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63003,
+                    "posicao": "2.6.13",
+                    "indicador": "Ciclismo - BMX",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63004,
+                    "posicao": "2.6.14",
+                    "indicador": "Ciclismo - Estrada",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63005,
+                    "posicao": "2.6.15",
+                    "indicador": "Ciclismo - Mountain Bike",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63006,
+                    "posicao": "2.6.16",
+                    "indicador": "Ciclismo - Trilha",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63008,
+                    "posicao": "2.6.17",
+                    "indicador": "Críquete",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63007,
+                    "posicao": "2.6.18",
+                    "indicador": "Croquete",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63009,
+                    "posicao": "2.6.19",
+                    "indicador": "Esgrima",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63010,
+                    "posicao": "2.6.20",
+                    "indicador": "Espanha",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63011,
+                    "posicao": "2.6.21",
+                    "indicador": "Futebol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63012,
+                    "posicao": "2.6.22",
+                    "indicador": "Ginástica",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63013,
+                    "posicao": "2.6.23",
+                    "indicador": "Ginástica - Rítmica",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63014,
+                    "posicao": "2.6.24",
+                    "indicador": "Ginástica - Trampolim",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63015,
+                    "posicao": "2.6.25",
+                    "indicador": "Golfe",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63016,
+                    "posicao": "2.6.26",
+                    "indicador": "Grã Bretanha & Irlanda do Norte",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63017,
+                    "posicao": "2.6.27",
+                    "indicador": "Halterofilismo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63018,
+                    "posicao": "2.6.28",
+                    "indicador": "Handebol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63019,
+                    "posicao": "2.6.29",
+                    "indicador": "Hipismo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63020,
+                    "posicao": "2.6.30",
+                    "indicador": "Hóquei",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63021,
+                    "posicao": "2.6.31",
+                    "indicador": "Hóquei no Gelo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63022,
+                    "posicao": "2.6.32",
+                    "indicador": "Jeu de paume",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63023,
+                    "posicao": "2.6.33",
+                    "indicador": "Judô",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63024,
+                    "posicao": "2.6.34",
+                    "indicador": "Lacrosse",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63025,
+                    "posicao": "2.6.35",
+                    "indicador": "Luta Livre",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63026,
+                    "posicao": "2.6.36",
+                    "indicador": "Mergulho",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63027,
+                    "posicao": "2.6.37",
+                    "indicador": "Motonáutica",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63029,
+                    "posicao": "2.6.38",
+                    "indicador": "Nado Sincronizado",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63028,
+                    "posicao": "2.6.39",
+                    "indicador": "Natação",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63030,
+                    "posicao": "2.6.40",
+                    "indicador": "Patinação",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63031,
+                    "posicao": "2.6.41",
+                    "indicador": "Pelota Basca",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63032,
+                    "posicao": "2.6.42",
+                    "indicador": "Pentatlo Moderno",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63033,
+                    "posicao": "2.6.43",
+                    "indicador": "Polo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63034,
+                    "posicao": "2.6.44",
+                    "indicador": "Polo Aquático",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63035,
+                    "posicao": "2.6.45",
+                    "indicador": "Raquetes",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63045,
+                    "posicao": "2.6.46",
+                    "indicador": "Remo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63046,
+                    "posicao": "2.6.47",
+                    "indicador": "Roque",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63036,
+                    "posicao": "2.6.48",
+                    "indicador": "Rúgbi",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63039,
+                    "posicao": "2.6.49",
+                    "indicador": "Softbol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63040,
+                    "posicao": "2.6.50",
+                    "indicador": "Taekwondo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63037,
+                    "posicao": "2.6.51",
+                    "indicador": "Tiro",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63038,
+                    "posicao": "2.6.52",
+                    "indicador": "Triatlo",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63041,
+                    "posicao": "2.6.53",
+                    "indicador": "Tênis",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63042,
+                    "posicao": "2.6.54",
+                    "indicador": "Tênis de Mesa",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63047,
+                    "posicao": "2.6.55",
+                    "indicador": "Vela",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63043,
+                    "posicao": "2.6.56",
+                    "indicador": "Vôlei de Praia",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63044,
+                    "posicao": "2.6.57",
+                    "indicador": "Voleibol",
+                    "classe": "I",
+                    "unidade": {
+                      "id": "",
+                      "classe": "B",
+                      "multiplicador": 1
+                    },
+                    "children": [],
+                    "nota": []
+                  }
+                ],
+                "nota": []
               }
             ],
-            "pai": 62935
-          },
-          {
-            "id": 62949,
-            "indicador": "Modalidades disputadas",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62950,
-            "indicador": "Medalhas",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62951,
-            "indicador": "Ouro",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62952,
-            "indicador": "Prata",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62953,
-            "indicador": "Bronze",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62954,
-            "indicador": "Esportes que conquistaram medalhas",
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62955,
-            "indicador": "Aquáticos",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62993,
-            "indicador": "Arco e Flecha",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62956,
-            "indicador": "Atletismo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62994,
-            "indicador": "Badminton",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62995,
-            "indicador": "Basquetebol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62996,
-            "indicador": "Beisebol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62997,
-            "indicador": "Boxe",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62998,
-            "indicador": "Cabo de Guerra",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 62999,
-            "indicador": "Canoagem",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63000,
-            "indicador": "Canoagem Slalom",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63001,
-            "indicador": "Canoagem Sprint",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63002,
-            "indicador": "Ciclismo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63003,
-            "indicador": "Ciclismo - BMX",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63004,
-            "indicador": "Ciclismo - Estrada",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63005,
-            "indicador": "Ciclismo - Mountain Bike",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63006,
-            "indicador": "Ciclismo - Trilha",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63008,
-            "indicador": "Críquete",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63007,
-            "indicador": "Croquete",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63009,
-            "indicador": "Esgrima",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63010,
-            "indicador": "Espanha",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63011,
-            "indicador": "Futebol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63012,
-            "indicador": "Ginástica",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63013,
-            "indicador": "Ginástica - Rítmica",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63014,
-            "indicador": "Ginástica - Trampolim",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63015,
-            "indicador": "Golfe",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63016,
-            "indicador": "Grã Bretanha & Irlanda do Norte",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63017,
-            "indicador": "Halterofilismo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63018,
-            "indicador": "Handebol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63019,
-            "indicador": "Hipismo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63020,
-            "indicador": "Hóquei",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63021,
-            "indicador": "Hóquei no Gelo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63022,
-            "indicador": "Jeu de paume",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63023,
-            "indicador": "Judô",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63024,
-            "indicador": "Lacrosse",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63025,
-            "indicador": "Luta Livre",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63026,
-            "indicador": "Mergulho",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63027,
-            "indicador": "Motonáutica",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63029,
-            "indicador": "Nado Sincronizado",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63028,
-            "indicador": "Natação",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63030,
-            "indicador": "Patinação",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63031,
-            "indicador": "Pelota Basca",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63032,
-            "indicador": "Pentatlo Moderno",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63033,
-            "indicador": "Polo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63034,
-            "indicador": "Polo Aquático",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63035,
-            "indicador": "Raquetes",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63045,
-            "indicador": "Remo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63046,
-            "indicador": "Roque",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63036,
-            "indicador": "Rúgbi",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63039,
-            "indicador": "Softbol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63040,
-            "indicador": "Taekwondo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63037,
-            "indicador": "Tiro",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63038,
-            "indicador": "Triatlo",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63041,
-            "indicador": "Tênis",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63042,
-            "indicador": "Tênis de Mesa",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63047,
-            "indicador": "Vela",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63043,
-            "indicador": "Vôlei de Praia",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
-          },
-          {
-            "id": 63044,
-            "indicador": "Voleibol",
-            "unidade": {
-              "identificador": "",
-              "classe": "B",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62935
+            "nota": []
           },
           {
             "id": 62936,
+            "posicao": "3",
             "indicador": "Economia",
-            "notas": []
-          },
-          {
-            "id": 62957,
-            "indicador": "Entrada de turistas",
-            "unidade": {
-              "identificador": "turistas",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62958,
-            "indicador": "Gastos públicos com educação",
-            "unidade": {
-              "identificador": "% do PIB",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62959,
-            "indicador": "Gastos públicos com saúde",
-            "unidade": {
-              "identificador": "% do PIB",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "2013",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                "id": 62957,
+                "posicao": "3.1",
+                "indicador": "Entrada de turistas",
+                "classe": "I",
+                "unidade": {
+                  "id": "turistas",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62958,
+                "posicao": "3.2",
+                "indicador": "Gastos públicos com educação",
+                "classe": "I",
+                "unidade": {
+                  "id": "% do PIB",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "1990",
+                    "fontes": [
+                      "World Development Indicators - 2016. Washington, D.C.: World Bank, 2016. Acesso em: dez.2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62959,
+                "posicao": "3.3",
+                "indicador": "Gastos públicos com saúde",
+                "classe": "I",
+                "unidade": {
+                  "id": "% do PIB",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2013",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62960,
+                "posicao": "3.4",
+                "indicador": "Investimentos em pesquisa e desenvolvimento",
+                "classe": "I",
+                "unidade": {
+                  "id": "% do PIB",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World development Indicators 2017, The World Bank. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62961,
+                "posicao": "3.5",
+                "indicador": "Mulheres de 15 anos ou mais de idade economicamente ativas",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2017",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2018",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62962,
+                "posicao": "3.6",
+                "indicador": "PIB per capita",
+                "classe": "I",
+                "unidade": {
+                  "id": "US$",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2015",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2012. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2010. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2009. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2007. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2006. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2005. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2003. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2002. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2011. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2001. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2008. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: jan.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2004. Acesso em: nov.2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62963,
+                "posicao": "3.7",
+                "indicador": "População de 15 anos ou mais de idade economicamente ativa",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2017",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2018",
+                    "fontes": [
+                      "Labour Force Estimates and Projections: 1990-2050. In: International Labour Organization. LFEP data (2015 edition). Genebra, 2015. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62964,
+                "posicao": "3.8",
+                "indicador": "Total da exportação",
+                "classe": "I",
+                "unidade": {
+                  "id": "US$",
+                  "classe": "N",
+                  "multiplicador": 1000000
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2013. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2012. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2011. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2009. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2008. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2006. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2005. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2004. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2002. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2001. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2010. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2000. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2007. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2015. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2016. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2003. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62965,
+                "posicao": "3.9",
+                "indicador": "Total da importação",
+                "classe": "I",
+                "unidade": {
+                  "id": "US$",
+                  "classe": "N",
+                  "multiplicador": 1000000
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2013. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2012. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2011. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2009. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2008. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2006. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2005. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2004. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2002. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2001. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2010. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2000. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2007. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2015. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2016. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "United Nations Commodity Trade Statistics Database. United Nations Statistics Division. New York, 2003. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62966,
+                "posicao": "3.10",
+                "indicador": "Total do PIB",
+                "classe": "I",
+                "unidade": {
+                  "id": "US$",
+                  "classe": "N",
+                  "multiplicador": 1000000
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2015",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "United Nations,United Nations Statistics Division, National Accounts Main Aggregates Database,Basic Data Selection, New York, 2016. Acesso em: dez.2017."
+                    ]
+                  }
                 ]
               }
             ],
-            "pai": 62936
-          },
-          {
-            "id": 62960,
-            "indicador": "Investimentos em pesquisa e desenvolvimento",
-            "unidade": {
-              "identificador": "% do PIB",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62961,
-            "indicador": "Mulheres de 15 anos ou mais de idade economicamente ativas",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62962,
-            "indicador": "PIB per capita",
-            "unidade": {
-              "identificador": "US$",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2015",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62936
-          },
-          {
-            "id": 62963,
-            "indicador": "População de 15 anos ou mais de idade economicamente ativa",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62964,
-            "indicador": "Total da exportação",
-            "unidade": {
-              "identificador": "US$",
-              "classe": "N",
-              "multiplicador": 1000000
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62965,
-            "indicador": "Total da importação",
-            "unidade": {
-              "identificador": "US$",
-              "classe": "N",
-              "multiplicador": 1000000
-            },
-            "notas": [],
-            "pai": 62936
-          },
-          {
-            "id": 62966,
-            "indicador": "Total do PIB",
-            "unidade": {
-              "identificador": "US$",
-              "classe": "N",
-              "multiplicador": 1000000
-            },
-            "notas": [
-              {
-                "periodo": "2015",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62936
+            "nota": []
           },
           {
             "id": 62937,
+            "posicao": "4",
             "indicador": "Indicadores sociais",
-            "notas": []
-          },
-          {
-            "id": 62973,
-            "indicador": "Calorias consumidas",
-            "unidade": {
-              "identificador": "kcal/dia",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
-          },
-          {
-            "id": 62967,
-            "indicador": "Esperança de vida ao nascer",
-            "unidade": {
-              "identificador": "anos",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "2014",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                "id": 62973,
+                "posicao": "4.1",
+                "indicador": "Calorias consumidas",
+                "classe": "I",
+                "unidade": {
+                  "id": "kcal/dia",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2012-2014",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014-2016",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "1999-2001",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000-2002",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001-2003",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002-2004",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003-2005",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004-2006",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005-2007",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006-2008",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007-2009",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008-2010",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009-2011",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010-2012",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011-2013",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2013-2015",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62967,
+                "posicao": "4.2",
+                "indicador": "Esperança de vida ao nascer",
+                "classe": "I",
+                "unidade": {
+                  "id": "anos",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2014",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Fonte: Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62968,
+                "posicao": "4.3",
+                "indicador": "Índice de desenvolvimento humano",
+                "classe": "I",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2014",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Human Development Report 2016: Human Development for Everyone. New York: United Nations Development Programme, 2016. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62969,
+                "posicao": "4.4",
+                "indicador": "População com acesso a água potável",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62970,
+                "posicao": "4.5",
+                "indicador": "População com acesso a rede sanitária",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "Progress on drinking water, sanitation and hygiene 2017. World Health Organization. Genebra: WHO Press, 2017. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62971,
+                "posicao": "4.6",
+                "indicador": "População subnutrida",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "G",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2012-2014",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014-2016",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "1999-2001",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000-2002",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001-2003",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002-2004",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003-2005",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004-2006",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005-2007",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006-2008",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007-2009",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008-2010",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009-2011",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010-2012",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011-2013",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2013-2015",
+                    "fontes": [
+                      "Food security indicators. In: FAO. FAOSTAT. 2017. FAO Statistical Yearbook 2015. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62972,
+                "posicao": "4.7",
+                "indicador": "Taxa bruta de matrículas para todos os níveis de ensino",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62974,
+                "posicao": "4.8",
+                "indicador": "Taxa de alfabetização das pessoas de 15 anos ou mais de idade",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "UNESCO Institute for Statistics. United Nations Education, Scientific and Cultural Organization. Montreal, 2016. Acesso em: dez. 2017."
+                    ]
+                  }
                 ]
               }
             ],
-            "pai": 62937
-          },
-          {
-            "id": 62968,
-            "indicador": "Índice de desenvolvimento humano",
-            "notas": [
-              {
-                "periodo": "2014",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62937
-          },
-          {
-            "id": 62969,
-            "indicador": "População com acesso a água potável",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
-          },
-          {
-            "id": 62970,
-            "indicador": "População com acesso a rede sanitária",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
-          },
-          {
-            "id": 62971,
-            "indicador": "População subnutrida",
-            "unidade": {
-              "identificador": "%",
-              "classe": "G",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
-          },
-          {
-            "id": 62972,
-            "indicador": "Taxa bruta de matrículas para todos os níveis de ensino",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
-          },
-          {
-            "id": 62974,
-            "indicador": "Taxa de alfabetização das pessoas de 15 anos ou mais de idade",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62937
+            "nota": []
           },
           {
             "id": 62938,
+            "posicao": "5",
             "indicador": "Meio Ambiente",
-            "notas": []
-          },
-          {
-            "id": 62975,
-            "indicador": "Áreas cultivadas",
-            "unidade": {
-              "identificador": "% da área total",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62938
-          },
-          {
-            "id": 62976,
-            "indicador": "Áreas de pastagens permanentes",
-            "unidade": {
-              "identificador": "% da área total",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62938
-          },
-          {
-            "id": 62977,
-            "indicador": "Áreas protegidas no total do território nacional",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62938
-          },
-          {
-            "id": 62978,
-            "indicador": "Produção de gás natural",
-            "unidade": {
-              "identificador": "m³",
-              "classe": "N",
-              "multiplicador": 1000000000
-            },
-            "notas": [],
-            "pai": 62938
-          },
-          {
-            "id": 62979,
-            "indicador": "Produção de petróleo",
-            "unidade": {
-              "identificador": "barris/dia",
-              "classe": "N",
-              "multiplicador": 1000
-            },
-            "notas": [],
-            "pai": 62938
+            "classe": "T",
+            "children": [
+              {
+                "id": 62975,
+                "posicao": "5.1",
+                "indicador": "Áreas cultivadas",
+                "classe": "I",
+                "unidade": {
+                  "id": "% da área total",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Food and Agriculture Organization of the United Nations - FAO. FAOSTATS, 2016. Acesso em: jan. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62976,
+                "posicao": "5.2",
+                "indicador": "Áreas de pastagens permanentes",
+                "classe": "I",
+                "unidade": {
+                  "id": "% da área total",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Food and Agriculture Organization of the United Nations - FAO. FAOSTATS, 2016. Acesso em: jan. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62977,
+                "posicao": "5.3",
+                "indicador": "Áreas protegidas no total do território nacional",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Acesso em: jul. 2016."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62978,
+                "posicao": "5.4",
+                "indicador": "Produção de gás natural",
+                "classe": "I",
+                "unidade": {
+                  "id": "m³",
+                  "classe": "N",
+                  "multiplicador": 1000000000
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2016. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2016. Acesso em: dez. 2016."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62979,
+                "posicao": "5.5",
+                "indicador": "Produção de petróleo",
+                "classe": "I",
+                "unidade": {
+                  "id": "barris/dia",
+                  "classe": "N",
+                  "multiplicador": 1000
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2016. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2016. Acesso em: dez. 2016."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "Anuário Estatístico Brasileiro do Petróleo, Gás Natural e Biocombustíveis 2017. Rio de Janeiro: Agência Nacional do Petróleo, Gás Natural e Biocombustíveis, 2017. Acesso em: dez. 2017."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "nota": []
           },
           {
             "id": 62939,
+            "posicao": "6",
             "indicador": "População",
-            "notas": []
-          },
-          {
-            "id": 62980,
-            "indicador": "Densidade demográfica",
-            "unidade": {
-              "identificador": "hab/km²",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "2015",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                "id": 62980,
+                "posicao": "6.1",
+                "indicador": "Densidade demográfica",
+                "classe": "I",
+                "unidade": {
+                  "id": "hab/km²",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2015",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: nov.2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62981,
+                "posicao": "6.2",
+                "indicador": "Homens",
+                "classe": "I",
+                "unidade": {
+                  "id": "habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2017",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2018",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62982,
+                "posicao": "6.3",
+                "indicador": "Mulheres",
+                "classe": "I",
+                "unidade": {
+                  "id": "habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2017",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2018",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62983,
+                "posicao": "6.4",
+                "indicador": "População residente em área rural",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2014",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014.  Population at mid-year. Acesso em: ago.2014."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62984,
+                "posicao": "6.5",
+                "indicador": "População residente em área urbana",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2014",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014.  Population at mid-year. Acesso em: ago.2014."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Urbanization Prospects:The 2014 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2014. Population at mid-year. Acesso em: jan.2018."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62985,
+                "posicao": "6.6",
+                "indicador": "População total",
+                "classe": "I",
+                "unidade": {
+                  "id": "habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2006",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2005",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2004",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2002",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2001",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2000",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2003",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2017",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  },
+                  {
+                    "periodo": "2018",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population at mid-year. Acesso em: dez.2017. (*) Os dados do Brasil foram obtidos da Projeção da População - período 2000-2060 . 2013."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62986,
+                "posicao": "6.7",
+                "indicador": "Taxa bruta de mortalidade",
+                "classe": "I",
+                "unidade": {
+                  "id": "por mil",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2012",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: mar. 2015."
+                    ]
+                  },
+                  {
+                    "periodo": "1970",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "1990",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62987,
+                "posicao": "6.8",
+                "indicador": "Taxa bruta de natalidade",
+                "classe": "I",
+                "unidade": {
+                  "id": "por mil",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2012",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: mar. 2015."
+                    ]
+                  },
+                  {
+                    "periodo": "1970",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "1990",
+                    "fontes": [
+                      "Demographic indicators. In: The state of the world's children 2014. New York: Unicef, 2014. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62988,
+                "posicao": "6.9",
+                "indicador": "Taxa média anual do crescimento da população",
+                "classe": "I",
+                "unidade": {
+                  "id": "%",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2010-2015",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2010-2015",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "1995-2000",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2000-2005",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: jan.2018."
+                    ]
+                  },
+                  {
+                    "periodo": "2005-2010",
+                    "fontes": [
+                      "World Population Prospects: The 2017 Revision. United Nations, Department of Economic and Social Affairs, Population Division. New York, 2017. Population density at mid-year. Acesso em: jan.2018."
+                    ]
+                  }
                 ]
               }
             ],
-            "pai": 62939
-          },
-          {
-            "id": 62981,
-            "indicador": "Homens",
-            "unidade": {
-              "identificador": "habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62939
-          },
-          {
-            "id": 62982,
-            "indicador": "Mulheres",
-            "unidade": {
-              "identificador": "habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62939
-          },
-          {
-            "id": 62983,
-            "indicador": "População residente em área rural",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2014",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62939
-          },
-          {
-            "id": 62984,
-            "indicador": "População residente em área urbana",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2014",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62939
-          },
-          {
-            "id": 62985,
-            "indicador": "População total",
-            "unidade": {
-              "identificador": "habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62939
-          },
-          {
-            "id": 62986,
-            "indicador": "Taxa bruta de mortalidade",
-            "unidade": {
-              "identificador": "por mil",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2012",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62939
-          },
-          {
-            "id": 62987,
-            "indicador": "Taxa bruta de natalidade",
-            "unidade": {
-              "identificador": "por mil",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2012",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62939
-          },
-          {
-            "id": 62988,
-            "indicador": "Taxa média anual do crescimento da população",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
-              {
-                "periodo": "2010-2015",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
-                ]
-              }
-            ],
-            "pai": 62939
+            "nota": []
           },
           {
             "id": 62940,
+            "posicao": "7",
             "indicador": "Redes",
-            "notas": []
-          },
-          {
-            "id": 62989,
-            "indicador": "Assinantes de telefonia celular",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "2015",
-                "notas": [
-                  "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                "id": 62989,
+                "posicao": "7.1",
+                "indicador": "Assinantes de telefonia celular",
+                "classe": "I",
+                "unidade": {
+                  "id": "a cada 100 habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "2015",
+                    "notas": [
+                      "Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada."
+                    ]
+                  }
+                ],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2013. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2012. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2011. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2009. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2008. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2010. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2007. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2015. Acesso em: jul. 2016."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "ICT Statistics Database. Mobile-cellular subscriptions. Geneva: International Telecommunication Union, 2016. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62990,
+                "posicao": "7.2",
+                "indicador": "Linhas telefônicas",
+                "classe": "I",
+                "unidade": {
+                  "id": "a cada 100 habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2013. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2012. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2011. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2009. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2008. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2010. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2007. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2015. Acesso em: jul. 2016."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "ICT Statistics Database. Fixed-telephone subscriptions. Geneva: International Telecommunication Union, 2016. Acesso em: nov. 2017."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62991,
+                "posicao": "7.3",
+                "indicador": "Número de computadores pessoais",
+                "classe": "I",
+                "unidade": {
+                  "id": "a cada 100 domicílios",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "ICTEYE Key ICT Data e Statistics. Advanced Data Search. International Telecomunication Union (ITU). Geneva. Acesso em: jul. 2016."
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 62992,
+                "posicao": "7.4",
+                "indicador": "Usuários com acesso à internet",
+                "classe": "I",
+                "unidade": {
+                  "id": "a cada 100 habitantes",
+                  "classe": "N",
+                  "multiplicador": 1
+                },
+                "children": [],
+                "nota": [],
+                "fonte": [
+                  {
+                    "periodo": "2013",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2013. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2012",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2012. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2011",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2011. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2009",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2009. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2008",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2008. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2010",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2010. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2014",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2014. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2007",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2007. Acesso em: nov. 2017."
+                    ]
+                  },
+                  {
+                    "periodo": "2015",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2015. Acesso em: jul. 2016."
+                    ]
+                  },
+                  {
+                    "periodo": "2016",
+                    "fontes": [
+                      "ICT Statistics Database. Individuals using the Internet. Geneva: International Telecommunication Union, 2016. Acesso em: nov. 2017."
+                    ]
+                  }
                 ]
               }
             ],
-            "pai": 62940
-          },
-          {
-            "id": 62990,
-            "indicador": "Linhas telefônicas",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62940
-          },
-          {
-            "id": 62991,
-            "indicador": "Número de computadores pessoais",
-            "unidade": {
-              "identificador": "a cada 100 domicílios",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62940
-          },
-          {
-            "id": 62992,
-            "indicador": "Usuários com acesso à internet",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 62940
+            "nota": []
           },
           {
             "id": 63050,
+            "posicao": "8",
             "indicador": "Objetivos do Milênio",
-            "notas": []
-          },
-          {
-            "id": 63055,
-            "indicador": "Erradicar a extrema pobreza e a fome",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63051,
-            "indicador": "Meta 1: reduzir pela metade, entre 1990 e 2015, a proporção da população com renda inferior a um dólar (PPC - Paridade do Poder de Compra, que elimina a diferença de preços entre os países) por dia",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63052,
-            "indicador": "Proporção da população que ganha menos de 1,25 dólar (PPC) por dia",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63053,
-            "indicador": "Participação dos 20% mais pobres da população na renda ou no consumo",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63054,
-            "indicador": "Meta 2: Reduzir pela metade, entre 1990 e 2015, a proporção da população que sofre de fome",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63056,
-            "indicador": "Prevalência de crianças (com menos de 5 anos) abaixo do peso",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63057,
-            "indicador": "Proporção da população abaixo do nível mínimo de calorias consumidas (população subnutrida)",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63058,
-            "indicador": "Universalizar a educação primária",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63059,
-            "indicador": "Meta 1: Garantir que, até 2015, todas as crianças, de ambos os sexos, terminem um ciclo completo de ensino básico",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63060,
-            "indicador": "Taxa líquida de matrícula no ensino primário",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63061,
-            "indicador": "Proporção dos alunos que iniciam o 1° ano e atingem o 5° ano",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63062,
-            "indicador": "Taxa de alfabetização na faixa etária de 15 a 24 anos",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63063,
-            "indicador": "Promover a igualdade entre os sexos e a autonomia das mulheres",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63064,
-            "indicador": "Meta 1: Eliminar a disparidade entre os sexos no ensino fundamental e médio, se possível até 2005, e em todos os níveis  do ensino até fins de 2015",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63065,
-            "indicador": "Razão entre mulheres e homens no ensino básico",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63066,
-            "indicador": "Razão entre mulheres e homens no ensino médio",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63067,
-            "indicador": "Razão entre mulheres e homens no ensino superior",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63068,
-            "indicador": "Razão entre mulheres e homens alfabetizados na faixa etária de 15 a 24 anos",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63069,
-            "indicador": "Percentagem de mulheres assalariadas no setor não-agrícola",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63070,
-            "indicador": "Proporção de mulheres exercendo mandatos no parlamento nacional",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63071,
-            "indicador": "Reduzir a mortalidade na infância",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63072,
-            "indicador": "Meta 1: Reduzir em dois terços, entre 1990 e 2015, a mortalidade de crianças menores de 5 anos",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63073,
-            "indicador": "Taxa de mortalidade de crianças menores de 5 anos",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63074,
-            "indicador": "Taxa de mortalidade infantil",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63075,
-            "indicador": "Proporção de crianças de 1 ano vacinadas contra o sarampo",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63076,
-            "indicador": "Melhorar a saúde materna",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63077,
-            "indicador": "Meta 1: Reduzir em 75%, entre 1990 e 2015, as taxas de mortalidade materna",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63078,
-            "indicador": "Taxa de mortalidade materna",
-            "unidade": {
-              "identificador": "óbitos por 100.000 nascidos vivos",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63079,
-            "indicador": "Proporção de partos assistidos por profissional de saúde qualificado",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63080,
-            "indicador": "Combater o HIV/AIDS, a malária e outras doenças",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63081,
-            "indicador": "Meta 1: Até 2015 ter detido e começado a reduzir a propagação do HIV/AIDS",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63082,
-            "indicador": "Homens e mulheres de 15 a 49 anos de idade que vivem com HIV/AIDS",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63083,
-            "indicador": "Meta 2: Até 2015 ter detido e começado a reduzir a incidência da malária e de outras doenças graves",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63084,
-            "indicador": "Taxa de mortalidade associada à tuberculose",
-            "unidade": {
-              "identificador": "óbitos por 100.000 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63085,
-            "indicador": "Casos de tuberculose detectados e curados com tratamento intensivo",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63086,
-            "indicador": "Garantir a sustentabilidade ambiental",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63087,
-            "indicador": "Meta 1: Incorporar os princípios de desenvolvimento sustentável nas políticas públicas  e programas nacionais e inverter a perda de recursos ambientais",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63088,
-            "indicador": "Proporção da superfície coberta por matas",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63089,
-            "indicador": "Proporção de áreas terrestres e marinhas protegidas",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63090,
-            "indicador": "Emissões de dióxido de carbono per capita",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63097,
-            "indicador": "Proporção da população que utiliza combustíveis sólidos",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63098,
-            "indicador": "Meta 2: Reduzir à metade, até 2015, a proporção da população sem acesso permanente e sustentável a água potável e a saneamento básico",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63099,
-            "indicador": "Proporção da população urbana com acesso a uma fonte de água tratada",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63100,
-            "indicador": "Proporção da população rural com acesso a uma fonte de água tratada",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63101,
-            "indicador": "Proporção da população urbana com acesso a melhores condições de saneamento",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63102,
-            "indicador": "Proporção da população rural com acesso a melhores condições de saneamento",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63103,
-            "indicador": "Meta 3: Até 2020, ter alcançado melhoria significativa na vida de pelo menos 100 milhões de habitantes de bairros degradados",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63104,
-            "indicador": "Proporção da população urbana vivendo em bairros degradados ou assentamentos precários (população sem acesso a posse segura de moradia)",
-            "unidade": {
-              "identificador": "%",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63105,
-            "indicador": "Estabelecer uma parceria mundial para o desenvolvimento",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63106,
-            "indicador": "Tratar globalmente o problema da dívida dos países em desenvolvimento, mediante medidas nacionais e internacionais de modo a tornar a sua dívida sustentável a longo prazo",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63107,
-            "indicador": "Meta 5: Em cooperação com os países em desenvolvimento, formular e executar estratégias que permitam que os jovens obtenham um trabalho digno e produtivo",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63108,
-            "indicador": "Meta 6: Em cooperação com as empresas farmacêuticas, proporcionar o acesso a medicamentos essenciais a preços acessíveis, nos países em vias de desenvolvimento",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63109,
-            "indicador": "Meta 7: Em cooperação com o setor privado, tornar acessíveis os benefícios das novas tecnologias, em especial das tecnologias de informação e de comunicações",
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63110,
-            "indicador": "Linhas telefônicas por 100  habitantes",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63111,
-            "indicador": "Assinaturas de telefones celulares por 100 habitantes",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
-          },
-          {
-            "id": 63112,
-            "indicador": "Usuários de internet por 100 habitantes",
-            "unidade": {
-              "identificador": "a cada 100 habitantes",
-              "classe": "N",
-              "multiplicador": 1
-            },
-            "notas": [],
-            "pai": 63050
+            "classe": "T",
+            "children": [
+              {
+                "id": 63055,
+                "posicao": "8.1",
+                "indicador": "Erradicar a extrema pobreza e a fome",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63051,
+                    "posicao": "8.1.1",
+                    "indicador": "Meta 1: reduzir pela metade, entre 1990 e 2015, a proporção da população com renda inferior a um dólar (PPC - Paridade do Poder de Compra, que elimina a diferença de preços entre os países) por dia",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63052,
+                        "posicao": "8.1.1.1",
+                        "indicador": "Proporção da população que ganha menos de 1,25 dólar (PPC) por dia",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 63053,
+                        "posicao": "8.1.1.2",
+                        "indicador": "Participação dos 20% mais pobres da população na renda ou no consumo",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  },
+                  {
+                    "id": 63054,
+                    "posicao": "8.1.2",
+                    "indicador": "Meta 2: Reduzir pela metade, entre 1990 e 2015, a proporção da população que sofre de fome",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63056,
+                        "posicao": "8.1.2.1",
+                        "indicador": "Prevalência de crianças (com menos de 5 anos) abaixo do peso",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63057,
+                        "posicao": "8.1.2.2",
+                        "indicador": "Proporção da população abaixo do nível mínimo de calorias consumidas (população subnutrida)",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63058,
+                "posicao": "8.2",
+                "indicador": "Universalizar a educação primária",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63059,
+                    "posicao": "8.2.1",
+                    "indicador": "Meta 1: Garantir que, até 2015, todas as crianças, de ambos os sexos, terminem um ciclo completo de ensino básico",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63060,
+                        "posicao": "8.2.1.1",
+                        "indicador": "Taxa líquida de matrícula no ensino primário",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63061,
+                        "posicao": "8.2.1.2",
+                        "indicador": "Proporção dos alunos que iniciam o 1° ano e atingem o 5° ano",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63062,
+                        "posicao": "8.2.1.3",
+                        "indicador": "Taxa de alfabetização na faixa etária de 15 a 24 anos",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2013",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63063,
+                "posicao": "8.3",
+                "indicador": "Promover a igualdade entre os sexos e a autonomia das mulheres",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63064,
+                    "posicao": "8.3.1",
+                    "indicador": "Meta 1: Eliminar a disparidade entre os sexos no ensino fundamental e médio, se possível até 2005, e em todos os níveis  do ensino até fins de 2015",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63065,
+                        "posicao": "8.3.1.1",
+                        "indicador": "Razão entre mulheres e homens no ensino básico",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63066,
+                        "posicao": "8.3.1.2",
+                        "indicador": "Razão entre mulheres e homens no ensino médio",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63067,
+                        "posicao": "8.3.1.3",
+                        "indicador": "Razão entre mulheres e homens no ensino superior",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63068,
+                        "posicao": "8.3.1.4",
+                        "indicador": "Razão entre mulheres e homens alfabetizados na faixa etária de 15 a 24 anos",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63069,
+                        "posicao": "8.3.1.5",
+                        "indicador": "Percentagem de mulheres assalariadas no setor não-agrícola",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63070,
+                        "posicao": "8.3.1.6",
+                        "indicador": "Proporção de mulheres exercendo mandatos no parlamento nacional",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63071,
+                "posicao": "8.4",
+                "indicador": "Reduzir a mortalidade na infância",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63072,
+                    "posicao": "8.4.1",
+                    "indicador": "Meta 1: Reduzir em dois terços, entre 1990 e 2015, a mortalidade de crianças menores de 5 anos",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63073,
+                        "posicao": "8.4.1.1",
+                        "indicador": "Taxa de mortalidade de crianças menores de 5 anos",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63074,
+                        "posicao": "8.4.1.2",
+                        "indicador": "Taxa de mortalidade infantil",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63075,
+                        "posicao": "8.4.1.3",
+                        "indicador": "Proporção de crianças de 1 ano vacinadas contra o sarampo",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63076,
+                "posicao": "8.5",
+                "indicador": "Melhorar a saúde materna",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63077,
+                    "posicao": "8.5.1",
+                    "indicador": "Meta 1: Reduzir em 75%, entre 1990 e 2015, as taxas de mortalidade materna",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63078,
+                        "posicao": "8.5.1.1",
+                        "indicador": "Taxa de mortalidade materna",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "óbitos por 100.000 nascidos vivos",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63079,
+                        "posicao": "8.5.1.2",
+                        "indicador": "Proporção de partos assistidos por profissional de saúde qualificado",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63080,
+                "posicao": "8.6",
+                "indicador": "Combater o HIV/AIDS, a malária e outras doenças",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63081,
+                    "posicao": "8.6.1",
+                    "indicador": "Meta 1: Até 2015 ter detido e começado a reduzir a propagação do HIV/AIDS",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63082,
+                        "posicao": "8.6.1.1",
+                        "indicador": "Homens e mulheres de 15 a 49 anos de idade que vivem com HIV/AIDS",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2013",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  },
+                  {
+                    "id": 63083,
+                    "posicao": "8.6.2",
+                    "indicador": "Meta 2: Até 2015 ter detido e começado a reduzir a incidência da malária e de outras doenças graves",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63084,
+                        "posicao": "8.6.2.1",
+                        "indicador": "Taxa de mortalidade associada à tuberculose",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "óbitos por 100.000 habitantes",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63085,
+                        "posicao": "8.6.2.2",
+                        "indicador": "Casos de tuberculose detectados e curados com tratamento intensivo",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63086,
+                "posicao": "8.7",
+                "indicador": "Garantir a sustentabilidade ambiental",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63087,
+                    "posicao": "8.7.1",
+                    "indicador": "Meta 1: Incorporar os princípios de desenvolvimento sustentável nas políticas públicas  e programas nacionais e inverter a perda de recursos ambientais",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63088,
+                        "posicao": "8.7.1.1",
+                        "indicador": "Proporção da superfície coberta por matas",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2011. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2011. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2011. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2011. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 63089,
+                        "posicao": "8.7.1.2",
+                        "indicador": "Proporção de áreas terrestres e marinhas protegidas",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2016. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2014",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2016. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2016. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 63090,
+                        "posicao": "8.7.1.3",
+                        "indicador": "Emissões de dióxido de carbono per capita",
+                        "classe": "I",
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63097,
+                        "posicao": "8.7.1.4",
+                        "indicador": "Proporção da população que utiliza combustíveis sólidos",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  },
+                  {
+                    "id": 63098,
+                    "posicao": "8.7.2",
+                    "indicador": "Meta 2: Reduzir à metade, até 2015, a proporção da população sem acesso permanente e sustentável a água potável e a saneamento básico",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63099,
+                        "posicao": "8.7.2.1",
+                        "indicador": "Proporção da população urbana com acesso a uma fonte de água tratada",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63100,
+                        "posicao": "8.7.2.2",
+                        "indicador": "Proporção da população rural com acesso a uma fonte de água tratada",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63101,
+                        "posicao": "8.7.2.3",
+                        "indicador": "Proporção da população urbana com acesso a melhores condições de saneamento",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      },
+                      {
+                        "id": 63102,
+                        "posicao": "8.7.2.4",
+                        "indicador": "Proporção da população rural com acesso a melhores condições de saneamento",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": []
+                      }
+                    ],
+                    "nota": []
+                  },
+                  {
+                    "id": 63103,
+                    "posicao": "8.7.3",
+                    "indicador": "Meta 3: Até 2020, ter alcançado melhoria significativa na vida de pelo menos 100 milhões de habitantes de bairros degradados",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63104,
+                        "posicao": "8.7.3.1",
+                        "indicador": "Proporção da população urbana vivendo em bairros degradados ou assentamentos precários (população sem acesso a posse segura de moradia)",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "%",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2014",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              },
+              {
+                "id": 63105,
+                "posicao": "8.8",
+                "indicador": "Estabelecer uma parceria mundial para o desenvolvimento",
+                "classe": "T",
+                "children": [
+                  {
+                    "id": 63106,
+                    "posicao": "8.8.1",
+                    "indicador": "Tratar globalmente o problema da dívida dos países em desenvolvimento, mediante medidas nacionais e internacionais de modo a tornar a sua dívida sustentável a longo prazo",
+                    "classe": null,
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63107,
+                    "posicao": "8.8.2",
+                    "indicador": "Meta 5: Em cooperação com os países em desenvolvimento, formular e executar estratégias que permitam que os jovens obtenham um trabalho digno e produtivo",
+                    "classe": null,
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63108,
+                    "posicao": "8.8.3",
+                    "indicador": "Meta 6: Em cooperação com as empresas farmacêuticas, proporcionar o acesso a medicamentos essenciais a preços acessíveis, nos países em vias de desenvolvimento",
+                    "classe": null,
+                    "children": [],
+                    "nota": []
+                  },
+                  {
+                    "id": 63109,
+                    "posicao": "8.8.4",
+                    "indicador": "Meta 7: Em cooperação com o setor privado, tornar acessíveis os benefícios das novas tecnologias, em especial das tecnologias de informação e de comunicações",
+                    "classe": null,
+                    "children": [
+                      {
+                        "id": 63110,
+                        "posicao": "8.8.4.1",
+                        "indicador": "Linhas telefônicas por 100  habitantes",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "a cada 100 habitantes",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2013",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2014",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 63111,
+                        "posicao": "8.8.4.2",
+                        "indicador": "Assinaturas de telefones celulares por 100 habitantes",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "a cada 100 habitantes",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2013",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2014",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 63112,
+                        "posicao": "8.8.4.3",
+                        "indicador": "Usuários de internet por 100 habitantes",
+                        "classe": "I",
+                        "unidade": {
+                          "id": "a cada 100 habitantes",
+                          "classe": "N",
+                          "multiplicador": 1
+                        },
+                        "children": [],
+                        "nota": [],
+                        "fonte": [
+                          {
+                            "periodo": "2013",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2012",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2011",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2009",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2008",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2006",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2005",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2004",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2002",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2001",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2010",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2000",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2014",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2007",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "2003",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1991",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1999",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1996",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1990",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1995",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1992",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1993",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1994",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1997",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          },
+                          {
+                            "periodo": "1998",
+                            "fontes": [
+                              "United Nations Statistics Division, Department of Economic and Social Affairs, Millennium Development Goals Indicators - 2015. Disponível em <http://mdgs.un.org/unsd/mdg/Data.aspx>. Acesso em: jan. 2018."
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "nota": []
+                  }
+                ],
+                "nota": []
+              }
+            ],
+            "nota": []
           },
           {
             "id": 63113,
+            "posicao": "9",
             "indicador": "Objetivos de Desenvolvimento Sustentável",
-            "notas": []
-          },
-          {
-            "id": 63114,
-            "indicador": "Erradicação da pobreza",
-            "notas": [
+            "classe": "T",
+            "children": [
               {
-                "periodo": "-",
-                "notas": [
-                  "Acabar com a pobreza em todas as suas formas, em todos os lugares"
+                "id": 63114,
+                "posicao": "9.1",
+                "indicador": "Erradicação da pobreza",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Acabar com a pobreza em todas as suas formas, em todos os lugares"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63115,
+                "posicao": "9.2",
+                "indicador": "Fome zero",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63116,
+                "posicao": "9.3",
+                "indicador": "Boa saúde e bem-estar",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63117,
+                "posicao": "9.4",
+                "indicador": "Educação de qualidade",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63130,
+                "posicao": "9.5",
+                "indicador": "Igualdade de gênero",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63118,
+                "posicao": "9.6",
+                "indicador": "Água limpa e saneamento",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Garantir disponibilidade e manejo sustentável da água e saneamento para todos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63119,
+                "posicao": "9.7",
+                "indicador": "Energia acessível e limpa",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Garantir acesso à energia barata, confiável, sustentável e renovável para todos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63120,
+                "posicao": "9.8",
+                "indicador": "Emprego digno e crescimento econômico",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63121,
+                "posicao": "9.9",
+                "indicador": "Indústria, inovação e infraestrutura",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63122,
+                "posicao": "9.10",
+                "indicador": "Redução das desigualdades",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Reduzir a desigualdade dentro dos países e entre eles"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63123,
+                "posicao": "9.11",
+                "indicador": "Cidades e comunidades sustentáveis",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63124,
+                "posicao": "9.12",
+                "indicador": "Consumo e produção responsáveis",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Assegurar padrões de produção e de consumo sustentáveis"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63125,
+                "posicao": "9.13",
+                "indicador": "Combate às alterações climáticas",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Tomar medidas urgentes para combater a mudança do clima e seus impactos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63126,
+                "posicao": "9.14",
+                "indicador": "Vida debaixo d´água",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63127,
+                "posicao": "9.15",
+                "indicador": "Vida sobre a Terra",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63128,
+                "posicao": "9.16",
+                "indicador": "Paz, justiça e instituições fortes",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 63129,
+                "posicao": "9.17",
+                "indicador": "Parcerias em prol das metas",
+                "classe": "T",
+                "children": [],
+                "nota": [
+                  {
+                    "periodo": "-",
+                    "notas": [
+                      "Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável"
+                    ]
+                  }
                 ]
               }
             ],
-            "pai": 63113
-          },
-          {
-            "id": 63115,
-            "indicador": "Fome zero",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63116,
-            "indicador": "Boa saúde e bem-estar",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63117,
-            "indicador": "Educação de qualidade",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63130,
-            "indicador": "Igualdade de gênero",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63118,
-            "indicador": "Água limpa e saneamento",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Garantir disponibilidade e manejo sustentável da água e saneamento para todos"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63119,
-            "indicador": "Energia acessível e limpa",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Garantir acesso à energia barata, confiável, sustentável e renovável para todos"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63120,
-            "indicador": "Emprego digno e crescimento econômico",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63121,
-            "indicador": "Indústria, inovação e infraestrutura",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Construir infraestrutura resiliente, promover a industrialização inclusiva e sustentável, e fomentar a inovação"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63122,
-            "indicador": "Redução das desigualdades",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Reduzir a desigualdade dentro dos países e entre eles"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63123,
-            "indicador": "Cidades e comunidades sustentáveis",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63124,
-            "indicador": "Consumo e produção responsáveis",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Assegurar padrões de produção e de consumo sustentáveis"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63125,
-            "indicador": "Combate às alterações climáticas",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Tomar medidas urgentes para combater a mudança do clima e seus impactos"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63126,
-            "indicador": "Vida debaixo d´água",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63127,
-            "indicador": "Vida sobre a Terra",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Proteger, recuperar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, deter e reverter a degradação da terra e deter a perda de biodiversidade"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63128,
-            "indicador": "Paz, justiça e instituições fortes",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar o acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis"
-                ]
-              }
-            ],
-            "pai": 63113
-          },
-          {
-            "id": 63129,
-            "indicador": "Parcerias em prol das metas",
-            "notas": [
-              {
-                "periodo": "-",
-                "notas": [
-                  "Fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável"
-                ]
-              }
-            ],
-            "pai": 63113
+            "nota": []
           }
         ],
         "resultados": [

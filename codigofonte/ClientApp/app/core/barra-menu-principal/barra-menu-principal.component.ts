@@ -29,7 +29,7 @@ export class BarraMenuPrincipalComponent {
     }
 
     navegarPara(event: any) {
-        console.log(event);
+        // console.log(event);
     }
 
 }

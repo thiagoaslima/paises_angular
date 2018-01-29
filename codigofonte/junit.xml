@@ -1,0 +1,12 @@
+<testsuites name="jest tests">
+  <testsuite name="PaisesService E2E" errors="0" failures="0" skipped="0" timestamp="2018-01-29T18:17:34" time="8.664" tests="4">
+    <testcase classname="PaisesService E2E should be instantiated correctly" name="PaisesService E2E should be instantiated correctly" time="0.06">
+    </testcase>
+    <testcase classname="PaisesService E2E run #getHistorico correctly" name="PaisesService E2E run #getHistorico correctly" time="0.201">
+    </testcase>
+    <testcase classname="PaisesService E2E run #getSintese correctly" name="PaisesService E2E run #getSintese correctly" time="0.052">
+    </testcase>
+    <testcase classname="PaisesService E2E run #getTodosDados correctly" name="PaisesService E2E run #getTodosDados correctly" time="0.135">
+    </testcase>
+  </testsuite>
+</testsuites>

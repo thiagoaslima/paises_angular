@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { map } from "rxjs/operators";
+import { map } from "rxjs/operators/map";
+import { tap } from "rxjs/operators/tap";
 
 import { PaisesEnum, PaisesService } from "../shared";
 import { objArrayToMap } from "../../utils";
@@ -30,9 +31,10 @@ export class DadosPaisService  {
 
         return this._paisesService.getTodosDados(siglaPais).pipe(
             map(response => {
+                console.time('#dadosPais process');
                 const resultadosMap = objArrayToMap(response.resultados);
 
-                return setores.reduce((agg: any, id) => {
+                let dados = setores.reduce((agg: any, id) => {
                     const parent = response.metadata.find((obj: any) => obj.posicao === id.toString());
                     let metadata = this._paisesService.flatMetadata(parent.children).map(this._paisesService.toMetadataModel)
 
@@ -42,6 +44,10 @@ export class DadosPaisService  {
 
                     return agg;
                 }, {});
+
+                console.timeEnd('#dadosPais process');
+
+                return dados;
             })
         );
     }
