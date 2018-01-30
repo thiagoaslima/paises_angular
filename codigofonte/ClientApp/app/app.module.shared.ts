@@ -30,10 +30,13 @@ import { CoreModule } from "./core/core.module";
 })
 export class AppModuleShared {
     constructor(
-        @Inject(PLATFORM_ID) private platformId: Object,
-        @Inject(APP_ID) private appId: string) {
+        // @Inject(PLATFORM_ID) private platformId: Object,
+        // @Inject(APP_ID) private appId: string
+    ) {
+        /* 
         const platform = isPlatformBrowser(platformId) ?
             'on the server' : 'in the browser';
-        console.log(`Running ${platform} with appId=${appId}`);
+        console.log(`Running ${platform}`);
+        */
     }
 }

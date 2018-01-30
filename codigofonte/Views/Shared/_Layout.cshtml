@@ -1,16 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - pocNg4DotNet1</title>
-    <base href="~/" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="cache-control"   content="no-transform"/>
+        <meta name="google-site-verification" content="Y47alAVHJKGBilFQVckK9onCXD8CnYclCfeZBDSt9VM" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta >
+        <!--<title>IBGE | Paises</title>-->
 
-    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
-</head>
-<body>
-    @RenderBody()
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="stylesheet" href="/css/global.css">
 
-    @RenderSection("scripts", required: false)
-</body>
+        <!--font awesome-->
+        <link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+
+        <base href="/" />
+        
+    </head>
+    <body class="estado">
+        @RenderBody()
+
+        @RenderSection("scripts", required: false)
+    </body>
 </html>

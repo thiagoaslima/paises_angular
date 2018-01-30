@@ -19,7 +19,7 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.ts$/, include: /ClientApp/, use: isDevBuild ? ['awesome-typescript-loader?silent=true', 'angular-router-loader', 'angular2-template-loader'] : '@ngtools/webpack' },
-                { test: /\.html$/, use: 'html-loader?minimize=false' },
+                { test: /\.html$/, use: 'html-loader?minimize=true' },
                 { test: /\.css$/, use: [ 'to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
                 { test: /\.properties$/, use: 'properties-loader' }
@@ -72,7 +72,8 @@ module.exports = (env) => {
             new AngularCompilerPlugin({
                 tsConfigPath: './tsconfig.json',
                 entryModule: path.join(__dirname, 'ClientApp/app/app.module.server#AppModule'),
-                exclude: ['./**/*.browser.ts']
+                exclude: ['./**/*.browser.ts'],
+                sourceMap: true
             })
         ]),
         output: {

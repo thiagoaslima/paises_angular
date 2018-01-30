@@ -7,7 +7,7 @@ import { AppComponent } from './app-component/app.component';
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
-        BrowserModule.withServerTransition({ appId: 'ibge-paises' }),
+        BrowserModule,//.withServerTransition({ appId: 'ibge-paises' }),
         AppModuleShared
     ],
     providers: [

@@ -5,8 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+// using Microsoft.Extensions.Logging;
 
-namespace pocNg4DotNet2
+namespace Paises
 {
     public class Program
     {
@@ -22,6 +23,10 @@ namespace pocNg4DotNet2
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
+                // .ConfigureLogging((builder) =>
+                // {
+                //     builder.AddFile("Logs/brasil-{Date}.txt");
+                // })
                 .UseStartup<Startup>()
                 .Build();
 

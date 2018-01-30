@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace pocNg4DotNet2
+namespace Paises
 {
     public class Startup
     {
@@ -25,12 +25,21 @@ namespace pocNg4DotNet2
             Configuration = builder.Build();
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add framework services.
             services.AddMvc();
+
+            // services.AddDistributedCacheHandler(options =>
+            // {
+            //     //options.Configuration = "192.168.152.85:6379,192.168.152.85:6380";
+            //     options.Configuration = "10.200.0.160:6379,10.200.0.160:6380";
+            //     options.InstanceName = "Paises:";
+            //     options.AbortOnConnectFail = true;
+            // });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,9 +51,9 @@ namespace pocNg4DotNet2
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
-                    HotModuleReplacement = true
-                });
+                // app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
+                //     HotModuleReplacement = true
+                // });
             }
             else
             {

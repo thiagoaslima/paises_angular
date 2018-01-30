@@ -36,13 +36,8 @@ export class SharedModule {
                 LocalidadeService,
                 PaisesService,
                 PesquisasService,
-                {
-                    provide: PlatformDetectionService,
-                    deps: [PLATFORM_ID],
-                    useFactory: (platform_id: Object) => {
-                        return new PlatformDetectionService(platform_id);
-                    }
-                }
+                PlatformDetectionService
+                
             ]
         };
     }

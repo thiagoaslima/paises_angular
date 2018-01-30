@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace pocNg4DotNet2.Controllers
+namespace Paises.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller

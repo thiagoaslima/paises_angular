@@ -25,8 +25,9 @@
     "Microsoft.Extensions.Caching.Abstractions": "1.1.0",
     "Dapper": "1.50.2",
     "MySqlConnector": "0.23.0",
-    "NETStandard.Library": "1.6.1",
+    "NETStandard.Library": "1.6.1", 
     "MailKit": "1.16.2"
+    // , "Serilog.Extensions.Logging.File": "1.0.1"
   },
 
   "tools": {
@@ -61,6 +62,7 @@
     "include": [
       "appsettings.json",
       "ClientApp/dist",
+      "node_modules",
       "Views",
       "web.config",
       "wwwroot"
@@ -80,6 +82,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "pocNG4DotNet1"
+    "defaultNamespace": "Paises"
   }
 }

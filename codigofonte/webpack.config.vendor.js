@@ -35,7 +35,6 @@ const polyfills = [
 ]
 
 module.exports = (env) => {
-    debugger;
     const extractCSS = new ExtractTextPlugin('vendor.css');
     const isDevBuild = !(env && env.prod);
     
