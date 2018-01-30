@@ -3,6 +3,7 @@ import {
     Optional, SkipSelf
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { BarraMenuPrincipalComponent } from "./barra-menu-principal/barra-menu-principal.component";
 import { BarraGovComponent } from "./barra-gov/barra-gov.component";
@@ -12,7 +13,8 @@ import { SharedModule } from "../shared";
 @NgModule({
     imports: [
         CommonModule,
-        SharedModule
+        SharedModule,
+        RouterModule
     ],
     declarations: [
         BarraGovComponent,
