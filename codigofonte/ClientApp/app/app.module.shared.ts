@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-component/app.component';
 
 import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
+import { AlertComponent } from './core/alert/alert.component';
 import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-menu-principal.component';
 import { CoreModule } from "./core/core.module";
 
@@ -17,6 +18,7 @@ import { CoreModule } from "./core/core.module";
     declarations: [
         AppComponent,
         BarraGovComponent,
+        AlertComponent,
         BarraMenuPrincipalComponent
     ],
     imports: [
