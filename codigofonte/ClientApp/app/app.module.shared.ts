@@ -8,20 +8,14 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app-component/app.component';
-
-import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
-import { AlertComponent } from './core/alert/alert.component';
-import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-menu-principal.component';
 import { CoreModule } from "./core/core.module";
 
 @NgModule({
     declarations: [
-        AppComponent,
-        BarraGovComponent,
-        AlertComponent,
-        BarraMenuPrincipalComponent
+        AppComponent
     ],
     imports: [
+        CoreModule,
         CommonModule,
         HttpModule,
         HttpClientModule,
@@ -31,11 +25,11 @@ import { CoreModule } from "./core/core.module";
     ]
 })
 export class AppModuleShared {
-    constructor(
-        @Inject(PLATFORM_ID) private platformId: Object,
-        @Inject(APP_ID) private appId: string) {
-        const platform = isPlatformBrowser(platformId) ?
-            'on the server' : 'in the browser';
-        console.log(`Running ${platform} with appId=${appId}`);
-    }
+    // constructor(
+    //     @Inject(PLATFORM_ID) private platformId: Object,
+    //     @Inject(APP_ID) private appId: string) {
+    //     const platform = isPlatformBrowser(platformId) ?
+    //         'on the server' : 'in the browser';
+    //     console.log(`Running ${platform} with appId=${appId}`);
+    // }
 }

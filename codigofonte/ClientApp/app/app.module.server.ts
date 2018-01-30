@@ -5,12 +5,12 @@ import { AppModuleShared } from './app.module.shared';
 import { AppComponent } from './app-component/app.component';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
     imports: [
         AppModuleShared,
         ServerModule,
         ModuleMapLoaderModule
-    ]
+    ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }
