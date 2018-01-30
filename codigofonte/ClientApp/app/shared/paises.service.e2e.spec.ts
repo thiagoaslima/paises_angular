@@ -16,13 +16,7 @@ describe('PaisesService E2E', () => {
       ],
       providers: [
         HttpClient,
-        PaisesService,
-        // {
-        //   provide: PaisesService,
-        //   deps: [HttpClient, Http],
-        //   useFactory: (httpClient: HttpClient, http: Http) => new PaisesService(httpClient, http)
-        // }
-        
+        PaisesService
       ]
     })
   });

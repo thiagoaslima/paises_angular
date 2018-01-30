@@ -12,6 +12,7 @@ import { DadosPaisService } from './dados-pais.service';
     selector: 'dados-pais',
     templateUrl: './dados-pais.component.html',
     styleUrls: ['./dados-pais.component.css'],
+    // changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [
         SinteseHomeService, 
         DadosPaisService
@@ -50,14 +51,17 @@ export class DadosPaisComponent {
 
                 this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
+                    // this._changeDetector.detectChanges();
                 });
 
                 this._dadosPaisService.getHistorico(pais.sigla).subscribe(historico => {
                     this.historico = historico;
+                    // this._changeDetector.detectChanges();
                 })
 
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
                     this.temas = resultados;
+                    // this._changeDetector.detectChanges();
                 });
                 
             } else {
@@ -69,7 +73,7 @@ export class DadosPaisComponent {
     }
 
     ngOnDestroy() {
-        this._changeDetector.detach();
+        // this._changeDetector.detach();
         Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
