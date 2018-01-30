@@ -13,6 +13,7 @@ quokka.js
 
 # macos
 */.DS_Store
+.DS_Store
 
 # Created by https://www.gitignore.io/api/git,node,linux,macos,windows,angular,aspnetcore
 
