@@ -2,14 +2,17 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
-import { Resultado } from './resultado.model';
-import { RequestService } from './request.service';
 import { Observable } from 'rxjs/Observable';
+import  'rxjs/add/observable/zip';
 import { map } from 'rxjs/operators/map';
 import { zip } from 'rxjs/operators/zip';
 import { tap } from 'rxjs/operators/tap';
+
+import { RequestService } from './request.service';
 import { PaisesEnum } from './paises.enum';
+import { chunkArray, flattenArray } from '../../utils';
+import { LocalidadeService } from './localidade/localidade.service';
+import { Resultado } from './resultado.model';
 
 export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
@@ -20,7 +23,8 @@ export type ConsultaResultado =
 export class PaisesService extends RequestService {
 
     constructor(
-        _httpClient: HttpClient
+        _httpClient: HttpClient,
+        private _localidadeService: LocalidadeService
     ) {
         super(_httpClient);
     }
@@ -54,11 +58,37 @@ export class PaisesService extends RequestService {
 
 
         return metadataObservable.pipe(
-            tap(_ => console.time('#getDados')),
             zip(resultadosObservable),
-            map(([metadata, resultados]) => ({ metadata, resultados })),
-            tap(obj => { console.timeEnd('#getDados'); }),
+            map(([metadata, resultados]) => ({ metadata, resultados }))
         );
+    }
+
+    /*
+     * TODO
+     * refatorar servicor para oferecer uma API compatível
+     */
+    getRanking(indicadorId: number) {
+        console.time("getRanking");
+        const periodos = ["2018", "2017", "2016", "2015", "2014", "2014-2016", "2013-2015", "2012-2014", "2010-2015", "-"].join("|");
+        const siglas = this._localidadeService.getAllSiglas();
+        const conjuntos = chunkArray(siglas, Math.ceil(siglas.length/5));
+
+        return Observable.zip(
+            ...conjuntos.map(siglas => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodos}/indicadores/${indicadorId}/resultados/${siglas.join('|')}`))
+        ).pipe(
+            tap(_ => console.timeEnd("getRanking")),
+            tap(_ => console.time("rankingProcess")),
+            map((resultados: any[]) => {
+                let arr = resultados.reduce((agg:any, res:any) => {
+                    let models = res[0].res.map((obj: any) => this.toResultadoModel({id: res[0].id, res: [obj]}));
+                    agg = agg.concat(models);
+                    return agg;
+                }, [] as any[]);
+                console.log(arr);
+                return arr;
+            }),
+            tap(_ => console.timeEnd("rankingProcess")),
+        )
     }
 
     flatMetadata(metadatas: any[]): any[] {
@@ -93,7 +123,7 @@ export class PaisesService extends RequestService {
     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
         let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
-                agg[periodo] = resultado.res[0].res[periodo];
+                agg[periodo] = this.treatSpecialValues(resultado.res[0].res[periodo]);
             }
 
             return agg;
@@ -118,6 +148,17 @@ export class PaisesService extends RequestService {
             localidade: resultado.res[0].localidade,
             valores,
             periodos
+        }
+    }
+
+    treatSpecialValues(valor: string) {
+        switch (valor) {
+            case "99999999999999":
+            case "99999999999998":
+                return "-"
+            
+            default:
+                return valor;
         }
     }
 

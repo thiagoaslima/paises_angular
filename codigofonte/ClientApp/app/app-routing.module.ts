@@ -13,7 +13,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'ranking/:indicador', canActivate: [isIndicadorGuard], children: [
+    path: 'ranking/:indicador', children: [
       { path: '', loadChildren: './ranking/ranking.module#RankingModule' }
     ]
   },
