@@ -6,19 +6,24 @@ import { Subscription } from 'rxjs/Subscription';
 import { RouterParamsService, LocalidadeService, Pais } from "../shared";
 import { PaisesService } from "../shared/paises.service";
 import { SinteseHomeService } from "../mapa-section/sintese-home/sintese-home.service";
-import { ItemTemaComponent } from "../sandbox/componentes/item-tema.component";
+import { DadosPaisService } from './dados-pais.service';
 
 @Component({
     selector: 'dados-pais',
     templateUrl: './dados-pais.component.html',
     styleUrls: ['./dados-pais.component.css'],
-    providers: [SinteseHomeService],
-	changeDetection: ChangeDetectionStrategy.OnPush
+    // changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [
+        SinteseHomeService, 
+        DadosPaisService
+    ]
 })
 export class DadosPaisComponent {
     public pais: Pais | null = null;
     public imageSrc = ''
     public itens = <any[]>[];
+    public historico= '';
+    public temas: any = [];
 
     historico_aberto = false;
 
@@ -30,11 +35,13 @@ export class DadosPaisComponent {
         private _routerParams: RouterParamsService,
         private _localidadeService: LocalidadeService,
         private _sinteseService: SinteseHomeService,
-		private _changeDetector: ChangeDetectorRef
+        private _changeDetector: ChangeDetectorRef,
+        private _dadosPaisService: DadosPaisService
     ) { }
 
     ngOnInit() {
         this._subscriptions.params = this._routerParams.params$.subscribe(({ params, url }) => {
+            
             let pais = this._localidadeService.getPaisBySlug(params.pais);
             this.itens.length = 0;
             this.setImageSrc(pais);
@@ -44,18 +51,30 @@ export class DadosPaisComponent {
 
                 this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
-					this._changeDetector.detectChanges();
+                    // this._changeDetector.detectChanges();
                 });
+
+                this._dadosPaisService.getHistorico(pais.sigla).subscribe(historico => {
+                    this.historico = historico;
+                    // this._changeDetector.detectChanges();
+                })
+
+                this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
+                    this.temas = resultados;
+                    // this._changeDetector.detectChanges();
+                });
+                
             } else {
                 this.pais = null;
             }
-            console.log(pais);
+
+            
         });
     }
 
     ngOnDestroy() {
-        this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        // this._changeDetector.detach();
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {

@@ -11,14 +11,12 @@ export class isPaisGuard implements CanActivate {
     ) { }
 
     canActivate(routeSnapshot: ActivatedRouteSnapshot) {
-        console.log('pais');
         let pais = null;
 
         if (routeSnapshot.params.pais) {
             pais = this.localidadeService.getPaisBySlug(routeSnapshot.params.pais);
         }
-        
-        console.log('pais', Boolean(pais), pais);
+       
         return Boolean(pais);
     }
 }

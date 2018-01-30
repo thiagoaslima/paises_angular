@@ -9,6 +9,7 @@ quokka.js
 # Problemas entre OS 
 */project.lock.json
 */npm-shrinkwrap.json
+*/package-lock.json
 
 # macos
 */.DS_Store

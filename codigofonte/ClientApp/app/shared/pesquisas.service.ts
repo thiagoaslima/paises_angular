@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { MetadataResultado, Resultado } from './resultado.model';
+import { RequestService } from './request.service';
+import { HttpClient } from '@angular/common/http';
 
 export interface RetornoPesquisa {
     metadata: MetadataResultado[];
@@ -12,10 +14,13 @@ export interface RetornoPesquisa {
 }
 
 @Injectable()
-export class PesquisasService {
+export class PesquisasService extends RequestService {
     constructor(
+        _httpClient: HttpClient,
         private _http: Http
-    ) { }
+    ) { 
+        super(_httpClient);
+    }
 
     flatMetadata(metadatas: any[]): any[] {
         let flatMetadatas: any[] = [];
@@ -46,7 +51,7 @@ export class PesquisasService {
         };
     };
     
-    toResultadoModel(resultado: { id:number, res:{localidade:string, res:any}[] }): Resultado {
+    toResultadoModel(resultado: { id:number, res:{localidade:string, res:any}[] }) {
         let valorMaisRecente = Object.keys(resultado.res[0].res).reduce((agg, key) => {
             if(resultado.res[0].res[key] && key > agg.periodo) {
                 agg.periodo = key;
@@ -58,23 +63,47 @@ export class PesquisasService {
 
         return {
             id: resultado.id,
-            valor: valorMaisRecente.valor,
-            periodo: valorMaisRecente.periodo,
+            valorMaisRecente: valorMaisRecente.valor,
+            periodoMaisRecente: valorMaisRecente.periodo,
             localidade: resultado.res[0].localidade
         }
     }
     
-    get(identificador: {pesquisaId: string, indicadorId: string, localidadeId: string}): Observable<RetornoPesquisa> {
+    get(identificador: { pesquisaId: string, indicadorId: string, localidadeId: string }) {
+        let { pesquisaId, indicadorId, localidadeId } = identificador;    
+
         return Observable.zip(
-            this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}/resultados/${identificador.localidadeId}`),
-            this._http.get(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${identificador.pesquisaId}/indicadores/${identificador.indicadorId}`)
+            this._getPesquisa(pesquisaId),
+            this._getMetadata(pesquisaId, indicadorId),
+            this._getResultado(pesquisaId, indicadorId, localidadeId)
         )
-            .map(([resResultado, resMetadata]) => [resResultado.json(), resMetadata.json()])
-            .map(([resultados, metadata]) => {
+            .map(([pesquisa, metadata, resultados]) => {
                 return {
-                    metadata: this.flatMetadata(metadata).map(this.toMetadataModel),
-                    resultados: resultados.map(this.toResultadoModel)
+                    pesquisa,
+                    metadata,
+                    resultados
                 };
             });
+    }
+
+    private _getPesquisa(pesquisaId = '') {
+        return this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}`);
+    }
+
+    private _getMetadata(pesquisaId: string, indicadorId: string) {
+        if (!indicadorId) {
+            return [];
+        }
+        return this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}/indicadores/${indicadorId}`)
+            .map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel));
+
+    }
+
+    private _getResultado(pesquisaId: string, indicadorId: string, localidadeId: string) {
+        if (!localidadeId) {
+            return []
+        }
+        return this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/${pesquisaId}/indicadores/${indicadorId}/resultados/${localidadeId}`)
+            .map(resultados => resultados.map(this.toResultadoModel));
     }
 }

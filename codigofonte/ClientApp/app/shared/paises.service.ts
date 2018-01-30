@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
-
-import { Observable } from 'rxjs';
+import { Http } from '@angular/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
 import { Resultado } from './resultado.model';
+import { RequestService } from './request.service';
+import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators/map';
+import { zip } from 'rxjs/operators/zip';
+import { tap } from 'rxjs/operators/tap';
+import { PaisesEnum } from './paises.enum';
 
 export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
@@ -11,78 +17,108 @@ export type ConsultaResultado =
     { servico: 'conjunturais', identificador: any }
 
 @Injectable()
-export class PaisesService {
+export class PaisesService extends RequestService {
 
     constructor(
-        private _pesquisasServ: PesquisasService
-    ) { }
-
-    getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
-        let observable;
-
-        switch (consulta.servico) {
-            case "pesquisas":
-                observable = this._pesquisasServ.get(consulta.identificador);
-                break;
-            case "conjunturais":
-                break;
-        }
-
-        return observable ? observable : Observable.of({
-            metadata: [],
-            resultados: []
-        });
-
+        _httpClient: HttpClient
+    ) {
+        super(_httpClient);
     }
 
-    getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa> {
-        const requestsObj = <{ [key: string]: ConsultaResultado }>{};
+    getSintese(siglaPais: string) {
+        const metadataParams = new HttpParams().set('scope', 'one');
 
-        consultas.forEach(consulta => {
-            let key = this.buildkey(consulta);
+        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
+            .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
 
-            if (!requestsObj[key]) {
-                requestsObj[key] = <ConsultaResultado>{
-                    servico: consulta.servico,
-                    identificador: Object.assign({}, consulta.identificador)
-                }
-            } else {
-                this._mergeConsultas(requestsObj[key], consulta);
+        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
+            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+
+
+        return metadataObservable.pipe(
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados }))
+        );
+    }
+
+    getHistorico(siglaPais: string) {
+        return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
+            .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))
+    }
+
+    getTodosDados(siglaPais: string) {
+        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
+
+        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
+            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+
+
+        return metadataObservable.pipe(
+            tap(_ => console.time('#getDados')),
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados })),
+            tap(obj => { console.timeEnd('#getDados'); }),
+        );
+    }
+
+    flatMetadata(metadatas: any[]): any[] {
+        let flatMetadatas: any[] = [];
+
+        metadatas.forEach((metadata) => {
+            flatMetadatas.push(metadata);
+            flatMetadatas.push(...this.flatMetadata(metadata.children).map((m) => {
+                m.pai = metadata.id;
+                return m;
+            }));
+        });
+
+        return flatMetadatas;
+    }
+
+    toMetadataModel(metadata: any) {
+        return {
+            id: metadata.id,
+            indicador: metadata.indicador,
+            unidade: metadata.unidade ? {
+                identificador: metadata.unidade.id,
+                classe: metadata.unidade.classe,
+                multiplicador: metadata.unidade.multiplicador
+            } : undefined,
+            notas: metadata.nota,
+            fontes: metadata.fontes,
+            pai: metadata.pai
+        };
+    };
+
+    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+        let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
+            if (resultado.res[0].res[periodo]) {
+                agg[periodo] = resultado.res[0].res[periodo];
             }
-        });
 
-        const observables = Object.keys(requestsObj).map(key => this.getResultados(requestsObj[key]));
-        return Observable.zip(...observables).map(resultados => {
-            return resultados.reduce((agg, res) => {
-                agg.metadata.push(...res.metadata);
-                agg.resultados.push(...res.resultados);
-                return agg;
-            }, {metadata: [], resultados: []});
-        });
-    }
+            return agg;
+        }, {} as { [periodo: string]: string });
 
-    public buildkey(consulta: ConsultaResultado) {
-        const servico = consulta.servico
-        const { pesquisaId } = consulta.identificador;
+        let valorMaisRecente = Object.keys(valoresValidos).reduce((agg, periodo) => {
+            if (valoresValidos[periodo] && periodo > agg.periodo) {
+                agg.periodo = periodo;
+                agg.valor = valoresValidos[periodo];
+            }
 
-        return `${servico}-${pesquisaId}`;
-    }
+            return agg;
+        }, { periodo: "", valor: '' });
 
+        let periodos = Object.keys(valoresValidos).sort();
+        let valores = periodos.map(periodo => valoresValidos[periodo]);
 
-    private _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
-        switch (consulta.servico) {
-            case 'pesquisas':
-                const indicadores = agg.identificador.indicadorId;
-                if (indicadores.split('|').indexOf(consulta.identificador.indicadorId) == -1) {
-                    agg.identificador.indicadorId += `|${consulta.identificador.indicadorId}`
-                }
-
-                const localidades = agg.identificador.localidadeId;
-                if (localidades.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
-                    agg.identificador.localidadeId += `|${consulta.identificador.localidadeId}`
-                }
+        return {
+            id: resultado.id,
+            valorMaisRecente: valorMaisRecente.valor,
+            periodoMaisRecente: valorMaisRecente.periodo,
+            localidade: resultado.res[0].localidade,
+            valores,
+            periodos
         }
-
-        return agg;
     }
+
 }

@@ -21,15 +21,11 @@ export interface RouterParams {
 export class RouterParamsService {
 
     public params$: BehaviorSubject<RouterParams>;
-    private isBrowser: boolean;
 
     constructor(
         private _router: Router,
-        private _route: ActivatedRoute,
-        @Inject(PLATFORM_ID) platformId: Object,
+        private _route: ActivatedRoute
     ) {
-        this.isBrowser = isPlatformBrowser(platformId);
-
         this.params$ = new BehaviorSubject({ params: {}, queryParams: {}, url: '' });
 
         this._router.events

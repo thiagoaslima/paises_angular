@@ -7,6 +7,9 @@ import {
     PaisesService,
     Resultado
 } from "../../shared";
+import { PaisesEnum } from '../../shared/paises.enum';
+import { map } from 'rxjs/operators';
+import { objArrayToMap } from '../../../utils/objArrayToMap';
 
 
 @Injectable()
@@ -17,46 +20,23 @@ export class SinteseHomeService {
         private _paisesService: PaisesService
     ) { }
 
-    getSinteseConfiguration(localidadeId?: string) {
-        if (!localidadeId) {
-            return this._itemsConfig.slice();
-        }
-        return this._itemsConfig.map(item => {
-            return {
-                titulo: item.titulo,
-                config: item.config.map(o => {
-                    let item = Object.assign({}, o, { servico: <'pesquisas' | 'conjunturais'>o.servico })
-                    if (item.identificador.hasOwnProperty('localidadeId')) {
-                        item.identificador.localidadeId = localidadeId;
-                    }
-                    return item;
-                })
-            };
-        });
-    }
+    
+    getSintese(siglaPais: string) {
+        const order = [
+            PaisesEnum.sintese.capital,
+            PaisesEnum.sintese.extensao,
+            PaisesEnum.sintese.idioma,
+            PaisesEnum.sintese.localizacao,
+            PaisesEnum.sintese.moeda
+        ];
 
-    getSintese(localidadeId: string) {
-        const configuration = this.getSinteseConfiguration(localidadeId);
-        const consultas = configuration.reduce((agg, item) => {
-            return agg.concat((<any>item).config);
-        }, <ConsultaResultado[]>[])
-        return this._paisesService.getDiversosResultados(consultas)
-            .map(response => {
-                const metaMap = response.metadata.reduce((agg, meta) => {
-                    agg[meta.id.toString()] = meta;
-                    return agg;
-                }, <{ [id: string]: MetadataResultado }>{});
+        return this._paisesService.getSintese(siglaPais).pipe(
+            map((response: any) => {
+                const metadataMap = objArrayToMap(response.metadata);
+                const resultadosMap = objArrayToMap(response.resultados);
 
-                const resultadosMap = response.resultados.reduce((agg, res) => {
-                    agg[res.id.toString()] = res;
-                    return agg;
-                }, <{ [id: string]: Resultado }>{});
-
-                return configuration.map(obj => {
-                    const config = obj.config[0];
-                    const id = config.identificador.indicadorId;
-
-                    let metaUnidade = metaMap[id].unidade;
+                return order.map(id => {
+                    let metaUnidade = metadataMap[id].unidade;
                     let unidade = '';
 
                     if (metaUnidade) {
@@ -68,12 +48,14 @@ export class SinteseHomeService {
                     }
 
                     return {
-                        titulo: obj.titulo || metaMap[id].indicador,
-                        valor: resultadosMap[id].valor,
-                        unidade: unidade
+                        titulo: metadataMap[id].indicador,
+                        valor: resultadosMap[id].valorMaisRecente,
+                        unidade
                     };
                 })
             })
+        )
+       
     }
 
 }
