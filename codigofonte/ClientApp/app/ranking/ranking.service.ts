@@ -13,6 +13,11 @@ export class RankingService {
         private _localidadeService: LocalidadeService
     ) {}
 
+    getNomeIndicador(indicadorId: number) {
+        return this._paisesService.getIndicador(indicadorId)
+            .pipe(map(([metadata]) => metadata.indicador.toUpperCase()));
+    }
+
     getValores(indicadorId: number) {
         return this._paisesService.getRanking(indicadorId).pipe(
             tap(_ => console.time("#getValores")),

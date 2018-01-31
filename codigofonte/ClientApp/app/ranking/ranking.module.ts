@@ -17,9 +17,12 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(routes)
+        // RouterModule.forChild(routes)
     ],
     declarations: [
+        RankingComponent
+    ],
+    entryComponents: [
         RankingComponent
     ],
     providers: [
