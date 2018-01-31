@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import  'rxjs/add/observable/zip';
+import 'rxjs/add/observable/zip';
 import { map } from 'rxjs/operators/map';
 import { zip } from 'rxjs/operators/zip';
 import { tap } from 'rxjs/operators/tap';
@@ -36,7 +36,7 @@ export class PaisesService extends RequestService {
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
 
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
 
         return metadataObservable.pipe(
@@ -54,7 +54,7 @@ export class PaisesService extends RequestService {
         const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
 
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
 
         return metadataObservable.pipe(
@@ -71,7 +71,7 @@ export class PaisesService extends RequestService {
         console.time("getRanking");
         const periodos = ["2018", "2017", "2016", "2015", "2014", "2014-2016", "2013-2015", "2012-2014", "2010-2015", "-"].join("|");
         const siglas = this._localidadeService.getAllSiglas();
-        const conjuntos = chunkArray(siglas, Math.ceil(siglas.length/5));
+        const conjuntos = chunkArray(siglas, Math.ceil(siglas.length / 5));
 
         return Observable.zip(
             ...conjuntos.map(siglas => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodos}/indicadores/${indicadorId}/resultados/${siglas.join('|')}`))
@@ -79,8 +79,8 @@ export class PaisesService extends RequestService {
             tap(_ => console.timeEnd("getRanking")),
             tap(_ => console.time("rankingProcess")),
             map((resultados: any[]) => {
-                let arr = resultados.reduce((agg:any, res:any) => {
-                    let models = res[0].res.map((obj: any) => this.toResultadoModel({id: res[0].id, res: [obj]}));
+                let arr = resultados.reduce((agg: any, res: any) => {
+                    let models = res[0].res.map((obj: any) => this.toResultadoModel({ id: res[0].id, res: [obj] }));
                     agg = agg.concat(models);
                     return agg;
                 }, [] as any[]);
@@ -118,12 +118,13 @@ export class PaisesService extends RequestService {
             fontes: metadata.fontes,
             pai: metadata.pai
         };
-    };
+    }
 
     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+        const that = this;
         let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
-                agg[periodo] = this.treatSpecialValues(resultado.res[0].res[periodo]);
+                agg[periodo] = that._treatSpecialValues(resultado.res[0].res[periodo]);
             }
 
             return agg;
@@ -148,15 +149,15 @@ export class PaisesService extends RequestService {
             localidade: resultado.res[0].localidade,
             valores,
             periodos
-        }
+        };
     }
 
-    treatSpecialValues(valor: string) {
+    private _treatSpecialValues(valor: string) {
         switch (valor) {
             case "99999999999999":
             case "99999999999998":
                 return "-"
-            
+
             default:
                 return valor;
         }

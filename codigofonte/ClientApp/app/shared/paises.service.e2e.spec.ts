@@ -4,6 +4,7 @@ import { SharedModule } from "./shared.module";
 import { PaisesService } from "./paises.service";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { ConnectionBackend, HttpModule, Http } from "@angular/http";
+import { LocalidadeService } from "./localidade/localidade.service";
 
 
 describe('PaisesService E2E', () => {
@@ -16,6 +17,7 @@ describe('PaisesService E2E', () => {
       ],
       providers: [
         HttpClient,
+        LocalidadeService,
         PaisesService
       ]
     })
@@ -71,7 +73,7 @@ describe('PaisesService E2E', () => {
       expect(metadataIds).toEqual(expectedMetadataIds);
       expect(metadataChildren).toBeTruthy();
       expect(resultadosIds).toEqual(expectedResultadosIds);
-      
+
       done();
     });
   })
