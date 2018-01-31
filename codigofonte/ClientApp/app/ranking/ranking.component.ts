@@ -22,7 +22,7 @@ export class RankingComponent {
             if (params.indicador) {
                 this._rankingService
                     .getValores(parseInt(params.indicador, 10))
-                    .subscribe(res => { this.dados = res })
+                    .subscribe(res => { this.dados = res; })
             }
         })
     }

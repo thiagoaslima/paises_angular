@@ -45,6 +45,11 @@ export class PaisesService extends RequestService {
         );
     }
 
+    getIndicador(indicadorId: number) {
+        return this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`)
+            .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
+    }
+
     getHistorico(siglaPais: string) {
         return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
             .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))

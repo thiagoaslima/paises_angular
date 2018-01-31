@@ -111,6 +111,22 @@ table tr td:first-child, table thead tr th:first-child {
 	text-align:right;
 }
 
+tr th:first-of-type,
+tr td:first-of-type {
+	width: 26%;
+}
+
+tr th:last-of-type,
+tr td:last-of-type {
+	width: 32%;
+	text-align: right;
+}
+
+.table-overflow-scroll {
+	max-height: 465px;
+	overflow: auto;
+}
+
 .leiamais {
     background-color: #3f3f3f;
     color: #fff;
