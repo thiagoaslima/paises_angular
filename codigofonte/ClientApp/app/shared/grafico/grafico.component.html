@@ -1,0 +1,39 @@
+<div class="grafico">
+    <!--valor-->
+    <div class="grafico__valor-container">
+        <p class="grafico__valor">&nbsp; {{ getValor() }}</p>
+        <p class="grafico__valor-metadata">&nbsp; {{ getMetadata() }}</p>
+    </div>
+    <!-->grafico<-->
+    <svg [attr.viewBox]="'0 0 ' + LARGURA_GRAFICO + ' ' + ALTURA_GRAFICO" class="grafico__svg">
+        <!--eixo x-->
+        <line x1="0" [attr.y1]="POSICAO_EIXO_X" x2="320" [attr.y2]="POSICAO_EIXO_X" class="grafico__eixo-x"/>
+
+        <!--rótulos-->
+        <text *ngFor="let rotulo of rotulosX; let i = index" [attr.x]="getX(i, LARGURA_ROTULO)" [attr.y]="POSICAO_EIXO_X + ALTURA_ROTULO" class="grafico__rotulo">{{ rotulo }}</text>
+
+        <!--linhas guia tracejadas-->
+        <line *ngFor="let rotulo of rotulosX; let i = index" [attr.x1]="getX(i, 0)" [attr.y1]="POSICAO_EIXO_X" [attr.x2]="getX(i, 0)" [attr.y2]="getMaxY(i)" class="grafico__linha-guia"/>
+
+        <!--linhas dos dados com pontos-->
+        <g *ngFor="let dado of dados; let j = index">
+            <!--linha-->
+            <line *ngFor="let valor of dado; let i = index"
+                [attr.x1]="getX(i, 0)" [attr.y1]="getY(i, j)"
+                [attr.x2]="getX(i + 1, 0)" [attr.y2]="getY(i + 1, j)" [ngClass]="'grafico__linha grafico__cor--' + j"/>
+            <!--ponto-->
+            <circle *ngFor="let valor of dado; let i = index" [attr.cx]="getX(i, 0)" [attr.cy]="getY(i, j)" r="3px"
+                [ngClass]="'grafico__ponto grafico__cor--' + j" (mouseenter)="mostraValor(i, j)" (mouseleave)="escondeValor()"/>
+        </g>
+    </svg>
+    <!--legenda-->
+    <div class="grafico__legenda" *ngIf="rotulosY != null && rotulosY.length > 1">
+        <div class="grafico__legenda-item" *ngFor="let rotulo of rotulosY; let i = index">
+            <div class="grafico__legenda-icone">
+                <span [ngClass]="'grafico__legenda-barra grafico__cor--' + i" ></span>
+                <span [ngClass]="'grafico__legenda-circulo grafico__cor--' + i"></span>
+            </div>
+            <span class="grafico__legenda-nome">{{ rotulo }}</span>
+        <div>
+    </div>
+</div>

@@ -53,7 +53,13 @@
             </button>
         </div>
     </div>
-
+    <!--graficos-->
+    <grafico 
+        [rotulosX]="[2000, 2001, 2002, 2003, 2020]"
+        [rotulosY]="['Brasil', 'China', 'Espanha', 'Russia', 'Egito']"
+        [dados]="[[1, 1, 0.5, 0, 0], [0.75, 0.8, 0.5, 1, 0], [10,20,30,40,50]]">
+    </grafico>
+    <!--tabelas-->
     <div>
         <h2>Gráficos</h2>
         <div *ngFor="let tema of temas">
@@ -68,5 +74,4 @@
             </table>
         </div>
     </div>
-
 </div>
