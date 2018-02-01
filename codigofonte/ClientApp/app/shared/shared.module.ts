@@ -1,4 +1,5 @@
 import { NgModule, ModuleWithProviders, Injector, PLATFORM_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
@@ -11,14 +12,17 @@ import { MalhaService } from './malha/malha.service';
 import { PlatformDetectionService } from './platform-detection.service';
 
 import { LogoODSComponent } from './logo-ods/logo-ods.component';
+import { GraficoComponent } from './grafico/grafico.component';
 
 @NgModule({
-    imports: [],
+    imports: [CommonModule],
     declarations: [
-        LogoODSComponent
+        LogoODSComponent,
+        GraficoComponent
     ],
     exports: [
-        LogoODSComponent
+        LogoODSComponent,
+        GraficoComponent
     ],
     providers: [
         TraducaoService,
