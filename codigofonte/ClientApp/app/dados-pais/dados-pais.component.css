@@ -131,6 +131,62 @@
     display: none;
 }
 
+/*card*/
+
+.dados-pais__cards-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dados-pais__card{
+    display: inline-block;
+    width: 95%;
+    border: 1px solid black;
+    margin: 5px;
+    vertical-align: top;
+}
+
+.dados-pais__card-barra-titulo{
+    padding: 12px 18px 0px 18px;
+    position: relative;
+}
+
+.dados-pais__card-titulo{
+    text-align: left;
+    font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.dados-pais__card-combo{
+    width: 100%;
+    display: block;
+    padding: 3px 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0 5px 0;
+    box-shadow: inset 0 1px 3px #ddd;
+    font-size: 0.9em;
+}
+
+.dados-pais__card-rodape{
+    padding: 12px 18px;
+}
+
+.dados-pais__card-fonte{
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    margin: 0px;
+}
+
+.dados-pais__card-fonte-titulo{
+    font-size: 1em;
+    font-weight: bold;
+}
+
 /*desktop*/
 @media only screen and (min-width : 568px) {
 
@@ -257,4 +313,17 @@
         font-size: 0.8em;
     }
 
+    /*card*/
+
+    .dados-pais__card{
+        width: 45%;
+    }
+
+}
+
+/*telas grandes*/
+@media only screen and (min-width : 992px) {
+    .dados-pais__card{
+        width: 30%;
+    }
 }

@@ -22,7 +22,7 @@
                 [attr.x1]="getX(i, 0)" [attr.y1]="getY(i, j)"
                 [attr.x2]="getX(i + 1, 0)" [attr.y2]="getY(i + 1, j)" [ngClass]="'grafico__linha grafico__cor--' + j"/>
             <!--ponto-->
-            <circle *ngFor="let valor of dado; let i = index" [attr.cx]="getX(i, 0)" [attr.cy]="getY(i, j)" r="3px"
+            <circle *ngFor="let valor of dado; let i = index" [attr.cx]="getX(i, 0)" [attr.cy]="getY(i, j)" r="4px"
                 [ngClass]="'grafico__ponto grafico__cor--' + j" (mouseenter)="mostraValor(i, j)" (mouseleave)="escondeValor()"/>
         </g>
     </svg>
