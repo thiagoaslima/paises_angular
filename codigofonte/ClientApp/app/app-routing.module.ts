@@ -13,7 +13,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'ranking/:indicador', canActivate: [isIndicadorGuard], children: [
+    path: 'ranking/:indicador', children: [
       { path: '', loadChildren: './ranking/ranking.module#RankingModule' }
     ]
   },
@@ -26,7 +26,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
   providers: [
     isPaisGuard,

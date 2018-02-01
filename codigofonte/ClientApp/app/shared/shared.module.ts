@@ -14,6 +14,10 @@ import { PlatformDetectionService } from './platform-detection.service';
 import { LogoODSComponent } from './logo-ods/logo-ods.component';
 import { GraficoComponent } from './grafico/grafico.component';
 
+
+export function platformDetectionFactory(platform_id: Object) {
+    return new PlatformDetectionService(platform_id);
+}
 @NgModule({
     imports: [CommonModule],
     declarations: [
@@ -40,13 +44,7 @@ export class SharedModule {
                 LocalidadeService,
                 PaisesService,
                 PesquisasService,
-                {
-                    provide: PlatformDetectionService,
-                    deps: [PLATFORM_ID],
-                    useFactory: (platform_id: Object) => {
-                        return new PlatformDetectionService(platform_id);
-                    }
-                }
+                PlatformDetectionService
             ]
         };
     }

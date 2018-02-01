@@ -22,7 +22,14 @@ module.exports = (env) => {
                 { test: /\.html$/, use: 'html-loader?minimize=false' },
                 { test: /\.css$/, use: [ 'to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
-                { test: /\.properties$/, use: 'properties-loader' }
+                { test: /\.properties$/, use: 'properties-loader' },
+                {
+                    test: /(?:\.ngfactory\.js|\.ngstyle\.js)$/,
+                    loader: '@ngtools/webpack',
+                    options: {
+                        tsConfigPath: '/tsconfig.json',
+                    }
+                }
             ]
         },
         plugins: [new CheckerPlugin()]
@@ -50,8 +57,8 @@ module.exports = (env) => {
             new AngularCompilerPlugin({
                 tsConfigPath: './tsconfig.json',
                 entryModule: path.join(__dirname, 'ClientApp/app/app.module.browser#AppModule'),
-                exclude: ['./**/*.server.ts'],
-                sourceMap: true
+                exclude: ['./**/*.server.ts']
+                // sourceMap: true
             })
         ])
     });

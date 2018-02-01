@@ -9,7 +9,7 @@ import { DadosPaisService } from "./dados-pais.service";
 const routes: Routes = [
     {
         path: '',
-        component: DadosPaisComponent,
+        component: DadosPaisComponent
     }
 ];
 

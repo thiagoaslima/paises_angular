@@ -2,11 +2,17 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { PesquisasService, RetornoPesquisa } from './pesquisas.service';
-import { Resultado } from './resultado.model';
-import { RequestService } from './request.service';
 import { Observable } from 'rxjs/Observable';
-import { map, zip } from 'rxjs/operators';
+import 'rxjs/add/observable/zip';
+import { map } from 'rxjs/operators/map';
+import { zip } from 'rxjs/operators/zip';
+import { tap } from 'rxjs/operators/tap';
+
+import { RequestService } from './request.service';
+import { PaisesEnum } from './paises.enum';
+import { chunkArray, flattenArray } from '../../utils';
+import { LocalidadeService } from './localidade/localidade.service';
+import { Resultado } from './resultado.model';
 
 export type TipoServico = "pesquisas" | "conjunturais";
 export type ConsultaResultado =
@@ -18,24 +24,25 @@ export class PaisesService extends RequestService {
 
     constructor(
         _httpClient: HttpClient,
-        private _http: Http,
-        private _pesquisasServ: PesquisasService
+        private _localidadeService: LocalidadeService
     ) {
         super(_httpClient);
     }
 
     getSintese(siglaPais: string) {
-        const params = new HttpParams().set('scope', 'one');
+        const metadataParams = new HttpParams().set('scope', 'one');
 
-        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', params)
+        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
 
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
 
-        return Observable.zip(metadataObservable, resultadosObservable)
-            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
+        return metadataObservable.pipe(
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados }))
+        );
     }
 
     getHistorico(siglaPais: string) {
@@ -47,82 +54,44 @@ export class PaisesService extends RequestService {
         const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
 
         const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
-        return Observable.zip(metadataObservable, resultadosObservable)
-            .pipe(map(([metadata, resultados]) => ({ metadata, resultados })));
+
+        return metadataObservable.pipe(
+            zip(resultadosObservable),
+            map(([metadata, resultados]) => ({ metadata, resultados }))
+        );
     }
 
-    getResultados(consulta: ConsultaResultado): Observable<RetornoPesquisa> {
-        let observable;
+    /*
+     * TODO
+     * refatorar servicor para oferecer uma API compatível
+     */
+    getRanking(indicadorId: number) {
+        console.time("getRanking");
+        const periodos = ["2018", "2017", "2016", "2015", "2014", "2014-2016", "2013-2015", "2012-2014", "2010-2015", "-"].join("|");
+        const siglas = this._localidadeService.getAllSiglas();
+        const conjuntos = chunkArray(siglas, Math.ceil(siglas.length / 5));
 
-        switch (consulta.servico) {
-            case "pesquisas":
-                observable = this._pesquisasServ.get(consulta.identificador);
-                break;
-            case "conjunturais":
-                break;
-        }
-
-        return observable ? observable : Observable.of({
-            metadata: [],
-            resultados: []
-        });
-
+        return Observable.zip(
+            ...conjuntos.map(siglas => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodos}/indicadores/${indicadorId}/resultados/${siglas.join('|')}`))
+        ).pipe(
+            tap(_ => console.timeEnd("getRanking")),
+            tap(_ => console.time("rankingProcess")),
+            map((resultados: any[]) => {
+                let arr = resultados.reduce((agg: any, res: any) => {
+                    let models = res[0].res.map((obj: any) => this.toResultadoModel({ id: res[0].id, res: [obj] }));
+                    agg = agg.concat(models);
+                    return agg;
+                }, [] as any[]);
+                console.log(arr);
+                return arr;
+            }),
+            tap(_ => console.timeEnd("rankingProcess")),
+        )
     }
 
-    getDiversosResultados<T extends ConsultaResultado>(consultas: T[]): Observable<RetornoPesquisa> {
-        const requestsObj = <{ [key: string]: ConsultaResultado }>{};
-
-        consultas.forEach(consulta => {
-            let key = this.buildkey(consulta);
-
-            if (!requestsObj[key]) {
-                requestsObj[key] = <ConsultaResultado>{
-                    servico: consulta.servico,
-                    identificador: Object.assign({}, consulta.identificador)
-                }
-            } else {
-                this._mergeConsultas(requestsObj[key], consulta);
-            }
-        });
-
-        const observables = Object.keys(requestsObj).map(key => this.getResultados(requestsObj[key]));
-        return Observable.zip(...observables).map(resultados => {
-            return resultados.reduce((agg, res) => {
-                agg.metadata.push(...res.metadata);
-                agg.resultados.push(...res.resultados);
-                return agg;
-            }, { metadata: [], resultados: [] });
-        });
-    }
-
-    public buildkey(consulta: ConsultaResultado) {
-        const servico = consulta.servico
-        const { pesquisaId } = consulta.identificador;
-
-        return `${servico}-${pesquisaId}`;
-    }
-
-
-    private _mergeConsultas(agg: ConsultaResultado, consulta: ConsultaResultado) {
-        switch (consulta.servico) {
-            case 'pesquisas':
-                const indicadores = agg.identificador.indicadorId;
-                if (indicadores.split('|').indexOf(consulta.identificador.indicadorId) == -1) {
-                    agg.identificador.indicadorId += `|${consulta.identificador.indicadorId}`
-                }
-
-                const localidades = agg.identificador.localidadeId;
-                if (localidades.split('|').indexOf(consulta.identificador.localidadeId) == -1) {
-                    agg.identificador.localidadeId += `|${consulta.identificador.localidadeId}`
-                }
-        }
-
-        return agg;
-    }
-
-     flatMetadata(metadatas: any[]): any[] {
+    flatMetadata(metadatas: any[]): any[] {
         let flatMetadatas: any[] = [];
 
         metadatas.forEach((metadata) => {
@@ -136,7 +105,7 @@ export class PaisesService extends RequestService {
         return flatMetadatas;
     }
 
-     toMetadataModel(metadata: any) {
+    toMetadataModel(metadata: any) {
         return {
             id: metadata.id,
             indicador: metadata.indicador,
@@ -149,33 +118,48 @@ export class PaisesService extends RequestService {
             fontes: metadata.fontes,
             pai: metadata.pai
         };
-    };
+    }
 
-     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
-        let valores = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
+    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+        const that = this;
+        let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
-                agg[periodo] = resultado.res[0].res[periodo];
+                agg[periodo] = that._treatSpecialValues(resultado.res[0].res[periodo]);
             }
 
             return agg;
         }, {} as { [periodo: string]: string });
 
-        let valorMaisRecente = Object.keys(valores).reduce((agg, periodo) => {
-            if (valores[periodo] && periodo > agg.periodo) {
+        let valorMaisRecente = Object.keys(valoresValidos).reduce((agg, periodo) => {
+            if (valoresValidos[periodo] && periodo > agg.periodo) {
                 agg.periodo = periodo;
-                agg.valor = valores[periodo];
+                agg.valor = valoresValidos[periodo];
             }
 
             return agg;
         }, { periodo: "", valor: '' });
+
+        let periodos = Object.keys(valoresValidos).sort();
+        let valores = periodos.map(periodo => valoresValidos[periodo]);
 
         return {
             id: resultado.id,
             valorMaisRecente: valorMaisRecente.valor,
             periodoMaisRecente: valorMaisRecente.periodo,
             localidade: resultado.res[0].localidade,
-            valores: Object.values(valores),
-            periodos: Object.keys(valores)
+            valores,
+            periodos
+        };
+    }
+
+    private _treatSpecialValues(valor: string) {
+        switch (valor) {
+            case "99999999999999":
+            case "99999999999998":
+                return "-"
+
+            default:
+                return valor;
         }
     }
 

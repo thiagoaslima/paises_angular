@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Injectable()
@@ -7,7 +7,7 @@ export class PlatformDetectionService {
     public isServer: boolean;
 
     constructor(
-        private platformId: Object
+        @Inject(PLATFORM_ID) platformId: Object,
     ) {
         this.isBrowser = isPlatformBrowser(platformId);
         this.isServer = isPlatformServer(platformId);

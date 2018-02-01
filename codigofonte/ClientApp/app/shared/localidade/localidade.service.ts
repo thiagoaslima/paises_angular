@@ -14,6 +14,10 @@ export class LocalidadeService {
         return localidades.paises;
     }
 
+    public getAllSiglas() {
+        return this.getAllPaises().map(pais => pais.sigla);
+    }
+
     public getByDDI(ddi: string): Pais | null {
         return this.getAllPaises().find(pais => pais.ddi === ddi) || null;
     }

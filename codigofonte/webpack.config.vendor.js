@@ -27,10 +27,11 @@ const nonTreeShakableModules = [
 const allModules = nonTreeShakableModules.concat(treeShakableModules);
 
 const polyfills = [
+    './ClientApp/utils/shims_for_IE.js',
     'core-js/library/es6',
     'core-js/library/es7/array',
     'core-js/library/es7/reflect',
-    'classlist-polyfill',
+    'classlist-polyfill'
 ]
 
 module.exports = (env) => {

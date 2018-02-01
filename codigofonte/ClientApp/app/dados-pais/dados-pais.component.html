@@ -45,17 +45,6 @@
             <p class="dados-pais__historico-paragrafo" *ngFor="let paragrafo of historico">
                 {{ paragrafo }}
             </p>
-            <p class="dados-pais__historico-paragrafo">
-                Maior país da América do Sul, com vasta área de litoral banhada pelo Atlântico. Tem fronteiras com Venezuela, Guiana, Suriname, Guiana Francesa, Colômbia, Peru, Bolívia, Paraguai, Argentina e 
-                Uruguai. O topônimo Brasil tem sua origem muito discutida, embora boa parte das explicações se reram ao pau-brasil daqui extraído. Para alguns lólogos, vem do tupi ibira-ciri, "pau eriçado". 
-                Os europeus, ao ouvirem este nome dado pelos indígenas à madeira de coloração avermelhada, chamaram-na de "Brasil"
-            </p>
-            <p class="dados-pais__historico-paragrafo">
-                As extensas porções de terras, que hoje constituem o país, foram habitadas por tribos que pertenciam ao tronco tupi-guarani, caribe e arawak.
-            </p>
-            <p class="dados-pais__historico-paragrafo">
-               {{ dados | json }}
-            </p>
         </div>
         <div class="dados-pais__historico-mais-container">
             <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">
@@ -64,9 +53,25 @@
             </button>
         </div>
     </div>
+    <!--graficos-->
     <grafico 
         [rotulosX]="[2000, 2001, 2002, 2003, 2020]"
         [rotulosY]="['Brasil', 'China', 'Espanha', 'Russia', 'Egito']"
         [dados]="[[1, 1, 0.5, 0, 0], [0.75, 0.8, 0.5, 1, 0], [10,20,30,40,50]]">
     </grafico>
+    <!--tabelas-->
+    <div>
+        <h2>Gráficos</h2>
+        <div *ngFor="let tema of temas">
+            <h4>{{ tema.tema }}</h4>
+            <table>
+                <tr *ngFor="let obj of tema.valores">
+                    <th>{{obj.titulo}}</th>
+                    <td *ngFor="let periodo of obj.periodos; let idx = index">
+                        {{ obj.valores[idx] }} {{ obj.unidade?.identificador }} ({{periodo}}) 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>

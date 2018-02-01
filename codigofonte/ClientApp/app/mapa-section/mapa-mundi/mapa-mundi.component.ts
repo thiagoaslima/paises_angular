@@ -85,8 +85,8 @@ export class MapaMundiComponent {
     }
 
     ngOnDestroy() {
-        this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        // this._changeDetector.detach();
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     onMapReady(map: L.Map) {
@@ -168,7 +168,9 @@ export class MapaMundiComponent {
         const that = this;
         layer.on({
             click: (evt) => {
-                this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+                that._ngzone.run(() => {
+                    this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+                });
 			}
         });
     }

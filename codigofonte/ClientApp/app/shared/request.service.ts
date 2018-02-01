@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { Injectable } from "@angular/core";
+import { retry } from "rxjs/operators";
 
 export class RequestService {
     constructor(
@@ -21,6 +22,6 @@ export class RequestService {
             options.params = params;
         }
 
-        return this._httpClient.get(url, options).retry(3);
+        return this._httpClient.get(url, options).pipe(retry(3));
     }
 }

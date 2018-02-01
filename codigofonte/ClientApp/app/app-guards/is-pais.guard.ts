@@ -16,7 +16,7 @@ export class isPaisGuard implements CanActivate {
         if (routeSnapshot.params.pais) {
             pais = this.localidadeService.getPaisBySlug(routeSnapshot.params.pais);
         }
-        
+       
         return Boolean(pais);
     }
 }

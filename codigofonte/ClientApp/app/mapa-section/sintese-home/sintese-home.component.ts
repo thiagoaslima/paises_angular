@@ -6,7 +6,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
 import { PaisesService } from "../../shared/paises.service";
 import { SinteseHomeService } from "./sintese-home.service";
-import { ItemTemaComponent } from "../../sandbox/componentes/item-tema.component";
 
 @Component({
     selector: 'sintese-home',
@@ -53,7 +52,7 @@ export class SinteseHomeComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         this._changeDetector.detach();
-        Object.values(this._subscriptions).forEach(subscription => subscription.unsubscribe());
+        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {

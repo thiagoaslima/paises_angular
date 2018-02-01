@@ -5,14 +5,14 @@ import { AppModuleShared } from './app.module.shared';
 import { AppComponent } from './app-component/app.component';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ibge-paises' }),
         AppModuleShared
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl }
-    ]
+    ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }
