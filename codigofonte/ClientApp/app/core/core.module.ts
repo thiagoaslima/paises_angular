@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { BarraMenuPrincipalComponent } from "./barra-menu-principal/barra-menu-principal.component";
 import { BarraGovComponent } from "./barra-gov/barra-gov.component";
 import { SharedModule } from "../shared";
+import { AlertComponent } from './alert/alert.component';
 
 
 @NgModule({
@@ -17,10 +18,12 @@ import { SharedModule } from "../shared";
         RouterModule
     ],
     declarations: [
+        AlertComponent,
         BarraGovComponent,
         BarraMenuPrincipalComponent
     ],
     exports: [
+        AlertComponent,
         BarraGovComponent,
         BarraMenuPrincipalComponent
     ],
