@@ -14,7 +14,7 @@ import { RankingService } from "./ranking.service";
 })
 export class RankingComponent {
     public dados = [] as any[];
-    public nomeIndicador = "";
+    public indicador: any;
 
     private _subscriptions: {
         [key: string]: Subscription
@@ -26,8 +26,7 @@ export class RankingComponent {
     ) { }
 
     ngOnInit() {
-        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }) => {
-            debugger; 
+        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }) => {            
             
             if (params.indicador) {
                 const indicadorId = parseInt(params.indicador, 10);
@@ -36,8 +35,8 @@ export class RankingComponent {
                     .getValores(indicadorId)
                     .subscribe(res => { this.dados = res; })
 
-                this._rankingService.getNomeIndicador(indicadorId)
-                    .subscribe(nome => { this.nomeIndicador = nome; });
+                this._rankingService.getIndicador(indicadorId)
+                    .subscribe(nome => { this.indicador = nome; });
             }
         })
     }

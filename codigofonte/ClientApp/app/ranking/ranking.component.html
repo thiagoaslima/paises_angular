@@ -1,121 +1,77 @@
-<section class="ranking">
-        <span class="close"><a href="#">&times;</a></span>
-    	<div class="topo-tit">
-        	<span>&#8249;</span>
-            <h2>{{ nomeIndiccador }}</h2>
+<section class="ranking main-layer">
+
+    <!--barra de título-->
+    <div class="ranking__header">
+        <!--botão de fechar-->
+        <a class="button ranking__botao-fechar desktop-only" routerLink="/mapa">
+            <!-- <button class="ranking__botao-fechar"> -->
+            <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
+            <!-- </button> -->
+        </a>
+
+        <div class="ranking__barra-titulo">
+            <span class="button ranking__voltar mobile-only">‹</span>
+            <h2 class="ranking__titulo">{{ indicador?.nome }}</h2>
         </div>
-        <div class="menu-aux-desktop">
-        	<ul>
-            <li><a href="#">IMPRIMIR</a></li>
-            <li><a href="#">DOWNLOAD</a></li>                       
-            </ul> 
-        </div>
-    	<table class="pure-table pure-table-horizontal">
-            <thead>
+    </div>
+
+    <div class="ranking__menu-auxiliar desktop-only">
+        <ul class="ranking__lista-inline">
+            <li>
+                <span class="ranking__menu-auxiliar__item" href="#">IMPRIMIR</span>
+            </li>
+            <li>
+                <span class="ranking__menu-auxiliar__item" href="#">DOWNLOAD</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--dados-->
+    <div class="ranking__info-container">
+
+        <table class="ranking__table">
+            
+            <thead class="ranking__table-head">
                 <tr>
-                    <th>Posição <i class="fa fa-sort-desc" aria-hidden="true"></i></th>
-                    <th>País <i class="fa fa-sort-desc" aria-hidden="true"></i></th>
-                    <th>Quantidade</th>
+                    <th class="ranking__table__posicao">
+                        Posição
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </th>
+                    <th class="ranking__table__pais">
+                        País
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </th>
+                    <th class="ranking__table__unidade">
+                        {{ indicador?.unidade?.identificador }}
+                    </th>
                 </tr>
             </thead>
+
+            <tbody class="ranking__table-body">
+                <tr *ngFor="let pais of dados">
+                    <td class="ranking__table__posicao">
+                        {{ pais.posicao }}
+                    </td>
+                    <td class="ranking__table__pais">
+                        <a href="#">{{ pais.nome }}</a>
+                    </td>
+                    <td class="ranking__table__unidade">
+                        {{ pais.valor }}
+                    </td>
+                </tr>
+            </tbody>
         </table>
-        <div class="table-overflow-scroll">
-            <table class="pure-table pure-table-horizontal">
-                <tbody>
-                    <tr *ngFor="let pais of dados">
-                        <td>{{ pais.posicao }}</td>
-                        <td><a href="#">{{ pais.nome }}</a></td>
-                        <td>{{ pais.valor }}</td>
-                    </tr> 
-                    <!--  
-                    <tr class="selecionado">
-                        <td>135º</td>
-                        <td><a href="#">Catar</a></td>
-                        <td>105.290</td>
-                    </tr>
-                    <tr>
-                        <td>1º</td>
-                        <td><a href="#">China</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>2º</td>
-                        <td><a href="#">Estados Unidos</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>3º</td>
-                        <td><a href="#">Alemanha</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>4º</td>
-                        <td><a href="#">Chile</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>5º</td>
-                        <td><a href="#">Itália</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr class="destaque">
-                        <td>6º</td>
-                        <td><a href="#">Brasil</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>7º</td>
-                        <td><a href="#">Portugal</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>8º</td>
-                        <td><a href="#">França</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>9º</td>
-                        <td><a href="#">Argentina</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>10º</td>
-                        <td><a href="#">Portugal</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>11º</td>
-                        <td><a href="#">França</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>12º</td>
-                        <td><a href="#">Argentina</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>13º</td>
-                        <td><a href="#">Argentina</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>14º</td>
-                        <td><a href="#">Portugal</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    <tr>
-                        <td>15º</td>
-                        <td><a href="#">França</a></td>
-                        <td>193.352</td>
-                    </tr>
-                    <tr>
-                        <td>16º</td>
-                        <td><a href="#">Argentina</a></td>
-                        <td>192.145</td>
-                    </tr>
-                    -->
-                </tbody>
-            </table>
-        </div>
-        <button class="leiamais">COMPARAR PAÍSES</button>
-    </section>
+
+    </div>
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+    </table>
+
+    <!-- rodapé interação -->
+    <div class="ranking__rodape">
+        <button class="button leiamais">COMPARAR PAÍSES</button>
+    </div>
+</section>

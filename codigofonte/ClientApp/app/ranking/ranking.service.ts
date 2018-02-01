@@ -13,9 +13,9 @@ export class RankingService {
         private _localidadeService: LocalidadeService
     ) {}
 
-    getNomeIndicador(indicadorId: number) {
+    getIndicador(indicadorId: number) {
         return this._paisesService.getIndicador(indicadorId)
-            .pipe(map(([metadata]) => metadata.indicador.toUpperCase()));
+            .pipe(map(([metadata]) => ({nome: metadata.indicador, unidade: metadata.unidade })));
     }
 
     getValores(indicadorId: number) {

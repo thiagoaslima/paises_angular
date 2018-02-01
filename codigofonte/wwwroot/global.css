@@ -81,6 +81,13 @@ Classes para organizar o z-index.
     z-index: 400;
 }
 /*
+    sobreescrevendo a configuração do leaflet
+*/
+.leaflet-top, 
+.leaflet-bottom {
+    z-index: 450;
+}
+/*
     o z-index básico será 500 devido a
     biblioteca leaflet, que coloca o valor de 
     400 para o svg dos países
@@ -123,4 +130,17 @@ a, a:hover, a:visited {
         top: 80px;
     }
     
+}
+
+
+/* utils */
+@media only screen and (max-width : 567px) {
+    .desktop-only {
+        display: none;
+    }
+}
+@media only screen and (min-width : 568px) {
+    .mobile-only {
+        display: none;
+    }
 }

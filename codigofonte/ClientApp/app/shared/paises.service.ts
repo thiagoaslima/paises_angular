@@ -83,10 +83,22 @@ export class PaisesService extends RequestService {
         ).pipe(
             tap(_ => console.timeEnd("getRanking")),
             tap(_ => console.time("rankingProcess")),
-            map((resultados: any[]) => {
-                let arr = resultados.reduce((agg: any, res: any) => {
-                    let models = res[0].res.map((obj: any) => this.toResultadoModel({ id: res[0].id, res: [obj] }));
-                    agg = agg.concat(models);
+            map((resposta: any[]) => {
+                resposta = flattenArray(resposta);
+
+                let resultados = resposta
+                    .reduce((agg, obj) => {
+                        agg = agg.concat(obj.res);
+                        return agg;
+                    }, [])
+                    .reduce((agg: any, obj: any) => {
+                        agg[obj.localidade] = obj;
+                        return agg;
+                    }, {});
+
+                let arr = Object.keys(resultados).reduce((agg: any, key: any) => {
+                    let model = this.toResultadoModel({ id: indicadorId, res: [resultados[key]] });
+                    agg = agg.concat(model);
                     return agg;
                 }, [] as any[]);
                 console.log(arr);
