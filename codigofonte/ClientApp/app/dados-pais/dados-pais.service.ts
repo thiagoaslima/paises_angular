@@ -62,7 +62,7 @@ export class DadosPaisService  {
                     }).sort( (a, b) => a.titulo > b.titulo ? -1 : 1);
 
                     return {
-                        tema: this._dictionary[tema],
+                        tema: parent.indicador,
                         valores: values
                     }
 

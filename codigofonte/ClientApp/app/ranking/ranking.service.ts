@@ -1,25 +1,49 @@
 import { Injectable } from "@angular/core";
-import { PaisesService } from "../shared/paises.service";
+
 import { map } from "rxjs/operators/map";
 import { tap } from 'rxjs/operators/tap';
+
+import { Localidade, LocalidadeService, PaisesService } from "../shared";
 
 @Injectable()
 export class RankingService {
 
     constructor(
-        protected _paisesService: PaisesService
+        private _paisesService: PaisesService,
+        private _localidadeService: LocalidadeService
     ) {}
+
+    getIndicador(indicadorId: number) {
+        return this._paisesService.getIndicador(indicadorId)
+            .pipe(map(([metadata]) => ({nome: metadata.indicador, unidade: metadata.unidade })));
+    }
 
     getValores(indicadorId: number) {
         return this._paisesService.getRanking(indicadorId).pipe(
             tap(_ => console.time("#getValores")),
             map((valores: any) => {
-                valores = valores.map((valor: any) => ({localidade: valor.localidade, valor: valor.valorMaisRecente}))
-                valores.sort((a: any, b: any) => a.valor > b.valor ? -1 : 1);
-                console.log(valores);
-                return valores;
+                valores.sort((a: any, b: any) => a.valorMaisRecente > b.valorMaisRecente ? -1 : 1);
+
+                return valores.reduce((agg: any[], valor: any, idx: number) => {
+                    let nome = this.getNomePais(valor.localidade);
+
+                    if (nome) {
+                        agg.push({
+                            posicao: valor.valorMaisRecente === '-' ? '-' : (idx + 1), 
+                            nome: (<Localidade>this._localidadeService.getPaisBySigla(valor.localidade)).nome.pt, 
+                            valor: valor.valorMaisRecente
+                        });
+                    }
+
+                    return agg;
+                }, [] as any[]);
             }),
             tap(_ => console.timeEnd("#getValores")),
         )
+    }
+
+    getNomePais(sigla: string) {
+        let pais = this._localidadeService.getPaisBySigla(sigla);
+        return pais ? pais.nome.pt : "";
     }
 }

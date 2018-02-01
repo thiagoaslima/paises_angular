@@ -15,8 +15,8 @@ export class GraficoComponent {
     LARGURA_ROTULO = 28; //largura aproximada dos rótulos do eixo X
     ALTURA_ROTULO = 14; //largura aproximada dos rótulos do eixo X
 
-    valor = null;
-    metadata = null;
+    valor: any = null;
+    metadata: any = null;
 
     @Input() rotulosX = [];
 
@@ -25,7 +25,7 @@ export class GraficoComponent {
     @Input() dados = [[]];
 
     //calcula a posição X dos elementos e dos pontos do gráfico, distribuindo e centralizando-os.
-    getX(indexX, largura){
+    getX(indexX: any, largura: any){
         indexX = indexX >= this.rotulosX.length ? this.rotulosX.length - 1 : indexX;
         if(indexX < 0) return 0;
         let parte = this.LARGURA_GRAFICO / this.rotulosX.length;
@@ -44,14 +44,14 @@ export class GraficoComponent {
     }
 
     //calcula a posição y dos pontos do gráfico
-    getY(indexX, indexY){
+    getY(indexX: any, indexY: any){
         indexX = indexX >= this.dados[indexY].length ? this.dados[indexY].length - 1 : indexX;
         if(indexX < 0) return 0;
         return (this.ALTURA_AREA_DADOS) - ((this.dados[indexY][indexX] / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
     //calcula a posição y do ponto mais alto do gráfico (usado para desenhar as linhas guias tracejadas)
-    getMaxY(indexX){
+    getMaxY(indexX: any){
         let max = 0;
         for(let i = 0; i < this.dados.length; i++){
             max = Math.max(max, this.dados[i][indexX]);
@@ -63,7 +63,7 @@ export class GraficoComponent {
         if(this.valor){
             return this.valor;
         }else if(this.dados.length == 1){
-            return this.dados[0][this.dados[0].length - 1].toString();
+            return (<any>this.dados[0][this.dados[0].length - 1]).toString();
         }
         return " ";
     }
@@ -77,8 +77,8 @@ export class GraficoComponent {
         return " ";
     }
 
-    mostraValor(indexX, indexY){
-        this.valor = this.dados[indexY][indexX].toString();
+    mostraValor(indexX: any, indexY: any){
+        this.valor = (<any>this.dados[indexY][indexX]).toString();
         this.metadata = this.rotulosY[indexY] + " (" + this.rotulosX[indexX] + ")";
     }
 

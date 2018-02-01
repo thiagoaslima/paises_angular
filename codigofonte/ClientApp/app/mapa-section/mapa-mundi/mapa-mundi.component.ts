@@ -24,8 +24,7 @@ import {
     ],
     host: {
         'class': 'bg-layer'
-    },
-    changeDetection: ChangeDetectionStrategy.OnPush
+    }
 })
 export class MapaMundiComponent {
     public isBrowser: boolean;
@@ -64,7 +63,6 @@ export class MapaMundiComponent {
         private _localidadeService: LocalidadeService,
         private _malhaService: MalhaService,
         private _ngzone: NgZone,
-        private _changeDetector: ChangeDetectorRef,
         platform: PlatformDetectionService
 
     ) {
@@ -74,18 +72,20 @@ export class MapaMundiComponent {
 
     ngOnInit() {
         this._subscriptions.params = this._params.params$.subscribe(({ params, url }: any) => {
+            if (params.indicador) {
+                
+            }
+            
             if (params.pais) {
                 this.selectPais(params.pais);
             } else {
                 this.selectPais('');
                 this.map && this.map.fitWorld({ maxZoom: 8 });
             }
-            this._changeDetector.detectChanges();
         });
     }
 
     ngOnDestroy() {
-        // this._changeDetector.detach();
         Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 

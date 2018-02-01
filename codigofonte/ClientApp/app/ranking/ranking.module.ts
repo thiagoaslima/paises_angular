@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { SharedModule } from "../shared";
 import { RankingComponent } from "./ranking.component";
+import { RankingService } from "./ranking.service";
 
 const routes: Routes = [
     {
@@ -16,10 +17,16 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(routes),
+        // RouterModule.forChild(routes)
     ],
     declarations: [
         RankingComponent
+    ],
+    entryComponents: [
+        RankingComponent
+    ],
+    providers: [
+        RankingService
     ]
 })
 export class RankingModule {

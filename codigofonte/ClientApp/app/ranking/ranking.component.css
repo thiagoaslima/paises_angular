@@ -1,189 +1,165 @@
-span.close{
-	width:100%;
-	background-color:#3f3f3f;
-	text-align:right;
-	cursor:default;	
-	opacity: 1;
-	display: none;
-}
-span.close a{
-	color:#fff;
-	padding:2px 8px;
-	line-height:1.8em;	
-	width:30px;
-	background-color:#3f3f3f;		
+/*mobile*/
+
+.ranking {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: white;
 }
 
-.topo-tit{
-	background-color: #4f4f4f;
-    height: 40px;
-    color: #fff;
-    padding: 0px 0 0 8px;
+.ranking__header {
+	position: relative;
+	background-color: #3f3f3f;
 }
 
-.topo-tit h2 {
-	display:inline-block;	
-	font-size: 1em;
+.ranking__barra-titulo {
+	color: #ffffff;
+	line-height: 1.3;
+	padding: 10px;
 }
 
-.topo-tit{
-	clear:both;
+.ranking__voltar {
+	font-size: 25px;
+    margin-right: 3px;
+    color: #ffffff;
+    font-weight: bold;
+    vertical-align: -1px;
 }
 
-.topo-tit span {
-	font-size:1.5em;
-	font-weight:bold;
-	display:inline-block;
-	color: #fff;
-}
-.topo-tit span:first-child  {
-	margin:0 10px 0 0;
-}
-.menu-aux-desktop {
-	height:50px;
-	background-color:#3f3f3f;
-	display: none;
-}
-.menu-aux-desktop a {
-	color:#fff;
-	font-size:0.8em;
-	font-family:"RobotoMedium", Helvetica, Arial, sans-serif;;
-}
-.menu-aux-desktop a:hover {
-	color:#ccc;
-}
-.menu-aux-desktop ul {
-	margin:0 auto;
-	padding:0;	
-	width:98%;	
-}.menu-aux-desktop ul li {
-	display:inline-block;
-	padding:20px 10px 10px 10px;
+.ranking__titulo {
+	font-size: 15px;
+    text-transform: uppercase;
 }
 
-.menu-aux-desktop{
-	background-color:transparent;
-	text-align:right;
-	height:30px;
-}
-.menu-aux-desktop ul li{
-	background-image:none;
-	padding:0;
-	float:none;
-	margin:8px;
-}
-.menu-aux-desktop ul li a{
-	color:#4f4f4f;
-}
-.menu-aux-desktop ul li a:hover{
-	color:#000;
-}
-table .pure-table-horizontal, table .pure-table  {
-	background-color:transparent;
+.ranking__info-container {
+	padding-top: 10px;
 }
 
-button {
-	padding:9px 0 0 30px;
+.ranking__table {
+	border-collapse: collapse;
 }
 
-table {
-	
-	width:100%;
-	background-color:#fff;
+.ranking__table-head {
+	display: block;
+	width: 100%;
 }
 
-table thead tr th {
-	padding-top:20px !important;
-}
- table tr.selecionado {
-	background-color:#f9f9f9;
-	font-weight:bold;
-	border-top:2px solid #c0c0c0;	
-}
-table tr.destaque {
-	font-weight:bold;
-}
-table thead tr {
-	background-color:#fff;
-	font-weight:normal;	
-}
-table tr td:first-child, table thead tr th:first-child {
-	text-align:right;
+.ranking__table-head th {
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	color: #4f4f4f;
+	padding: 10px;
+	border-bottom: 1px solid #CBCBCB;
 }
 
-.leiamais {
-    background-color: #3f3f3f;
-    color: #fff;
-    border: none;
-    width: 92%;
-    height: 26px;
-    font-size: 1.1em;
-    display: block;
-    margin: 10px auto;
-	background-repeat:no-repeat;
-	background-image:url(../../img/comparar_icon.png);
-	background-position:85px 4px;
-	height:33px;
-	font-size: 11px;
+.ranking__table-body {
+	display: block;
+	width: 100%;
+	height: 450px;
+	overflow-y: auto;
+	overflow-y: overlay;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	overflow-x: hidden;
 }
 
-.leiamais:hover {
-	color:#ccc;
+.ranking__table-body td {
+	padding: 3px 10px;
 }
 
+.ranking__table__posicao {
+	font-size: 13px;
+	text-align: right;
+	width: 25%;
+	border-bottom: 1px solid #cbcbcb;
+}
 
+.ranking__table__unidade {
+	font-size: 13px;
+	width: 25%;
+	border-bottom: 1px solid #cbcbcb;
+}
 
- @media only screen and (min-width : 568px) {
-    .topo-tit span{
-        display: none;
-    }
+.ranking__table__pais {
+	font-size: 13px;
+	width: 50%;
+	border-bottom: 1px solid #cbcbcb;
+}
 
-    .topo-tit, span.close, button {
-	    display:block;
-	}
+.ranking__table__pais a {
+	font-size: 13px;
+}
 
-    .ranking {
-		max-width:400px;
-		margin:2em 2em 0 0;
-		background-color: rgba(255, 255, 255, 0.85);
-		border:1px solid #7f7f7f;
-		float:right;
-	}
-
-    .topo-tit{
-        background-color: #4f4f4f;
-		height: 40px;
-		color: #fff;
-		padding: 8px 0 0 8px;
-    }
-
-    .topo-tit h2{
-        font-size: 1.2em;
-    }
-
-	.menu-aux-desktop{
+/*desktop*/
+@media only screen and (min-width : 568px) {
+	.ranking {
 		display: block;
-	}
-    
-	.pure-table td{
-        padding-top: 3px;
-		padding-bottom: 3px;
-    }
-
-    tbody a:hover {
-		color:#000;
+		width: 320px;
+		top: 62px;
+		left: auto;
+		right: 80px;
+		border: 1px solid #9f9f9f;
+		background-color: rgba(255, 255, 255, 0.8);
 	}
 
-    .pure-table, .pure-table thead, table thead tr {
+	.ranking__botao-fechar {
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		right: 0;
+		background-color: transparent;
 		border: none;
-		background-color:transparent;
+		padding: 2px 8px;
 	}
 
+	.ranking__icone-fechar {
+		color: #ffffff;
+	}
 
- }
+	.ranking__barra-titulo {	
+		height: auto;
+		padding: 35px 20px 10px 12px;
+	}
 
- @media only screen and (min-width : 992px) {
-    .ranking{
-        margin:6.2em 8em auto auto;
-    }
- }
+	.ranking__titulo {
+		font-size: 18px;
+	}
+
+	.ranking__menu-auxiliar {
+		background-color: transparent;
+		text-align: right;
+	}
+
+	.ranking__lista-inline {
+		margin: 0 auto;
+		padding: 0;
+		width: 98%;
+		list-style: none;
+	}
+	
+	.ranking__lista-inline li {
+		display: inline-block;
+		margin: 8px;
+	}
+
+	.ranking__menu-auxiliar__item {
+		font-size: 11px;
+		font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+		color: #4f4f4f;
+		text-transform: uppercase;
+	}
+
+	.ranking__rodape .leiamais {
+		background-repeat: no-repeat;
+		background-image: url(/img/comparar_icon.png);
+		background-position: 85px 4px;
+		height: 33px;
+		background-color: #3f3f3f;
+		color: #fff;
+		border: none;
+		width: 92%;
+		height: 26px;
+		font-size: 1.1em;
+		display: block;
+		margin: 10px auto;
+		font-size: 11px;
+	}
+}
