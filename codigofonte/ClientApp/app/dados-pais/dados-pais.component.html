@@ -55,29 +55,10 @@
     </div>
     <!--cards container-->
     <div class="dados-pais__cards-container">
-        <!--card-->
-        <div class="dados-pais__card">
-            <div class="dados-pais__card-barra-titulo">
-                <h3 class="dados-pais__card-titulo">Título</h3>
-                <select class="dados-pais__card-combo">
-                    <option>Entrada de turistas</option>
-                    <option>Gastos públicos com educação</option>
-                </select>
-            </div>
-            <grafico 
-                [rotulosX]="[2000, 2001, 2002, 2003, 2020]"
-                [rotulosY]="['Brasil']"
-                [dados]="[[10,20,30,40,50]]">
-            </grafico>
-            <div class="dados-pais__card-rodape">
-                <p class="dados-pais__card-fonte">
-                    <span class="dados-pais__card-fonte-titulo">FONTE</span>: Human Development Report 2015: Work for Human Development. New York: United Nations Development Programme, 2013. Acesso em: jul. 2016. Nota: Esta variável já apresenta os dados de Sudão e Sudão do Sul de forma individualizada.
-                </p>
-            </div>
-        </div>
+        <card *ngFor="let t of temas" [tema]="t"></card>
     </div>
     <!--tabelas-->
-    <div>
+    <!--<div>
         <h2>Gráficos</h2>
         <div *ngFor="let tema of temas">
             <h4>{{ tema.tema }}</h4>
@@ -90,5 +71,5 @@
                 </tr>
             </table>
         </div>
-    </div>
+    </div>-->
 </div>

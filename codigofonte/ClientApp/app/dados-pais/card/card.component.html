@@ -1,0 +1,24 @@
+<!--card-->
+<div class="card" *ngIf="tema">
+    <!--barra de título-->
+    <div class="card__barra-titulo">
+        <h3 class="card__titulo">{{ tema.tema }}</h3>
+        <!--combo box-->
+        <select class="card__combo" (change)="setGrafico($event);">
+            <option *ngFor="let obj of tema.valores;">{{ obj.titulo }}</option>
+        </select>
+    </div>
+    <!--gráfico-->
+    <grafico 
+        [rotulosX]="tema.valores[graficoAtual].periodos"
+        [rotulosY]="[getUnidade(tema.valores[graficoAtual].unidade)]"
+        [dados]="[tema.valores[graficoAtual].valores]">
+    </grafico>
+    <!--rodapé-->
+    <!--<div class="card__rodape">
+        <p class="card__fonte">
+            <span class="card__fonte-titulo">FONTE</span>:
+            {{ tema | json }}
+        </p>
+    </div>-->
+</div>
