@@ -21,7 +21,7 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['PhantomJS'],
-        plugins          : [
+        plugins: [
             'karma-jasmine',
             'karma-phantomjs-launcher',
             'karma-junit-reporter'
