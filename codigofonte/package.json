@@ -8,7 +8,7 @@
     "test:jenkins": "karma start ClientApp/test/karma.conf.jenkins.js",
     "prestart": "npm run webpack -- --config webpack.config.vendor.js",
     "dev:build": "webpack --config webpack.config.js --watch",
-    "dev:serve": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
+    "dev:serve": "./node_modules/.bin/webpack-dev-server --https --content-base wwwroot/ --history-api-fallback",
     "start": "./node_modules/.bin/concurrently \"npm run dev:build\" \"npm run dev:serve\"",
     "start:prerender": "./node_modules/.bin/concurrently \"npm run dev:build\" \"dotnet run\"",
     "build": "npm run version && npm run webpack -- --env.prod --config webpack.config.vendor.js && npm run webpack -- --env.prod --config webpack.config.js",

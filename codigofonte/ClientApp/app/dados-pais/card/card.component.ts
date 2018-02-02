@@ -8,15 +8,15 @@ import { Component, Input } from '@angular/core';
 
 export class CardComponent {
 
-    @Input() tema;
+    @Input() tema: any;
 
     graficoAtual = 0;
 
-    setGrafico(event){
+    setGrafico(event: any){
         this.graficoAtual = event.target.selectedIndex;
     }
 
-    getUnidade(unidade){
+    getUnidade(unidade: any){
         let valor = "";
         if(unidade){
             if(unidade.identificador){
