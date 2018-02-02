@@ -24,20 +24,28 @@ export class GraficoComponent {
 
     @Input() dados = [[]];
 
+    existemDados(){
+        return (this.rotulosX && this.rotulosX.length) && 
+            (this.rotulosY && this.rotulosY.length) &&
+            (this.dados && this.dados.length) &&
+            (this.dados[0] && this.dados[0].length);
+    }
+
     //calcula a posição X dos elementos e dos pontos do gráfico, distribuindo e centralizando-os.
     getX(indexX: any, largura: any){
+        if(!this.existemDados()) return 0;
         indexX = indexX >= this.rotulosX.length ? this.rotulosX.length - 1 : indexX;
-        if(indexX < 0) return 0;
         let parte = this.LARGURA_GRAFICO / this.rotulosX.length;
         return (parte * indexX) + (parte / 2) - (largura / 2);
     }
 
     //retorna o valor máximo dos dados informados
     getMax(){
+        if(!this.existemDados()) return 0;
         let max = 0;
         for(let i = 0; i < this.dados.length; i++){
             for(let j = 0; j < this.dados[i].length; j++){
-                max = Math.max(max, this.dados[i][j]);
+                max = Math.max(max, isNaN(this.dados[i][j]) ? max : this.dados[i][j]);
             }
         }
         return max;
@@ -45,30 +53,42 @@ export class GraficoComponent {
 
     //calcula a posição y dos pontos do gráfico
     getY(indexX: any, indexY: any){
+        if(!this.existemDados()) return 0;
         indexX = indexX >= this.dados[indexY].length ? this.dados[indexY].length - 1 : indexX;
-        if(indexX < 0) return 0;
         return (this.ALTURA_AREA_DADOS) - ((this.dados[indexY][indexX] / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
     //calcula a posição y do ponto mais alto do gráfico (usado para desenhar as linhas guias tracejadas)
     getMaxY(indexX: any){
+        if(!this.existemDados()) return 0;
         let max = 0;
         for(let i = 0; i < this.dados.length; i++){
-            max = Math.max(max, this.dados[i][indexX]);
+            max = Math.max(max, isNaN(this.dados[i][indexX]) ? max : this.dados[i][indexX]);
         }
         return (this.ALTURA_AREA_DADOS) - ((max / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
+    valorValido(valor){
+        if(!this.existemDados() || isNaN(valor)){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     getValor(){
+        if(!this.existemDados()) return " ";
         if(this.valor){
             return this.valor;
         }else if(this.dados.length == 1){
-            return (<any>this.dados[0][this.dados[0].length - 1]).toString();
+            let valor = this.dados[0][this.dados[0].length - 1];
+            return valor ? valor.toString() : " ";
         }
         return " ";
     }
 
     getMetadata(){
+        if(!this.existemDados()) return " ";
         if(this.metadata){
             return this.metadata;
         }else if(this.dados.length == 1){
@@ -78,11 +98,13 @@ export class GraficoComponent {
     }
 
     mostraValor(indexX: any, indexY: any){
+        if(!this.existemDados()) return;
         this.valor = (<any>this.dados[indexY][indexX]).toString();
         this.metadata = this.rotulosY[indexY] + " (" + this.rotulosX[indexX] + ")";
     }
 
     escondeValor(){
+        if(!this.existemDados()) return;
         this.valor = null;
         this.metadata = null;
     }
