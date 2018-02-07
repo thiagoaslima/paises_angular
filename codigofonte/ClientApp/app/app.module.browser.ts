@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppModuleShared } from './app.module.shared';
 import { AppComponent } from './app-component/app.component';
 
+export function getBaseUrl() {
+    return document.getElementsByTagName('base')[0].href;
+}
+
 @NgModule({
     imports: [
         BrowserModule.withServerTransition({ appId: 'ibge-paises' }),
@@ -15,8 +19,4 @@ import { AppComponent } from './app-component/app.component';
     bootstrap: [ AppComponent ]
 })
 export class AppModule {
-}
-
-export function getBaseUrl() {
-    return document.getElementsByTagName('base')[0].href;
 }
