@@ -68,7 +68,7 @@ export class GraficoComponent {
         return (this.ALTURA_AREA_DADOS) - ((max / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
-    valorValido(valor){
+    valorValido(valor: any){
         if(!this.existemDados() || isNaN(valor)){
             return false;
         }else{
@@ -82,7 +82,7 @@ export class GraficoComponent {
             return this.valor;
         }else if(this.dados.length == 1){
             let valor = this.dados[0][this.dados[0].length - 1];
-            return valor ? valor.toString() : " ";
+            return valor ? (<any>valor).toString() : " ";
         }
         return " ";
     }

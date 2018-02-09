@@ -3,14 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test:jenkins": "node node_modules/jest/bin/jest.js --bail --ci --env=jsdom --testResultsProcessor=\"jest-junit\"",
-    "test": "node --inspect node_modules/.bin/jest --runInBand",
-    "test:watch": "jest --watch",
     "webpack": "./node_modules/.bin/webpack",
-    "test:karma": "karma start ClientApp/test/karma.conf.js",
+    "test": "karma start ClientApp/test/karma.conf.js",
+    "test:jenkins": "karma start ClientApp/test/karma.conf.jenkins.js",
     "prestart": "npm run webpack -- --config webpack.config.vendor.js",
     "dev:build": "webpack --config webpack.config.js --watch",
-    "dev:serve": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
+    "dev:serve": "./node_modules/.bin/webpack-dev-server --https --content-base wwwroot/ --history-api-fallback",
     "start": "./node_modules/.bin/concurrently \"npm run dev:build\" \"npm run dev:serve\"",
     "start:prerender": "./node_modules/.bin/concurrently \"npm run dev:build\" \"dotnet run\"",
     "build": "npm run version && npm run webpack -- --env.prod --config webpack.config.vendor.js && npm run webpack -- --env.prod --config webpack.config.js",
@@ -72,54 +70,24 @@
   "devDependencies": {
     "@types/chai": "4.0.1",
     "@types/jasmine": "2.5.53",
-    "@types/jest": "22.1.0",
     "@types/leaflet": "1.2.3",
     "@types/topojson": "3.0.2",
     "angular-router-loader": "0.8.2",
     "chai": "4.0.2",
     "concurrently": "3.5.0",
     "jasmine-core": "2.6.4",
-    "jest": "22.1.4",
-    "jest-junit": "3.4.1",
-    "jest-preset-angular": "5.0.0",
     "karma": "1.7.0",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-cli": "1.0.1",
+    "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "1.1.0",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-safari-launcher": "^1.0.0",
     "karma-webpack": "2.0.3",
     "properties-loader": "0.0.1",
     "ts-node": "4.1.0",
     "webpack-dev-server": "2.11.1"
-  },
-  "jest": {
-    "globals": {
-      "__TS_CONFIG__": "<rootDir>/tsconfig.json"
-    },
-    "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/ClientApp/jest/setupJest.ts",
-    "collectCoverage": false,
-    "collectCoverageFrom": [
-      "ClientApp/app/**/*.{ts}",
-      "!ClientApp/app/**/index.ts",
-      "!ClientApp/app/**/*.(enum|lista).ts",
-      "!ClientApp/app/**/*.interface.ts",
-      "!ClientApp/app/**/*.spec.ts",
-      "!**/node_modules/**",
-      "!**/vendor/**",
-      "!**/*.{d.ts}"
-    ],
-    "coverageDirectory": "<rootDir>/coverage",
-    "mapCoverage": false,
-    "testRegex": null,
-    "testMatch": [
-      "<rootDir>/ClientApp/app/**/(*.)(spec|test).(t|j)s?(x)"
-    ],
-    "testResultsProcessor": "jest-junit",
-    "transform": {
-      "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js",
-      "\\.(properties)$": "<rootDir>/ClientApp/jest/jestTransform.js"
-    }
   },
   "others": {
     "@angular/compiler-cli": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-5.0.5.tgz",

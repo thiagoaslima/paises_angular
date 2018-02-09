@@ -32,10 +32,10 @@ export class PaisesService extends RequestService {
     getSintese(siglaPais: string) {
         const metadataParams = new HttpParams().set('scope', 'one');
 
-        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
+        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
 
-        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
+        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
 
@@ -46,7 +46,7 @@ export class PaisesService extends RequestService {
     }
 
     getIndicador(indicadorId: number) {
-        return this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`)
+        return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
     }
 
@@ -56,9 +56,9 @@ export class PaisesService extends RequestService {
     }
 
     getTodosDados(siglaPais: string) {
-        const metadataObservable = this.request('http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
+        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
 
-        const resultadosObservable = this.request(`http://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
+        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
 
 

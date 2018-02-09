@@ -1,4 +1,5 @@
-/// <reference types="jest" />
+/// <reference types="jasmine" />
+
 import { TestBed, inject } from "@angular/core/testing";
 import { SharedModule } from "./shared.module";
 import { PaisesService } from "./paises.service";
@@ -30,7 +31,7 @@ describe('PaisesService E2E', () => {
   );
 
   it('should be instantiated correctly', () => {
-    expect(paisesService).toBeInstanceOf(PaisesService);
+    expect(paisesService).toBeDefined();
   });
 
   it('run #getHistorico correctly', (done) => {
