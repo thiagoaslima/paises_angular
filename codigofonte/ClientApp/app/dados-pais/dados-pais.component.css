@@ -97,9 +97,9 @@
 }
 
 .dados-pais__historico-titulo{
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin: 0px;
-    font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+    font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     display: inline-block;
 }
@@ -135,7 +135,7 @@
 
 .dados-pais__cards-container{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /*desktop*/
@@ -221,6 +221,7 @@
     /*histórico*/
 
     .dados-pais__historico-titulo{
+        font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
         font-size: 1em;
     }
 
@@ -228,6 +229,10 @@
         padding: 15px 40px 10px 40px;
         background-color: #f1f1f1;
         border-bottom: none;
+    }
+
+    .dados-pais__historico-icone{
+        display: none;
     }
 
     .dados-pais__historico-titulo-container:hover{
@@ -262,6 +267,12 @@
         text-transform: uppercase;
         font-family: "RobotoBold", Helvetica;
         font-size: 0.8em;
+    }
+
+    /*card container*/
+
+    .dados-pais__cards-container{
+        margin-top: 20px;
     }
 
 }

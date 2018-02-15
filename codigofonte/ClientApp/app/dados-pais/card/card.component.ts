@@ -12,6 +12,9 @@ export class CardComponent {
 
     graficoAtual = 0;
 
+    cardAberto = false;
+    mostrarTabela = false;
+
     setGrafico(event: any){
         this.graficoAtual = event.target.selectedIndex;
     }
