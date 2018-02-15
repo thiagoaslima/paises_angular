@@ -7,6 +7,6 @@ export interface MetadataIndicador {
         multiplicador: number
     },
     notas: string[],
-    fontes: string[],
+    fontes: Array<{ periodo: string, fontes: string[] }>,
     pai: number
 }

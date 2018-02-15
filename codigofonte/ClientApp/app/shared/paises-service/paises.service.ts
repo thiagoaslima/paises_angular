@@ -140,14 +140,17 @@ export class PaisesService extends RequestService {
         const that = this;
         let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
-                agg[periodo] = that._treatSpecialValues(resultado.res[0].res[periodo]);
+                agg[periodo] = resultado.res[0].res[periodo];
             }
 
             return agg;
         }, {} as { [periodo: string]: string });
 
         let valorMaisRecente = Object.keys(valoresValidos).reduce((agg, periodo) => {
-            if (valoresValidos[periodo] && periodo > agg.periodo) {
+            if (
+                !PaisesService.isSpecialValue(valoresValidos[periodo]) && 
+                periodo > agg.periodo
+            ) {
                 agg.periodo = periodo;
                 agg.valor = valoresValidos[periodo];
             }
@@ -168,14 +171,14 @@ export class PaisesService extends RequestService {
         };
     }
 
-    private _treatSpecialValues(valor: string) {
+    static isSpecialValue(valor: string) {
         switch (valor) {
             case "99999999999999":
             case "99999999999998":
-                return "-"
+                return true
 
             default:
-                return valor;
+                return false;
         }
     }
 
