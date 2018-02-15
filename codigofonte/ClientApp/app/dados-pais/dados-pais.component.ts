@@ -4,7 +4,6 @@ import { ParamMap, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../shared";
-import { PaisesService } from "../shared/paises.service";
 import { SinteseHomeService } from "../mapa-section/sintese-home/sintese-home.service";
 import { DadosPaisService } from './dados-pais.service';
 
@@ -22,7 +21,7 @@ export class DadosPaisComponent {
     public pais: Pais | null = null;
     public imageSrc = ''
     public itens = <any[]>[];
-    public historico= '';
+    public historico: string[] = [];
     public temas: any = [];
 
     historico_aberto = false;

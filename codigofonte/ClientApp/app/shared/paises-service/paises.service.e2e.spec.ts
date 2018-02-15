@@ -1,11 +1,11 @@
 /// <reference types="jasmine" />
 
 import { TestBed, inject } from "@angular/core/testing";
-import { SharedModule } from "./shared.module";
+import { SharedModule } from "../shared.module";
 import { PaisesService } from "./paises.service";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { ConnectionBackend, HttpModule, Http } from "@angular/http";
-import { LocalidadeService } from "./localidade/localidade.service";
+import { LocalidadeService } from "../localidade/localidade.service";
 
 
 describe('PaisesService E2E', () => {

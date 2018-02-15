@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
-import { PaisesService } from './paises.service';
+import { PaisesService } from './paises-service';
 import { BuscaService } from './busca.service';
 
 import { RouterParamsService } from './router-params.service';

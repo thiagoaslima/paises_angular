@@ -8,16 +8,11 @@ import { map } from 'rxjs/operators/map';
 import { zip } from 'rxjs/operators/zip';
 import { tap } from 'rxjs/operators/tap';
 
-import { RequestService } from './request.service';
+import { RequestService } from '../request.service';
 import { PaisesEnum } from './paises.enum';
-import { chunkArray, flattenArray } from '../../utils';
-import { LocalidadeService } from './localidade/localidade.service';
-import { Resultado } from './resultado.model';
-
-export type TipoServico = "pesquisas" | "conjunturais";
-export type ConsultaResultado =
-    { servico: "pesquisas", identificador: { pesquisaId: string, indicadorId: string, localidadeId: string } } |
-    { servico: 'conjunturais', identificador: any }
+import { chunkArray, flattenArray } from '../../../utils';
+import { LocalidadeService } from '../localidade/localidade.service';
+import { ResultadosIndicador, MetadataIndicador } from './interfaces';
 
 @Injectable()
 export class PaisesService extends RequestService {
@@ -35,8 +30,8 @@ export class PaisesService extends RequestService {
         const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
 
-        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
+        const resultadosObservable: Observable<ResultadosIndicador[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
+            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
 
 
         return metadataObservable.pipe(
@@ -45,18 +40,18 @@ export class PaisesService extends RequestService {
         );
     }
 
-    getIndicador(indicadorId: number) {
+    getMetadataIndicador(indicadorId: number) {
         return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
     }
 
-    getHistorico(siglaPais: string) {
+    getHistorico(siglaPais: string): Observable<{ pais: string, periodo: string, indicador: number, valor: string, valor_en: string }> {
         return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
             .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))
     }
 
     getTodosDados(siglaPais: string) {
-        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0')
+        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
 
         const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
@@ -72,7 +67,7 @@ export class PaisesService extends RequestService {
      * TODO
      * refatorar servicor para oferecer uma API compatível
      */
-    getRanking(indicadorId: number) {
+    getRanking(indicadorId: number): Observable<ResultadosIndicador[]> {
         console.time("getRanking");
         const periodos = ["2018", "2017", "2016", "2015", "2014", "2014-2016", "2013-2015", "2012-2014", "2010-2015", "-"].join("|");
         const siglas = this._localidadeService.getAllSiglas();
@@ -101,7 +96,7 @@ export class PaisesService extends RequestService {
                     agg = agg.concat(model);
                     return agg;
                 }, [] as any[]);
-                console.log(arr);
+
                 return arr;
             }),
             tap(_ => console.timeEnd("rankingProcess")),
@@ -130,14 +125,18 @@ export class PaisesService extends RequestService {
                 identificador: metadata.unidade.id,
                 classe: metadata.unidade.classe,
                 multiplicador: metadata.unidade.multiplicador
-            } : undefined,
+            } : {
+                    identificador: "",
+                    classe: "",
+                    multiplicador: 1
+                },
             notas: metadata.nota,
-            fontes: metadata.fontes,
+            fontes: metadata.fonte,
             pai: metadata.pai
         };
     }
 
-    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }): Resultado {
+    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }) {
         const that = this;
         let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
