@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 import { Subscription } from 'rxjs/Subscription';
 
-import { PaisesService } from "../shared/paises.service";
+import { PaisesService } from "../shared/paises-service";
 import { RouterParamsService } from "../shared/router-params.service";
 import { RankingService } from "./ranking.service";
 

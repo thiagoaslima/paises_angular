@@ -14,7 +14,7 @@ export class RankingService {
     ) {}
 
     getIndicador(indicadorId: number) {
-        return this._paisesService.getIndicador(indicadorId)
+        return this._paisesService.getMetadataIndicador(indicadorId)
             .pipe(map(([metadata]) => ({nome: metadata.indicador, unidade: metadata.unidade })));
     }
 

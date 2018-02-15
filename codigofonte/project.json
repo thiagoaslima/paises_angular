@@ -61,6 +61,7 @@
     "include": [
       "appsettings.json",
       "ClientApp/dist",
+      "node_modules",
       "Views",
       "web.config",
       "wwwroot"
@@ -80,6 +81,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "pocNG4DotNet1"
+    "defaultNamespace": "IBGE - Paises"
   }
 }

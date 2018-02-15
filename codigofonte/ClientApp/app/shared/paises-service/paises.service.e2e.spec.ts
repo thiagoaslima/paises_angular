@@ -1,11 +1,11 @@
 /// <reference types="jasmine" />
 
 import { TestBed, inject } from "@angular/core/testing";
-import { SharedModule } from "./shared.module";
+import { SharedModule } from "../shared.module";
 import { PaisesService } from "./paises.service";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { ConnectionBackend, HttpModule, Http } from "@angular/http";
-import { LocalidadeService } from "./localidade/localidade.service";
+import { LocalidadeService } from "../localidade/localidade.service";
 
 
 describe('PaisesService E2E', () => {
@@ -62,7 +62,7 @@ describe('PaisesService E2E', () => {
     });
   })
 
-  it('run #getTodosDados correctly', (done) => {
+  xit('run #getTodosDados correctly', (done) => {
     paisesService.getTodosDados('BR').subscribe(response => {
       const expectedMetadataIds = [62934, 62935, 62936, 62937, 62938, 62939, 62940, 63050, 63113]
       const expectedResultadosIds = [62941, 62942, 62943, 62944, 62945, 62957, 62958, 62959, 62960, 62961, 62962, 62963, 62964, 62965, 62966, 62973, 62967, 62968, 62969, 62970, 62971, 62972, 62974, 62975, 62976, 62977, 62978, 62979, 62980, 62981, 62982, 62983, 62984, 62985, 62986, 62987, 62988, 62989, 62990, 62991, 62992, 63052, 63053, 63060, 63061, 63062, 63069, 63070, 63078, 63082, 63085, 63088, 63089, 63104, 63110, 63111, 63112];

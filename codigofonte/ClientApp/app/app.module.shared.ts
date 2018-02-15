@@ -15,11 +15,11 @@ import { CoreModule } from "./core/core.module";
         AppComponent
     ],
     imports: [
-        CoreModule,
         CommonModule,
         HttpModule,
         HttpClientModule,
         FormsModule,
+        CoreModule,
         AppRoutingModule,
         SharedModule.forRoot()
     ]
