@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ResultadoPipe } from '../resultado.pipe';
 
 @Component({
     selector: 'grafico',

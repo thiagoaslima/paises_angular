@@ -14,6 +14,8 @@ import { PlatformDetectionService } from './platform-detection.service';
 import { LogoODSComponent } from './logo-ods/logo-ods.component';
 import { GraficoComponent } from './grafico/grafico.component';
 
+import { ResultadoPipe } from './resultado.pipe';
+
 
 export function platformDetectionFactory(platform_id: Object) {
     return new PlatformDetectionService(platform_id);
@@ -22,11 +24,13 @@ export function platformDetectionFactory(platform_id: Object) {
     imports: [CommonModule],
     declarations: [
         LogoODSComponent,
-        GraficoComponent
+        GraficoComponent,
+        ResultadoPipe
     ],
     exports: [
         LogoODSComponent,
-        GraficoComponent
+        GraficoComponent,
+        ResultadoPipe
     ],
     providers: [
         TraducaoService,
