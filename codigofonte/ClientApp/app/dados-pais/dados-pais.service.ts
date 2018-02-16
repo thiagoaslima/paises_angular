@@ -41,15 +41,26 @@ export class DadosPaisService  {
 
                     let values = metadata.map(obj => {
                         let resultado = resultadosMap[obj.id];
-                        let valores: string[] = [], periodos: string[] = [];
+                        let valores: any[] = [], periodos: any[] = [];
 
                         if (resultado) {
-                            valores = resultado.valores.reverse().slice(0,5);
-                            valores.length = 5;
-                            periodos = resultado.periodos.reverse().slice(0,5);
-                            periodos.length = 5;
+                            valores = resultado.valores;
+                            periodos = resultado.periodos;
+                            for(let i = 0; i < valores.length; i++){
+                                if(parseFloat(valores[i]) >= 99999999999990){
+                                    valores[i] = null;
+                                    periodos[i] = null;
+                                }
+                            }
+                            while(valores.length > 0 && !valores[valores.length - 1]){
+                                valores.pop();
+                                periodos.pop();
+                            }
+                            while((valores.length > 0 && !valores[0]) || valores.length > 5){
+                                valores.shift();
+                                periodos.shift();
+                            }
                         }
-
 
                         return {
                             titulo: obj.indicador,

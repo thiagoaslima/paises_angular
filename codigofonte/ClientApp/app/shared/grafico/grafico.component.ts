@@ -56,6 +56,7 @@ export class GraficoComponent {
     getY(indexX: any, indexY: any){
         if(!this.existemDados()) return 0;
         indexX = indexX >= this.dados[indexY].length ? this.dados[indexY].length - 1 : indexX;
+        if(!this.dados[indexY][indexX]) return 0;
         return (this.ALTURA_AREA_DADOS) - ((this.dados[indexY][indexX] / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
@@ -70,7 +71,7 @@ export class GraficoComponent {
     }
 
     valorValido(valor: any){
-        if(!this.existemDados() || isNaN(valor)){
+        if(!this.existemDados() || isNaN(valor) || valor == 0){
             return false;
         }else{
             return true;
@@ -99,7 +100,7 @@ export class GraficoComponent {
     }
 
     mostraValor(indexX: any, indexY: any){
-        if(!this.existemDados()) return;
+        if(!this.existemDados() || !this.dados[indexY][indexX]) return;
         this.valor = (<any>this.dados[indexY][indexX]).toString();
         this.metadata = this.rotulosY[indexY] + " (" + this.rotulosX[indexX] + ")";
     }

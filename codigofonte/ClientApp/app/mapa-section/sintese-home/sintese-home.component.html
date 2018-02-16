@@ -22,7 +22,7 @@
             <tbody>
                 <tr class="sintese__tabela-linha" *ngFor="let item of itens">
                     <th class="sintese__tabela-nome">{{ item.titulo }}</th>
-                    <td class="sintese__tabela-valor">{{ item.valor }}</td>
+                    <td class="sintese__tabela-valor">{{ item.valor | resultado }}</td>
                 </tr>
             </tbody>
         </table>
