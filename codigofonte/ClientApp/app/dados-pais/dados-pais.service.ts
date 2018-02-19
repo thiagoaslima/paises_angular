@@ -6,8 +6,8 @@ import { PaisesEnum, PaisesService } from "../shared";
 import { objArrayToMap } from "../../utils";
 
 @Injectable()
-export class DadosPaisService  {
-    private _dictionary: {[key: number]: string} = {
+export class DadosPaisService {
+    private _dictionary: { [key: number]: string } = {
         [PaisesEnum.temas.sintese]: 'sintese',
         [PaisesEnum.temas.economia]: 'economia',
         [PaisesEnum.temas.sociais]: 'sociais',
@@ -17,7 +17,7 @@ export class DadosPaisService  {
     }
     constructor(
         private _paisesService: PaisesService
-    ) {}
+    ) { }
 
     getDados(siglaPais: string) {
         let temas = [
@@ -41,24 +41,21 @@ export class DadosPaisService  {
 
                     let values = metadata.map(obj => {
                         let resultado = resultadosMap[obj.id];
-                        let valores: any[] = [], periodos: any[] = [];
+                        let valores: string[] = [];
+                        let periodos: string[] = [];
 
                         if (resultado) {
-                            valores = resultado.valores;
-                            periodos = resultado.periodos;
-                            for(let i = 0; i < valores.length; i++){
-                                if(parseFloat(valores[i]) >= 99999999999990){
-                                    valores[i] = null;
-                                    periodos[i] = null;
+
+                            resultado.valores.forEach((valor: string, idx: number) => {
+                                if (!PaisesService.isSpecialValue(valor)) {
+                                    valores.push(valor);
+                                    periodos.push(resultado.periodos[idx]);
                                 }
-                            }
-                            while(valores.length > 0 && !valores[valores.length - 1]){
-                                valores.pop();
-                                periodos.pop();
-                            }
-                            while((valores.length > 0 && !valores[0]) || valores.length > 5){
-                                valores.shift();
-                                periodos.shift();
+                            });
+
+                            if (valores.length > 5) {
+                                valores.length = 5;
+                                periodos.length = 5;
                             }
                         }
 
@@ -70,7 +67,7 @@ export class DadosPaisService  {
                             fontes: obj.fontes
                         };
 
-                    }).sort( (a, b) => a.titulo > b.titulo ? -1 : 1);
+                    }).sort((a, b) => a.titulo > b.titulo ? -1 : 1);
 
                     return {
                         tema: parent.indicador,
@@ -92,5 +89,5 @@ export class DadosPaisService  {
         )
     }
 
-    
+
 }

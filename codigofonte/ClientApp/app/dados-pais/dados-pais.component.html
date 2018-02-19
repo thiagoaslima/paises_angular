@@ -6,8 +6,12 @@
                 <i class="fa fa-caret-left dados-pais__menu-icon" aria-hidden="true"></i> Voltar
             </a>
         </li-->
-        <li class="dados-pais__menu-item"><a href="#" class="dados-pais__menu-link">Imprimir</a></li>
-        <li class="dados-pais__menu-item"><a href="#" class="dados-pais__menu-link">Download</a></li>
+        <li class="dados-pais__menu-item">
+            <a href="#" class="dados-pais__menu-link">Imprimir</a>
+        </li>
+        <li class="dados-pais__menu-item">
+            <a href="#" class="dados-pais__menu-link">Download</a>
+        </li>
         <li class="dados-pais__menu-item dados-pais__menu-item--right">
             <a href="#" class="dados-pais__menu-link">
                 <i class="fa fa-signal dados-pais__menu-icon" aria-hidden="true"></i> Comparar Países
@@ -37,8 +41,8 @@
     </div>
     <!--histórico-->
     <div class="dados-pais__historico">
-        <div class="dados-pais__historico-titulo-container"
-            [class.dados-pais__historico-titulo-container--ativo]="historico_aberto" (click)="historico_aberto = !historico_aberto">
+        <div class="dados-pais__historico-titulo-container" [class.dados-pais__historico-titulo-container--ativo]="historico_aberto"
+            (click)="historico_aberto = !historico_aberto">
             <h3 class="dados-pais__historico-titulo">HISTÓRICO</h3>
             <i class="fa fa-plus dados-pais__historico-icone" aria-hidden="true" *ngIf="!historico_aberto"></i>
             <i class="fa fa-minus dados-pais__historico-icone" aria-hidden="true" *ngIf="historico_aberto"></i>
