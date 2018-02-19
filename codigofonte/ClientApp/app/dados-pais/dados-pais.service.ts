@@ -59,7 +59,6 @@ export class DadosPaisService {
                             }
                         }
 
-
                         return {
                             titulo: obj.indicador,
                             valores: valores,

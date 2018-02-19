@@ -6,6 +6,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
 import { SinteseHomeService } from "./sintese-home.service";
 
+import { ResultadoPipe } from "../../shared/resultado.pipe";
+
 @Component({
     selector: 'sintese-home',
     templateUrl: './sintese-home.component.html',

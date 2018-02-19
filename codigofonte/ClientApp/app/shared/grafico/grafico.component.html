@@ -1,13 +1,13 @@
 <div class="grafico">
     <!--valor-->
     <div class="grafico__valor-container">
-        <p class="grafico__valor">&nbsp; {{ getValor() }}</p>
+        <p class="grafico__valor">&nbsp; {{ getValor() | resultado }}</p>
         <p class="grafico__valor-metadata">&nbsp; {{ getMetadata() }}</p>
     </div>
     <!-->grafico<-->
     <svg [attr.viewBox]="'0 0 ' + LARGURA_GRAFICO + ' ' + ALTURA_GRAFICO" class="grafico__svg">
         <!--eixo x-->
-        <line x1="0" [attr.y1]="POSICAO_EIXO_X" x2="320" [attr.y2]="POSICAO_EIXO_X" class="grafico__eixo-x"/>
+        <line x1="0" [attr.y1]="POSICAO_EIXO_X" [attr.x2]="LARGURA_GRAFICO" [attr.y2]="POSICAO_EIXO_X" class="grafico__eixo-x"/>
 
         <!--rótulos-->
         <text *ngFor="let rotulo of rotulosX; let i = index" [attr.x]="getX(i, LARGURA_ROTULO)" [attr.y]="POSICAO_EIXO_X + ALTURA_ROTULO" class="grafico__rotulo">{{ rotulo }}</text>
