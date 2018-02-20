@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { isPaisGuard, isIndicadorGuard, RouteParametersGuard } from './app-guards';
 import { AppComponent } from './app-component/app.component';
-import { RankingModule } from './ranking/ranking.module';
-import { RankingComponent } from './ranking/ranking.component';
-
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: './home/home.module#HomeModule' },
@@ -24,7 +21,6 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [
-    RankingModule,
     RouterModule.forRoot(routes, { enableTracing: true })
   ],
   exports: [

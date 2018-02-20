@@ -34427,23 +34427,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "004",
                         "sigla": "AF",
-                        "sigla3": "AFG",
                         "nome": {
                             "en": "Afghanistan",
                             "es": "Afganistán",
                             "pt": "Afeganistão"
                         },
-                        "parent": "030",
-                        "ddi": "93",
-                        "labelPosition": [
-                            66.77695324364794,
-                            34.36405793183843
-                        ],
                         "mostrar": true,
-                        "slug": "afeganistao",
-                        "id": "afeganistao"
+                        "slug": "afeganistao"
                     }
                 },
                 {
@@ -34466,23 +34457,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "024",
                         "sigla": "AO",
-                        "sigla3": "AGO",
                         "nome": {
                             "en": "Angola",
                             "es": "Angola",
                             "pt": "Angola"
                         },
-                        "parent": "202",
-                        "ddi": "244",
-                        "labelPosition": [
-                            17.7141680195181,
-                            -13.098996710221599
-                        ],
                         "mostrar": true,
-                        "slug": "angola",
-                        "id": "angola"
+                        "slug": "angola"
                     }
                 },
                 {
@@ -34497,23 +34479,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "008",
                         "sigla": "AL",
-                        "sigla3": "ALB",
                         "nome": {
                             "en": "Albania",
                             "es": "Albania",
                             "pt": "Albânia"
                         },
-                        "parent": "154",
-                        "ddi": "355",
-                        "labelPosition": [
-                            20.031167401370038,
-                            40.69512485912788
-                        ],
                         "mostrar": true,
-                        "slug": "albania",
-                        "id": "albania"
+                        "slug": "albania"
                     }
                 },
                 {
@@ -34528,23 +34501,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "784",
                         "sigla": "AE",
-                        "sigla3": "ARE",
                         "nome": {
                             "en": "United Arab Emirates",
                             "es": "Emiratos Árabes Unidos",
                             "pt": "Emirados Árabes Unidos"
                         },
-                        "parent": "030",
-                        "ddi": "971",
-                        "labelPosition": [
-                            54.46690393915807,
-                            23.42958123189108
-                        ],
                         "mostrar": true,
-                        "slug": "emirados-arabes-unidos",
-                        "id": "emirados-arabes-unidos"
+                        "slug": "emirados-arabes-unidos"
                     }
                 },
                 {
@@ -34568,23 +34532,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "032",
                         "sigla": "AR",
-                        "sigla3": "ARG",
                         "nome": {
                             "en": "Argentina",
                             "es": "Argentina",
                             "pt": "Argentina"
                         },
-                        "parent": "029",
-                        "ddi": "54",
-                        "labelPosition": [
-                            -64.09011894407205,
-                            -31.599749536622458
-                        ],
                         "mostrar": true,
-                        "slug": "argentina",
-                        "id": "argentina"
+                        "slug": "argentina"
                     }
                 },
                 {
@@ -34599,23 +34554,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "051",
                         "sigla": "AM",
-                        "sigla3": "ARM",
                         "nome": {
                             "en": "Armenia",
                             "es": "Armenia",
                             "pt": "Armênia"
                         },
-                        "parent": "030",
-                        "ddi": "374",
-                        "labelPosition": [
-                            44.69054317096468,
-                            40.57365746211311
-                        ],
                         "mostrar": true,
-                        "slug": "armenia",
-                        "id": "armenia"
+                        "slug": "armenia"
                     }
                 },
                 {
@@ -34645,23 +34591,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "036",
                         "sigla": "AU",
-                        "sigla3": "AUS",
                         "nome": {
                             "en": "Australia",
                             "es": "Australia",
                             "pt": "Austrália"
                         },
-                        "parent": "053",
-                        "ddi": "61",
-                        "labelPosition": [
-                            132.28111106498662,
-                            -23.046533840478173
-                        ],
                         "mostrar": true,
-                        "slug": "australia",
-                        "id": "australia"
+                        "slug": "australia"
                     }
                 },
                 {
@@ -34678,23 +34615,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "040",
                         "sigla": "AT",
-                        "sigla3": "AUT",
                         "nome": {
                             "en": "Austria",
                             "es": "Austria",
                             "pt": "Áustria"
                         },
-                        "parent": "154",
-                        "ddi": "43",
-                        "labelPosition": [
-                            15.211988113847626,
-                            47.79209758857099
-                        ],
                         "mostrar": true,
-                        "slug": "austria",
-                        "id": "austria"
+                        "slug": "austria"
                     }
                 },
                 {
@@ -34717,23 +34645,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "031",
                         "sigla": "AZ",
-                        "sigla3": "AZE",
                         "nome": {
                             "en": "Azerbaijan",
                             "es": "Azerbaiyán",
                             "pt": "Azerbaijão"
                         },
-                        "parent": "030",
-                        "ddi": "994",
-                        "labelPosition": [
-                            48.501858387277814,
-                            40.454270719625065
-                        ],
                         "mostrar": true,
-                        "slug": "azerbaijao",
-                        "id": "azerbaijao"
+                        "slug": "azerbaijao"
                     }
                 },
                 {
@@ -34746,23 +34665,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "108",
                         "sigla": "BI",
-                        "sigla3": "BDI",
                         "nome": {
                             "en": "Burundi",
                             "es": "Burundi",
                             "pt": "Burundi"
                         },
-                        "parent": "202",
-                        "ddi": "257",
-                        "labelPosition": [
-                            29.867497821334183,
-                            -3.449931922838476
-                        ],
                         "mostrar": true,
-                        "slug": "burundi",
-                        "id": "burundi"
+                        "slug": "burundi"
                     }
                 },
                 {
@@ -34777,23 +34687,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "056",
                         "sigla": "BE",
-                        "sigla3": "BEL",
                         "nome": {
                             "en": "Belgium",
                             "es": "Bélgica",
                             "pt": "Bélgica"
                         },
-                        "parent": "154",
-                        "ddi": "32",
-                        "labelPosition": [
-                            4.824376958991512,
-                            50.7041224192618
-                        ],
                         "mostrar": true,
-                        "slug": "belgica",
-                        "id": "belgica"
+                        "slug": "belgica"
                     }
                 },
                 {
@@ -34808,23 +34709,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "204",
                         "sigla": "BJ",
-                        "sigla3": "BEN",
                         "nome": {
                             "en": "Benin",
                             "es": "Benin",
                             "pt": "Benin"
                         },
-                        "parent": "202",
-                        "ddi": "229",
-                        "labelPosition": [
-                            2.4076793487625334,
-                            10.528305328728777
-                        ],
                         "mostrar": true,
-                        "slug": "benin",
-                        "id": "benin"
+                        "slug": "benin"
                     }
                 },
                 {
@@ -34840,23 +34732,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "854",
                         "sigla": "BF",
-                        "sigla3": "BFA",
                         "nome": {
                             "en": "Burkina Faso",
                             "es": "Burkina Faso",
                             "pt": "Burkina Faso"
                         },
-                        "parent": "202",
-                        "ddi": "226",
-                        "labelPosition": [
-                            -1.0055545489867923,
-                            12.844674426219202
-                        ],
                         "mostrar": true,
-                        "slug": "burkina-faso",
-                        "id": "burkina-faso"
+                        "slug": "burkina-faso"
                     }
                 },
                 {
@@ -34869,23 +34752,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "050",
                         "sigla": "BD",
-                        "sigla3": "BGD",
                         "nome": {
                             "en": "Bangladesh",
                             "es": "Bangladesh",
                             "pt": "Bangladesh"
                         },
-                        "parent": "030",
-                        "ddi": "880",
-                        "labelPosition": [
-                            89.95569983673916,
-                            23.968162916199493
-                        ],
                         "mostrar": true,
-                        "slug": "bangladesh",
-                        "id": "bangladesh"
+                        "slug": "bangladesh"
                     }
                 },
                 {
@@ -34901,23 +34775,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "100",
                         "sigla": "BG",
-                        "sigla3": "BGR",
                         "nome": {
                             "en": "Bulgaria",
                             "es": "Bulgaria",
                             "pt": "Bulgária"
                         },
-                        "parent": "151",
-                        "ddi": "359",
-                        "labelPosition": [
-                            25.19197039178754,
-                            42.53692178162029
-                        ],
                         "mostrar": true,
-                        "slug": "bulgaria",
-                        "id": "bulgaria"
+                        "slug": "bulgaria"
                     }
                 },
                 {
@@ -34940,23 +34805,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "044",
                         "sigla": "BS",
-                        "sigla3": "BHS",
                         "nome": {
                             "en": "Bahamas",
                             "es": "Bahamas",
                             "pt": "Bahamas"
                         },
-                        "parent": "029",
-                        "ddi": "1-242",
-                        "labelPosition": [
-                            -78.0325837988281,
-                            24.68750079101562
-                        ],
                         "mostrar": true,
-                        "slug": "bahamas",
-                        "id": "bahamas"
+                        "slug": "bahamas"
                     }
                 },
                 {
@@ -34969,23 +34825,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "070",
                         "sigla": "BA",
-                        "sigla3": "BIH",
                         "nome": {
                             "en": "Bosnia and Herzegovina",
                             "es": "Bosnia y Herzegovina",
                             "pt": "Bósnia e Herzegovina"
                         },
-                        "parent": "154",
-                        "ddi": "387",
-                        "labelPosition": [
-                            18.13320688668756,
-                            44.049125208651326
-                        ],
                         "mostrar": true,
-                        "slug": "bosnia-e-herzegovina",
-                        "id": "bosnia-e-herzegovina"
+                        "slug": "bosnia-e-herzegovina"
                     }
                 },
                 {
@@ -35000,23 +34847,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "112",
                         "sigla": "BY",
-                        "sigla3": "BLR",
                         "nome": {
                             "en": "Belarus",
                             "es": "Belarús",
                             "pt": "Belarus"
                         },
-                        "parent": "151",
-                        "ddi": "375",
-                        "labelPosition": [
-                            28.278222541044027,
-                            53.76740453945212
-                        ],
                         "mostrar": true,
-                        "slug": "belarus",
-                        "id": "belarus"
+                        "slug": "belarus"
                     }
                 },
                 {
@@ -35029,23 +34867,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "084",
                         "sigla": "BZ",
-                        "sigla3": "BLZ",
                         "nome": {
                             "en": "Belize",
                             "es": "Belice",
                             "pt": "Belize"
                         },
-                        "parent": "029",
-                        "ddi": "501",
-                        "labelPosition": [
-                            -88.69043538723501,
-                            17.431756114780708
-                        ],
                         "mostrar": true,
-                        "slug": "belize",
-                        "id": "belize"
+                        "slug": "belize"
                     }
                 },
                 {
@@ -35060,23 +34889,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "068",
                         "sigla": "BO",
-                        "sigla3": "BOL",
                         "nome": {
                             "en": "Bolivia (Plurinational State of)",
                             "es": "Bolivia (Estado Plurinacional de)",
                             "pt": "Bolívia"
                         },
-                        "parent": "029",
-                        "ddi": "591",
-                        "labelPosition": [
-                            -64.77471066175136,
-                            -16.697735434204457
-                        ],
                         "mostrar": true,
-                        "slug": "bolivia",
-                        "id": "bolivia"
+                        "slug": "bolivia"
                     }
                 },
                 {
@@ -35097,23 +34917,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "076",
                         "sigla": "BR",
-                        "sigla3": "BRA",
                         "nome": {
                             "en": "Brazil",
                             "es": "Brasil",
                             "pt": "Brasil"
                         },
-                        "parent": "029",
-                        "ddi": "55",
-                        "labelPosition": [
-                            -49.004739281411055,
-                            -11.911149174153401
-                        ],
                         "mostrar": true,
-                        "slug": "brasil",
-                        "id": "brasil"
+                        "slug": "brasil"
                     }
                 },
                 {
@@ -35125,23 +34936,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "096",
                         "sigla": "BN",
-                        "sigla3": "BRN",
                         "nome": {
                             "en": "Brunei Darussalam",
                             "es": "Brunei Darussalam",
                             "pt": "Brunei"
                         },
-                        "parent": "030",
-                        "ddi": "673",
-                        "labelPosition": [
-                            115.0069410140108,
-                            4.7155982720540015
-                        ],
                         "mostrar": true,
-                        "slug": "brunei",
-                        "id": "brunei"
+                        "slug": "brunei"
                     }
                 },
                 {
@@ -35153,23 +34955,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "064",
                         "sigla": "BT",
-                        "sigla3": "BTN",
                         "nome": {
                             "en": "Bhutan",
                             "es": "Bhután",
                             "pt": "Butão"
                         },
-                        "parent": "030",
-                        "ddi": "975",
-                        "labelPosition": [
-                            90.06286328308651,
-                            27.532176903894033
-                        ],
                         "mostrar": true,
-                        "slug": "butao",
-                        "id": "butao"
+                        "slug": "butao"
                     }
                 },
                 {
@@ -35183,23 +34976,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "072",
                         "sigla": "BW",
-                        "sigla3": "BWA",
                         "nome": {
                             "en": "Botswana",
                             "es": "Botswana",
                             "pt": "Botswana"
                         },
-                        "parent": "202",
-                        "ddi": "267",
-                        "labelPosition": [
-                            24.165505571080548,
-                            -21.931863460877242
-                        ],
                         "mostrar": true,
-                        "slug": "botswana",
-                        "id": "botswana"
+                        "slug": "botswana"
                     }
                 },
                 {
@@ -35215,23 +34999,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "140",
                         "sigla": "CF",
-                        "sigla3": "CAF",
                         "nome": {
                             "en": "Central African Republic",
                             "es": "República Centroafricana",
                             "pt": "República Centro Africana"
                         },
-                        "parent": "202",
-                        "ddi": "236",
-                        "labelPosition": [
-                            21.552603141991074,
-                            6.908144433699486
-                        ],
                         "mostrar": true,
-                        "slug": "republica-centro-africana",
-                        "id": "republica-centro-africana"
+                        "slug": "republica-centro-africana"
                     }
                 },
                 {
@@ -35392,23 +35167,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "124",
                         "sigla": "CA",
-                        "sigla3": "CAN",
                         "nome": {
                             "en": "Canada",
                             "es": "Canadá",
                             "pt": "Canadá"
                         },
-                        "parent": "029",
-                        "ddi": "1",
-                        "labelPosition": [
-                            -120.34481048403782,
-                            59.123359172351115
-                        ],
                         "mostrar": true,
-                        "slug": "canada",
-                        "id": "canada"
+                        "slug": "canada"
                     }
                 },
                 {
@@ -35422,23 +35188,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "756",
                         "sigla": "CH",
-                        "sigla3": "CHE",
                         "nome": {
                             "en": "Switzerland",
                             "es": "Suiza",
                             "pt": "Suíça"
                         },
-                        "parent": "154",
-                        "ddi": "41",
-                        "labelPosition": [
-                            7.480282484438134,
-                            46.65094981395948
-                        ],
                         "mostrar": true,
-                        "slug": "suica",
-                        "id": "suica"
+                        "slug": "suica"
                     }
                 },
                 {
@@ -35460,23 +35217,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "152",
                         "sigla": "CL",
-                        "sigla3": "CHL",
                         "nome": {
                             "en": "Chile",
                             "es": "Chile",
                             "pt": "Chile"
                         },
-                        "parent": "029",
-                        "ddi": "56",
-                        "labelPosition": [
-                            -73.13818539602407,
-                            -45.89175981698954
-                        ],
                         "mostrar": true,
-                        "slug": "chile",
-                        "id": "chile"
+                        "slug": "chile"
                     }
                 },
                 {
@@ -35511,23 +35259,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "156",
                         "sigla": "CN",
-                        "sigla3": "CHN",
                         "nome": {
                             "en": "China",
                             "es": "China",
                             "pt": "China"
                         },
-                        "parent": "030",
-                        "ddi": "86",
-                        "labelPosition": [
-                            109.42388064770945,
-                            32.4993256142803
-                        ],
                         "mostrar": true,
-                        "slug": "china",
-                        "id": "china"
+                        "slug": "china"
                     }
                 },
                 {
@@ -35543,23 +35282,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "384",
                         "sigla": "CI",
-                        "sigla3": "CIV",
                         "nome": {
                             "en": "Côte d'Ivoire",
                             "es": "Côte d'Ivoire",
                             "pt": "Costa do Marfim"
                         },
-                        "parent": "202",
-                        "ddi": "225",
-                        "labelPosition": [
-                            -5.622722558274013,
-                            7.505742942434884
-                        ],
                         "mostrar": true,
-                        "slug": "costa-do-marfim",
-                        "id": "costa-do-marfim"
+                        "slug": "costa-do-marfim"
                     }
                 },
                 {
@@ -35577,23 +35307,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "120",
                         "sigla": "CM",
-                        "sigla3": "CMR",
                         "nome": {
                             "en": "Cameroon",
                             "es": "Camerún",
                             "pt": "Camarões"
                         },
-                        "parent": "202",
-                        "ddi": "237",
-                        "labelPosition": [
-                            12.164957824736815,
-                            4.606590304467242
-                        ],
                         "mostrar": true,
-                        "slug": "camaroes",
-                        "id": "camaroes"
+                        "slug": "camaroes"
                     }
                 },
                 {
@@ -35614,23 +35335,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "180",
                         "sigla": "CD",
-                        "sigla3": "COD",
                         "nome": {
                             "en": "Democratic Republic of the Congo",
                             "es": "República Democrática del Congo",
                             "pt": "República Democrática do Congo"
                         },
-                        "parent": "202",
-                        "ddi": "243",
-                        "labelPosition": [
-                            23.325467364903474,
-                            -1.7061795031165092
-                        ],
                         "mostrar": true,
-                        "slug": "republica-democratica-do-congo",
-                        "id": "republica-democratica-do-congo"
+                        "slug": "republica-democratica-do-congo"
                     }
                 },
                 {
@@ -35646,23 +35358,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "178",
                         "sigla": "CG",
-                        "sigla3": "COG",
                         "nome": {
                             "en": "Congo",
                             "es": "Congo",
                             "pt": "Congo"
                         },
-                        "parent": "202",
-                        "ddi": "242",
-                        "labelPosition": [
-                            15.845601085478874,
-                            0.0767753695695987
-                        ],
                         "mostrar": true,
-                        "slug": "congo",
-                        "id": "congo"
+                        "slug": "congo"
                     }
                 },
                 {
@@ -35679,23 +35382,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "170",
                         "sigla": "CO",
-                        "sigla3": "COL",
                         "nome": {
                             "en": "Colombia",
                             "es": "Colombia",
                             "pt": "Colômbia"
                         },
-                        "parent": "029",
-                        "ddi": "57",
-                        "labelPosition": [
-                            -73.29964199332315,
-                            3.373265220486323
-                        ],
                         "mostrar": true,
-                        "slug": "colombia",
-                        "id": "colombia"
+                        "slug": "colombia"
                     }
                 },
                 {
@@ -35709,23 +35403,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "188",
                         "sigla": "CR",
-                        "sigla3": "CRI",
                         "nome": {
                             "en": "Costa Rica",
                             "es": "Costa Rica",
                             "pt": "Costa Rica"
                         },
-                        "parent": "029",
-                        "ddi": "506",
-                        "labelPosition": [
-                            -83.98072225406486,
-                            10.068422100757724
-                        ],
                         "mostrar": true,
-                        "slug": "costa-rica",
-                        "id": "costa-rica"
+                        "slug": "costa-rica"
                     }
                 },
                 {
@@ -35736,23 +35421,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "192",
                         "sigla": "CU",
-                        "sigla3": "CUB",
                         "nome": {
                             "en": "Cuba",
                             "es": "Cuba",
                             "pt": "Cuba"
                         },
-                        "parent": "029",
-                        "ddi": "53",
-                        "labelPosition": [
-                            -77.86963186591623,
-                            21.372722235556125
-                        ],
                         "mostrar": true,
-                        "slug": "cuba",
-                        "id": "cuba"
+                        "slug": "cuba"
                     }
                 },
                 {
@@ -35777,23 +35453,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "196",
                         "sigla": "CY",
-                        "sigla3": "CYP",
                         "nome": {
                             "en": "Cyprus",
                             "es": "Chipre",
                             "pt": "Chipre"
                         },
-                        "parent": "030",
-                        "ddi": "357",
-                        "labelPosition": [
-                            32.96478613073501,
-                            34.83844158121934
-                        ],
                         "mostrar": true,
-                        "slug": "chipre",
-                        "id": "chipre"
+                        "slug": "chipre"
                     }
                 },
                 {
@@ -35807,23 +35474,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "203",
                         "sigla": "CZ",
-                        "sigla3": "CZE",
                         "nome": {
                             "en": "Czechia",
                             "es": "Chequia",
                             "pt": "República Tcheca"
                         },
-                        "parent": "151",
-                        "ddi": "420",
-                        "labelPosition": [
-                            14.199737207465542,
-                            49.82064954802417
-                        ],
                         "mostrar": true,
-                        "slug": "republica-tcheca",
-                        "id": "republica-tcheca"
+                        "slug": "republica-tcheca"
                     }
                 },
                 {
@@ -35844,23 +35502,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "276",
                         "sigla": "DE",
-                        "sigla3": "DEU",
                         "nome": {
                             "en": "Germany",
                             "es": "Alemania",
                             "pt": "Alemanha"
                         },
-                        "parent": "154",
-                        "ddi": "49",
-                        "labelPosition": [
-                            9.680360624869731,
-                            51.26514949573187
-                        ],
                         "mostrar": true,
-                        "slug": "alemanha",
-                        "id": "alemanha"
+                        "slug": "alemanha"
                     }
                 },
                 {
@@ -35874,23 +35523,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "262",
                         "sigla": "DJ",
-                        "sigla3": "DJI",
                         "nome": {
                             "en": "Djibouti",
                             "es": "Djibouti",
                             "pt": "Djibuti"
                         },
-                        "parent": "202",
-                        "ddi": "253",
-                        "labelPosition": [
-                            42.236702238272834,
-                            11.550339137550806
-                        ],
                         "mostrar": true,
-                        "slug": "djibuti",
-                        "id": "djibuti"
+                        "slug": "djibuti"
                     }
                 },
                 {
@@ -35909,23 +35549,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "208",
                         "sigla": "DK",
-                        "sigla3": "DNK",
                         "nome": {
                             "en": "Denmark",
                             "es": "Dinamarca",
                             "pt": "Dinamarca"
                         },
-                        "parent": "154",
-                        "ddi": "45",
-                        "labelPosition": [
-                            9.044262465986051,
-                            56.19855994371184
-                        ],
                         "mostrar": true,
-                        "slug": "dinamarca",
-                        "id": "dinamarca"
+                        "slug": "dinamarca"
                     }
                 },
                 {
@@ -35937,23 +35568,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "214",
                         "sigla": "DO",
-                        "sigla3": "DOM",
                         "nome": {
                             "en": "Dominican Republic",
                             "es": "República Dominicana",
                             "pt": "República Dominicana"
                         },
-                        "parent": "029",
-                        "ddi": "1-809,1-829,1-849",
-                        "labelPosition": [
-                            -70.89515668096094,
-                            19.121864862716805
-                        ],
                         "mostrar": true,
-                        "slug": "republica-dominicana",
-                        "id": "republica-dominicana"
+                        "slug": "republica-dominicana"
                     }
                 },
                 {
@@ -35971,23 +35593,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "012",
                         "sigla": "DZ",
-                        "sigla3": "DZA",
                         "nome": {
                             "en": "Algeria",
                             "es": "Argelia",
                             "pt": "Argélia"
                         },
-                        "parent": "015",
-                        "ddi": "213",
-                        "labelPosition": [
-                            3.032001166595235,
-                            27.50196969835497
-                        ],
                         "mostrar": true,
-                        "slug": "argelia",
-                        "id": "argelia"
+                        "slug": "argelia"
                     }
                 },
                 {
@@ -36000,23 +35613,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "218",
                         "sigla": "EC",
-                        "sigla3": "ECU",
                         "nome": {
                             "en": "Ecuador",
                             "es": "Ecuador",
                             "pt": "Equador"
                         },
-                        "parent": "029",
-                        "ddi": "593",
-                        "labelPosition": [
-                            -78.40242529146346,
-                            -1.209462119917329
-                        ],
                         "mostrar": true,
-                        "slug": "equador",
-                        "id": "equador"
+                        "slug": "equador"
                     }
                 },
                 {
@@ -36031,23 +35635,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "818",
                         "sigla": "EG",
-                        "sigla3": "EGY",
                         "nome": {
                             "en": "Egypt",
                             "es": "Egipto",
                             "pt": "Egito"
                         },
-                        "parent": "015",
-                        "ddi": "20",
-                        "labelPosition": [
-                            29.251278784179693,
-                            26.251656284179692
-                        ],
                         "mostrar": true,
-                        "slug": "egito",
-                        "id": "egito"
+                        "slug": "egito"
                     }
                 },
                 {
@@ -36061,23 +35656,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "232",
                         "sigla": "ER",
-                        "sigla3": "ERI",
                         "nome": {
                             "en": "Eritrea",
                             "es": "Eritrea",
                             "pt": "Eritreia"
                         },
-                        "parent": "202",
-                        "ddi": "291",
-                        "labelPosition": [
-                            37.94508416827787,
-                            16.157217536856383
-                        ],
                         "mostrar": true,
-                        "slug": "eritreia",
-                        "id": "eritreia"
+                        "slug": "eritreia"
                     }
                 },
                 {
@@ -36091,23 +35677,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "724",
                         "sigla": "ES",
-                        "sigla3": "ESP",
                         "nome": {
                             "en": "Spain",
                             "es": "España",
                             "pt": "Espanha"
                         },
-                        "parent": "154",
-                        "ddi": "34",
-                        "labelPosition": [
-                            -3.4546297528325787,
-                            39.98996723901298
-                        ],
                         "mostrar": true,
-                        "slug": "espanha",
-                        "id": "espanha"
+                        "slug": "espanha"
                     }
                 },
                 {
@@ -36120,23 +35697,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "233",
                         "sigla": "EE",
-                        "sigla3": "EST",
                         "nome": {
                             "en": "Estonia",
                             "es": "Estonia",
                             "pt": "Estônia"
                         },
-                        "parent": "154",
-                        "ddi": "372",
-                        "labelPosition": [
-                            26.46430877558646,
-                            58.53550665079091
-                        ],
                         "mostrar": true,
-                        "slug": "estonia",
-                        "id": "estonia"
+                        "slug": "estonia"
                     }
                 },
                 {
@@ -36153,23 +35721,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "231",
                         "sigla": "ET",
-                        "sigla3": "ETH",
                         "nome": {
                             "en": "Ethiopia",
                             "es": "Etiopía",
                             "pt": "Etiópia"
                         },
-                        "parent": "202",
-                        "ddi": "251",
-                        "labelPosition": [
-                            38.32500037292489,
-                            8.674577262573322
-                        ],
                         "mostrar": true,
-                        "slug": "etiopia",
-                        "id": "etiopia"
+                        "slug": "etiopia"
                     }
                 },
                 {
@@ -36183,23 +35742,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "246",
                         "sigla": "FI",
-                        "sigla3": "FIN",
                         "nome": {
                             "en": "Finland",
                             "es": "Finlandia",
                             "pt": "Finlândia"
                         },
-                        "parent": "154",
-                        "ddi": "358",
-                        "labelPosition": [
-                            27.34550042756013,
-                            63.226240078165326
-                        ],
                         "mostrar": true,
-                        "slug": "finlandia",
-                        "id": "finlandia"
+                        "slug": "finlandia"
                     }
                 },
                 {
@@ -36222,23 +35772,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "242",
                         "sigla": "FJ",
-                        "sigla3": "FJI",
                         "nome": {
                             "en": "Fiji",
                             "es": "Fiji",
                             "pt": "Fiji"
                         },
-                        "parent": "054",
-                        "ddi": "679",
-                        "labelPosition": [
-                            177.78222124023435,
-                            -17.835249541015624
-                        ],
                         "mostrar": true,
-                        "slug": "fiji",
-                        "id": "fiji"
+                        "slug": "fiji"
                     }
                 },
                 {
@@ -36282,23 +35823,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "250",
                         "sigla": "FR",
-                        "sigla3": "FRA",
                         "nome": {
                             "en": "France",
                             "es": "Francia",
                             "pt": "França"
                         },
-                        "parent": "154",
-                        "ddi": "33",
-                        "labelPosition": [
-                            2.393598292135421,
-                            46.64437269004679
-                        ],
                         "mostrar": true,
-                        "slug": "franca",
-                        "id": "franca"
+                        "slug": "franca"
                     }
                 },
                 {
@@ -36312,23 +35844,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "266",
                         "sigla": "GA",
-                        "sigla3": "GAB",
                         "nome": {
                             "en": "Gabon",
                             "es": "Gabón",
                             "pt": "Gabão"
                         },
-                        "parent": "202",
-                        "ddi": "241",
-                        "labelPosition": [
-                            10.92409293985366,
-                            -0.8401711598572777
-                        ],
                         "mostrar": true,
-                        "slug": "gabao",
-                        "id": "gabao"
+                        "slug": "gabao"
                     }
                 },
                 {
@@ -36347,23 +35870,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "826",
                         "sigla": "GB",
-                        "sigla3": "GBR",
                         "nome": {
                             "en": "United Kingdom of Great Britain and Northern Ireland",
                             "es": "Reino Unido de Gran Bretaña e Irlanda del Norte",
                             "pt": "Reino Unido"
                         },
-                        "parent": "154",
-                        "ddi": "44",
-                        "labelPosition": [
-                            -1.4746869373470015,
-                            52.527324673321026
-                        ],
                         "mostrar": true,
-                        "slug": "reino-unido",
-                        "id": "reino-unido"
+                        "slug": "reino-unido"
                     }
                 },
                 {
@@ -36378,23 +35892,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "268",
                         "sigla": "GE",
-                        "sigla3": "GEO",
                         "nome": {
                             "en": "Georgia",
                             "es": "Georgia",
                             "pt": "Geórgia"
                         },
-                        "parent": "030",
-                        "ddi": "995",
-                        "labelPosition": [
-                            42.4029599910346,
-                            42.37135545707769
-                        ],
                         "mostrar": true,
-                        "slug": "georgia",
-                        "id": "georgia"
+                        "slug": "georgia"
                     }
                 },
                 {
@@ -36408,23 +35913,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "288",
                         "sigla": "GH",
-                        "sigla3": "GHA",
                         "nome": {
                             "en": "Ghana",
                             "es": "Ghana",
                             "pt": "Gana"
                         },
-                        "parent": "202",
-                        "ddi": "233",
-                        "labelPosition": [
-                            -1.2229614062497285,
-                            6.955712800947455
-                        ],
                         "mostrar": true,
-                        "slug": "gana",
-                        "id": "gana"
+                        "slug": "gana"
                     }
                 },
                 {
@@ -36441,23 +35937,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "324",
                         "sigla": "GN",
-                        "sigla3": "GIN",
                         "nome": {
                             "en": "Guinea",
                             "es": "Guinea",
                             "pt": "Guiné"
                         },
-                        "parent": "202",
-                        "ddi": "224",
-                        "labelPosition": [
-                            -9.893749173058904,
-                            10.57955351277413
-                        ],
                         "mostrar": true,
-                        "slug": "guine",
-                        "id": "guine"
+                        "slug": "guine"
                     }
                 },
                 {
@@ -36469,23 +35956,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "270",
                         "sigla": "GM",
-                        "sigla3": "GMB",
                         "nome": {
                             "en": "Gambia",
                             "es": "Gambia",
                             "pt": "Gâmbia"
                         },
-                        "parent": "202",
-                        "ddi": "220",
-                        "labelPosition": [
-                            -15.994025078662641,
-                            13.372947365645043
-                        ],
                         "mostrar": true,
-                        "slug": "gambia",
-                        "id": "gambia"
+                        "slug": "gambia"
                     }
                 },
                 {
@@ -36498,23 +35976,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "624",
                         "sigla": "GW",
-                        "sigla3": "GNB",
                         "nome": {
                             "en": "Guinea-Bissau",
                             "es": "Guinea-Bissau",
                             "pt": "Guiné-Bissau"
                         },
-                        "parent": "202",
-                        "ddi": "245",
-                        "labelPosition": [
-                            -15.205984466518185,
-                            11.950581776894868
-                        ],
                         "mostrar": true,
-                        "slug": "guine-bissau",
-                        "id": "guine-bissau"
+                        "slug": "guine-bissau"
                     }
                 },
                 {
@@ -36527,23 +35996,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "226",
                         "sigla": "GQ",
-                        "sigla3": "GNQ",
                         "nome": {
                             "en": "Equatorial Guinea",
                             "es": "Guinea Ecuatorial",
                             "pt": "Guiné Equatorial"
                         },
-                        "parent": "202",
-                        "ddi": "240",
-                        "labelPosition": [
-                            10.096729250010524,
-                            1.671870666500284
-                        ],
                         "mostrar": true,
-                        "slug": "guine-equatorial",
-                        "id": "guine-equatorial"
+                        "slug": "guine-equatorial"
                     }
                 },
                 {
@@ -36565,23 +36025,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "300",
                         "sigla": "GR",
-                        "sigla3": "GRC",
                         "nome": {
                             "en": "Greece",
                             "es": "Grecia",
                             "pt": "Grécia"
                         },
-                        "parent": "154",
-                        "ddi": "30",
-                        "labelPosition": [
-                            21.64045813287617,
-                            39.52181072588641
-                        ],
                         "mostrar": true,
-                        "slug": "grecia",
-                        "id": "grecia"
+                        "slug": "grecia"
                     }
                 },
                 {
@@ -36609,23 +36060,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "320",
                         "sigla": "GT",
-                        "sigla3": "GTM",
                         "nome": {
                             "en": "Guatemala",
                             "es": "Guatemala",
                             "pt": "Guatemala"
                         },
-                        "parent": "029",
-                        "ddi": "502",
-                        "labelPosition": [
-                            -90.47446702231798,
-                            14.985680623114087
-                        ],
                         "mostrar": true,
-                        "slug": "guatemala",
-                        "id": "guatemala"
+                        "slug": "guatemala"
                     }
                 },
                 {
@@ -36639,23 +36081,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "328",
                         "sigla": "GY",
-                        "sigla3": "GUY",
                         "nome": {
                             "en": "Guyana",
                             "es": "Guyana",
                             "pt": "Guiana"
                         },
-                        "parent": "029",
-                        "ddi": "592",
-                        "labelPosition": [
-                            -58.877330848198234,
-                            5.637167782557324
-                        ],
                         "mostrar": true,
-                        "slug": "guiana",
-                        "id": "guiana"
+                        "slug": "guiana"
                     }
                 },
                 {
@@ -36670,23 +36103,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "340",
                         "sigla": "HN",
-                        "sigla3": "HND",
                         "nome": {
                             "en": "Honduras",
                             "es": "Honduras",
                             "pt": "Honduras"
                         },
-                        "parent": "029",
-                        "ddi": "504",
-                        "labelPosition": [
-                            -87.1943518948655,
-                            14.726983391229304
-                        ],
                         "mostrar": true,
-                        "slug": "honduras",
-                        "id": "honduras"
+                        "slug": "honduras"
                     }
                 },
                 {
@@ -36702,23 +36126,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "191",
                         "sigla": "HR",
-                        "sigla3": "HRV",
                         "nome": {
                             "en": "Croatia",
                             "es": "Croacia",
                             "pt": "Croácia"
                         },
-                        "parent": "154",
-                        "ddi": "385",
-                        "labelPosition": [
-                            16.548070360951257,
-                            45.83869105317613
-                        ],
                         "mostrar": true,
-                        "slug": "croacia",
-                        "id": "croacia"
+                        "slug": "croacia"
                     }
                 },
                 {
@@ -36730,23 +36145,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "332",
                         "sigla": "HT",
-                        "sigla3": "HTI",
                         "nome": {
                             "en": "Haiti",
                             "es": "Haití",
                             "pt": "Haiti"
                         },
-                        "parent": "029",
-                        "ddi": "509",
-                        "labelPosition": [
-                            -72.17947145012486,
-                            19.25677820625619
-                        ],
                         "mostrar": true,
-                        "slug": "haiti",
-                        "id": "haiti"
+                        "slug": "haiti"
                     }
                 },
                 {
@@ -36763,23 +36169,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "348",
                         "sigla": "HU",
-                        "sigla3": "HUN",
                         "nome": {
                             "en": "Hungary",
                             "es": "Hungría",
                             "pt": "Hungria"
                         },
-                        "parent": "151",
-                        "ddi": "36",
-                        "labelPosition": [
-                            20.446409424144335,
-                            47.27768269503118
-                        ],
                         "mostrar": true,
-                        "slug": "hungria",
-                        "id": "hungria"
+                        "slug": "hungria"
                     }
                 },
                 {
@@ -36855,23 +36252,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "360",
                         "sigla": "ID",
-                        "sigla3": "IDN",
                         "nome": {
                             "en": "Indonesia",
                             "es": "Indonesia",
                             "pt": "Indonésia"
                         },
-                        "parent": "030",
-                        "ddi": "62",
-                        "labelPosition": [
-                            114.28763683177652,
-                            -1.0458799224640936
-                        ],
                         "mostrar": true,
-                        "slug": "indonesia",
-                        "id": "indonesia"
+                        "slug": "indonesia"
                     }
                 },
                 {
@@ -36890,23 +36278,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "356",
                         "sigla": "IN",
-                        "sigla3": "IND",
                         "nome": {
                             "en": "India",
                             "es": "India",
                             "pt": "Índia"
                         },
-                        "parent": "030",
-                        "ddi": "91",
-                        "labelPosition": [
-                            78.87786922993375,
-                            22.413615477931863
-                        ],
                         "mostrar": true,
-                        "slug": "india",
-                        "id": "india"
+                        "slug": "india"
                     }
                 },
                 {
@@ -36918,23 +36297,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "372",
                         "sigla": "IE",
-                        "sigla3": "IRL",
                         "nome": {
                             "en": "Ireland",
                             "es": "Irlanda",
                             "pt": "Irlanda"
                         },
-                        "parent": "154",
-                        "ddi": "353",
-                        "labelPosition": [
-                            -8.047704002476143,
-                            53.03318184054213
-                        ],
                         "mostrar": true,
-                        "slug": "irlanda",
-                        "id": "irlanda"
+                        "slug": "irlanda"
                     }
                 },
                 {
@@ -36954,23 +36324,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "364",
                         "sigla": "IR",
-                        "sigla3": "IRN",
                         "nome": {
                             "en": "Iran (Islamic Republic of)",
                             "es": "Irán (República Islámica del)",
                             "pt": "Irã"
                         },
-                        "parent": "030",
-                        "ddi": "98",
-                        "labelPosition": [
-                            55.50154711985538,
-                            32.14730043121087
-                        ],
                         "mostrar": true,
-                        "slug": "ira",
-                        "id": "ira"
+                        "slug": "ira"
                     }
                 },
                 {
@@ -36987,23 +36348,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "368",
                         "sigla": "IQ",
-                        "sigla3": "IRQ",
                         "nome": {
                             "en": "Iraq",
                             "es": "Iraq",
                             "pt": "Iraque"
                         },
-                        "parent": "030",
-                        "ddi": "964",
-                        "labelPosition": [
-                            43.11601314328822,
-                            33.26085719378893
-                        ],
                         "mostrar": true,
-                        "slug": "iraque",
-                        "id": "iraque"
+                        "slug": "iraque"
                     }
                 },
                 {
@@ -37014,23 +36366,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "352",
                         "sigla": "IS",
-                        "sigla3": "ISL",
                         "nome": {
                             "en": "Iceland",
                             "es": "Islandia",
                             "pt": "Islândia"
                         },
-                        "parent": "154",
-                        "ddi": "354",
-                        "labelPosition": [
-                            -18.97006870742676,
-                            64.88174465448743
-                        ],
                         "mostrar": true,
-                        "slug": "islandia",
-                        "id": "islandia"
+                        "slug": "islandia"
                     }
                 },
                 {
@@ -37048,23 +36391,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "376",
                         "sigla": "IL",
-                        "sigla3": "ISR",
                         "nome": {
                             "en": "Israel",
                             "es": "Israel",
                             "pt": "Israel"
                         },
-                        "parent": "030",
-                        "ddi": "972",
-                        "labelPosition": [
-                            34.878323945359845,
-                            30.898164387021488
-                        ],
                         "mostrar": true,
-                        "slug": "israel",
-                        "id": "israel"
+                        "slug": "israel"
                     }
                 },
                 {
@@ -37091,23 +36425,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "380",
                         "sigla": "IT",
-                        "sigla3": "ITA",
                         "nome": {
                             "en": "Italy",
                             "es": "Italia",
                             "pt": "Itália"
                         },
-                        "parent": "154",
-                        "ddi": "39",
-                        "labelPosition": [
-                            10.912117830313688,
-                            45.16158742290635
-                        ],
                         "mostrar": true,
-                        "slug": "italia",
-                        "id": "italia"
+                        "slug": "italia"
                     }
                 },
                 {
@@ -37118,23 +36443,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "388",
                         "sigla": "JM",
-                        "sigla3": "JAM",
                         "nome": {
                             "en": "Jamaica",
                             "es": "Jamaica",
                             "pt": "Jamaica"
                         },
-                        "parent": "029",
-                        "ddi": "1-876",
-                        "labelPosition": [
-                            -77.25056523908682,
-                            18.08654349508131
-                        ],
                         "mostrar": true,
-                        "slug": "jamaica",
-                        "id": "jamaica"
+                        "slug": "jamaica"
                     }
                 },
                 {
@@ -37151,23 +36467,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "400",
                         "sigla": "JO",
-                        "sigla3": "JOR",
                         "nome": {
                             "en": "Jordan",
                             "es": "Jordania",
                             "pt": "Jordânia"
                         },
-                        "parent": "030",
-                        "ddi": "962",
-                        "labelPosition": [
-                            36.349168871951484,
-                            30.769014340861162
-                        ],
                         "mostrar": true,
-                        "slug": "jordania",
-                        "id": "jordania"
+                        "slug": "jordania"
                     }
                 },
                 {
@@ -37190,23 +36497,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "392",
                         "sigla": "JP",
-                        "sigla3": "JPN",
                         "nome": {
                             "en": "Japan",
                             "es": "Japón",
                             "pt": "Japão"
                         },
-                        "parent": "030",
-                        "ddi": "81",
-                        "labelPosition": [
-                            139.15168994541105,
-                            36.27544616269145
-                        ],
                         "mostrar": true,
-                        "slug": "japao",
-                        "id": "japao"
+                        "slug": "japao"
                     }
                 },
                 {
@@ -37222,23 +36520,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "398",
                         "sigla": "KZ",
-                        "sigla3": "KAZ",
                         "nome": {
                             "en": "Kazakhstan",
                             "es": "Kazajstán",
                             "pt": "Cazaquistão"
                         },
-                        "parent": "143",
-                        "ddi": "7",
-                        "labelPosition": [
-                            68.97543027258824,
-                            48.41783048462834
-                        ],
                         "mostrar": true,
-                        "slug": "cazaquistao",
-                        "id": "cazaquistao"
+                        "slug": "cazaquistao"
                     }
                 },
                 {
@@ -37254,23 +36543,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "404",
                         "sigla": "KE",
-                        "sigla3": "KEN",
                         "nome": {
                             "en": "Kenya",
                             "es": "Kenya",
                             "pt": "Quênia"
                         },
-                        "parent": "202",
-                        "ddi": "254",
-                        "labelPosition": [
-                            37.83399365370141,
-                            0.44641380118083546
-                        ],
                         "mostrar": true,
-                        "slug": "quenia",
-                        "id": "quenia"
+                        "slug": "quenia"
                     }
                 },
                 {
@@ -37284,23 +36564,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "417",
                         "sigla": "KG",
-                        "sigla3": "KGZ",
                         "nome": {
                             "en": "Kyrgyzstan",
                             "es": "Kirguistán",
                             "pt": "Quirguistão"
                         },
-                        "parent": "143",
-                        "ddi": "996",
-                        "labelPosition": [
-                            74.63222363175608,
-                            41.74759868305697
-                        ],
                         "mostrar": true,
-                        "slug": "quirguistao",
-                        "id": "quirguistao"
+                        "slug": "quirguistao"
                     }
                 },
                 {
@@ -37314,23 +36585,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "116",
                         "sigla": "KH",
-                        "sigla3": "KHM",
                         "nome": {
                             "en": "Cambodia",
                             "es": "Camboya",
                             "pt": "Camboja"
                         },
-                        "parent": "030",
-                        "ddi": "855",
-                        "labelPosition": [
-                            104.3631982971591,
-                            12.603344755669804
-                        ],
                         "mostrar": true,
-                        "slug": "camboja",
-                        "id": "camboja"
+                        "slug": "camboja"
                     }
                 },
                 {
@@ -37342,23 +36604,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "410",
                         "sigla": "KR",
-                        "sigla3": "KOR",
                         "nome": {
                             "en": "Republic of Korea",
                             "es": "República de Corea",
                             "pt": "República da Coreia"
                         },
-                        "parent": "030",
-                        "ddi": "82",
-                        "labelPosition": [
-                            128.0885916021782,
-                            36.27615797211297
-                        ],
                         "mostrar": true,
-                        "slug": "republica-da-coreia",
-                        "id": "republica-da-coreia"
+                        "slug": "republica-da-coreia"
                     }
                 },
                 {
@@ -37386,23 +36639,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "414",
                         "sigla": "KW",
-                        "sigla3": "KWT",
                         "nome": {
                             "en": "Kuwait",
                             "es": "Kuwait",
                             "pt": "Kuwait"
                         },
-                        "parent": "030",
-                        "ddi": "965",
-                        "labelPosition": [
-                            47.61142778466913,
-                            29.498414466548365
-                        ],
                         "mostrar": true,
-                        "slug": "kuwait",
-                        "id": "kuwait"
+                        "slug": "kuwait"
                     }
                 },
                 {
@@ -37417,23 +36661,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "418",
                         "sigla": "LA",
-                        "sigla3": "LAO",
                         "nome": {
                             "en": "Lao People's Democratic Republic",
                             "es": "República Democrática Popular Lao",
                             "pt": "Laos"
                         },
-                        "parent": "030",
-                        "ddi": "856",
-                        "labelPosition": [
-                            102.60550124826943,
-                            19.57842213633504
-                        ],
                         "mostrar": true,
-                        "slug": "laos",
-                        "id": "laos"
+                        "slug": "laos"
                     }
                 },
                 {
@@ -37446,23 +36681,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "422",
                         "sigla": "LB",
-                        "sigla3": "LBN",
                         "nome": {
                             "en": "Lebanon",
                             "es": "Líbano",
                             "pt": "Líbano"
                         },
-                        "parent": "030",
-                        "ddi": "961",
-                        "labelPosition": [
-                            36.16197843329274,
-                            34.293267433134424
-                        ],
                         "mostrar": true,
-                        "slug": "libano",
-                        "id": "libano"
+                        "slug": "libano"
                     }
                 },
                 {
@@ -37476,23 +36702,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "430",
                         "sigla": "LR",
-                        "sigla3": "LBR",
                         "nome": {
                             "en": "Liberia",
                             "es": "Liberia",
                             "pt": "Libéria"
                         },
-                        "parent": "202",
-                        "ddi": "231",
-                        "labelPosition": [
-                            -10.217942062715831,
-                            6.9768668405738685
-                        ],
                         "mostrar": true,
-                        "slug": "liberia",
-                        "id": "liberia"
+                        "slug": "liberia"
                     }
                 },
                 {
@@ -37509,23 +36726,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "434",
                         "sigla": "LY",
-                        "sigla3": "LBY",
                         "nome": {
                             "en": "Libya",
                             "es": "Libia",
                             "pt": "Líbia"
                         },
-                        "parent": "015",
-                        "ddi": "218",
-                        "labelPosition": [
-                            20.56038866366616,
-                            26.07864962726736
-                        ],
                         "mostrar": true,
-                        "slug": "libia",
-                        "id": "libia"
+                        "slug": "libia"
                     }
                 },
                 {
@@ -37536,23 +36744,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "144",
                         "sigla": "LK",
-                        "sigla3": "LKA",
                         "nome": {
                             "en": "Sri Lanka",
                             "es": "Sri Lanka",
                             "pt": "Sri Lanka"
                         },
-                        "parent": "030",
-                        "ddi": "94",
-                        "labelPosition": [
-                            80.7798831102662,
-                            7.37701926626693
-                        ],
                         "mostrar": true,
-                        "slug": "sri-lanka",
-                        "id": "sri-lanka"
+                        "slug": "sri-lanka"
                     }
                 },
                 {
@@ -37563,23 +36762,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "426",
                         "sigla": "LS",
-                        "sigla3": "LSO",
                         "nome": {
                             "en": "Lesotho",
                             "es": "Lesotho",
                             "pt": "Lesoto"
                         },
-                        "parent": "202",
-                        "ddi": "266",
-                        "labelPosition": [
-                            28.37310247672622,
-                            -29.48682710644515
-                        ],
                         "mostrar": true,
-                        "slug": "lesoto",
-                        "id": "lesoto"
+                        "slug": "lesoto"
                     }
                 },
                 {
@@ -37594,23 +36784,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "440",
                         "sigla": "LT",
-                        "sigla3": "LTU",
                         "nome": {
                             "en": "Lithuania",
                             "es": "Lituania",
                             "pt": "Lituânia"
                         },
-                        "parent": "154",
-                        "ddi": "370",
-                        "labelPosition": [
-                            24.251954337868767,
-                            55.10599141555182
-                        ],
                         "mostrar": true,
-                        "slug": "lituania",
-                        "id": "lituania"
+                        "slug": "lituania"
                     }
                 },
                 {
@@ -37623,23 +36804,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "442",
                         "sigla": "LU",
-                        "sigla3": "LUX",
                         "nome": {
                             "en": "Luxembourg",
                             "es": "Luxemburgo",
                             "pt": "Luxemburgo"
                         },
-                        "parent": "154",
-                        "ddi": "352",
-                        "labelPosition": [
-                            5.963399855732971,
-                            49.700914308180124
-                        ],
                         "mostrar": true,
-                        "slug": "luxemburgo",
-                        "id": "luxemburgo"
+                        "slug": "luxemburgo"
                     }
                 },
                 {
@@ -37654,23 +36826,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "428",
                         "sigla": "LV",
-                        "sigla3": "LVA",
                         "nome": {
                             "en": "Latvia",
                             "es": "Letonia",
                             "pt": "Letônia"
                         },
-                        "parent": "154",
-                        "ddi": "371",
-                        "labelPosition": [
-                            26.58982304535618,
-                            56.5758707460537
-                        ],
                         "mostrar": true,
-                        "slug": "letonia",
-                        "id": "letonia"
+                        "slug": "letonia"
                     }
                 },
                 {
@@ -37683,23 +36846,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "504",
                         "sigla": "MA",
-                        "sigla3": "MAR",
                         "nome": {
                             "en": "Morocco",
                             "es": "Marruecos",
                             "pt": "Marrocos"
                         },
-                        "parent": "015",
-                        "ddi": "212",
-                        "labelPosition": [
-                            -6.549989919803192,
-                            31.84216154877998
-                        ],
                         "mostrar": true,
-                        "slug": "marrocos",
-                        "id": "marrocos"
+                        "slug": "marrocos"
                     }
                 },
                 {
@@ -37711,23 +36865,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "498",
                         "sigla": "MD",
-                        "sigla3": "MDA",
                         "nome": {
                             "en": "Republic of Moldova",
                             "es": "República de Moldova",
                             "pt": "Moldávia"
                         },
-                        "parent": "151",
-                        "ddi": "373",
-                        "labelPosition": [
-                            28.39347522887626,
-                            47.48205262674966
-                        ],
                         "mostrar": true,
-                        "slug": "moldavia",
-                        "id": "moldavia"
+                        "slug": "moldavia"
                     }
                 },
                 {
@@ -37738,23 +36883,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "450",
                         "sigla": "MG",
-                        "sigla3": "MDG",
                         "nome": {
                             "en": "Madagascar",
                             "es": "Madagascar",
                             "pt": "Madagascar"
                         },
-                        "parent": "202",
-                        "ddi": "261",
-                        "labelPosition": [
-                            46.68330444785852,
-                            -18.261386361717094
-                        ],
                         "mostrar": true,
-                        "slug": "madagascar",
-                        "id": "madagascar"
+                        "slug": "madagascar"
                     }
                 },
                 {
@@ -37769,23 +36905,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "484",
                         "sigla": "MX",
-                        "sigla3": "MEX",
                         "nome": {
                             "en": "Mexico",
                             "es": "México",
                             "pt": "México"
                         },
-                        "parent": "029",
-                        "ddi": "52",
-                        "labelPosition": [
-                            -101.78059277554442,
-                            23.43839894689186
-                        ],
                         "mostrar": true,
-                        "slug": "mexico",
-                        "id": "mexico"
+                        "slug": "mexico"
                     }
                 },
                 {
@@ -37800,23 +36927,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "807",
                         "sigla": "MK",
-                        "sigla3": "MKD",
                         "nome": {
                             "en": "The former Yugoslav Republic of Macedonia",
                             "es": "ex República Yugoslava de Macedonia",
                             "pt": "Macedônia"
                         },
-                        "parent": "154",
-                        "ddi": "389",
-                        "labelPosition": [
-                            21.45949952374139,
-                            41.56057113996844
-                        ],
                         "mostrar": true,
-                        "slug": "macedonia",
-                        "id": "macedonia"
+                        "slug": "macedonia"
                     }
                 },
                 {
@@ -37833,23 +36951,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "466",
                         "sigla": "ML",
-                        "sigla3": "MLI",
                         "nome": {
                             "en": "Mali",
                             "es": "Malí",
                             "pt": "Mali"
                         },
-                        "parent": "202",
-                        "ddi": "223",
-                        "labelPosition": [
-                            -1.9751240829671026,
-                            18.607472487724873
-                        ],
                         "mostrar": true,
-                        "slug": "mali",
-                        "id": "mali"
+                        "slug": "mali"
                     }
                 },
                 {
@@ -37865,23 +36974,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "104",
                         "sigla": "MM",
-                        "sigla3": "MMR",
                         "nome": {
                             "en": "Myanmar",
                             "es": "Myanmar",
                             "pt": "Mianmar"
                         },
-                        "parent": "030",
-                        "ddi": "95",
-                        "labelPosition": [
-                            95.96631112694983,
-                            21.49865979535998
-                        ],
                         "mostrar": true,
-                        "slug": "mianmar",
-                        "id": "mianmar"
+                        "slug": "mianmar"
                     }
                 },
                 {
@@ -37897,23 +36997,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "499",
                         "sigla": "ME",
-                        "sigla3": "MNE",
                         "nome": {
                             "en": "Montenegro",
                             "es": "Montenegro",
                             "pt": "Montenegro"
                         },
-                        "parent": "154",
-                        "ddi": "382",
-                        "labelPosition": [
-                            19.179110834894093,
-                            42.87191586001194
-                        ],
                         "mostrar": true,
-                        "slug": "montenegro",
-                        "id": "montenegro"
+                        "slug": "montenegro"
                     }
                 },
                 {
@@ -37925,23 +37016,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "496",
                         "sigla": "MN",
-                        "sigla3": "MNG",
                         "nome": {
                             "en": "Mongolia",
                             "es": "Mongolia",
                             "pt": "Mongólia"
                         },
-                        "parent": "030",
-                        "ddi": "976",
-                        "labelPosition": [
-                            100.34236477101352,
-                            46.803891176693725
-                        ],
                         "mostrar": true,
-                        "slug": "mongolia",
-                        "id": "mongolia"
+                        "slug": "mongolia"
                     }
                 },
                 {
@@ -37959,23 +37041,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "508",
                         "sigla": "MZ",
-                        "sigla3": "MOZ",
                         "nome": {
                             "en": "Mozambique",
                             "es": "Mozambique",
                             "pt": "Moçambique"
                         },
-                        "parent": "202",
-                        "ddi": "258",
-                        "labelPosition": [
-                            38.09996092567286,
-                            -13.98289193315477
-                        ],
                         "mostrar": true,
-                        "slug": "mocambique",
-                        "id": "mocambique"
+                        "slug": "mocambique"
                     }
                 },
                 {
@@ -37990,23 +37063,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "478",
                         "sigla": "MR",
-                        "sigla3": "MRT",
                         "nome": {
                             "en": "Mauritania",
                             "es": "Mauritania",
                             "pt": "Mauritânia"
                         },
-                        "parent": "202",
-                        "ddi": "222",
-                        "labelPosition": [
-                            -9.674079584166865,
-                            19.312744499981285
-                        ],
                         "mostrar": true,
-                        "slug": "mauritania",
-                        "id": "mauritania"
+                        "slug": "mauritania"
                     }
                 },
                 {
@@ -38019,23 +37083,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "454",
                         "sigla": "MW",
-                        "sigla3": "MWI",
                         "nome": {
                             "en": "Malawi",
                             "es": "Malawi",
                             "pt": "Malawi"
                         },
-                        "parent": "202",
-                        "ddi": "265",
-                        "labelPosition": [
-                            33.67291413640143,
-                            -13.30498971055347
-                        ],
                         "mostrar": true,
-                        "slug": "malawi",
-                        "id": "malawi"
+                        "slug": "malawi"
                     }
                 },
                 {
@@ -38057,23 +37112,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "458",
                         "sigla": "MY",
-                        "sigla3": "MYS",
                         "nome": {
                             "en": "Malaysia",
                             "es": "Malasia",
                             "pt": "Malásia"
                         },
-                        "parent": "030",
-                        "ddi": "60",
-                        "labelPosition": [
-                            113.79897365376286,
-                            2.36032277279513
-                        ],
                         "mostrar": true,
-                        "slug": "malasia",
-                        "id": "malasia"
+                        "slug": "malasia"
                     }
                 },
                 {
@@ -38088,23 +37134,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "516",
                         "sigla": "NA",
-                        "sigla3": "NAM",
                         "nome": {
                             "en": "Namibia",
                             "es": "Namibia",
                             "pt": "Namíbia"
                         },
-                        "parent": "202",
-                        "ddi": "264",
-                        "labelPosition": [
-                            17.008326407382345,
-                            -20.5074184729238
-                        ],
                         "mostrar": true,
-                        "slug": "namibia",
-                        "id": "namibia"
+                        "slug": "namibia"
                     }
                 },
                 {
@@ -38134,23 +37171,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "562",
                         "sigla": "NE",
-                        "sigla3": "NER",
                         "nome": {
                             "en": "Niger",
                             "es": "Níger",
                             "pt": "Níger"
                         },
-                        "parent": "202",
-                        "ddi": "227",
-                        "labelPosition": [
-                            10.169683690643023,
-                            17.537441557287167
-                        ],
                         "mostrar": true,
-                        "slug": "niger",
-                        "id": "niger"
+                        "slug": "niger"
                     }
                 },
                 {
@@ -38164,23 +37192,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "566",
                         "sigla": "NG",
-                        "sigla3": "NGA",
                         "nome": {
                             "en": "Nigeria",
                             "es": "Nigeria",
                             "pt": "Nigéria"
                         },
-                        "parent": "202",
-                        "ddi": "234",
-                        "labelPosition": [
-                            7.27348557242033,
-                            9.482709524706273
-                        ],
                         "mostrar": true,
-                        "slug": "nigeria",
-                        "id": "nigeria"
+                        "slug": "nigeria"
                     }
                 },
                 {
@@ -38194,23 +37213,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "558",
                         "sigla": "NI",
-                        "sigla3": "NIC",
                         "nome": {
                             "en": "Nicaragua",
                             "es": "Nicaragua",
                             "pt": "Nicarágua"
                         },
-                        "parent": "029",
-                        "ddi": "505",
-                        "labelPosition": [
-                            -85.05985928453657,
-                            12.583566642056198
-                        ],
                         "mostrar": true,
-                        "slug": "nicaragua",
-                        "id": "nicaragua"
+                        "slug": "nicaragua"
                     }
                 },
                 {
@@ -38223,23 +37233,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "528",
                         "sigla": "NL",
-                        "sigla3": "NLD",
                         "nome": {
                             "en": "Netherlands",
                             "es": "Países Bajos",
                             "pt": "Holanda"
                         },
-                        "parent": "154",
-                        "ddi": "31",
-                        "labelPosition": [
-                            5.280884215223043,
-                            52.35728794943347
-                        ],
                         "mostrar": true,
-                        "slug": "holanda",
-                        "id": "holanda"
+                        "slug": "holanda"
                     }
                 },
                 {
@@ -38270,23 +37271,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "578",
                         "sigla": "NO",
-                        "sigla3": "NOR",
                         "nome": {
                             "en": "Norway",
                             "es": "Noruega",
                             "pt": "Noruega"
                         },
-                        "parent": "154",
-                        "ddi": "47",
-                        "labelPosition": [
-                            7.59635690450328,
-                            60.63276535396159
-                        ],
                         "mostrar": true,
-                        "slug": "noruega",
-                        "id": "noruega"
+                        "slug": "noruega"
                     }
                 },
                 {
@@ -38298,23 +37290,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "524",
                         "sigla": "NP",
-                        "sigla3": "NPL",
                         "nome": {
                             "en": "Nepal",
                             "es": "Nepal",
                             "pt": "Nepal"
                         },
-                        "parent": "030",
-                        "ddi": "977",
-                        "labelPosition": [
-                            81.85272197146772,
-                            29.179209087508053
-                        ],
                         "mostrar": true,
-                        "slug": "nepal",
-                        "id": "nepal"
+                        "slug": "nepal"
                     }
                 },
                 {
@@ -38332,23 +37315,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "554",
                         "sigla": "NZ",
-                        "sigla3": "NZL",
                         "nome": {
                             "en": "New Zealand",
                             "es": "Nueva Zelandia",
                             "pt": "Nova Zelândia"
                         },
-                        "parent": "053",
-                        "ddi": "64",
-                        "labelPosition": [
-                            168.99484292941443,
-                            -45.305148995476735
-                        ],
                         "mostrar": true,
-                        "slug": "nova-zelandia",
-                        "id": "nova-zelandia"
+                        "slug": "nova-zelandia"
                     }
                 },
                 {
@@ -38370,23 +37344,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "512",
                         "sigla": "OM",
-                        "sigla3": "OMN",
                         "nome": {
                             "en": "Oman",
                             "es": "Omán",
                             "pt": "Omã"
                         },
-                        "parent": "030",
-                        "ddi": "968",
-                        "labelPosition": [
-                            57.407122922238926,
-                            22.107727076698005
-                        ],
                         "mostrar": true,
-                        "slug": "oma",
-                        "id": "oma"
+                        "slug": "oma"
                     }
                 },
                 {
@@ -38401,23 +37366,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "586",
                         "sigla": "PK",
-                        "sigla3": "PAK",
                         "nome": {
                             "en": "Pakistan",
                             "es": "Pakistán",
                             "pt": "Paquistão"
                         },
-                        "parent": "030",
-                        "ddi": "92",
-                        "labelPosition": [
-                            67.22971341445967,
-                            27.661772026890034
-                        ],
                         "mostrar": true,
-                        "slug": "paquistao",
-                        "id": "paquistao"
+                        "slug": "paquistao"
                     }
                 },
                 {
@@ -38431,23 +37387,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "591",
                         "sigla": "PA",
-                        "sigla3": "PAN",
                         "nome": {
                             "en": "Panama",
                             "es": "Panamá",
                             "pt": "Panamá"
                         },
-                        "parent": "029",
-                        "ddi": "507",
-                        "labelPosition": [
-                            -80.9477352246741,
-                            8.329095963620297
-                        ],
                         "mostrar": true,
-                        "slug": "panama",
-                        "id": "panama"
+                        "slug": "panama"
                     }
                 },
                 {
@@ -38463,23 +37410,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "604",
                         "sigla": "PE",
-                        "sigla3": "PER",
                         "nome": {
                             "en": "Peru",
                             "es": "Perú",
                             "pt": "Peru"
                         },
-                        "parent": "029",
-                        "ddi": "51",
-                        "labelPosition": [
-                            -72.85859617407979,
-                            -13.08244968493464
-                        ],
                         "mostrar": true,
-                        "slug": "peru",
-                        "id": "peru"
+                        "slug": "peru"
                     }
                 },
                 {
@@ -38522,23 +37460,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "608",
                         "sigla": "PH",
-                        "sigla3": "PHL",
                         "nome": {
                             "en": "Philippines",
                             "es": "Filipinas",
                             "pt": "Filipinas"
                         },
-                        "parent": "030",
-                        "ddi": "63",
-                        "labelPosition": [
-                            121.39671690394965,
-                            17.01675288102832
-                        ],
                         "mostrar": true,
-                        "slug": "filipinas",
-                        "id": "filipinas"
+                        "slug": "filipinas"
                     }
                 },
                 {
@@ -38567,23 +37496,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "598",
                         "sigla": "PG",
-                        "sigla3": "PNG",
                         "nome": {
                             "en": "Papua New Guinea",
                             "es": "Papua Nueva Guinea",
                             "pt": "Papua Nova Guiné"
                         },
-                        "parent": "054",
-                        "ddi": "675",
-                        "labelPosition": [
-                            143.24674224609424,
-                            -5.781468190276244
-                        ],
                         "mostrar": true,
-                        "slug": "papua-nova-guine",
-                        "id": "papua-nova-guine"
+                        "slug": "papua-nova-guine"
                     }
                 },
                 {
@@ -38601,23 +37521,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "616",
                         "sigla": "PL",
-                        "sigla3": "POL",
                         "nome": {
                             "en": "Poland",
                             "es": "Polonia",
                             "pt": "Polônia"
                         },
-                        "parent": "151",
-                        "ddi": "48",
-                        "labelPosition": [
-                            20.170957373874554,
-                            51.89467549995442
-                        ],
                         "mostrar": true,
-                        "slug": "polonia",
-                        "id": "polonia"
+                        "slug": "polonia"
                     }
                 },
                 {
@@ -38652,23 +37563,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "408",
                         "sigla": "KP",
-                        "sigla3": "PRK",
                         "nome": {
                             "en": "Democratic People's Republic of Korea",
                             "es": "República Popular Democrática de Corea",
                             "pt": "República Popular Democrática da Coreia"
                         },
-                        "parent": "030",
-                        "ddi": "850",
-                        "labelPosition": [
-                            126.4013664521526,
-                            39.93849903271641
-                        ],
                         "mostrar": true,
-                        "slug": "republica-popular-democratica-da-coreia",
-                        "id": "republica-popular-democratica-da-coreia"
+                        "slug": "republica-popular-democratica-da-coreia"
                     }
                 },
                 {
@@ -38680,23 +37582,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "620",
                         "sigla": "PT",
-                        "sigla3": "PRT",
                         "nome": {
                             "en": "Portugal",
                             "es": "Portugal",
                             "pt": "Portugal"
                         },
-                        "parent": "154",
-                        "ddi": "351",
-                        "labelPosition": [
-                            -8.321289998608336,
-                            39.09754731139248
-                        ],
                         "mostrar": true,
-                        "slug": "portugal",
-                        "id": "portugal"
+                        "slug": "portugal"
                     }
                 },
                 {
@@ -38709,23 +37602,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "600",
                         "sigla": "PY",
-                        "sigla3": "PRY",
                         "nome": {
                             "en": "Paraguay",
                             "es": "Paraguay",
                             "pt": "Paraguai"
                         },
-                        "parent": "029",
-                        "ddi": "595",
-                        "labelPosition": [
-                            -60.116251968742496,
-                            -21.58600624890358
-                        ],
                         "mostrar": true,
-                        "slug": "paraguai",
-                        "id": "paraguai"
+                        "slug": "paraguai"
                     }
                 },
                 {
@@ -38750,23 +37634,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "634",
                         "sigla": "QA",
-                        "sigla3": "QAT",
                         "nome": {
                             "en": "Qatar",
                             "es": "Qatar",
                             "pt": "Catar"
                         },
-                        "parent": "030",
-                        "ddi": "974",
-                        "labelPosition": [
-                            51.176990753235515,
-                            25.39721382166136
-                        ],
                         "mostrar": true,
-                        "slug": "catar",
-                        "id": "catar"
+                        "slug": "catar"
                     }
                 },
                 {
@@ -38783,23 +37658,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "642",
                         "sigla": "RO",
-                        "sigla3": "ROU",
                         "nome": {
                             "en": "Romania",
                             "es": "Rumania",
                             "pt": "Romênia"
                         },
-                        "parent": "151",
-                        "ddi": "40",
-                        "labelPosition": [
-                            24.357589998755948,
-                            45.767655722234565
-                        ],
                         "mostrar": true,
-                        "slug": "romenia",
-                        "id": "romenia"
+                        "slug": "romenia"
                     }
                 },
                 {
@@ -38898,23 +37764,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "643",
                         "sigla": "RU",
-                        "sigla3": "RUS",
                         "nome": {
                             "en": "Russian Federation",
                             "es": "Federación de Rusia",
                             "pt": "Federação Russa"
                         },
-                        "parent": "151",
-                        "ddi": "7",
-                        "labelPosition": [
-                            93.35808057351643,
-                            63.27583621031863
-                        ],
                         "mostrar": true,
-                        "slug": "federacao-russa",
-                        "id": "federacao-russa"
+                        "slug": "federacao-russa"
                     }
                 },
                 {
@@ -38928,23 +37785,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "646",
                         "sigla": "RW",
-                        "sigla3": "RWA",
                         "nome": {
                             "en": "Rwanda",
                             "es": "Rwanda",
                             "pt": "Ruanda"
                         },
-                        "parent": "202",
-                        "ddi": "250",
-                        "labelPosition": [
-                            30.246521944143176,
-                            -1.8373160017110677
-                        ],
                         "mostrar": true,
-                        "slug": "ruanda",
-                        "id": "ruanda"
+                        "slug": "ruanda"
                     }
                 },
                 {
@@ -38979,23 +37827,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "682",
                         "sigla": "SA",
-                        "sigla3": "SAU",
                         "nome": {
                             "en": "Saudi Arabia",
                             "es": "Arabia Saudita",
                             "pt": "Arábia Saudita"
                         },
-                        "parent": "030",
-                        "ddi": "966",
-                        "labelPosition": [
-                            44.97350104087676,
-                            23.483772937407526
-                        ],
                         "mostrar": true,
-                        "slug": "arabia-saudita",
-                        "id": "arabia-saudita"
+                        "slug": "arabia-saudita"
                     }
                 },
                 {
@@ -39013,23 +37852,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "729",
                         "sigla": "SD",
-                        "sigla3": "SDN",
                         "nome": {
                             "en": "Sudan",
                             "es": "Sudán",
                             "pt": "Sudão"
                         },
-                        "parent": "015",
-                        "ddi": "249",
-                        "labelPosition": [
-                            29.278189271994073,
-                            16.59682218214965
-                        ],
                         "mostrar": true,
-                        "slug": "sudao",
-                        "id": "sudao"
+                        "slug": "sudao"
                     }
                 },
                 {
@@ -39063,23 +37893,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "686",
                         "sigla": "SN",
-                        "sigla3": "SEN",
                         "nome": {
                             "en": "Senegal",
                             "es": "Senegal",
                             "pt": "Senegal"
                         },
-                        "parent": "202",
-                        "ddi": "221",
-                        "labelPosition": [
-                            -14.90191985003055,
-                            15.21352783236492
-                        ],
                         "mostrar": true,
-                        "slug": "senegal",
-                        "id": "senegal"
+                        "slug": "senegal"
                     }
                 },
                 {
@@ -39112,23 +37933,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "090",
                         "sigla": "SB",
-                        "sigla3": "SLB",
                         "nome": {
                             "en": "Solomon Islands",
                             "es": "Islas Salomón",
                             "pt": "Ilhas Salomão"
                         },
-                        "parent": "054",
-                        "ddi": "677",
-                        "labelPosition": [
-                            159.21824636226614,
-                            -7.972578675034137
-                        ],
                         "mostrar": true,
-                        "slug": "ilhas-salomao",
-                        "id": "ilhas-salomao"
+                        "slug": "ilhas-salomao"
                     }
                 },
                 {
@@ -39141,23 +37953,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "694",
                         "sigla": "SL",
-                        "sigla3": "SLE",
                         "nome": {
                             "en": "Sierra Leone",
                             "es": "Sierra Leona",
                             "pt": "Serra Leoa"
                         },
-                        "parent": "202",
-                        "ddi": "232",
-                        "labelPosition": [
-                            -11.868671719662139,
-                            8.449533970141061
-                        ],
                         "mostrar": true,
-                        "slug": "serra-leoa",
-                        "id": "serra-leoa"
+                        "slug": "serra-leoa"
                     }
                 },
                 {
@@ -39170,23 +37973,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "222",
                         "sigla": "SV",
-                        "sigla3": "SLV",
                         "nome": {
                             "en": "El Salvador",
                             "es": "El Salvador",
                             "pt": "El Salvador"
                         },
-                        "parent": "029",
-                        "ddi": "503",
-                        "labelPosition": [
-                            -89.24568479949576,
-                            13.905494321987627
-                        ],
                         "mostrar": true,
-                        "slug": "el-salvador",
-                        "id": "el-salvador"
+                        "slug": "el-salvador"
                     }
                 },
                 {
@@ -39215,23 +38009,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "706",
                         "sigla": "SO",
-                        "sigla3": "SOM",
                         "nome": {
                             "en": "Somalia",
                             "es": "Somalia",
                             "pt": "Somália"
                         },
-                        "parent": "202",
-                        "ddi": "252",
-                        "labelPosition": [
-                            43.0012033935547,
-                            2.4834712939453114
-                        ],
                         "mostrar": true,
-                        "slug": "somalia",
-                        "id": "somalia"
+                        "slug": "somalia"
                     }
                 },
                 {
@@ -39249,23 +38034,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "688",
                         "sigla": "RS",
-                        "sigla3": "SRB",
                         "nome": {
                             "en": "Serbia",
                             "es": "Serbia",
                             "pt": "Sérvia"
                         },
-                        "parent": "154",
-                        "ddi": "381",
-                        "labelPosition": [
-                            20.617170839554696,
-                            44.305776999550595
-                        ],
                         "mostrar": true,
-                        "slug": "servia",
-                        "id": "servia"
+                        "slug": "servia"
                     }
                 },
                 {
@@ -39279,23 +38055,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "740",
                         "sigla": "SR",
-                        "sigla3": "SUR",
                         "nome": {
                             "en": "Suriname",
                             "es": "Suriname",
                             "pt": "Suriname"
                         },
-                        "parent": "029",
-                        "ddi": "597",
-                        "labelPosition": [
-                            -55.9774242796594,
-                            4.204206758903014
-                        ],
                         "mostrar": true,
-                        "slug": "suriname",
-                        "id": "suriname"
+                        "slug": "suriname"
                     }
                 },
                 {
@@ -39310,23 +38077,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "703",
                         "sigla": "SK",
-                        "sigla3": "SVK",
                         "nome": {
                             "en": "Slovakia",
                             "es": "Eslovaquia",
                             "pt": "Eslováquia"
                         },
-                        "parent": "151",
-                        "ddi": "421",
-                        "labelPosition": [
-                            18.80025238393914,
-                            48.76504313056269
-                        ],
                         "mostrar": true,
-                        "slug": "eslovaquia",
-                        "id": "eslovaquia"
+                        "slug": "eslovaquia"
                     }
                 },
                 {
@@ -39341,23 +38099,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "705",
                         "sigla": "SI",
-                        "sigla3": "SVN",
                         "nome": {
                             "en": "Slovenia",
                             "es": "Eslovenia",
                             "pt": "Eslovênia"
                         },
-                        "parent": "154",
-                        "ddi": "386",
-                        "labelPosition": [
-                            14.925221744652692,
-                            46.02314554267619
-                        ],
                         "mostrar": true,
-                        "slug": "eslovenia",
-                        "id": "eslovenia"
+                        "slug": "eslovenia"
                     }
                 },
                 {
@@ -39370,23 +38119,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "752",
                         "sigla": "SE",
-                        "sigla3": "SWE",
                         "nome": {
                             "en": "Sweden",
                             "es": "Suecia",
                             "pt": "Suécia"
                         },
-                        "parent": "154",
-                        "ddi": "46",
-                        "labelPosition": [
-                            17.8665700457622,
-                            65.50481733713387
-                        ],
                         "mostrar": true,
-                        "slug": "suecia",
-                        "id": "suecia"
+                        "slug": "suecia"
                     }
                 },
                 {
@@ -39398,23 +38138,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "748",
                         "sigla": "SZ",
-                        "sigla3": "SWZ",
                         "nome": {
                             "en": "Swaziland",
                             "es": "Swazilandia",
                             "pt": "Suazilândia"
                         },
-                        "parent": "202",
-                        "ddi": "268",
-                        "labelPosition": [
-                            31.380267618638637,
-                            -26.514102288044636
-                        ],
                         "mostrar": true,
-                        "slug": "suazilandia",
-                        "id": "suazilandia"
+                        "slug": "suazilandia"
                     }
                 },
                 {
@@ -39430,23 +38161,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "760",
                         "sigla": "SY",
-                        "sigla3": "SYR",
                         "nome": {
                             "en": "Syrian Arab Republic",
                             "es": "República Árabe Siria",
                             "pt": "Síria"
                         },
-                        "parent": "030",
-                        "ddi": "963",
-                        "labelPosition": [
-                            38.17307034750255,
-                            35.03249716641077
-                        ],
                         "mostrar": true,
-                        "slug": "siria",
-                        "id": "siria"
+                        "slug": "siria"
                     }
                 },
                 {
@@ -39461,23 +38183,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "148",
                         "sigla": "TD",
-                        "sigla3": "TCD",
                         "nome": {
                             "en": "Chad",
                             "es": "Chad",
                             "pt": "Chade"
                         },
-                        "parent": "202",
-                        "ddi": "235",
-                        "labelPosition": [
-                            19.298410781607974,
-                            17.299848016885196
-                        ],
                         "mostrar": true,
-                        "slug": "chade",
-                        "id": "chade"
+                        "slug": "chade"
                     }
                 },
                 {
@@ -39491,23 +38204,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "768",
                         "sigla": "TG",
-                        "sigla3": "TGO",
                         "nome": {
                             "en": "Togo",
                             "es": "Togo",
                             "pt": "Togo"
                         },
-                        "parent": "202",
-                        "ddi": "228",
-                        "labelPosition": [
-                            1.0531314255994964,
-                            8.88693421878957
-                        ],
                         "mostrar": true,
-                        "slug": "togo",
-                        "id": "togo"
+                        "slug": "togo"
                     }
                 },
                 {
@@ -39523,23 +38227,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "764",
                         "sigla": "TH",
-                        "sigla3": "THA",
                         "nome": {
                             "en": "Thailand",
                             "es": "Tailandia",
                             "pt": "Tailândia"
                         },
-                        "parent": "030",
-                        "ddi": "66",
-                        "labelPosition": [
-                            101.3205506798367,
-                            15.457022674145167
-                        ],
                         "mostrar": true,
-                        "slug": "tailandia",
-                        "id": "tailandia"
+                        "slug": "tailandia"
                     }
                 },
                 {
@@ -39553,23 +38248,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "762",
                         "sigla": "TJ",
-                        "sigla3": "TJK",
                         "nome": {
                             "en": "Tajikistan",
                             "es": "Tayikistán",
                             "pt": "Tajidquistão"
                         },
-                        "parent": "143",
-                        "ddi": "992",
-                        "labelPosition": [
-                            72.53371787824538,
-                            38.27762924480315
-                        ],
                         "mostrar": true,
-                        "slug": "tajidquistao",
-                        "id": "tajidquistao"
+                        "slug": "tajidquistao"
                     }
                 },
                 {
@@ -39584,23 +38270,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "795",
                         "sigla": "TM",
-                        "sigla3": "TKM",
                         "nome": {
                             "en": "Turkmenistan",
                             "es": "Turkmenistán",
                             "pt": "Turcomenistão"
                         },
-                        "parent": "143",
-                        "ddi": "993",
-                        "labelPosition": [
-                            58.64369087582049,
-                            39.808326042999745
-                        ],
                         "mostrar": true,
-                        "slug": "turcomenistao",
-                        "id": "turcomenistao"
+                        "slug": "turcomenistao"
                     }
                 },
                 {
@@ -39612,23 +38289,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "626",
                         "sigla": "TL",
-                        "sigla3": "TLS",
                         "nome": {
                             "en": "Timor-Leste",
                             "es": "Timor-Leste",
                             "pt": "Timor Leste"
                         },
-                        "parent": "030",
-                        "ddi": "670",
-                        "labelPosition": [
-                            125.37385473581242,
-                            -8.93441532958186
-                        ],
                         "mostrar": true,
-                        "slug": "timor-leste",
-                        "id": "timor-leste"
+                        "slug": "timor-leste"
                     }
                 },
                 {
@@ -39639,23 +38307,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "780",
                         "sigla": "TT",
-                        "sigla3": "TTO",
                         "nome": {
                             "en": "Trinidad and Tobago",
                             "es": "Trinidad y Tabago",
                             "pt": "Trinidad e Tobago"
                         },
-                        "parent": "029",
-                        "ddi": "1-868",
-                        "labelPosition": [
-                            -61.29075683593749,
-                            10.464555664062502
-                        ],
                         "mostrar": true,
-                        "slug": "trinidad-e-tobago",
-                        "id": "trinidad-e-tobago"
+                        "slug": "trinidad-e-tobago"
                     }
                 },
                 {
@@ -39668,23 +38327,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "788",
                         "sigla": "TN",
-                        "sigla3": "TUN",
                         "nome": {
                             "en": "Tunisia",
                             "es": "Túnez",
                             "pt": "Tunísia"
                         },
-                        "parent": "015",
-                        "ddi": "216",
-                        "labelPosition": [
-                            9.033840757759787,
-                            33.82036074438275
-                        ],
                         "mostrar": true,
-                        "slug": "tunisia",
-                        "id": "tunisia"
+                        "slug": "tunisia"
                     }
                 },
                 {
@@ -39709,23 +38359,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "792",
                         "sigla": "TR",
-                        "sigla3": "TUR",
                         "nome": {
                             "en": "Turkey",
                             "es": "Turquía",
                             "pt": "Turquia"
                         },
-                        "parent": "030",
-                        "ddi": "90",
-                        "labelPosition": [
-                            33.09279786027887,
-                            39.01476230713896
-                        ],
                         "mostrar": true,
-                        "slug": "turquia",
-                        "id": "turquia"
+                        "slug": "turquia"
                     }
                 },
                 {
@@ -39756,23 +38397,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "834",
                         "sigla": "TZ",
-                        "sigla3": "TZA",
                         "nome": {
                             "en": "United Republic of Tanzania",
                             "es": "República Unida de Tanzanía",
                             "pt": "Tanzânia"
                         },
-                        "parent": "202",
-                        "ddi": "255",
-                        "labelPosition": [
-                            34.01086639816125,
-                            -5.48938762847664
-                        ],
                         "mostrar": true,
-                        "slug": "tanzania",
-                        "id": "tanzania"
+                        "slug": "tanzania"
                     }
                 },
                 {
@@ -39787,23 +38419,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "800",
                         "sigla": "UG",
-                        "sigla3": "UGA",
                         "nome": {
                             "en": "Uganda",
                             "es": "Uganda",
                             "pt": "Uganda"
                         },
-                        "parent": "202",
-                        "ddi": "256",
-                        "labelPosition": [
-                            32.983798851442145,
-                            1.9650067064786
-                        ],
                         "mostrar": true,
-                        "slug": "uganda",
-                        "id": "uganda"
+                        "slug": "uganda"
                     }
                 },
                 {
@@ -39824,23 +38447,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "804",
                         "sigla": "UA",
-                        "sigla3": "UKR",
                         "nome": {
                             "en": "Ukraine",
                             "es": "Ucrania",
                             "pt": "Ucrânia"
                         },
-                        "parent": "151",
-                        "ddi": "380",
-                        "labelPosition": [
-                            32.35685696415251,
-                            49.31361345541799
-                        ],
                         "mostrar": true,
-                        "slug": "ucrania",
-                        "id": "ucrania"
+                        "slug": "ucrania"
                     }
                 },
                 {
@@ -39853,23 +38467,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "858",
                         "sigla": "UY",
-                        "sigla3": "URY",
                         "nome": {
                             "en": "Uruguay",
                             "es": "Uruguay",
                             "pt": "Uruguai"
                         },
-                        "parent": "029",
-                        "ddi": "598",
-                        "labelPosition": [
-                            -56.11082437804334,
-                            -32.79483350006982
-                        ],
                         "mostrar": true,
-                        "slug": "uruguai",
-                        "id": "uruguai"
+                        "slug": "uruguai"
                     }
                 },
                 {
@@ -39931,23 +38536,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "840",
                         "sigla": "US",
-                        "sigla3": "USA",
                         "nome": {
                             "en": "United States of America",
                             "es": "Estados Unidos de América",
                             "pt": "Estados Unidos"
                         },
-                        "parent": "029",
-                        "ddi": "1",
-                        "labelPosition": [
-                            -97.77388395919802,
-                            38.99679759140015
-                        ],
                         "mostrar": true,
-                        "slug": "estados-unidos",
-                        "id": "estados-unidos"
+                        "slug": "estados-unidos"
                     }
                 },
                 {
@@ -39962,23 +38558,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "860",
                         "sigla": "UZ",
-                        "sigla3": "UZB",
                         "nome": {
                             "en": "Uzbekistan",
                             "es": "Uzbekistán",
                             "pt": "Uzbequistão"
                         },
-                        "parent": "143",
-                        "ddi": "998",
-                        "labelPosition": [
-                            63.96728900740418,
-                            41.58487922086531
-                        ],
                         "mostrar": true,
-                        "slug": "uzbequistao",
-                        "id": "uzbequistao"
+                        "slug": "uzbequistao"
                     }
                 },
                 {
@@ -39992,23 +38579,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "862",
                         "sigla": "VE",
-                        "sigla3": "VEN",
                         "nome": {
                             "en": "Venezuela (Bolivarian Republic of)",
                             "es": "Venezuela (República Bolivariana de)",
                             "pt": "Venezuela"
                         },
-                        "parent": "029",
-                        "ddi": "58",
-                        "labelPosition": [
-                            -64.19250532075016,
-                            7.138000324545659
-                        ],
                         "mostrar": true,
-                        "slug": "venezuela",
-                        "id": "venezuela"
+                        "slug": "venezuela"
                     }
                 },
                 {
@@ -40022,23 +38600,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "704",
                         "sigla": "VN",
-                        "sigla3": "VNM",
                         "nome": {
                             "en": "Viet Nam",
                             "es": "Viet Nam",
                             "pt": "Vietnã"
                         },
-                        "parent": "030",
-                        "ddi": "84",
-                        "labelPosition": [
-                            105.32822795216262,
-                            21.740390513377516
-                        ],
                         "mostrar": true,
-                        "slug": "vietna",
-                        "id": "vietna"
+                        "slug": "vietna"
                     }
                 },
                 {
@@ -40056,23 +38625,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "548",
                         "sigla": "VU",
-                        "sigla3": "VUT",
                         "nome": {
                             "en": "Vanuatu",
                             "es": "Vanuatu",
                             "pt": "Vanuatu"
                         },
-                        "parent": "054",
-                        "ddi": "678",
-                        "labelPosition": [
-                            166.9145338216307,
-                            -15.324443015964901
-                        ],
                         "mostrar": true,
-                        "slug": "vanuatu",
-                        "id": "vanuatu"
+                        "slug": "vanuatu"
                     }
                 },
                 {
@@ -40085,23 +38645,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "887",
                         "sigla": "YE",
-                        "sigla3": "YEM",
                         "nome": {
                             "en": "Yemen",
                             "es": "Yemen",
                             "pt": "Iemen"
                         },
-                        "parent": "030",
-                        "ddi": "967",
-                        "labelPosition": [
-                            44.941633049457764,
-                            15.28052600984639
-                        ],
                         "mostrar": true,
-                        "slug": "iemen",
-                        "id": "iemen"
+                        "slug": "iemen"
                     }
                 },
                 {
@@ -40121,23 +38672,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "710",
                         "sigla": "ZA",
-                        "sigla3": "ZAF",
                         "nome": {
                             "en": "South Africa",
                             "es": "Sudáfrica",
                             "pt": "África do Sul"
                         },
-                        "parent": "202",
-                        "ddi": "27",
-                        "labelPosition": [
-                            23.266291026867627,
-                            -30.07302246161698
-                        ],
                         "mostrar": true,
-                        "slug": "africa-do-sul",
-                        "id": "africa-do-sul"
+                        "slug": "africa-do-sul"
                     }
                 },
                 {
@@ -40155,23 +38697,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "894",
                         "sigla": "ZM",
-                        "sigla3": "ZMB",
                         "nome": {
                             "en": "Zambia",
                             "es": "Zambia",
                             "pt": "Zâmbia"
                         },
-                        "parent": "202",
-                        "ddi": "260",
-                        "labelPosition": [
-                            26.18377753823642,
-                            -14.732304809574991
-                        ],
                         "mostrar": true,
-                        "slug": "zambia",
-                        "id": "zambia"
+                        "slug": "zambia"
                     }
                 },
                 {
@@ -40185,23 +38718,14 @@ export const topojson = {
                         ]
                     ],
                     "properties": {
-                        "codigo": "716",
                         "sigla": "ZW",
-                        "sigla3": "ZWE",
                         "nome": {
                             "en": "Zimbabwe",
                             "es": "Zimbabwe",
                             "pt": "Zimbábue"
                         },
-                        "parent": "202",
-                        "ddi": "263",
-                        "labelPosition": [
-                            29.916006624039486,
-                            -18.884745422131253
-                        ],
                         "mostrar": true,
-                        "slug": "zimbabue",
-                        "id": "zimbabue"
+                        "slug": "zimbabue"
                     }
                 }
             ]

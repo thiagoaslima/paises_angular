@@ -5,8 +5,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { MapaMundiComponent } from './mapa-mundi/mapa-mundi.component';
 import { SinteseHomeComponent } from './sintese-home/sintese-home.component';
-import { RankingComponent } from '../ranking/ranking.component';
-import { RankingModule } from '../ranking/ranking.module';
+import { RankingComponent } from './ranking/ranking.component';
+import { RankingModule } from './ranking/ranking.module';
 import { SharedModule } from '../shared';
 
 const routes: Routes = [

@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 
 import { Subscription } from 'rxjs/Subscription';
 
-import { PaisesService } from "../shared/paises-service";
-import { RouterParamsService } from "../shared/router-params.service";
+import { PaisesService, RouterParamsService } from "../../shared";
 import { RankingService } from "./ranking.service";
 
 @Component({
@@ -26,14 +25,17 @@ export class RankingComponent {
     ) { }
 
     ngOnInit() {
-        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }) => {            
+        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }: {params:any}) => {            
             
             if (params.indicador) {
                 const indicadorId = parseInt(params.indicador, 10);
 
                 this._rankingService
                     .getValores(indicadorId)
-                    .subscribe(res => { this.dados = res; })
+                    .subscribe(res => { 
+                        this.dados = Array.from(res.values()); 
+                        console.log(this.dados);
+                    });
 
                 this._rankingService.getIndicador(indicadorId)
                     .subscribe(nome => { this.indicador = nome; });
