@@ -8,11 +8,13 @@ import { SinteseHomeComponent } from './sintese-home/sintese-home.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { RankingModule } from './ranking/ranking.module';
 import { SharedModule } from '../shared';
+import { MapaSectionComponent } from './mapa-section.component';
+import { RankingService } from './ranking/ranking.service';
 
 const routes: Routes = [
     {
         path: '',
-        component: MapaMundiComponent,
+        component: MapaSectionComponent,
         children: [
             {
                 path: 'ranking/:indicador',
@@ -39,11 +41,12 @@ const routes: Routes = [
         RankingModule
     ],
     declarations: [
+        MapaSectionComponent,
         MapaMundiComponent,
         SinteseHomeComponent
     ],
     providers: [
-        
+        RankingService
     ],
     entryComponents: [
         

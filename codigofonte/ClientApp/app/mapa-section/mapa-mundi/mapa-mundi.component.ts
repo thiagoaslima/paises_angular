@@ -1,4 +1,17 @@
-import { Component, OnChanges, OnInit, SimpleChanges, PLATFORM_ID, Inject, NgZone, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
+import {
+    Component,
+    OnChanges,
+    OnDestroy,
+    OnInit,
+    SimpleChange,
+    SimpleChanges,
+    Input,
+    PLATFORM_ID,
+    Inject,
+    NgZone,
+    ChangeDetectorRef,
+    ChangeDetectionStrategy
+} from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Subscription } from 'rxjs/Subscription';
@@ -15,7 +28,6 @@ import {
     PlatformDetectionService
 } from '../../shared';
 
-
 @Component({
     selector: 'mapa-mundi',
     templateUrl: './mapa-mundi.component.html',
@@ -26,12 +38,15 @@ import {
         'class': 'bg-layer'
     }
 })
-export class MapaMundiComponent {
-    public isBrowser: boolean;
+export class MapaMundiComponent implements OnChanges {
+    @Input() malha: L.GeoJSON | null = null;
+    @Input() pais: Pais | null = null;
+
     public map: L.Map;
     public mapOptions = MAP_STYLES.options;
 
     public paisSelecionado = {
+        pais: <Pais | null>null,
         slug: '',
         layer: <L.Layer | null>null,
         bounds: <L.LatLngBounds | null>null
@@ -45,48 +60,28 @@ export class MapaMundiComponent {
         this._geojsonLayer = value;
         this._setPaisLayerId(this._geojsonLayer);
         setTimeout(() => {
-            this.selectPais(this.paisSelecionado.slug);
+            this.selectPais(this.paisSelecionado.pais);
         }, 10);
     }
 
     private _geojsonLayer: L.GeoJSON | null = null;
-    private _paisLayerId = {} as {[pais: string]: number}
+    private _paisLayerId = {} as { [pais: string]: number }
     private _layersWithVisibleTooltip: L.Layer[] = [];
-    private _subscriptions: {
-        [key: string]: Subscription
-    } =  Object.create(null);
 
     constructor(
         private _router: Router,
         private _route: ActivatedRoute,
-        private _params: RouterParamsService,
-        private _localidadeService: LocalidadeService,
-        private _malhaService: MalhaService,
-        private _ngzone: NgZone,
-        platform: PlatformDetectionService
+        private _ngzone: NgZone
+    ) { }
 
-    ) {
-        this.isBrowser = platform.isBrowser;
-        this.topology = this._malhaService.getMalhaGeoJSON();
-    }
+     ngOnChanges({ malha, pais }: { [key: string]: SimpleChange }) {
+        if (malha && malha.currentValue !== malha.previousValue) {
+            this.topology = malha.currentValue;
+        }
 
-    ngOnInit() {
-        this._subscriptions.params = this._params.params$.subscribe(({ params, url }: any) => {
-            if (params.indicador) {
-                
-            }
-            
-            if (params.pais) {
-                this.selectPais(params.pais);
-            } else {
-                this.selectPais('');
-                this.map && this.map.fitWorld({ maxZoom: 8 });
-            }
-        });
-    }
-
-    ngOnDestroy() {
-        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
+        if (pais && pais.currentValue !== pais.previousValue) {
+            this.selectPais(pais.currentValue);
+        }
     }
 
     onMapReady(map: L.Map) {
@@ -106,14 +101,8 @@ export class MapaMundiComponent {
 
     setZoomOnPaisSelecionado() {
         if (this.map && this._geojsonLayer && this.paisSelecionado.slug) {
-            let layer = this.paisSelecionado.layer;
-
-            if (!layer) {
-                let pais = this._localidadeService.getPaisBySlug(this.paisSelecionado.slug);
-                if (pais) {
-                    layer = this._geojsonLayer.getLayer(this._paisLayerId[this.paisSelecionado.slug]) || null;;
-                }
-            }
+            let { pais } = this.paisSelecionado;
+            let layer = this._geojsonLayer.getLayer(this._paisLayerId[this.paisSelecionado.slug]) || null;
 
             if (layer) {
                 this.paisSelecionado.bounds = (<any>layer).getBounds();
@@ -121,32 +110,33 @@ export class MapaMundiComponent {
         }
     }
 
-    public selectPais(slug: string) {
+    public selectPais(pais: Pais|null) {
         this._unselectLayer(this.paisSelecionado.layer);
-        this.paisSelecionado.slug = slug;
 
-        if (this._geojsonLayer) {
-            let pais = this._localidadeService.getPaisBySlug(slug);
+        this.paisSelecionado.pais = pais ? pais : null;
+        this.paisSelecionado.slug = pais ? pais.slug : "";
 
-            if (pais) {
+        if (!pais) {
+            this.paisSelecionado.layer = null;
+            this.paisSelecionado.bounds = null;
+        } else {
+            if (this._geojsonLayer) {
                 let layer = this._geojsonLayer.getLayer(this._paisLayerId[this.paisSelecionado.slug]);
                 this.paisSelecionado.layer = layer || null;
 
                 this._selectLayer(layer);
                 this.setZoomOnPaisSelecionado();
-            } else {
-                this.paisSelecionado.layer = null;
-                this.paisSelecionado.bounds = null;
             }
         }
+
     }
 
-    private _selectLayer(layer: any) {
+    private _selectLayer(layer?: any) {
         if (layer) {
             layer.setStyle(MAP_STYLES.polygons.selected);
         }
     }
-    private _unselectLayer(layer: any) {
+    private _unselectLayer(layer?: any) {
         if (layer) {
             layer.setStyle(MAP_STYLES.polygons.default);
         }
@@ -171,7 +161,7 @@ export class MapaMundiComponent {
                 that._ngzone.run(() => {
                     this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
                 });
-			}
+            }
         });
     }
 
@@ -225,7 +215,7 @@ export class MapaMundiComponent {
         );
     }
     private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
-        
+
         layer.on({
             mouseover: (evt: any) => {
                 if (this._layersWithVisibleTooltip.length > 0) {
@@ -241,12 +231,12 @@ export class MapaMundiComponent {
             },
 
             tooltipopen: (event: any) => {
-                let tooltipProxy: any = event.tooltip; 
+                let tooltipProxy: any = event.tooltip;
                 tooltipProxy.status = 'open';
                 this._layersWithVisibleTooltip.push(layer);
             },
             tooltipclose: (event: any) => {
-                let tooltipProxy: any = event.tooltip; 
+                let tooltipProxy: any = event.tooltip;
                 tooltipProxy.status = 'close';
                 let idx = this._layersWithVisibleTooltip.indexOf(layer);
                 if (idx >= 0) {
@@ -277,9 +267,9 @@ export class MapaMundiComponent {
     };
 
 
-   private _setPaisLayerId(layerGroup: any) {
+    private _setPaisLayerId(layerGroup: any) {
         layerGroup.getLayers().forEach((l: any) => {
-            this._paisLayerId[l.feature.properties.slug] = l._leaflet_id   
+            this._paisLayerId[l.feature.properties.slug] = l._leaflet_id
         });
     }
 }

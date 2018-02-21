@@ -8,42 +8,31 @@ import { RankingService } from "./ranking.service";
 @Component({
     selector: 'paises-ranking',
     templateUrl: './ranking.component.html',
-    styleUrls: ['./ranking.component.css'],
-    providers: [RankingService]
+    styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent {
     public dados = [] as any[];
     public indicador: any;
 
-    private _subscriptions: {
-        [key: string]: Subscription
-    } =  Object.create(null);
+    private _subscriptions: Subscription[] = [];
 
     constructor(
-        private _routeParams: RouterParamsService,
         private _rankingService: RankingService
     ) { }
 
     ngOnInit() {
-        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }: {params:any}) => {            
-            
-            if (params.indicador) {
-                const indicadorId = parseInt(params.indicador, 10);
+        const indicadorSubscription = this._rankingService.indicador$.subscribe(indicador => {
+            this.indicador = indicador.nome;
+        });
 
-                this._rankingService
-                    .getValores(indicadorId)
-                    .subscribe(res => { 
-                        this.dados = Array.from(res.values()); 
-                        console.log(this.dados);
-                    });
+        const valoresSubscription = this._rankingService.valores$.subscribe(valores => {
+            this.dados = valores;
+        });
 
-                this._rankingService.getIndicador(indicadorId)
-                    .subscribe(nome => { this.indicador = nome; });
-            }
-        })
+        this._subscriptions.push(indicadorSubscription, valoresSubscription);
     }
 
     ngOnDestroy() {
-        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
+        this._subscriptions.forEach(subscription => subscription.unsubscribe());
     }
 }
