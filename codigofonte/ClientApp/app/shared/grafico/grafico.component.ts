@@ -43,13 +43,28 @@ export class GraficoComponent {
     //retorna o valor máximo dos dados informados
     getMax(){
         if(!this.existemDados()) return 0;
-        let max = 0;
+        let max;
         for(let i = 0; i < this.dados.length; i++){
             for(let j = 0; j < this.dados[i].length; j++){
+                if(i == 0 && j == 0) max = this.dados[i][j];
                 max = Math.max(max, isNaN(this.dados[i][j]) ? max : this.dados[i][j]);
             }
         }
         return max;
+    }
+
+    //retorna o valor mínimo dos dados informados
+    getMin(){
+        if(!this.existemDados()) return 0;
+        let min;
+        for(let i = 0; i < this.dados.length; i++){
+            for(let j = 0; j < this.dados[i].length; j++){
+                if(i == 0 && j == 0) min = this.dados[i][j];
+                min = Math.min(min, isNaN(this.dados[i][j]) ? min : this.dados[i][j]);
+            }
+        }
+        if(min > 0) min = 0;
+        return min;
     }
 
     //calcula a posição y dos pontos do gráfico
@@ -57,17 +72,18 @@ export class GraficoComponent {
         if(!this.existemDados()) return 0;
         indexX = indexX >= this.dados[indexY].length ? this.dados[indexY].length - 1 : indexX;
         if(!this.dados[indexY][indexX]) return 0;
-        return (this.ALTURA_AREA_DADOS) - ((this.dados[indexY][indexX] / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
+        return (this.ALTURA_AREA_DADOS) - (((this.dados[indexY][indexX] - this.getMin()) / (this.getMax() - this.getMin())) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
     //calcula a posição y do ponto mais alto do gráfico (usado para desenhar as linhas guias tracejadas)
     getMaxY(indexX: any){
         if(!this.existemDados()) return 0;
-        let max = 0;
+        let max;
         for(let i = 0; i < this.dados.length; i++){
+            if(i == 0) max = this.dados[i][indexX];
             max = Math.max(max, isNaN(this.dados[i][indexX]) ? max : this.dados[i][indexX]);
         }
-        return (this.ALTURA_AREA_DADOS) - ((max / this.getMax()) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
+        return (this.ALTURA_AREA_DADOS) - (((max - this.getMin()) / (this.getMax() - this.getMin())) * this.ALTURA_AREA_DADOS) + this.OFFSET_TOPO;
     }
 
     valorValido(valor: any){

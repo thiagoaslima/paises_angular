@@ -51,6 +51,7 @@
             <p class="dados-pais__historico-paragrafo" *ngFor="let paragrafo of historico">
                 {{ paragrafo }}
             </p>
+            <div class="dados-pais__historico-degrade" *ngIf="!historico_aberto"></div>
         </div>
         <div class="dados-pais__historico-mais-container">
             <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">

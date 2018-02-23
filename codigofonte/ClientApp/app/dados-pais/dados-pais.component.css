@@ -114,10 +114,15 @@
     padding: 15px;
     background-color: #f1f1f1;
     display: none;
+    position: relative;
 }
 
 .dados-pais__historico-paragrafos-container--aberto{
     display: block;
+}
+
+.dados-pais__historico-degrade{
+    display: none;
 }
 
 .dados-pais__historico-paragrafo{
@@ -242,13 +247,23 @@
     .dados-pais__historico-paragrafos-container{
         padding: 0px 40px;
         background-color: #f1f1f1;
-        max-height: calc(1.8em * 4); /*4 linhas*/
+        max-height: 200px;
         overflow: hidden;
         display: block;
     }
 
     .dados-pais__historico-paragrafos-container--aberto{
         max-height: unset;
+    }
+
+    .dados-pais__historico-degrade{
+        display: block;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, #f1f1f1 20%, transparent);
     }
 
     .dados-pais__historico-mais-container{
