@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 import { Subscription } from 'rxjs/Subscription';
 
@@ -11,28 +11,36 @@ import { RankingService } from "./ranking.service";
     styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent {
+    public paisSelecionado = "";
+    
     public dados = [] as any[];
     public indicador: any;
 
     private _subscriptions: Subscription[] = [];
 
     constructor(
-        private _rankingService: RankingService
+        private _rankingService: RankingService,
+        private _routerParams: RouterParamsService
     ) { }
 
     ngOnInit() {
+        const paisSubscription = this._routerParams.params$.subscribe(({params}) => {
+            this.paisSelecionado = params.pais ? params.pais : "";
+        });
+
         const indicadorSubscription = this._rankingService.indicador$.subscribe(indicador => {
-            this.indicador = indicador.nome;
+            this.indicador = indicador;
         });
 
         const valoresSubscription = this._rankingService.valores$.subscribe(valores => {
             this.dados = valores;
         });
 
-        this._subscriptions.push(indicadorSubscription, valoresSubscription);
+        this._subscriptions.push(paisSubscription, indicadorSubscription, valoresSubscription);
     }
 
     ngOnDestroy() {
         this._subscriptions.forEach(subscription => subscription.unsubscribe());
     }
+
 }

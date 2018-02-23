@@ -32,7 +32,7 @@ export class MalhaService {
             fillOpacity: 1
         },
         uninteractive: {
-            fillColor: '#505050',
+            fillColor: '#606060',
             weight: 0,
             opacity: 1,
             color: 'rgb(78,78,78)',
@@ -90,19 +90,19 @@ export class MalhaService {
     }
 
     public getMalhaTopoJSON() {
-        return Object.assign({}, this.topojson);
+        return this.topojson;
     }
 
-    public getMalhaGeoJSON(valores?: Array<{pais: Pais, valor: string}>) {      
+    public getMalhaGeoJSON(valores?: Array<{pais: Pais, valor: string}>): any {   
         if (!valores || valores.length === 0) {
-            return Object.assign({}, this.geojson);
+            return this.geojson;
         }
 
         return this.updateMalhaGeoJSON(valores);
     }
 
     public updateMalhaGeoJSON(valores: Array<{pais: Pais, valor: string}>) {
-        let geojson = this.getMalhaGeoJSON();
+        let geojson = Object.assign({}, this.geojson);
 
         const scales = this._makeScales(valores);
         const valoresMap = valores.reduce((agg, obj) => {
@@ -111,6 +111,8 @@ export class MalhaService {
         }, {} as {[sigla: string]: {pais: Pais, valor: string}});
 
         geojson.features = geojson.features.map((feature: any) => {
+            feature = JSON.parse(JSON.stringify(feature));
+            
             const { sigla, mostrar } = feature.properties;
             
             if (mostrar) { 
@@ -123,6 +125,8 @@ export class MalhaService {
             
             return feature; 
         });
+
+        return geojson;
     }
 
     

@@ -16,6 +16,13 @@ import { RankingService } from "./ranking/ranking.service";
 @Component({
     selector: 'mapa-section',
     templateUrl: './mapa-section.component.html',
+    styles: [
+        `:host{    
+            position: absolute;
+            min-height: 100%;
+            top: 0;
+        }`
+    ],
     host: {
         'class': 'bg-layer area-aplicacao'
     }
@@ -26,6 +33,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
     public isBrowser: boolean;
     public malha: any;
     public pais: Pais|null = null;
+    public linkUrl = ["."];
 
     constructor(
         private _malhaService: MalhaService,
@@ -41,6 +49,8 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
         const routerParamsSubscription = this._routerParams.params$.subscribe(({params}) => {         
             this._rankingService.updateService(parseInt(params.indicador, 10))          
             this.pais = params.pais ? this._localidadeService.getPaisBySlug(params.pais) : null;
+
+            this.linkUrl = params.indicador ? [".", "ranking", params.indicador] : ["."]
         });
 
         const malhaSubscription = this._rankingService.valores$.subscribe(valores => {

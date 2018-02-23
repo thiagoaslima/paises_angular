@@ -67,15 +67,15 @@ export class RankingService {
 
                     });
 
-                    return new Set([
+                    return [].concat(
                         ...comValores.sort(this.sortPaises).map((obj, idx) => Object.assign(obj, { posicao: idx + 1 })),
                         ...semValores.sort(this.sortPaises)
-                    ]);
+                    );
                 }),
                 tap(_ => console.timeEnd("#getValores")),
             )
                 .take(1)
-                .subscribe(valores => this.valores$.next(Array.from(valores.values())));
+                .subscribe(valores => this.valores$.next(valores));
         }
     }
 

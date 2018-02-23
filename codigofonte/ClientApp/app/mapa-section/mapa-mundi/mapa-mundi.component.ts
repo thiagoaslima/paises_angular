@@ -32,6 +32,8 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { filter } from 'rxjs/operators/filter';
+import { map } from 'rxjs/operators/map';
+
 
 @Component({
     selector: 'mapa-mundi',
@@ -43,47 +45,69 @@ import { filter } from 'rxjs/operators/filter';
         'class': 'bg-layer'
     }
 })
-export class MapaMundiComponent implements OnInit, OnChanges {
+export class MapaMundiComponent implements  OnDestroy, OnChanges {
     @Input() malha: L.GeoJSON | null = null;
     @Input() pais: Pais | null = null;
+    @Input() link = ["."];
 
     public mapOptions = MAP_STYLES.options;
-    public leafletLayers: L.Layer;
+    public leafletLayers: L.Layer[] = [];
+    public paisSelecionado = {
+        slug: "",
+        layer: <L.Layer|null>null
+    };
 
-    private _geoJsonLayer: L.GeoJSON;
-    private _map$ = new Subject<L.Map>();
+    private _map$ = new BehaviorSubject<L.Map|null>(null);
     private _pais$ = new BehaviorSubject<Pais | null>(null);
-    private _topology$ = new Subject<G.GeoJsonObject>();
+    private _topology$ = new BehaviorSubject<G.GeoJsonObject|undefined>(undefined);
     private _paisLayerMap: Map<string, L.Layer>;
+    private _subscriptions: Subscription[] = [];
 
     constructor(
         private _router: Router,
         private _route: ActivatedRoute,
+        private _changeDetector: ChangeDetectorRef,
         private _ngzone: NgZone
-    ) {
+    ) {}
+
+    ngOnInit() {
         const buildGeoJsonMap$ = Observable.combineLatest(this._map$, this._topology$)
             .filter(([map, topology]) => Boolean(map) && Boolean(topology));
 
-        const buildGeoJsonMapSubscription = buildGeoJsonMap$.subscribe(([map, topology]) => {
-            let geoJsonLayer = new L.GeoJSON(topology, {
-                style: this._featureStyle
-            });
+        const geoJson$ = buildGeoJsonMap$.pipe(
+            map(([map, topology]) => {
+                return new L.GeoJSON(topology, {
+                    style: this._featureStyle.bind(this),
+                    onEachFeature: this._setOnEachFeatureListeners.bind(this)
+                });
+            })
+        );
 
+        const leafletLayersSubscription = geoJson$.subscribe(geoJsonLayer => { 
+            this.leafletLayers.push(geoJsonLayer); 
             this._updatePaisLayerMap(geoJsonLayer);
+        })
 
-            
-            this.leafletLayers = geoJsonLayer;
+        const selectPaisSubscription = Observable.combineLatest(
+            geoJson$, this._pais$
+        ).subscribe(([geoJsonLayer, pais]) => {
+            const slug = pais ? pais.slug : "";
+            const layer = this._getLayer(slug);
+
+            setTimeout(() => this._selectPais(slug, layer), 0);
         });
 
-        const selectPaisSubscription = Observable.combineLatest(buildGeoJsonMap$, this._pais$).
+        this._subscriptions.push(leafletLayersSubscription, selectPaisSubscription);
     }
 
-    ngOnInit() {
+    ngOnDestroy() {
+        this._subscriptions.forEach(subscription => subscription.unsubscribe());
     }
 
     ngOnChanges({ malha, pais }: { [key: string]: SimpleChange }) {
         if (malha && malha.currentValue && malha.currentValue !== malha.previousValue) {
             this._topology$.next(malha.currentValue);
+            console.log(malha.currentValue);
         }
 
         if (pais && pais.currentValue !== pais.previousValue) {
@@ -100,25 +124,84 @@ export class MapaMundiComponent implements OnInit, OnChanges {
     }
 
     private _featureStyle(feature: any) {
-        const { mostrar, style } = feature.properties;
+        const { style, slug } = feature.properties;
 
-        if (!mostrar) {
-            return style.uninteractive;
+        if (feature.properties.slug === this.paisSelecionado.slug) {
+            return style.selected;
         }
-
-        // if (feature.properties.slug === this.paisSelecionado) {
-        //     return style.selected;
-        // }
 
         return style.default;
     };
 
     private _updatePaisLayerMap(geoJsonLayer: L.LayerGroup) {
-        this._paisLayerMap = geoJsonLayer.getLayers().reduce( (map, layer) => {
-            
+        this._paisLayerMap = geoJsonLayer.getLayers().reduce((map, layer) => {
+            //@ts-ignore
+            const { slug } = layer.feature.properties;
+            map.set(slug, layer);
+            return map;
         }, new Map());
+        (<any>window).map = this._paisLayerMap;
     }
 
+    private _getLayer(slugPais: string) {
+        return this._paisLayerMap.has(slugPais)
+            ? (<L.Layer>this._paisLayerMap.get(slugPais))
+            : null;
+    }
+
+    private _selectPais(slugPais: string, layerPais: L.Layer|null) {
+        if (this.paisSelecionado.layer) {
+            this._setLayerStyle(this.paisSelecionado.layer, 'default');
+        }
+        
+        if (layerPais) {
+            this._setLayerStyle(layerPais, 'selected');
+        }
+        
+        this.paisSelecionado = {
+            slug: slugPais,
+            layer: layerPais
+        }
+    }
+
+    private _setLayerStyle(layer: any, styleKey: string) {
+        const style = layer.feature.properties.style;
+        layer.setStyle(style[styleKey]);
+    }
+
+    private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        if (feature.properties.mostrar) {
+            // this._handleTooltip(feature, layer);
+            this._onClickMap(layer);
+            this._onHoverLayer(feature, layer);
+        }
+    }
+
+
+    private _onHoverLayer(feature: any, layer: any) {
+        const that = this;
+        layer.on({
+            mouseover: () => layer.setStyle(MAP_STYLES.polygons.hover),
+            mouseout: () => {
+                const {slug, style} = feature.properties;
+
+                that.paisSelecionado.slug == slug
+                    ? layer.setStyle(style.selected)
+                    : layer.setStyle(style.default)
+            }
+        });
+    }
+
+    private _onClickMap(layer: L.Layer) {
+        const that = this;
+        layer.on({
+            click: (evt) => {
+                that._ngzone.run(() => {
+                    this._router.navigate(this.link.concat(evt.target.feature.properties.slug), { relativeTo: this._route })
+                });
+			}
+        });
+    }
 
 }
 

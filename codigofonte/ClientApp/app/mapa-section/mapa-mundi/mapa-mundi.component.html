@@ -1,6 +1,6 @@
 <div leaflet 
-    [leafletLayers]="[leafletLayers]" 
+    [leafletLayers]="leafletLayers" 
     [leafletOptions]="mapOptions" 
+    [leafletFitBounds]="paisSelecionado.layer?.getBounds()"
     (leafletMapReady)="onMapReady($event)">
 </div>
-<!-- [leafletFitBounds]="paisSelecionado.bounds" -->
