@@ -43,7 +43,7 @@ export class GraficoComponent {
     //retorna o valor máximo dos dados informados
     getMax(){
         if(!this.existemDados()) return 0;
-        let max;
+        let max: any;
         for(let i = 0; i < this.dados.length; i++){
             for(let j = 0; j < this.dados[i].length; j++){
                 if(i == 0 && j == 0) max = this.dados[i][j];
@@ -56,7 +56,7 @@ export class GraficoComponent {
     //retorna o valor mínimo dos dados informados
     getMin(){
         if(!this.existemDados()) return 0;
-        let min;
+        let min: any;
         for(let i = 0; i < this.dados.length; i++){
             for(let j = 0; j < this.dados[i].length; j++){
                 if(i == 0 && j == 0) min = this.dados[i][j];
@@ -78,7 +78,7 @@ export class GraficoComponent {
     //calcula a posição y do ponto mais alto do gráfico (usado para desenhar as linhas guias tracejadas)
     getMaxY(indexX: any){
         if(!this.existemDados()) return 0;
-        let max;
+        let max: any;
         for(let i = 0; i < this.dados.length; i++){
             if(i == 0) max = this.dados[i][indexX];
             max = Math.max(max, isNaN(this.dados[i][indexX]) ? max : this.dados[i][indexX]);
