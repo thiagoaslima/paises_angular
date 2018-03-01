@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
-import { SharedModule } from "../shared";
+import { SharedModule } from "../../shared";
 import { RankingComponent } from "./ranking.component";
 import { RankingService } from "./ranking.service";
 
