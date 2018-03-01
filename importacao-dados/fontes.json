@@ -1,0 +1,128 @@
+[
+    {
+        "fonte": "The World Factbook",
+        "autor": "CIA - Central Intelligence Agency",
+        "periodicidade": "anual",
+        "ultima_edicao": "2016",
+        "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+        "file": "https://www.cia.gov/library/publications/download/download-2014/factbook.zip",
+        "dados": [
+            { 
+                "nome": "Histórico",
+                "nome_en": "Background",
+                "secao_publicacao": "Introduction", 
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2119.html"
+            },
+            { 
+                "nome": "Capital",
+                "nome_en": "Capital",
+                "secao_publicacao": "Government", 
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2057.html"
+            },
+            { 
+                "nome": "Tipo de governo",
+                "nome_en": "Government Type",
+                "secao_publicacao": "Government",
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2128.html"
+            },
+            { 
+                "nome": "Chefe de governo",
+                "nome_en": "Head of Government",
+                "secao_publicacao": "Government",
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2077.html",
+                "obs": ["Extrair informação de dentro do texto"]
+            },
+            { 
+                "nome": "Chefe de estado",
+                "nome_en": "Chief of State",
+                "secao_publicacao": "Government",
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2077.html",
+                "obs": ["Extrair informação de dentro do texto"]
+            }
+        ]
+    },
+    {
+        "fonte": "World development Indicators",
+        "autor": "The World Bank",
+        "periodicidade": "anual",
+        "usos": [
+            {
+                "indicador": {
+                    "id": 62957,
+                    "nome_pt": "Entrada de turistas",
+                    "nome_en": "International tourism, number of arrivals",
+                    "tema": "Economia"
+                },
+                "edicao": "2016",
+                "periodos": ["2016-1995"],
+                "link": "https://data.worldbank.org/indicator/ST.INT.ARVL",
+                "file": "http://api.worldbank.org/v2/en/indicator/ST.INT.ARVL?downloadformat=csv"
+            },
+            {
+                "edicao": "2016",
+                "indicador": {
+                    "id": 62958,
+                    "nome_pt": "Gastos públicos com educação",
+                    "nome_en": "Expenditure on education, Public (% of GDP) (%)",
+                    "tema": "Economia"
+                },
+                "periodos": ["1980", "1985", "1990", "2000", "2005-2012"],
+                "link": "http://hdr.undp.org/en/content/expenditure-education-public-gdp"
+            }, 
+            {
+                "edicao": "2017",
+                "indicador": "Investimentos em pesquisa e desenvolvimento",
+                "tema": "Economia",
+                "id": 62960,
+                "periodos": ["2000-2015"]
+            }
+        ]
+    },
+    {
+        "fonte": "Human Development Report: Human Development for Everyone",
+        "autor": "United Nations Development Programme",
+        "usos": [
+            {
+                "edicao": "2016",
+                "indicador": "Gastos públicos com saúde",
+                "tema": "Economia",
+                "id": 62959,
+                "periodos": ["1995", "2000", "2005", "2010", "2011", "2012", "2013", "2014"]
+            },
+            {
+                "edicao": "2013",
+                "indicador": "Gastos públicos com educação",
+                "tema": "Economia",
+                "id": 62958,
+                "periodos": ["1980", "1985", "1990", "2000", "2005-2012"]
+            }
+        ]
+    },
+    {
+        "fonte": "Labour Force Estimates and Projections: 1990-2050.",
+        "autor": "International Labour Organization",
+        "usos": [
+            {
+                "edicao": "2015",
+                "indicador": "Mulheres de 15 anos ou mais de idade economicamente ativas",
+                "tema": "Economia",
+                "id": 62961,
+                "periodos": ["2000-2018"]
+            }
+        ]
+    },
+    {
+        "fonte": "National Accounts Main Aggregates Database,Basic Data Selection",
+        "autor": "United Nations,United Nations Statistics Division",
+        "usos": [
+            {
+                "edicao": "2017",
+                "indicador": "PIB per capita",
+                "tema": "Economia",
+                "id": 62962,
+                "periodos": ["2000-2018"],
+                "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp"
+            }
+        ]
+    }
+]
