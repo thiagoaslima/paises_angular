@@ -22,6 +22,7 @@ import { ResultadoPipe } from '../shared/resultado.pipe';
 export class DadosPaisComponent {
     public pais: Pais | null = null;
     public imageSrc = ''
+    public imageSrcCover = ''
     public itens = <any[]>[];
     public historico: string[] = [];
     public temas: any = [];
@@ -81,8 +82,10 @@ export class DadosPaisComponent {
     setImageSrc(pais: Pais | null) {
         if (pais) {
             this.imageSrc = 'img/bandeiras/' + pais.sigla.toUpperCase() + '.gif';
+            this.imageSrcCover = 'img/capas/' + pais.sigla.toUpperCase() + '.jpg';
         } else {
             this.imageSrc = '';
+            this.imageSrcCover = '';
         }
     }
 }
