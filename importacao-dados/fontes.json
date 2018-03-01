@@ -3,125 +3,350 @@
         "fonte": "The World Factbook",
         "autor": "CIA - Central Intelligence Agency",
         "periodicidade": "anual",
+        "testes": "semanal",
         "ultima_edicao": "2016",
         "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
-        "file": "https://www.cia.gov/library/publications/download/download-2014/factbook.zip",
+        "file_link": "https://www.cia.gov/library/publications/download/download-2014/factbook.zip",
         "dados": [
-            { 
+            {
                 "nome": "Histórico",
-                "nome_en": "Background",
-                "secao_publicacao": "Introduction", 
+                "nome_publicacao": "Background",
+                "secao_publicacao": "Introduction",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2119.html"
             },
-            { 
+            {
+                "nome": "Extensão territorial",
+                "nome_publicacao": "Area",
+                "secao_publicacao": "Geography",
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2147.html",
+                "obs": [
+                    "Informação: extrair do texto",
+                    "Notas: extrair do texto"
+                ]
+            },
+            {
                 "nome": "Capital",
-                "nome_en": "Capital",
-                "secao_publicacao": "Government", 
+                "nome_publicacao": "Capital",
+                "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2057.html"
             },
-            { 
+            {
                 "nome": "Tipo de governo",
-                "nome_en": "Government Type",
+                "nome_publicacao": "Government Type",
                 "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2128.html"
             },
-            { 
+            {
                 "nome": "Chefe de governo",
-                "nome_en": "Head of Government",
+                "nome_publicacao": "Head of Government",
                 "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2077.html",
-                "obs": ["Extrair informação de dentro do texto"]
+                "obs": [
+                    "Informação: extrair do texto"
+                ]
             },
-            { 
+            {
                 "nome": "Chefe de estado",
-                "nome_en": "Chief of State",
+                "nome_publicacao": "Chief of State",
                 "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2077.html",
-                "obs": ["Extrair informação de dentro do texto"]
+                "obs": [
+                    "Informação: extrair do texto"
+                ]
             }
         ]
     },
+
     {
-        "fonte": "World development Indicators",
+        "fonte": "Taxas de câmbio",
+        "autor": "Banco Central do Brasil",
+        "periodicidade": "diária",
+        "teste": "semanal",
+        "link": "http://www.bcb.gov.br/pt-br#!/n/txcambio",
+        "dados": [
+            {
+                "nome": "Moeda",
+                "nome_publicacao": "Moedas",
+                "secao_publicacao": "Tabela de Moedas",
+                "link": "http://www4.bcb.gov.br/pec/taxas/batch/tabmoedas.asp?id=tabmoeda",
+                "file_link": "http://www4.bcb.gov.br/Download/fechamento/M20180301.csv"
+            },
+            {
+                "nome": "Taxa de câmbio do dia (em US$)",
+                "nome_publicacao": "Paridade",
+                "secao_publicacao": "Tabela de Moedas",
+                "link": "http://www4.bcb.gov.br/pec/taxas/batch/cotacaomoedas.asp?id=txtodas",
+                "file_link": "http://www4.bcb.gov.br/Download/fechamento/20180228.csv"
+            }
+        ]
+    },
+
+    {
+        "fonte": "Treasury - UN Operational Rates of Exchange",
+        "autor": "ONU - United Nations Treasury",
+        "periodicidade": "mensal",
+        "teste": "semanal",
+        "link": "https://treasury.un.org/operationalrates/OperationalRates.php",
+        "dados": [
+            {
+                "nome": "Moeda",
+                "nome_publicacao": "Currency",
+                "secao_publicacao": "Operational Rates > Current",
+                "link": "https://treasury.un.org/operationalrates/OperationalRates.php",
+                "obs": [
+                    "Informação: extrair do texto"
+                ]
+            },
+            {
+                "nome": "Taxa de câmbio do mês (em US$)",
+                "nome_publicacao": "Operational Rate",
+                "secao_publicacao": "Operational Rates > Current",
+                "link": "https://treasury.un.org/operationalrates/OperationalRates.php",
+                "obs": [
+                    "Informação: extrair do texto"
+                ]
+            }
+        ]
+    },
+
+    {
+        "fonte": "World Development Indicators",
         "autor": "The World Bank",
         "periodicidade": "anual",
-        "usos": [
+        "teste": "mensal",
+        "link": "https://data.worldbank.org/indicator",
+        "api": {
+            "documentacao": "https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+            "base_url": "http://api.worldbank.org/v2/datacatalog?format=json"
+        },
+        "dados": [
             {
-                "indicador": {
-                    "id": 62957,
-                    "nome_pt": "Entrada de turistas",
-                    "nome_en": "International tourism, number of arrivals",
-                    "tema": "Economia"
-                },
-                "edicao": "2016",
-                "periodos": ["2016-1995"],
+                "id": "62957",
+                "nome": "Entrada de turistas",
+                "nome_publicacao": "International tourism, number of arrivals",
+                "id_publicacao": "ST.INT.ARVL",
                 "link": "https://data.worldbank.org/indicator/ST.INT.ARVL",
-                "file": "http://api.worldbank.org/v2/en/indicator/ST.INT.ARVL?downloadformat=csv"
+                "file_link": "http://api.worldbank.org/v2/en/indicator/ST.INT.ARVL?downloadformat=csv",
+                "api_link": "http://api.worldbank.org/v2/countries/all/indicators/ST.INT.ARVL?format=json"
             },
             {
-                "edicao": "2016",
-                "indicador": {
-                    "id": 62958,
-                    "nome_pt": "Gastos públicos com educação",
-                    "nome_en": "Expenditure on education, Public (% of GDP) (%)",
-                    "tema": "Economia"
-                },
-                "periodos": ["1980", "1985", "1990", "2000", "2005-2012"],
-                "link": "http://hdr.undp.org/en/content/expenditure-education-public-gdp"
-            }, 
-            {
-                "edicao": "2017",
-                "indicador": "Investimentos em pesquisa e desenvolvimento",
-                "tema": "Economia",
-                "id": 62960,
-                "periodos": ["2000-2015"]
+                "id": "62960",
+                "nome": "Investimentos em pesquisa e desenvolvimento",
+                "nome_publicacao": "Research and development expenditure (% of GDP)",
+                "id_publicacao": "GB.XPD.RSDV.GD.ZS",
+                "link": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+                "file_link": "http://api.worldbank.org/v2/en/indicator/GB.XPD.RSDV.GD.ZS?downloadformat=csv",
+                "api_link": "http://api.worldbank.org/v2/countries/all/indicators/GB.XPD.RSDV.GD.ZS?format=json"
             }
         ]
     },
+
     {
         "fonte": "Human Development Report: Human Development for Everyone",
         "autor": "United Nations Development Programme",
-        "usos": [
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "http://hdr.undp.org/en/data",
+        "obs": [
+            "No site, toda a base de dados é enviada para o cliente em formato json. Iterando pelos arquivos, é possível reconstruir as tabelas de dados."
+        ],
+        "files": [
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/summary.json",
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicators.json",
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/rankiso.json",
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/footnotes.json",
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/bars.json",
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicators_line.json"
+        ],
+        "footnotes": {
+            "notes": {
+                "a": "a: Refers to 2001.",
+                "b": "b: Refers to 2002.",
+                "c": "c: Based on cross country regression.",
+                "d": "d: Data refer to the most recent year available during the period specified.",
+                "e": "e: Model International Labor Organization Estimates",
+                "f": "f: The natural sex ratio at birth is commonly assumed and empirically confirmed to be 1.05 male births to 1 female birth.",
+                "g": "g: Because data are based on national definitions of what constitutes a city or metropolitan area, cross country comparison should be made with caution.",
+                "h": "h: Includes Agalega, Rodrigues and Saint Brandon.",
+                "i": "i: Includes Aland Islands.",
+                "j": "j: Includes Svalbard and Jan Mayen Islands. ",
+                "k": "k: Includes Christmas Island, Cocos (Keeling) Islands and Norfolk Island.",
+                "l": "l: Refers to a year earlier than that specified.",
+                "m": "m: For the purpose of calculating the Gender Inequality Index value, 0.1% was used.",
+                "n": "n: Not all indicators were available for all countries, so caution should be used in cross-country comparisons. Where an indicator is missing, weights of available indicators are adjusted to total 100 percent. See Technical note 5 at http://hdr.undp.org/sites/default/files/hdr2016_technical_notes.pdf for details.",
+                "o": "o: Estimated using the PPP rate and projected growth rate of Spain.",
+                "p": "p: Estimated using the purchasing power parity (PPP) rate and projected growth rate of Switzerland.",
+                "q": "q: Data refer to 2012 or the most recent year available.",
+                "r": "r: Excludes the 36 special rotating delegates appointed on an ad hoc basis.",
+                "s": "s: Includes Zanzibar. ",
+                "t": "t: Includes Sabah and Sarawak.",
+                "u": "u: Includes Nagorno-Karabakh.",
+                "v": "v: Includes Abkhazia and South Ossetia.",
+                "w": "w: Includes East Jerusalem. ",
+                "x": "x: Includes Transnistria.",
+                "y": "y: Includes Kosovo.",
+                "z": "z: Includes Canary Islands, Ceuta and Melilla.",
+                "aa": "aa: See http://hdr.undp.org/en/composite/IHDI for the list of surveys used to estimate inequalities.",
+                "bb": "bb: Includes Northern Cyprus.",
+                "cc": "cc: 0.1 or less. ",
+                "dd": "dd: Because statutory pension ages differ by country, cross-country comparisons should be made with caution.",
+                "ee": "ee: Because disaggregated income data are not available, data are crudely estimated. See Definitions and Technical note 3 at http://hdr.undp.org/sites/default/files/hdr2016_technical.",
+                "ff": "ff: For the purpose of calculating the HDI value, GNI per capita is capped at $75,000.",
+                "gg": "gg: HDRO estimates based on UIS educational attainment data.",
+                "hh": "hh: Value from UNDESA (2011).",
+                "ii": "ii: Data refer to 2013 or the most recent year available. ",
+                "jj": "jj: A negative value refers to net official development assistance disbursed by donor countries.",
+                "kk": "kk: The HDRO specifications refer to somewhat modified definitions of deprivations in some indicators compared to the 2010 specifications. See Kovacevic and Calderon (2014) for details.",
+                "ll": "ll: Missing indicators on nutrition.",
+                "mm": "mm: Refers to urban areas only ",
+                "nn": "nn: Missing indicator on electricity. ",
+                "oo": "oo: Missing indicator on child mortality.",
+                "pp": "pp: Missing indicator on cooking fuel.",
+                "qq": "qq: Missing indicator on type of floor.",
+                "rr": "rr: Missing indicator on school attendance.",
+                "ss": "ss: Refers to 2011.",
+                "tt": "tt: Refers to 2012.",
+                "uu": "uu: Refers to 2013.",
+                "vv": "vv: In 2009, the Philippine National Police (PNP) has implemented a new crime reporting system wherein crime data for 2009 was set as the baseline for future research, study and comparison. Thus, crime statistics in 2009 cannot be compared with those data obtained in the previous years (2008 and earlier) since the parameters were no longer the same.",
+                "ww": "ww: HDRO calculations based on data from ICPS (2016).",
+                "xx": "xx: Data refer to 2014 or the most recent year available.",
+                "yy": "yy: Calculated as the average of mean years of schooling for Austria and Switzerland.",
+                "zz": "zz: Based on data from the national statistical office.",
+                "aaa": "aaa: Based on Barro and Lee (2016).",
+                "bbb": "bbb: For the purpose of calculating the HDI value, expected years of schooling is capped at 18 years.",
+                "ccc": "ccc: For more detailed country notes, see www.prisonstudies.org.",
+                "ddd": "ddd: Data for 1995 are actually data reported for 1997.",
+                "eee": "eee: Uses 'Share of seats in parliament' that refers to 1997.",
+                "fff": "fff: Refers to 2014.",
+                "ggg": "ggg: Data are average annual estimates for 2010-2015.",
+                "hhh": "hhh: Data are average of period estimates for 2010-2015 and projections for 2015-2020.",
+                "iii": "iii: Includes Crimea.",
+                "jjj": "jjj: Refers to population ages 14-28.",
+                "kkk": "kkk: Refers to population ages 16-24.",
+                "lll": "lll: Refers to population ages 10-24.",
+                "mmm": "mmm: Refers to population ages 12-30.",
+                "nnn": "nnn: Refers to population ages 15-29.",
+                "ooo": "ooo: Refers to population ages 18-35.",
+                "ppp": "ppp: Refers to population ages 14-24.",
+                "qqq": "qqq: Data refer to 2015 or the most recent year available.",
+                "rrr": "rrr: Value from WHO (2016).",
+                "sss": "sss: HDRO estimate based on data from World Bank (2016) and United Nations Statistics Division (2016).",
+                "ttt": "ttt: Based on a cross-country regression and the projected growth rate from UNECLAC (2016)",
+                "uuu": "uuu: Based on projected growth rates from UNESCWA (2016) and World Bank (2016)",
+                "vvv": "vvv: Updated by HDRO based on data from UNESCO Institute for Statistics (2016)",
+                "www": "www: Updated by HDRO based on data from ICF Macro Demographic and Health Surveys for 2006-2015.",
+                "xxx": "xxx: Based on data from UNICEF's Multiple Indicator Cluster Surveys 2006-2015.",
+                "yyy": "yyy: Based on data from ICF Macro Demographic and Health Surveys for 2006-2015.",
+                "zzz": "zzz: Updated by HDRO based on Syrian Center for Policy Research (2016).",
+                "aaaa": "aaaa: Updated by HDRO using Barro and Lee (2016) estimates.",
+                "bbbb": "bbbb: Differs from standard definition or refers to only part of the country.",
+                "cccc": "cccc: Refers to years or periods other than those specified.",
+                "dddd": "dddd: Changes in definitions and/or counting rules are reported by the Member State to indicate a break in the time series.",
+                "eeee": "eeee: Calculated by HDRO from the 2010-2015 period life tables from UNDESA (2015).",
+                "ffff": "ffff: Data collection methods, age ranges, sampled women (ever-partnered, ever-married or all women) and definitions of the forms of violence and of perpetrators vary by survey. Thus data are not necessarily comparable across countries.",
+                "gggg": "gggg: Data refer to a year earlier than 2010.",
+                "hhhh": "hhhh: Data are obtained by interpolation between two period estimates."
+            },
+            "link": "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicator_profile_en.js"
+        },
+        "dados": [
             {
-                "edicao": "2016",
-                "indicador": "Gastos públicos com saúde",
-                "tema": "Economia",
-                "id": 62959,
-                "periodos": ["1995", "2000", "2005", "2010", "2011", "2012", "2013", "2014"]
+                "nome": "Gastos públicos com educação",
+                "nome_publicacao": "Government expenditure on education (% of GDP)",
+                "id_publicacao": "149206",
+                "tema_publicacao": "Educação",
+                "link": "http://hdr.undp.org/en/indicators/149206"
             },
             {
-                "edicao": "2013",
-                "indicador": "Gastos públicos com educação",
-                "tema": "Economia",
-                "id": 62958,
-                "periodos": ["1980", "1985", "1990", "2000", "2005-2012"]
+                "nome": "Gastos públicos com saúde",
+                "nome_publicacao": "Public health expenditure (% of GDP)",
+                "id_publicacao": "53903",
+                "tema_publicacao": "Saúde",
+                "link": "http://hdr.undp.org/en/indicators/53906"
             }
         ]
     },
+    
     {
-        "fonte": "Labour Force Estimates and Projections: 1990-2050.",
-        "autor": "International Labour Organization",
-        "usos": [
+        "fonte": "National Accounts Main Aggregates Database, Basic Data Selection",
+        "autor": "United Nations Statistics Division",
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+        "obs": [
+            "O site não implementa CORS nas requisições de download, apenas nas consultas de tabela",
+            "A consulta limita 1000 registros por vez. Separar a pesquisa em pesquisas deste tamanho caso seja feita via javascript"
+        ],
+        "dados": [
             {
-                "edicao": "2015",
-                "indicador": "Mulheres de 15 anos ou mais de idade economicamente ativas",
-                "tema": "Economia",
-                "id": 62961,
-                "periodos": ["2000-2018"]
-            }
-        ]
-    },
-    {
-        "fonte": "National Accounts Main Aggregates Database,Basic Data Selection",
-        "autor": "United Nations,United Nations Statistics Division",
-        "usos": [
-            {
-                "edicao": "2017",
-                "indicador": "PIB per capita",
-                "tema": "Economia",
                 "id": 62962,
-                "periodos": ["2000-2018"],
-                "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp"
+                "nome": "PIB per capita",
+                "nome_publicacao": "GDP, Per Capita GDP - US Dollars",
+                "series_publicacao": "5",
+                "post_request": {
+                    "link": "https://unstats.un.org/unsd/snaama/resQuery.asp",
+                    "data": {
+                        "Year": "9999",
+                        "Series": 5,
+                        "Country": "9999",
+                        "Selection": "basic"
+                    },
+                    "obs": [
+                        "9999 é o valor numérico para all",
+                        "A requisição acima excede o limite de 1000 registros",
+                        "Reduzir o número de anos para obter a tabela"
+                    ]
+                },
+                "download_post_request": {
+                    "link": "https://unstats.un.org/unsd/snaama/dnlXLS.asp",
+                    "data": {
+                        "Download.x": "21",
+                        "Download.Y": "26",
+                        "strCCode": " 001 002 004 005 008 009 011 012 013 014 015 017 018 019 020 021 024 028 029 030 031 032 034 035 036 039 040 044 048 050 051 052 053 054 056 057 060 061 064 068 070 072 076 084 090 092 096 100 104 108 112 116 120 124 132 136 140 142 143 144 145 148 150 151 152 154 155 156 170 174 178 180 184 188 191 192 196 200 202 203 204 208 212 214 218 222 226 230 231 232 233 242 246 250 258 262 266 268 270 275 276 288 296 300 304 308 320 324 328 332 340 344 348 352 356 360 364 368 372 376 380 384 388 392 398 400 404 408 410 412 414 417 418 419 422 426 428 430 434 438 440 442 446 450 454 458 462 466 470 478 480 484 492 496 498 499 500 504 508 512 516 520 524 528 530 531 533 534 540 548 554 558 562 566 578 583 584 585 586 591 598 600 604 608 616 620 624 626 630 634 642 643 646 659 660 662 670 674 678 682 686 688 690 694 702 703 704 705 706 710 716 720 724 728 729 736 740 748 752 756 760 762 764 768 776 780 784 788 792 795 796 798 800 804 807 810 818 826 835 836 840 854 858 860 862 882 886 887 890 894",
+                        "series": "5",
+                        "strYr": " 1970 1971 1972 1973 1974 1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 1985 1986 1987 1988 1989 1990 1991 1992 1993 1994 1995 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016"
+                    },
+                    "obs": [
+                        "strCCode contém o código de todos os países",
+                        "strYr contém todos os anos",
+                        "A requisição acima não suporta CORS"
+                    ]
+                }
+            }
+        ]
+    },
+
+    {
+        "fonte": "UN Comtrade",
+        "autor": "United Nations Statistics Division",
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "https://comtrade.un.org/data/",
+        "api": {
+            "documentacao_link": "https://comtrade.un.org/data/doc/api/#DataRequests",
+            "base_url": "https://comtrade.un.org/api/get"
+        },
+        "dados": [
+            {
+                "id": 62964,
+                "nome": "Total da exportação",
+                "nome_publicacao": "Export",
+                "field_id_publicacao": "hs_commodity_code",
+                "id_publicacao": "TOTAL - Total of all HS commodities",
+                "api_link": "https://comtrade.un.org/api/get?ps=recent&r=all&p=0&rg=2&cc=TOTAL"
+            },
+            {
+                "id": 62964,
+                "nome": "Total da importação",
+                "nome_publicacao": "Import",
+                "field_id_publicacao": "hs_commodity_code",
+                "id_publicacao": "TOTAL - Total of all HS commodities",
+                "api_link": "https://comtrade.un.org/api/get?ps=recent&r=all&p=0&rg=1&cc=TOTAL",
+                "obs": [
+                    "Usando o parametro rg=all, é possível receber as importações e exortações na mesma requisição",
+                    "A API só permite solicitar 5 períodos por vez.",
+                    "ps=recent é um atalho para os 5 períodos mais recentes do indicador"
+                ]
             }
         ]
     }
