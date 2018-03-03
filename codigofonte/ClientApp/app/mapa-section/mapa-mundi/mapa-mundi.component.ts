@@ -168,7 +168,9 @@ export class MapaMundiComponent {
         const that = this;
         layer.on({
             click: (evt) => {
-                this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+                that._ngzone.run(() => {
+                    this._router.navigate(['.', evt.target.feature.properties.slug], { relativeTo: that._route });
+                })
 			}
         });
     }
