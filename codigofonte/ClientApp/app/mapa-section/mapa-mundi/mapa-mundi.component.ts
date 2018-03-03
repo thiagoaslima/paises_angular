@@ -29,7 +29,7 @@ import {
 })
 export class MapaMundiComponent {
     public isBrowser: boolean;
-    public map: L.Map;
+    public map: L.Map | null = null;
     public mapOptions = MAP_STYLES.options;
 
     public paisSelecionado = {
