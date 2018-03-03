@@ -5,6 +5,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { MapaMundiComponent } from './mapa-mundi/mapa-mundi.component';
 import { SinteseHomeComponent } from './sintese-home/sintese-home.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { RankingModule } from './ranking/ranking.module';
 import { SharedModule } from '../shared';
 
 const routes: Routes = [
@@ -12,6 +14,14 @@ const routes: Routes = [
         path: '',
         component: MapaMundiComponent,
         children: [
+            {
+                path: 'ranking/:indicador',
+                component: RankingComponent
+            },
+            {
+                path: 'ranking/:indicador/:pais',
+                component: RankingComponent
+            },
             {
                 path: ':pais',
                 component: SinteseHomeComponent
@@ -25,7 +35,8 @@ const routes: Routes = [
         CommonModule,
         SharedModule,
         RouterModule.forChild(routes),
-        LeafletModule.forRoot()
+        LeafletModule.forRoot(),
+        RankingModule
     ],
     declarations: [
         MapaMundiComponent,

@@ -4,14 +4,16 @@ import { ParamMap, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../shared";
-import { PaisesService } from "../shared/paises.service";
 import { SinteseHomeService } from "../mapa-section/sintese-home/sintese-home.service";
 import { DadosPaisService } from './dados-pais.service';
+
+import { ResultadoPipe } from '../shared/resultado.pipe';
 
 @Component({
     selector: 'dados-pais',
     templateUrl: './dados-pais.component.html',
     styleUrls: ['./dados-pais.component.css'],
+    // changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [
         SinteseHomeService, 
         DadosPaisService
@@ -20,8 +22,9 @@ import { DadosPaisService } from './dados-pais.service';
 export class DadosPaisComponent {
     public pais: Pais | null = null;
     public imageSrc = ''
+    public imageSrcCover = ''
     public itens = <any[]>[];
-    public historico= '';
+    public historico: string[] = [];
     public temas: any = [];
 
     historico_aberto = false;
@@ -50,14 +53,17 @@ export class DadosPaisComponent {
 
                 this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
+                    // this._changeDetector.detectChanges();
                 });
 
                 this._dadosPaisService.getHistorico(pais.sigla).subscribe(historico => {
                     this.historico = historico;
+                    // this._changeDetector.detectChanges();
                 })
 
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
                     this.temas = resultados;
+                    // this._changeDetector.detectChanges();
                 });
                 
             } else {
@@ -69,15 +75,17 @@ export class DadosPaisComponent {
     }
 
     ngOnDestroy() {
-        this._changeDetector.detach();
+        // this._changeDetector.detach();
         Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
     setImageSrc(pais: Pais | null) {
         if (pais) {
             this.imageSrc = 'img/bandeiras/' + pais.sigla.toUpperCase() + '.gif';
+            this.imageSrcCover = 'img/capas/' + pais.sigla.toUpperCase() + '.jpg';
         } else {
             this.imageSrc = '';
+            this.imageSrcCover = '';
         }
     }
 }

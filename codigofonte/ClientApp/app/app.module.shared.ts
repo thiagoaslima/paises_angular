@@ -8,22 +8,18 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app-component/app.component';
-
-import { BarraGovComponent } from './core/barra-gov/barra-gov.component';
-import { BarraMenuPrincipalComponent } from './core/barra-menu-principal/barra-menu-principal.component';
 import { CoreModule } from "./core/core.module";
 
 @NgModule({
     declarations: [
-        AppComponent,
-        BarraGovComponent,
-        BarraMenuPrincipalComponent
+        AppComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         HttpClientModule,
         FormsModule,
+        CoreModule,
         AppRoutingModule,
         SharedModule.forRoot()
     ]

@@ -12,14 +12,17 @@ module.exports = function (config) {
         preprocessors: {
             './boot-tests.ts': ['webpack']
         },
-        reporters: ['progress'],
+        reporters: ['progress', 'dots', 'junit'],
+        junitReporter: {
+            outputFile: 'test-results.xml'
+        },
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        mime: { 'application/javascript': ['ts','tsx'] },
-        singleRun: false,
+        mime: { 'application/javascript': ['ts', 'tsx'] },
+        singleRun: true,
         webpack: require('../../webpack.config.js')().filter(config => config.target !== 'node'), // Test against client bundle, because tests run in a browser
         webpackMiddleware: { stats: 'errors-only' }
     });

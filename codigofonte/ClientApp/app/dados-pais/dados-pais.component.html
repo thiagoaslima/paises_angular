@@ -6,8 +6,12 @@
                 <i class="fa fa-caret-left dados-pais__menu-icon" aria-hidden="true"></i> Voltar
             </a>
         </li-->
-        <li class="dados-pais__menu-item"><a href="#" class="dados-pais__menu-link">Imprimir</a></li>
-        <li class="dados-pais__menu-item"><a href="#" class="dados-pais__menu-link">Download</a></li>
+        <li class="dados-pais__menu-item">
+            <a href="#" class="dados-pais__menu-link">Imprimir</a>
+        </li>
+        <li class="dados-pais__menu-item">
+            <a href="#" class="dados-pais__menu-link">Download</a>
+        </li>
         <li class="dados-pais__menu-item dados-pais__menu-item--right">
             <a href="#" class="dados-pais__menu-link">
                 <i class="fa fa-signal dados-pais__menu-icon" aria-hidden="true"></i> Comparar Países
@@ -17,7 +21,7 @@
     <!--síntese-->
     <div class="dados-pais__sintese">
         <!--capa-->
-        <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrc + ')'"></div>
+        <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrcCover + ')'"></div>
         <!--tabela da síntese-->
         <div class="dados-pais__sintese-container">
             <div class="dados-pais__sintese-titulo-container">
@@ -29,7 +33,7 @@
                 <tbody>
                     <tr class="dados-pais__sintese-linha" *ngFor="let item of itens">
                         <th class="dados-pais__sintese-nome">{{ item.titulo }}</th>
-                        <td class="dados-pais__sintese-valor">{{ item.valor }}</td>
+                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -37,23 +41,17 @@
     </div>
     <!--histórico-->
     <div class="dados-pais__historico">
-        <div class="dados-pais__historico-titulo-container" (click)="historico_aberto = !historico_aberto">
+        <div class="dados-pais__historico-titulo-container" [class.dados-pais__historico-titulo-container--ativo]="historico_aberto"
+            (click)="historico_aberto = !historico_aberto">
             <h3 class="dados-pais__historico-titulo">HISTÓRICO</h3>
-            <i class="fa fa-plus dados-pais__historico-icone" aria-hidden="true"></i>
+            <i class="fa fa-plus dados-pais__historico-icone" aria-hidden="true" *ngIf="!historico_aberto"></i>
+            <i class="fa fa-minus dados-pais__historico-icone" aria-hidden="true" *ngIf="historico_aberto"></i>
         </div>
         <div class="dados-pais__historico-paragrafos-container" [class.dados-pais__historico-paragrafos-container--aberto]="historico_aberto">
             <p class="dados-pais__historico-paragrafo" *ngFor="let paragrafo of historico">
                 {{ paragrafo }}
             </p>
-            <p class="dados-pais__historico-paragrafo">
-                Maior país da América do Sul, com vasta área de litoral banhada pelo Atlântico. Tem fronteiras com Venezuela, Guiana, Suriname, Guiana Francesa, Colômbia, Peru, Bolívia, Paraguai, Argentina e 
-                Uruguai. O topônimo Brasil tem sua origem muito discutida, embora boa parte das explicações se reram ao pau-brasil daqui extraído. Para alguns lólogos, vem do tupi ibira-ciri, "pau eriçado". 
-                Os europeus, ao ouvirem este nome dado pelos indígenas à madeira de coloração avermelhada, chamaram-na de "Brasil"
-            </p>
-            <p class="dados-pais__historico-paragrafo">
-                As extensas porções de terras, que hoje constituem o país, foram habitadas por tribos que pertenciam ao tronco tupi-guarani, caribe e arawak.
-            </p>
-            
+            <div class="dados-pais__historico-degrade" *ngIf="!historico_aberto"></div>
         </div>
         <div class="dados-pais__historico-mais-container">
             <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">
@@ -62,8 +60,12 @@
             </button>
         </div>
     </div>
-
-    <div>
+    <!--cards container-->
+    <div class="dados-pais__cards-container">
+        <card *ngFor="let t of temas" [tema]="t"></card>
+    </div>
+    <!--tabelas-->
+    <!--<div>
         <h2>Gráficos</h2>
         <div *ngFor="let tema of temas">
             <h4>{{ tema.tema }}</h4>
@@ -76,6 +78,5 @@
                 </tr>
             </table>
         </div>
-    </div>
-
+    </div>-->
 </div>

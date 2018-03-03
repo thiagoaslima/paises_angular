@@ -1,8 +1,9 @@
 import { NgModule, ModuleWithProviders, Injector, PLATFORM_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
-import { PaisesService } from './paises.service';
+import { PaisesService } from './paises-service';
 import { BuscaService } from './busca.service';
 
 import { RouterParamsService } from './router-params.service';
@@ -11,14 +12,25 @@ import { MalhaService } from './malha/malha.service';
 import { PlatformDetectionService } from './platform-detection.service';
 
 import { LogoODSComponent } from './logo-ods/logo-ods.component';
+import { GraficoComponent } from './grafico/grafico.component';
 
+import { ResultadoPipe } from './resultado.pipe';
+
+
+export function platformDetectionFactory(platform_id: Object) {
+    return new PlatformDetectionService(platform_id);
+}
 @NgModule({
-    imports: [],
+    imports: [CommonModule],
     declarations: [
-        LogoODSComponent
+        LogoODSComponent,
+        GraficoComponent,
+        ResultadoPipe
     ],
     exports: [
-        LogoODSComponent
+        LogoODSComponent,
+        GraficoComponent,
+        ResultadoPipe
     ],
     providers: [
         TraducaoService,
@@ -36,13 +48,7 @@ export class SharedModule {
                 LocalidadeService,
                 PaisesService,
                 PesquisasService,
-                {
-                    provide: PlatformDetectionService,
-                    deps: [PLATFORM_ID],
-                    useFactory: (platform_id: Object) => {
-                        return new PlatformDetectionService(platform_id);
-                    }
-                }
+                PlatformDetectionService
             ]
         };
     }

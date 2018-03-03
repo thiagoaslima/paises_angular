@@ -1,0 +1,77 @@
+<section class="ranking main-layer">
+
+    <!--barra de título-->
+    <div class="ranking__header">
+        <!--botão de fechar-->
+        <a class="button ranking__botao-fechar desktop-only" routerLink="/mapa">
+            <!-- <button class="ranking__botao-fechar"> -->
+            <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
+            <!-- </button> -->
+        </a>
+
+        <div class="ranking__barra-titulo">
+            <span class="button ranking__voltar mobile-only">‹</span>
+            <h2 class="ranking__titulo">{{ indicador?.nome }}</h2>
+        </div>
+    </div>
+
+    <div class="ranking__menu-auxiliar desktop-only">
+        <ul class="ranking__lista-inline">
+            <li>
+                <span class="ranking__menu-auxiliar__item" href="#">IMPRIMIR</span>
+            </li>
+            <li>
+                <span class="ranking__menu-auxiliar__item" href="#">DOWNLOAD</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--dados-->
+    <div class="ranking__info-container">
+
+        <table class="ranking__table">
+            
+            <thead class="ranking__table-head">
+                <tr>
+                    <th class="ranking__table__posicao">
+                        Posição
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </th>
+                    <th class="ranking__table__pais">
+                        País
+                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    </th>
+                    <th class="ranking__table__unidade">
+                        {{ indicador?.unidade?.identificador }}
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody class="ranking__table-body">
+                <tr *ngFor="let pais of dados">
+                    <td class="ranking__table__posicao">
+                        {{ pais.posicao }}
+                    </td>
+                    <td class="ranking__table__pais">
+                        <a href="#">{{ pais.pais.nome.pt }}</a>
+                    </td>
+                    <td class="ranking__table__unidade">
+                        {{ pais.valor }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <table class="pure-table pure-table-horizontal">
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+    </table>
+
+    <!-- rodapé interação -->
+    <div class="ranking__rodape">
+        <button class="button leiamais">COMPARAR PAÍSES</button>
+    </div>
+</section>

@@ -4,8 +4,9 @@ import { ParamMap, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
 import { RouterParamsService, LocalidadeService, Pais } from "../../shared";
-import { PaisesService } from "../../shared/paises.service";
 import { SinteseHomeService } from "./sintese-home.service";
+
+import { ResultadoPipe } from "../../shared/resultado.pipe";
 
 @Component({
     selector: 'sintese-home',

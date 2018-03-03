@@ -5,11 +5,12 @@ import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "../shared";
 import { DadosPaisComponent } from "./dados-pais.component";
 import { DadosPaisService } from "./dados-pais.service";
+import { CardComponent } from "./card/card.component";
 
 const routes: Routes = [
     {
         path: '',
-        component: DadosPaisComponent,
+        component: DadosPaisComponent
     }
 ];
 
@@ -17,10 +18,11 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(routes),
+        RouterModule.forChild(routes)
     ],
     declarations: [
-        DadosPaisComponent
+        DadosPaisComponent,
+        CardComponent
     ],
     providers: [
         DadosPaisService

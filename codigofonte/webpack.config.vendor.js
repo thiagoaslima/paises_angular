@@ -24,7 +24,7 @@ const nonTreeShakableModules = [
     'event-source-polyfill',
     'jquery',
 ];
-const allModules = nonTreeShakableModules.concat(treeShakableModules);
+const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
 const polyfills = [
     './ClientApp/utils/shims_for_IE.js',
@@ -35,7 +35,6 @@ const polyfills = [
 ]
 
 module.exports = (env) => {
-    debugger;
     const extractCSS = new ExtractTextPlugin('vendor.css');
     const isDevBuild = !(env && env.prod);
     
@@ -98,7 +97,7 @@ module.exports = (env) => {
                 path: path.join(__dirname, 'wwwroot', 'dist', '[name]-manifest.json'),
                 name: '[name]_[hash]'
             })
-        ].concat([
+        ].concat(isDevBuild ? [] : [
             new webpack.optimize.UglifyJsPlugin()
         ])
     });

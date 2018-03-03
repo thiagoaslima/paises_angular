@@ -1,0 +1,165 @@
+/*mobile*/
+
+.ranking {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: white;
+}
+
+.ranking__header {
+	position: relative;
+	background-color: #3f3f3f;
+}
+
+.ranking__barra-titulo {
+	color: #ffffff;
+	line-height: 1.3;
+	padding: 10px;
+}
+
+.ranking__voltar {
+	font-size: 25px;
+    margin-right: 3px;
+    color: #ffffff;
+    font-weight: bold;
+    vertical-align: -1px;
+}
+
+.ranking__titulo {
+	font-size: 15px;
+    text-transform: uppercase;
+}
+
+.ranking__info-container {
+	padding-top: 10px;
+}
+
+.ranking__table {
+	border-collapse: collapse;
+}
+
+.ranking__table-head {
+	display: block;
+	width: 100%;
+}
+
+.ranking__table-head th {
+	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	color: #4f4f4f;
+	padding: 10px;
+	border-bottom: 1px solid #CBCBCB;
+}
+
+.ranking__table-body {
+	display: block;
+	width: 100%;
+	height: 450px;
+	overflow-y: auto;
+	overflow-y: overlay;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	overflow-x: hidden;
+}
+
+.ranking__table-body td {
+	padding: 3px 10px;
+}
+
+.ranking__table__posicao {
+	font-size: 13px;
+	text-align: right;
+	width: 25%;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.ranking__table__unidade {
+	font-size: 13px;
+	width: 25%;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.ranking__table__pais {
+	font-size: 13px;
+	width: 50%;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.ranking__table__pais a {
+	font-size: 13px;
+}
+
+/*desktop*/
+@media only screen and (min-width : 568px) {
+	.ranking {
+		display: block;
+		width: 320px;
+		top: 62px;
+		left: auto;
+		right: 80px;
+		border: 1px solid #9f9f9f;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+
+	.ranking__botao-fechar {
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		right: 0;
+		background-color: transparent;
+		border: none;
+		padding: 2px 8px;
+	}
+
+	.ranking__icone-fechar {
+		color: #ffffff;
+	}
+
+	.ranking__barra-titulo {	
+		height: auto;
+		padding: 35px 20px 10px 12px;
+	}
+
+	.ranking__titulo {
+		font-size: 18px;
+	}
+
+	.ranking__menu-auxiliar {
+		background-color: transparent;
+		text-align: right;
+	}
+
+	.ranking__lista-inline {
+		margin: 0 auto;
+		padding: 0;
+		width: 98%;
+		list-style: none;
+	}
+	
+	.ranking__lista-inline li {
+		display: inline-block;
+		margin: 8px;
+	}
+
+	.ranking__menu-auxiliar__item {
+		font-size: 11px;
+		font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+		color: #4f4f4f;
+		text-transform: uppercase;
+	}
+
+	.ranking__rodape .leiamais {
+		background-repeat: no-repeat;
+		background-image: url(/img/comparar_icon.png);
+		background-position: 85px 4px;
+		height: 33px;
+		background-color: #3f3f3f;
+		color: #fff;
+		border: none;
+		width: 92%;
+		height: 26px;
+		font-size: 1.1em;
+		display: block;
+		margin: 10px auto;
+		font-size: 11px;
+	}
+}

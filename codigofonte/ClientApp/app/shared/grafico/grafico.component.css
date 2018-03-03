@@ -1,0 +1,155 @@
+/*mobile first*/
+
+.grafico{
+
+}
+
+.grafico__svg{
+    width: 100%;
+    height: auto;
+}
+
+.grafico__eixo-x{
+    stroke:rgb(77, 77, 77);
+    stroke-width: 1px;
+}
+
+.grafico__linha-guia{
+    stroke:rgb(200, 200, 200);
+    stroke-width: 1px;
+    stroke-dasharray: 4px, 4px;
+}
+
+.grafico__rotulo{
+    fill: #4D4D4D;
+    font-size: 11px;
+}
+
+.grafico__ponto{
+    stroke-width: 2.5px;
+    fill:white;
+}
+
+.grafico__linha{
+    stroke-width: 3px;
+}
+
+/*cores*/
+
+.grafico__cor--0{
+    background-color:  #3ECCA7;
+    stroke: #3ECCA7;
+}
+
+.grafico__cor--0:hover{
+    fill: #3ECCA7;
+}
+
+.grafico__cor--1{
+    background-color:  #E7D766;
+    stroke: #E7D766;
+}
+
+.grafico__cor--1:hover{
+    fill: #E7D766;
+}
+
+.grafico__cor--2{
+    background-color: #A27E56;
+    stroke: #A27E56;
+}
+
+.grafico__cor--2:hover{
+    fill: #A27E56;
+}
+
+.grafico__cor--3{
+    background-color: #949494;
+    stroke: #949494;
+}
+
+.grafico__cor--3:hover{
+    fill: #949494;
+}
+
+.grafico__cor--4{
+    background-color: #42E695; 
+    stroke: #42E695;
+}
+
+.grafico__cor--4:hover{
+    fill: #42E695;
+}
+
+/*valor*/
+
+.grafico__valor-container{
+    padding-right: 18px;
+}
+
+.grafico__valor{
+    margin: 0;
+    text-align: right;
+    font-size: 1.5em;
+    font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+}
+
+.grafico__valor-metadata{
+    margin: 0;
+    text-align: right;
+    font-size: 0.8em;
+    font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
+}
+
+/*legenda*/
+
+.grafico__legenda{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.grafico__legenda-item{
+    display: inline-block;
+    margin: 5px 20px 0px 0px;
+}
+
+.grafico__legenda-icone{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.grafico__legenda-barra{
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0px;
+}
+
+.grafico__legenda-circulo{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+
+.grafico__legenda-nome{
+    display: inline-block;
+    font-size: 0.8em;
+    font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
+}
+
+/*desktop*/
+
+@media only screen and (min-width : 568px) {
+    
+
+
+}

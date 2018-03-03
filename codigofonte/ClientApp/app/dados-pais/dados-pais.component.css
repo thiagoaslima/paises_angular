@@ -97,9 +97,9 @@
 }
 
 .dados-pais__historico-titulo{
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin: 0px;
-    font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
+    font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     display: inline-block;
 }
@@ -114,10 +114,15 @@
     padding: 15px;
     background-color: #f1f1f1;
     display: none;
+    position: relative;
 }
 
 .dados-pais__historico-paragrafos-container--aberto{
     display: block;
+}
+
+.dados-pais__historico-degrade{
+    display: none;
 }
 
 .dados-pais__historico-paragrafo{
@@ -129,6 +134,13 @@
 
 .dados-pais__historico-mais{
     display: none;
+}
+
+/*card container*/
+
+.dados-pais__cards-container{
+    text-align: center;
+    margin-top: 0px;
 }
 
 /*desktop*/
@@ -214,6 +226,7 @@
     /*histórico*/
 
     .dados-pais__historico-titulo{
+        font-family: "RobotoBlack", Helvetica, Arial, sans-serif;
         font-size: 1em;
     }
 
@@ -223,6 +236,10 @@
         border-bottom: none;
     }
 
+    .dados-pais__historico-icone{
+        display: none;
+    }
+
     .dados-pais__historico-titulo-container:hover{
         background-color: #f1f1f1;
     }
@@ -230,13 +247,23 @@
     .dados-pais__historico-paragrafos-container{
         padding: 0px 40px;
         background-color: #f1f1f1;
-        max-height: calc(1.8em * 4); /*4 linhas*/
+        max-height: 200px;
         overflow: hidden;
         display: block;
     }
 
     .dados-pais__historico-paragrafos-container--aberto{
         max-height: unset;
+    }
+
+    .dados-pais__historico-degrade{
+        display: block;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, #f1f1f1 20%, transparent);
     }
 
     .dados-pais__historico-mais-container{
@@ -255,6 +282,12 @@
         text-transform: uppercase;
         font-family: "RobotoBold", Helvetica;
         font-size: 0.8em;
+    }
+
+    /*card container*/
+
+    .dados-pais__cards-container{
+        margin-top: 20px;
     }
 
 }
