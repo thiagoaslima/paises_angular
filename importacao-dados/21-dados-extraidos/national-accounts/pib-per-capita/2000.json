@@ -1,0 +1,958 @@
+[
+    {
+        "nome": "Africa",
+        "valor": 800
+    },
+    {
+        "nome": "AL",
+        "valor": 1117
+    },
+    {
+        "nome": "DZ",
+        "valor": 1753
+    },
+    {
+        "nome": "Americas",
+        "valor": 15924
+    },
+    {
+        "nome": "AD",
+        "valor": 21937
+    },
+    {
+        "nome": "AO",
+        "valor": 742
+    },
+    {
+        "nome": "Anguilla",
+        "valor": 13546
+    },
+    {
+        "nome": "AG",
+        "valor": 9378
+    },
+    {
+        "nome": "AR",
+        "valor": 8315
+    },
+    {
+        "nome": "AM",
+        "valor": 664
+    },
+    {
+        "nome": "Aruba",
+        "valor": 20621
+    },
+    {
+        "nome": "Asia",
+        "valor": 2533
+    },
+    {
+        "nome": "AU",
+        "valor": 21470
+    },
+    {
+        "nome": "Australia and New Zealand",
+        "valor": 20231
+    },
+    {
+        "nome": "AT",
+        "valor": 24389
+    },
+    {
+        "nome": "AZ",
+        "valor": 649
+    },
+    {
+        "nome": "BS",
+        "valor": 27112
+    },
+    {
+        "nome": "BH",
+        "valor": 13636
+    },
+    {
+        "nome": "BD",
+        "valor": 346
+    },
+    {
+        "nome": "BB",
+        "valor": 11568
+    },
+    {
+        "nome": "BY",
+        "valor": 1087
+    },
+    {
+        "nome": "BE",
+        "valor": 23138
+    },
+    {
+        "nome": "BZ",
+        "valor": 3364
+    },
+    {
+        "nome": "BJ",
+        "valor": 374
+    },
+    {
+        "nome": "Bermuda",
+        "valor": 54355
+    },
+    {
+        "nome": "BT",
+        "valor": 766
+    },
+    {
+        "nome": "BO",
+        "valor": 1007
+    },
+    {
+        "nome": "BA",
+        "valor": 1511
+    },
+    {
+        "nome": "BW",
+        "valor": 3349
+    },
+    {
+        "nome": "BR",
+        "valor": 3722
+    },
+    {
+        "nome": "British Virgin Islands",
+        "valor": 35651
+    },
+    {
+        "nome": "BN",
+        "valor": 19955
+    },
+    {
+        "nome": "BG",
+        "valor": 1645
+    },
+    {
+        "nome": "BF",
+        "valor": 227
+    },
+    {
+        "nome": "BI",
+        "valor": 111
+    },
+    {
+        "nome": "CV",
+        "valor": 1410
+    },
+    {
+        "nome": "KH",
+        "valor": 302
+    },
+    {
+        "nome": "CM",
+        "valor": 658
+    },
+    {
+        "nome": "CA",
+        "valor": 24151
+    },
+    {
+        "nome": "Caribbean",
+        "valor": 4286
+    },
+    {
+        "nome": "Cayman Islands",
+        "valor": 54630
+    },
+    {
+        "nome": "CF",
+        "valor": 255
+    },
+    {
+        "nome": "Central America",
+        "valor": 5637
+    },
+    {
+        "nome": "Central Asia",
+        "valor": 706
+    },
+    {
+        "nome": "TD",
+        "valor": 189
+    },
+    {
+        "nome": "CL",
+        "valor": 5134
+    },
+    {
+        "nome": "China, Hong Kong SAR",
+        "valor": 25762
+    },
+    {
+        "nome": "China, Macao Special Administrative Region",
+        "valor": 15703
+    },
+    {
+        "nome": "China, People's Republic of",
+        "valor": 947
+    },
+    {
+        "nome": "CO",
+        "valor": 2472
+    },
+    {
+        "nome": "KM",
+        "valor": 778
+    },
+    {
+        "nome": "CG",
+        "valor": 998
+    },
+    {
+        "nome": "Cook Islands",
+        "valor": 5056
+    },
+    {
+        "nome": "CR",
+        "valor": 3808
+    },
+    {
+        "nome": "Cï¿½te d'Ivoire",
+        "valor": 640
+    },
+    {
+        "nome": "HR",
+        "valor": 4917
+    },
+    {
+        "nome": "CU",
+        "valor": 2741
+    },
+    {
+        "nome": "CY",
+        "valor": 14364
+    },
+    {
+        "nome": "Czech Republic",
+        "valor": 5974
+    },
+    {
+        "nome": "KP",
+        "valor": 462
+    },
+    {
+        "nome": "CD",
+        "valor": 177
+    },
+    {
+        "nome": "DK",
+        "valor": 30734
+    },
+    {
+        "nome": "DJ",
+        "valor": 775
+    },
+    {
+        "nome": "DM",
+        "valor": 4612
+    },
+    {
+        "nome": "DO",
+        "valor": 2798
+    },
+    {
+        "nome": "Eastern Africa",
+        "valor": 309
+    },
+    {
+        "nome": "Eastern Asia",
+        "valor": 4751
+    },
+    {
+        "nome": "Eastern Europe",
+        "valor": 2159
+    },
+    {
+        "nome": "EC",
+        "valor": 1451
+    },
+    {
+        "nome": "EG",
+        "valor": 1369
+    },
+    {
+        "nome": "SV",
+        "valor": 2238
+    },
+    {
+        "nome": "GQ",
+        "valor": 2459
+    },
+    {
+        "nome": "ER",
+        "valor": 208
+    },
+    {
+        "nome": "EE",
+        "valor": 4067
+    },
+    {
+        "nome": "ET",
+        "valor": 121
+    },
+    {
+        "nome": "Europe",
+        "valor": 13289
+    },
+    {
+        "nome": "FJ",
+        "valor": 2105
+    },
+    {
+        "nome": "FI",
+        "valor": 24198
+    },
+    {
+        "nome": "Former Netherlands Antilles",
+        "valor": 17426
+    },
+    {
+        "nome": "Former Sudan",
+        "valor": 386
+    },
+    {
+        "nome": "FR",
+        "valor": 22262
+    },
+    {
+        "nome": "French Polynesia",
+        "valor": 15835
+    },
+    {
+        "nome": "GA",
+        "valor": 4611
+    },
+    {
+        "nome": "GM",
+        "valor": 636
+    },
+    {
+        "nome": "GE",
+        "valor": 648
+    },
+    {
+        "nome": "DE",
+        "valor": 23929
+    },
+    {
+        "nome": "GH",
+        "valor": 422
+    },
+    {
+        "nome": "GR",
+        "valor": 11822
+    },
+    {
+        "nome": "Greenland",
+        "valor": 18765
+    },
+    {
+        "nome": "GD",
+        "valor": 5118
+    },
+    {
+        "nome": "GT",
+        "valor": 1476
+    },
+    {
+        "nome": "GN",
+        "valor": 485
+    },
+    {
+        "nome": "GW",
+        "valor": 292
+    },
+    {
+        "nome": "GY",
+        "valor": 1509
+    },
+    {
+        "nome": "HT",
+        "valor": 429
+    },
+    {
+        "nome": "HN",
+        "valor": 1102
+    },
+    {
+        "nome": "HU",
+        "valor": 4629
+    },
+    {
+        "nome": "IS",
+        "valor": 31833
+    },
+    {
+        "nome": "IN",
+        "valor": 431
+    },
+    {
+        "nome": "ID",
+        "valor": 831
+    },
+    {
+        "nome": "Iran, Islamic Republic of",
+        "valor": 1688
+    },
+    {
+        "nome": "IQ",
+        "valor": 717
+    },
+    {
+        "nome": "IE",
+        "valor": 25944
+    },
+    {
+        "nome": "IL",
+        "valor": 22006
+    },
+    {
+        "nome": "IT",
+        "valor": 19928
+    },
+    {
+        "nome": "JM",
+        "valor": 3389
+    },
+    {
+        "nome": "JP",
+        "valor": 38323
+    },
+    {
+        "nome": "JO",
+        "valor": 1658
+    },
+    {
+        "nome": "KZ",
+        "valor": 1215
+    },
+    {
+        "nome": "KE",
+        "valor": 460
+    },
+    {
+        "nome": "KI",
+        "valor": 885
+    },
+    {
+        "nome": "Kosovo",
+        "valor": 860
+    },
+    {
+        "nome": "KW",
+        "valor": 18392
+    },
+    {
+        "nome": "KG",
+        "valor": 278
+    },
+    {
+        "nome": "LA",
+        "valor": 339
+    },
+    {
+        "nome": "Latin America and the Caribbean",
+        "valor": 4393
+    },
+    {
+        "nome": "LV",
+        "valor": 3329
+    },
+    {
+        "nome": "LB",
+        "valor": 5155
+    },
+    {
+        "nome": "LS",
+        "valor": 470
+    },
+    {
+        "nome": "LR",
+        "valor": 224
+    },
+    {
+        "nome": "LY",
+        "valor": 7183
+    },
+    {
+        "nome": "LI",
+        "valor": 82533
+    },
+    {
+        "nome": "LT",
+        "valor": 3295
+    },
+    {
+        "nome": "LU",
+        "valor": 48758
+    },
+    {
+        "nome": "MG",
+        "valor": 290
+    },
+    {
+        "nome": "MW",
+        "valor": 277
+    },
+    {
+        "nome": "MY",
+        "valor": 4045
+    },
+    {
+        "nome": "MV",
+        "valor": 3161
+    },
+    {
+        "nome": "ML",
+        "valor": 269
+    },
+    {
+        "nome": "MT",
+        "valor": 10218
+    },
+    {
+        "nome": "MH",
+        "valor": 2128
+    },
+    {
+        "nome": "MR",
+        "valor": 477
+    },
+    {
+        "nome": "MU",
+        "valor": 4109
+    },
+    {
+        "nome": "Melanesia",
+        "valor": 1526
+    },
+    {
+        "nome": "MX",
+        "valor": 6959
+    },
+    {
+        "nome": "Micronesia",
+        "valor": 2154
+    },
+    {
+        "nome": "FM",
+        "valor": 2171
+    },
+    {
+        "nome": "Middle Africa",
+        "valor": 454
+    },
+    {
+        "nome": "MC",
+        "valor": 81355
+    },
+    {
+        "nome": "MN",
+        "valor": 550
+    },
+    {
+        "nome": "ME",
+        "valor": 1616
+    },
+    {
+        "nome": "Montserrat",
+        "valor": 7253
+    },
+    {
+        "nome": "MA",
+        "valor": 1348
+    },
+    {
+        "nome": "MZ",
+        "valor": 278
+    },
+    {
+        "nome": "MM",
+        "valor": 158
+    },
+    {
+        "nome": "NA",
+        "valor": 2019
+    },
+    {
+        "nome": "NR",
+        "valor": 2164
+    },
+    {
+        "nome": "NP",
+        "valor": 241
+    },
+    {
+        "nome": "NL",
+        "valor": 25920
+    },
+    {
+        "nome": "New Caledonia",
+        "valor": 16026
+    },
+    {
+        "nome": "NZ",
+        "valor": 14108
+    },
+    {
+        "nome": "NI",
+        "valor": 1013
+    },
+    {
+        "nome": "NE",
+        "valor": 152
+    },
+    {
+        "nome": "NG",
+        "valor": 610
+    },
+    {
+        "nome": "Northern Africa",
+        "valor": 1466
+    },
+    {
+        "nome": "Northern America",
+        "valor": 35263
+    },
+    {
+        "nome": "Northern Europe",
+        "valor": 26546
+    },
+    {
+        "nome": "NO",
+        "valor": 38075
+    },
+    {
+        "nome": "Oceania",
+        "valor": 15507
+    },
+    {
+        "nome": "OM",
+        "valor": 8576
+    },
+    {
+        "nome": "PK",
+        "valor": 555
+    },
+    {
+        "nome": "PW",
+        "valor": 7710
+    },
+    {
+        "nome": "PA",
+        "valor": 3835
+    },
+    {
+        "nome": "PG",
+        "valor": 944
+    },
+    {
+        "nome": "PY",
+        "valor": 1338
+    },
+    {
+        "nome": "PE",
+        "valor": 1997
+    },
+    {
+        "nome": "PH",
+        "valor": 1039
+    },
+    {
+        "nome": "PL",
+        "valor": 4459
+    },
+    {
+        "nome": "Polynesia",
+        "valor": 7965
+    },
+    {
+        "nome": "PT",
+        "valor": 11430
+    },
+    {
+        "nome": "Puerto Rico",
+        "valor": 16479
+    },
+    {
+        "nome": "QA",
+        "valor": 29628
+    },
+    {
+        "nome": "KR",
+        "valor": 11852
+    },
+    {
+        "nome": "MD",
+        "valor": 307
+    },
+    {
+        "nome": "RO",
+        "valor": 1692
+    },
+    {
+        "nome": "RU",
+        "valor": 1774
+    },
+    {
+        "nome": "RW",
+        "valor": 216
+    },
+    {
+        "nome": "KN",
+        "valor": 9254
+    },
+    {
+        "nome": "LC",
+        "valor": 4984
+    },
+    {
+        "nome": "VC",
+        "valor": 3673
+    },
+    {
+        "nome": "WS",
+        "valor": 1323
+    },
+    {
+        "nome": "SM",
+        "valor": 41607
+    },
+    {
+        "nome": "ST",
+        "valor": 523
+    },
+    {
+        "nome": "SA",
+        "valor": 9127
+    },
+    {
+        "nome": "SN",
+        "valor": 473
+    },
+    {
+        "nome": "RS",
+        "valor": 1249
+    },
+    {
+        "nome": "SC",
+        "valor": 9203
+    },
+    {
+        "nome": "SL",
+        "valor": 189
+    },
+    {
+        "nome": "SG",
+        "valor": 24486
+    },
+    {
+        "nome": "SK",
+        "valor": 3830
+    },
+    {
+        "nome": "SI",
+        "valor": 10231
+    },
+    {
+        "nome": "SB",
+        "valor": 820
+    },
+    {
+        "nome": "SO",
+        "valor": 228
+    },
+    {
+        "nome": "ZA",
+        "valor": 3027
+    },
+    {
+        "nome": "South America",
+        "valor": 3913
+    },
+    {
+        "nome": "South-Eastern Asia",
+        "valor": 1188
+    },
+    {
+        "nome": "Southern Africa",
+        "valor": 2882
+    },
+    {
+        "nome": "Southern Asia",
+        "valor": 494
+    },
+    {
+        "nome": "Southern Europe",
+        "valor": 14153
+    },
+    {
+        "nome": "ES",
+        "valor": 14556
+    },
+    {
+        "nome": "LK",
+        "valor": 1019
+    },
+    {
+        "nome": "State of Palestine",
+        "valor": 1338
+    },
+    {
+        "nome": "Sub-Saharan Africa",
+        "valor": 613
+    },
+    {
+        "nome": "SR",
+        "valor": 2449
+    },
+    {
+        "nome": "SZ",
+        "valor": 1637
+    },
+    {
+        "nome": "SE",
+        "valor": 29251
+    },
+    {
+        "nome": "CH",
+        "valor": 37957
+    },
+    {
+        "nome": "SY",
+        "valor": 1198
+    },
+    {
+        "nome": "TJ",
+        "valor": 138
+    },
+    {
+        "nome": "TH",
+        "valor": 2004
+    },
+    {
+        "nome": "MK",
+        "valor": 1854
+    },
+    {
+        "nome": "TL",
+        "valor": 519
+    },
+    {
+        "nome": "TG",
+        "valor": 299
+    },
+    {
+        "nome": "TO",
+        "valor": 1930
+    },
+    {
+        "nome": "TT",
+        "valor": 6431
+    },
+    {
+        "nome": "TN",
+        "valor": 2214
+    },
+    {
+        "nome": "TR",
+        "valor": 4316
+    },
+    {
+        "nome": "TM",
+        "valor": 1092
+    },
+    {
+        "nome": "Turks and Caicos Islands",
+        "valor": 16926
+    },
+    {
+        "nome": "TV",
+        "valor": 1302
+    },
+    {
+        "nome": "UG",
+        "valor": 282
+    },
+    {
+        "nome": "UA",
+        "valor": 663
+    },
+    {
+        "nome": "AE",
+        "valor": 33503
+    },
+    {
+        "nome": "GB",
+        "valor": 27953
+    },
+    {
+        "nome": "United Republic of Tanzania: Mainland",
+        "valor": 391
+    },
+    {
+        "nome": "United Republic of Tanzania: Zanzibar",
+        "valor": 325
+    },
+    {
+        "nome": "United States",
+        "valor": 36473
+    },
+    {
+        "nome": "UY",
+        "valor": 6872
+    },
+    {
+        "nome": "UZ",
+        "valor": 554
+    },
+    {
+        "nome": "VU",
+        "valor": 1432
+    },
+    {
+        "nome": "VE",
+        "valor": 4784
+    },
+    {
+        "nome": "VN",
+        "valor": 388
+    },
+    {
+        "nome": "Western Africa",
+        "valor": 502
+    },
+    {
+        "nome": "Western Asia",
+        "valor": 4771
+    },
+    {
+        "nome": "Western Europe",
+        "valor": 24145
+    },
+    {
+        "nome": "World",
+        "valor": 5469
+    },
+    {
+        "nome": "YE",
+        "valor": 608
+    },
+    {
+        "nome": "ZM",
+        "valor": 342
+    },
+    {
+        "nome": "ZW",
+        "valor": 618
+    }
+]
