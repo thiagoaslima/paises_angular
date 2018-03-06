@@ -30,10 +30,12 @@ readFile(path.resolve(__dirname, '..', '11-dados-capturados/national-accounts/pi
                 agg[ano] = []
             }
 
-            agg[ano].push({
-                nome: paises[nome] || nome,
-                valor: parseInt(valor.replace(',', ''), 10)
-            })
+            if (!paises[nome]) {
+                agg[ano].push({
+                    nome: nome,
+                    valor: parseInt(valor.replace(',', ''), 10)
+                })
+            }
 
             return agg;
         })

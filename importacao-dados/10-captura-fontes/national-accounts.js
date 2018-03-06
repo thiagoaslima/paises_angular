@@ -2,6 +2,7 @@ const request = require('request-promise-native');
 const fs = require('fs');
 const path = require('path');
 const slugify = require('slugify');
+const iconv = require('iconv-lite');
 
 const fonteDesejada = "National Accounts Main Aggregates Database, Basic Data Selection";
 const fonte = require('../fontes').find(obj => obj.fonte === fonteDesejada);
@@ -32,9 +33,12 @@ dados.forEach(dados => {
     periodos.forEach(periodos => {
         const formData = Object.assign({}, data, { Year: periodos.join(',') });
 
-        request.post(link, { form: formData })
-            .then((response) => {
-                saveNationalAccountsData(slug, periodos.join(','), response);
+        request.post(link, { encoding: null, form: formData })
+            .then((bufferResponse) => {
+                let buffer = iconv.decode(bufferResponse, 'ISO-8859-1');
+                buffer = iconv.encode(buffer, "utf8");
+
+                saveNationalAccountsData(slug, periodos.join(','), buffer.toString());
             }).catch((err) => {
                 console.log(
                     "national-accounts.js",
@@ -48,7 +52,7 @@ dados.forEach(dados => {
 
 function saveNationalAccountsData(nome, periodo, content) {
     const folder = path.resolve(__dirname, '..', '11-dados-capturados', 'national-accounts', nome);
-    
+
     return fs.mkdir(folder, '0777', (err) => {
         if (!err || (err && err.code === 'EEXIST')) {
             return fs.writeFile(path.resolve(folder, periodo + '.html'), content, 'utf8', (err) => {
