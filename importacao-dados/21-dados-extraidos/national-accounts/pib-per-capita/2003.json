@@ -1,218 +1,193 @@
-[
-    {
-        "nome": "Africa",
-        "valor": 887
-    },
-    {
-        "nome": "Americas",
-        "valor": 16674
-    },
-    {
-        "nome": "Anguilla",
-        "valor": 14123
-    },
-    {
-        "nome": "Aruba",
-        "valor": 20835
-    },
-    {
-        "nome": "Asia",
-        "valor": 2587
-    },
-    {
-        "nome": "Australia and New Zealand",
-        "valor": 27113
-    },
-    {
-        "nome": "Bermuda",
-        "valor": 64537
-    },
-    {
-        "nome": "British Virgin Islands",
-        "valor": 31718
-    },
-    {
-        "nome": "Caribbean",
-        "valor": 4682
-    },
-    {
-        "nome": "Cayman Islands",
-        "valor": 54898
-    },
-    {
-        "nome": "Central America",
-        "valor": 5632
-    },
-    {
-        "nome": "Central Asia",
-        "valor": 973
-    },
-    {
-        "nome": "China, Hong Kong SAR",
-        "valor": 23794
-    },
-    {
-        "nome": "China, Macao Special Administrative Region",
-        "valor": 17810
-    },
-    {
-        "nome": "China, People's Republic of",
-        "valor": 1279
-    },
-    {
-        "nome": "Cook Islands",
-        "valor": 7979
-    },
-    {
-        "nome": "Cï¿½te d'Ivoire",
-        "valor": 866
-    },
-    {
-        "nome": "Czech Republic",
-        "valor": 9698
-    },
-    {
-        "nome": "Eastern Africa",
-        "valor": 321
-    },
-    {
-        "nome": "Eastern Asia",
-        "valor": 4745
-    },
-    {
-        "nome": "Eastern Europe",
-        "valor": 3401
-    },
-    {
-        "nome": "Europe",
-        "valor": 17919
-    },
-    {
-        "nome": "Former Netherlands Antilles",
-        "valor": 18830
-    },
-    {
-        "nome": "Former Sudan",
-        "valor": 578
-    },
-    {
-        "nome": "French Polynesia",
-        "valor": 19809
-    },
-    {
-        "nome": "Greenland",
-        "valor": 24827
-    },
-    {
-        "nome": "Kosovo",
-        "valor": 1800
-    },
-    {
-        "nome": "Latin America and the Caribbean",
-        "valor": 3781
-    },
-    {
-        "nome": "Melanesia",
-        "valor": 1749
-    },
-    {
-        "nome": "Micronesia",
-        "valor": 2336
-    },
-    {
-        "nome": "Middle Africa",
-        "valor": 567
-    },
-    {
-        "nome": "Montserrat",
-        "valor": 9237
-    },
-    {
-        "nome": "New Caledonia",
-        "valor": 21795
-    },
-    {
-        "nome": "Northern Africa",
-        "valor": 1427
-    },
-    {
-        "nome": "Northern America",
-        "valor": 38563
-    },
-    {
-        "nome": "Northern Europe",
-        "valor": 33669
-    },
-    {
-        "nome": "Oceania",
-        "valor": 20553
-    },
-    {
-        "nome": "Polynesia",
-        "valor": 10133
-    },
-    {
-        "nome": "Puerto Rico",
-        "valor": 20035
-    },
-    {
-        "nome": "South America",
-        "valor": 2953
-    },
-    {
-        "nome": "South-Eastern Asia",
-        "valor": 1384
-    },
-    {
-        "nome": "Southern Africa",
-        "valor": 3506
-    },
-    {
-        "nome": "Southern Asia",
-        "valor": 591
-    },
-    {
-        "nome": "Southern Europe",
-        "valor": 19980
-    },
-    {
-        "nome": "State of Palestine",
-        "valor": 1153
-    },
-    {
-        "nome": "Sub-Saharan Africa",
-        "valor": 739
-    },
-    {
-        "nome": "Turks and Caicos Islands",
-        "valor": 17503
-    },
-    {
-        "nome": "United Republic of Tanzania: Mainland",
-        "valor": 412
-    },
-    {
-        "nome": "United Republic of Tanzania: Zanzibar",
-        "valor": 342
-    },
-    {
-        "nome": "United States",
-        "valor": 39688
-    },
-    {
-        "nome": "Western Africa",
-        "valor": 671
-    },
-    {
-        "nome": "Western Asia",
-        "valor": 5080
-    },
-    {
-        "nome": "Western Europe",
-        "valor": 31562
-    },
-    {
-        "nome": "World",
-        "valor": 6115
-    }
-]
+{
+    "AF": 214,
+    "AL": 1788,
+    "DZ": 2094,
+    "AD": 32775,
+    "AO": 979,
+    "AG": 9623,
+    "AR": 3666,
+    "AM": 992,
+    "AU": 28390,
+    "AT": 32007,
+    "AZ": 870,
+    "BS": 28092,
+    "BH": 14222,
+    "BD": 372,
+    "BB": 12028,
+    "BY": 1897,
+    "BE": 30616,
+    "BZ": 3680,
+    "BJ": 519,
+    "BT": 998,
+    "BO": 917,
+    "BA": 2305,
+    "BW": 4163,
+    "BR": 3063,
+    "BN": 20561,
+    "BG": 2689,
+    "BF": 332,
+    "BI": 86,
+    "CV": 2012,
+    "KH": 363,
+    "CM": 892,
+    "CA": 28216,
+    "CF": 300,
+    "TD": 331,
+    "CL": 4816,
+    "CN": 1279,
+    "CO": 2245,
+    "KM": 1127,
+    "CG": 998,
+    "CR": 4168,
+    "CI": 866,
+    "HR": 7897,
+    "CU": 3193,
+    "CY": 20240,
+    "CZ": 9698,
+    "KP": 471,
+    "CD": 174,
+    "DK": 40486,
+    "DJ": 827,
+    "DM": 4812,
+    "DO": 2274,
+    "EC": 2440,
+    "EG": 1001,
+    "SV": 2520,
+    "GQ": 5324,
+    "ER": 233,
+    "EE": 7163,
+    "ET": 117,
+    "FJ": 2871,
+    "FI": 32726,
+    "FR": 29567,
+    "GA": 4937,
+    "GM": 360,
+    "GE": 872,
+    "DE": 30674,
+    "GH": 598,
+    "GR": 17958,
+    "GD": 5773,
+    "GT": 1753,
+    "GN": 512,
+    "GW": 361,
+    "GY": 1576,
+    "HT": 315,
+    "HN": 1171,
+    "HU": 8413,
+    "IS": 39300,
+    "IN": 517,
+    "ID": 1133,
+    "IR": 2255,
+    "IQ": 645,
+    "IE": 40567,
+    "IL": 19980,
+    "IT": 26993,
+    "JM": 3477,
+    "JP": 34713,
+    "JO": 1889,
+    "KZ": 2024,
+    "KE": 501,
+    "KI": 1060,
+    "KW": 22071,
+    "KG": 383,
+    "LA": 391,
+    "LV": 5095,
+    "LB": 5350,
+    "LS": 576,
+    "LR": 170,
+    "LY": 4672,
+    "LI": 98957,
+    "LT": 5507,
+    "LU": 66074,
+    "MG": 373,
+    "MW": 260,
+    "MY": 4464,
+    "MV": 3481,
+    "ML": 392,
+    "MT": 13432,
+    "MH": 2442,
+    "MR": 529,
+    "MU": 5024,
+    "MX": 6904,
+    "FM": 2293,
+    "MC": 107029,
+    "MN": 749,
+    "ME": 2802,
+    "MA": 1754,
+    "MZ": 284,
+    "MM": 208,
+    "NA": 2422,
+    "NR": 2385,
+    "NP": 259,
+    "NL": 35297,
+    "NZ": 20862,
+    "NI": 1012,
+    "NE": 209,
+    "NG": 824,
+    "NO": 50054,
+    "OM": 9070,
+    "PK": 616,
+    "PW": 8018,
+    "PA": 4030,
+    "PG": 929,
+    "PY": 1175,
+    "PE": 2181,
+    "PH": 1011,
+    "PL": 5659,
+    "PT": 15730,
+    "QA": 33769,
+    "KR": 14100,
+    "MD": 475,
+    "RO": 2755,
+    "RU": 2976,
+    "RW": 213,
+    "KN": 9838,
+    "LC": 5006,
+    "VC": 4447,
+    "WS": 1810,
+    "SM": 58094,
+    "ST": 649,
+    "SA": 9567,
+    "SN": 643,
+    "RS": 2832,
+    "SC": 9852,
+    "SL": 267,
+    "SG": 22828,
+    "SK": 6282,
+    "SI": 14932,
+    "SB": 703,
+    "SO": 154,
+    "ZA": 3678,
+    "ES": 21260,
+    "LK": 1125,
+    "SR": 3190,
+    "SZ": 2021,
+    "SE": 36990,
+    "CH": 48400,
+    "SY": 1198,
+    "TJ": 236,
+    "TH": 2359,
+    "MK": 2409,
+    "TL": 527,
+    "TG": 392,
+    "TO": 2078,
+    "TT": 8805,
+    "TN": 2762,
+    "TR": 4719,
+    "TM": 2420,
+    "TV": 1880,
+    "UG": 294,
+    "UA": 1093,
+    "AE": 33665,
+    "GB": 34214,
+    "TZ": 412,
+    "US": 39688,
+    "UY": 3622,
+    "UZ": 393,
+    "VU": 1580,
+    "VE": 3229,
+    "VN": 478,
+    "YE": 697,
+    "ZM": 429,
+    "ZW": 531
+}

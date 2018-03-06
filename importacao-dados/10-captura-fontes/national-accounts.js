@@ -38,7 +38,7 @@ dados.forEach(dados => {
                 let buffer = iconv.decode(bufferResponse, 'ISO-8859-1');
                 buffer = iconv.encode(buffer, "utf8");
 
-                saveNationalAccountsData(slug, periodos.join(','), buffer.toString());
+                saveNationalAccountsData(slug, periodos.join(','), buffer.toString().replace('charset=iso-8859-1', 'charset=utf-8'));
             }).catch((err) => {
                 console.log(
                     "national-accounts.js",
