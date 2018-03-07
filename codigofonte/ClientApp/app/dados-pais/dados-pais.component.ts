@@ -9,6 +9,8 @@ import { DadosPaisService } from './dados-pais.service';
 
 import { ResultadoPipe } from '../shared/resultado.pipe';
 
+import { linksCapas } from '../shared/links-capas';
+
 @Component({
     selector: 'dados-pais',
     templateUrl: './dados-pais.component.html',
@@ -23,6 +25,7 @@ export class DadosPaisComponent {
     public pais: Pais | null = null;
     public imageSrc = ''
     public imageSrcCover = ''
+    public imageLink = ''
     public itens = <any[]>[];
     public historico: string[] = [];
     public temas: any = [];
@@ -83,9 +86,11 @@ export class DadosPaisComponent {
         if (pais) {
             this.imageSrc = 'img/bandeiras/' + pais.sigla.toUpperCase() + '.gif';
             this.imageSrcCover = 'img/capas/' + pais.sigla.toUpperCase() + '.jpg';
+            this.imageLink = linksCapas[pais.sigla.toUpperCase()];
         } else {
             this.imageSrc = '';
             this.imageSrcCover = '';
+            this.imageLink = '';
         }
     }
 }

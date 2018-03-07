@@ -193,6 +193,17 @@
         background-size: cover;
         background-position-x: center;
         background-position-y: center;
+        position: relative;
+    }
+
+    .dados-pais__sintese-capa-link{
+        position: absolute;
+        right: 10px;
+        bottom: 4px;
+    }
+
+    .dados-pais__sintese-capa-icon{
+        color: white;
     }
 
     .dados-pais__sintese-voltar{

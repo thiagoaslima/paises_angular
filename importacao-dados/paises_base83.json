@@ -1,0 +1,2252 @@
+[
+    {
+      "pais": "Afeganistão",
+      "pais_en": "Afghanistan",
+      "GEC": "AF",
+      "a2": "AF",
+      "a3": "AFG",
+      "Number": 4,
+      "ddi": 93
+    },
+    {
+      "pais": "Albânia",
+      "pais_en": "Albania",
+      "GEC": "AL",
+      "a2": "AL",
+      "a3": "ALB",
+      "Number": 8,
+      "ddi": 355
+    },
+    {
+      "pais": "Argélia",
+      "pais_en": "Algeria",
+      "GEC": "AG",
+      "a2": "DZ",
+      "a3": "DZA",
+      "Number": 12,
+      "ddi": 213
+    },
+    {
+      "pais": "Samoa Americana",
+      "pais_en": "American Samoa",
+      "GEC": "AQ",
+      "a2": "AS",
+      "a3": "ASM",
+      "Number": 16,
+      "ddi": "1-684"
+    },
+    {
+      "pais": "Andorra",
+      "pais_en": "Andorra",
+      "GEC": "AN",
+      "a2": "AD",
+      "a3": "AND",
+      "Number": 20,
+      "ddi": 376
+    },
+    {
+      "pais": "Angola",
+      "pais_en": "Angola",
+      "GEC": "AO",
+      "a2": "AO",
+      "a3": "AGO",
+      "Number": 24,
+      "ddi": 244
+    },
+    {
+      "pais": "Anguilla",
+      "pais_en": "Anguilla",
+      "GEC": "AV",
+      "a2": "AI",
+      "a3": "AIA",
+      "Number": 660,
+      "ddi": "1-264"
+    },
+    {
+      "pais": "Antártida",
+      "pais_en": "Antarctica",
+      "GEC": "AY",
+      "a2": "AQ",
+      "a3": "ATA",
+      "Number": 10,
+      "ddi": 672
+    },
+    {
+      "pais": "Antígua e Barbuda",
+      "pais_en": "Antigua and Barbuda",
+      "GEC": "AC",
+      "a2": "AG",
+      "a3": "ATG",
+      "Number": 28,
+      "ddi": "1-268"
+    },
+    {
+      "pais": "Argentina",
+      "pais_en": "Argentina",
+      "GEC": "AR",
+      "a2": "AR",
+      "a3": "ARG",
+      "Number": 32,
+      "ddi": 54
+    },
+    {
+      "pais": "Armênia",
+      "pais_en": "Armenia",
+      "GEC": "AM",
+      "a2": "AM",
+      "a3": "ARM",
+      "Number": 51,
+      "ddi": 374
+    },
+    {
+      "pais": "Aruba",
+      "pais_en": "Aruba",
+      "GEC": "AA",
+      "a2": "AW",
+      "a3": "ABW",
+      "Number": 533,
+      "ddi": 297
+    },
+    {
+      "pais": "Austrália",
+      "pais_en": "Australia",
+      "GEC": "AS",
+      "a2": "AU",
+      "a3": "AUS",
+      "Number": 36,
+      "ddi": 61
+    },
+    {
+      "pais": "Áustria",
+      "pais_en": "Austria",
+      "GEC": "AU",
+      "a2": "AT",
+      "a3": "AUT",
+      "Number": 40,
+      "ddi": 43
+    },
+    {
+      "pais": "Azerbaijão",
+      "pais_en": "Azerbaijan",
+      "GEC": "AJ",
+      "a2": "AZ",
+      "a3": "AZE",
+      "Number": 31,
+      "ddi": 994
+    },
+    {
+      "pais": "Bahamas",
+      "pais_en": "Bahamas",
+      "GEC": "BF",
+      "a2": "BS",
+      "a3": "BHS",
+      "Number": 44,
+      "ddi": "1-242"
+    },
+    {
+      "pais": "Barein",
+      "pais_en": "Bahrain",
+      "GEC": "BA",
+      "a2": "BH",
+      "a3": "BHR",
+      "Number": 48,
+      "ddi": 973
+    },
+    {
+      "pais": "Bangladesh",
+      "pais_en": "Bangladesh",
+      "GEC": "BG",
+      "a2": "BD",
+      "a3": "BGD",
+      "Number": 50,
+      "ddi": 880
+    },
+    {
+      "pais": "Barbados",
+      "pais_en": "Barbados",
+      "GEC": "BB",
+      "a2": "BB",
+      "a3": "BRB",
+      "Number": 52,
+      "ddi": "1-246"
+    },
+    {
+      "pais": "Belarus",
+      "pais_en": "Belarus",
+      "GEC": "BO",
+      "a2": "BY",
+      "a3": "BLR",
+      "Number": 112,
+      "ddi": 375
+    },
+    {
+      "pais": "Bélgica",
+      "pais_en": "Belgium",
+      "GEC": "BE",
+      "a2": "BE",
+      "a3": "BEL",
+      "Number": 56,
+      "ddi": 32
+    },
+    {
+      "pais": "Belize",
+      "pais_en": "Belize",
+      "GEC": "BH",
+      "a2": "BZ",
+      "a3": "BLZ",
+      "Number": 84,
+      "ddi": 501
+    },
+    {
+      "pais": "Benin",
+      "pais_en": "Benin",
+      "GEC": "BN",
+      "a2": "BJ",
+      "a3": "BEN",
+      "Number": 204,
+      "ddi": 229
+    },
+    {
+      "pais": "Bermudas",
+      "pais_en": "Bermuda",
+      "GEC": "BD",
+      "a2": "BM",
+      "a3": "BMU",
+      "Number": 60,
+      "ddi": "1-441"
+    },
+    {
+      "pais": "Butão",
+      "pais_en": "Bhutan",
+      "GEC": "BT",
+      "a2": "BT",
+      "a3": "BTN",
+      "Number": 64,
+      "ddi": 975
+    },
+    {
+      "pais": "Bolívia",
+      "pais_en": "Bolivia",
+      "GEC": "BL",
+      "a2": "BO",
+      "a3": "BOL",
+      "Number": 68,
+      "ddi": 591
+    },
+    {
+      "pais": "Bonaire",
+      "pais_en": "Bonaire",
+      "GEC": "",
+      "a2": "BQ",
+      "a3": "BES",
+      "Number": 535,
+      "ddi": 599
+    },
+    {
+      "pais": "Bósnia e Herzegovina",
+      "pais_en": "Bosnia and Herzegovina",
+      "GEC": "BK",
+      "a2": "BA",
+      "a3": "BIH",
+      "Number": 70,
+      "ddi": 387
+    },
+    {
+      "pais": "Botswana",
+      "pais_en": "Botswana",
+      "GEC": "BC",
+      "a2": "BW",
+      "a3": "BWA",
+      "Number": 72,
+      "ddi": 267
+    },
+    {
+      "pais": "Ilha Bouvet",
+      "pais_en": "Bouvet Island",
+      "GEC": "BV",
+      "a2": "BV",
+      "a3": "BVT",
+      "Number": 74,
+      "ddi": 47
+    },
+    {
+      "pais": "Brasil",
+      "pais_en": "Brazil",
+      "GEC": "BR",
+      "a2": "BR",
+      "a3": "BRA",
+      "Number": 76,
+      "ddi": 55
+    },
+    {
+      "pais": "Território Britânico do Oceano Índico",
+      "pais_en": "British Indian Ocean Territory",
+      "GEC": "IO",
+      "a2": "IO",
+      "a3": "IOT",
+      "Number": 86,
+      "ddi": 246
+    },
+    {
+      "pais": "Brunei",
+      "pais_en": "Brunei Darussalam",
+      "GEC": "BX",
+      "a2": "BN",
+      "a3": "BRN",
+      "Number": 96,
+      "ddi": 673
+    },
+    {
+      "pais": "Bulgária",
+      "pais_en": "Bulgaria",
+      "GEC": "BU",
+      "a2": "BG",
+      "a3": "BGR",
+      "Number": 100,
+      "ddi": 359
+    },
+    {
+      "pais": "Burkina Faso",
+      "pais_en": "Burkina Faso",
+      "GEC": "UV",
+      "a2": "BF",
+      "a3": "BFA",
+      "Number": 854,
+      "ddi": 226
+    },
+    {
+      "pais": "Burundi",
+      "pais_en": "Burundi",
+      "GEC": "BY",
+      "a2": "BI",
+      "a3": "BDI",
+      "Number": 108,
+      "ddi": 257
+    },
+    {
+      "pais": "Camboja",
+      "pais_en": "Cambodia",
+      "GEC": "CB",
+      "a2": "KH",
+      "a3": "KHM",
+      "Number": 116,
+      "ddi": 855
+    },
+    {
+      "pais": "Camarões",
+      "pais_en": "Cameroon",
+      "GEC": "CM",
+      "a2": "CM",
+      "a3": "CMR",
+      "Number": 120,
+      "ddi": 237
+    },
+    {
+      "pais": "Canadá",
+      "pais_en": "Canada",
+      "GEC": "CA",
+      "a2": "CA",
+      "a3": "CAN",
+      "Number": 124,
+      "ddi": 1
+    },
+    {
+      "pais": "Cabo Verde",
+      "pais_en": "Cape Verde",
+      "GEC": "CV",
+      "a2": "CV",
+      "a3": "CPV",
+      "Number": 132,
+      "ddi": 238
+    },
+    {
+      "pais": "Ilhas Cayman",
+      "pais_en": "Cayman Islands",
+      "GEC": "CJ",
+      "a2": "KY",
+      "a3": "CYM",
+      "Number": 136,
+      "ddi": "1-345"
+    },
+    {
+      "pais": "República Centro Africana",
+      "pais_en": "Central African Republic",
+      "GEC": "CT",
+      "a2": "CF",
+      "a3": "CAF",
+      "Number": 140,
+      "ddi": 236
+    },
+    {
+      "pais": "Chade",
+      "pais_en": "Chad",
+      "GEC": "CD",
+      "a2": "TD",
+      "a3": "TCD",
+      "Number": 148,
+      "ddi": 235
+    },
+    {
+      "pais": "Chile",
+      "pais_en": "Chile",
+      "GEC": "CI",
+      "a2": "CL",
+      "a3": "CHL",
+      "Number": 152,
+      "ddi": 56
+    },
+    {
+      "pais": "China",
+      "pais_en": "China",
+      "GEC": "CH",
+      "a2": "CN",
+      "a3": "CHN",
+      "Number": 156,
+      "ddi": 86
+    },
+    {
+      "pais": "Ilha Christmas",
+      "pais_en": "Christmas Island",
+      "GEC": "KT",
+      "a2": "CX",
+      "a3": "CXR",
+      "Number": 162,
+      "ddi": 61
+    },
+    {
+      "pais": "Ilhas Coco",
+      "pais_en": "Cocos (Keeling) Islands",
+      "GEC": "CK",
+      "a2": "CC",
+      "a3": "CCK",
+      "Number": 166,
+      "ddi": 61
+    },
+    {
+      "pais": "Colômbia",
+      "pais_en": "Colombia",
+      "GEC": "CO",
+      "a2": "CO",
+      "a3": "COL",
+      "Number": 170,
+      "ddi": 57
+    },
+    {
+      "pais": "Comores",
+      "pais_en": "Comoros",
+      "GEC": "CN",
+      "a2": "KM",
+      "a3": "COM",
+      "Number": 174,
+      "ddi": 269
+    },
+    {
+      "pais": "Congo",
+      "pais_en": "Congo",
+      "GEC": "CF",
+      "a2": "CG",
+      "a3": "COG",
+      "Number": 178,
+      "ddi": 242
+    },
+    {
+      "pais": "República Democrática do Congo",
+      "pais_en": "Democratic Republic of the Congo",
+      "GEC": "CG",
+      "a2": "CD",
+      "a3": "COD",
+      "Number": 180,
+      "ddi": 243
+    },
+    {
+      "pais": "Ilhas Cook",
+      "pais_en": "Cook Islands",
+      "GEC": "CW",
+      "a2": "CK",
+      "a3": "COK",
+      "Number": 184,
+      "ddi": 682
+    },
+    {
+      "pais": "Costa Rica",
+      "pais_en": "Costa Rica",
+      "GEC": "CS",
+      "a2": "CR",
+      "a3": "CRI",
+      "Number": 188,
+      "ddi": 506
+    },
+    {
+      "pais": "Croácia",
+      "pais_en": "Croatia",
+      "GEC": "HR",
+      "a2": "HR",
+      "a3": "HRV",
+      "Number": 191,
+      "ddi": 385
+    },
+    {
+      "pais": "Cuba",
+      "pais_en": "Cuba",
+      "GEC": "CU",
+      "a2": "CU",
+      "a3": "CUB",
+      "Number": 192,
+      "ddi": 53
+    },
+    {
+      "pais": "Curaçao",
+      "pais_en": "Curacao",
+      "GEC": "UC",
+      "a2": "CW",
+      "a3": "CUW",
+      "Number": 531,
+      "ddi": 599
+    },
+    {
+      "pais": "Chipre",
+      "pais_en": "Cyprus",
+      "GEC": "CY",
+      "a2": "CY",
+      "a3": "CYP",
+      "Number": 196,
+      "ddi": 357
+    },
+    {
+      "pais": "República Tcheca",
+      "pais_en": "Czech Republic",
+      "GEC": "EZ",
+      "a2": "CZ",
+      "a3": "CZE",
+      "Number": 203,
+      "ddi": 420
+    },
+    {
+      "pais": "Costa do Marfim",
+      "pais_en": "Cote d'Ivoire",
+      "GEC": "IV",
+      "a2": "CI",
+      "a3": "CIV",
+      "Number": 384,
+      "ddi": 225
+    },
+    {
+      "pais": "Dinamarca",
+      "pais_en": "Denmark",
+      "GEC": "DA",
+      "a2": "DK",
+      "a3": "DNK",
+      "Number": 208,
+      "ddi": 45
+    },
+    {
+      "pais": "Djibuti",
+      "pais_en": "Djibouti",
+      "GEC": "DJ",
+      "a2": "DJ",
+      "a3": "DJI",
+      "Number": 262,
+      "ddi": 253
+    },
+    {
+      "pais": "Dominica",
+      "pais_en": "Dominica",
+      "GEC": "DO",
+      "a2": "DM",
+      "a3": "DMA",
+      "Number": 212,
+      "ddi": "1-767"
+    },
+    {
+      "pais": "República Dominicana",
+      "pais_en": "Dominican Republic",
+      "GEC": "DR",
+      "a2": "DO",
+      "a3": "DOM",
+      "Number": 214,
+      "ddi": "1-809,1-829,1-849"
+    },
+    {
+      "pais": "Equador",
+      "pais_en": "Ecuador",
+      "GEC": "EC",
+      "a2": "EC",
+      "a3": "ECU",
+      "Number": 218,
+      "ddi": 593
+    },
+    {
+      "pais": "Egito",
+      "pais_en": "Egypt",
+      "GEC": "EG",
+      "a2": "EG",
+      "a3": "EGY",
+      "Number": 818,
+      "ddi": 20
+    },
+    {
+      "pais": "El Salvador",
+      "pais_en": "El Salvador",
+      "GEC": "ES",
+      "a2": "SV",
+      "a3": "SLV",
+      "Number": 222,
+      "ddi": 503
+    },
+    {
+      "pais": "Guiné Equatorial",
+      "pais_en": "Equatorial Guinea",
+      "GEC": "EK",
+      "a2": "GQ",
+      "a3": "GNQ",
+      "Number": 226,
+      "ddi": 240
+    },
+    {
+      "pais": "Eritreia",
+      "pais_en": "Eritrea",
+      "GEC": "ER",
+      "a2": "ER",
+      "a3": "ERI",
+      "Number": 232,
+      "ddi": 291
+    },
+    {
+      "pais": "Estônia",
+      "pais_en": "Estonia",
+      "GEC": "EN",
+      "a2": "EE",
+      "a3": "EST",
+      "Number": 233,
+      "ddi": 372
+    },
+    {
+      "pais": "Etiópia",
+      "pais_en": "Ethiopia",
+      "GEC": "ET",
+      "a2": "ET",
+      "a3": "ETH",
+      "Number": 231,
+      "ddi": 251
+    },
+    {
+      "pais": "Ilhas Falkland (Malvinas)",
+      "pais_en": "Falkland Islands (Malvinas)",
+      "GEC": "FK",
+      "a2": "FK",
+      "a3": "FLK",
+      "Number": 238,
+      "ddi": 500
+    },
+    {
+      "pais": "Ilhas Faeroe",
+      "pais_en": "Faroe Islands",
+      "GEC": "FO",
+      "a2": "FO",
+      "a3": "FRO",
+      "Number": 234,
+      "ddi": 298
+    },
+    {
+      "pais": "Fiji",
+      "pais_en": "Fiji",
+      "GEC": "FJ",
+      "a2": "FJ",
+      "a3": "FJI",
+      "Number": 242,
+      "ddi": 679
+    },
+    {
+      "pais": "Finlândia",
+      "pais_en": "Finland",
+      "GEC": "FI",
+      "a2": "FI",
+      "a3": "FIN",
+      "Number": 246,
+      "ddi": 358
+    },
+    {
+      "pais": "França",
+      "pais_en": "France",
+      "GEC": "FR",
+      "a2": "FR",
+      "a3": "FRA",
+      "Number": 250,
+      "ddi": 33
+    },
+    {
+      "pais": "Guiana Francesa",
+      "pais_en": "French Guiana",
+      "GEC": "FG",
+      "a2": "GF",
+      "a3": "GUF",
+      "Number": 254,
+      "ddi": 594
+    },
+    {
+      "pais": "Polinésia Francesa",
+      "pais_en": "French Polynesia",
+      "GEC": "FP",
+      "a2": "PF",
+      "a3": "PYF",
+      "Number": 258,
+      "ddi": 689
+    },
+    {
+      "pais": "Terras Austrais e Antárticas Francesas",
+      "pais_en": "French Southern Territories",
+      "GEC": "FS",
+      "a2": "TF",
+      "a3": "ATF",
+      "Number": 260,
+      "ddi": 262
+    },
+    {
+      "pais": "Gabão",
+      "pais_en": "Gabon",
+      "GEC": "GB",
+      "a2": "GA",
+      "a3": "GAB",
+      "Number": 266,
+      "ddi": 241
+    },
+    {
+      "pais": "Gâmbia",
+      "pais_en": "Gambia",
+      "GEC": "GA",
+      "a2": "GM",
+      "a3": "GMB",
+      "Number": 270,
+      "ddi": 220
+    },
+    {
+      "pais": "Geórgia",
+      "pais_en": "Georgia",
+      "GEC": "GG",
+      "a2": "GE",
+      "a3": "GEO",
+      "Number": 268,
+      "ddi": 995
+    },
+    {
+      "pais": "Alemanha",
+      "pais_en": "Germany",
+      "GEC": "GM",
+      "a2": "DE",
+      "a3": "DEU",
+      "Number": 276,
+      "ddi": 49
+    },
+    {
+      "pais": "Gana",
+      "pais_en": "Ghana",
+      "GEC": "GH",
+      "a2": "GH",
+      "a3": "GHA",
+      "Number": 288,
+      "ddi": 233
+    },
+    {
+      "pais": "Gibraltar",
+      "pais_en": "Gibraltar",
+      "GEC": "GI",
+      "a2": "GI",
+      "a3": "GIB",
+      "Number": 292,
+      "ddi": 350
+    },
+    {
+      "pais": "Grécia",
+      "pais_en": "Greece",
+      "GEC": "GR",
+      "a2": "GR",
+      "a3": "GRC",
+      "Number": 300,
+      "ddi": 30
+    },
+    {
+      "pais": "Groenlândia",
+      "pais_en": "Greenland",
+      "GEC": "GL",
+      "a2": "GL",
+      "a3": "GRL",
+      "Number": 304,
+      "ddi": 299
+    },
+    {
+      "pais": "Granada",
+      "pais_en": "Grenada",
+      "GEC": "GJ",
+      "a2": "GD",
+      "a3": "GRD",
+      "Number": 308,
+      "ddi": "1-473"
+    },
+    {
+      "pais": "Guadalupe",
+      "pais_en": "Guadeloupe",
+      "GEC": "GP",
+      "a2": "GP",
+      "a3": "GLP",
+      "Number": 312,
+      "ddi": 590
+    },
+    {
+      "pais": "Guam",
+      "pais_en": "Guam",
+      "GEC": "GQ",
+      "a2": "GU",
+      "a3": "GUM",
+      "Number": 316,
+      "ddi": "1-671"
+    },
+    {
+      "pais": "Guatemala",
+      "pais_en": "Guatemala",
+      "GEC": "GT",
+      "a2": "GT",
+      "a3": "GTM",
+      "Number": 320,
+      "ddi": 502
+    },
+    {
+      "pais": "Guernsey",
+      "pais_en": "Guernsey",
+      "GEC": "GK",
+      "a2": "GG",
+      "a3": "GGY",
+      "Number": 831,
+      "ddi": 44
+    },
+    {
+      "pais": "Guiné",
+      "pais_en": "Guinea",
+      "GEC": "GV",
+      "a2": "GN",
+      "a3": "GIN",
+      "Number": 324,
+      "ddi": 224
+    },
+    {
+      "pais": "Guiné-Bissau",
+      "pais_en": "Guinea-Bissau",
+      "GEC": "PU",
+      "a2": "GW",
+      "a3": "GNB",
+      "Number": 624,
+      "ddi": 245
+    },
+    {
+      "pais": "Guiana",
+      "pais_en": "Guyana",
+      "GEC": "GY",
+      "a2": "GY",
+      "a3": "GUY",
+      "Number": 328,
+      "ddi": 592
+    },
+    {
+      "pais": "Haiti",
+      "pais_en": "Haiti",
+      "GEC": "HA",
+      "a2": "HT",
+      "a3": "HTI",
+      "Number": 332,
+      "ddi": 509
+    },
+    {
+      "pais": "Ilha Heard e Ilhas McDonald",
+      "pais_en": "Heard Island and McDonald Islands",
+      "GEC": "HM",
+      "a2": "HM",
+      "a3": "HMD",
+      "Number": 334,
+      "ddi": 672
+    },
+    {
+      "pais": "Vaticano",
+      "pais_en": "Holy See (Vatican City State)",
+      "GEC": "VT",
+      "a2": "VA",
+      "a3": "VAT",
+      "Number": 336,
+      "ddi": 379
+    },
+    {
+      "pais": "Honduras",
+      "pais_en": "Honduras",
+      "GEC": "HO",
+      "a2": "HN",
+      "a3": "HND",
+      "Number": 340,
+      "ddi": 504
+    },
+    {
+      "pais": "Hong Kong",
+      "pais_en": "Hong Kong",
+      "GEC": "HK",
+      "a2": "HK",
+      "a3": "HKG",
+      "Number": 344,
+      "ddi": 852
+    },
+    {
+      "pais": "Hungria",
+      "pais_en": "Hungary",
+      "GEC": "HU",
+      "a2": "HU",
+      "a3": "HUN",
+      "Number": 348,
+      "ddi": 36
+    },
+    {
+      "pais": "Islândia",
+      "pais_en": "Iceland",
+      "GEC": "IC",
+      "a2": "IS",
+      "a3": "ISL",
+      "Number": 352,
+      "ddi": 354
+    },
+    {
+      "pais": "Índia",
+      "pais_en": "India",
+      "GEC": "IN",
+      "a2": "IN",
+      "a3": "IND",
+      "Number": 356,
+      "ddi": 91
+    },
+    {
+      "pais": "Indonésia",
+      "pais_en": "Indonesia",
+      "GEC": "ID",
+      "a2": "ID",
+      "a3": "IDN",
+      "Number": 360,
+      "ddi": 62
+    },
+    {
+      "pais": "Irã",
+      "pais_en": "Iran, Islamic Republic of",
+      "GEC": "IR",
+      "a2": "IR",
+      "a3": "IRN",
+      "Number": 364,
+      "ddi": 98
+    },
+    {
+      "pais": "Iraque",
+      "pais_en": "Iraq",
+      "GEC": "IZ",
+      "a2": "IQ",
+      "a3": "IRQ",
+      "Number": 368,
+      "ddi": 964
+    },
+    {
+      "pais": "Irlanda",
+      "pais_en": "Ireland",
+      "GEC": "EI",
+      "a2": "IE",
+      "a3": "IRL",
+      "Number": 372,
+      "ddi": 353
+    },
+    {
+      "pais": "Ilha de Man",
+      "pais_en": "Isle of Man",
+      "GEC": "IM",
+      "a2": "IM",
+      "a3": "IMN",
+      "Number": 833,
+      "ddi": 44
+    },
+    {
+      "pais": "Israel",
+      "pais_en": "Israel",
+      "GEC": "IS",
+      "a2": "IL",
+      "a3": "ISR",
+      "Number": 376,
+      "ddi": 972
+    },
+    {
+      "pais": "Itália",
+      "pais_en": "Italy",
+      "GEC": "IT",
+      "a2": "IT",
+      "a3": "ITA",
+      "Number": 380,
+      "ddi": 39
+    },
+    {
+      "pais": "Jamaica",
+      "pais_en": "Jamaica",
+      "GEC": "JM",
+      "a2": "JM",
+      "a3": "JAM",
+      "Number": 388,
+      "ddi": "1-876"
+    },
+    {
+      "pais": "Japão",
+      "pais_en": "Japan",
+      "GEC": "JA",
+      "a2": "JP",
+      "a3": "JPN",
+      "Number": 392,
+      "ddi": 81
+    },
+    {
+      "pais": "Jersey",
+      "pais_en": "Jersey",
+      "GEC": "JE",
+      "a2": "JE",
+      "a3": "JEY",
+      "Number": 832,
+      "ddi": 44
+    },
+    {
+      "pais": "Jordânia",
+      "pais_en": "Jordan",
+      "GEC": "JO",
+      "a2": "JO",
+      "a3": "JOR",
+      "Number": 400,
+      "ddi": 962
+    },
+    {
+      "pais": "Cazaquistão",
+      "pais_en": "Kazakhstan",
+      "GEC": "KZ",
+      "a2": "KZ",
+      "a3": "KAZ",
+      "Number": 398,
+      "ddi": 7
+    },
+    {
+      "pais": "Quênia",
+      "pais_en": "Kenya",
+      "GEC": "KE",
+      "a2": "KE",
+      "a3": "KEN",
+      "Number": 404,
+      "ddi": 254
+    },
+    {
+      "pais": "Kiribati",
+      "pais_en": "Kiribati",
+      "GEC": "KR",
+      "a2": "KI",
+      "a3": "KIR",
+      "Number": 296,
+      "ddi": 686
+    },
+    {
+      "pais": "República Popular Democrática da Coreia",
+      "pais_en": "Korea, Democratic People's Republic of",
+      "GEC": "KN",
+      "a2": "KP",
+      "a3": "PRK",
+      "Number": 408,
+      "ddi": 850
+    },
+    {
+      "pais": "República da Coreia",
+      "pais_en": "Korea, Republic of",
+      "GEC": "KS",
+      "a2": "KR",
+      "a3": "KOR",
+      "Number": 410,
+      "ddi": 82
+    },
+    {
+      "pais": "Kuwait",
+      "pais_en": "Kuwait",
+      "GEC": "KU",
+      "a2": "KW",
+      "a3": "KWT",
+      "Number": 414,
+      "ddi": 965
+    },
+    {
+      "pais": "Quirguistão",
+      "pais_en": "Kyrgyzstan",
+      "GEC": "KG",
+      "a2": "KG",
+      "a3": "KGZ",
+      "Number": 417,
+      "ddi": 996
+    },
+    {
+      "pais": "Laos",
+      "pais_en": "Lao People's Democratic Republic",
+      "GEC": "LA",
+      "a2": "LA",
+      "a3": "LAO",
+      "Number": 418,
+      "ddi": 856
+    },
+    {
+      "pais": "Letônia",
+      "pais_en": "Latvia",
+      "GEC": "LG",
+      "a2": "LV",
+      "a3": "LVA",
+      "Number": 428,
+      "ddi": 371
+    },
+    {
+      "pais": "Líbano",
+      "pais_en": "Lebanon",
+      "GEC": "LE",
+      "a2": "LB",
+      "a3": "LBN",
+      "Number": 422,
+      "ddi": 961
+    },
+    {
+      "pais": "Lesoto",
+      "pais_en": "Lesotho",
+      "GEC": "LT",
+      "a2": "LS",
+      "a3": "LSO",
+      "Number": 426,
+      "ddi": 266
+    },
+    {
+      "pais": "Libéria",
+      "pais_en": "Liberia",
+      "GEC": "LI",
+      "a2": "LR",
+      "a3": "LBR",
+      "Number": 430,
+      "ddi": 231
+    },
+    {
+      "pais": "Líbia",
+      "pais_en": "Libya",
+      "GEC": "LY",
+      "a2": "LY",
+      "a3": "LBY",
+      "Number": 434,
+      "ddi": 218
+    },
+    {
+      "pais": "Liechtenstein",
+      "pais_en": "Liechtenstein",
+      "GEC": "LS",
+      "a2": "LI",
+      "a3": "LIE",
+      "Number": 438,
+      "ddi": 423
+    },
+    {
+      "pais": "Lituânia",
+      "pais_en": "Lithuania",
+      "GEC": "LH",
+      "a2": "LT",
+      "a3": "LTU",
+      "Number": 440,
+      "ddi": 370
+    },
+    {
+      "pais": "Luxemburgo",
+      "pais_en": "Luxembourg",
+      "GEC": "LU",
+      "a2": "LU",
+      "a3": "LUX",
+      "Number": 442,
+      "ddi": 352
+    },
+    {
+      "pais": "Macao",
+      "pais_en": "Macao",
+      "GEC": "MC",
+      "a2": "MO",
+      "a3": "MAC",
+      "Number": 446,
+      "ddi": 853
+    },
+    {
+      "pais": "Macedônia",
+      "pais_en": "Macedonia, the Former Yugoslav Republic of",
+      "GEC": "MK",
+      "a2": "MK",
+      "a3": "MKD",
+      "Number": 807,
+      "ddi": 389
+    },
+    {
+      "pais": "Madagascar",
+      "pais_en": "Madagascar",
+      "GEC": "MA",
+      "a2": "MG",
+      "a3": "MDG",
+      "Number": 450,
+      "ddi": 261
+    },
+    {
+      "pais": "Malawi",
+      "pais_en": "Malawi",
+      "GEC": "MI",
+      "a2": "MW",
+      "a3": "MWI",
+      "Number": 454,
+      "ddi": 265
+    },
+    {
+      "pais": "Malásia",
+      "pais_en": "Malaysia",
+      "GEC": "MY",
+      "a2": "MY",
+      "a3": "MYS",
+      "Number": 458,
+      "ddi": 60
+    },
+    {
+      "pais": "Maldivas",
+      "pais_en": "Maldives",
+      "GEC": "MV",
+      "a2": "MV",
+      "a3": "MDV",
+      "Number": 462,
+      "ddi": 960
+    },
+    {
+      "pais": "Mali",
+      "pais_en": "Mali",
+      "GEC": "ML",
+      "a2": "ML",
+      "a3": "MLI",
+      "Number": 466,
+      "ddi": 223
+    },
+    {
+      "pais": "Malta",
+      "pais_en": "Malta",
+      "GEC": "MT",
+      "a2": "MT",
+      "a3": "MLT",
+      "Number": 470,
+      "ddi": 356
+    },
+    {
+      "pais": "Ilhas Marshall",
+      "pais_en": "Marshall Islands",
+      "GEC": "RM",
+      "a2": "MH",
+      "a3": "MHL",
+      "Number": 584,
+      "ddi": 692
+    },
+    {
+      "pais": "Martinica",
+      "pais_en": "Martinique",
+      "GEC": "MB",
+      "a2": "MQ",
+      "a3": "MTQ",
+      "Number": 474,
+      "ddi": 596
+    },
+    {
+      "pais": "Mauritânia",
+      "pais_en": "Mauritania",
+      "GEC": "MR",
+      "a2": "MR",
+      "a3": "MRT",
+      "Number": 478,
+      "ddi": 222
+    },
+    {
+      "pais": "Maurício",
+      "pais_en": "Mauritius",
+      "GEC": "MP",
+      "a2": "MU",
+      "a3": "MUS",
+      "Number": 480,
+      "ddi": 230
+    },
+    {
+      "pais": "Mayotte",
+      "pais_en": "Mayotte",
+      "GEC": "MF",
+      "a2": "YT",
+      "a3": "MYT",
+      "Number": 175,
+      "ddi": 262
+    },
+    {
+      "pais": "México",
+      "pais_en": "Mexico",
+      "GEC": "MX",
+      "a2": "MX",
+      "a3": "MEX",
+      "Number": 484,
+      "ddi": 52
+    },
+    {
+      "pais": "Federação dos Estados da Micronésia",
+      "pais_en": "Micronesia, Federated States of",
+      "GEC": "FM",
+      "a2": "FM",
+      "a3": "FSM",
+      "Number": 583,
+      "ddi": 691
+    },
+    {
+      "pais": "Moldávia",
+      "pais_en": "Moldova, Republic of",
+      "GEC": "MD",
+      "a2": "MD",
+      "a3": "MDA",
+      "Number": 498,
+      "ddi": 373
+    },
+    {
+      "pais": "Mônaco",
+      "pais_en": "Monaco",
+      "GEC": "MN",
+      "a2": "MC",
+      "a3": "MCO",
+      "Number": 492,
+      "ddi": 377
+    },
+    {
+      "pais": "Mongólia",
+      "pais_en": "Mongolia",
+      "GEC": "MG",
+      "a2": "MN",
+      "a3": "MNG",
+      "Number": 496,
+      "ddi": 976
+    },
+    {
+      "pais": "Montenegro",
+      "pais_en": "Montenegro",
+      "GEC": "MJ",
+      "a2": "ME",
+      "a3": "MNE",
+      "Number": 499,
+      "ddi": 382
+    },
+    {
+      "pais": "Montserrat",
+      "pais_en": "Montserrat",
+      "GEC": "MH",
+      "a2": "MS",
+      "a3": "MSR",
+      "Number": 500,
+      "ddi": "1-664"
+    },
+    {
+      "pais": "Marrocos",
+      "pais_en": "Morocco",
+      "GEC": "MO",
+      "a2": "MA",
+      "a3": "MAR",
+      "Number": 504,
+      "ddi": 212
+    },
+    {
+      "pais": "Moçambique",
+      "pais_en": "Mozambique",
+      "GEC": "MZ",
+      "a2": "MZ",
+      "a3": "MOZ",
+      "Number": 508,
+      "ddi": 258
+    },
+    {
+      "pais": "Mianmar",
+      "pais_en": "Myanmar",
+      "GEC": "BM",
+      "a2": "MM",
+      "a3": "MMR",
+      "Number": 104,
+      "ddi": 95
+    },
+    {
+      "pais": "Namíbia",
+      "pais_en": "Namibia",
+      "GEC": "WA",
+      "a2": "NA",
+      "a3": "NAM",
+      "Number": 516,
+      "ddi": 264
+    },
+    {
+      "pais": "Nauru",
+      "pais_en": "Nauru",
+      "GEC": "NR",
+      "a2": "NR",
+      "a3": "NRU",
+      "Number": 520,
+      "ddi": 674
+    },
+    {
+      "pais": "Nepal",
+      "pais_en": "Nepal",
+      "GEC": "NP",
+      "a2": "NP",
+      "a3": "NPL",
+      "Number": 524,
+      "ddi": 977
+    },
+    {
+      "pais": "Holanda",
+      "pais_en": "Netherlands",
+      "GEC": "NL",
+      "a2": "NL",
+      "a3": "NLD",
+      "Number": 528,
+      "ddi": 31
+    },
+    {
+      "pais": "Nova Caledônia",
+      "pais_en": "New Caledonia",
+      "GEC": "NC",
+      "a2": "NC",
+      "a3": "NCL",
+      "Number": 540,
+      "ddi": 687
+    },
+    {
+      "pais": "Nova Zelândia",
+      "pais_en": "New Zealand",
+      "GEC": "NZ",
+      "a2": "NZ",
+      "a3": "NZL",
+      "Number": 554,
+      "ddi": 64
+    },
+    {
+      "pais": "Nicarágua",
+      "pais_en": "Nicaragua",
+      "GEC": "NU",
+      "a2": "NI",
+      "a3": "NIC",
+      "Number": 558,
+      "ddi": 505
+    },
+    {
+      "pais": "Níger",
+      "pais_en": "Niger",
+      "GEC": "NG",
+      "a2": "NE",
+      "a3": "NER",
+      "Number": 562,
+      "ddi": 227
+    },
+    {
+      "pais": "Nigéria",
+      "pais_en": "Nigeria",
+      "GEC": "NI",
+      "a2": "NG",
+      "a3": "NGA",
+      "Number": 566,
+      "ddi": 234
+    },
+    {
+      "pais": "Niue",
+      "pais_en": "Niue",
+      "GEC": "NE",
+      "a2": "NU",
+      "a3": "NIU",
+      "Number": 570,
+      "ddi": 683
+    },
+    {
+      "pais": "Ilha Norfolk",
+      "pais_en": "Norfolk Island",
+      "GEC": "NF",
+      "a2": "NF",
+      "a3": "NFK",
+      "Number": 574,
+      "ddi": 672
+    },
+    {
+      "pais": "Ilhas Marianas Setentrionais",
+      "pais_en": "Northern Mariana Islands",
+      "GEC": "CQ",
+      "a2": "MP",
+      "a3": "MNP",
+      "Number": 580,
+      "ddi": "1-670"
+    },
+    {
+      "pais": "Noruega",
+      "pais_en": "Norway",
+      "GEC": "NO",
+      "a2": "NO",
+      "a3": "NOR",
+      "Number": 578,
+      "ddi": 47
+    },
+    {
+      "pais": "Omã",
+      "pais_en": "Oman",
+      "GEC": "MU",
+      "a2": "OM",
+      "a3": "OMN",
+      "Number": 512,
+      "ddi": 968
+    },
+    {
+      "pais": "Paquistão",
+      "pais_en": "Pakistan",
+      "GEC": "PK",
+      "a2": "PK",
+      "a3": "PAK",
+      "Number": 586,
+      "ddi": 92
+    },
+    {
+      "pais": "Palau",
+      "pais_en": "Palau",
+      "GEC": "PS",
+      "a2": "PW",
+      "a3": "PLW",
+      "Number": 585,
+      "ddi": 680
+    },
+    {
+      "pais": "Estado da Palestina",
+      "pais_en": "Palestine, State of",
+      "GEC": "GZ",
+      "a2": "PS",
+      "a3": "PSE",
+      "Number": 275,
+      "ddi": 970
+    },
+    {
+      "pais": "Panamá",
+      "pais_en": "Panama",
+      "GEC": "PM",
+      "a2": "PA",
+      "a3": "PAN",
+      "Number": 591,
+      "ddi": 507
+    },
+    {
+      "pais": "Papua Nova Guiné",
+      "pais_en": "Papua New Guinea",
+      "GEC": "PP",
+      "a2": "PG",
+      "a3": "PNG",
+      "Number": 598,
+      "ddi": 675
+    },
+    {
+      "pais": "Paraguai",
+      "pais_en": "Paraguay",
+      "GEC": "PA",
+      "a2": "PY",
+      "a3": "PRY",
+      "Number": 600,
+      "ddi": 595
+    },
+    {
+      "pais": "Peru",
+      "pais_en": "Peru",
+      "GEC": "PE",
+      "a2": "PE",
+      "a3": "PER",
+      "Number": 604,
+      "ddi": 51
+    },
+    {
+      "pais": "Filipinas",
+      "pais_en": "Philippines",
+      "GEC": "RP",
+      "a2": "PH",
+      "a3": "PHL",
+      "Number": 608,
+      "ddi": 63
+    },
+    {
+      "pais": "Ilhas Pitcairn",
+      "pais_en": "Pitcairn",
+      "GEC": "PC",
+      "a2": "PN",
+      "a3": "PCN",
+      "Number": 612,
+      "ddi": 870
+    },
+    {
+      "pais": "Polônia",
+      "pais_en": "Poland",
+      "GEC": "PL",
+      "a2": "PL",
+      "a3": "POL",
+      "Number": 616,
+      "ddi": 48
+    },
+    {
+      "pais": "Portugal",
+      "pais_en": "Portugal",
+      "GEC": "PO",
+      "a2": "PT",
+      "a3": "PRT",
+      "Number": 620,
+      "ddi": 351
+    },
+    {
+      "pais": "Porto Rico",
+      "pais_en": "Puerto Rico",
+      "GEC": "RQ",
+      "a2": "PR",
+      "a3": "PRI",
+      "Number": 630,
+      "ddi": 1
+    },
+    {
+      "pais": "Catar",
+      "pais_en": "Qatar",
+      "GEC": "QA",
+      "a2": "QA",
+      "a3": "QAT",
+      "Number": 634,
+      "ddi": 974
+    },
+    {
+      "pais": "Romênia",
+      "pais_en": "Romania",
+      "GEC": "RO",
+      "a2": "RO",
+      "a3": "ROU",
+      "Number": 642,
+      "ddi": 40
+    },
+    {
+      "pais": "Federação Russa",
+      "pais_en": "Russian Federation",
+      "GEC": "RS",
+      "a2": "RU",
+      "a3": "RUS",
+      "Number": 643,
+      "ddi": 7
+    },
+    {
+      "pais": "Ruanda",
+      "pais_en": "Rwanda",
+      "GEC": "RW",
+      "a2": "RW",
+      "a3": "RWA",
+      "Number": 646,
+      "ddi": 250
+    },
+    {
+      "pais": "Reunião",
+      "pais_en": "Reunion",
+      "GEC": "RE",
+      "a2": "RE",
+      "a3": "REU",
+      "Number": 638,
+      "ddi": 262
+    },
+    {
+      "pais": "São Bartolomeu",
+      "pais_en": "Saint Barthelemy",
+      "GEC": "TB",
+      "a2": "BL",
+      "a3": "BLM",
+      "Number": 652,
+      "ddi": 590
+    },
+    {
+      "pais": "Santa Helena",
+      "pais_en": "Saint Helena",
+      "GEC": "SH",
+      "a2": "SH",
+      "a3": "SHN",
+      "Number": 654,
+      "ddi": 290
+    },
+    {
+      "pais": "São Cristóvão e Névis",
+      "pais_en": "Saint Kitts and Nevis",
+      "GEC": "SC",
+      "a2": "KN",
+      "a3": "KNA",
+      "Number": 659,
+      "ddi": "1-869"
+    },
+    {
+      "pais": "Santa Lúcia",
+      "pais_en": "Saint Lucia",
+      "GEC": "ST",
+      "a2": "LC",
+      "a3": "LCA",
+      "Number": 662,
+      "ddi": "1-758"
+    },
+    {
+      "pais": "Saint Martin",
+      "pais_en": "Saint Martin (French part)",
+      "GEC": "RN",
+      "a2": "MF",
+      "a3": "MAF",
+      "Number": 663,
+      "ddi": 590
+    },
+    {
+      "pais": "Saint Pierre e Miquelon",
+      "pais_en": "Saint Pierre and Miquelon",
+      "GEC": "SB",
+      "a2": "PM",
+      "a3": "SPM",
+      "Number": 666,
+      "ddi": 508
+    },
+    {
+      "pais": "São Vicente e Granadinas",
+      "pais_en": "Saint Vincent and the Grenadines",
+      "GEC": "VC",
+      "a2": "VC",
+      "a3": "VCT",
+      "Number": 670,
+      "ddi": "1-784"
+    },
+    {
+      "pais": "Samoa",
+      "pais_en": "Samoa",
+      "GEC": "WS",
+      "a2": "WS",
+      "a3": "WSM",
+      "Number": 882,
+      "ddi": 685
+    },
+    {
+      "pais": "San Marino",
+      "pais_en": "San Marino",
+      "GEC": "SM",
+      "a2": "SM",
+      "a3": "SMR",
+      "Number": 674,
+      "ddi": 378
+    },
+    {
+      "pais": "São Tomé e Príncipe",
+      "pais_en": "Sao Tome and Principe",
+      "GEC": "TP",
+      "a2": "ST",
+      "a3": "STP",
+      "Number": 678,
+      "ddi": 239
+    },
+    {
+      "pais": "Arábia Saudita",
+      "pais_en": "Saudi Arabia",
+      "GEC": "SA",
+      "a2": "SA",
+      "a3": "SAU",
+      "Number": 682,
+      "ddi": 966
+    },
+    {
+      "pais": "Senegal",
+      "pais_en": "Senegal",
+      "GEC": "SG",
+      "a2": "SN",
+      "a3": "SEN",
+      "Number": 686,
+      "ddi": 221
+    },
+    {
+      "pais": "Sérvia",
+      "pais_en": "Serbia",
+      "GEC": "RI",
+      "a2": "RS",
+      "a3": "SRB",
+      "Number": 688,
+      "ddi": 381
+    },
+    {
+      "pais": "Seychelles",
+      "pais_en": "Seychelles",
+      "GEC": "SE",
+      "a2": "SC",
+      "a3": "SYC",
+      "Number": 690,
+      "ddi": 248
+    },
+    {
+      "pais": "Serra Leoa",
+      "pais_en": "Sierra Leone",
+      "GEC": "SL",
+      "a2": "SL",
+      "a3": "SLE",
+      "Number": 694,
+      "ddi": 232
+    },
+    {
+      "pais": "Cingapura",
+      "pais_en": "Singapore",
+      "GEC": "SN",
+      "a2": "SG",
+      "a3": "SGP",
+      "Number": 702,
+      "ddi": 65
+    },
+    {
+      "pais": "Sint Maarten",
+      "pais_en": "Sint Maarten (Dutch part)",
+      "GEC": "NN",
+      "a2": "SX",
+      "a3": "SXM",
+      "Number": 534,
+      "ddi": "1-721"
+    },
+    {
+      "pais": "Eslováquia",
+      "pais_en": "Slovakia",
+      "GEC": "LO",
+      "a2": "SK",
+      "a3": "SVK",
+      "Number": 703,
+      "ddi": 421
+    },
+    {
+      "pais": "Eslovênia",
+      "pais_en": "Slovenia",
+      "GEC": "SI",
+      "a2": "SI",
+      "a3": "SVN",
+      "Number": 705,
+      "ddi": 386
+    },
+    {
+      "pais": "Ilhas Salom�o",
+      "pais_en": "Solomon Islands",
+      "GEC": "BP",
+      "a2": "SB",
+      "a3": "SLB",
+      "Number": 90,
+      "ddi": 677
+    },
+    {
+      "pais": "Somália",
+      "pais_en": "Somalia",
+      "GEC": "SO",
+      "a2": "SO",
+      "a3": "SOM",
+      "Number": 706,
+      "ddi": 252
+    },
+    {
+      "pais": "África do Sul",
+      "pais_en": "South Africa",
+      "GEC": "SF",
+      "a2": "ZA",
+      "a3": "ZAF",
+      "Number": 710,
+      "ddi": 27
+    },
+    {
+      "pais": "Ilhas Geórgia do Sul e Sandwich do Sul",
+      "pais_en": "South Georgia and the South Sandwich Islands",
+      "GEC": "SX",
+      "a2": "GS",
+      "a3": "SGS",
+      "Number": 239,
+      "ddi": 500
+    },
+    {
+      "pais": "Sudão do Sul",
+      "pais_en": "South Sudan",
+      "GEC": "OD",
+      "a2": "SS",
+      "a3": "SSD",
+      "Number": 728,
+      "ddi": 211
+    },
+    {
+      "pais": "Espanha",
+      "pais_en": "Spain",
+      "GEC": "SP",
+      "a2": "ES",
+      "a3": "ESP",
+      "Number": 724,
+      "ddi": 34
+    },
+    {
+      "pais": "Sri Lanka",
+      "pais_en": "Sri Lanka",
+      "GEC": "CE",
+      "a2": "LK",
+      "a3": "LKA",
+      "Number": 144,
+      "ddi": 94
+    },
+    {
+      "pais": "Sudão",
+      "pais_en": "Sudan",
+      "GEC": "SU",
+      "a2": "SD",
+      "a3": "SDN",
+      "Number": 729,
+      "ddi": 249
+    },
+    {
+      "pais": "Suriname",
+      "pais_en": "Suriname",
+      "GEC": "NS",
+      "a2": "SR",
+      "a3": "SUR",
+      "Number": 740,
+      "ddi": 597
+    },
+    {
+      "pais": "Svalbard e Jan Mayen",
+      "pais_en": "Svalbard and Jan Mayen",
+      "GEC": "SV",
+      "a2": "SJ",
+      "a3": "SJM",
+      "Number": 744,
+      "ddi": 47
+    },
+    {
+      "pais": "Suazilândia",
+      "pais_en": "Swaziland",
+      "GEC": "WZ",
+      "a2": "SZ",
+      "a3": "SWZ",
+      "Number": 748,
+      "ddi": 268
+    },
+    {
+      "pais": "Suécia",
+      "pais_en": "Sweden",
+      "GEC": "SW",
+      "a2": "SE",
+      "a3": "SWE",
+      "Number": 752,
+      "ddi": 46
+    },
+    {
+      "pais": "Suíça",
+      "pais_en": "Switzerland",
+      "GEC": "SZ",
+      "a2": "CH",
+      "a3": "CHE",
+      "Number": 756,
+      "ddi": 41
+    },
+    {
+      "pais": "Síria",
+      "pais_en": "Syrian Arab Republic",
+      "GEC": "SY",
+      "a2": "SY",
+      "a3": "SYR",
+      "Number": 760,
+      "ddi": 963
+    },
+    {
+      "pais": "Taiwan (Formosa)",
+      "pais_en": "Taiwan, Province of China",
+      "GEC": "TW",
+      "a2": "TW",
+      "a3": "TWN",
+      "Number": 158,
+      "ddi": 886
+    },
+    {
+      "pais": "Tajidquistão",
+      "pais_en": "Tajikistan",
+      "GEC": "TI",
+      "a2": "TJ",
+      "a3": "TJK",
+      "Number": 762,
+      "ddi": 992
+    },
+    {
+      "pais": "Tanzânia",
+      "pais_en": "United Republic of Tanzania",
+      "GEC": "TZ",
+      "a2": "TZ",
+      "a3": "TZA",
+      "Number": 834,
+      "ddi": 255
+    },
+    {
+      "pais": "Tailândia",
+      "pais_en": "Thailand",
+      "GEC": "TH",
+      "a2": "TH",
+      "a3": "THA",
+      "Number": 764,
+      "ddi": 66
+    },
+    {
+      "pais": "Timor Leste",
+      "pais_en": "Timor-Leste",
+      "GEC": "TT",
+      "a2": "TL",
+      "a3": "TLS",
+      "Number": 626,
+      "ddi": 670
+    },
+    {
+      "pais": "Togo",
+      "pais_en": "Togo",
+      "GEC": "TO",
+      "a2": "TG",
+      "a3": "TGO",
+      "Number": 768,
+      "ddi": 228
+    },
+    {
+      "pais": "Tokelau",
+      "pais_en": "Tokelau",
+      "GEC": "TL",
+      "a2": "TK",
+      "a3": "TKL",
+      "Number": 772,
+      "ddi": 690
+    },
+    {
+      "pais": "Tonga",
+      "pais_en": "Tonga",
+      "GEC": "TN",
+      "a2": "TO",
+      "a3": "TON",
+      "Number": 776,
+      "ddi": 676
+    },
+    {
+      "pais": "Trinidad e Tobago",
+      "pais_en": "Trinidad and Tobago",
+      "GEC": "TD",
+      "a2": "TT",
+      "a3": "TTO",
+      "Number": 780,
+      "ddi": "1-868"
+    },
+    {
+      "pais": "Tunísia",
+      "pais_en": "Tunisia",
+      "GEC": "TS",
+      "a2": "TN",
+      "a3": "TUN",
+      "Number": 788,
+      "ddi": 216
+    },
+    {
+      "pais": "Turquia",
+      "pais_en": "Turkey",
+      "GEC": "TU",
+      "a2": "TR",
+      "a3": "TUR",
+      "Number": 792,
+      "ddi": 90
+    },
+    {
+      "pais": "Turcomenistão",
+      "pais_en": "Turkmenistan",
+      "GEC": "TX",
+      "a2": "TM",
+      "a3": "TKM",
+      "Number": 795,
+      "ddi": 993
+    },
+    {
+      "pais": "Ilhas Turks e Caicos",
+      "pais_en": "Turks and Caicos Islands",
+      "GEC": "TK",
+      "a2": "TC",
+      "a3": "TCA",
+      "Number": 796,
+      "ddi": "1-649"
+    },
+    {
+      "pais": "Tuvalu",
+      "pais_en": "Tuvalu",
+      "GEC": "TV",
+      "a2": "TV",
+      "a3": "TUV",
+      "Number": 798,
+      "ddi": 688
+    },
+    {
+      "pais": "Uganda",
+      "pais_en": "Uganda",
+      "GEC": "UG",
+      "a2": "UG",
+      "a3": "UGA",
+      "Number": 800,
+      "ddi": 256
+    },
+    {
+      "pais": "Ucrânia",
+      "pais_en": "Ukraine",
+      "GEC": "UP",
+      "a2": "UA",
+      "a3": "UKR",
+      "Number": 804,
+      "ddi": 380
+    },
+    {
+      "pais": "Emirados Árabes Unidos",
+      "pais_en": "United Arab Emirates",
+      "GEC": "AE",
+      "a2": "AE",
+      "a3": "ARE",
+      "Number": 784,
+      "ddi": 971
+    },
+    {
+      "pais": "Reino Unido",
+      "pais_en": "United Kingdom",
+      "GEC": "UK",
+      "a2": "GB",
+      "a3": "GBR",
+      "Number": 826,
+      "ddi": 44
+    },
+    {
+      "pais": "Estados Unidos",
+      "pais_en": "United States",
+      "GEC": "US",
+      "a2": "US",
+      "a3": "USA",
+      "Number": 840,
+      "ddi": 1
+    },
+    {
+      "pais": "Ilhas Menores Distantes dos Estados Unidos",
+      "pais_en": "United States Minor Outlying Islands",
+      "GEC": "-",
+      "a2": "UM",
+      "a3": "UMI",
+      "Number": 581,
+      "ddi": 1
+    },
+    {
+      "pais": "Uruguai",
+      "pais_en": "Uruguay",
+      "GEC": "UY",
+      "a2": "UY",
+      "a3": "URY",
+      "Number": 858,
+      "ddi": 598
+    },
+    {
+      "pais": "Uzbequistão",
+      "pais_en": "Uzbekistan",
+      "GEC": "UZ",
+      "a2": "UZ",
+      "a3": "UZB",
+      "Number": 860,
+      "ddi": 998
+    },
+    {
+      "pais": "Vanuatu",
+      "pais_en": "Vanuatu",
+      "GEC": "NH",
+      "a2": "VU",
+      "a3": "VUT",
+      "Number": 548,
+      "ddi": 678
+    },
+    {
+      "pais": "Venezuela",
+      "pais_en": "Venezuela",
+      "GEC": "VE",
+      "a2": "VE",
+      "a3": "VEN",
+      "Number": 862,
+      "ddi": 58
+    },
+    {
+      "pais": "Vietnã",
+      "pais_en": "Viet Nam",
+      "GEC": "VM",
+      "a2": "VN",
+      "a3": "VNM",
+      "Number": 704,
+      "ddi": 84
+    },
+    {
+      "pais": "Ilhas Virgens Britânicas",
+      "pais_en": "British Virgin Islands",
+      "GEC": "VI",
+      "a2": "VG",
+      "a3": "VGB",
+      "Number": 92,
+      "ddi": "1-284"
+    },
+    {
+      "pais": "Ilhas Virgens",
+      "pais_en": "US Virgin Islands",
+      "GEC": "VQ",
+      "a2": "VI",
+      "a3": "VIR",
+      "Number": 850,
+      "ddi": "1-340"
+    },
+    {
+      "pais": "Wallis e Futuna",
+      "pais_en": "Wallis and Futuna",
+      "GEC": "WF",
+      "a2": "WF",
+      "a3": "WLF",
+      "Number": 876,
+      "ddi": 681
+    },
+    {
+      "pais": "Saara Ocidental",
+      "pais_en": "Western Sahara",
+      "GEC": "WI",
+      "a2": "EH",
+      "a3": "ESH",
+      "Number": 732,
+      "ddi": 212
+    },
+    {
+      "pais": "Iemen",
+      "pais_en": "Yemen",
+      "GEC": "YM",
+      "a2": "YE",
+      "a3": "YEM",
+      "Number": 887,
+      "ddi": 967
+    },
+    {
+      "pais": "Zâmbia",
+      "pais_en": "Zambia",
+      "GEC": "ZA",
+      "a2": "ZM",
+      "a3": "ZMB",
+      "Number": 894,
+      "ddi": 260
+    },
+    {
+      "pais": "Zimbábue",
+      "pais_en": "Zimbabwe",
+      "GEC": "ZI",
+      "a2": "ZW",
+      "a3": "ZWE",
+      "Number": 716,
+      "ddi": 263
+    },
+    {
+      "pais": "Aland",
+      "pais_en": "Aland Islands",
+      "GEC": "-",
+      "a2": "AX",
+      "a3": "ALA",
+      "Number": 248,
+      "ddi": 358
+    },
+    {
+      "pais": "Kosovo",
+      "pais_en": "Kosovo",
+      "GEC": "KV",
+      "a2": "XK",
+      "a3": "XKS",
+      "Number": "-",
+      "ddi": "-"
+    }
+  ]
