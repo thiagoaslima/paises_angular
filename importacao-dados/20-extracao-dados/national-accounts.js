@@ -43,8 +43,8 @@ folders.forEach(folder => {
                         agg[ano] = {}
                     }
 
-                    if (paises[nome]) {
-                        agg[ano][paises[nome]] = valor;
+                    if (!paises[nome]) {
+                        agg[ano][paises[nome] || nome] = valor;
                     }
 
                     return agg;
