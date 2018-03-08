@@ -1744,9 +1744,11 @@
       "numeric": 716
     }
   ],
-  "fonte": {
-    "publicação": "Country Codes - ISO 3166",
-    "link": "https://www.iso.org/obp/ui/#search/code",
-    "acessadoEm": "2018-03-07"
+  "metadados": {
+    "fonte": {
+      "publicação": "Country Codes - ISO 3166",
+      "link": "https://www.iso.org/obp/ui/#search/code",
+      "acessadoEm": "2018-03-07"
+    }
   }
 }
