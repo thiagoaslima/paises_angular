@@ -1,0 +1,5230 @@
+[
+    {
+        "codigo": 4,
+        "nome": {
+            "en": "Afghanistan",
+            "es": "Afganistán",
+            "pt": "Afeganistão"
+        },
+        "slug": {
+            "en": "afghanistan",
+            "es": "afganistn",
+            "pt": "afeganisto"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "93",
+        "onu": true
+    },
+    {
+        "codigo": 248,
+        "nome": {
+            "en": "Åland Islands",
+            "es": "Islas Åland",
+            "pt": ""
+        },
+        "slug": {
+            "en": "land-islands",
+            "es": "islas-land",
+            "pt": ""
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 8,
+        "nome": {
+            "en": "Albania",
+            "es": "Albania",
+            "pt": "Albânia"
+        },
+        "slug": {
+            "en": "albania",
+            "es": "albania",
+            "pt": "albnia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "355",
+        "onu": true
+    },
+    {
+        "codigo": 12,
+        "nome": {
+            "en": "Algeria",
+            "es": "Argelia",
+            "pt": "Argélia"
+        },
+        "slug": {
+            "en": "algeria",
+            "es": "argelia",
+            "pt": "arglia"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "213",
+        "onu": true
+    },
+    {
+        "codigo": 16,
+        "nome": {
+            "en": "American Samoa",
+            "es": "Samoa Americana",
+            "pt": ""
+        },
+        "slug": {
+            "en": "american-samoa",
+            "es": "samoa-americana",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 20,
+        "nome": {
+            "en": "Andorra",
+            "es": "Andorra",
+            "pt": "Andorra"
+        },
+        "slug": {
+            "en": "andorra",
+            "es": "andorra",
+            "pt": "andorra"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "376",
+        "onu": true
+    },
+    {
+        "codigo": 24,
+        "nome": {
+            "en": "Angola",
+            "es": "Angola",
+            "pt": "Angola"
+        },
+        "slug": {
+            "en": "angola",
+            "es": "angola",
+            "pt": "angola"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "244",
+        "onu": true
+    },
+    {
+        "codigo": 660,
+        "nome": {
+            "en": "Anguilla",
+            "es": "Anguila",
+            "pt": ""
+        },
+        "slug": {
+            "en": "anguilla",
+            "es": "anguila",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 10,
+        "nome": {
+            "en": "Antarctica",
+            "es": "Antártida",
+            "pt": ""
+        },
+        "slug": {
+            "en": "antarctica",
+            "es": "antrtida",
+            "pt": ""
+        },
+        "parent": 1,
+        "parents": {
+            "continente": "",
+            "regiao": "",
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 28,
+        "nome": {
+            "en": "Antigua and Barbuda",
+            "es": "Antigua y Barbuda",
+            "pt": "Antígua e Barbuda"
+        },
+        "slug": {
+            "en": "antigua-and-barbuda",
+            "es": "antigua-y-barbuda",
+            "pt": "antgua-e-barbuda"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-268",
+        "onu": true
+    },
+    {
+        "codigo": 32,
+        "nome": {
+            "en": "Argentina",
+            "es": "Argentina",
+            "pt": "Argentina"
+        },
+        "slug": {
+            "en": "argentina",
+            "es": "argentina",
+            "pt": "argentina"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "54",
+        "onu": true
+    },
+    {
+        "codigo": 51,
+        "nome": {
+            "en": "Armenia",
+            "es": "Armenia",
+            "pt": "Armênia"
+        },
+        "slug": {
+            "en": "armenia",
+            "es": "armenia",
+            "pt": "armnia"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "374",
+        "onu": true
+    },
+    {
+        "codigo": 533,
+        "nome": {
+            "en": "Aruba",
+            "es": "Aruba",
+            "pt": ""
+        },
+        "slug": {
+            "en": "aruba",
+            "es": "aruba",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 36,
+        "nome": {
+            "en": "Australia",
+            "es": "Australia",
+            "pt": "Austrália"
+        },
+        "slug": {
+            "en": "australia",
+            "es": "australia",
+            "pt": "austrlia"
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "61",
+        "onu": true
+    },
+    {
+        "codigo": 40,
+        "nome": {
+            "en": "Austria",
+            "es": "Austria",
+            "pt": "Áustria"
+        },
+        "slug": {
+            "en": "austria",
+            "es": "austria",
+            "pt": "ustria"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "43",
+        "onu": true
+    },
+    {
+        "codigo": 31,
+        "nome": {
+            "en": "Azerbaijan",
+            "es": "Azerbaiyán",
+            "pt": "Azerbaijão"
+        },
+        "slug": {
+            "en": "azerbaijan",
+            "es": "azerbaiyn",
+            "pt": "azerbaijo"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "994",
+        "onu": true
+    },
+    {
+        "codigo": 44,
+        "nome": {
+            "en": "Bahamas",
+            "es": "Bahamas",
+            "pt": "Bahamas"
+        },
+        "slug": {
+            "en": "bahamas",
+            "es": "bahamas",
+            "pt": "bahamas"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-242",
+        "onu": true
+    },
+    {
+        "codigo": 48,
+        "nome": {
+            "en": "Bahrain",
+            "es": "Bahrein",
+            "pt": "Barein"
+        },
+        "slug": {
+            "en": "bahrain",
+            "es": "bahrein",
+            "pt": "barein"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "973",
+        "onu": true
+    },
+    {
+        "codigo": 50,
+        "nome": {
+            "en": "Bangladesh",
+            "es": "Bangladesh",
+            "pt": "Bangladesh"
+        },
+        "slug": {
+            "en": "bangladesh",
+            "es": "bangladesh",
+            "pt": "bangladesh"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "880",
+        "onu": true
+    },
+    {
+        "codigo": 52,
+        "nome": {
+            "en": "Barbados",
+            "es": "Barbados",
+            "pt": "Barbados"
+        },
+        "slug": {
+            "en": "barbados",
+            "es": "barbados",
+            "pt": "barbados"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-246",
+        "onu": true
+    },
+    {
+        "codigo": 112,
+        "nome": {
+            "en": "Belarus",
+            "es": "Belarús",
+            "pt": "Belarus"
+        },
+        "slug": {
+            "en": "belarus",
+            "es": "belars",
+            "pt": "belarus"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "375",
+        "onu": true
+    },
+    {
+        "codigo": 56,
+        "nome": {
+            "en": "Belgium",
+            "es": "Bélgica",
+            "pt": "Bélgica"
+        },
+        "slug": {
+            "en": "belgium",
+            "es": "blgica",
+            "pt": "blgica"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "32",
+        "onu": true
+    },
+    {
+        "codigo": 84,
+        "nome": {
+            "en": "Belize",
+            "es": "Belice",
+            "pt": "Belize"
+        },
+        "slug": {
+            "en": "belize",
+            "es": "belice",
+            "pt": "belize"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "501",
+        "onu": true
+    },
+    {
+        "codigo": 204,
+        "nome": {
+            "en": "Benin",
+            "es": "Benin",
+            "pt": "Benin"
+        },
+        "slug": {
+            "en": "benin",
+            "es": "benin",
+            "pt": "benin"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "229",
+        "onu": true
+    },
+    {
+        "codigo": 60,
+        "nome": {
+            "en": "Bermuda",
+            "es": "Bermuda",
+            "pt": ""
+        },
+        "slug": {
+            "en": "bermuda",
+            "es": "bermuda",
+            "pt": ""
+        },
+        "parent": 21,
+        "parents": {
+            "continente": 19,
+            "regiao": 21,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 64,
+        "nome": {
+            "en": "Bhutan",
+            "es": "Bhután",
+            "pt": "Butão"
+        },
+        "slug": {
+            "en": "bhutan",
+            "es": "bhutn",
+            "pt": "buto"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "975",
+        "onu": true
+    },
+    {
+        "codigo": 68,
+        "nome": {
+            "en": "Bolivia (Plurinational State of)",
+            "es": "Bolivia (Estado Plurinacional de)",
+            "pt": "Bolívia"
+        },
+        "slug": {
+            "en": "bolivia-plurinational-state-of",
+            "es": "bolivia-estado-plurinacional-de",
+            "pt": "bolvia"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "591",
+        "onu": true
+    },
+    {
+        "codigo": 535,
+        "nome": {
+            "en": "Bonaire, Sint Eustatius and Saba",
+            "es": "Bonaire, San Eustaquio y Saba",
+            "pt": ""
+        },
+        "slug": {
+            "en": "bonaire-sint-eustatius-and-saba",
+            "es": "bonaire-san-eustaquio-y-saba",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 70,
+        "nome": {
+            "en": "Bosnia and Herzegovina",
+            "es": "Bosnia y Herzegovina",
+            "pt": "Bósnia e Herzegovina"
+        },
+        "slug": {
+            "en": "bosnia-and-herzegovina",
+            "es": "bosnia-y-herzegovina",
+            "pt": "bsnia-e-herzegovina"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "387",
+        "onu": true
+    },
+    {
+        "codigo": 72,
+        "nome": {
+            "en": "Botswana",
+            "es": "Botswana",
+            "pt": "Botswana"
+        },
+        "slug": {
+            "en": "botswana",
+            "es": "botswana",
+            "pt": "botswana"
+        },
+        "parent": 18,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 18
+        },
+        "ddi": "267",
+        "onu": true
+    },
+    {
+        "codigo": 74,
+        "nome": {
+            "en": "Bouvet Island",
+            "es": "Isla Bouvet",
+            "pt": ""
+        },
+        "slug": {
+            "en": "bouvet-island",
+            "es": "isla-bouvet",
+            "pt": ""
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 76,
+        "nome": {
+            "en": "Brazil",
+            "es": "Brasil",
+            "pt": "Brasil"
+        },
+        "slug": {
+            "en": "brazil",
+            "es": "brasil",
+            "pt": "brasil"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "55",
+        "onu": true
+    },
+    {
+        "codigo": 86,
+        "nome": {
+            "en": "British Indian Ocean Territory",
+            "es": "Territorio Británico del Océano Índico",
+            "pt": ""
+        },
+        "slug": {
+            "en": "british-indian-ocean-territory",
+            "es": "territorio-britnico-del-ocano-ndico",
+            "pt": ""
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 96,
+        "nome": {
+            "en": "Brunei Darussalam",
+            "es": "Brunei Darussalam",
+            "pt": "Brunei"
+        },
+        "slug": {
+            "en": "brunei-darussalam",
+            "es": "brunei-darussalam",
+            "pt": "brunei"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "673",
+        "onu": true
+    },
+    {
+        "codigo": 100,
+        "nome": {
+            "en": "Bulgaria",
+            "es": "Bulgaria",
+            "pt": "Bulgária"
+        },
+        "slug": {
+            "en": "bulgaria",
+            "es": "bulgaria",
+            "pt": "bulgria"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "359",
+        "onu": true
+    },
+    {
+        "codigo": 854,
+        "nome": {
+            "en": "Burkina Faso",
+            "es": "Burkina Faso",
+            "pt": "Burkina Faso"
+        },
+        "slug": {
+            "en": "burkina-faso",
+            "es": "burkina-faso",
+            "pt": "burkina-faso"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "226",
+        "onu": true
+    },
+    {
+        "codigo": 108,
+        "nome": {
+            "en": "Burundi",
+            "es": "Burundi",
+            "pt": "Burundi"
+        },
+        "slug": {
+            "en": "burundi",
+            "es": "burundi",
+            "pt": "burundi"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "257",
+        "onu": true
+    },
+    {
+        "codigo": 132,
+        "nome": {
+            "en": "Cabo Verde",
+            "es": "Cabo Verde",
+            "pt": "Cabo Verde"
+        },
+        "slug": {
+            "en": "cabo-verde",
+            "es": "cabo-verde",
+            "pt": "cabo-verde"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "238",
+        "onu": true
+    },
+    {
+        "codigo": 116,
+        "nome": {
+            "en": "Cambodia",
+            "es": "Camboya",
+            "pt": "Camboja"
+        },
+        "slug": {
+            "en": "cambodia",
+            "es": "camboya",
+            "pt": "camboja"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "855",
+        "onu": true
+    },
+    {
+        "codigo": 120,
+        "nome": {
+            "en": "Cameroon",
+            "es": "Camerún",
+            "pt": "Camarões"
+        },
+        "slug": {
+            "en": "cameroon",
+            "es": "camern",
+            "pt": "camares"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "237",
+        "onu": true
+    },
+    {
+        "codigo": 124,
+        "nome": {
+            "en": "Canada",
+            "es": "Canadá",
+            "pt": "Canadá "
+        },
+        "slug": {
+            "en": "canada",
+            "es": "canad",
+            "pt": "canad"
+        },
+        "parent": 21,
+        "parents": {
+            "continente": 19,
+            "regiao": 21,
+            "subregiao": ""
+        },
+        "ddi": "1",
+        "onu": true
+    },
+    {
+        "codigo": 136,
+        "nome": {
+            "en": "Cayman Islands",
+            "es": "Islas Caimán",
+            "pt": ""
+        },
+        "slug": {
+            "en": "cayman-islands",
+            "es": "islas-caimn",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 140,
+        "nome": {
+            "en": "Central African Republic",
+            "es": "República Centroafricana",
+            "pt": "República Centro Africana"
+        },
+        "slug": {
+            "en": "central-african-republic",
+            "es": "repblica-centroafricana",
+            "pt": "repblica-centro-africana"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "236",
+        "onu": true
+    },
+    {
+        "codigo": 148,
+        "nome": {
+            "en": "Chad",
+            "es": "Chad",
+            "pt": "Chade"
+        },
+        "slug": {
+            "en": "chad",
+            "es": "chad",
+            "pt": "chade"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "235",
+        "onu": true
+    },
+    {
+        "codigo": 152,
+        "nome": {
+            "en": "Chile",
+            "es": "Chile",
+            "pt": "Chile"
+        },
+        "slug": {
+            "en": "chile",
+            "es": "chile",
+            "pt": "chile"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "56",
+        "onu": true
+    },
+    {
+        "codigo": 156,
+        "nome": {
+            "en": "China",
+            "es": "China",
+            "pt": "China"
+        },
+        "slug": {
+            "en": "china",
+            "es": "china",
+            "pt": "china"
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "86",
+        "onu": true
+    },
+    {
+        "codigo": 162,
+        "nome": {
+            "en": "Christmas Island",
+            "es": "Isla de Navidad",
+            "pt": ""
+        },
+        "slug": {
+            "en": "christmas-island",
+            "es": "isla-de-navidad",
+            "pt": ""
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 166,
+        "nome": {
+            "en": "Cocos (Keeling) Islands",
+            "es": "Islas Cocos (Keeling)",
+            "pt": ""
+        },
+        "slug": {
+            "en": "cocos-keeling-islands",
+            "es": "islas-cocos-keeling",
+            "pt": ""
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 170,
+        "nome": {
+            "en": "Colombia",
+            "es": "Colombia",
+            "pt": "Colômbia"
+        },
+        "slug": {
+            "en": "colombia",
+            "es": "colombia",
+            "pt": "colmbia"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "57",
+        "onu": true
+    },
+    {
+        "codigo": 174,
+        "nome": {
+            "en": "Comoros",
+            "es": "Comoras",
+            "pt": "Comores"
+        },
+        "slug": {
+            "en": "comoros",
+            "es": "comoras",
+            "pt": "comores"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "269",
+        "onu": true
+    },
+    {
+        "codigo": 180,
+        "nome": {
+            "en": "Democratic Republic of the Congo",
+            "es": "República Democrática del Congo",
+            "pt": "República Democrática do Congo"
+        },
+        "slug": {
+            "en": "democratic-republic-of-the-congo",
+            "es": "repblica-democrtica-del-congo",
+            "pt": "repblica-democrtica-do-congo"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "243",
+        "onu": true
+    },
+    {
+        "codigo": 178,
+        "nome": {
+            "en": "Congo",
+            "es": "Congo",
+            "pt": "Congo"
+        },
+        "slug": {
+            "en": "congo",
+            "es": "congo",
+            "pt": "congo"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "242",
+        "onu": true
+    },
+    {
+        "codigo": 184,
+        "nome": {
+            "en": "Cook Islands",
+            "es": "Islas Cook",
+            "pt": ""
+        },
+        "slug": {
+            "en": "cook-islands",
+            "es": "islas-cook",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 188,
+        "nome": {
+            "en": "Costa Rica",
+            "es": "Costa Rica",
+            "pt": "Costa Rica"
+        },
+        "slug": {
+            "en": "costa-rica",
+            "es": "costa-rica",
+            "pt": "costa-rica"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "506",
+        "onu": true
+    },
+    {
+        "codigo": 384,
+        "nome": {
+            "en": "Côte d'Ivoire",
+            "es": "Côte d'Ivoire",
+            "pt": "Costa do Marfim"
+        },
+        "slug": {
+            "en": "cte-divoire",
+            "es": "cte-divoire",
+            "pt": "costa-do-marfim"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "225",
+        "onu": true
+    },
+    {
+        "codigo": 191,
+        "nome": {
+            "en": "Croatia",
+            "es": "Croacia",
+            "pt": "Croácia"
+        },
+        "slug": {
+            "en": "croatia",
+            "es": "croacia",
+            "pt": "crocia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "385",
+        "onu": true
+    },
+    {
+        "codigo": 192,
+        "nome": {
+            "en": "Cuba",
+            "es": "Cuba",
+            "pt": "Cuba"
+        },
+        "slug": {
+            "en": "cuba",
+            "es": "cuba",
+            "pt": "cuba"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "53",
+        "onu": true
+    },
+    {
+        "codigo": 531,
+        "nome": {
+            "en": "Curaçao",
+            "es": "Curaçao",
+            "pt": ""
+        },
+        "slug": {
+            "en": "curaao",
+            "es": "curaao",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 196,
+        "nome": {
+            "en": "Cyprus",
+            "es": "Chipre",
+            "pt": "Chipre"
+        },
+        "slug": {
+            "en": "cyprus",
+            "es": "chipre",
+            "pt": "chipre"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "357",
+        "onu": true
+    },
+    {
+        "codigo": 203,
+        "nome": {
+            "en": "Czechia",
+            "es": "Chequia",
+            "pt": "República Tcheca"
+        },
+        "slug": {
+            "en": "czechia",
+            "es": "chequia",
+            "pt": "repblica-tcheca"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "420",
+        "onu": false
+    },
+    {
+        "codigo": 208,
+        "nome": {
+            "en": "Denmark",
+            "es": "Dinamarca",
+            "pt": "Dinamarca"
+        },
+        "slug": {
+            "en": "denmark",
+            "es": "dinamarca",
+            "pt": "dinamarca"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "45",
+        "onu": true
+    },
+    {
+        "codigo": 262,
+        "nome": {
+            "en": "Djibouti",
+            "es": "Djibouti",
+            "pt": "Djibuti"
+        },
+        "slug": {
+            "en": "djibouti",
+            "es": "djibouti",
+            "pt": "djibuti"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "253",
+        "onu": true
+    },
+    {
+        "codigo": 212,
+        "nome": {
+            "en": "Dominica",
+            "es": "Dominica",
+            "pt": "Dominica"
+        },
+        "slug": {
+            "en": "dominica",
+            "es": "dominica",
+            "pt": "dominica"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-767",
+        "onu": true
+    },
+    {
+        "codigo": 214,
+        "nome": {
+            "en": "Dominican Republic",
+            "es": "República Dominicana",
+            "pt": "República Dominicana"
+        },
+        "slug": {
+            "en": "dominican-republic",
+            "es": "repblica-dominicana",
+            "pt": "repblica-dominicana"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-809,1-829,1-849",
+        "onu": true
+    },
+    {
+        "codigo": 218,
+        "nome": {
+            "en": "Ecuador",
+            "es": "Ecuador",
+            "pt": "Equador"
+        },
+        "slug": {
+            "en": "ecuador",
+            "es": "ecuador",
+            "pt": "equador"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "593",
+        "onu": true
+    },
+    {
+        "codigo": 818,
+        "nome": {
+            "en": "Egypt",
+            "es": "Egipto",
+            "pt": "Egito"
+        },
+        "slug": {
+            "en": "egypt",
+            "es": "egipto",
+            "pt": "egito"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "20",
+        "onu": true
+    },
+    {
+        "codigo": 222,
+        "nome": {
+            "en": "El Salvador",
+            "es": "El Salvador",
+            "pt": "El Salvador"
+        },
+        "slug": {
+            "en": "el-salvador",
+            "es": "el-salvador",
+            "pt": "el-salvador"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "503",
+        "onu": true
+    },
+    {
+        "codigo": 226,
+        "nome": {
+            "en": "Equatorial Guinea",
+            "es": "Guinea Ecuatorial",
+            "pt": "Guiné Equatorial"
+        },
+        "slug": {
+            "en": "equatorial-guinea",
+            "es": "guinea-ecuatorial",
+            "pt": "guin-equatorial"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "240",
+        "onu": true
+    },
+    {
+        "codigo": 232,
+        "nome": {
+            "en": "Eritrea",
+            "es": "Eritrea",
+            "pt": "Eritreia"
+        },
+        "slug": {
+            "en": "eritrea",
+            "es": "eritrea",
+            "pt": "eritreia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "291",
+        "onu": true
+    },
+    {
+        "codigo": 233,
+        "nome": {
+            "en": "Estonia",
+            "es": "Estonia",
+            "pt": "Estônia"
+        },
+        "slug": {
+            "en": "estonia",
+            "es": "estonia",
+            "pt": "estnia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "372",
+        "onu": true
+    },
+    {
+        "codigo": 231,
+        "nome": {
+            "en": "Ethiopia",
+            "es": "Etiopía",
+            "pt": "Etiópia"
+        },
+        "slug": {
+            "en": "ethiopia",
+            "es": "etiopa",
+            "pt": "etipia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "251",
+        "onu": true
+    },
+    {
+        "codigo": 238,
+        "nome": {
+            "en": "Falkland Islands (Malvinas)",
+            "es": "Islas Malvinas (Falkland)",
+            "pt": ""
+        },
+        "slug": {
+            "en": "falkland-islands-malvinas",
+            "es": "islas-malvinas-falkland",
+            "pt": ""
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 234,
+        "nome": {
+            "en": "Faroe Islands",
+            "es": "Islas Feroe",
+            "pt": ""
+        },
+        "slug": {
+            "en": "faroe-islands",
+            "es": "islas-feroe",
+            "pt": ""
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 242,
+        "nome": {
+            "en": "Fiji",
+            "es": "Fiji",
+            "pt": "Fiji"
+        },
+        "slug": {
+            "en": "fiji",
+            "es": "fiji",
+            "pt": "fiji"
+        },
+        "parent": 54,
+        "parents": {
+            "continente": 9,
+            "regiao": 54,
+            "subregiao": ""
+        },
+        "ddi": "679",
+        "onu": true
+    },
+    {
+        "codigo": 246,
+        "nome": {
+            "en": "Finland",
+            "es": "Finlandia",
+            "pt": "Finlândia"
+        },
+        "slug": {
+            "en": "finland",
+            "es": "finlandia",
+            "pt": "finlndia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "358",
+        "onu": true
+    },
+    {
+        "codigo": 250,
+        "nome": {
+            "en": "France",
+            "es": "Francia",
+            "pt": "França"
+        },
+        "slug": {
+            "en": "france",
+            "es": "francia",
+            "pt": "frana"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "33",
+        "onu": true
+    },
+    {
+        "codigo": 254,
+        "nome": {
+            "en": "French Guiana",
+            "es": "Guayana Francesa",
+            "pt": ""
+        },
+        "slug": {
+            "en": "french-guiana",
+            "es": "guayana-francesa",
+            "pt": ""
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 258,
+        "nome": {
+            "en": "French Polynesia",
+            "es": "Polinesia Francesa",
+            "pt": ""
+        },
+        "slug": {
+            "en": "french-polynesia",
+            "es": "polinesia-francesa",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 260,
+        "nome": {
+            "en": "French Southern Territories",
+            "es": "Territorio de las Tierras Australes Francesas",
+            "pt": ""
+        },
+        "slug": {
+            "en": "french-southern-territories",
+            "es": "territorio-de-las-tierras-australes-francesas",
+            "pt": ""
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 266,
+        "nome": {
+            "en": "Gabon",
+            "es": "Gabón",
+            "pt": "Gabão"
+        },
+        "slug": {
+            "en": "gabon",
+            "es": "gabn",
+            "pt": "gabo"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "241",
+        "onu": true
+    },
+    {
+        "codigo": 270,
+        "nome": {
+            "en": "Gambia",
+            "es": "Gambia",
+            "pt": "Gâmbia"
+        },
+        "slug": {
+            "en": "gambia",
+            "es": "gambia",
+            "pt": "gmbia"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "220",
+        "onu": false
+    },
+    {
+        "codigo": 268,
+        "nome": {
+            "en": "Georgia",
+            "es": "Georgia",
+            "pt": "Geórgia"
+        },
+        "slug": {
+            "en": "georgia",
+            "es": "georgia",
+            "pt": "gergia"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "995",
+        "onu": true
+    },
+    {
+        "codigo": 276,
+        "nome": {
+            "en": "Germany",
+            "es": "Alemania",
+            "pt": "Alemanha"
+        },
+        "slug": {
+            "en": "germany",
+            "es": "alemania",
+            "pt": "alemanha"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "49",
+        "onu": true
+    },
+    {
+        "codigo": 288,
+        "nome": {
+            "en": "Ghana",
+            "es": "Ghana",
+            "pt": "Gana"
+        },
+        "slug": {
+            "en": "ghana",
+            "es": "ghana",
+            "pt": "gana"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "233",
+        "onu": true
+    },
+    {
+        "codigo": 292,
+        "nome": {
+            "en": "Gibraltar",
+            "es": "Gibraltar",
+            "pt": ""
+        },
+        "slug": {
+            "en": "gibraltar",
+            "es": "gibraltar",
+            "pt": ""
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 300,
+        "nome": {
+            "en": "Greece",
+            "es": "Grecia",
+            "pt": "Grécia"
+        },
+        "slug": {
+            "en": "greece",
+            "es": "grecia",
+            "pt": "grcia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "30",
+        "onu": true
+    },
+    {
+        "codigo": 304,
+        "nome": {
+            "en": "Greenland",
+            "es": "Groenlandia",
+            "pt": ""
+        },
+        "slug": {
+            "en": "greenland",
+            "es": "groenlandia",
+            "pt": ""
+        },
+        "parent": 21,
+        "parents": {
+            "continente": 19,
+            "regiao": 21,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 308,
+        "nome": {
+            "en": "Grenada",
+            "es": "Granada",
+            "pt": "Granada"
+        },
+        "slug": {
+            "en": "grenada",
+            "es": "granada",
+            "pt": "granada"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-473",
+        "onu": true
+    },
+    {
+        "codigo": 312,
+        "nome": {
+            "en": "Guadeloupe",
+            "es": "Guadalupe",
+            "pt": ""
+        },
+        "slug": {
+            "en": "guadeloupe",
+            "es": "guadalupe",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 316,
+        "nome": {
+            "en": "Guam",
+            "es": "Guam",
+            "pt": ""
+        },
+        "slug": {
+            "en": "guam",
+            "es": "guam",
+            "pt": ""
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 320,
+        "nome": {
+            "en": "Guatemala",
+            "es": "Guatemala",
+            "pt": "Guatemala"
+        },
+        "slug": {
+            "en": "guatemala",
+            "es": "guatemala",
+            "pt": "guatemala"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "502",
+        "onu": true
+    },
+    {
+        "codigo": 831,
+        "nome": {
+            "en": "Guernsey",
+            "es": "Guernsey",
+            "pt": ""
+        },
+        "slug": {
+            "en": "guernsey",
+            "es": "guernsey",
+            "pt": ""
+        },
+        "parent": 830,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": 830
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 324,
+        "nome": {
+            "en": "Guinea",
+            "es": "Guinea",
+            "pt": "Guiné"
+        },
+        "slug": {
+            "en": "guinea",
+            "es": "guinea",
+            "pt": "guin"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "224",
+        "onu": true
+    },
+    {
+        "codigo": 624,
+        "nome": {
+            "en": "Guinea-Bissau",
+            "es": "Guinea-Bissau",
+            "pt": "Guiné-Bissau"
+        },
+        "slug": {
+            "en": "guinea-bissau",
+            "es": "guinea-bissau",
+            "pt": "guin-bissau"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "245",
+        "onu": true
+    },
+    {
+        "codigo": 328,
+        "nome": {
+            "en": "Guyana",
+            "es": "Guyana",
+            "pt": "Guiana"
+        },
+        "slug": {
+            "en": "guyana",
+            "es": "guyana",
+            "pt": "guiana"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "592",
+        "onu": true
+    },
+    {
+        "codigo": 332,
+        "nome": {
+            "en": "Haiti",
+            "es": "Haití",
+            "pt": "Haiti"
+        },
+        "slug": {
+            "en": "haiti",
+            "es": "hait",
+            "pt": "haiti"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "509",
+        "onu": true
+    },
+    {
+        "codigo": 334,
+        "nome": {
+            "en": "Heard Island and McDonald Islands",
+            "es": "Islas Heard y McDonald",
+            "pt": ""
+        },
+        "slug": {
+            "en": "heard-island-and-mcdonald-islands",
+            "es": "islas-heard-y-mcdonald",
+            "pt": ""
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 336,
+        "nome": {
+            "en": "Holy See",
+            "es": "Santa Sede",
+            "pt": ""
+        },
+        "slug": {
+            "en": "holy-see",
+            "es": "santa-sede",
+            "pt": ""
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": true
+    },
+    {
+        "codigo": 340,
+        "nome": {
+            "en": "Honduras",
+            "es": "Honduras",
+            "pt": "Honduras"
+        },
+        "slug": {
+            "en": "honduras",
+            "es": "honduras",
+            "pt": "honduras"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "504",
+        "onu": true
+    },
+    {
+        "codigo": 344,
+        "nome": {
+            "en": "China, Hong Kong Special Administrative Region",
+            "es": "China, región administrativa especial de Hong Kong",
+            "pt": ""
+        },
+        "slug": {
+            "en": "china-hong-kong-special-administrative-region",
+            "es": "china-regin-administrativa-especial-de-hong-kong",
+            "pt": ""
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 348,
+        "nome": {
+            "en": "Hungary",
+            "es": "Hungría",
+            "pt": "Hungria"
+        },
+        "slug": {
+            "en": "hungary",
+            "es": "hungra",
+            "pt": "hungria"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "36",
+        "onu": true
+    },
+    {
+        "codigo": 352,
+        "nome": {
+            "en": "Iceland",
+            "es": "Islandia",
+            "pt": "Islândia"
+        },
+        "slug": {
+            "en": "iceland",
+            "es": "islandia",
+            "pt": "islndia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "354",
+        "onu": true
+    },
+    {
+        "codigo": 356,
+        "nome": {
+            "en": "India",
+            "es": "India",
+            "pt": "Índia"
+        },
+        "slug": {
+            "en": "india",
+            "es": "india",
+            "pt": "ndia"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "91",
+        "onu": true
+    },
+    {
+        "codigo": 360,
+        "nome": {
+            "en": "Indonesia",
+            "es": "Indonesia",
+            "pt": "Indonésia"
+        },
+        "slug": {
+            "en": "indonesia",
+            "es": "indonesia",
+            "pt": "indonsia"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "62",
+        "onu": true
+    },
+    {
+        "codigo": 364,
+        "nome": {
+            "en": "Iran (Islamic Republic of)",
+            "es": "Irán (República Islámica del)",
+            "pt": "Irã"
+        },
+        "slug": {
+            "en": "iran-islamic-republic-of",
+            "es": "irn-repblica-islmica-del",
+            "pt": "ir"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "98",
+        "onu": true
+    },
+    {
+        "codigo": 368,
+        "nome": {
+            "en": "Iraq",
+            "es": "Iraq",
+            "pt": "Iraque"
+        },
+        "slug": {
+            "en": "iraq",
+            "es": "iraq",
+            "pt": "iraque"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "964",
+        "onu": true
+    },
+    {
+        "codigo": 372,
+        "nome": {
+            "en": "Ireland",
+            "es": "Irlanda",
+            "pt": "Irlanda"
+        },
+        "slug": {
+            "en": "ireland",
+            "es": "irlanda",
+            "pt": "irlanda"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "353",
+        "onu": true
+    },
+    {
+        "codigo": 833,
+        "nome": {
+            "en": "Isle of Man",
+            "es": "Isla de Man",
+            "pt": ""
+        },
+        "slug": {
+            "en": "isle-of-man",
+            "es": "isla-de-man",
+            "pt": ""
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 376,
+        "nome": {
+            "en": "Israel",
+            "es": "Israel",
+            "pt": "Israel"
+        },
+        "slug": {
+            "en": "israel",
+            "es": "israel",
+            "pt": "israel"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "972",
+        "onu": true
+    },
+    {
+        "codigo": 380,
+        "nome": {
+            "en": "Italy",
+            "es": "Italia",
+            "pt": "Itália"
+        },
+        "slug": {
+            "en": "italy",
+            "es": "italia",
+            "pt": "itlia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "39",
+        "onu": true
+    },
+    {
+        "codigo": 388,
+        "nome": {
+            "en": "Jamaica",
+            "es": "Jamaica",
+            "pt": "Jamaica"
+        },
+        "slug": {
+            "en": "jamaica",
+            "es": "jamaica",
+            "pt": "jamaica"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-876",
+        "onu": true
+    },
+    {
+        "codigo": 392,
+        "nome": {
+            "en": "Japan",
+            "es": "Japón",
+            "pt": "Japão"
+        },
+        "slug": {
+            "en": "japan",
+            "es": "japn",
+            "pt": "japo"
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "81",
+        "onu": true
+    },
+    {
+        "codigo": 832,
+        "nome": {
+            "en": "Jersey",
+            "es": "Jersey",
+            "pt": ""
+        },
+        "slug": {
+            "en": "jersey",
+            "es": "jersey",
+            "pt": ""
+        },
+        "parent": 830,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": 830
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 400,
+        "nome": {
+            "en": "Jordan",
+            "es": "Jordania",
+            "pt": "Jordânia"
+        },
+        "slug": {
+            "en": "jordan",
+            "es": "jordania",
+            "pt": "jordnia"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "962",
+        "onu": true
+    },
+    {
+        "codigo": 398,
+        "nome": {
+            "en": "Kazakhstan",
+            "es": "Kazajstán",
+            "pt": "Cazaquistão"
+        },
+        "slug": {
+            "en": "kazakhstan",
+            "es": "kazajstn",
+            "pt": "cazaquisto"
+        },
+        "parent": 143,
+        "parents": {
+            "continente": 142,
+            "regiao": 143,
+            "subregiao": ""
+        },
+        "ddi": "7",
+        "onu": true
+    },
+    {
+        "codigo": 404,
+        "nome": {
+            "en": "Kenya",
+            "es": "Kenya",
+            "pt": "Quênia"
+        },
+        "slug": {
+            "en": "kenya",
+            "es": "kenya",
+            "pt": "qunia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "254",
+        "onu": true
+    },
+    {
+        "codigo": 296,
+        "nome": {
+            "en": "Kiribati",
+            "es": "Kiribati",
+            "pt": "Kiribati"
+        },
+        "slug": {
+            "en": "kiribati",
+            "es": "kiribati",
+            "pt": "kiribati"
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "686",
+        "onu": true
+    },
+    {
+        "codigo": 408,
+        "nome": {
+            "en": "Democratic People's Republic of Korea",
+            "es": "República Popular Democrática de Corea",
+            "pt": "República Popular Democrática da Coreia"
+        },
+        "slug": {
+            "en": "democratic-peoples-republic-of-korea",
+            "es": "repblica-popular-democrtica-de-corea",
+            "pt": "repblica-popular-democrtica-da-coreia"
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "850",
+        "onu": true
+    },
+    {
+        "codigo": 410,
+        "nome": {
+            "en": "Republic of Korea",
+            "es": "República de Corea",
+            "pt": "República da Coreia"
+        },
+        "slug": {
+            "en": "republic-of-korea",
+            "es": "repblica-de-corea",
+            "pt": "repblica-da-coreia"
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "82",
+        "onu": true
+    },
+    {
+        "codigo": 414,
+        "nome": {
+            "en": "Kuwait",
+            "es": "Kuwait",
+            "pt": "Kuwait"
+        },
+        "slug": {
+            "en": "kuwait",
+            "es": "kuwait",
+            "pt": "kuwait"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "965",
+        "onu": true
+    },
+    {
+        "codigo": 417,
+        "nome": {
+            "en": "Kyrgyzstan",
+            "es": "Kirguistán",
+            "pt": "Quirguistão"
+        },
+        "slug": {
+            "en": "kyrgyzstan",
+            "es": "kirguistn",
+            "pt": "quirguisto"
+        },
+        "parent": 143,
+        "parents": {
+            "continente": 142,
+            "regiao": 143,
+            "subregiao": ""
+        },
+        "ddi": "996",
+        "onu": true
+    },
+    {
+        "codigo": 418,
+        "nome": {
+            "en": "Lao People's Democratic Republic",
+            "es": "República Democrática Popular Lao",
+            "pt": "Laos"
+        },
+        "slug": {
+            "en": "lao-peoples-democratic-republic",
+            "es": "repblica-democrtica-popular-lao",
+            "pt": "laos"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "856",
+        "onu": true
+    },
+    {
+        "codigo": 428,
+        "nome": {
+            "en": "Latvia",
+            "es": "Letonia",
+            "pt": "Letônia"
+        },
+        "slug": {
+            "en": "latvia",
+            "es": "letonia",
+            "pt": "letnia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "371",
+        "onu": true
+    },
+    {
+        "codigo": 422,
+        "nome": {
+            "en": "Lebanon",
+            "es": "Líbano",
+            "pt": "Líbano"
+        },
+        "slug": {
+            "en": "lebanon",
+            "es": "lbano",
+            "pt": "lbano"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "961",
+        "onu": true
+    },
+    {
+        "codigo": 426,
+        "nome": {
+            "en": "Lesotho",
+            "es": "Lesotho",
+            "pt": "Lesoto"
+        },
+        "slug": {
+            "en": "lesotho",
+            "es": "lesotho",
+            "pt": "lesoto"
+        },
+        "parent": 18,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 18
+        },
+        "ddi": "266",
+        "onu": true
+    },
+    {
+        "codigo": 430,
+        "nome": {
+            "en": "Liberia",
+            "es": "Liberia",
+            "pt": "Libéria"
+        },
+        "slug": {
+            "en": "liberia",
+            "es": "liberia",
+            "pt": "libria"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "231",
+        "onu": true
+    },
+    {
+        "codigo": 434,
+        "nome": {
+            "en": "Libya",
+            "es": "Libia",
+            "pt": "Líbia"
+        },
+        "slug": {
+            "en": "libya",
+            "es": "libia",
+            "pt": "lbia"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "218",
+        "onu": true
+    },
+    {
+        "codigo": 438,
+        "nome": {
+            "en": "Liechtenstein",
+            "es": "Liechtenstein",
+            "pt": "Liechtenstein"
+        },
+        "slug": {
+            "en": "liechtenstein",
+            "es": "liechtenstein",
+            "pt": "liechtenstein"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "423",
+        "onu": true
+    },
+    {
+        "codigo": 440,
+        "nome": {
+            "en": "Lithuania",
+            "es": "Lituania",
+            "pt": "Lituânia"
+        },
+        "slug": {
+            "en": "lithuania",
+            "es": "lituania",
+            "pt": "litunia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "370",
+        "onu": true
+    },
+    {
+        "codigo": 442,
+        "nome": {
+            "en": "Luxembourg",
+            "es": "Luxemburgo",
+            "pt": "Luxemburgo"
+        },
+        "slug": {
+            "en": "luxembourg",
+            "es": "luxemburgo",
+            "pt": "luxemburgo"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "352",
+        "onu": true
+    },
+    {
+        "codigo": 446,
+        "nome": {
+            "en": "China, Macao Special Administrative Region",
+            "es": "China, región administrativa especial de Macao",
+            "pt": ""
+        },
+        "slug": {
+            "en": "china-macao-special-administrative-region",
+            "es": "china-regin-administrativa-especial-de-macao",
+            "pt": ""
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 807,
+        "nome": {
+            "en": "The former Yugoslav Republic of Macedonia",
+            "es": "ex República Yugoslava de Macedonia",
+            "pt": "Macedônia"
+        },
+        "slug": {
+            "en": "the-former-yugoslav-republic-of-macedonia",
+            "es": "ex-repblica-yugoslava-de-macedonia",
+            "pt": "macednia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "389",
+        "onu": true
+    },
+    {
+        "codigo": 450,
+        "nome": {
+            "en": "Madagascar",
+            "es": "Madagascar",
+            "pt": "Madagascar"
+        },
+        "slug": {
+            "en": "madagascar",
+            "es": "madagascar",
+            "pt": "madagascar"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "261",
+        "onu": true
+    },
+    {
+        "codigo": 454,
+        "nome": {
+            "en": "Malawi",
+            "es": "Malawi",
+            "pt": "Malawi"
+        },
+        "slug": {
+            "en": "malawi",
+            "es": "malawi",
+            "pt": "malawi"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "265",
+        "onu": true
+    },
+    {
+        "codigo": 458,
+        "nome": {
+            "en": "Malaysia",
+            "es": "Malasia",
+            "pt": "Malásia"
+        },
+        "slug": {
+            "en": "malaysia",
+            "es": "malasia",
+            "pt": "malsia"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "60",
+        "onu": true
+    },
+    {
+        "codigo": 462,
+        "nome": {
+            "en": "Maldives",
+            "es": "Maldivas",
+            "pt": "Maldivas"
+        },
+        "slug": {
+            "en": "maldives",
+            "es": "maldivas",
+            "pt": "maldivas"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "960",
+        "onu": true
+    },
+    {
+        "codigo": 466,
+        "nome": {
+            "en": "Mali",
+            "es": "Malí",
+            "pt": "Mali"
+        },
+        "slug": {
+            "en": "mali",
+            "es": "mal",
+            "pt": "mali"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "223",
+        "onu": true
+    },
+    {
+        "codigo": 470,
+        "nome": {
+            "en": "Malta",
+            "es": "Malta",
+            "pt": "Malta"
+        },
+        "slug": {
+            "en": "malta",
+            "es": "malta",
+            "pt": "malta"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "356",
+        "onu": true
+    },
+    {
+        "codigo": 584,
+        "nome": {
+            "en": "Marshall Islands",
+            "es": "Islas Marshall",
+            "pt": "Ilhas Marshall"
+        },
+        "slug": {
+            "en": "marshall-islands",
+            "es": "islas-marshall",
+            "pt": "ilhas-marshall"
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "692",
+        "onu": true
+    },
+    {
+        "codigo": 474,
+        "nome": {
+            "en": "Martinique",
+            "es": "Martinica",
+            "pt": ""
+        },
+        "slug": {
+            "en": "martinique",
+            "es": "martinica",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 478,
+        "nome": {
+            "en": "Mauritania",
+            "es": "Mauritania",
+            "pt": "Mauritânia"
+        },
+        "slug": {
+            "en": "mauritania",
+            "es": "mauritania",
+            "pt": "mauritnia"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "222",
+        "onu": true
+    },
+    {
+        "codigo": 480,
+        "nome": {
+            "en": "Mauritius",
+            "es": "Mauricio",
+            "pt": "Maurício"
+        },
+        "slug": {
+            "en": "mauritius",
+            "es": "mauricio",
+            "pt": "maurcio"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "230",
+        "onu": true
+    },
+    {
+        "codigo": 175,
+        "nome": {
+            "en": "Mayotte",
+            "es": "Mayotte",
+            "pt": ""
+        },
+        "slug": {
+            "en": "mayotte",
+            "es": "mayotte",
+            "pt": ""
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 484,
+        "nome": {
+            "en": "Mexico",
+            "es": "México",
+            "pt": "México"
+        },
+        "slug": {
+            "en": "mexico",
+            "es": "mxico",
+            "pt": "mxico"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "52",
+        "onu": true
+    },
+    {
+        "codigo": 583,
+        "nome": {
+            "en": "Micronesia (Federated States of)",
+            "es": "Micronesia (Estados Federados de)",
+            "pt": "Federação dos Estados da Micronésia"
+        },
+        "slug": {
+            "en": "micronesia-federated-states-of",
+            "es": "micronesia-estados-federados-de",
+            "pt": "federao-dos-estados-da-micronsia"
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "691",
+        "onu": true
+    },
+    {
+        "codigo": 498,
+        "nome": {
+            "en": "Republic of Moldova",
+            "es": "República de Moldova",
+            "pt": "Moldávia"
+        },
+        "slug": {
+            "en": "republic-of-moldova",
+            "es": "repblica-de-moldova",
+            "pt": "moldvia"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "373",
+        "onu": true
+    },
+    {
+        "codigo": 492,
+        "nome": {
+            "en": "Monaco",
+            "es": "Mónaco",
+            "pt": "Mônaco"
+        },
+        "slug": {
+            "en": "monaco",
+            "es": "mnaco",
+            "pt": "mnaco"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "377",
+        "onu": true
+    },
+    {
+        "codigo": 496,
+        "nome": {
+            "en": "Mongolia",
+            "es": "Mongolia",
+            "pt": "Mongólia"
+        },
+        "slug": {
+            "en": "mongolia",
+            "es": "mongolia",
+            "pt": "monglia"
+        },
+        "parent": 30,
+        "parents": {
+            "continente": 142,
+            "regiao": 30,
+            "subregiao": ""
+        },
+        "ddi": "976",
+        "onu": true
+    },
+    {
+        "codigo": 499,
+        "nome": {
+            "en": "Montenegro",
+            "es": "Montenegro",
+            "pt": "Montenegro"
+        },
+        "slug": {
+            "en": "montenegro",
+            "es": "montenegro",
+            "pt": "montenegro"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "382",
+        "onu": true
+    },
+    {
+        "codigo": 500,
+        "nome": {
+            "en": "Montserrat",
+            "es": "Montserrat",
+            "pt": ""
+        },
+        "slug": {
+            "en": "montserrat",
+            "es": "montserrat",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 504,
+        "nome": {
+            "en": "Morocco",
+            "es": "Marruecos",
+            "pt": "Marrocos"
+        },
+        "slug": {
+            "en": "morocco",
+            "es": "marruecos",
+            "pt": "marrocos"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "212",
+        "onu": true
+    },
+    {
+        "codigo": 508,
+        "nome": {
+            "en": "Mozambique",
+            "es": "Mozambique",
+            "pt": "Moçambique"
+        },
+        "slug": {
+            "en": "mozambique",
+            "es": "mozambique",
+            "pt": "moambique"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "258",
+        "onu": true
+    },
+    {
+        "codigo": 104,
+        "nome": {
+            "en": "Myanmar",
+            "es": "Myanmar",
+            "pt": "Mianmar"
+        },
+        "slug": {
+            "en": "myanmar",
+            "es": "myanmar",
+            "pt": "mianmar"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "95",
+        "onu": true
+    },
+    {
+        "codigo": 516,
+        "nome": {
+            "en": "Namibia",
+            "es": "Namibia",
+            "pt": "Namíbia"
+        },
+        "slug": {
+            "en": "namibia",
+            "es": "namibia",
+            "pt": "nambia"
+        },
+        "parent": 18,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 18
+        },
+        "ddi": "264",
+        "onu": true
+    },
+    {
+        "codigo": 520,
+        "nome": {
+            "en": "Nauru",
+            "es": "Nauru",
+            "pt": "Nauru"
+        },
+        "slug": {
+            "en": "nauru",
+            "es": "nauru",
+            "pt": "nauru"
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "674",
+        "onu": true
+    },
+    {
+        "codigo": 524,
+        "nome": {
+            "en": "Nepal",
+            "es": "Nepal",
+            "pt": "Nepal"
+        },
+        "slug": {
+            "en": "nepal",
+            "es": "nepal",
+            "pt": "nepal"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "977",
+        "onu": true
+    },
+    {
+        "codigo": 528,
+        "nome": {
+            "en": "Netherlands",
+            "es": "Países Bajos",
+            "pt": "Holanda"
+        },
+        "slug": {
+            "en": "netherlands",
+            "es": "pases-bajos",
+            "pt": "holanda"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "31",
+        "onu": true
+    },
+    {
+        "codigo": 540,
+        "nome": {
+            "en": "New Caledonia",
+            "es": "Nueva Caledonia",
+            "pt": ""
+        },
+        "slug": {
+            "en": "new-caledonia",
+            "es": "nueva-caledonia",
+            "pt": ""
+        },
+        "parent": 54,
+        "parents": {
+            "continente": 9,
+            "regiao": 54,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 554,
+        "nome": {
+            "en": "New Zealand",
+            "es": "Nueva Zelandia",
+            "pt": "Nova Zelândia"
+        },
+        "slug": {
+            "en": "new-zealand",
+            "es": "nueva-zelandia",
+            "pt": "nova-zelndia"
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "64",
+        "onu": true
+    },
+    {
+        "codigo": 558,
+        "nome": {
+            "en": "Nicaragua",
+            "es": "Nicaragua",
+            "pt": "Nicarágua"
+        },
+        "slug": {
+            "en": "nicaragua",
+            "es": "nicaragua",
+            "pt": "nicargua"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "505",
+        "onu": true
+    },
+    {
+        "codigo": 562,
+        "nome": {
+            "en": "Niger",
+            "es": "Níger",
+            "pt": "Níger"
+        },
+        "slug": {
+            "en": "niger",
+            "es": "nger",
+            "pt": "nger"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "227",
+        "onu": true
+    },
+    {
+        "codigo": 566,
+        "nome": {
+            "en": "Nigeria",
+            "es": "Nigeria",
+            "pt": "Nigéria"
+        },
+        "slug": {
+            "en": "nigeria",
+            "es": "nigeria",
+            "pt": "nigria"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "234",
+        "onu": true
+    },
+    {
+        "codigo": 570,
+        "nome": {
+            "en": "Niue",
+            "es": "Niue",
+            "pt": ""
+        },
+        "slug": {
+            "en": "niue",
+            "es": "niue",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 574,
+        "nome": {
+            "en": "Norfolk Island",
+            "es": "Islas Norfolk",
+            "pt": ""
+        },
+        "slug": {
+            "en": "norfolk-island",
+            "es": "islas-norfolk",
+            "pt": ""
+        },
+        "parent": 53,
+        "parents": {
+            "continente": 9,
+            "regiao": 53,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 580,
+        "nome": {
+            "en": "Northern Mariana Islands",
+            "es": "Islas Marianas Septentrionales",
+            "pt": ""
+        },
+        "slug": {
+            "en": "northern-mariana-islands",
+            "es": "islas-marianas-septentrionales",
+            "pt": ""
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 578,
+        "nome": {
+            "en": "Norway",
+            "es": "Noruega",
+            "pt": "Noruega"
+        },
+        "slug": {
+            "en": "norway",
+            "es": "noruega",
+            "pt": "noruega"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "47",
+        "onu": true
+    },
+    {
+        "codigo": 512,
+        "nome": {
+            "en": "Oman",
+            "es": "Omán",
+            "pt": "Omã"
+        },
+        "slug": {
+            "en": "oman",
+            "es": "omn",
+            "pt": "om"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "968",
+        "onu": true
+    },
+    {
+        "codigo": 586,
+        "nome": {
+            "en": "Pakistan",
+            "es": "Pakistán",
+            "pt": "Paquistão"
+        },
+        "slug": {
+            "en": "pakistan",
+            "es": "pakistn",
+            "pt": "paquisto"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "92",
+        "onu": true
+    },
+    {
+        "codigo": 585,
+        "nome": {
+            "en": "Palau",
+            "es": "Palau",
+            "pt": "Palau"
+        },
+        "slug": {
+            "en": "palau",
+            "es": "palau",
+            "pt": "palau"
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "680",
+        "onu": true
+    },
+    {
+        "codigo": 275,
+        "nome": {
+            "en": "State of Palestine",
+            "es": "Estado de Palestina",
+            "pt": ""
+        },
+        "slug": {
+            "en": "state-of-palestine",
+            "es": "estado-de-palestina",
+            "pt": ""
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": true
+    },
+    {
+        "codigo": 591,
+        "nome": {
+            "en": "Panama",
+            "es": "Panamá",
+            "pt": "Panamá "
+        },
+        "slug": {
+            "en": "panama",
+            "es": "panam",
+            "pt": "panam"
+        },
+        "parent": 13,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 13
+        },
+        "ddi": "507",
+        "onu": true
+    },
+    {
+        "codigo": 598,
+        "nome": {
+            "en": "Papua New Guinea",
+            "es": "Papua Nueva Guinea",
+            "pt": "Papua Nova Guiné"
+        },
+        "slug": {
+            "en": "papua-new-guinea",
+            "es": "papua-nueva-guinea",
+            "pt": "papua-nova-guin"
+        },
+        "parent": 54,
+        "parents": {
+            "continente": 9,
+            "regiao": 54,
+            "subregiao": ""
+        },
+        "ddi": "675",
+        "onu": true
+    },
+    {
+        "codigo": 600,
+        "nome": {
+            "en": "Paraguay",
+            "es": "Paraguay",
+            "pt": "Paraguai"
+        },
+        "slug": {
+            "en": "paraguay",
+            "es": "paraguay",
+            "pt": "paraguai"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "595",
+        "onu": true
+    },
+    {
+        "codigo": 604,
+        "nome": {
+            "en": "Peru",
+            "es": "Perú",
+            "pt": "Peru"
+        },
+        "slug": {
+            "en": "peru",
+            "es": "per",
+            "pt": "peru"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "51",
+        "onu": true
+    },
+    {
+        "codigo": 608,
+        "nome": {
+            "en": "Philippines",
+            "es": "Filipinas",
+            "pt": "Filipinas"
+        },
+        "slug": {
+            "en": "philippines",
+            "es": "filipinas",
+            "pt": "filipinas"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "63",
+        "onu": true
+    },
+    {
+        "codigo": 612,
+        "nome": {
+            "en": "Pitcairn",
+            "es": "Pitcairn",
+            "pt": ""
+        },
+        "slug": {
+            "en": "pitcairn",
+            "es": "pitcairn",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 616,
+        "nome": {
+            "en": "Poland",
+            "es": "Polonia",
+            "pt": "Polônia"
+        },
+        "slug": {
+            "en": "poland",
+            "es": "polonia",
+            "pt": "polnia"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "48",
+        "onu": true
+    },
+    {
+        "codigo": 620,
+        "nome": {
+            "en": "Portugal",
+            "es": "Portugal",
+            "pt": "Portugal"
+        },
+        "slug": {
+            "en": "portugal",
+            "es": "portugal",
+            "pt": "portugal"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "351",
+        "onu": true
+    },
+    {
+        "codigo": 630,
+        "nome": {
+            "en": "Puerto Rico",
+            "es": "Puerto Rico",
+            "pt": ""
+        },
+        "slug": {
+            "en": "puerto-rico",
+            "es": "puerto-rico",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 634,
+        "nome": {
+            "en": "Qatar",
+            "es": "Qatar",
+            "pt": "Catar"
+        },
+        "slug": {
+            "en": "qatar",
+            "es": "qatar",
+            "pt": "catar"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "974",
+        "onu": true
+    },
+    {
+        "codigo": 638,
+        "nome": {
+            "en": "Réunion",
+            "es": "Reunión",
+            "pt": ""
+        },
+        "slug": {
+            "en": "runion",
+            "es": "reunin",
+            "pt": ""
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 642,
+        "nome": {
+            "en": "Romania",
+            "es": "Rumania",
+            "pt": "Romênia"
+        },
+        "slug": {
+            "en": "romania",
+            "es": "rumania",
+            "pt": "romnia"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "40",
+        "onu": true
+    },
+    {
+        "codigo": 643,
+        "nome": {
+            "en": "Russian Federation",
+            "es": "Federación de Rusia",
+            "pt": "Federação Russa"
+        },
+        "slug": {
+            "en": "russian-federation",
+            "es": "federacin-de-rusia",
+            "pt": "federao-russa"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "7",
+        "onu": true
+    },
+    {
+        "codigo": 646,
+        "nome": {
+            "en": "Rwanda",
+            "es": "Rwanda",
+            "pt": "Ruanda"
+        },
+        "slug": {
+            "en": "rwanda",
+            "es": "rwanda",
+            "pt": "ruanda"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "250",
+        "onu": true
+    },
+    {
+        "codigo": 652,
+        "nome": {
+            "en": "Saint Barthélemy",
+            "es": "San Bartolomé",
+            "pt": ""
+        },
+        "slug": {
+            "en": "saint-barthlemy",
+            "es": "san-bartolom",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 654,
+        "nome": {
+            "en": "Saint Helena",
+            "es": "Santa Elena",
+            "pt": ""
+        },
+        "slug": {
+            "en": "saint-helena",
+            "es": "santa-elena",
+            "pt": ""
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 659,
+        "nome": {
+            "en": "Saint Kitts and Nevis",
+            "es": "Saint Kitts y Nevis",
+            "pt": "São Cristóvão e Névis"
+        },
+        "slug": {
+            "en": "saint-kitts-and-nevis",
+            "es": "saint-kitts-y-nevis",
+            "pt": "so-cristvo-e-nvis"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-869",
+        "onu": true
+    },
+    {
+        "codigo": 662,
+        "nome": {
+            "en": "Saint Lucia",
+            "es": "Santa Lucía",
+            "pt": "Santa Lúcia"
+        },
+        "slug": {
+            "en": "saint-lucia",
+            "es": "santa-luca",
+            "pt": "santa-lcia"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-758",
+        "onu": true
+    },
+    {
+        "codigo": 663,
+        "nome": {
+            "en": "Saint Martin (French Part)",
+            "es": "San Martín (parte francesa)",
+            "pt": ""
+        },
+        "slug": {
+            "en": "saint-martin-french-part",
+            "es": "san-martn-parte-francesa",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 666,
+        "nome": {
+            "en": "Saint Pierre and Miquelon",
+            "es": "Saint Pierre y Miquelon",
+            "pt": ""
+        },
+        "slug": {
+            "en": "saint-pierre-and-miquelon",
+            "es": "saint-pierre-y-miquelon",
+            "pt": ""
+        },
+        "parent": 21,
+        "parents": {
+            "continente": 19,
+            "regiao": 21,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 670,
+        "nome": {
+            "en": "Saint Vincent and the Grenadines",
+            "es": "San Vicente y las Granadinas",
+            "pt": "São Vicente e Granadinas"
+        },
+        "slug": {
+            "en": "saint-vincent-and-the-grenadines",
+            "es": "san-vicente-y-las-granadinas",
+            "pt": "so-vicente-e-granadinas"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-784",
+        "onu": true
+    },
+    {
+        "codigo": 882,
+        "nome": {
+            "en": "Samoa",
+            "es": "Samoa",
+            "pt": "Samoa"
+        },
+        "slug": {
+            "en": "samoa",
+            "es": "samoa",
+            "pt": "samoa"
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "685",
+        "onu": true
+    },
+    {
+        "codigo": 674,
+        "nome": {
+            "en": "San Marino",
+            "es": "San Marino",
+            "pt": "San Marino"
+        },
+        "slug": {
+            "en": "san-marino",
+            "es": "san-marino",
+            "pt": "san-marino"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "378",
+        "onu": true
+    },
+    {
+        "codigo": 678,
+        "nome": {
+            "en": "Sao Tome and Principe",
+            "es": "Santo Tomé y Príncipe",
+            "pt": "São Tomé e Príncipe"
+        },
+        "slug": {
+            "en": "sao-tome-and-principe",
+            "es": "santo-tom-y-prncipe",
+            "pt": "so-tom-e-prncipe"
+        },
+        "parent": 17,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 17
+        },
+        "ddi": "239",
+        "onu": true
+    },
+    {
+        "codigo": 682,
+        "nome": {
+            "en": "Saudi Arabia",
+            "es": "Arabia Saudita",
+            "pt": "Arábia Saudita"
+        },
+        "slug": {
+            "en": "saudi-arabia",
+            "es": "arabia-saudita",
+            "pt": "arbia-saudita"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "966",
+        "onu": true
+    },
+    {
+        "codigo": 686,
+        "nome": {
+            "en": "Senegal",
+            "es": "Senegal",
+            "pt": "Senegal"
+        },
+        "slug": {
+            "en": "senegal",
+            "es": "senegal",
+            "pt": "senegal"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "221",
+        "onu": true
+    },
+    {
+        "codigo": 688,
+        "nome": {
+            "en": "Serbia",
+            "es": "Serbia",
+            "pt": "Sérvia"
+        },
+        "slug": {
+            "en": "serbia",
+            "es": "serbia",
+            "pt": "srvia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "381",
+        "onu": true
+    },
+    {
+        "codigo": 690,
+        "nome": {
+            "en": "Seychelles",
+            "es": "Seychelles",
+            "pt": "Seychelles"
+        },
+        "slug": {
+            "en": "seychelles",
+            "es": "seychelles",
+            "pt": "seychelles"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "248",
+        "onu": true
+    },
+    {
+        "codigo": 694,
+        "nome": {
+            "en": "Sierra Leone",
+            "es": "Sierra Leona",
+            "pt": "Serra Leoa"
+        },
+        "slug": {
+            "en": "sierra-leone",
+            "es": "sierra-leona",
+            "pt": "serra-leoa"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "232",
+        "onu": true
+    },
+    {
+        "codigo": 702,
+        "nome": {
+            "en": "Singapore",
+            "es": "Singapur",
+            "pt": "Cingapura"
+        },
+        "slug": {
+            "en": "singapore",
+            "es": "singapur",
+            "pt": "cingapura"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "65",
+        "onu": true
+    },
+    {
+        "codigo": 534,
+        "nome": {
+            "en": "Sint Maarten (Dutch part)",
+            "es": "San Martín (parte holandés)",
+            "pt": ""
+        },
+        "slug": {
+            "en": "sint-maarten-dutch-part",
+            "es": "san-martn-parte-holands",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 703,
+        "nome": {
+            "en": "Slovakia",
+            "es": "Eslovaquia",
+            "pt": "Eslováquia"
+        },
+        "slug": {
+            "en": "slovakia",
+            "es": "eslovaquia",
+            "pt": "eslovquia"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "421",
+        "onu": true
+    },
+    {
+        "codigo": 705,
+        "nome": {
+            "en": "Slovenia",
+            "es": "Eslovenia",
+            "pt": "Eslovênia"
+        },
+        "slug": {
+            "en": "slovenia",
+            "es": "eslovenia",
+            "pt": "eslovnia"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "386",
+        "onu": true
+    },
+    {
+        "codigo": 90,
+        "nome": {
+            "en": "Solomon Islands",
+            "es": "Islas Salomón",
+            "pt": "Ilhas Salomão"
+        },
+        "slug": {
+            "en": "solomon-islands",
+            "es": "islas-salomn",
+            "pt": "ilhas-salomo"
+        },
+        "parent": 54,
+        "parents": {
+            "continente": 9,
+            "regiao": 54,
+            "subregiao": ""
+        },
+        "ddi": "677",
+        "onu": true
+    },
+    {
+        "codigo": 706,
+        "nome": {
+            "en": "Somalia",
+            "es": "Somalia",
+            "pt": "Somália"
+        },
+        "slug": {
+            "en": "somalia",
+            "es": "somalia",
+            "pt": "somlia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "252",
+        "onu": true
+    },
+    {
+        "codigo": 710,
+        "nome": {
+            "en": "South Africa",
+            "es": "Sudáfrica",
+            "pt": "África do Sul"
+        },
+        "slug": {
+            "en": "south-africa",
+            "es": "sudfrica",
+            "pt": "frica-do-sul"
+        },
+        "parent": 18,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 18
+        },
+        "ddi": "27",
+        "onu": true
+    },
+    {
+        "codigo": 239,
+        "nome": {
+            "en": "South Georgia and the South Sandwich Islands",
+            "es": "Georgia del Sur y las Islas Sandwich del Sur",
+            "pt": ""
+        },
+        "slug": {
+            "en": "south-georgia-and-the-south-sandwich-islands",
+            "es": "georgia-del-sur-y-las-islas-sandwich-del-sur",
+            "pt": ""
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 728,
+        "nome": {
+            "en": "South Sudan",
+            "es": "Sudán del Sur",
+            "pt": "Sudão do Sul"
+        },
+        "slug": {
+            "en": "south-sudan",
+            "es": "sudn-del-sur",
+            "pt": "sudo-do-sul"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "211",
+        "onu": true
+    },
+    {
+        "codigo": 724,
+        "nome": {
+            "en": "Spain",
+            "es": "España",
+            "pt": "Espanha"
+        },
+        "slug": {
+            "en": "spain",
+            "es": "espaa",
+            "pt": "espanha"
+        },
+        "parent": 39,
+        "parents": {
+            "continente": 150,
+            "regiao": 39,
+            "subregiao": ""
+        },
+        "ddi": "34",
+        "onu": true
+    },
+    {
+        "codigo": 144,
+        "nome": {
+            "en": "Sri Lanka",
+            "es": "Sri Lanka",
+            "pt": "Sri Lanka"
+        },
+        "slug": {
+            "en": "sri-lanka",
+            "es": "sri-lanka",
+            "pt": "sri-lanka"
+        },
+        "parent": 34,
+        "parents": {
+            "continente": 142,
+            "regiao": 34,
+            "subregiao": ""
+        },
+        "ddi": "94",
+        "onu": true
+    },
+    {
+        "codigo": 729,
+        "nome": {
+            "en": "Sudan",
+            "es": "Sudán",
+            "pt": "Sudão"
+        },
+        "slug": {
+            "en": "sudan",
+            "es": "sudn",
+            "pt": "sudo"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "249",
+        "onu": true
+    },
+    {
+        "codigo": 740,
+        "nome": {
+            "en": "Suriname",
+            "es": "Suriname",
+            "pt": "Suriname"
+        },
+        "slug": {
+            "en": "suriname",
+            "es": "suriname",
+            "pt": "suriname"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "597",
+        "onu": true
+    },
+    {
+        "codigo": 744,
+        "nome": {
+            "en": "Svalbard and Jan Mayen Islands",
+            "es": "Islas Svalbard y Jan Mayen",
+            "pt": ""
+        },
+        "slug": {
+            "en": "svalbard-and-jan-mayen-islands",
+            "es": "islas-svalbard-y-jan-mayen",
+            "pt": ""
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 748,
+        "nome": {
+            "en": "Swaziland",
+            "es": "Swazilandia",
+            "pt": "Suazilândia"
+        },
+        "slug": {
+            "en": "swaziland",
+            "es": "swazilandia",
+            "pt": "suazilndia"
+        },
+        "parent": 18,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 18
+        },
+        "ddi": "268",
+        "onu": true
+    },
+    {
+        "codigo": 752,
+        "nome": {
+            "en": "Sweden",
+            "es": "Suecia",
+            "pt": "Suécia"
+        },
+        "slug": {
+            "en": "sweden",
+            "es": "suecia",
+            "pt": "sucia"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "46",
+        "onu": true
+    },
+    {
+        "codigo": 756,
+        "nome": {
+            "en": "Switzerland",
+            "es": "Suiza",
+            "pt": "Suíça"
+        },
+        "slug": {
+            "en": "switzerland",
+            "es": "suiza",
+            "pt": "sua"
+        },
+        "parent": 155,
+        "parents": {
+            "continente": 150,
+            "regiao": 155,
+            "subregiao": ""
+        },
+        "ddi": "41",
+        "onu": true
+    },
+    {
+        "codigo": 760,
+        "nome": {
+            "en": "Syrian Arab Republic",
+            "es": "República Árabe Siria",
+            "pt": "Síria"
+        },
+        "slug": {
+            "en": "syrian-arab-republic",
+            "es": "repblica-rabe-siria",
+            "pt": "sria"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "963",
+        "onu": true
+    },
+    {
+        "codigo": 158,
+        "nome": {
+            "es": "",
+            "pt": ""
+        },
+        "slug": {
+            "en": "",
+            "es": "",
+            "pt": ""
+        },
+        "parent": "",
+        "parents": {
+            "continente": "",
+            "regiao": "",
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 762,
+        "nome": {
+            "en": "Tajikistan",
+            "es": "Tayikistán",
+            "pt": "Tajidquistão"
+        },
+        "slug": {
+            "en": "tajikistan",
+            "es": "tayikistn",
+            "pt": "tajidquisto"
+        },
+        "parent": 143,
+        "parents": {
+            "continente": 142,
+            "regiao": 143,
+            "subregiao": ""
+        },
+        "ddi": "992",
+        "onu": true
+    },
+    {
+        "codigo": 834,
+        "nome": {
+            "en": "United Republic of Tanzania",
+            "es": "República Unida de Tanzanía",
+            "pt": "Tanzânia"
+        },
+        "slug": {
+            "en": "united-republic-of-tanzania",
+            "es": "repblica-unida-de-tanzana",
+            "pt": "tanznia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "255",
+        "onu": true
+    },
+    {
+        "codigo": 764,
+        "nome": {
+            "en": "Thailand",
+            "es": "Tailandia",
+            "pt": "Tailândia"
+        },
+        "slug": {
+            "en": "thailand",
+            "es": "tailandia",
+            "pt": "tailndia"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "66",
+        "onu": true
+    },
+    {
+        "codigo": 626,
+        "nome": {
+            "en": "Timor-Leste",
+            "es": "Timor-Leste",
+            "pt": "Timor Leste"
+        },
+        "slug": {
+            "en": "timor-leste",
+            "es": "timor-leste",
+            "pt": "timor-leste"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "670",
+        "onu": true
+    },
+    {
+        "codigo": 768,
+        "nome": {
+            "en": "Togo",
+            "es": "Togo",
+            "pt": "Togo"
+        },
+        "slug": {
+            "en": "togo",
+            "es": "togo",
+            "pt": "togo"
+        },
+        "parent": 11,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 11
+        },
+        "ddi": "228",
+        "onu": true
+    },
+    {
+        "codigo": 772,
+        "nome": {
+            "en": "Tokelau",
+            "es": "Tokelau",
+            "pt": ""
+        },
+        "slug": {
+            "en": "tokelau",
+            "es": "tokelau",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 776,
+        "nome": {
+            "en": "Tonga",
+            "es": "Tonga",
+            "pt": "Tonga"
+        },
+        "slug": {
+            "en": "tonga",
+            "es": "tonga",
+            "pt": "tonga"
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "676",
+        "onu": true
+    },
+    {
+        "codigo": 780,
+        "nome": {
+            "en": "Trinidad and Tobago",
+            "es": "Trinidad y Tabago",
+            "pt": "Trinidad e Tobago"
+        },
+        "slug": {
+            "en": "trinidad-and-tobago",
+            "es": "trinidad-y-tabago",
+            "pt": "trinidad-e-tobago"
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "1-868",
+        "onu": true
+    },
+    {
+        "codigo": 788,
+        "nome": {
+            "en": "Tunisia",
+            "es": "Túnez",
+            "pt": "Tunísia"
+        },
+        "slug": {
+            "en": "tunisia",
+            "es": "tnez",
+            "pt": "tunsia"
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "216",
+        "onu": true
+    },
+    {
+        "codigo": 792,
+        "nome": {
+            "en": "Turkey",
+            "es": "Turquía",
+            "pt": "Turquia"
+        },
+        "slug": {
+            "en": "turkey",
+            "es": "turqua",
+            "pt": "turquia"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "90",
+        "onu": true
+    },
+    {
+        "codigo": 795,
+        "nome": {
+            "en": "Turkmenistan",
+            "es": "Turkmenistán",
+            "pt": "Turcomenistão"
+        },
+        "slug": {
+            "en": "turkmenistan",
+            "es": "turkmenistn",
+            "pt": "turcomenisto"
+        },
+        "parent": 143,
+        "parents": {
+            "continente": 142,
+            "regiao": 143,
+            "subregiao": ""
+        },
+        "ddi": "993",
+        "onu": true
+    },
+    {
+        "codigo": 796,
+        "nome": {
+            "en": "Turks and Caicos Islands",
+            "es": "Islas Turcas y Caicos",
+            "pt": ""
+        },
+        "slug": {
+            "en": "turks-and-caicos-islands",
+            "es": "islas-turcas-y-caicos",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 798,
+        "nome": {
+            "en": "Tuvalu",
+            "es": "Tuvalu",
+            "pt": "Tuvalu"
+        },
+        "slug": {
+            "en": "tuvalu",
+            "es": "tuvalu",
+            "pt": "tuvalu"
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "688",
+        "onu": true
+    },
+    {
+        "codigo": 800,
+        "nome": {
+            "en": "Uganda",
+            "es": "Uganda",
+            "pt": "Uganda"
+        },
+        "slug": {
+            "en": "uganda",
+            "es": "uganda",
+            "pt": "uganda"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "256",
+        "onu": true
+    },
+    {
+        "codigo": 804,
+        "nome": {
+            "en": "Ukraine",
+            "es": "Ucrania",
+            "pt": "Ucrânia"
+        },
+        "slug": {
+            "en": "ukraine",
+            "es": "ucrania",
+            "pt": "ucrnia"
+        },
+        "parent": 151,
+        "parents": {
+            "continente": 150,
+            "regiao": 151,
+            "subregiao": ""
+        },
+        "ddi": "380",
+        "onu": true
+    },
+    {
+        "codigo": 784,
+        "nome": {
+            "en": "United Arab Emirates",
+            "es": "Emiratos Árabes Unidos",
+            "pt": "Emirados Árabes Unidos"
+        },
+        "slug": {
+            "en": "united-arab-emirates",
+            "es": "emiratos-rabes-unidos",
+            "pt": "emirados-rabes-unidos"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "971",
+        "onu": true
+    },
+    {
+        "codigo": 826,
+        "nome": {
+            "en": "United Kingdom of Great Britain and Northern Ireland",
+            "es": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+            "pt": "Reino Unido"
+        },
+        "slug": {
+            "en": "united-kingdom-of-great-britain-and-northern-ireland",
+            "es": "reino-unido-de-gran-bretaa-e-irlanda-del-norte",
+            "pt": "reino-unido"
+        },
+        "parent": 154,
+        "parents": {
+            "continente": 150,
+            "regiao": 154,
+            "subregiao": ""
+        },
+        "ddi": "44",
+        "onu": true
+    },
+    {
+        "codigo": 581,
+        "nome": {
+            "en": "United States Minor Outlying Islands",
+            "es": "Islas menores alejadas de Estados Unidos",
+            "pt": ""
+        },
+        "slug": {
+            "en": "united-states-minor-outlying-islands",
+            "es": "islas-menores-alejadas-de-estados-unidos",
+            "pt": ""
+        },
+        "parent": 57,
+        "parents": {
+            "continente": 9,
+            "regiao": 57,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 840,
+        "nome": {
+            "en": "United States of America",
+            "es": "Estados Unidos de América",
+            "pt": "Estados Unidos"
+        },
+        "slug": {
+            "en": "united-states-of-america",
+            "es": "estados-unidos-de-amrica",
+            "pt": "estados-unidos"
+        },
+        "parent": 21,
+        "parents": {
+            "continente": 19,
+            "regiao": 21,
+            "subregiao": ""
+        },
+        "ddi": "1",
+        "onu": true
+    },
+    {
+        "codigo": 858,
+        "nome": {
+            "en": "Uruguay",
+            "es": "Uruguay",
+            "pt": "Uruguai"
+        },
+        "slug": {
+            "en": "uruguay",
+            "es": "uruguay",
+            "pt": "uruguai"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "598",
+        "onu": true
+    },
+    {
+        "codigo": 860,
+        "nome": {
+            "en": "Uzbekistan",
+            "es": "Uzbekistán",
+            "pt": "Uzbequistão"
+        },
+        "slug": {
+            "en": "uzbekistan",
+            "es": "uzbekistn",
+            "pt": "uzbequisto"
+        },
+        "parent": 143,
+        "parents": {
+            "continente": 142,
+            "regiao": 143,
+            "subregiao": ""
+        },
+        "ddi": "998",
+        "onu": true
+    },
+    {
+        "codigo": 548,
+        "nome": {
+            "en": "Vanuatu",
+            "es": "Vanuatu",
+            "pt": "Vanuatu"
+        },
+        "slug": {
+            "en": "vanuatu",
+            "es": "vanuatu",
+            "pt": "vanuatu"
+        },
+        "parent": 54,
+        "parents": {
+            "continente": 9,
+            "regiao": 54,
+            "subregiao": ""
+        },
+        "ddi": "678",
+        "onu": true
+    },
+    {
+        "codigo": 862,
+        "nome": {
+            "en": "Venezuela (Bolivarian Republic of)",
+            "es": "Venezuela (República Bolivariana de)",
+            "pt": "Venezuela"
+        },
+        "slug": {
+            "en": "venezuela-bolivarian-republic-of",
+            "es": "venezuela-repblica-bolivariana-de",
+            "pt": "venezuela"
+        },
+        "parent": 5,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 5
+        },
+        "ddi": "58",
+        "onu": true
+    },
+    {
+        "codigo": 704,
+        "nome": {
+            "en": "Viet Nam",
+            "es": "Viet Nam",
+            "pt": "Vietnã"
+        },
+        "slug": {
+            "en": "viet-nam",
+            "es": "viet-nam",
+            "pt": "vietn"
+        },
+        "parent": 35,
+        "parents": {
+            "continente": 142,
+            "regiao": 35,
+            "subregiao": ""
+        },
+        "ddi": "84",
+        "onu": true
+    },
+    {
+        "codigo": 92,
+        "nome": {
+            "en": "British Virgin Islands",
+            "es": "Islas Vírgenes Británicas",
+            "pt": ""
+        },
+        "slug": {
+            "en": "british-virgin-islands",
+            "es": "islas-vrgenes-britnicas",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 850,
+        "nome": {
+            "en": "United States Virgin Islands",
+            "es": "Islas Vírgenes de los Estados Unidos",
+            "pt": ""
+        },
+        "slug": {
+            "en": "united-states-virgin-islands",
+            "es": "islas-vrgenes-de-los-estados-unidos",
+            "pt": ""
+        },
+        "parent": 29,
+        "parents": {
+            "continente": 19,
+            "regiao": 419,
+            "subregiao": 29
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 876,
+        "nome": {
+            "en": "Wallis and Futuna Islands",
+            "es": "Islas Wallis y Futuna",
+            "pt": ""
+        },
+        "slug": {
+            "en": "wallis-and-futuna-islands",
+            "es": "islas-wallis-y-futuna",
+            "pt": ""
+        },
+        "parent": 61,
+        "parents": {
+            "continente": 9,
+            "regiao": 61,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 732,
+        "nome": {
+            "en": "Western Sahara",
+            "es": "Sáhara Occidental",
+            "pt": ""
+        },
+        "slug": {
+            "en": "western-sahara",
+            "es": "shara-occidental",
+            "pt": ""
+        },
+        "parent": 15,
+        "parents": {
+            "continente": 2,
+            "regiao": 15,
+            "subregiao": ""
+        },
+        "ddi": "",
+        "onu": false
+    },
+    {
+        "codigo": 887,
+        "nome": {
+            "en": "Yemen",
+            "es": "Yemen",
+            "pt": "Iemen"
+        },
+        "slug": {
+            "en": "yemen",
+            "es": "yemen",
+            "pt": "iemen"
+        },
+        "parent": 145,
+        "parents": {
+            "continente": 142,
+            "regiao": 145,
+            "subregiao": ""
+        },
+        "ddi": "967",
+        "onu": true
+    },
+    {
+        "codigo": 894,
+        "nome": {
+            "en": "Zambia",
+            "es": "Zambia",
+            "pt": "Zâmbia"
+        },
+        "slug": {
+            "en": "zambia",
+            "es": "zambia",
+            "pt": "zmbia"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "260",
+        "onu": true
+    },
+    {
+        "codigo": 716,
+        "nome": {
+            "en": "Zimbabwe",
+            "es": "Zimbabwe",
+            "pt": "Zimbábue"
+        },
+        "slug": {
+            "en": "zimbabwe",
+            "es": "zimbabwe",
+            "pt": "zimbbue"
+        },
+        "parent": 14,
+        "parents": {
+            "continente": 2,
+            "regiao": 202,
+            "subregiao": 14
+        },
+        "ddi": "263",
+        "onu": true
+    }
+]
