@@ -109,7 +109,6 @@ function extractTipo($table) {
 
 function extractChefeGoverno($table) {
     let $trs = $table.find('tr[id]');
-    debugger;
 
     return Array.from($trs).map($tr => {
         const $ = cheerio.load($tr);
@@ -136,7 +135,6 @@ function extractChefeGoverno($table) {
 
 function extractChefeEstado($table) {
     let $trs = $table.find('tr[id]');
-    debugger;
 
     return Array.from($trs).map($tr => {
         const $ = cheerio.load($tr);
@@ -156,7 +154,7 @@ function extractChefeEstado($table) {
 
         return {
             pais: country.text(),
-            valor
+            valor: text
         }
     })
 }
