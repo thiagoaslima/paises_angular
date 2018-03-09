@@ -1,16 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const slugify = require('slugify');
-
-function slug(str) {
-    str = str.replace(/['`"´’]/g, "")
-    return slugify(str, {
-        replacement: '-',
-        remove: null,
-        lower: true
-    });
-}
+const slug = require('../../shared/slug');
 
 const readFile = util.promisify(fs.readFile);
 
@@ -20,6 +11,7 @@ const ONU_ES = require('../fontes/UNSD_es.json').dados;
 const IBGE = require('../fontes/IBGE_2015.json').dados;
 const ONU_MEMBROS = require('../fontes/ONU_membros.json').dados;
 const WIKIPEDIA = require('../fontes/Wikipedia.json');
+const NOMES_EN_ALTERNATIVOS = require('../fontes/nomes_en_alternativos.json');
 
 const mapONU_EN = ONU_EN.reduce((agg, obj) => {
     agg[obj["ISO-alpha3 Code"]] = obj;
@@ -44,12 +36,13 @@ const slugMembrosONU = [].concat(ONU_MEMBROS.membros, ONU_MEMBROS.observadores.p
 let regioes = {
     "World": {
         "tipo": "mundo",
+        "slug": "mundo",
         "nome": {
             "en": "World",
             "es": "Mundo",
             "pt": "Mundo"
         },
-        "slug": {
+        "slugs": {
             "en": "world",
             "es": "mundo",
             "pt": "mundo"
@@ -131,7 +124,7 @@ ONU_EN.forEach((obj) => {
                 "es": es["Region Name"],
                 "pt": nome_pt
             },
-            "slug": {
+            "slugs": {
                 "en": slug(obj["Region Name"]),
                 "es": slug(es["Region Name"]),
                 "pt": slug_pt
@@ -359,10 +352,30 @@ const paisesFile = paises.map(pais => {
     return _pais;
 })
 
-fs.writeFile(path.resolve('..', 'compilado', 'paises.json'), JSON.stringify(paisesFile, null, 4), (err) => {
-    console.log('paises pronto');
+const dicionario = [].concat(paises, regioes).reduce((agg, obj) => {
+    if (obj.sigla) {
+        agg[obj.slugs.en] = obj.sigla;
+    }
+    return agg;
+}, {})
+
+NOMES_EN_ALTERNATIVOS.forEach(obj => {
+    let slug_en = slug(obj.nome);
+    dicionario[slug_en] = obj.a2_code;
+})
+
+fs.writeFile(path.resolve('..', 'compilado', 'paises_resumido.json'), JSON.stringify(paisesFile, null, 4), (err) => {
+    console.log('paises_resumido pronto');
 });
 
-fs.writeFile(path.resolve('..', 'compilado', 'dados_completos.json'), JSON.stringify({paises, regioes}, null, 4), (err) => {
-    console.log('dados_completos pronto');
+fs.writeFile(path.resolve('..', 'compilado', 'paises.json'), JSON.stringify({paises, regioes}, null, 4), (err) => {
+    console.log('paises pronto');
+})
+
+fs.writeFile(path.resolve('..', 'compilado', 'paises_completo.json'), JSON.stringify({paises, regioes, metadados}, null, 4), (err) => {
+    console.log('paises_completos pronto');
+})
+
+fs.writeFile(path.resolve('..', 'compilado', 'nomeen_sigla_dicionario.json'), JSON.stringify(dicionario, null, 4), (err) => {
+    console.log('dicionario pronto');
 })

@@ -6225,5 +6225,175 @@
             "codigo": 61,
             "parent": 9
         }
+    },
+    "metadados": {
+        "regioes": {
+            "original": "Geographic Regions",
+            "publicacao": "Standard Country or Area Codes for Statistical Use",
+            "link": "https://unstats.un.org/unsd/methodology/m49/",
+            "acessadoEm": "2017-11-28",
+            "propriedades": [
+                {
+                    "codigo": {
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "tipo": {
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "notas": [
+                            "tradução nossa"
+                        ],
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "nome": {
+                        "en": {
+                            "publicacao": "Standard Country or Area Codes for Statistical Use",
+                            "link": "https://unstats.un.org/unsd/methodology/m49/",
+                            "acessadoEm": "2018-03-07"
+                        },
+                        "es": {
+                            "publicacao": "Standard Country or Area Codes for Statistical Use",
+                            "link": "https://unstats.un.org/unsd/methodology/m49/",
+                            "acessadoEm": "2018-03-07"
+                        },
+                        "pt": {
+                            "publicacao": "Wikipedia - Geoesquema das Nações Unidas",
+                            "link": "https://pt.wikipedia.org/wiki/Geoesquema_das_Nações_Unidas",
+                            "acessadoEm": "2017-11-28"
+                        }
+                    }
+                }
+            ]
+        },
+        "paises": {
+            "original": "Geographic Regions",
+            "publicacao": "Standard Country or Area Codes for Statistical Use",
+            "link": "https://unstats.un.org/unsd/methodology/m49/",
+            "acessadoEm": "2017-11-28",
+            "proriedades": {
+                "codigo": {
+                    "original": "Numeric",
+                    "publicacao": "Country Codes - ISO 3166",
+                    "fonte": "https://www.iso.org/obp/ui/#search/code",
+                    "acessadoEm": "2018-03-07"
+                },
+                "nome": {
+                    "en": {
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "es": {
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "pt": {}
+                },
+                "sigla": {
+                    "original": "Alpha-2 code",
+                    "definicao": "a two-letter code that represents a country name, recommended as the general purpose code",
+                    "publicacao": "Country Codes - ISO 3166",
+                    "link": "https://www.iso.org/obp/ui/#search/code",
+                    "acessadoEm": "2018-03-07"
+                },
+                "sigla3": {
+                    "original": "Alpha-3 code",
+                    "definicao": "a three-letter code that represents a country name, which is usually more closely related to the country name",
+                    "publicacao": "Country Codes - ISO 3166",
+                    "link": "https://www.iso.org/obp/ui/#search/code",
+                    "acessadoEm": "2018-03-07"
+                },
+                "parent": {
+                    "definicao": "região ou subregião (identificada pelo código numérico) mais específica a qual o país pertence"
+                },
+                "parents": {
+                    "continente": {
+                        "definicao": "continente (identificado pelo código numérico) no qual o país se localiza",
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "regiao": {
+                        "definicao": "região (identificada pelo código numérico) na qual o país se localiza",
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    },
+                    "subregiao": {
+                        "definicao": "subregião (identificado pelo código numérico) na qual o país se localiza. Se não houver tal subdivisão, a propriedade recebe valor '' (string vazia)",
+                        "publicacao": "Standard Country or Area Codes for Statistical Use",
+                        "link": "https://unstats.un.org/unsd/methodology/m49/",
+                        "acessadoEm": "2018-03-07"
+                    }
+                },
+                "ddi": {
+                    "definicao": "código de prefixo para ligações telefônicas internacionais"
+                },
+                "onu": {
+                    "definicao": "determina se o país é membro da ONU ou observador permanente",
+                    "publicacao": "Member States | United Nations",
+                    "link": "http://www.un.org/en/member-states/index.html",
+                    "acessadoEm": "2018-03-07"
+                }
+            },
+            "notas": [
+                {
+                    "nota": "Nome da Antártida (ATA) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ant%C3%A1rtida",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome da Ilha Bouvet (BVT) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilha_Bouvet",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome da Ilha Christmas (CXR) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilha_Christmas",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome das Ilha Heard e Ilhas McDonald (Keeling) (HMD) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilha_Heard_e_Ilhas_McDonald",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome das Ilhas Cocos (Keeling) (CCK) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilhas_Cocos_(Keeling)",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome das Ilhas Geórgia do Sul e Sandwich do Sul (SGS) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilhas_Geórgia_do_Sul_e_Sandwich_do_Sul",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome das Ilhas Menores Distantes dos Estados Unidos (UMI) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Ilhas_Menores_Distantes_dos_Estados_Unidos",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome de Taiwan (TWN) em português e espanhol foi pego da Wikipedia",
+                    "fontes": [
+                        "https://pt.wikipedia.org/wiki/Taiwan",
+                        "https://es.wikipedia.org/wiki/República_de_China"
+                    ],
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome das Terras Austrais e Antárticas Francesas (ATF) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Terras_Austrais_e_Ant%C3%A1rticas_Francesas",
+                    "acessadoEm": "2018-03-08"
+                },
+                {
+                    "nota": "Nome do Território Britânico do Oceano Índico (IOT) em português foi pego da Wikipedia",
+                    "fonte": "https://pt.wikipedia.org/wiki/Territ%C3%B3rio_Brit%C3%A2nico_do_Oceano_%C3%8Dndico",
+                    "acessadoEm": "2018-03-08"
+                }
+            ]
+        }
     }
 }
