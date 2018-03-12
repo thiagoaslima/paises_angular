@@ -1,6 +1,8 @@
 [
     {
-        "nome": "Bahamas, The",
+        "nome": {
+            "en": "Bahamas, The"
+        },
         "referencia_onu": "Bahamas",
         "a2_code": "BS",
         "fonte": {
@@ -11,7 +13,10 @@
         }
     },
     {
-        "nome": "Bolivia",
+        "nome": {
+            "en": "Bolivia",
+            "es": "Bolivia"
+        },
         "referencia_onu": "Bolivia (Plurinational State of)",
         "a2_code": "BO",
         "fonte": {
@@ -22,7 +27,11 @@
         }
     },
     {
-        "nome": "Brunei",
+        "nome": {
+            "en": "Brunei",
+            "es": "Brunéi",
+            "pt": "Brunei Darussalam"
+        },
         "referencia_onu": "Brunei Darussalam",
         "a2_code": "BN",
         "fonte": {
@@ -33,7 +42,11 @@
         }
     },
     {
-        "nome": "Burma",
+        "nome": {
+            "en": "Burma",
+            "es": "Birmania",
+            "pt": "Birmânia"
+        },
         "referencia_onu": "Myanmar",
         "a2_code": "MM",
         "fonte": {
@@ -44,7 +57,9 @@
         }
     },
     {
-        "nome": "Congo, Democratic Republic of the",
+        "nome": {
+            "en": "Congo, Democratic Republic of the"
+        },
         "referencia_onu": "Democratic Republic of the Congo",
         "a2_code": "CD",
         "fonte": {
@@ -55,7 +70,9 @@
         }
     },
     {
-        "nome": "Congo, Republic of the",
+        "nome": {
+            "en": "Congo, Republic of the"
+        },
         "referencia_onu": "Congo",
         "a2_code": "CG",
         "fonte": {
@@ -66,7 +83,11 @@
         }
     },
     {
-        "nome": "China, Hong Kong SAR",
+        "nome": {
+            "en":"China, Hong Kong SAR",
+            "es": "Hong Kong",
+            "pt": "Hong Kong"
+        },
         "referencia_onu": "China, Hong Kong Special Administrative Region",
         "a2_code": "HK",
         "fonte": {
@@ -77,7 +98,11 @@
         }
     },
     {
-        "nome": "China, People's Republic of",
+        "nome": {
+            "en": "China, People's Republic of",
+            "es": "República Popular China",
+            "pt": "República Popular da China"
+        },
         "referencia_onu": "China",
         "a2_code": "CN",
         "fonte": {
@@ -88,7 +113,11 @@
         }
     },
     {
-        "nome": "Czech Republic",
+        "nome": {
+            "en": "Czech Republic",
+            "es": "República Checa",
+            "pt": "Tchéquia"
+        },
         "referencia_onu": "Czechia",
         "a2_code": "CZ",
         "fonte": {
@@ -99,7 +128,9 @@
         }
     },
     {
-        "nome": "Falkland Islands (Islas Malvinas)",
+        "nome": {
+            "en": "Falkland Islands (Islas Malvinas)"
+        },
         "referencia_onu": "Falkland Islands (Malvinas)",
         "a2_code": "FK",
         "fonte": {
@@ -110,7 +141,9 @@
         }
     },
     {
-        "nome": "Gambia, The",
+        "nome": {
+            "en": "Gambia, The"
+        },
         "referencia_onu": "Gambia",
         "a2_code": "GM",
         "fonte": {
@@ -121,7 +154,9 @@
         }
     },
     {
-        "nome": "Holy See (Vatican City)",
+        "nome": {
+            "en": "Holy See (Vatican City)"
+        },
         "referencia_onu": "Holy See",
         "a2_code": "VA",
         "fonte": {
@@ -132,7 +167,9 @@
         }
     },
     {
-        "nome": "Iran",
+        "nome": {
+            "en": "Iran"
+        },
         "referencia_onu": "Iran (Islamic Republic of)",
         "a2_code": "IR",
         "fonte": {
@@ -143,7 +180,9 @@
         }
     },
     {
-        "nome": "Micronesia",
+        "nome": {
+            "en": "Micronesia"
+        },
         "referencia_onu": "Micronesia (Federated States of)",
         "a2_code": "FM",
         "fonte": {
@@ -154,7 +193,9 @@
         }
     },
     {
-        "nome": "Korea, North",
+        "nome": {
+            "en": "Korea, North"
+        },
         "referencia_onu": "Democratic People's Republic of Korea",
         "a2_code": "KP",
         "fonte": {
@@ -165,7 +206,9 @@
         }
     },
     {
-        "nome": "Korea, South",
+        "nome": {
+            "en": "Korea, South"
+        },
         "referencia_onu": "Republic of Korea",
         "a2_code": "KR",
         "fonte": {
@@ -176,7 +219,9 @@
         }
     },
     {
-        "nome": "Laos",
+        "nome": {
+            "en": "Laos"
+        },
         "referencia_onu": "Lao People's Democratic Republic",
         "a2_code": "LA",
         "fonte": {
@@ -187,7 +232,9 @@
         }
     },
     {
-        "nome": "Macedonia",
+        "nome": {
+            "en": "Macedonia"
+        },
         "referencia_onu": "The former Yugoslav Republic of Macedonia",
         "a2_code": "MK",
         "fonte": {
@@ -198,7 +245,9 @@
         }
     },
     {
-        "nome": "Moldova",
+        "nome": {
+            "en": "Moldova"
+        },
         "referencia_onu": "Republic of Moldova",
         "a2_code": "MD",
         "fonte": {
@@ -209,7 +258,9 @@
         }
     },
     {
-        "nome": "Pitcairn Islands",
+        "nome": {
+            "en": "Pitcairn Islands"
+        },
         "referencia_onu": "Pitcairn",
         "a2_code": "PN",
         "fonte": {
@@ -220,7 +271,9 @@
         }
     },
     {
-        "nome": "Russia",
+        "nome": {
+            "en": "Russia"
+        },
         "referencia_onu": "Russian Federation",
         "a2_code": "RU",
         "fonte": {
@@ -231,7 +284,9 @@
         }
     },
     {
-        "nome": "Saint Helena, Ascension, and Tristan da Cunha",
+        "nome": {
+            "en": "Saint Helena, Ascension, and Tristan da Cunha"
+        },
         "referencia_onu": "Saint Helena",
         "a2_code": "SH",
         "fonte": {
@@ -242,7 +297,9 @@
         }
     },
     {
-        "nome": "Saint Martin",
+        "nome": {
+            "en": "Saint Martin"
+        },
         "referencia_onu": "Saint Martin (French Part)",
         "a2_code": "MF",
         "fonte": {
@@ -253,7 +310,9 @@
         }
     },
     {
-        "nome": "Sint Maarten",
+        "nome": {
+            "en": "Sint Maarten"
+        },
         "referencia_onu": "Sint Maarten (Dutch part)",
         "a2_code": "SX",
         "fonte": {
@@ -264,7 +323,9 @@
         }
     },
     {
-        "nome": "Svalbard",
+        "nome": {
+            "en": "Svalbard"
+        },
         "referencia_onu": "Svalbard and Jan Mayen Islands",
         "a2_code": "SJ",
         "fonte": {
@@ -275,7 +336,9 @@
         }
     },
     {
-        "nome": "Syria",
+        "nome": {
+            "en": "Syria"
+        },
         "referencia_onu": "Syrian Arab Republic",
         "a2_code": "SY",
         "fonte": {
@@ -286,7 +349,9 @@
         }
     },
     {
-        "nome": "Taiwan",
+        "nome": {
+            "en": "Taiwan"
+        },
         "referencia_onu": "",
         "referencia_iso": "Taiwan (Province of China)",
         "a2_code": "TW",
@@ -298,7 +363,9 @@
         }
     },
     {
-        "nome": "Tanzania",
+        "nome": {
+            "en": "Tanzania"
+        },
         "referencia_onu": "United Republic of Tanzania",
         "a2_code": "TZ",
         "fonte": {
@@ -309,7 +376,9 @@
         }
     },
     {
-        "nome": "Tanzania, United Republic of",
+        "nome": {
+            "en": "Tanzania, United Republic of"
+        },
         "referencia_onu": "United Republic of Tanzania",
         "a2_code": "TZ",
         "fonte": {
@@ -319,7 +388,9 @@
         }
     },
     {
-        "nome": "United Kingdom",
+        "nome": {
+            "en": "United Kingdom"
+        },
         "referencia_onu": "United Kingdom of Great Britain and Northern Ireland",
         "a2_code": "GB",
         "fonte": {
@@ -330,7 +401,9 @@
         }
     },
     {
-        "nome": "United Republic of Tanzania: Mainland",
+        "nome": {
+            "en": "United Republic of Tanzania: Mainland"
+        },
         "referencia_onu": "United Republic of Tanzania",
         "a2_code": "TZ",
         "fonte": {
@@ -341,7 +414,9 @@
         }
     },
     {
-        "nome": "United States",
+        "nome": {
+            "en": "United States"
+        },
         "referencia_onu": "United States of America",
         "a2_code": "US",
         "fonte": {
@@ -352,7 +427,9 @@
         }
     },
     {
-        "nome": "Venezuela",
+        "nome": {
+            "en": "Venezuela"
+        },
         "referencia_onu": "Venezuela (Bolivarian Republic of)",
         "a2_code": "VE",
         "fonte": {
@@ -363,7 +440,9 @@
         }
     },
     {
-        "nome": "Vietnam",
+        "nome": {
+            "en": "Vietnam"
+        },
         "referencia_onu": "Viet Nam",
         "a2_code": "VN",
         "fonte": {
@@ -374,7 +453,9 @@
         }
     },
     {
-        "nome": "Virgin Islands",
+        "nome": {
+            "en": "Virgin Islands"
+        },
         "referencia_onu": "United States Virgin Islands",
         "a2_code": "VI",
         "fonte": {
@@ -385,7 +466,9 @@
         }
     },
     {
-        "nome": "Wallis and Futuna",
+        "nome": {
+            "en": "Wallis and Futuna"
+        },
         "referencia_onu": "Wallis and Futuna Islands",
         "a2_code": "WF",
         "fonte": {
