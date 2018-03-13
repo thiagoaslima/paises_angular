@@ -18,7 +18,7 @@ let hdr_json = Promise.all([
 ]).then(([lista, indicadores]) => {
     return { lista, indicadores };
 }).catch(err => {
-    console.log('ERRO', err);
+    console.log('Não foi possivel acessar os arquivos', err);
 });
 
 describe('Human Development Report', () => {
@@ -32,8 +32,7 @@ describe('Human Development Report', () => {
             .then(json => {
                 expect(Object.keys(json)).to.deep.equal(['lista', 'indicadores']);
                 done();
-            })
-            .catch(err => console.log('ERRR2', err));
+            });
     }).timeout(timeout);
 
     it('deve ser equivalente ao arquivo gravado localmente', (done) => {

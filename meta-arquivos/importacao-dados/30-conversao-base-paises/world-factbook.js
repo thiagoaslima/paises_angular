@@ -3,7 +3,7 @@ const path = require('path');
 const mkdirp = require('mkdirp');
 const util = require('util');
 const paises = require('../../lista-paises/compilado/paises_resumido.json');
-const slugify = require('../../shared/slug');
+const slugify = require('../shared/slug');
 
 const fonteDesejada = "The World Factbook";
 const fonte = require('../fontes').find(obj => obj.fonte === fonteDesejada);

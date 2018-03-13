@@ -1,6 +1,6 @@
 1. acessa a url
-2. testa se o conteúdo está exibido da mesma forma
-3. testa se houve alteração no conteúdo (comparação de hash entre o acessado e o gravado local)
+2. testa se houve alteração no conteúdo (comparação de hash entre o acessado e o gravado local)
+3. testa se o conteúdo está exibido da mesma forma
 4. converte os dados para um arquivo chave(sigla a2)-valor 
 5. cria um arquivo com a lista oficial dos países
 6. tradução dos termos

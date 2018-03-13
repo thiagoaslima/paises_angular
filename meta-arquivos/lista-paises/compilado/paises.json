@@ -2818,7 +2818,8 @@
             },
             "apelidos": {
                 "en": [
-                    "China, Hong Kong SAR"
+                    "China, Hong Kong SAR",
+                    "Hong Kong, China (SAR)"
                 ],
                 "es": [
                     "Hong Kong"
@@ -3360,7 +3361,8 @@
             },
             "apelidos": {
                 "en": [
-                    "Korea, South"
+                    "Korea, South",
+                    "Korea (Republic of)"
                 ],
                 "es": [],
                 "pt": []
@@ -4124,7 +4126,8 @@
             },
             "apelidos": {
                 "en": [
-                    "Moldova"
+                    "Moldova",
+                    "Moldova (Republic of)"
                 ],
                 "es": [],
                 "pt": []

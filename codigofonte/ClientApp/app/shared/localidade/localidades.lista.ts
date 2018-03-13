@@ -2820,7 +2820,8 @@ export const localidades = {
             },
             "apelidos": {
                 "en": [
-                    "China, Hong Kong SAR"
+                    "China, Hong Kong SAR",
+                    "Hong Kong, China (SAR)"
                 ],
                 "es": [
                     "Hong Kong"
@@ -3362,7 +3363,8 @@ export const localidades = {
             },
             "apelidos": {
                 "en": [
-                    "Korea, South"
+                    "Korea, South",
+                    "Korea (Republic of)"
                 ],
                 "es": [],
                 "pt": []
@@ -4126,7 +4128,8 @@ export const localidades = {
             },
             "apelidos": {
                 "en": [
-                    "Moldova"
+                    "Moldova",
+                    "Moldova (Republic of)"
                 ],
                 "es": [],
                 "pt": []

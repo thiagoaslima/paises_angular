@@ -99,6 +99,19 @@
     },
     {
         "nome": {
+            "en": "Hong Kong, China (SAR)"
+        },
+        "referencia_onu": "China, Hong Kong Special Administrative Region",
+        "a2_code": "HK",
+        "fonte": {
+            "fonte": "Human Development Report",
+            "autor": "United Nations Development Programme",
+            "link": "http://hdr.undp.org/en/data",
+            "acessadoEm": "2018-03-13"
+        }
+    },
+    {
+        "nome": {
             "en": "China, People's Republic of",
             "es": "República Popular China",
             "pt": "República Popular da China"
@@ -220,6 +233,19 @@
     },
     {
         "nome": {
+            "en": "Korea (Republic of)"
+        },
+        "referencia_onu": "Republic of Korea",
+        "a2_code": "KR",
+        "fonte": {
+            "fonte": "Human Development Report",
+            "autor": "United Nations Development Programme",
+            "link": "http://hdr.undp.org/en/data",
+            "acessadoEm": "2018-03-13"
+        }
+    },
+    {
+        "nome": {
             "en": "Laos"
         },
         "referencia_onu": "Lao People's Democratic Republic",
@@ -255,6 +281,19 @@
             "autor": "CIA - Central Intelligence Agency",
             "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
             "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Moldova (Republic of)"
+        },
+        "referencia_onu": "Republic of Moldova",
+        "a2_code": "MD",
+        "fonte": {
+            "fonte": "Human Development Report",
+            "autor": "United Nations Development Programme",
+            "link": "http://hdr.undp.org/en/data",
+            "acessadoEm": "2018-03-13"
         }
     },
     {

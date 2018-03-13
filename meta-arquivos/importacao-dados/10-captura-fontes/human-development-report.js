@@ -2,11 +2,9 @@ const request = require('request-promise-native');
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
-const slugify = require('../../shared/slug');
-const getFonteSync = require('../shared/getFonteSync');
 
-const nome_fonte = "Human Development Report";
-const fonte = getFonteSync(nome_fonte);
+const getFonteSync = require('../shared/getFonteSync');
+const fonte = getFonteSync("Human Development Report");
 
 Promise.all([
     request.get(fonte.files[0]),

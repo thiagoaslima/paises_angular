@@ -14,9 +14,11 @@
     "cheerio": "^1.0.0-rc.2",
     "iconv-lite": "^0.4.19",
     "mkdirp": "^0.5.1",
+    "node-fetch": "^2.1.1",
     "postman-request": "^2.81.1-postman.4",
     "request-promise-native": "^1.0.5",
     "slugify": "^1.2.9",
+    "stream-json": "^0.5.2",
     "tabletojson": "^0.7.1"
   },
   "devDependencies": {
