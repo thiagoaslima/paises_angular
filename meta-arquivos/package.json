@@ -19,6 +19,7 @@
     "request-promise-native": "^1.0.5",
     "slugify": "^1.2.9",
     "stream-json": "^0.5.2",
+    "supersniff": "^2.1.0",
     "tabletojson": "^0.7.1"
   },
   "devDependencies": {

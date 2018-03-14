@@ -41,4 +41,23 @@ function hashString(str) {
     });
 }
 
-module.exports = { hashFile, hashString };
+function hashStream(stream) {
+    const shasum = crypto.createHash(algorithm);
+
+    return new Promise((resolve, reject) => {
+        stream.on('data', function (data) {
+            shasum.update(data);
+        });
+
+        stream.on('end', function () {
+            var hash = shasum.digest('hex');
+            resolve(hash);
+        });
+
+        stream.on('error', (err) => {
+            reject(err);
+        });
+    });
+}
+
+module.exports = { hashFile, hashString, hashStream };
