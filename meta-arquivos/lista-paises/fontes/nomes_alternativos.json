@@ -1,0 +1,481 @@
+[
+    {
+        "nome": {
+            "en": "Bahamas, The"
+        },
+        "referencia_onu": "Bahamas",
+        "a2_code": "BS",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Bolivia",
+            "es": "Bolivia"
+        },
+        "referencia_onu": "Bolivia (Plurinational State of)",
+        "a2_code": "BO",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Brunei",
+            "es": "Brunéi",
+            "pt": "Brunei Darussalam"
+        },
+        "referencia_onu": "Brunei Darussalam",
+        "a2_code": "BN",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Burma",
+            "es": "Birmania",
+            "pt": "Birmânia"
+        },
+        "referencia_onu": "Myanmar",
+        "a2_code": "MM",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Congo, Democratic Republic of the"
+        },
+        "referencia_onu": "Democratic Republic of the Congo",
+        "a2_code": "CD",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Congo, Republic of the"
+        },
+        "referencia_onu": "Congo",
+        "a2_code": "CG",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en":"China, Hong Kong SAR",
+            "es": "Hong Kong",
+            "pt": "Hong Kong"
+        },
+        "referencia_onu": "China, Hong Kong Special Administrative Region",
+        "a2_code": "HK",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "China, People's Republic of",
+            "es": "República Popular China",
+            "pt": "República Popular da China"
+        },
+        "referencia_onu": "China",
+        "a2_code": "CN",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Czech Republic",
+            "es": "República Checa",
+            "pt": "Tchéquia"
+        },
+        "referencia_onu": "Czechia",
+        "a2_code": "CZ",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Falkland Islands (Islas Malvinas)"
+        },
+        "referencia_onu": "Falkland Islands (Malvinas)",
+        "a2_code": "FK",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Gambia, The"
+        },
+        "referencia_onu": "Gambia",
+        "a2_code": "GM",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Holy See (Vatican City)"
+        },
+        "referencia_onu": "Holy See",
+        "a2_code": "VA",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Iran"
+        },
+        "referencia_onu": "Iran (Islamic Republic of)",
+        "a2_code": "IR",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Micronesia"
+        },
+        "referencia_onu": "Micronesia (Federated States of)",
+        "a2_code": "FM",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Korea, North"
+        },
+        "referencia_onu": "Democratic People's Republic of Korea",
+        "a2_code": "KP",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Korea, South"
+        },
+        "referencia_onu": "Republic of Korea",
+        "a2_code": "KR",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Laos"
+        },
+        "referencia_onu": "Lao People's Democratic Republic",
+        "a2_code": "LA",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Macedonia"
+        },
+        "referencia_onu": "The former Yugoslav Republic of Macedonia",
+        "a2_code": "MK",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Moldova"
+        },
+        "referencia_onu": "Republic of Moldova",
+        "a2_code": "MD",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Pitcairn Islands"
+        },
+        "referencia_onu": "Pitcairn",
+        "a2_code": "PN",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Russia"
+        },
+        "referencia_onu": "Russian Federation",
+        "a2_code": "RU",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Saint Helena, Ascension, and Tristan da Cunha"
+        },
+        "referencia_onu": "Saint Helena",
+        "a2_code": "SH",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Saint Martin"
+        },
+        "referencia_onu": "Saint Martin (French Part)",
+        "a2_code": "MF",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Sint Maarten"
+        },
+        "referencia_onu": "Sint Maarten (Dutch part)",
+        "a2_code": "SX",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Svalbard"
+        },
+        "referencia_onu": "Svalbard and Jan Mayen Islands",
+        "a2_code": "SJ",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Syria"
+        },
+        "referencia_onu": "Syrian Arab Republic",
+        "a2_code": "SY",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Taiwan"
+        },
+        "referencia_onu": "",
+        "referencia_iso": "Taiwan (Province of China)",
+        "a2_code": "TW",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Tanzania"
+        },
+        "referencia_onu": "United Republic of Tanzania",
+        "a2_code": "TZ",
+        "fonte": {
+            "fonte": "The World Factbook",
+            "autor": "CIA - Central Intelligence Agency",
+            "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Tanzania, United Republic of"
+        },
+        "referencia_onu": "United Republic of Tanzania",
+        "a2_code": "TZ",
+        "fonte": {
+            "publicacao": "Country Codes - ISO 3166",
+            "link": "https://www.iso.org/obp/ui/#search/code",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "United Kingdom"
+        },
+        "referencia_onu": "United Kingdom of Great Britain and Northern Ireland",
+        "a2_code": "GB",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "United Republic of Tanzania: Mainland"
+        },
+        "referencia_onu": "United Republic of Tanzania",
+        "a2_code": "TZ",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "United States"
+        },
+        "referencia_onu": "United States of America",
+        "a2_code": "US",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Venezuela"
+        },
+        "referencia_onu": "Venezuela (Bolivarian Republic of)",
+        "a2_code": "VE",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Vietnam"
+        },
+        "referencia_onu": "Viet Nam",
+        "a2_code": "VN",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Virgin Islands"
+        },
+        "referencia_onu": "United States Virgin Islands",
+        "a2_code": "VI",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "en": "Wallis and Futuna"
+        },
+        "referencia_onu": "Wallis and Futuna Islands",
+        "a2_code": "WF",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    }
+]

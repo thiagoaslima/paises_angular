@@ -1,0 +1,50 @@
+{
+    "paises_pt": {
+        "ATA": "Antártida",
+        "ATF": "Terras Austrais e Antárticas Francesas",
+        "BVT": "Ilha Bouvet",
+        "CCK": "Ilhas Cocos (Keeling)",
+        "CXR": "Ilha Christmas",
+        "HMD": "Ilha Heard e Ilhas McDonald",
+        "IOT": "Território Britânico do Oceano Índico",
+        "SGS": "Ilhas Geórgia do Sul e Sandwich do Sul",
+        "TWN": "Taiwan",
+        "UMI": "Ilhas Menores Distantes dos Estados Unidos"
+    },
+    "paises_es": {
+        "TWN": "República de China (Taiwán)"
+    },
+    "regioes_pt": {
+        "2": "África",
+        "5": "América do Sul",
+        "9": "Oceania",
+        "10": "Antártida",
+        "11": "África Ocidental",
+        "13": "América Central",
+        "14": "África Oriental",
+        "15": "Norte da África",
+        "17": "África Central",
+        "18": "África Austral",
+        "19": "América",
+        "21": "América do Norte",
+        "29": "Caribe",
+        "30": "Ásia Oriental",
+        "34": "Ásia Meridional",
+        "35": "Sudeste Asiático",
+        "39": "Europa Meridional",
+        "53": "Austrália e Nova Zelândia",
+        "54": "Melanésia",
+        "57": "Micronésia",
+        "61": "Polinésia",
+        "142": "Ásia",
+        "143": "Ásia Central",
+        "145": "Ásia Ocidental",
+        "150": "Europa",
+        "151": "Europa Oriental",
+        "154": "Europa Setentrional",
+        "155": "Europa Ocidental",
+        "202": "África Subsaariana",
+        "419": "América Latina e o Caribe",
+        "830": "Ilhas do Canal (Ilhas Anglo-Normandas)"
+    }
+}

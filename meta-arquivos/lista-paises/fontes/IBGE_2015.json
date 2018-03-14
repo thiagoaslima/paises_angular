@@ -1,0 +1,1218 @@
+{
+    "dados": [
+        {
+            "num": 4,
+            "nome": "Afeganistão",
+            "a3": "AFG"
+        },
+        {
+            "num": 710,
+            "nome": "África do Sul",
+            "a3": "ZAF"
+        },
+        {
+            "num": 8,
+            "nome": "Albânia",
+            "a3": "ALB"
+        },
+        {
+            "num": 276,
+            "nome": "Alemanha",
+            "a3": "DEU"
+        },
+        {
+            "num": 20,
+            "nome": "Andorra",
+            "a3": "AND"
+        },
+        {
+            "num": 24,
+            "nome": "Angola",
+            "a3": "AGO"
+        },
+        {
+            "num": 660,
+            "nome": "Anguilla",
+            "a3": "AIA"
+        },
+        {
+            "num": 28,
+            "nome": "Antígua e Barbuda",
+            "a3": "ATG"
+        },
+        {
+            "num": 682,
+            "nome": "Arábia Saudita",
+            "a3": "SAU"
+        },
+        {
+            "num": 12,
+            "nome": "Argélia",
+            "a3": "DZA"
+        },
+        {
+            "num": 32,
+            "nome": "Argentina",
+            "a3": "ARG"
+        },
+        {
+            "num": 51,
+            "nome": "Armênia",
+            "a3": "ARM"
+        },
+        {
+            "num": 533,
+            "nome": "Aruba",
+            "a3": "ABW"
+        },
+        {
+            "num": 36,
+            "nome": "Austrália",
+            "a3": "AUS"
+        },
+        {
+            "num": 40,
+            "nome": "Áustria",
+            "a3": "AUT"
+        },
+        {
+            "num": 31,
+            "nome": "Azerbaijão",
+            "a3": "AZE"
+        },
+        {
+            "num": 44,
+            "nome": "Bahamas",
+            "a3": "BHS"
+        },
+        {
+            "num": 50,
+            "nome": "Bangladesh",
+            "a3": "BGD"
+        },
+        {
+            "num": 52,
+            "nome": "Barbados",
+            "a3": "BRB"
+        },
+        {
+            "num": 48,
+            "nome": "Barein",
+            "a3": "BHR"
+        },
+        {
+            "num": 56,
+            "nome": "Bélgica",
+            "a3": "BEL"
+        },
+        {
+            "num": 84,
+            "nome": "Belize",
+            "a3": "BLZ"
+        },
+        {
+            "num": 204,
+            "nome": "Benin",
+            "a3": "BEN"
+        },
+        {
+            "num": 60,
+            "nome": "Bermuda",
+            "a3": "BMU"
+        },
+        {
+            "num": 112,
+            "nome": "Bielorússia",
+            "a3": "BLR"
+        },
+        {
+            "num": 68,
+            "nome": "Bolívia",
+            "a3": "BOL"
+        },
+        {
+            "num": 535,
+            "nome": "Bonaire, Santo Eustáquio e Saba",
+            "a3": "BES"
+        },
+        {
+            "num": 70,
+            "nome": "Bósnia-Herzegovina",
+            "a3": "BIH"
+        },
+        {
+            "num": 72,
+            "nome": "Botsuana",
+            "a3": "BWA"
+        },
+        {
+            "num": 76,
+            "nome": "Brasil",
+            "a3": "BRA"
+        },
+        {
+            "num": 96,
+            "nome": "Brunei",
+            "a3": "BRN"
+        },
+        {
+            "num": 100,
+            "nome": "Bulgária",
+            "a3": "BGR"
+        },
+        {
+            "num": 854,
+            "nome": "Burkina Faso",
+            "a3": "BFA"
+        },
+        {
+            "num": 108,
+            "nome": "Burundi",
+            "a3": "BDI"
+        },
+        {
+            "num": 64,
+            "nome": "Butão",
+            "a3": "BTN"
+        },
+        {
+            "num": 132,
+            "nome": "Cabo Verde",
+            "a3": "CPV"
+        },
+        {
+            "num": 120,
+            "nome": "Camarões",
+            "a3": "CMR"
+        },
+        {
+            "num": 116,
+            "nome": "Camboja",
+            "a3": "KHM"
+        },
+        {
+            "num": 124,
+            "nome": "Canadá",
+            "a3": "CAN"
+        },
+        {
+            "num": 398,
+            "nome": "Casaquistão",
+            "a3": "KAZ"
+        },
+        {
+            "num": 634,
+            "nome": "Catar",
+            "a3": "QAT"
+        },
+        {
+            "num": 148,
+            "nome": "Chade",
+            "a3": "TCD"
+        },
+        {
+            "num": 152,
+            "nome": "Chile",
+            "a3": "CHL"
+        },
+        {
+            "num": 156,
+            "nome": "China",
+            "a3": "CHN"
+        },
+        {
+            "num": 344,
+            "nome": "China, Hong Kong",
+            "a3": "HKG"
+        },
+        {
+            "num": 446,
+            "nome": "China, Macao",
+            "a3": "MAC"
+        },
+        {
+            "num": 196,
+            "nome": "Chipre",
+            "a3": "CYP"
+        },
+        {
+            "num": 702,
+            "nome": "Cingapura",
+            "a3": "SGP"
+        },
+        {
+            "num": 170,
+            "nome": "Colômbia",
+            "a3": "COL"
+        },
+        {
+            "num": 174,
+            "nome": "Comores",
+            "a3": "COM"
+        },
+        {
+            "num": 178,
+            "nome": "Congo",
+            "a3": "COG"
+        },
+        {
+            "num": 408,
+            "nome": "Coréia do Norte",
+            "a3": "PRK"
+        },
+        {
+            "num": 410,
+            "nome": "Coréia do Sul",
+            "a3": "KOR"
+        },
+        {
+            "num": 384,
+            "nome": "Costa do Marfim",
+            "a3": "CIV"
+        },
+        {
+            "num": 188,
+            "nome": "Costa Rica",
+            "a3": "CRI"
+        },
+        {
+            "num": 191,
+            "nome": "Croácia",
+            "a3": "HRV"
+        },
+        {
+            "num": 192,
+            "nome": "Cuba",
+            "a3": "CUB"
+        },
+        {
+            "num": 531,
+            "nome": "Curaçao",
+            "a3": "CUW"
+        },
+        {
+            "num": 208,
+            "nome": "Dinamarca",
+            "a3": "DNK"
+        },
+        {
+            "num": 262,
+            "nome": "Djibouti",
+            "a3": "DJI"
+        },
+        {
+            "num": 212,
+            "nome": "Dominica",
+            "a3": "DMA"
+        },
+        {
+            "num": 818,
+            "nome": "Egito",
+            "a3": "EGY"
+        },
+        {
+            "num": 222,
+            "nome": "El Salvador",
+            "a3": "SLV"
+        },
+        {
+            "num": 784,
+            "nome": "Emirados Árabes Unidos",
+            "a3": "ARE"
+        },
+        {
+            "num": 218,
+            "nome": "Equador",
+            "a3": "ECU"
+        },
+        {
+            "num": 232,
+            "nome": "Eritréia",
+            "a3": "ERI"
+        },
+        {
+            "num": 703,
+            "nome": "Eslováquia",
+            "a3": "SVK"
+        },
+        {
+            "num": 705,
+            "nome": "Eslovênia",
+            "a3": "SVN"
+        },
+        {
+            "num": 724,
+            "nome": "Espanha",
+            "a3": "ESP"
+        },
+        {
+            "num": 840,
+            "nome": "Estados Unidos da América",
+            "a3": "USA"
+        },
+        {
+            "num": 233,
+            "nome": "Estônia",
+            "a3": "EST"
+        },
+        {
+            "num": 231,
+            "nome": "Etiópia",
+            "a3": "ETH"
+        },
+        {
+            "num": 242,
+            "nome": "Fiji",
+            "a3": "FJI"
+        },
+        {
+            "num": 608,
+            "nome": "Filipinas",
+            "a3": "PHL"
+        },
+        {
+            "num": 246,
+            "nome": "Finlândia",
+            "a3": "FIN"
+        },
+        {
+            "num": 250,
+            "nome": "França",
+            "a3": "FRA"
+        },
+        {
+            "num": 266,
+            "nome": "Gabão",
+            "a3": "GAB"
+        },
+        {
+            "num": 270,
+            "nome": "Gâmbia",
+            "a3": "GMB"
+        },
+        {
+            "num": 288,
+            "nome": "Gana",
+            "a3": "GHA"
+        },
+        {
+            "num": 268,
+            "nome": "Geórgia",
+            "a3": "GEO"
+        },
+        {
+            "num": 292,
+            "nome": "Gibraltar",
+            "a3": "GIB"
+        },
+        {
+            "num": 308,
+            "nome": "Granada",
+            "a3": "GRD"
+        },
+        {
+            "num": 300,
+            "nome": "Grécia",
+            "a3": "GRC"
+        },
+        {
+            "num": 304,
+            "nome": "Groenlândia",
+            "a3": "GRL"
+        },
+        {
+            "num": 316,
+            "nome": "Guam",
+            "a3": "GUM"
+        },
+        {
+            "num": 320,
+            "nome": "Guatemala",
+            "a3": "GTM"
+        },
+        {
+            "num": 831,
+            "nome": "Guernsey",
+            "a3": "GGY"
+        },
+        {
+            "num": 328,
+            "nome": "Guiana",
+            "a3": "GUY"
+        },
+        {
+            "num": 254,
+            "nome": "Guiana Francesa",
+            "a3": "GUF"
+        },
+        {
+            "num": 324,
+            "nome": "Guiné",
+            "a3": "GIN"
+        },
+        {
+            "num": 226,
+            "nome": "Guiné Equatorial",
+            "a3": "GNQ"
+        },
+        {
+            "num": 624,
+            "nome": "Guiné-Bissau",
+            "a3": "GNB"
+        },
+        {
+            "num": 332,
+            "nome": "Haiti",
+            "a3": "HTI"
+        },
+        {
+            "num": 528,
+            "nome": "Holanda",
+            "a3": "NLD"
+        },
+        {
+            "num": 340,
+            "nome": "Honduras",
+            "a3": "HND"
+        },
+        {
+            "num": 348,
+            "nome": "Hungria",
+            "a3": "HUN"
+        },
+        {
+            "num": 887,
+            "nome": "Iêmen",
+            "a3": "YEM"
+        },
+        {
+            "num": 833,
+            "nome": "Ilha de Man",
+            "a3": "IMN"
+        },
+        {
+            "num": 312,
+            "nome": "Ilha Guadalupe",
+            "a3": "GLP"
+        },
+        {
+            "num": 574,
+            "nome": "Ilha Norfolk",
+            "a3": "NFK"
+        },
+        {
+            "num": 638,
+            "nome": "Ilha Reunião",
+            "a3": "REU"
+        },
+        {
+            "num": 248,
+            "nome": "Ilhas Alanda",
+            "a3": "ALA"
+        },
+        {
+            "num": 136,
+            "nome": "Ilhas Cayman",
+            "a3": "CYM"
+        },
+        {
+            "num": 184,
+            "nome": "Ilhas Cook",
+            "a3": "COK"
+        },
+        {
+            "num": 830,
+            "nome": "Ilhas do Canal",
+            "a3": ""
+        },
+        {
+            "num": 234,
+            "nome": "Ilhas Faeroe",
+            "a3": "FRO"
+        },
+        {
+            "num": 238,
+            "nome": "Ilhas Falkland",
+            "a3": "FLK"
+        },
+        {
+            "num": 580,
+            "nome": "Ilhas Marianas",
+            "a3": "MNP"
+        },
+        {
+            "num": 584,
+            "nome": "Ilhas Marshall",
+            "a3": "MHL"
+        },
+        {
+            "num": 90,
+            "nome": "Ilhas Salomão",
+            "a3": "SLB"
+        },
+        {
+            "num": 796,
+            "nome": "Ilhas Turks e Caicos",
+            "a3": "TCA"
+        },
+        {
+            "num": 850,
+            "nome": "Ilhas Virgens",
+            "a3": "VIR"
+        },
+        {
+            "num": 92,
+            "nome": "Ilhas Virgens Britânicas",
+            "a3": "VGB"
+        },
+        {
+            "num": 876,
+            "nome": "Ilhas Wallis e Futuna",
+            "a3": "WLF"
+        },
+        {
+            "num": 356,
+            "nome": "Índia",
+            "a3": "IND"
+        },
+        {
+            "num": 360,
+            "nome": "Indonésia",
+            "a3": "IDN"
+        },
+        {
+            "num": 364,
+            "nome": "Irã",
+            "a3": "IRN"
+        },
+        {
+            "num": 368,
+            "nome": "Iraque",
+            "a3": "IRQ"
+        },
+        {
+            "num": 372,
+            "nome": "Irlanda",
+            "a3": "IRL"
+        },
+        {
+            "num": 352,
+            "nome": "Islândia",
+            "a3": "ISL"
+        },
+        {
+            "num": 376,
+            "nome": "Israel",
+            "a3": "ISR"
+        },
+        {
+            "num": 380,
+            "nome": "Itália",
+            "a3": "ITA"
+        },
+        {
+            "num": 388,
+            "nome": "Jamaica",
+            "a3": "JAM"
+        },
+        {
+            "num": 392,
+            "nome": "Japão",
+            "a3": "JPN"
+        },
+        {
+            "num": 832,
+            "nome": "Jersey",
+            "a3": "JEY"
+        },
+        {
+            "num": 400,
+            "nome": "Jordânia",
+            "a3": "JOR"
+        },
+        {
+            "num": 296,
+            "nome": "Kiribati",
+            "a3": "KIR"
+        },
+        {
+            "num": 414,
+            "nome": "Kuwait",
+            "a3": "KWT"
+        },
+        {
+            "num": 418,
+            "nome": "Laos",
+            "a3": "LAO"
+        },
+        {
+            "num": 426,
+            "nome": "Lesoto",
+            "a3": "LSO"
+        },
+        {
+            "num": 428,
+            "nome": "Letônia",
+            "a3": "LVA"
+        },
+        {
+            "num": 422,
+            "nome": "Líbano",
+            "a3": "LBN"
+        },
+        {
+            "num": 430,
+            "nome": "Libéria",
+            "a3": "LBR"
+        },
+        {
+            "num": 434,
+            "nome": "Líbia",
+            "a3": "LBY"
+        },
+        {
+            "num": 438,
+            "nome": "Liechtenstein",
+            "a3": "LIE"
+        },
+        {
+            "num": 440,
+            "nome": "Lituânia",
+            "a3": "LTU"
+        },
+        {
+            "num": 442,
+            "nome": "Luxemburgo",
+            "a3": "LUX"
+        },
+        {
+            "num": 807,
+            "nome": "Macedônia",
+            "a3": "MKD"
+        },
+        {
+            "num": 450,
+            "nome": "Madagáscar",
+            "a3": "MDG"
+        },
+        {
+            "num": 458,
+            "nome": "Malásia",
+            "a3": "MYS"
+        },
+        {
+            "num": 454,
+            "nome": "Malauí",
+            "a3": "MWI"
+        },
+        {
+            "num": 462,
+            "nome": "Maldivas",
+            "a3": "MDV"
+        },
+        {
+            "num": 466,
+            "nome": "Mali",
+            "a3": "MLI"
+        },
+        {
+            "num": 470,
+            "nome": "Malta",
+            "a3": "MLT"
+        },
+        {
+            "num": 504,
+            "nome": "Marrocos",
+            "a3": "MAR"
+        },
+        {
+            "num": 474,
+            "nome": "Martinica",
+            "a3": "MTQ"
+        },
+        {
+            "num": 480,
+            "nome": "Maurício",
+            "a3": "MUS"
+        },
+        {
+            "num": 478,
+            "nome": "Mauritânia",
+            "a3": "MRT"
+        },
+        {
+            "num": 175,
+            "nome": "Mayotte",
+            "a3": "MYT"
+        },
+        {
+            "num": 484,
+            "nome": "México",
+            "a3": "MEX"
+        },
+        {
+            "num": 104,
+            "nome": "Mianma",
+            "a3": "MMR"
+        },
+        {
+            "num": 583,
+            "nome": "Micronésia",
+            "a3": "FSM"
+        },
+        {
+            "num": 508,
+            "nome": "Moçambique",
+            "a3": "MOZ"
+        },
+        {
+            "num": 498,
+            "nome": "Moldávia",
+            "a3": "MDA"
+        },
+        {
+            "num": 492,
+            "nome": "Mônaco",
+            "a3": "MCO"
+        },
+        {
+            "num": 496,
+            "nome": "Mongólia",
+            "a3": "MNG"
+        },
+        {
+            "num": 499,
+            "nome": "Montenegro",
+            "a3": "MNE"
+        },
+        {
+            "num": 500,
+            "nome": "Montserrat",
+            "a3": "MSR"
+        },
+        {
+            "num": 516,
+            "nome": "Namíbia",
+            "a3": "NAM"
+        },
+        {
+            "num": 520,
+            "nome": "Nauru",
+            "a3": "NRU"
+        },
+        {
+            "num": 524,
+            "nome": "Nepal",
+            "a3": "NPL"
+        },
+        {
+            "num": 558,
+            "nome": "Nicarágua",
+            "a3": "NIC"
+        },
+        {
+            "num": 562,
+            "nome": "Níger",
+            "a3": "NER"
+        },
+        {
+            "num": 566,
+            "nome": "Nigéria",
+            "a3": "NGA"
+        },
+        {
+            "num": 570,
+            "nome": "Niue",
+            "a3": "NIU"
+        },
+        {
+            "num": 578,
+            "nome": "Noruega",
+            "a3": "NOR"
+        },
+        {
+            "num": 540,
+            "nome": "Nova Caledônia",
+            "a3": "NCL"
+        },
+        {
+            "num": 554,
+            "nome": "Nova Zelândia",
+            "a3": "NZL"
+        },
+        {
+            "num": 512,
+            "nome": "Omã",
+            "a3": "OMN"
+        },
+        {
+            "num": 585,
+            "nome": "Palau",
+            "a3": "PLW"
+        },
+        {
+            "num": 275,
+            "nome": "Palestina",
+            "a3": "PSE"
+        },
+        {
+            "num": 591,
+            "nome": "Panamá",
+            "a3": "PAN"
+        },
+        {
+            "num": 598,
+            "nome": "Papua Nova Guiné",
+            "a3": "PNG"
+        },
+        {
+            "num": 586,
+            "nome": "Paquistão",
+            "a3": "PAK"
+        },
+        {
+            "num": 600,
+            "nome": "Paraguai",
+            "a3": "PRY"
+        },
+        {
+            "num": 604,
+            "nome": "Peru",
+            "a3": "PER"
+        },
+        {
+            "num": 612,
+            "nome": "Pitcairn",
+            "a3": "PCN"
+        },
+        {
+            "num": 258,
+            "nome": "Polinésia Francesa",
+            "a3": "PYF"
+        },
+        {
+            "num": 616,
+            "nome": "Polônia",
+            "a3": "POL"
+        },
+        {
+            "num": 630,
+            "nome": "Porto Rico",
+            "a3": "PRI"
+        },
+        {
+            "num": 620,
+            "nome": "Portugal",
+            "a3": "PRT"
+        },
+        {
+            "num": 404,
+            "nome": "Quênia",
+            "a3": "KEN"
+        },
+        {
+            "num": 417,
+            "nome": "Quirguistão",
+            "a3": "KGZ"
+        },
+        {
+            "num": 826,
+            "nome": "Reino Unido",
+            "a3": "GBR"
+        },
+        {
+            "num": 140,
+            "nome": "República Centro Africana",
+            "a3": "CAF"
+        },
+        {
+            "num": 180,
+            "nome": "República Democrática do Congo",
+            "a3": "COD"
+        },
+        {
+            "num": 214,
+            "nome": "República Dominicana",
+            "a3": "DOM"
+        },
+        {
+            "num": 203,
+            "nome": "República Tcheca",
+            "a3": "CZE"
+        },
+        {
+            "num": 642,
+            "nome": "Romênia",
+            "a3": "ROU"
+        },
+        {
+            "num": 646,
+            "nome": "Ruanda",
+            "a3": "RWA"
+        },
+        {
+            "num": 643,
+            "nome": "Rússia (Federação Russa)",
+            "a3": "RUS"
+        },
+        {
+            "num": 732,
+            "nome": "Saara Ocidental",
+            "a3": "ESH"
+        },
+        {
+            "num": 663,
+            "nome": "Saint Martin (parte francesa)",
+            "a3": "MAF"
+        },
+        {
+            "num": 534,
+            "nome": "Saint Martin (parte holandesa)",
+            "a3": "SXM"
+        },
+        {
+            "num": 666,
+            "nome": "Saint Pierre e Miquelon",
+            "a3": "SPM"
+        },
+        {
+            "num": 882,
+            "nome": "Samoa",
+            "a3": "WSM"
+        },
+        {
+            "num": 16,
+            "nome": "Samoa Americana",
+            "a3": "ASM"
+        },
+        {
+            "num": 674,
+            "nome": "San Marino",
+            "a3": "SMR"
+        },
+        {
+            "num": 654,
+            "nome": "Santa Helena",
+            "a3": "SHN"
+        },
+        {
+            "num": 662,
+            "nome": "Santa Lúcia",
+            "a3": "LCA"
+        },
+        {
+            "num": 652,
+            "nome": "São Bartolomeu",
+            "a3": "BLM"
+        },
+        {
+            "num": 659,
+            "nome": "São Cristóvão e Nevis",
+            "a3": "KNA"
+        },
+        {
+            "num": 678,
+            "nome": "São Tome e Príncipe",
+            "a3": "STP"
+        },
+        {
+            "num": 670,
+            "nome": "São Vicente e Granadinas",
+            "a3": "VCT"
+        },
+        {
+            "num": 680,
+            "nome": "Sark",
+            "a3": ""
+        },
+        {
+            "num": 690,
+            "nome": "Seichelles",
+            "a3": "SYC"
+        },
+        {
+            "num": 686,
+            "nome": "Senegal",
+            "a3": "SEN"
+        },
+        {
+            "num": 694,
+            "nome": "Serra Leoa",
+            "a3": "SLE"
+        },
+        {
+            "num": 688,
+            "nome": "Sérvia",
+            "a3": "SRB"
+        },
+        {
+            "num": 760,
+            "nome": "Síria",
+            "a3": "SYR"
+        },
+        {
+            "num": 706,
+            "nome": "Somália",
+            "a3": "SOM"
+        },
+        {
+            "num": 144,
+            "nome": "Sri Lanka",
+            "a3": "LKA"
+        },
+        {
+            "num": 748,
+            "nome": "Suazilândia",
+            "a3": "SWZ"
+        },
+        {
+            "num": 728,
+            "nome": "Sudão do Sul",
+            "a3": "SSD"
+        },
+        {
+            "num": 729,
+            "nome": "Sudão",
+            "a3": "SDN"
+        },
+        {
+            "num": 752,
+            "nome": "Suécia",
+            "a3": "SWE"
+        },
+        {
+            "num": 756,
+            "nome": "Suíça",
+            "a3": "CHE"
+        },
+        {
+            "num": 740,
+            "nome": "Suriname",
+            "a3": "SUR"
+        },
+        {
+            "num": 744,
+            "nome": "Svalbard e Jan Mayen Islands",
+            "a3": "SJM"
+        },
+        {
+            "num": 762,
+            "nome": "Tadjiquistão",
+            "a3": "TJK"
+        },
+        {
+            "num": 764,
+            "nome": "Tailândia",
+            "a3": "THA"
+        },
+        {
+            "num": 834,
+            "nome": "Tanzânia",
+            "a3": "TZA"
+        },
+        {
+            "num": 626,
+            "nome": "Timor Leste",
+            "a3": "TLS"
+        },
+        {
+            "num": 768,
+            "nome": "Togo",
+            "a3": "TGO"
+        },
+        {
+            "num": 772,
+            "nome": "Tokelau",
+            "a3": "TKL"
+        },
+        {
+            "num": 776,
+            "nome": "Tonga",
+            "a3": "TON"
+        },
+        {
+            "num": 780,
+            "nome": "Trinidad e Tobago",
+            "a3": "TTO"
+        },
+        {
+            "num": 788,
+            "nome": "Tunísia",
+            "a3": "TUN"
+        },
+        {
+            "num": 795,
+            "nome": "Turcomenistão",
+            "a3": "TKM"
+        },
+        {
+            "num": 792,
+            "nome": "Turquia",
+            "a3": "TUR"
+        },
+        {
+            "num": 798,
+            "nome": "Tuvalu",
+            "a3": "TUV"
+        },
+        {
+            "num": 804,
+            "nome": "Ucrânia",
+            "a3": "UKR"
+        },
+        {
+            "num": 800,
+            "nome": "Uganda",
+            "a3": "UGA"
+        },
+        {
+            "num": 858,
+            "nome": "Uruguai",
+            "a3": "URY"
+        },
+        {
+            "num": 860,
+            "nome": "Uzbequistão",
+            "a3": "UZB"
+        },
+        {
+            "num": 548,
+            "nome": "Vanuatu",
+            "a3": "VUT"
+        },
+        {
+            "num": 336,
+            "nome": "Vaticano",
+            "a3": "VAT"
+        },
+        {
+            "num": 862,
+            "nome": "Venezuela",
+            "a3": "VEN"
+        },
+        {
+            "num": 704,
+            "nome": "Vietnã",
+            "a3": "VNM"
+        },
+        {
+            "num": 894,
+            "nome": "Zâmbia",
+            "a3": "ZMB"
+        },
+        {
+            "num": 716,
+            "nome": "Zimbábue",
+            "a3": "ZWE"
+        }
+    ],
+    "metadados": {
+        "fonte": {
+            "publicação": "Países e territórios - códigos e abreviações",
+            "autor": "IBGE",
+            "data": "2015",
+            "link": "ftp://ftp.ibge.gov.br/Registro_Civil/paises_e_territorios_codigos_e_abreviacoes.ods",
+            "acessadoEm": "2018-03-08"
+        }
+    }
+}
