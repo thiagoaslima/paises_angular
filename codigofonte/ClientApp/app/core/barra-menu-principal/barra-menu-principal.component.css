@@ -99,6 +99,16 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cabecalho__menu-item--separator{
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.cabecalho__menu-item--highlight{
+    font-weight: bold;
 }
 
 .cabecalho__menu-item:hover{

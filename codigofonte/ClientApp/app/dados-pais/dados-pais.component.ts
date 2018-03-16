@@ -7,8 +7,6 @@ import { RouterParamsService, LocalidadeService, Pais } from "../shared";
 import { SinteseHomeService } from "../mapa-section/sintese-home/sintese-home.service";
 import { DadosPaisService } from './dados-pais.service';
 
-import { ResultadoPipe } from '../shared/resultado.pipe';
-
 import { linksCapas } from '../shared/links-capas';
 
 @Component({

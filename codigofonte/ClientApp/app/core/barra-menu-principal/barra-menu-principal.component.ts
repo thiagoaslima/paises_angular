@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { BuscaService } from '../../shared';
+import { BuscaService, TraducaoService } from '../../shared';
 
 @Component({
     selector: 'barra-menu-principal',
@@ -12,13 +12,11 @@ import { BuscaService } from '../../shared';
 })
 export class BarraMenuPrincipalComponent {
 
-    lang = "pt";
-
     resultados: Array<any> = [];
 
     mostraMenu = false;
 
-    constructor(private _buscaService: BuscaService) { }
+    constructor(private _buscaService: BuscaService, private _traducaoService:TraducaoService) { }
 
     busca(event: any) {
         this.resultados = this._buscaService.search(event.target.value, this.lang);
@@ -30,6 +28,14 @@ export class BarraMenuPrincipalComponent {
 
     navegarPara(event: any) {
         // console.log(event);
+    }
+
+    public set lang(value: string){
+        this._traducaoService.lang = value;
+    }
+
+    public get lang(){
+        return this._traducaoService.lang;
     }
 
 }

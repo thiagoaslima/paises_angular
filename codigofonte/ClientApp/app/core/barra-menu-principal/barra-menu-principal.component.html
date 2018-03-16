@@ -1,7 +1,7 @@
 <header class="cabecalho gradiente">
     <!-->logo<-->
     <h1 class="cabecalho__logo">
-        <a routerLink="/"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
+        <a routerLink="/mapa"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
     </h1>
     <!-->campo de busca com lista de sugestões<-->
     <div class="cabecalho__campo-busca-container" [class.altura2]="resultados && resultados.length>0">
@@ -19,10 +19,11 @@
         <div class="overlay" *ngIf="mostraMenu==true" (click)="mostraMenu=false"></div>
         <button class="cabecalho__menu-button" (click)="mostraMenu=true"><i class="fa fa-ellipsis-h cabecalho__menu-icone" aria-hidden="true"></i></button>
         <ul class="cabecalho__menu" *ngIf="mostraMenu">
-            <li><a class="cabecalho__menu-item" href="#">TELA INICIAL</a></li>
-            <li><a class="cabecalho__menu-item" href="#">ODS</a></li>
-            <li><a class="cabecalho__menu-item" href="#">ENGLISH</a></li>
-            <li><a class="cabecalho__menu-item" href="#">ESPAÑOL</a></li>
+            <li><a class="cabecalho__menu-item" href="#">{{'barra-menu-principal__home' | l10n}}</a></li>
+            <li><a class="cabecalho__menu-item cabecalho__menu-item--separator" href="#">{{'barra-menu-principal__ods' | l10n}}</a></li>
+            <li class="cabecalho__menu-item" [class.cabecalho__menu-item--highlight]="lang=='pt'" (click)="mostraMenu=false;lang='pt'">Português</li>
+            <li class="cabecalho__menu-item" [class.cabecalho__menu-item--highlight]="lang=='en'" (click)="mostraMenu=false;lang='en'">English</li>
+            <li class="cabecalho__menu-item" [class.cabecalho__menu-item--highlight]="lang=='es'" (click)="mostraMenu=false;lang='es'">Español</li>
         </ul>
     </div>
 </header>
