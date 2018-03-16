@@ -27,9 +27,15 @@ function filterIndicators (indicatorsStream, indicadores) {
     indicatorsStream.pipe(jsonStream.input);
 
     const values = {};
-    Object.defineProperty(values, 'ids', {
-        value: indicadores.map(o => o.id),
-        enumerable: false
+    Object.defineProperties(values, {
+        'ids': {
+            value: indicadores.map(o => o.id),
+            enumerable: false
+        },
+        'slugs': {
+            value: indicadores.map(o => o.slug),
+            enumerable: false
+        }
     });
     const hash = hashStream(indicatorsStream);
 
@@ -49,12 +55,13 @@ function convertIndicators({country, id, value, year}, values) {
         values.ids.includes(id)
         && year !== '9999' // atalho para ano mais recente
     ) {
-        let sigla = getSigla(country);    
+        let sigla = getSigla(country);
+        let slug = values.slugs[values.ids.indexOf(id)];    
 
-        if (!values[id]) { values[id] = {}; }
-        if (!values[id][year]) { values[id][year] = {}; }
+        if (!values[slug]) { values[slug] = {}; }
+        if (!values[slug][year]) { values[slug][year] = {}; }
 
-        values[id][year][sigla] = value;
+        values[slug][year][sigla] = value;
     }
 }
 

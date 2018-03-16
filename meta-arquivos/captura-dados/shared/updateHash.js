@@ -2,13 +2,11 @@ const path = require('path')
 const readFile = require('../shared/readFile');
 const saveFile = require('../shared/saveFile');
 
-function updateHash(hash) {
-    const fileName = 'hash-indicators.txt'
-    
-    return readFile(fileName).then(oldHash => {
+function updateHash(hash, file) {  
+    return readFile(file).then(oldHash => {
         const areEqual = (hash == oldHash);
         if (!areEqual) {
-            saveFile(path.resolve(__dirname), fileName, hash)
+            saveFile(null, file, hash)
         }
         return areEqual;
     });
