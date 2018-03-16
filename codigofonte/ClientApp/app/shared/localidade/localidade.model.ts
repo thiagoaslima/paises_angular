@@ -21,5 +21,4 @@ export interface Pais extends Localidade {
         regiao: string;
         subregiao: string;
     };
-    ddi: string;
 }

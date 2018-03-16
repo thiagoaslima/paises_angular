@@ -7,7 +7,7 @@ export class PlatformDetectionService {
     public isServer: boolean;
 
     constructor(
-        @Inject(PLATFORM_ID) platformId: Object,
+        @Inject(PLATFORM_ID) platformId: Object
     ) {
         this.isBrowser = isPlatformBrowser(platformId);
         this.isServer = isPlatformServer(platformId);
