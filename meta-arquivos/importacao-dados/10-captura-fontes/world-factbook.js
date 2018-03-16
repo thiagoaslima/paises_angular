@@ -2,13 +2,15 @@ const request = require('request-promise-native');
 const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
-const slugify = require('../../shared/slug');
+const slugify = require('../shared/slug');
 
 const fonteDesejada = "The World Factbook";
 const fonte = require('../fontes').find(obj => obj.fonte === fonteDesejada);
 const { dados } = fonte;
 
 dados.forEach(dados => {
+    if (dados.ignore) { return; }
+    
     const { nome, link } = dados;
     const slug = slugify(nome);
 

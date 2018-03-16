@@ -4240,5 +4240,8 @@
       "link": "https://unstats.un.org/unsd/methodology/m49/overview/",
       "acessadoEm": "2018-03-07"
     }
-  }
+  },
+  "notas": [
+    "https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/D_Country%2C_State%2C_and_Province_Codes/A_Country_Names_and_Their_ISO_Codes"
+  ]
 }

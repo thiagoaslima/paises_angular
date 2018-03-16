@@ -10,6 +10,11 @@
                 "es": "Afganistán",
                 "pt": "Afeganistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "afghanistan",
                 "es": "afganistan",
@@ -32,6 +37,11 @@
                 "en": "Åland Islands",
                 "es": "Islas Åland",
                 "pt": "Ilhas Alanda"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "aland-islands",
@@ -56,6 +66,11 @@
                 "es": "Albania",
                 "pt": "Albânia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "albania",
                 "es": "albania",
@@ -78,6 +93,11 @@
                 "en": "Algeria",
                 "es": "Argelia",
                 "pt": "Argélia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "algeria",
@@ -102,6 +122,11 @@
                 "es": "Samoa Americana",
                 "pt": "Samoa Americana"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "american-samoa",
                 "es": "samoa-americana",
@@ -124,6 +149,11 @@
                 "en": "Andorra",
                 "es": "Andorra",
                 "pt": "Andorra"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "andorra",
@@ -148,6 +178,11 @@
                 "es": "Angola",
                 "pt": "Angola"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "angola",
                 "es": "angola",
@@ -170,6 +205,11 @@
                 "en": "Anguilla",
                 "es": "Anguila",
                 "pt": "Anguilla"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "anguilla",
@@ -194,6 +234,11 @@
                 "es": "Antártida",
                 "pt": "Antártida"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "antarctica",
                 "es": "antartida",
@@ -216,6 +261,11 @@
                 "en": "Antigua and Barbuda",
                 "es": "Antigua y Barbuda",
                 "pt": "Antígua e Barbuda"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "antigua-and-barbuda",
@@ -240,6 +290,11 @@
                 "es": "Argentina",
                 "pt": "Argentina"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "argentina",
                 "es": "argentina",
@@ -262,6 +317,11 @@
                 "en": "Armenia",
                 "es": "Armenia",
                 "pt": "Armênia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "armenia",
@@ -286,6 +346,11 @@
                 "es": "Aruba",
                 "pt": "Aruba"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "aruba",
                 "es": "aruba",
@@ -308,6 +373,11 @@
                 "en": "Australia",
                 "es": "Australia",
                 "pt": "Austrália"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "australia",
@@ -332,6 +402,11 @@
                 "es": "Austria",
                 "pt": "Áustria"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "austria",
                 "es": "austria",
@@ -354,6 +429,11 @@
                 "en": "Azerbaijan",
                 "es": "Azerbaiyán",
                 "pt": "Azerbaijão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "azerbaijan",
@@ -378,6 +458,13 @@
                 "es": "Bahamas",
                 "pt": "Bahamas"
             },
+            "apelidos": {
+                "en": [
+                    "Bahamas, The"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bahamas",
                 "es": "bahamas",
@@ -400,6 +487,11 @@
                 "en": "Bahrain",
                 "es": "Bahrein",
                 "pt": "Barein"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "bahrain",
@@ -424,6 +516,11 @@
                 "es": "Bangladesh",
                 "pt": "Bangladesh"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bangladesh",
                 "es": "bangladesh",
@@ -446,6 +543,11 @@
                 "en": "Barbados",
                 "es": "Barbados",
                 "pt": "Barbados"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "barbados",
@@ -470,6 +572,11 @@
                 "es": "Belarús",
                 "pt": "Bielorússia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "belarus",
                 "es": "belarus",
@@ -492,6 +599,11 @@
                 "en": "Belgium",
                 "es": "Bélgica",
                 "pt": "Bélgica"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "belgium",
@@ -516,6 +628,11 @@
                 "es": "Belice",
                 "pt": "Belize"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "belize",
                 "es": "belice",
@@ -538,6 +655,11 @@
                 "en": "Benin",
                 "es": "Benin",
                 "pt": "Benin"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "benin",
@@ -562,6 +684,11 @@
                 "es": "Bermuda",
                 "pt": "Bermuda"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bermuda",
                 "es": "bermuda",
@@ -584,6 +711,11 @@
                 "en": "Bhutan",
                 "es": "Bhután",
                 "pt": "Butão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "bhutan",
@@ -608,6 +740,15 @@
                 "es": "Bolivia (Estado Plurinacional de)",
                 "pt": "Bolívia"
             },
+            "apelidos": {
+                "en": [
+                    "Bolivia"
+                ],
+                "es": [
+                    "Bolivia"
+                ],
+                "pt": []
+            },
             "slugs": {
                 "en": "bolivia-plurinational-state-of",
                 "es": "bolivia-estado-plurinacional-de",
@@ -630,6 +771,11 @@
                 "en": "Bonaire, Sint Eustatius and Saba",
                 "es": "Bonaire, San Eustaquio y Saba",
                 "pt": "Bonaire, Santo Eustáquio e Saba"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "bonaire-sint-eustatius-and-saba",
@@ -654,6 +800,11 @@
                 "es": "Bosnia y Herzegovina",
                 "pt": "Bósnia-Herzegovina"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bosnia-and-herzegovina",
                 "es": "bosnia-y-herzegovina",
@@ -676,6 +827,11 @@
                 "en": "Botswana",
                 "es": "Botswana",
                 "pt": "Botsuana"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "botswana",
@@ -700,6 +856,11 @@
                 "es": "Isla Bouvet",
                 "pt": "Ilha Bouvet"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bouvet-island",
                 "es": "isla-bouvet",
@@ -722,6 +883,11 @@
                 "en": "Brazil",
                 "es": "Brasil",
                 "pt": "Brasil"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "brazil",
@@ -746,6 +912,11 @@
                 "es": "Territorio Británico del Océano Índico",
                 "pt": "Território Britânico do Oceano Índico"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "british-indian-ocean-territory",
                 "es": "territorio-britanico-del-oceano-indico",
@@ -768,6 +939,17 @@
                 "en": "Brunei Darussalam",
                 "es": "Brunei Darussalam",
                 "pt": "Brunei"
+            },
+            "apelidos": {
+                "en": [
+                    "Brunei"
+                ],
+                "es": [
+                    "Brunéi"
+                ],
+                "pt": [
+                    "Brunei Darussalam"
+                ]
             },
             "slugs": {
                 "en": "brunei-darussalam",
@@ -792,6 +974,11 @@
                 "es": "Bulgaria",
                 "pt": "Bulgária"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "bulgaria",
                 "es": "bulgaria",
@@ -814,6 +1001,11 @@
                 "en": "Burkina Faso",
                 "es": "Burkina Faso",
                 "pt": "Burkina Faso"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "burkina-faso",
@@ -838,6 +1030,11 @@
                 "es": "Burundi",
                 "pt": "Burundi"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "burundi",
                 "es": "burundi",
@@ -860,6 +1057,11 @@
                 "en": "Cabo Verde",
                 "es": "Cabo Verde",
                 "pt": "Cabo Verde"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "cabo-verde",
@@ -884,6 +1086,11 @@
                 "es": "Camboya",
                 "pt": "Camboja"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "cambodia",
                 "es": "camboya",
@@ -906,6 +1113,11 @@
                 "en": "Cameroon",
                 "es": "Camerún",
                 "pt": "Camarões"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "cameroon",
@@ -930,6 +1142,11 @@
                 "es": "Canadá",
                 "pt": "Canadá"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "canada",
                 "es": "canada",
@@ -952,6 +1169,11 @@
                 "en": "Cayman Islands",
                 "es": "Islas Caimán",
                 "pt": "Ilhas Cayman"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "cayman-islands",
@@ -976,6 +1198,11 @@
                 "es": "República Centroafricana",
                 "pt": "República Centro Africana"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "central-african-republic",
                 "es": "republica-centroafricana",
@@ -998,6 +1225,11 @@
                 "en": "Chad",
                 "es": "Chad",
                 "pt": "Chade"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "chad",
@@ -1022,6 +1254,11 @@
                 "es": "Chile",
                 "pt": "Chile"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "chile",
                 "es": "chile",
@@ -1044,6 +1281,17 @@
                 "en": "China",
                 "es": "China",
                 "pt": "China"
+            },
+            "apelidos": {
+                "en": [
+                    "China, People's Republic of"
+                ],
+                "es": [
+                    "República Popular China"
+                ],
+                "pt": [
+                    "República Popular da China"
+                ]
             },
             "slugs": {
                 "en": "china",
@@ -1068,6 +1316,11 @@
                 "es": "Isla de Navidad",
                 "pt": "Ilha Christmas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "christmas-island",
                 "es": "isla-de-navidad",
@@ -1090,6 +1343,11 @@
                 "en": "Cocos (Keeling) Islands",
                 "es": "Islas Cocos (Keeling)",
                 "pt": "Ilhas Cocos (Keeling)"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "cocos-keeling-islands",
@@ -1114,6 +1372,11 @@
                 "es": "Colombia",
                 "pt": "Colômbia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "colombia",
                 "es": "colombia",
@@ -1136,6 +1399,11 @@
                 "en": "Comoros",
                 "es": "Comoras",
                 "pt": "Comores"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "comoros",
@@ -1160,6 +1428,13 @@
                 "es": "República Democrática del Congo",
                 "pt": "República Democrática do Congo"
             },
+            "apelidos": {
+                "en": [
+                    "Congo, Democratic Republic of the"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "democratic-republic-of-the-congo",
                 "es": "republica-democratica-del-congo",
@@ -1182,6 +1457,13 @@
                 "en": "Congo",
                 "es": "Congo",
                 "pt": "Congo"
+            },
+            "apelidos": {
+                "en": [
+                    "Congo, Republic of the"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "congo",
@@ -1206,6 +1488,11 @@
                 "es": "Islas Cook",
                 "pt": "Ilhas Cook"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "cook-islands",
                 "es": "islas-cook",
@@ -1228,6 +1515,11 @@
                 "en": "Costa Rica",
                 "es": "Costa Rica",
                 "pt": "Costa Rica"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "costa-rica",
@@ -1252,6 +1544,11 @@
                 "es": "Côte d'Ivoire",
                 "pt": "Costa do Marfim"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "cote-divoire",
                 "es": "cote-divoire",
@@ -1274,6 +1571,11 @@
                 "en": "Croatia",
                 "es": "Croacia",
                 "pt": "Croácia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "croatia",
@@ -1298,6 +1600,11 @@
                 "es": "Cuba",
                 "pt": "Cuba"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "cuba",
                 "es": "cuba",
@@ -1320,6 +1627,11 @@
                 "en": "Curaçao",
                 "es": "Curaçao",
                 "pt": "Curaçao"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "curacao",
@@ -1344,6 +1656,11 @@
                 "es": "Chipre",
                 "pt": "Chipre"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "cyprus",
                 "es": "chipre",
@@ -1366,6 +1683,17 @@
                 "en": "Czechia",
                 "es": "Chequia",
                 "pt": "República Tcheca"
+            },
+            "apelidos": {
+                "en": [
+                    "Czech Republic"
+                ],
+                "es": [
+                    "República Checa"
+                ],
+                "pt": [
+                    "Tchéquia"
+                ]
             },
             "slugs": {
                 "en": "czechia",
@@ -1390,6 +1718,11 @@
                 "es": "Dinamarca",
                 "pt": "Dinamarca"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "denmark",
                 "es": "dinamarca",
@@ -1412,6 +1745,11 @@
                 "en": "Djibouti",
                 "es": "Djibouti",
                 "pt": "Djibouti"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "djibouti",
@@ -1436,6 +1774,11 @@
                 "es": "Dominica",
                 "pt": "Dominica"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "dominica",
                 "es": "dominica",
@@ -1458,6 +1801,11 @@
                 "en": "Dominican Republic",
                 "es": "República Dominicana",
                 "pt": "República Dominicana"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "dominican-republic",
@@ -1482,6 +1830,11 @@
                 "es": "Ecuador",
                 "pt": "Equador"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "ecuador",
                 "es": "ecuador",
@@ -1504,6 +1857,11 @@
                 "en": "Egypt",
                 "es": "Egipto",
                 "pt": "Egito"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "egypt",
@@ -1528,6 +1886,11 @@
                 "es": "El Salvador",
                 "pt": "El Salvador"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "el-salvador",
                 "es": "el-salvador",
@@ -1550,6 +1913,11 @@
                 "en": "Equatorial Guinea",
                 "es": "Guinea Ecuatorial",
                 "pt": "Guiné Equatorial"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "equatorial-guinea",
@@ -1574,6 +1942,11 @@
                 "es": "Eritrea",
                 "pt": "Eritréia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "eritrea",
                 "es": "eritrea",
@@ -1596,6 +1969,11 @@
                 "en": "Estonia",
                 "es": "Estonia",
                 "pt": "Estônia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "estonia",
@@ -1620,6 +1998,11 @@
                 "es": "Etiopía",
                 "pt": "Etiópia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "ethiopia",
                 "es": "etiopia",
@@ -1642,6 +2025,13 @@
                 "en": "Falkland Islands (Malvinas)",
                 "es": "Islas Malvinas (Falkland)",
                 "pt": "Ilhas Falkland"
+            },
+            "apelidos": {
+                "en": [
+                    "Falkland Islands (Islas Malvinas)"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "falkland-islands-malvinas",
@@ -1666,6 +2056,11 @@
                 "es": "Islas Feroe",
                 "pt": "Ilhas Faeroe"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "faroe-islands",
                 "es": "islas-feroe",
@@ -1688,6 +2083,11 @@
                 "en": "Fiji",
                 "es": "Fiji",
                 "pt": "Fiji"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "fiji",
@@ -1712,6 +2112,11 @@
                 "es": "Finlandia",
                 "pt": "Finlândia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "finland",
                 "es": "finlandia",
@@ -1734,6 +2139,11 @@
                 "en": "France",
                 "es": "Francia",
                 "pt": "França"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "france",
@@ -1758,6 +2168,11 @@
                 "es": "Guayana Francesa",
                 "pt": "Guiana Francesa"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "french-guiana",
                 "es": "guayana-francesa",
@@ -1780,6 +2195,11 @@
                 "en": "French Polynesia",
                 "es": "Polinesia Francesa",
                 "pt": "Polinésia Francesa"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "french-polynesia",
@@ -1804,6 +2224,11 @@
                 "es": "Territorio de las Tierras Australes Francesas",
                 "pt": "Terras Austrais e Antárticas Francesas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "french-southern-territories",
                 "es": "territorio-de-las-tierras-australes-francesas",
@@ -1826,6 +2251,11 @@
                 "en": "Gabon",
                 "es": "Gabón",
                 "pt": "Gabão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "gabon",
@@ -1850,6 +2280,13 @@
                 "es": "Gambia",
                 "pt": "Gâmbia"
             },
+            "apelidos": {
+                "en": [
+                    "Gambia, The"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "gambia",
                 "es": "gambia",
@@ -1872,6 +2309,11 @@
                 "en": "Georgia",
                 "es": "Georgia",
                 "pt": "Geórgia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "georgia",
@@ -1896,6 +2338,11 @@
                 "es": "Alemania",
                 "pt": "Alemanha"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "germany",
                 "es": "alemania",
@@ -1918,6 +2365,11 @@
                 "en": "Ghana",
                 "es": "Ghana",
                 "pt": "Gana"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "ghana",
@@ -1942,6 +2394,11 @@
                 "es": "Gibraltar",
                 "pt": "Gibraltar"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "gibraltar",
                 "es": "gibraltar",
@@ -1964,6 +2421,11 @@
                 "en": "Greece",
                 "es": "Grecia",
                 "pt": "Grécia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "greece",
@@ -1988,6 +2450,11 @@
                 "es": "Groenlandia",
                 "pt": "Groenlândia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "greenland",
                 "es": "groenlandia",
@@ -2010,6 +2477,11 @@
                 "en": "Grenada",
                 "es": "Granada",
                 "pt": "Granada"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "grenada",
@@ -2034,6 +2506,11 @@
                 "es": "Guadalupe",
                 "pt": "Ilha Guadalupe"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "guadeloupe",
                 "es": "guadalupe",
@@ -2056,6 +2533,11 @@
                 "en": "Guam",
                 "es": "Guam",
                 "pt": "Guam"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "guam",
@@ -2080,6 +2562,11 @@
                 "es": "Guatemala",
                 "pt": "Guatemala"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "guatemala",
                 "es": "guatemala",
@@ -2102,6 +2589,11 @@
                 "en": "Guernsey",
                 "es": "Guernsey",
                 "pt": "Guernsey"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "guernsey",
@@ -2126,6 +2618,11 @@
                 "es": "Guinea",
                 "pt": "Guiné"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "guinea",
                 "es": "guinea",
@@ -2148,6 +2645,11 @@
                 "en": "Guinea-Bissau",
                 "es": "Guinea-Bissau",
                 "pt": "Guiné-Bissau"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "guinea-bissau",
@@ -2172,6 +2674,11 @@
                 "es": "Guyana",
                 "pt": "Guiana"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "guyana",
                 "es": "guyana",
@@ -2194,6 +2701,11 @@
                 "en": "Haiti",
                 "es": "Haití",
                 "pt": "Haiti"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "haiti",
@@ -2218,6 +2730,11 @@
                 "es": "Islas Heard y McDonald",
                 "pt": "Ilha Heard e Ilhas McDonald"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "heard-island-and-mcdonald-islands",
                 "es": "islas-heard-y-mcdonald",
@@ -2240,6 +2757,13 @@
                 "en": "Holy See",
                 "es": "Santa Sede",
                 "pt": "Vaticano"
+            },
+            "apelidos": {
+                "en": [
+                    "Holy See (Vatican City)"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "holy-see",
@@ -2264,6 +2788,11 @@
                 "es": "Honduras",
                 "pt": "Honduras"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "honduras",
                 "es": "honduras",
@@ -2286,6 +2815,18 @@
                 "en": "China, Hong Kong Special Administrative Region",
                 "es": "China, región administrativa especial de Hong Kong",
                 "pt": "China, Hong Kong"
+            },
+            "apelidos": {
+                "en": [
+                    "China, Hong Kong SAR",
+                    "Hong Kong, China (SAR)"
+                ],
+                "es": [
+                    "Hong Kong"
+                ],
+                "pt": [
+                    "Hong Kong"
+                ]
             },
             "slugs": {
                 "en": "china-hong-kong-special-administrative-region",
@@ -2310,6 +2851,11 @@
                 "es": "Hungría",
                 "pt": "Hungria"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "hungary",
                 "es": "hungria",
@@ -2332,6 +2878,11 @@
                 "en": "Iceland",
                 "es": "Islandia",
                 "pt": "Islândia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "iceland",
@@ -2356,6 +2907,11 @@
                 "es": "India",
                 "pt": "Índia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "india",
                 "es": "india",
@@ -2378,6 +2934,11 @@
                 "en": "Indonesia",
                 "es": "Indonesia",
                 "pt": "Indonésia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "indonesia",
@@ -2402,6 +2963,13 @@
                 "es": "Irán (República Islámica del)",
                 "pt": "Irã"
             },
+            "apelidos": {
+                "en": [
+                    "Iran"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "iran-islamic-republic-of",
                 "es": "iran-republica-islamica-del",
@@ -2424,6 +2992,11 @@
                 "en": "Iraq",
                 "es": "Iraq",
                 "pt": "Iraque"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "iraq",
@@ -2448,6 +3021,11 @@
                 "es": "Irlanda",
                 "pt": "Irlanda"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "ireland",
                 "es": "irlanda",
@@ -2470,6 +3048,11 @@
                 "en": "Isle of Man",
                 "es": "Isla de Man",
                 "pt": "Ilha de Man"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "isle-of-man",
@@ -2494,6 +3077,11 @@
                 "es": "Israel",
                 "pt": "Israel"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "israel",
                 "es": "israel",
@@ -2516,6 +3104,11 @@
                 "en": "Italy",
                 "es": "Italia",
                 "pt": "Itália"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "italy",
@@ -2540,6 +3133,11 @@
                 "es": "Jamaica",
                 "pt": "Jamaica"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "jamaica",
                 "es": "jamaica",
@@ -2562,6 +3160,11 @@
                 "en": "Japan",
                 "es": "Japón",
                 "pt": "Japão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "japan",
@@ -2586,6 +3189,11 @@
                 "es": "Jersey",
                 "pt": "Jersey"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "jersey",
                 "es": "jersey",
@@ -2608,6 +3216,11 @@
                 "en": "Jordan",
                 "es": "Jordania",
                 "pt": "Jordânia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "jordan",
@@ -2632,6 +3245,11 @@
                 "es": "Kazajstán",
                 "pt": "Casaquistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "kazakhstan",
                 "es": "kazajstan",
@@ -2654,6 +3272,11 @@
                 "en": "Kenya",
                 "es": "Kenya",
                 "pt": "Quênia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "kenya",
@@ -2678,6 +3301,11 @@
                 "es": "Kiribati",
                 "pt": "Kiribati"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "kiribati",
                 "es": "kiribati",
@@ -2700,6 +3328,13 @@
                 "en": "Democratic People's Republic of Korea",
                 "es": "República Popular Democrática de Corea",
                 "pt": "Coréia do Norte"
+            },
+            "apelidos": {
+                "en": [
+                    "Korea, North"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "democratic-peoples-republic-of-korea",
@@ -2724,6 +3359,14 @@
                 "es": "República de Corea",
                 "pt": "Coréia do Sul"
             },
+            "apelidos": {
+                "en": [
+                    "Korea, South",
+                    "Korea (Republic of)"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "republic-of-korea",
                 "es": "republica-de-corea",
@@ -2746,6 +3389,11 @@
                 "en": "Kuwait",
                 "es": "Kuwait",
                 "pt": "Kuwait"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "kuwait",
@@ -2770,6 +3418,11 @@
                 "es": "Kirguistán",
                 "pt": "Quirguistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "kyrgyzstan",
                 "es": "kirguistan",
@@ -2792,6 +3445,13 @@
                 "en": "Lao People's Democratic Republic",
                 "es": "República Democrática Popular Lao",
                 "pt": "Laos"
+            },
+            "apelidos": {
+                "en": [
+                    "Laos"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "lao-peoples-democratic-republic",
@@ -2816,6 +3476,11 @@
                 "es": "Letonia",
                 "pt": "Letônia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "latvia",
                 "es": "letonia",
@@ -2838,6 +3503,11 @@
                 "en": "Lebanon",
                 "es": "Líbano",
                 "pt": "Líbano"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "lebanon",
@@ -2862,6 +3532,11 @@
                 "es": "Lesotho",
                 "pt": "Lesoto"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "lesotho",
                 "es": "lesotho",
@@ -2884,6 +3559,11 @@
                 "en": "Liberia",
                 "es": "Liberia",
                 "pt": "Libéria"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "liberia",
@@ -2908,6 +3588,11 @@
                 "es": "Libia",
                 "pt": "Líbia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "libya",
                 "es": "libia",
@@ -2930,6 +3615,11 @@
                 "en": "Liechtenstein",
                 "es": "Liechtenstein",
                 "pt": "Liechtenstein"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "liechtenstein",
@@ -2954,6 +3644,11 @@
                 "es": "Lituania",
                 "pt": "Lituânia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "lithuania",
                 "es": "lituania",
@@ -2976,6 +3671,11 @@
                 "en": "Luxembourg",
                 "es": "Luxemburgo",
                 "pt": "Luxemburgo"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "luxembourg",
@@ -3000,6 +3700,11 @@
                 "es": "China, región administrativa especial de Macao",
                 "pt": "China, Macao"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "china-macao-special-administrative-region",
                 "es": "china-region-administrativa-especial-de-macao",
@@ -3022,6 +3727,13 @@
                 "en": "The former Yugoslav Republic of Macedonia",
                 "es": "ex República Yugoslava de Macedonia",
                 "pt": "Macedônia"
+            },
+            "apelidos": {
+                "en": [
+                    "Macedonia"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "the-former-yugoslav-republic-of-macedonia",
@@ -3046,6 +3758,11 @@
                 "es": "Madagascar",
                 "pt": "Madagáscar"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "madagascar",
                 "es": "madagascar",
@@ -3068,6 +3785,11 @@
                 "en": "Malawi",
                 "es": "Malawi",
                 "pt": "Malauí"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "malawi",
@@ -3092,6 +3814,11 @@
                 "es": "Malasia",
                 "pt": "Malásia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "malaysia",
                 "es": "malasia",
@@ -3114,6 +3841,11 @@
                 "en": "Maldives",
                 "es": "Maldivas",
                 "pt": "Maldivas"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "maldives",
@@ -3138,6 +3870,11 @@
                 "es": "Malí",
                 "pt": "Mali"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "mali",
                 "es": "mali",
@@ -3160,6 +3897,11 @@
                 "en": "Malta",
                 "es": "Malta",
                 "pt": "Malta"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "malta",
@@ -3184,6 +3926,11 @@
                 "es": "Islas Marshall",
                 "pt": "Ilhas Marshall"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "marshall-islands",
                 "es": "islas-marshall",
@@ -3206,6 +3953,11 @@
                 "en": "Martinique",
                 "es": "Martinica",
                 "pt": "Martinica"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "martinique",
@@ -3230,6 +3982,11 @@
                 "es": "Mauritania",
                 "pt": "Mauritânia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "mauritania",
                 "es": "mauritania",
@@ -3252,6 +4009,11 @@
                 "en": "Mauritius",
                 "es": "Mauricio",
                 "pt": "Maurício"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "mauritius",
@@ -3276,6 +4038,11 @@
                 "es": "Mayotte",
                 "pt": "Mayotte"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "mayotte",
                 "es": "mayotte",
@@ -3298,6 +4065,11 @@
                 "en": "Mexico",
                 "es": "México",
                 "pt": "México"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "mexico",
@@ -3322,6 +4094,13 @@
                 "es": "Micronesia (Estados Federados de)",
                 "pt": "Micronésia"
             },
+            "apelidos": {
+                "en": [
+                    "Micronesia"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "micronesia-federated-states-of",
                 "es": "micronesia-estados-federados-de",
@@ -3344,6 +4123,14 @@
                 "en": "Republic of Moldova",
                 "es": "República de Moldova",
                 "pt": "Moldávia"
+            },
+            "apelidos": {
+                "en": [
+                    "Moldova",
+                    "Moldova (Republic of)"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "republic-of-moldova",
@@ -3368,6 +4155,11 @@
                 "es": "Mónaco",
                 "pt": "Mônaco"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "monaco",
                 "es": "monaco",
@@ -3390,6 +4182,11 @@
                 "en": "Mongolia",
                 "es": "Mongolia",
                 "pt": "Mongólia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "mongolia",
@@ -3414,6 +4211,11 @@
                 "es": "Montenegro",
                 "pt": "Montenegro"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "montenegro",
                 "es": "montenegro",
@@ -3436,6 +4238,11 @@
                 "en": "Montserrat",
                 "es": "Montserrat",
                 "pt": "Montserrat"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "montserrat",
@@ -3460,6 +4267,11 @@
                 "es": "Marruecos",
                 "pt": "Marrocos"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "morocco",
                 "es": "marruecos",
@@ -3482,6 +4294,11 @@
                 "en": "Mozambique",
                 "es": "Mozambique",
                 "pt": "Moçambique"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "mozambique",
@@ -3506,6 +4323,17 @@
                 "es": "Myanmar",
                 "pt": "Mianma"
             },
+            "apelidos": {
+                "en": [
+                    "Burma"
+                ],
+                "es": [
+                    "Birmania"
+                ],
+                "pt": [
+                    "Birmânia"
+                ]
+            },
             "slugs": {
                 "en": "myanmar",
                 "es": "myanmar",
@@ -3528,6 +4356,11 @@
                 "en": "Namibia",
                 "es": "Namibia",
                 "pt": "Namíbia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "namibia",
@@ -3552,6 +4385,11 @@
                 "es": "Nauru",
                 "pt": "Nauru"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "nauru",
                 "es": "nauru",
@@ -3574,6 +4412,11 @@
                 "en": "Nepal",
                 "es": "Nepal",
                 "pt": "Nepal"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "nepal",
@@ -3598,6 +4441,11 @@
                 "es": "Países Bajos",
                 "pt": "Holanda"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "netherlands",
                 "es": "paises-bajos",
@@ -3620,6 +4468,11 @@
                 "en": "New Caledonia",
                 "es": "Nueva Caledonia",
                 "pt": "Nova Caledônia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "new-caledonia",
@@ -3644,6 +4497,11 @@
                 "es": "Nueva Zelandia",
                 "pt": "Nova Zelândia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "new-zealand",
                 "es": "nueva-zelandia",
@@ -3666,6 +4524,11 @@
                 "en": "Nicaragua",
                 "es": "Nicaragua",
                 "pt": "Nicarágua"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "nicaragua",
@@ -3690,6 +4553,11 @@
                 "es": "Níger",
                 "pt": "Níger"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "niger",
                 "es": "niger",
@@ -3712,6 +4580,11 @@
                 "en": "Nigeria",
                 "es": "Nigeria",
                 "pt": "Nigéria"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "nigeria",
@@ -3736,6 +4609,11 @@
                 "es": "Niue",
                 "pt": "Niue"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "niue",
                 "es": "niue",
@@ -3758,6 +4636,11 @@
                 "en": "Norfolk Island",
                 "es": "Islas Norfolk",
                 "pt": "Ilha Norfolk"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "norfolk-island",
@@ -3782,6 +4665,11 @@
                 "es": "Islas Marianas Septentrionales",
                 "pt": "Ilhas Marianas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "northern-mariana-islands",
                 "es": "islas-marianas-septentrionales",
@@ -3804,6 +4692,11 @@
                 "en": "Norway",
                 "es": "Noruega",
                 "pt": "Noruega"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "norway",
@@ -3828,6 +4721,11 @@
                 "es": "Omán",
                 "pt": "Omã"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "oman",
                 "es": "oman",
@@ -3850,6 +4748,11 @@
                 "en": "Pakistan",
                 "es": "Pakistán",
                 "pt": "Paquistão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "pakistan",
@@ -3874,6 +4777,11 @@
                 "es": "Palau",
                 "pt": "Palau"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "palau",
                 "es": "palau",
@@ -3896,6 +4804,11 @@
                 "en": "State of Palestine",
                 "es": "Estado de Palestina",
                 "pt": "Palestina"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "state-of-palestine",
@@ -3920,6 +4833,11 @@
                 "es": "Panamá",
                 "pt": "Panamá"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "panama",
                 "es": "panama",
@@ -3942,6 +4860,11 @@
                 "en": "Papua New Guinea",
                 "es": "Papua Nueva Guinea",
                 "pt": "Papua Nova Guiné"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "papua-new-guinea",
@@ -3966,6 +4889,11 @@
                 "es": "Paraguay",
                 "pt": "Paraguai"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "paraguay",
                 "es": "paraguay",
@@ -3988,6 +4916,11 @@
                 "en": "Peru",
                 "es": "Perú",
                 "pt": "Peru"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "peru",
@@ -4012,6 +4945,11 @@
                 "es": "Filipinas",
                 "pt": "Filipinas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "philippines",
                 "es": "filipinas",
@@ -4034,6 +4972,13 @@
                 "en": "Pitcairn",
                 "es": "Pitcairn",
                 "pt": "Pitcairn"
+            },
+            "apelidos": {
+                "en": [
+                    "Pitcairn Islands"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "pitcairn",
@@ -4058,6 +5003,11 @@
                 "es": "Polonia",
                 "pt": "Polônia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "poland",
                 "es": "polonia",
@@ -4080,6 +5030,11 @@
                 "en": "Portugal",
                 "es": "Portugal",
                 "pt": "Portugal"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "portugal",
@@ -4104,6 +5059,11 @@
                 "es": "Puerto Rico",
                 "pt": "Porto Rico"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "puerto-rico",
                 "es": "puerto-rico",
@@ -4126,6 +5086,11 @@
                 "en": "Qatar",
                 "es": "Qatar",
                 "pt": "Catar"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "qatar",
@@ -4150,6 +5115,11 @@
                 "es": "Reunión",
                 "pt": "Ilha Reunião"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "reunion",
                 "es": "reunion",
@@ -4172,6 +5142,11 @@
                 "en": "Romania",
                 "es": "Rumania",
                 "pt": "Romênia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "romania",
@@ -4196,6 +5171,13 @@
                 "es": "Federación de Rusia",
                 "pt": "Rússia (Federação Russa)"
             },
+            "apelidos": {
+                "en": [
+                    "Russia"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "russian-federation",
                 "es": "federacion-de-rusia",
@@ -4218,6 +5200,11 @@
                 "en": "Rwanda",
                 "es": "Rwanda",
                 "pt": "Ruanda"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "rwanda",
@@ -4242,6 +5229,11 @@
                 "es": "San Bartolomé",
                 "pt": "São Bartolomeu"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "saint-barthelemy",
                 "es": "san-bartolome",
@@ -4264,6 +5256,13 @@
                 "en": "Saint Helena",
                 "es": "Santa Elena",
                 "pt": "Santa Helena"
+            },
+            "apelidos": {
+                "en": [
+                    "Saint Helena, Ascension, and Tristan da Cunha"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "saint-helena",
@@ -4288,6 +5287,11 @@
                 "es": "Saint Kitts y Nevis",
                 "pt": "São Cristóvão e Nevis"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "saint-kitts-and-nevis",
                 "es": "saint-kitts-y-nevis",
@@ -4310,6 +5314,11 @@
                 "en": "Saint Lucia",
                 "es": "Santa Lucía",
                 "pt": "Santa Lúcia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "saint-lucia",
@@ -4334,6 +5343,13 @@
                 "es": "San Martín (parte francesa)",
                 "pt": "Saint Martin (parte francesa)"
             },
+            "apelidos": {
+                "en": [
+                    "Saint Martin"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "saint-martin-french-part",
                 "es": "san-martin-parte-francesa",
@@ -4356,6 +5372,11 @@
                 "en": "Saint Pierre and Miquelon",
                 "es": "Saint Pierre y Miquelon",
                 "pt": "Saint Pierre e Miquelon"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "saint-pierre-and-miquelon",
@@ -4380,6 +5401,11 @@
                 "es": "San Vicente y las Granadinas",
                 "pt": "São Vicente e Granadinas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "saint-vincent-and-the-grenadines",
                 "es": "san-vicente-y-las-granadinas",
@@ -4402,6 +5428,11 @@
                 "en": "Samoa",
                 "es": "Samoa",
                 "pt": "Samoa"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "samoa",
@@ -4426,6 +5457,11 @@
                 "es": "San Marino",
                 "pt": "San Marino"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "san-marino",
                 "es": "san-marino",
@@ -4448,6 +5484,11 @@
                 "en": "Sao Tome and Principe",
                 "es": "Santo Tomé y Príncipe",
                 "pt": "São Tome e Príncipe"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "sao-tome-and-principe",
@@ -4472,6 +5513,11 @@
                 "es": "Arabia Saudita",
                 "pt": "Arábia Saudita"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "saudi-arabia",
                 "es": "arabia-saudita",
@@ -4494,6 +5540,11 @@
                 "en": "Senegal",
                 "es": "Senegal",
                 "pt": "Senegal"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "senegal",
@@ -4518,6 +5569,11 @@
                 "es": "Serbia",
                 "pt": "Sérvia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "serbia",
                 "es": "serbia",
@@ -4540,6 +5596,11 @@
                 "en": "Seychelles",
                 "es": "Seychelles",
                 "pt": "Seichelles"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "seychelles",
@@ -4564,6 +5625,11 @@
                 "es": "Sierra Leona",
                 "pt": "Serra Leoa"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "sierra-leone",
                 "es": "sierra-leona",
@@ -4586,6 +5652,11 @@
                 "en": "Singapore",
                 "es": "Singapur",
                 "pt": "Cingapura"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "singapore",
@@ -4610,6 +5681,13 @@
                 "es": "San Martín (parte holandés)",
                 "pt": "Saint Martin (parte holandesa)"
             },
+            "apelidos": {
+                "en": [
+                    "Sint Maarten"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "sint-maarten-dutch-part",
                 "es": "san-martin-parte-holandes",
@@ -4632,6 +5710,11 @@
                 "en": "Slovakia",
                 "es": "Eslovaquia",
                 "pt": "Eslováquia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "slovakia",
@@ -4656,6 +5739,11 @@
                 "es": "Eslovenia",
                 "pt": "Eslovênia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "slovenia",
                 "es": "eslovenia",
@@ -4678,6 +5766,11 @@
                 "en": "Solomon Islands",
                 "es": "Islas Salomón",
                 "pt": "Ilhas Salomão"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "solomon-islands",
@@ -4702,6 +5795,11 @@
                 "es": "Somalia",
                 "pt": "Somália"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "somalia",
                 "es": "somalia",
@@ -4724,6 +5822,11 @@
                 "en": "South Africa",
                 "es": "Sudáfrica",
                 "pt": "África do Sul"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "south-africa",
@@ -4748,6 +5851,11 @@
                 "es": "Georgia del Sur y las Islas Sandwich del Sur",
                 "pt": "Ilhas Geórgia do Sul e Sandwich do Sul"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "south-georgia-and-the-south-sandwich-islands",
                 "es": "georgia-del-sur-y-las-islas-sandwich-del-sur",
@@ -4770,6 +5878,11 @@
                 "en": "South Sudan",
                 "es": "Sudán del Sur",
                 "pt": "Sudão do Sul"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "south-sudan",
@@ -4794,6 +5907,11 @@
                 "es": "España",
                 "pt": "Espanha"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "spain",
                 "es": "espana",
@@ -4816,6 +5934,11 @@
                 "en": "Sri Lanka",
                 "es": "Sri Lanka",
                 "pt": "Sri Lanka"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "sri-lanka",
@@ -4840,6 +5963,11 @@
                 "es": "Sudán",
                 "pt": "Sudão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "sudan",
                 "es": "sudan",
@@ -4862,6 +5990,11 @@
                 "en": "Suriname",
                 "es": "Suriname",
                 "pt": "Suriname"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "suriname",
@@ -4886,6 +6019,13 @@
                 "es": "Islas Svalbard y Jan Mayen",
                 "pt": "Svalbard e Jan Mayen Islands"
             },
+            "apelidos": {
+                "en": [
+                    "Svalbard"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "svalbard-and-jan-mayen-islands",
                 "es": "islas-svalbard-y-jan-mayen",
@@ -4908,6 +6048,11 @@
                 "en": "Swaziland",
                 "es": "Swazilandia",
                 "pt": "Suazilândia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "swaziland",
@@ -4932,6 +6077,11 @@
                 "es": "Suecia",
                 "pt": "Suécia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "sweden",
                 "es": "suecia",
@@ -4954,6 +6104,11 @@
                 "en": "Switzerland",
                 "es": "Suiza",
                 "pt": "Suíça"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "switzerland",
@@ -4978,6 +6133,13 @@
                 "es": "República Árabe Siria",
                 "pt": "Síria"
             },
+            "apelidos": {
+                "en": [
+                    "Syria"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "syrian-arab-republic",
                 "es": "republica-arabe-siria",
@@ -5000,6 +6162,13 @@
                 "en": "Taiwan (Province of China)",
                 "es": "República de China (Taiwán)",
                 "pt": "Taiwan"
+            },
+            "apelidos": {
+                "en": [
+                    "Taiwan"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "taiwan-province-of-china",
@@ -5024,6 +6193,11 @@
                 "es": "Tayikistán",
                 "pt": "Tadjiquistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "tajikistan",
                 "es": "tayikistan",
@@ -5046,6 +6220,15 @@
                 "en": "United Republic of Tanzania",
                 "es": "República Unida de Tanzanía",
                 "pt": "Tanzânia"
+            },
+            "apelidos": {
+                "en": [
+                    "Tanzania",
+                    "Tanzania, United Republic of",
+                    "United Republic of Tanzania: Mainland"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "united-republic-of-tanzania",
@@ -5070,6 +6253,11 @@
                 "es": "Tailandia",
                 "pt": "Tailândia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "thailand",
                 "es": "tailandia",
@@ -5092,6 +6280,11 @@
                 "en": "Timor-Leste",
                 "es": "Timor-Leste",
                 "pt": "Timor Leste"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "timor-leste",
@@ -5116,6 +6309,11 @@
                 "es": "Togo",
                 "pt": "Togo"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "togo",
                 "es": "togo",
@@ -5138,6 +6336,11 @@
                 "en": "Tokelau",
                 "es": "Tokelau",
                 "pt": "Tokelau"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "tokelau",
@@ -5162,6 +6365,11 @@
                 "es": "Tonga",
                 "pt": "Tonga"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "tonga",
                 "es": "tonga",
@@ -5184,6 +6392,11 @@
                 "en": "Trinidad and Tobago",
                 "es": "Trinidad y Tabago",
                 "pt": "Trinidad e Tobago"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "trinidad-and-tobago",
@@ -5208,6 +6421,11 @@
                 "es": "Túnez",
                 "pt": "Tunísia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "tunisia",
                 "es": "tunez",
@@ -5230,6 +6448,11 @@
                 "en": "Turkey",
                 "es": "Turquía",
                 "pt": "Turquia"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "turkey",
@@ -5254,6 +6477,11 @@
                 "es": "Turkmenistán",
                 "pt": "Turcomenistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "turkmenistan",
                 "es": "turkmenistan",
@@ -5276,6 +6504,11 @@
                 "en": "Turks and Caicos Islands",
                 "es": "Islas Turcas y Caicos",
                 "pt": "Ilhas Turks e Caicos"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "turks-and-caicos-islands",
@@ -5300,6 +6533,11 @@
                 "es": "Tuvalu",
                 "pt": "Tuvalu"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "tuvalu",
                 "es": "tuvalu",
@@ -5322,6 +6560,11 @@
                 "en": "Uganda",
                 "es": "Uganda",
                 "pt": "Uganda"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "uganda",
@@ -5346,6 +6589,11 @@
                 "es": "Ucrania",
                 "pt": "Ucrânia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "ukraine",
                 "es": "ucrania",
@@ -5368,6 +6616,11 @@
                 "en": "United Arab Emirates",
                 "es": "Emiratos Árabes Unidos",
                 "pt": "Emirados Árabes Unidos"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "united-arab-emirates",
@@ -5392,6 +6645,13 @@
                 "es": "Reino Unido de Gran Bretaña e Irlanda del Norte",
                 "pt": "Reino Unido"
             },
+            "apelidos": {
+                "en": [
+                    "United Kingdom"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "united-kingdom-of-great-britain-and-northern-ireland",
                 "es": "reino-unido-de-gran-bretana-e-irlanda-del-norte",
@@ -5414,6 +6674,11 @@
                 "en": "United States Minor Outlying Islands",
                 "es": "Islas menores alejadas de Estados Unidos",
                 "pt": "Ilhas Menores Distantes dos Estados Unidos"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "united-states-minor-outlying-islands",
@@ -5438,6 +6703,13 @@
                 "es": "Estados Unidos de América",
                 "pt": "Estados Unidos da América"
             },
+            "apelidos": {
+                "en": [
+                    "United States"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "united-states-of-america",
                 "es": "estados-unidos-de-america",
@@ -5460,6 +6732,11 @@
                 "en": "Uruguay",
                 "es": "Uruguay",
                 "pt": "Uruguai"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "uruguay",
@@ -5484,6 +6761,11 @@
                 "es": "Uzbekistán",
                 "pt": "Uzbequistão"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "uzbekistan",
                 "es": "uzbekistan",
@@ -5506,6 +6788,11 @@
                 "en": "Vanuatu",
                 "es": "Vanuatu",
                 "pt": "Vanuatu"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "vanuatu",
@@ -5530,6 +6817,13 @@
                 "es": "Venezuela (República Bolivariana de)",
                 "pt": "Venezuela"
             },
+            "apelidos": {
+                "en": [
+                    "Venezuela"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "venezuela-bolivarian-republic-of",
                 "es": "venezuela-republica-bolivariana-de",
@@ -5552,6 +6846,13 @@
                 "en": "Viet Nam",
                 "es": "Viet Nam",
                 "pt": "Vietnã"
+            },
+            "apelidos": {
+                "en": [
+                    "Vietnam"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "viet-nam",
@@ -5576,6 +6877,11 @@
                 "es": "Islas Vírgenes Británicas",
                 "pt": "Ilhas Virgens Britânicas"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "british-virgin-islands",
                 "es": "islas-virgenes-britanicas",
@@ -5598,6 +6904,13 @@
                 "en": "United States Virgin Islands",
                 "es": "Islas Vírgenes de los Estados Unidos",
                 "pt": "Ilhas Virgens"
+            },
+            "apelidos": {
+                "en": [
+                    "Virgin Islands"
+                ],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "united-states-virgin-islands",
@@ -5622,6 +6935,13 @@
                 "es": "Islas Wallis y Futuna",
                 "pt": "Ilhas Wallis e Futuna"
             },
+            "apelidos": {
+                "en": [
+                    "Wallis and Futuna"
+                ],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "wallis-and-futuna-islands",
                 "es": "islas-wallis-y-futuna",
@@ -5644,6 +6964,11 @@
                 "en": "Western Sahara",
                 "es": "Sáhara Occidental",
                 "pt": "Saara Ocidental"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "western-sahara",
@@ -5668,6 +6993,11 @@
                 "es": "Yemen",
                 "pt": "Iêmen"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "yemen",
                 "es": "yemen",
@@ -5691,6 +7021,11 @@
                 "es": "Zambia",
                 "pt": "Zâmbia"
             },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
+            },
             "slugs": {
                 "en": "zambia",
                 "es": "zambia",
@@ -5713,6 +7048,11 @@
                 "en": "Zimbabwe",
                 "es": "Zimbabwe",
                 "pt": "Zimbábue"
+            },
+            "apelidos": {
+                "en": [],
+                "es": [],
+                "pt": []
             },
             "slugs": {
                 "en": "zimbabwe",

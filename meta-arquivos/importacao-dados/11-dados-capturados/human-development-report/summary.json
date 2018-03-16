@@ -1,0 +1,884 @@
+[
+  	{
+      "indicator" : "Adjusted net savings (% of GNI)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Net national savings plus education expenditure and minus energy depletion, mineral depletion, net forest depletion, and carbon dioxide and particulate emissions damage. Net national savings are equal to gross national savings less the value of consumption of fixed capital..",
+      "id" : "164406",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Violence against women ever experienced, intimate partner (%)",
+      "source" : "UN Women (2016).",
+      "definition" : "Percentage of the female population, age 15 and older, that has ever experienced physical or sexual violence from an intimate partner.",
+      "id" : "167406",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Violence against women ever experienced, nonintimate partner (%)",
+      "source" : "UN Women (2016).",
+      "definition" : "Percentage of the female population, age 15 and older, that has ever experienced physical or sexual violence from an nonintimate partner.",
+      "id" : "167506",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Adolescent birth rate (births per 1,000 women ages 15-19)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 9 June 2016.",
+      "definition" : "Number of births to women ages 15ñ19 per 1,000 women ages 15ñ19.",
+      "id" : "36806",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Adult literacy rate (% ages 15 and older)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Percentage of the population ages 15 and older that can, with understanding, both read and write a short simple statement on everyday life.",
+      "id" : "101406",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Adult mortality rate, female (per 1,000 people)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Probability that a 15-year-old will die before reaching age 60, expressed per 1,000 people.",
+      "id" : "57806",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Adult mortality rate, male (per 1,000 people)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Probability that a 15-year-old will die before reaching age 60, expressed per 1,000 people.",
+      "id" : "57906",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Birth registration (% under age 5)",
+      "source" : "UNICEF (2016). The State of the Worldís Children 2016: A fair chance for every child. New York. http:\/\/www.unicef.org\/publications\/files\/UNICEF_SOWC_2016.pdf. Accessed 22 July 2016.",
+      "definition" : "Percentage of children under age 5 who were registered at the moment of the survey. It includes children whose birth certificate was seen by the interviewer and children whose mother or caretaker says the birth has been registered.",
+      "id" : "127906",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Carbon dioxide emissions per capita (tonnes)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Human-originated carbon dioxide emissions stemming from the burning of fossil fuels, gas flaring and the production of cement, divided by midyear population. Includes carbon dioxide emitted by forest biomass through depletion of forest areas.",
+      "id" : "27706",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Child labour (% ages 5-14)",
+      "source" : "UNICEF (2016). The State of the Worldís Children 2016: A fair chance for every child. New York. http:\/\/www.unicef.org\/publications\/files\/UNICEF_SOWC_2016.pdf. Accessed 22 July 2016.",
+      "definition" : "Percentage of children ages 5ñ11 who, during the reference week, engaged in at least one hour of economic activity or at least 28 hours of household chores, or children ages 12ñ14 who, during the reference week, engaged in at least 14 hours of economic activity or at least 28 hours of household chores.",
+      "id" : "112206",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Coefficient of Human Inequality",
+      "source" : "Calculated as the arithmetic mean of the values in inequality in life expectancy, inequality in education and inequality in income using the methodology described in Technical note 2.",
+      "definition" : "Average inequality in three basic dimensions of human development.",
+      "id" : "135006",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Concentration index (exports)",
+      "source" : "UNCTAD (2016). Data Center. http:\/\/unctadstat.unctad.org\/EN\/. Accessed 15 October 2016.",
+      "definition" : "A measure of the degree of product concentration in exports from a country (also referred to as Herfindahl-Hirschmann Index). A value closer to 0 indicates that a country's exports are more homogeneously distributed among a series of products (reflecting a well diversified economy); a value closer to 1 indicates that a country's exports are concentrated highly among a few products.",
+      "id" : "170006",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Deaths due to malaria (per 100,000 people)",
+      "source" : "United Nations Statistics Division (2016b). Millennium Development Goals Indicators Database. http:\/\/data.un.org.  Accessed August 5, 2016.",
+      "definition" : "Number of deaths due to malaria from confirmed and probable cases, expressed per 100,000 people.",
+      "id" : "102506",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Deaths due to tuberculosis (per 100,000 people)",
+      "source" : "United Nations Statistics Division (2016c). Sustainable Development Goals Indicators Database. http:\/\/data.un.org.  Accessed August 5, 2016.",
+      "definition" : "Number of deaths due to tuberculosis from confirmed and probable cases, expressed per 100,000 people.",
+      "id" : "150206",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Dependency ratio, young age (0-14) (per 100 people ages 15-64)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "Ratio of the population ages 0ñ14 to the population ages 15ñ64, expressed as the number of dependants per 100 people of working age (ages 15ñ64).",
+      "id" : "121206",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Domestic credit provided by financial sector (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Credit to various sectors on a gross basis (except credit to the central government, which is net), expressed as a percentage of GDP.",
+      "id" : "127606",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Domestic food price level index",
+      "source" : "FAO (2016a). FAOSTAT database. http:\/\/faostat3.fao.org. Accessed 25 May 2016.",
+      "definition" : "Food PPP rate divided by the general PPP rate. The index shows the price of food in a country relative to the price of the generic consumption basket in the country.",
+      "id" : "127806",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Domestic food price level volatility index",
+      "source" : "FAO (2016a). FAOSTAT database. http:\/\/faostat3.fao.org. Accessed 25 May 2016.",
+      "definition" : "Measure of variation of the domestic food price level index, computed as the standard deviation of the deviations from the trend over the previous eight months.",
+      "id" : "136806",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Employment in agriculture (% of total employment)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Share of total employment that is employed in agriculture.",
+      "id" : "150606",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Employment in services (% of total employment)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Share of total employment that is employed in services.",
+      "id" : "150706",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Employment to population ratio (% ages 15 and older)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of the population ages 15 years and older that is employed.",
+      "id" : "148306",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Estimated gross national income per capita, female (2011 PPP$)",
+      "source" : "",
+      "definition" : "Derived from the ratio of female to male wages, female and male shares of economically active population and GNI (in 2011 purchasing power parity terms). See Technical note 3 at",
+      "id" : "123506",
+      "dimension" : ""
+    },
+    {
+      "indicator" : "Estimated gross national income per capita, male (2011 PPP$)",
+      "source" : "",
+      "definition" : "Derived from the ratio of female to male wages, female and male shares of economically active population and GNI (in 2011 purchasing power parity terms). See Technical note 3 at",
+      "id" : "123606",
+      "dimension" : ""
+    },
+    {
+      "indicator" : "Expected years of schooling (years)",
+      "source" : "UNESCO Institute for Statistics (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys, Accessed on 15 July 2016",
+      "definition" : "Number of years of schooling that a child of school entrance age can expect to receive if prevailing patterns of age-specific enrolment rates persist throughout the childís life.",
+      "id" : "69706",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Expected years of schooling, female (years)",
+      "source" : "UNESCO Institute for Statistics (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys, Accessed on 15 July 2016",
+      "definition" : "Number of years of schooling that a child of school entrance age can expect to receive if prevailing patterns of age-specific enrolment rates persist throughout the childís life.",
+      "id" : "123306",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Expected years of schooling, male (years)",
+      "source" : "UNESCO Institute for Statistics (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys, Accessed on 15 July 2016",
+      "definition" : "Number of years of schooling that a child of school entrance age can expect to receive if prevailing patterns of age-specific enrolment rates persist throughout the childís life.",
+      "id" : "123406",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Exports and Imports (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "The sum of exports and imports of goods and services, expressed as a percentage of gross domestic product (GDP). It is a basic indicator of openness to foreign trade and economic integration and indicates the dependence of domestic producers on foreign demand (exports) and of domestic consumers and producers on foreign supply (imports), relative to the countryís economic size (GDP).",
+      "id" : "133206",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "External debt stock (% of GNI)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Debt owed to nonresidents repayable in foreign currency, goods or services, expressed as a percentage of gross national income (GNI).",
+      "id" : "127706",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Female share of paid employment in non-agriculture",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Share of women in paid employment in the non-agricultural sector, which comprises industry and services activities.",
+      "id" : "169906",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Foreign direct investment, net inflows (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Sum of equity capital, reinvestment of earnings, other long-term capital and short-term capital, expressed as a percentage of GDP.",
+      "id" : "53506",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Forest area (% of total land area)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Land spanning more than 0.5 hectare with trees taller than 5 metres and a canopy cover of more than 10 percent or trees able to reach these thresholds in situ. Excludes land predominantly under agricultural or urban land use, tree stands in agricultural production systems (for example, in fruit plantations and agroforestry systems) and trees in urban parks and gardens. Areas under reforestation that have not yet reached but are expected to reach a canopy cover of 10 percent and a tree height of 5 meters are included, as are temporarily unstocked areas resulting from human intervention or natural causes that are expected to regenerate.",
+      "id" : "100806",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Forest area (total change %, 1990-2015)",
+      "source" : "HDRO calculations based on data on forest from World Bank (2016b). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 12 July 2016.",
+      "definition" : "Percentage change in area under forest cover.",
+      "id" : "164206",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Fresh water withdrawals (% of total renewable water resources)",
+      "source" : "FAO (2016b). AQUASTAT database. http:\/\/www.fao.org\/nr\/water\/aquastat\/main\/index.stm. Accessed 23 June 2016.",
+      "definition" : "Total fresh water withdrawn, expressed as a percentage of total renewable water resources.",
+      "id" : "97106",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Gender Development Index (GDI)",
+      "source" : "Calculated from female and male HDI.",
+      "definition" : "Ratio of female to male HDI values. See Technical note 3 at http:\/\/hdr.undp.org\/sites\/default\/files\/hdr2016_technical_notes.pdf for details on how the Gender Development Index is calculated.",
+      "id" : "137906",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Gender Inequality Index (GII)",
+      "source" : "HDRO calculations based on data from maternal mortality ratio, adolescent birth rate, share of seats in parliament, population with at least some secondary education and labour force participation rate.",
+      "definition" : "A composite measure reflecting inequality in achievement between women and men in three dimensions: reproductive health, empowerment and the labour market. See Technical note 4 at http:\/\/hdr.undp.org for details on how the Gender Inequality Index is calculated.",
+      "id" : "68606",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Government expenditure on education (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Current, capital and transfer spending on education, expressed as a percentage of GDP.",
+      "id" : "149206",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Gross domestic product (GDP) per capita (2011 PPP $)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "GDP in a particular period divided by the total population in the same period.",
+      "id" : "136706",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Gross domestic product (GDP), total (2011 PPP $ billions)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products, expressed in 2011 international dollars using purchasing power parity (PPP) rates.",
+      "id" : "143306",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Gross enrolment ratio, pre-primary (% of preschool-age children)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Total enrolment in a given level of education (pre-primary, primary, secondary or tertiary), regardless of age, expressed as a percentage of the official school-age population for the same level of education.",
+      "id" : "133006",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Gross enrolment ratio, primary (% of primary school-age population)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Total enrolment in a given level of education (pre-primary, primary, secondary or tertiary), regardless of age, expressed as a percentage of the official school-age population for the same level of education.",
+      "id" : "63206",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Gross enrolment ratio, secondary (% of secondary school-age population)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Total enrolment in a given level of education (pre-primary, primary, secondary or tertiary), regardless of age, expressed as a percentage of the official school-age population for the same level of education.",
+      "id" : "63306",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Gross enrolment ratio, tertiary (% of tertiary school-age population)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Total enrolment in a given level of education (pre-primary, primary, secondary or tertiary), regardless of age, expressed as a percentage of the official school-age population for the same level of education.",
+      "id" : "63406",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Gross fixed capital formation (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Value of acquisitions of new or existing fixed assets by the business sector, governments and households (excluding their unincorporated enterprises) less disposals of fixed assets, expressed as a percentage of GDP. No adjustment is made for depreciation of fixed assets.",
+      "id" : "65606",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "Gross national income (GNI) per capita (2011 PPP$)",
+      "source" : "World Bank (2016a), IMF (2016) and United Nations Statistica Division (2016a).",
+      "definition" : "Aggregate income of an economy generated by its production and its ownership of factors of production, less the incomes paid for the use of factors of production owned by the rest of the world, converted to international dollars using PPP rates, divided by midyear population.",
+      "id" : "141706",
+      "dimension" : "Income\/composition of resources"
+    },
+    {
+      "indicator" : "HIV prevalence, adult (% ages 15-49), total",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Percentage of the population ages 15ñ49 who are living with HIV.",
+      "id" : "58006",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Homeless people due to natural disaster (average annual per million people)",
+      "source" : "CRED EM-DAT (2016) and UNDESA (2015a).",
+      "definition" : "Average annual number of people who lack a shelter for living quarters as a result of natural disasters, who carry their few possessions with them and who sleep in the streets, in doorways or on piers, or in any other space, on a more or less random basis, expressed per million people.",
+      "id" : "149406",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Homicide rate (per 100,000 people)",
+      "source" : "UNODC (2016). UNODC Statistics. https:\/\/data.unodc.org\/. Accessed 7 July 2016.",
+      "definition" : "Number of unlawful deaths purposefully inflicted on a person by another person, expressed per 100,000 people.",
+      "id" : "61006",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Human Development Index",
+      "source" : "",
+      "definition" : "A composite index measuring average achievement in three basic dimensions of human developmentóa long and healthy life, knowledge and a decent standard of living. See Technical note 1 at http:\/\/hdr.undp.org\/",
+      "id" : "137506",
+      "dimension" : ""
+    },
+    {
+      "indicator" : "Human Development Index (HDI), female",
+      "source" : "HDRO calculations based on data from UNDESA (2015a), UNESCO Institute for Statistics (2016),  Barro and Lee (2016), World Bank (2016a), ILO (2016a) and IMF (2016).",
+      "definition" : "A composite index measuring average achievement in three basic dimensions of human developmentóa long and healthy life, knowledge and a decent standard of living. See Technical note 1 at http:\/\/hdr.undp.org\/sites\/default\/files\/hdr2016_technical_notes.pdf  for details on how the HDI is calculated.",
+      "id" : "136906",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Human Development Index (HDI), male",
+      "source" : "HDRO calculations based on data from UNDESA (2015a), UNESCO Institute for Statistics (2016),  Barro and Lee (2016), World Bank (2016a), ILO (2016a) and IMF (2016).",
+      "definition" : "A composite index measuring average achievement in three basic dimensions of human developmentóa long and healthy life, knowledge and a decent standard of living. See Technical note 1 at http:\/\/hdr.undp.org\/sites\/default\/files\/hdr2016_technical_notes.pdf  for details on how the HDI is calculated.",
+      "id" : "137006",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Income inequality, Gini coefficient",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Measure of the deviation of the distribution of income among individuals or households within a country from a perfectly equal distribution. A value of 0 represents absolute equality, a value of 100 absolute inequality.",
+      "id" : "67106",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Income inequality, Palma ratio",
+      "source" : "HDRO calculations based on data from World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed on 14 October 2016.",
+      "definition" : "Ratio of the richest 10% of the populationís share of gross national income (GNI) divided by the poorest 40%ís share. It is based on the work of Palma (2011).",
+      "id" : "135206",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Income inequality, quintile ratio",
+      "source" : "HDRO calculations based on data from World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed on 14 October 2016.",
+      "definition" : "Ratio of the average income of the richest 20 percent of the population to the average income of the poorest 20 percent of the population.",
+      "id" : "135106",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality in education (%)",
+      "source" : "Calculated based on data from the Luxembourg Income Study database, Eurostat's EUSILC, the World Bank's International Income Distribution Database, UNICEF's MICS and ICF Macro DHS using the methodology in Technical note 2.",
+      "definition" : "Inequality in distribution of years of schooling based on data from household surveys estimated using the Atkinson inequality index.",
+      "id" : "101606",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality in income (%)",
+      "source" : "Calculated based on data from the Luxembourg Income Study database, Eurostat's EUSILC, the World Bank's International Income Distribution Database, UNICEF's MICS and ICF Macro DHS using the methodology in Technical note 2.",
+      "definition" : "Inequality in income distribution based on data from household surveys estimated using the Atkinson inequality index.",
+      "id" : "101706",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality in life expectancy (%)",
+      "source" : "Calculated based on abridged life tables from UNDESA (2015a). World Population Prospects: The 2015 Revision. http:\/\/esa.un.org\/unpd\/wpp\/index.htm. Accessed 15 July 2016",
+      "definition" : "Inequality in distribution of expected length of life based on data from life tables estimated using the Atkinson inequality index.",
+      "id" : "101806",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality-adjusted education index",
+      "source" : "Calculated based on inequality in education and the HDI education index.",
+      "definition" : "The HDI education index adjusted for inequality in distribution of years of schooling based on data from household surveys listed in Main data sources.",
+      "id" : "71406",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality-adjusted HDI (IHDI)",
+      "source" : "Calculated as the geometric mean of the values in inequality-adjusted life expectancy index, inequality-adjusted education index and inequality-adjusted income index using the methodology described in Technical note 2.",
+      "definition" : "HDI value adjusted for inequalities in the three basic dimensions of human development. See Technical note 2 at http:\/\/hdr.undp.org\/sites\/default\/files\/hdr2016_technical_notes.pdf for details on how the IHDI is calculated",
+      "id" : "138806",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality-adjusted income index",
+      "source" : "Calculated based on inequality in income and the HDI income index.",
+      "definition" : "HDI income index adjusted for inequality in income distribution based on data from household surveys listed in Main data sources.",
+      "id" : "71606",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Inequality-adjusted life expectancy index",
+      "source" : "Calculated based on inequality in life expectancy and the HDI life expectancy index.",
+      "definition" : "The HDI life expectancy index adjusted for inequality in distribution of expected length of life based on data from life tables listed in Main data sources.",
+      "id" : "71506",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Infant mortality rate (per 1,000 live births)",
+      "source" : "UN Inter-agency Group for Child Mortality Estimation (2015). http:\/\/www.childmortality.org. Accessed July 25 2016.",
+      "definition" : "Probability of dying between birth and exactly age 1, expressed per 1,000 live births.",
+      "id" : "57206",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Infants lacking immunization, DTP (% of one-year-olds)",
+      "source" : "WHO and UNICEF (2016). Estimates of national routine immunization coverage, 2014 revision. Accessed 22 July 2016.",
+      "definition" : "Percentage of surviving infants who have not received their first dose of diphtheria, pertussis and tetanus vaccine.",
+      "id" : "64406",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Infants lacking immunization, measles (% of one-year-olds)",
+      "source" : "WHO and UNICEF (2016). Estimates of national routine immunization coverage, 2014 revision. Accessed 22 July 2016.",
+      "definition" : "Percentage of surviving infants who have not received the first dose of measles vaccine.",
+      "id" : "64306",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "International inbound tourists (thousands)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Arrivals of nonresident visitors (overnight visitors, tourists, same-day visitors and excursionists) at national borders.",
+      "id" : "111106",
+      "dimension" : "Mobility and communication"
+    },
+    {
+      "indicator" : "International student mobility (% of total tertiary enrolment)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Total number of tertiary students from abroad (inbound students) studying in a given country minus the number of students at the same level of education from that country studying abroad (outbound students), expressed as a percentage of total tertiary enrolment in that country.",
+      "id" : "147206",
+      "dimension" : "Mobility and communication"
+    },
+    {
+      "indicator" : "Internet users (% of population)",
+      "source" : "ITU (2016). ICT Facts and Figures 2016. www.itu.int\/en\/ITU-D\/Statistics\/Pages\/stat\/. Accessed 2 August 2016.",
+      "definition" : "People with access to the worldwide network.",
+      "id" : "43606",
+      "dimension" : "Mobility and communication"
+    },
+    {
+      "indicator" : "Labour force participation rate (% ages 15 and older)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of a countryís working-age population that engages actively in the labour market, either by working or looking for work. It provides an indication of the relative size of the supply of labour available to engage in the production of goods and services.",
+      "id" : "148206",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Labour force participation rate, female (% ages 15 and older)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Proportion of the working-age population (ages 15 and older) that engages in the labour market, either by working or actively looking for work, expressed as a percentage of the working-age population.",
+      "id" : "48706",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Labour force participation rate, male (% ages 15 and older)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Proportion of the working-age population (ages 15 and older) that engages in the labour market, either by working or actively looking for work, expressed as a percentage of the working-age population.",
+      "id" : "48806",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Legislators, senior officials and managers, female (% of total)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Share of legislators, senior officials and managers who are female.",
+      "id" : "166406",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Life expectancy at birth",
+      "source" : "UNDESA (2015a). World Population Prospects database. Extracted 9 July 2015.",
+      "definition" : "Number of years a newborn infant could expect to live if prevailing patterns of age-specific mortality rates at the time of birth stay the same throughout the infantís life.",
+      "id" : "69206",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Life expectancy at birth, female (years)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 9 June 2016.",
+      "definition" : "Number of years a newborn infant could expect to live if prevailing patterns of age-specific mortality rates at the time of birth stay the same throughout the infantís life.",
+      "id" : "120606",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Life expectancy at birth, male (years)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 9 June 2016.",
+      "definition" : "Number of years a newborn infant could expect to live if prevailing patterns of age-specific mortality rates at the time of birth stay the same throughout the infantís life.",
+      "id" : "121106",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Mandatory paid maternity leave (days)",
+      "source" : "World Bank (2016b). Gender Statistics database. Washington, DC. http:\/\/data.worldbank.org. Accessed 1 August 2016.",
+      "definition" : "Number of days of paid time off work to which a female employee is entitled to take care of a newborn child.",
+      "id" : "128106",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Maternal mortality ratio (deaths per 100,000 live births)",
+      "source" : "UN Maternal Mortality Estimation Group (2016). Maternal mortality data. Accessed 28 April 2016.",
+      "definition" : "Number of deaths due to pregnancy-related causes per 100,000 live births.",
+      "id" : "89006",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Mean years of schooling (years)",
+      "source" : "UNESCO Institute for Statistics (2016), Barro and Lee (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys",
+      "definition" : "Average number of years of education received by people ages 25 and older, converted from education attainment levels using official durations of each level.",
+      "id" : "103006",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Mean years of schooling, female (years)",
+      "source" : "UNESCO Institute for Statistics (2016), Barro and Lee (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys",
+      "definition" : "Average number of years of education received by people ages 25 and older, converted from educational attainment levels using official durations of each level.",
+      "id" : "24106",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Mean years of schooling, male (years)",
+      "source" : "UNESCO Institute for Statistics (2016), Barro and Lee (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys",
+      "definition" : "Average number of years of education received by people ages 25 and older, converted from educational attainment levels using official durations of each level.",
+      "id" : "24206",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Median age (years)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "Age that divides the population distribution into two equal partsóthat is, 50 percent of the population is above that age and 50 percent is below it.",
+      "id" : "47906",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Mobile phone subscriptions (per 100 people)",
+      "source" : "ITU (2016). ICT Facts and Figures 2016. www.itu.int\/en\/ITU-D\/Statistics\/Pages\/stat\/. Accessed 2 August 2016.",
+      "definition" : "Number of subscriptions for the mobile phone service expressed per 100 people.",
+      "id" : "46006",
+      "dimension" : "Mobility and communication"
+    },
+    {
+      "indicator" : "Multidimensional poverty index (MPI)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Percentage of the population that is multidimensionally poor adjusted by the intensity of the deprivations. See Technical note 5 at http:\/\/hdr.undp.org\/sites\/default\/files\/hdr2016_technical_notes.pdf for details on how the Multidimensional Poverty Index is calculated.",
+      "id" : "38406",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Natural resource depletion (% of GNI)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Monetary expression of energy, mineral and forest depletion, expressed as a percentage of gross national income (GNI).",
+      "id" : "97306",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Net migration rate (per 1,000 people)",
+      "source" : "UNDESA (2015b). Trends in International Migrant Stock: The 2015 revision (United Nations database, POP\/DB\/MIG\/Stock\/Rev.2015). Accessed 1 August 2016.",
+      "definition" : "Ratio of the difference between the number of in-migrants and out-migrants from a country to the average population, expressed per 1,000 people.",
+      "id" : "110806",
+      "dimension" : "Mobility and communication"
+    },
+    {
+      "indicator" : "Net official development assistance received (% of GNI)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies to promote economic development and welfare in countries and territories on the Development Assistance Committee list of aid recipients, expressed as a percentage of the recipient countryís GNI.",
+      "id" : "99106",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Old age dependency ratio (old age (65 and older) per 100 people (ages 15-64))",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "Ratio of the population ages 65 and older to the population ages 15ñ64, expressed as the number of dependants per 100 people of working age (ages 15ñ64).",
+      "id" : "122006",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Old age pension recipients (% of statutory pension age population)",
+      "source" : "ILO (2016c). World Social Protection Report 2014-15. http:\/\/www.social-protection.org\/gimi\/gess\/ShowTheme.do?tid=3985. Accessed 7 June 2016.",
+      "definition" : "Proportion of people older than the statutory pensionable age receiving an old-age pension (contributory, noncontributory or both), expressed as a percentage of the eligible population.",
+      "id" : "123806",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Overall loss in HDI due to inequality (%)",
+      "source" : "Calculated from HDI and IHDI.",
+      "definition" : "Percentage difference between the IHDI value and the HDI value.",
+      "id" : "73506",
+      "dimension" : "Inequality"
+    },
+    {
+      "indicator" : "Population in multidimensional poverty, headcount (%)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Percentage of the population with a deprivation score of at least 33 percent. It is also expressed in thousands of the population in the survey year.",
+      "id" : "38606",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population in multidimensional poverty, headcount (thousands)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Percentage of the population with a deprivation score of at least 33 percent. It is also expressed in thousands of the population in the survey year.",
+      "id" : "102006",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population in multidimensional poverty, intensity of deprivation (%)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Average deprivation score experienced by people in multidimensional poverty.",
+      "id" : "38506",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population in severe multidimensional poverty (%)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Percentage of the population in severe multidimensional povertyóthat is, those with a deprivation score of 50 percent or more.",
+      "id" : "101006",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population living below income poverty line, PPP $1.90 a day (%)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Percentage of the population living below the international poverty line $1.90 (in purchasing power parity terms) a day.",
+      "id" : "167106",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population near multidimensional poverty (%)",
+      "source" : "HDRO calculations based on data on household deprivations in education, health and living standards from various household surveys listed in column 1 using a revised methodology described in Technical note 5 (available at at http:\/\/ hdr.undp.org\/sites\/default\/files\/hdr2016_technical_ notes.pdf).",
+      "definition" : "Percentage of the population at risk of suffering multiple deprivationsóthat is, those with a deprivation score of 20ñ33 percent.",
+      "id" : "142506",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Population with at least some secondary education (% ages 25 and older)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Percentage of the population ages 25 and older that has reached (but not necessarily completed) a secondary level of education.",
+      "id" : "23806",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Population with at least some secondary education, female (% ages 25 and older)",
+      "source" : "UNESCO Institute for Statistics (2016), Barro and Lee (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys",
+      "definition" : "Percentage of the population ages 25 and older that has reached (but not necessarily completed) a secondary level of education.",
+      "id" : "23906",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Population with at least some secondary education, male (% ages 25 and older)",
+      "source" : "UNESCO Institute for Statistics (2016), Barro and Lee (2016), ICF Macro Demographic and Health Surveys and UNICEF's Multple Indicator Cluster Surveys",
+      "definition" : "Percentage of the population ages 25 and older that has reached (but not necessarily completed) a secondary level of education.",
+      "id" : "24006",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Population, ages 15ñ64 (millions)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "De facto population in a country, area or region ages 15ñ64 as of 1 July.",
+      "id" : "63106",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Population, ages 65 and older (millions)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "De facto population in a country, area or region ages 65 and older as of 1 July.",
+      "id" : "132706",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Population, total (millions)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "De facto population in a country, area or region as of 1 July.",
+      "id" : "44206",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Population, under age 5 (millions)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 19 July 2016.",
+      "definition" : "De facto population in a country, area or region under age 5 as of 1 July.",
+      "id" : "132806",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Population, urban (%)",
+      "source" : "UNDESA (2014). World Urbanization Prospects: The 2014 Revision. CD-ROM edition. http:\/\/esa.un.org\/unpd\/wup\/CD-ROM. Accessed 20 July 2016.",
+      "definition" : "De facto population living in areas classified as urban according to the criteria used by each country or are as of 1 July.",
+      "id" : "45106",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Primary school dropout rate (% of primary school cohort)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Percentage of students from a given cohort who have enrolled in primary school but who drop out before reaching the last grade of primary education. It is calculated as 100 minus the survival rate to the last grade of primary education and assumes that observed flow rates remain unchanged throughout the cohort life and that dropouts do not re-enter school.",
+      "id" : "46106",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Primary school teachers trained to teach (%)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Percentage of primary school teachers who have received the minimum organized teacher training (pre-service or in-service) required for teaching at the primary level.",
+      "id" : "45806",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Prison population (per 100,000 people)",
+      "source" : "ICPS (2016). ìWorld Prison Population List (11th edition).î London. www.prisonstudies.org\/. Accessed 7 June 2016.",
+      "definition" : "Number of adult and juvenile prisonersóincluding pretrial detainees, unless otherwise notedóexpressed per 100,000 people.",
+      "id" : "128306",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Private capital flows (% of GDP)",
+      "source" : "HDRO calculations based on data from World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed on 14 October 2016.",
+      "definition" : "Net foreign direct investment and portfolio investment, expressed as a percentage of GDP.",
+      "id" : "111306",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Public health expenditure (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Current and capital spending on health from government (central and local) budgets, external borrowing and grants (including donations from international agencies and nongovernmental organizations) and social (or compulsory) health insurance funds, expressed as a percentage of GDP.",
+      "id" : "53906",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Pupil-teacher ratio, primary school (number of pupils per teacher)",
+      "source" : "UNESCO Institute for Statistics (2016). Data Centre. http:\/\/data.uis.unesco.org. Accessed 10 June 2016.",
+      "definition" : "Average number of pupils per teacher in primary education in a given school year.",
+      "id" : "46206",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Refugees by country of origin (thousands)",
+      "source" : "UNHCR (2016). UNHCR Global Trends 2015. http:\/\/www.unhcr.org\/global-trends-2015.html. Accessed 7 July 2016.",
+      "definition" : "Number of people who have fled their country of origin because of a well founded fear of persecution due to their race, religion, nationality, political opinion or membership in a particular social group and who cannot or do not want to return to their country of origin.",
+      "id" : "21806",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Remittances, inflows (% of GDP)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Earnings and material resources transferred by international migrants or refugees to recipients in their country of origin or countries in which the migrant formerly resided.",
+      "id" : "52606",
+      "dimension" : "Trade and financial flows"
+    },
+    {
+      "indicator" : "Renewable energy consumption (% of total final energy consumption)",
+      "source" : "World Bank (2016a). World Development Indicators database. Washington, DC. http:\/\/data.worldbank.org. Accessed 14 October 2016.",
+      "definition" : "Share of renewable energy in total final energy consumption. Renewable sources include hydroelectric, geothermal, solar, tides, wind, biomass and biofuels.",
+      "id" : "163906",
+      "dimension" : "Environmental sustainability"
+    },
+    {
+      "indicator" : "Sex ratio at birth (male to female births)",
+      "source" : "UNDESA (2015a). World Population Prospects: The 2015 Revision. New York. http:\/\/esa.un.org\/unpd\/wpp\/. Accessed 9 June 2016.",
+      "definition" : "Number of male births per one female birth.",
+      "id" : "49006",
+      "dimension" : "Demography"
+    },
+    {
+      "indicator" : "Share of seats in parliament (% held by women)",
+      "source" : "IPU (2016). Women in national parliaments. www.ipu.org\/wmn-e\/classif-arc.htm. Accessed 19 July 2016.",
+      "definition" : "Proportion of seats held by women in the national parliament expressed as percentage of total seats. For countries with bicameral legislative systems, the share of seats is calculated based on both houses.",
+      "id" : "31706",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Stunting (moderate or severe) (% under age 5)",
+      "source" : "UNICEF (2016). The State of the Worldís Children 2016: A fair chance for every child. New York. http:\/\/www.unicef.org\/publications\/files\/UNICEF_SOWC_2016.pdf. Accessed 22 July 2016.",
+      "definition" : "Percentage of children ages 0ñ59 months who are more than two standard deviations below the median height-for-age of the World Health Organization (WHO) Child Growth Standards.",
+      "id" : "98306",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Suicide rate, female (per 100,000 people)",
+      "source" : "WHO (2016). Global Health Observatory. www.who.int\/gho\/. Accessed 25 July 2016.",
+      "definition" : "Number of deaths from purposely self-inflicted injuries, expressed per 100,000 people in the reference population.",
+      "id" : "112606",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Suicide rate, male (per 100,000 people)",
+      "source" : "WHO (2016). Global Health Observatory. www.who.int\/gho\/. Accessed 25 July 2016.",
+      "definition" : "Number of deaths from purposely self-inflicted injuries, expressed per 100,000 people in the reference population.",
+      "id" : "112506",
+      "dimension" : "Human Security"
+    },
+    {
+      "indicator" : "Total unemployment rate (% of labour force)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of the labour force population ages 15 and older that is not in paid employment or self-employed but is available for work and has taken steps to seek paid employment or self-employment.",
+      "id" : "140606",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Under-five mortality rate (per 1,000 live births)",
+      "source" : "UN Inter-agency Group for Child Mortality Estimation (2015). http:\/\/www.childmortality.org. Accessed July 25 2016.",
+      "definition" : "Probability of dying between birth and exactly age 5, expressed per 1,000 live births.",
+      "id" : "57506",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Unemployment rate (total), female to male ratio",
+      "source" : "HDRO calculation based on ILO (2016a).",
+      "definition" : "Ratio of the percentage of the female labour force population ages 15 and older that is not in paid employment or self-employed but is available for work and is actively seeking paid employment or self-employment to the percentage of the male labour force population ages 15 and older that is not in paid employment or self-employed but is available for work and is actively seeking paid employment or self-employment.",
+      "id" : "169706",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Vulnerable employment (% of total employment)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of employed people engaged as unpaid family workers and own-account workers.",
+      "id" : "43006",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Working poor at PPP$3.10 a day (% of total employment)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Proportion of employed people who live on less than $3.10 (in purchasing power parity terms) a day, expressed as a percentage of the total employed population ages 15 and older.",
+      "id" : "153706",
+      "dimension" : "Poverty"
+    },
+    {
+      "indicator" : "Youth not in school or employment (% ages 15-24)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of people ages 15ñ24 who are not in employment or in education or training.",
+      "id" : "147906",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Youth unemployment rate (% of labour force ages 15-24)",
+      "source" : "ILO (2016b). ILOSTAT database. http:\/\/www.ilo.org\/ilostat. Accessed 24 October 2016.",
+      "definition" : "Percentage of the labour force population ages 15ñ24 that is not in paid employment or self-employed but is available for work and has taken steps to seek paid employment or self-employment.",
+      "id" : "110906",
+      "dimension" : "Work, employment and vulnerability"
+    },
+    {
+      "indicator" : "Youth unemployment rate, female to male ratio",
+      "source" : "HDRO calculation based on ILO (2016a).",
+      "definition" : "Ratio of the percentage of the female labour force population ages 15ñ24 that is not in paid employment or self-employed but is available for work and is actively seeking paid employment or self-employment to the percentage of the male labour force population ages 15-24 that is not in paid employment or self-employed but is availlable for work and is actively seeking paid employment or self employment.",
+      "id" : "169806",
+      "dimension" : "Gender"
+    },
+    {
+      "indicator" : "Life expectancy index",
+      "source" : "HDRO calculations based on life expectancy values from UNDESA (2015a). World Population Prospects database. Extracted 9 July 2015.",
+      "definition" : "Life expectancy at birth expressed as an index using a minimum value of 20 years and a maximum value of 85 years.",
+      "id" : "103206",
+      "dimension" : "Health"
+    },
+    {
+      "indicator" : "Education index",
+      "source" : "Source: HDRO calculations based on expected years of schooling and mean years of schooling from UNESCO Institute for Statistics (2016) and other sources, accessed on 10 June 2016.",
+      "definition" : "Education index is an average of mean years of schooling (of adults) and expected years of schooling (of children), both expressed  as an index obtained by scaling with the corresponding maxima.",
+      "id" : "103706",
+      "dimension" : "Education"
+    },
+    {
+      "indicator" : "Income index",
+      "source" : "Source: Source: HDRO calculations based on GNI per capita (2011 PPP International $) from World Bank (2016), World Development Indicators database, accessed on 14 October 2016.",
+      "definition" : "GNI per capita (2011 PPP International $, using natural logarithm) expressed as an index using a minimum value of $100 and a maximum value $75,000.",
+      "id" : "103606",
+      "dimension" :  "Income\/composition of resources"
+    }
+ ]

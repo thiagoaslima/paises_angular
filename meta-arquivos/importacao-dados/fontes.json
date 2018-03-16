@@ -9,12 +9,15 @@
         "file_link": "https://www.cia.gov/library/publications/download/download-2014/factbook.zip",
         "dados": [
             {
+                "variavel_codigo": "",
                 "nome": "Histórico",
                 "nome_publicacao": "Background",
                 "secao_publicacao": "Introduction",
-                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2119.html"
+                "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2119.html",
+                "ignore": true
             },
             {
+                "variavel_codigo": "sintese_39",
                 "nome": "Extensão territorial",
                 "nome_publicacao": "Area",
                 "secao_publicacao": "Geography",
@@ -25,18 +28,21 @@
                 ]
             },
             {
+                "variavel_codigo": "sintese_38",
                 "nome": "Capital",
                 "nome_publicacao": "Capital",
                 "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2057.html"
             },
             {
+                "variavel_codigo": "",
                 "nome": "Tipo de governo",
                 "nome_publicacao": "Government Type",
                 "secao_publicacao": "Government",
                 "link": "https://www.cia.gov/library/publications/resources/the-world-factbook/fields/2128.html"
             },
             {
+                "variavel_codigo": "",
                 "nome": "Chefe de governo",
                 "nome_publicacao": "Head of Government",
                 "secao_publicacao": "Government",
@@ -46,6 +52,7 @@
                 ]
             },
             {
+                "variavel_codigo": "",
                 "nome": "Chefe de estado",
                 "nome_publicacao": "Chief of State",
                 "secao_publicacao": "Government",
@@ -65,6 +72,7 @@
         "link": "http://www.bcb.gov.br/pt-br#!/n/txcambio",
         "dados": [
             {
+                "variavel_codigo": "sintese_43",
                 "nome": "Moeda",
                 "nome_publicacao": "Moedas",
                 "secao_publicacao": "Tabela de Moedas",
@@ -89,6 +97,7 @@
         "link": "https://treasury.un.org/operationalrates/OperationalRates.php",
         "dados": [
             {
+                "variavel_codigo": "sintese_43",
                 "nome": "Moeda",
                 "nome_publicacao": "Currency",
                 "secao_publicacao": "Operational Rates > Current",
@@ -122,6 +131,7 @@
         "dados": [
             {
                 "id": "62957",
+                "variavel_code": "economia_25",
                 "nome": "Entrada de turistas",
                 "nome_publicacao": "International tourism, number of arrivals",
                 "id_publicacao": "ST.INT.ARVL",
@@ -131,6 +141,7 @@
             },
             {
                 "id": "62960",
+                "variavel_code": "economia_22",
                 "nome": "Investimentos em pesquisa e desenvolvimento",
                 "nome_publicacao": "Research and development expenditure (% of GDP)",
                 "id_publicacao": "GB.XPD.RSDV.GD.ZS",
@@ -142,7 +153,7 @@
     },
 
     {
-        "fonte": "Human Development Report: Human Development for Everyone",
+        "fonte": "Human Development Report",
         "autor": "United Nations Development Programme",
         "periodicidade": "anual",
         "teste": "mensal",
@@ -152,11 +163,7 @@
         ],
         "files": [
             "http://hdr.undp.org/sites/all/themes/hdr_theme/js/summary.json",
-            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicators.json",
-            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/rankiso.json",
-            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/footnotes.json",
-            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/bars.json",
-            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicators_line.json"
+            "http://hdr.undp.org/sites/all/themes/hdr_theme/js/indicators.json"
         ],
         "footnotes": {
             "notes": {
@@ -251,6 +258,7 @@
         },
         "dados": [
             {
+                "variavel_code": "economia_23",
                 "nome": "Gastos públicos com educação",
                 "nome_publicacao": "Government expenditure on education (% of GDP)",
                 "id_publicacao": "149206",
@@ -258,6 +266,7 @@
                 "link": "http://hdr.undp.org/en/indicators/149206"
             },
             {
+                "variavel_code": "economia_24",
                 "nome": "Gastos públicos com saúde",
                 "nome_publicacao": "Public health expenditure (% of GDP)",
                 "id_publicacao": "53903",
@@ -280,6 +289,7 @@
         "dados": [
             {
                 "id": 62962,
+                "variavel_code": "economia_19",
                 "nome": "PIB per capita",
                 "nome_publicacao": "GDP, Per Capita GDP - US Dollars",
                 "series_publicacao": "5",
@@ -315,6 +325,7 @@
             },
             {
                 "id": 62966,
+                "variavel_code": "economia_18",
                 "nome": "Total do PIB",
                 "nome_publicacao": "GDP, at current prices - US Dollars",
                 "series_publicacao": "5",
@@ -364,6 +375,7 @@
         "dados": [
             {
                 "id": 62964,
+                "variavel_code": "economia_27",
                 "nome": "Total da exportação",
                 "nome_publicacao": "Export",
                 "field_id_publicacao": "hs_commodity_code",
@@ -372,6 +384,7 @@
             },
             {
                 "id": 62964,
+                "variavel_code": "economia_26",
                 "nome": "Total da importação",
                 "nome_publicacao": "Import",
                 "field_id_publicacao": "hs_commodity_code",

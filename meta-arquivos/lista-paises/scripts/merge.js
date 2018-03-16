@@ -11,7 +11,7 @@ const ONU_ES = require('../fontes/UNSD_es.json').dados;
 const IBGE = require('../fontes/IBGE_2015.json').dados;
 const ONU_MEMBROS = require('../fontes/ONU_membros.json').dados;
 const WIKIPEDIA = require('../fontes/Wikipedia.json');
-const NOMES_EN_ALTERNATIVOS = require('../fontes/nomes_en_alternativos.json');
+const NOMES_ALTERNATIVOS = require('../fontes/nomes_alternativos.json');
 
 const mapONU_EN = ONU_EN.reduce((agg, obj) => {
     agg[obj["ISO-alpha3 Code"]] = obj;
@@ -56,7 +56,7 @@ ONU_EN.forEach((obj) => {
     let sigla = obj["ISO-alpha3 Code"];
 
     if (
-        obj["Intermediate Region Name"] && 
+        obj["Intermediate Region Name"] &&
         !regioes[obj["Intermediate Region Name"]]
     ) {
         const es = mapONU_ES[sigla];
@@ -83,7 +83,7 @@ ONU_EN.forEach((obj) => {
     }
 
     if (
-        obj["Sub-region Name"] && 
+        obj["Sub-region Name"] &&
         !regioes[obj["Sub-region Name"]]
     ) {
         const es = mapONU_ES[sigla];
@@ -109,7 +109,7 @@ ONU_EN.forEach((obj) => {
     }
 
     if (
-        obj["Region Name"] && 
+        obj["Region Name"] &&
         !regioes[obj["Region Name"]]
     ) {
         const es = mapONU_ES[sigla];
@@ -149,6 +149,10 @@ let paises = ISO.map(obj => {
     const nome_pt = pt ? pt.nome : WIKIPEDIA.paises_pt[sigla] ? WIKIPEDIA.paises_pt[sigla] : "";
     const slug_pt = slug(nome_pt);
 
+    const apelidos_en = NOMES_ALTERNATIVOS.filter(o => o.a2_code === obj["code_a2"]).map(o => o.nome.en).filter(Boolean);
+    const apelidos_es = NOMES_ALTERNATIVOS.filter(o => o.a2_code === obj["code_a2"]).map(o => o.nome.es).filter(Boolean);
+    const apelidos_pt = NOMES_ALTERNATIVOS.filter(o => o.a2_code === obj["code_a2"]).map(o => o.nome.pt).filter(Boolean);
+
     return {
         "codigo": obj.numeric,
         "slug": slug_pt,
@@ -158,6 +162,11 @@ let paises = ISO.map(obj => {
             "en": nome_en,
             "es": nome_es,
             "pt": nome_pt
+        },
+        "apelidos": {
+            "en": apelidos_en,
+            "es": apelidos_es,
+            "pt": apelidos_pt
         },
         "slugs": {
             "en": slug(nome_en),
@@ -237,7 +246,7 @@ const metadados = {
                     "publicacao": "Standard Country or Area Codes for Statistical Use",
                     "link": "https://unstats.un.org/unsd/methodology/m49/",
                     "acessadoEm": "2018-03-07"
-                }, 
+                },
                 "pt": {}
             },
             "sigla": {
@@ -348,7 +357,7 @@ const metadados = {
 const paisesFile = paises.map(pais => {
     let _pais = Object.assign({}, pais);
     delete _pais.parent,
-    delete _pais.parents
+        delete _pais.parents
     return _pais;
 })
 
@@ -359,8 +368,8 @@ const dicionario = [].concat(paises, regioes).reduce((agg, obj) => {
     return agg;
 }, {})
 
-NOMES_EN_ALTERNATIVOS.forEach(obj => {
-    let slug_en = slug(obj.nome);
+NOMES_ALTERNATIVOS.forEach(obj => {
+    let slug_en = slug(obj.nome.en);
     dicionario[slug_en] = obj.a2_code;
 })
 
@@ -368,11 +377,22 @@ fs.writeFile(path.resolve('..', 'compilado', 'paises_resumido.json'), JSON.strin
     console.log('paises_resumido pronto');
 });
 
-fs.writeFile(path.resolve('..', 'compilado', 'paises.json'), JSON.stringify({paises, regioes}, null, 4), (err) => {
+fs.writeFile(path.resolve('..', 'compilado', 'paises.json'), JSON.stringify({ paises, regioes }, null, 4), (err) => {
     console.log('paises pronto');
-})
+});
 
-fs.writeFile(path.resolve('..', 'compilado', 'paises_completo.json'), JSON.stringify({paises, regioes, metadados}, null, 4), (err) => {
+fs.writeFile(
+    path.resolve('../../../codigofonte/ClientApp/app/shared/localidade', 'localidades.lista.ts'),
+    `import { Localidade, Pais } from './localidade.model';
+
+export const localidades = ${JSON.stringify({ paises, regioes }, null, 4)}`,
+    (err) => {
+        if (err) { console.log('ERRO', 'localidades.lista não foi atualizada', err) }
+        console.log('localidades.lista atualizada');
+    }
+);
+
+fs.writeFile(path.resolve('..', 'compilado', 'paises_completo.json'), JSON.stringify({ paises, regioes, metadados }, null, 4), (err) => {
     console.log('paises_completos pronto');
 })
 

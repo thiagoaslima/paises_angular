@@ -5,7 +5,7 @@ const util = require('util');
 const cheerio = require('cheerio');
 const tabletojson = require('tabletojson');
 const dicionario = require('../../lista-paises/compilado/nomeen_sigla_dicionario.json');
-const slug = require('../../shared/slug');
+const slug = require('../shared/slug');
 const readFile = util.promisify(fs.readFile);
 
 const repository = path.resolve(__dirname, '..', '11-dados-capturados/national-accounts/');
