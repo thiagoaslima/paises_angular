@@ -15,6 +15,7 @@ import { LogoODSComponent } from './logo-ods/logo-ods.component';
 import { GraficoComponent } from './grafico/grafico.component';
 
 import { ResultadoPipe } from './resultado.pipe';
+import { L10NPipe } from './l10n.pipe';
 
 
 export function platformDetectionFactory(platform_id: Object) {
@@ -25,12 +26,14 @@ export function platformDetectionFactory(platform_id: Object) {
     declarations: [
         LogoODSComponent,
         GraficoComponent,
-        ResultadoPipe
+        ResultadoPipe,
+        L10NPipe
     ],
     exports: [
         LogoODSComponent,
         GraficoComponent,
-        ResultadoPipe
+        ResultadoPipe,
+        L10NPipe
     ],
     providers: [
         TraducaoService,
