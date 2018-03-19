@@ -1,8 +1,15 @@
 const request = require('request-promise-native');
-const slugify = require('../shared/slug');
-const convertEncoding = require('../shared/convertEncoding');
-const getFonteSync = require('../shared/getFonteSync');
-const fonte = getFonteSync("National Accounts Main Aggregates Database, Basic Data Selection");
+const oldHashes = require('./hashes.json');
+const { AllOldDataError } = require('../errors');
+const {
+    convertEncoding,
+    getFonte,
+    hashString,
+    slugify,
+    saveFile
+} = require('../shared');
+
+const fonte = getFonte("National Accounts Main Aggregates Database, Basic Data Selection");
 
 const oldestYear = 2000;
 const currentYear = (new Date()).getFullYear();
@@ -17,12 +24,11 @@ const periodos = Array(currentYear - oldestYear + 1)
     }, []);
 
 
-function getTables() {
+function getPages() {
     let promises = [];
 
     fonte.dados.forEach(dados => {
         const { nome } = dados;
-        const slug = slugify(nome);
         const { link, data } = dados.post_request;
 
         periodos.forEach(periodos => {
@@ -52,5 +58,18 @@ function getPage({link, options}) {
     return request.post(link, options);
 }
 
+function compareHashes(pages) {
+    const hashes = pages.map(hashString);
+    console.log(hashes);
+    const areEqual = hashes.every((hash, idx) => hash === oldHashes[idx]);
 
-module.exports = { getTables };
+    if (!areEqual) {
+        saveFile(null, 'hashes.json', JSON.stringify(hashes));
+        return pages
+    } else {
+        throw new AllOldDataError();
+    }
+}
+
+
+module.exports = { getPages, compareHashes };

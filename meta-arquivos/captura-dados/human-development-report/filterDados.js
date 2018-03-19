@@ -1,10 +1,13 @@
 const StreamArray = require('stream-json/utils/StreamArray');
 
-const slugify = require('../shared/slug');
-const { hashStream } = require('../shared/calculateHash');
-const getSigla = require('../shared/getSigla');
-const getFonteSync = require('../shared/getFonteSync');
-const fonte = getFonteSync("Human Development Report");
+const slugify = require('../shared/slugify');
+const { 
+    getFonte,
+    getSigla,
+    hashStream 
+} = require('../shared');
+
+const fonte = getFonte("Human Development Report");
 
 function filterSummary(summary) {
     const json = JSON.parse(summary);

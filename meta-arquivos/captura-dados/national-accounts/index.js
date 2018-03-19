@@ -1,8 +1,17 @@
-const { getTables } = require('./getDados');
+const { getPages, compareHashes } = require('./getDados');
 const { filterTables } = require('./filterDados');
+const { convertDados, prepareToUpload } = require('./convertDados');
+const { getVariavelCode, runToAllCountries, saveFile } = require('../shared');
 
-getTables()
+
+getPages()
+    .then(compareHashes)
     .then(filterTables)
+    .then(convertDados)
+    .then(prepareToUpload)
     .then(res => {
-        console.log(JSON.stringify(res))
+        saveFile(null, 'teste', JSON.stringify(res, null, 4));
     })
+    .catch(err => {
+        console.log(err);
+    });

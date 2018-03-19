@@ -1,12 +1,12 @@
-const slugify = require('slugify');
+const _slugify = require('slugify');
 
-function slug(str) {
+function slugify(str) {
     str = str.replace(/['`"´’\(\)\[\]]/g, "")
-    return slugify(str, {
+    return _slugify(str, {
         replacement: '-',
         remove: null,
         lower: true
     });
 }
 
-module.exports = slug
+module.exports = slugify;

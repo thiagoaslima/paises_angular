@@ -2,24 +2,24 @@ const cheerio =  require('cheerio');
 const tabletojson = require('tabletojson');
 
 function filterTables(pages) {
-    let tables = extractTables(pages)
-    return convertJSON(tables)
+    let tables = _extractTables(pages);
+    return _convertJSON(tables);
 };
 
-function extractTables(pages) {
+function _extractTables(pages) {
     return pages.map(page => {
         const $ = cheerio.load(page);
-        return $('table').eq(7);
-    })
+        return $('table').get(7);
+    });
 }
 
-function convertJSON(tables) {
-    return tables.map(table => {
-        return tabletojson.convert(table, {
+function _convertJSON(cheerioTables) {
+    return cheerioTables.map(table => {
+        return tabletojson.convert(cheerio.html(table), {
             useFirstRowForHeadings: false,
             stripHtmlFromCells: true
-        }).slice(1)
-    })
+        });
+    });
 }
 
 module.exports = { filterTables };

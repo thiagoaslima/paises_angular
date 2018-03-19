@@ -1,17 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const slugify = require('../shared/slug');
+const slugify = require('./slugify');
 
 const readFile = util.promisify(fs.readFile);
 
-const fileContent = fs.readFileSync(path.resolve(__dirname, '..', 'fontes.json'), { encoding: 'utf8'})
+const fileContent = fs.readFileSync(path.resolve(__dirname, '..', 'fontes.json'), { encoding: 'utf8' })
 const json = JSON.parse(fileContent);
 
-function getFonteSync(str) {
+function getFonte(str) {
     const slug = slugify(str);
     const fonte = json.find(obj => slugify(obj.fonte) === slug);
-    
+
     if (!fonte) {
         console.log(
             "getFonte",
@@ -23,8 +23,14 @@ function getFonteSync(str) {
         )
         throw new Error('Não foi possível encontrar a fonte' + str);
     }
-    
+
     return fonte;
 }
 
-module.exports = getFonteSync;
+function getVariavelCode(nomeFonte, slug) {
+    const fonte = getFonte(nomeFonte);
+    const obj = fonte.dados.find(obj => slugify(obj.nome) === slug)
+    return obj.variavel_code;
+}
+
+module.exports = { getFonte, getVariavelCode };
