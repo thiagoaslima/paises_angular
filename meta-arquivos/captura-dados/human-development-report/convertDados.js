@@ -1,6 +1,7 @@
 const {
     getFonte,
     getSigla,
+    getVariavelCode,
     slugify
 } = require('../shared');
 

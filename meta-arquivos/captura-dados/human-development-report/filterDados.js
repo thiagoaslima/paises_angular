@@ -13,6 +13,8 @@ function filterSummary(summary) {
     const json = JSON.parse(summary);
     const nomeIndicadores = fonte.dados.map(obj => obj.nome_publicacao);
 
+    console.log('filterSummary')
+
     return json.filter(obj => nomeIndicadores.includes(obj.indicator))
         .map(indicador => {
             const obj = fonte.dados.find(obj => obj.nome_publicacao === indicador.indicator);
@@ -28,6 +30,8 @@ function filterSummary(summary) {
 function filterIndicators (indicatorsStream, indicadores) {
     const jsonStream = StreamArray.make();
     indicatorsStream.pipe(jsonStream.input);
+
+    console.log('filterIndicators')
 
     const values = {};
     Object.defineProperties(values, {
