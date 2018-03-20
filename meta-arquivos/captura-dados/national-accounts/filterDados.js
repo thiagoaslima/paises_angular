@@ -1,9 +1,10 @@
 const cheerio =  require('cheerio');
 const tabletojson = require('tabletojson');
+const { flattenOneLevel } = require('../shared')
 
 function filterTables(pages) {
     let tables = _extractTables(pages);
-    return _convertJSON(tables);
+    return flattenOneLevel(_convertJSON(tables));
 };
 
 function _extractTables(pages) {

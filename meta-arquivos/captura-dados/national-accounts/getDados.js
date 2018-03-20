@@ -59,16 +59,18 @@ function getPage({link, options}) {
 }
 
 function compareHashes(pages) {
-    const hashes = pages.map(hashString);
-    console.log(hashes);
-    const areEqual = hashes.every((hash, idx) => hash === oldHashes[idx]);
-
-    if (!areEqual) {
-        saveFile(null, 'hashes.json', JSON.stringify(hashes));
-        return pages
-    } else {
-        throw new AllOldDataError();
-    }
+    const promises = pages.map(hashString);
+    
+    return Promise.all(promises).then(hashes => {
+        const areEqual = hashes.every((hash, idx) => hash === oldHashes[idx]);
+        
+        if (!areEqual) {
+            saveFile(null, 'hashes.json', JSON.stringify(hashes));
+            return pages
+        } else {
+            throw new AllOldDataError();
+        }
+    })
 }
 
 

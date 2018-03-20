@@ -1,11 +1,5 @@
 const path = require('path');
-const {
-    hashString,
-    readFile,
-    saveFile,
-    updateHash
-} = require('../shared/calculateHash');
-
+const { saveFile } = require('../shared');
 const { compareHashes, getSummary, getIndicators } = require('./getDados');
 const { filterSummary, filterIndicators } = require('./filterDados');
 const { prepareToUpload } = require('./convertDados');
@@ -20,4 +14,7 @@ getSummary()
         if (values) {
             saveFile(path.resolve(__dirname), 'hdr.json', JSON.stringify(values, null, 4))
         }
+    })
+    .catch(err => {
+        console.log(err)
     })

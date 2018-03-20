@@ -1,6 +1,6 @@
 const request = require('request-promise-native');
 const { AllOldDataError } = require('../errors')
-const { getFonte } = require('../shared');
+const { getFonte, saveFile } = require('../shared');
 const fonte = getFonte("Human Development Report");
 const oldHash = require('./hash.json');
 

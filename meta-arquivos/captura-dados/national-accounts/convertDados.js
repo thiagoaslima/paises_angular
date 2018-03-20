@@ -1,6 +1,8 @@
 const {
     getFonte,
     getSigla,
+    getVariavelCode,
+    runToAllCountries,
     slugify
 } = require('../shared');
 
@@ -13,15 +15,15 @@ function prepareToUpload(dados) {
         Object.keys(dados[slug]).forEach(periodo => {
             let obj = runToAllCountries(dados[slug][periodo]);
             let array = Object.keys(obj).map(sigla => `"${sigla}";"${obj[sigla]}"`);
-            let item = ["", code].concat(array).join("\n");
-            constent.push(item);
+            let item = [`"";${code}`].concat(array).join("\n");
+            content.push(item);
         })
     })
     return content;
 }
 
 function convertDados(json) {
-    let content = Object.create(null);
+    let content = {};
 
     json.forEach(array => {
         let [head, ...tail] = array;
@@ -30,11 +32,13 @@ function convertDados(json) {
         content[slug] = createYearsProperties(tail);
 
         tail.forEach(obj => {
-            let [name, year, currency, value] = obj;
+            let [name, year, currency, value] = Object.values(obj);
             let item = convertTableItem(name, value, slug);
             content[slug][year][item.sigla] = item.valor;
         });
     });
+
+    return content;
 }
 
 function convertTableItem(name, value, slugIndicador) {
@@ -53,10 +57,10 @@ function createYearsProperties(array) {
     let lastName = "";
 
     for (let i = 0; i < array.length; i++) {
-        let [nome, year] = array[i];
+        let nome = array[i][0], year = array[i][1];
         if (i === 0) { lastName = nome; }
         if (nome !== lastName) { break; }
-        obj[year] = [];
+        obj[year] = {};
     }
 
     return obj;
