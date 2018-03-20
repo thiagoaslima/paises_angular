@@ -107,7 +107,6 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
     ngOnChanges({ malha, pais }: { [key: string]: SimpleChange }) {
         if (malha && malha.currentValue && malha.currentValue !== malha.previousValue) {
             this._topology$.next(malha.currentValue);
-            console.log(malha.currentValue);
         }
 
         if (pais && pais.currentValue !== pais.previousValue) {

@@ -24,6 +24,7 @@ export class RankingService {
         this.updateIndicador(indicadorId);
         this.updateValores(indicadorId);
     }
+    
     updateIndicador(indicadorId?: number) {
         if (!indicadorId) {
             this.indicador$.next(indicadorBlank);

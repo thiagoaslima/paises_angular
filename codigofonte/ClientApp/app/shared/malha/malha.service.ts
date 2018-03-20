@@ -93,7 +93,7 @@ export class MalhaService {
         return this.topojson;
     }
 
-    public getMalhaGeoJSON(valores?: Array<{pais: Pais, valor: string}>): any {   
+    public getMalhaGeoJSON(valores?: Array<{ pais: Pais, valor: string }>): any {
         if (!valores || valores.length === 0) {
             return this.geojson;
         }
@@ -101,35 +101,35 @@ export class MalhaService {
         return this.updateMalhaGeoJSON(valores);
     }
 
-    public updateMalhaGeoJSON(valores: Array<{pais: Pais, valor: string}>) {
+    public updateMalhaGeoJSON(valores: Array<{ pais: Pais, valor: string }>) {
         let geojson = Object.assign({}, this.geojson);
 
         const scales = this._makeScales(valores);
         const valoresMap = valores.reduce((agg, obj) => {
             agg[obj.pais.sigla] = obj;
             return agg;
-        }, {} as {[sigla: string]: {pais: Pais, valor: string}});
+        }, {} as { [sigla: string]: { pais: Pais, valor: string } });
 
         geojson.features = geojson.features.map((feature: any) => {
             feature = JSON.parse(JSON.stringify(feature));
-            
+
             const { sigla, mostrar } = feature.properties;
-            
-            if (mostrar) { 
+
+            if (mostrar) {
                 let scale = this._getScale(valoresMap[sigla].valor, scales);
                 if (scale) {
                     //@ts-ignore
                     feature.properties.style.default = this.polygonsStyles[scale];
                 }
             }
-            
-            return feature; 
+
+            return feature;
         });
 
         return geojson;
     }
 
-    
+
     private _resetMalha() {
         this.topojson.objects.countries.geometries.forEach((geometry: any) => {
             const { mostrar } = geometry.properties;
@@ -142,7 +142,7 @@ export class MalhaService {
         });
     }
 
-    private _makeScales(valores: Array<{pais: Pais, valor: string}>) {
+    private _makeScales(valores: Array<{ pais: Pais, valor: string }>) {
         const _setValues = new Set(valores.map(obj => obj.valor).sort().reverse());
         const _values = Array.from(_setValues.values()).filter(Boolean);
         let sep = [];
