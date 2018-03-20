@@ -1,7 +1,7 @@
 export type tipo_localidade = 'pais' | 'regiao' | 'subregiao' | 'continente';
 
 export interface Localidade {
-    tipo: tipo_localidade;
+    tipo: string;
     slug: string;
     codigo: string;
     nome: {
@@ -9,16 +9,35 @@ export interface Localidade {
         es: string;
         pt: string;
     }; 
-    parent: string;
+    parent: number | string;
 }
 
 export interface Pais extends Localidade {
-    tipo: 'pais';
+    codigo: string;
+    slug: string;
     sigla: string;
     sigla3: string;
-    parents: {
-        continente: string;
-        regiao: string;
-        subregiao: string;
-    };
+    nome: {
+        en: string;
+        es: string;
+        pt: string;
+    }
+    apelidos?: {
+        en?: string[] | never[];
+        es?: string[] | never[];
+        pt?: string[] | never[];
+    }
+    parent: number | string;
+    parents?: {
+        continente?: number | string;
+        regiao?: number | string;
+        subregiao?: number | string;
+    }
+    slugs: {
+        en: string;
+        es: string;
+        pt: string;
+    }
+    ddi: string;
+    onu: boolean;          
 }

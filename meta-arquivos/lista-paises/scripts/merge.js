@@ -160,7 +160,8 @@ let paises = ISO.map(obj => {
     const apelidos_pt = NOMES_ALTERNATIVOS.filter(o => o.a2_code === obj["code_a2"]).map(o => o.nome.pt).filter(Boolean);
 
     return {
-        "codigo": obj.numeric,
+        "tipo": "pais",
+        "codigo": obj.numeric.toString(),
         "slug": slug_pt,
         "sigla": obj["code_a2"],
         "sigla3": obj["code_a3"],
