@@ -19,6 +19,7 @@
             "es": "afganistan",
             "pt": "afeganistao"
         },
+        "ddi": "",
         "onu": true
     },
     {
@@ -41,6 +42,7 @@
             "es": "islas-aland",
             "pt": "ilhas-alanda"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -63,6 +65,7 @@
             "es": "albania",
             "pt": "albania"
         },
+        "ddi": "355",
         "onu": true
     },
     {
@@ -85,6 +88,7 @@
             "es": "argelia",
             "pt": "argelia"
         },
+        "ddi": "213",
         "onu": true
     },
     {
@@ -107,6 +111,7 @@
             "es": "samoa-americana",
             "pt": "samoa-americana"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -129,6 +134,7 @@
             "es": "andorra",
             "pt": "andorra"
         },
+        "ddi": "376",
         "onu": true
     },
     {
@@ -151,6 +157,7 @@
             "es": "angola",
             "pt": "angola"
         },
+        "ddi": "244",
         "onu": true
     },
     {
@@ -173,6 +180,7 @@
             "es": "anguila",
             "pt": "anguilla"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -195,6 +203,7 @@
             "es": "antartida",
             "pt": "antartida"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -217,6 +226,7 @@
             "es": "antigua-y-barbuda",
             "pt": "antigua-e-barbuda"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -239,6 +249,7 @@
             "es": "argentina",
             "pt": "argentina"
         },
+        "ddi": "54",
         "onu": true
     },
     {
@@ -261,6 +272,7 @@
             "es": "armenia",
             "pt": "armenia"
         },
+        "ddi": "374",
         "onu": true
     },
     {
@@ -283,6 +295,7 @@
             "es": "aruba",
             "pt": "aruba"
         },
+        "ddi": "297",
         "onu": false
     },
     {
@@ -305,6 +318,7 @@
             "es": "australia",
             "pt": "australia"
         },
+        "ddi": "61",
         "onu": true
     },
     {
@@ -327,6 +341,7 @@
             "es": "austria",
             "pt": "austria"
         },
+        "ddi": "43",
         "onu": true
     },
     {
@@ -349,6 +364,7 @@
             "es": "azerbaiyan",
             "pt": "azerbaijao"
         },
+        "ddi": "994",
         "onu": true
     },
     {
@@ -373,6 +389,7 @@
             "es": "bahamas",
             "pt": "bahamas"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -395,6 +412,7 @@
             "es": "bahrein",
             "pt": "barein"
         },
+        "ddi": "973",
         "onu": true
     },
     {
@@ -417,6 +435,7 @@
             "es": "bangladesh",
             "pt": "bangladesh"
         },
+        "ddi": "880",
         "onu": true
     },
     {
@@ -439,6 +458,7 @@
             "es": "barbados",
             "pt": "barbados"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -461,6 +481,7 @@
             "es": "belarus",
             "pt": "bielorussia"
         },
+        "ddi": "375",
         "onu": true
     },
     {
@@ -483,6 +504,7 @@
             "es": "belgica",
             "pt": "belgica"
         },
+        "ddi": "32",
         "onu": true
     },
     {
@@ -505,6 +527,7 @@
             "es": "belice",
             "pt": "belize"
         },
+        "ddi": "501",
         "onu": true
     },
     {
@@ -527,6 +550,7 @@
             "es": "benin",
             "pt": "benin"
         },
+        "ddi": "229",
         "onu": true
     },
     {
@@ -549,6 +573,7 @@
             "es": "bermuda",
             "pt": "bermuda"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -571,6 +596,7 @@
             "es": "bhutan",
             "pt": "butao"
         },
+        "ddi": "975",
         "onu": true
     },
     {
@@ -597,6 +623,7 @@
             "es": "bolivia-estado-plurinacional-de",
             "pt": "bolivia"
         },
+        "ddi": "591",
         "onu": true
     },
     {
@@ -619,6 +646,7 @@
             "es": "bonaire-san-eustaquio-y-saba",
             "pt": "bonaire-santo-eustaquio-e-saba"
         },
+        "ddi": "599",
         "onu": false
     },
     {
@@ -641,6 +669,7 @@
             "es": "bosnia-y-herzegovina",
             "pt": "bosnia-herzegovina"
         },
+        "ddi": "387",
         "onu": true
     },
     {
@@ -663,6 +692,7 @@
             "es": "botswana",
             "pt": "botsuana"
         },
+        "ddi": "267",
         "onu": true
     },
     {
@@ -685,6 +715,7 @@
             "es": "isla-bouvet",
             "pt": "ilha-bouvet"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -707,6 +738,7 @@
             "es": "brasil",
             "pt": "brasil"
         },
+        "ddi": "55",
         "onu": true
     },
     {
@@ -729,6 +761,7 @@
             "es": "territorio-britanico-del-oceano-indico",
             "pt": "territorio-britanico-do-oceano-indico"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -757,6 +790,7 @@
             "es": "brunei-darussalam",
             "pt": "brunei"
         },
+        "ddi": "673",
         "onu": true
     },
     {
@@ -779,6 +813,7 @@
             "es": "bulgaria",
             "pt": "bulgaria"
         },
+        "ddi": "359",
         "onu": true
     },
     {
@@ -801,6 +836,7 @@
             "es": "burkina-faso",
             "pt": "burkina-faso"
         },
+        "ddi": "226",
         "onu": true
     },
     {
@@ -823,6 +859,7 @@
             "es": "burundi",
             "pt": "burundi"
         },
+        "ddi": "257",
         "onu": true
     },
     {
@@ -845,6 +882,7 @@
             "es": "cabo-verde",
             "pt": "cabo-verde"
         },
+        "ddi": "238",
         "onu": true
     },
     {
@@ -867,6 +905,7 @@
             "es": "camboya",
             "pt": "camboja"
         },
+        "ddi": "855",
         "onu": true
     },
     {
@@ -889,6 +928,7 @@
             "es": "camerun",
             "pt": "camaroes"
         },
+        "ddi": "237",
         "onu": true
     },
     {
@@ -911,6 +951,7 @@
             "es": "canada",
             "pt": "canada"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -933,6 +974,7 @@
             "es": "islas-caiman",
             "pt": "ilhas-cayman"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -955,6 +997,7 @@
             "es": "republica-centroafricana",
             "pt": "republica-centro-africana"
         },
+        "ddi": "236",
         "onu": true
     },
     {
@@ -977,6 +1020,7 @@
             "es": "chad",
             "pt": "chade"
         },
+        "ddi": "235",
         "onu": true
     },
     {
@@ -999,6 +1043,7 @@
             "es": "chile",
             "pt": "chile"
         },
+        "ddi": "56",
         "onu": true
     },
     {
@@ -1027,6 +1072,7 @@
             "es": "china",
             "pt": "china"
         },
+        "ddi": "86",
         "onu": true
     },
     {
@@ -1049,6 +1095,7 @@
             "es": "isla-de-navidad",
             "pt": "ilha-christmas"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -1071,6 +1118,7 @@
             "es": "islas-cocos-keeling",
             "pt": "ilhas-cocos-keeling"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -1093,6 +1141,7 @@
             "es": "colombia",
             "pt": "colombia"
         },
+        "ddi": "57",
         "onu": true
     },
     {
@@ -1115,6 +1164,7 @@
             "es": "comoras",
             "pt": "comores"
         },
+        "ddi": "269",
         "onu": true
     },
     {
@@ -1139,6 +1189,7 @@
             "es": "republica-democratica-del-congo",
             "pt": "republica-democratica-do-congo"
         },
+        "ddi": "243",
         "onu": true
     },
     {
@@ -1163,6 +1214,7 @@
             "es": "congo",
             "pt": "congo"
         },
+        "ddi": "242",
         "onu": true
     },
     {
@@ -1185,6 +1237,7 @@
             "es": "islas-cook",
             "pt": "ilhas-cook"
         },
+        "ddi": "682",
         "onu": false
     },
     {
@@ -1207,6 +1260,7 @@
             "es": "costa-rica",
             "pt": "costa-rica"
         },
+        "ddi": "506",
         "onu": true
     },
     {
@@ -1229,6 +1283,7 @@
             "es": "cote-divoire",
             "pt": "costa-do-marfim"
         },
+        "ddi": "225",
         "onu": true
     },
     {
@@ -1251,6 +1306,7 @@
             "es": "croacia",
             "pt": "croacia"
         },
+        "ddi": "385",
         "onu": true
     },
     {
@@ -1273,6 +1329,7 @@
             "es": "cuba",
             "pt": "cuba"
         },
+        "ddi": "53",
         "onu": true
     },
     {
@@ -1295,6 +1352,7 @@
             "es": "curacao",
             "pt": "curacao"
         },
+        "ddi": "599",
         "onu": false
     },
     {
@@ -1317,6 +1375,7 @@
             "es": "chipre",
             "pt": "chipre"
         },
+        "ddi": "357",
         "onu": true
     },
     {
@@ -1345,6 +1404,7 @@
             "es": "chequia",
             "pt": "republica-tcheca"
         },
+        "ddi": "420",
         "onu": true
     },
     {
@@ -1367,6 +1427,7 @@
             "es": "dinamarca",
             "pt": "dinamarca"
         },
+        "ddi": "45",
         "onu": true
     },
     {
@@ -1389,6 +1450,7 @@
             "es": "djibouti",
             "pt": "djibouti"
         },
+        "ddi": "253",
         "onu": true
     },
     {
@@ -1411,6 +1473,7 @@
             "es": "dominica",
             "pt": "dominica"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -1433,6 +1496,7 @@
             "es": "republica-dominicana",
             "pt": "republica-dominicana"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -1455,6 +1519,7 @@
             "es": "ecuador",
             "pt": "equador"
         },
+        "ddi": "593",
         "onu": true
     },
     {
@@ -1477,6 +1542,7 @@
             "es": "egipto",
             "pt": "egito"
         },
+        "ddi": "20",
         "onu": true
     },
     {
@@ -1499,6 +1565,7 @@
             "es": "el-salvador",
             "pt": "el-salvador"
         },
+        "ddi": "503",
         "onu": true
     },
     {
@@ -1521,6 +1588,7 @@
             "es": "guinea-ecuatorial",
             "pt": "guine-equatorial"
         },
+        "ddi": "240",
         "onu": true
     },
     {
@@ -1543,6 +1611,7 @@
             "es": "eritrea",
             "pt": "eritreia"
         },
+        "ddi": "291",
         "onu": true
     },
     {
@@ -1565,6 +1634,7 @@
             "es": "estonia",
             "pt": "estonia"
         },
+        "ddi": "372",
         "onu": true
     },
     {
@@ -1587,6 +1657,7 @@
             "es": "etiopia",
             "pt": "etiopia"
         },
+        "ddi": "251",
         "onu": true
     },
     {
@@ -1611,6 +1682,7 @@
             "es": "islas-malvinas-falkland",
             "pt": "ilhas-falkland"
         },
+        "ddi": "500",
         "onu": false
     },
     {
@@ -1633,6 +1705,7 @@
             "es": "islas-feroe",
             "pt": "ilhas-faeroe"
         },
+        "ddi": "298",
         "onu": false
     },
     {
@@ -1655,6 +1728,7 @@
             "es": "fiji",
             "pt": "fiji"
         },
+        "ddi": "679",
         "onu": true
     },
     {
@@ -1677,6 +1751,7 @@
             "es": "finlandia",
             "pt": "finlandia"
         },
+        "ddi": "358",
         "onu": true
     },
     {
@@ -1699,6 +1774,7 @@
             "es": "francia",
             "pt": "franca"
         },
+        "ddi": "33",
         "onu": true
     },
     {
@@ -1721,6 +1797,7 @@
             "es": "guayana-francesa",
             "pt": "guiana-francesa"
         },
+        "ddi": "594",
         "onu": false
     },
     {
@@ -1743,6 +1820,7 @@
             "es": "polinesia-francesa",
             "pt": "polinesia-francesa"
         },
+        "ddi": "689",
         "onu": false
     },
     {
@@ -1765,6 +1843,7 @@
             "es": "territorio-de-las-tierras-australes-francesas",
             "pt": "terras-austrais-e-antarticas-francesas"
         },
+        "ddi": "262",
         "onu": false
     },
     {
@@ -1787,6 +1866,7 @@
             "es": "gabon",
             "pt": "gabao"
         },
+        "ddi": "241",
         "onu": true
     },
     {
@@ -1811,6 +1891,7 @@
             "es": "gambia",
             "pt": "gambia"
         },
+        "ddi": "220",
         "onu": true
     },
     {
@@ -1833,6 +1914,7 @@
             "es": "georgia",
             "pt": "georgia"
         },
+        "ddi": "995",
         "onu": true
     },
     {
@@ -1855,6 +1937,7 @@
             "es": "alemania",
             "pt": "alemanha"
         },
+        "ddi": "49",
         "onu": true
     },
     {
@@ -1877,6 +1960,7 @@
             "es": "ghana",
             "pt": "gana"
         },
+        "ddi": "233",
         "onu": true
     },
     {
@@ -1899,6 +1983,7 @@
             "es": "gibraltar",
             "pt": "gibraltar"
         },
+        "ddi": "350",
         "onu": false
     },
     {
@@ -1921,6 +2006,7 @@
             "es": "grecia",
             "pt": "grecia"
         },
+        "ddi": "30",
         "onu": true
     },
     {
@@ -1943,6 +2029,7 @@
             "es": "groenlandia",
             "pt": "groenlandia"
         },
+        "ddi": "299",
         "onu": false
     },
     {
@@ -1965,6 +2052,7 @@
             "es": "granada",
             "pt": "granada"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -1987,6 +2075,7 @@
             "es": "guadalupe",
             "pt": "ilha-guadalupe"
         },
+        "ddi": "590",
         "onu": false
     },
     {
@@ -2009,6 +2098,7 @@
             "es": "guam",
             "pt": "guam"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -2031,6 +2121,7 @@
             "es": "guatemala",
             "pt": "guatemala"
         },
+        "ddi": "502",
         "onu": true
     },
     {
@@ -2053,6 +2144,7 @@
             "es": "guernsey",
             "pt": "guernsey"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -2075,6 +2167,7 @@
             "es": "guinea",
             "pt": "guine"
         },
+        "ddi": "224",
         "onu": true
     },
     {
@@ -2097,6 +2190,7 @@
             "es": "guinea-bissau",
             "pt": "guine-bissau"
         },
+        "ddi": "245",
         "onu": true
     },
     {
@@ -2119,6 +2213,7 @@
             "es": "guyana",
             "pt": "guiana"
         },
+        "ddi": "592",
         "onu": true
     },
     {
@@ -2141,6 +2236,7 @@
             "es": "haiti",
             "pt": "haiti"
         },
+        "ddi": "509",
         "onu": true
     },
     {
@@ -2163,6 +2259,7 @@
             "es": "islas-heard-y-mcdonald",
             "pt": "ilha-heard-e-ilhas-mcdonald"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -2187,6 +2284,7 @@
             "es": "santa-sede",
             "pt": "vaticano"
         },
+        "ddi": "379, 39",
         "onu": true
     },
     {
@@ -2209,6 +2307,7 @@
             "es": "honduras",
             "pt": "honduras"
         },
+        "ddi": "504",
         "onu": true
     },
     {
@@ -2238,6 +2337,7 @@
             "es": "china-region-administrativa-especial-de-hong-kong",
             "pt": "china-hong-kong"
         },
+        "ddi": "852",
         "onu": false
     },
     {
@@ -2260,6 +2360,7 @@
             "es": "hungria",
             "pt": "hungria"
         },
+        "ddi": "36",
         "onu": true
     },
     {
@@ -2282,6 +2383,7 @@
             "es": "islandia",
             "pt": "islandia"
         },
+        "ddi": "354",
         "onu": true
     },
     {
@@ -2304,6 +2406,7 @@
             "es": "india",
             "pt": "india"
         },
+        "ddi": "91",
         "onu": true
     },
     {
@@ -2326,6 +2429,7 @@
             "es": "indonesia",
             "pt": "indonesia"
         },
+        "ddi": "62",
         "onu": true
     },
     {
@@ -2350,6 +2454,7 @@
             "es": "iran-republica-islamica-del",
             "pt": "ira"
         },
+        "ddi": "98",
         "onu": true
     },
     {
@@ -2372,6 +2477,7 @@
             "es": "iraq",
             "pt": "iraque"
         },
+        "ddi": "964",
         "onu": true
     },
     {
@@ -2394,6 +2500,7 @@
             "es": "irlanda",
             "pt": "irlanda"
         },
+        "ddi": "353",
         "onu": true
     },
     {
@@ -2416,6 +2523,7 @@
             "es": "isla-de-man",
             "pt": "ilha-de-man"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -2438,6 +2546,7 @@
             "es": "israel",
             "pt": "israel"
         },
+        "ddi": "972",
         "onu": true
     },
     {
@@ -2460,6 +2569,7 @@
             "es": "italia",
             "pt": "italia"
         },
+        "ddi": "39",
         "onu": true
     },
     {
@@ -2482,6 +2592,7 @@
             "es": "jamaica",
             "pt": "jamaica"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -2504,6 +2615,7 @@
             "es": "japon",
             "pt": "japao"
         },
+        "ddi": "81",
         "onu": true
     },
     {
@@ -2526,6 +2638,7 @@
             "es": "jersey",
             "pt": "jersey"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -2548,6 +2661,7 @@
             "es": "jordania",
             "pt": "jordania"
         },
+        "ddi": "962",
         "onu": true
     },
     {
@@ -2570,6 +2684,7 @@
             "es": "kazajstan",
             "pt": "casaquistao"
         },
+        "ddi": "7",
         "onu": true
     },
     {
@@ -2592,6 +2707,7 @@
             "es": "kenya",
             "pt": "quenia"
         },
+        "ddi": "254",
         "onu": true
     },
     {
@@ -2614,6 +2730,7 @@
             "es": "kiribati",
             "pt": "kiribati"
         },
+        "ddi": "686",
         "onu": true
     },
     {
@@ -2638,6 +2755,7 @@
             "es": "republica-popular-democratica-de-corea",
             "pt": "coreia-do-norte"
         },
+        "ddi": "850",
         "onu": true
     },
     {
@@ -2663,6 +2781,7 @@
             "es": "republica-de-corea",
             "pt": "coreia-do-sul"
         },
+        "ddi": "82",
         "onu": true
     },
     {
@@ -2685,6 +2804,7 @@
             "es": "kuwait",
             "pt": "kuwait"
         },
+        "ddi": "965",
         "onu": true
     },
     {
@@ -2707,6 +2827,7 @@
             "es": "kirguistan",
             "pt": "quirguistao"
         },
+        "ddi": "996",
         "onu": true
     },
     {
@@ -2731,6 +2852,7 @@
             "es": "republica-democratica-popular-lao",
             "pt": "laos"
         },
+        "ddi": "856",
         "onu": true
     },
     {
@@ -2753,6 +2875,7 @@
             "es": "letonia",
             "pt": "letonia"
         },
+        "ddi": "371",
         "onu": true
     },
     {
@@ -2775,6 +2898,7 @@
             "es": "libano",
             "pt": "libano"
         },
+        "ddi": "961",
         "onu": true
     },
     {
@@ -2797,6 +2921,7 @@
             "es": "lesotho",
             "pt": "lesoto"
         },
+        "ddi": "266",
         "onu": true
     },
     {
@@ -2819,6 +2944,7 @@
             "es": "liberia",
             "pt": "liberia"
         },
+        "ddi": "231",
         "onu": true
     },
     {
@@ -2841,6 +2967,7 @@
             "es": "libia",
             "pt": "libia"
         },
+        "ddi": "218",
         "onu": true
     },
     {
@@ -2863,6 +2990,7 @@
             "es": "liechtenstein",
             "pt": "liechtenstein"
         },
+        "ddi": "423",
         "onu": true
     },
     {
@@ -2885,6 +3013,7 @@
             "es": "lituania",
             "pt": "lituania"
         },
+        "ddi": "370",
         "onu": true
     },
     {
@@ -2907,6 +3036,7 @@
             "es": "luxemburgo",
             "pt": "luxemburgo"
         },
+        "ddi": "352",
         "onu": true
     },
     {
@@ -2929,6 +3059,7 @@
             "es": "china-region-administrativa-especial-de-macao",
             "pt": "china-macao"
         },
+        "ddi": "853",
         "onu": false
     },
     {
@@ -2953,6 +3084,7 @@
             "es": "ex-republica-yugoslava-de-macedonia",
             "pt": "macedonia"
         },
+        "ddi": "389",
         "onu": true
     },
     {
@@ -2975,6 +3107,7 @@
             "es": "madagascar",
             "pt": "madagascar"
         },
+        "ddi": "261",
         "onu": true
     },
     {
@@ -2997,6 +3130,7 @@
             "es": "malawi",
             "pt": "malaui"
         },
+        "ddi": "265",
         "onu": true
     },
     {
@@ -3019,6 +3153,7 @@
             "es": "malasia",
             "pt": "malasia"
         },
+        "ddi": "60",
         "onu": true
     },
     {
@@ -3041,6 +3176,7 @@
             "es": "maldivas",
             "pt": "maldivas"
         },
+        "ddi": "960",
         "onu": true
     },
     {
@@ -3063,6 +3199,7 @@
             "es": "mali",
             "pt": "mali"
         },
+        "ddi": "223",
         "onu": true
     },
     {
@@ -3085,6 +3222,7 @@
             "es": "malta",
             "pt": "malta"
         },
+        "ddi": "356",
         "onu": true
     },
     {
@@ -3107,6 +3245,7 @@
             "es": "islas-marshall",
             "pt": "ilhas-marshall"
         },
+        "ddi": "692",
         "onu": true
     },
     {
@@ -3129,6 +3268,7 @@
             "es": "martinica",
             "pt": "martinica"
         },
+        "ddi": "596",
         "onu": false
     },
     {
@@ -3151,6 +3291,7 @@
             "es": "mauritania",
             "pt": "mauritania"
         },
+        "ddi": "222",
         "onu": true
     },
     {
@@ -3173,6 +3314,7 @@
             "es": "mauricio",
             "pt": "mauricio"
         },
+        "ddi": "230",
         "onu": true
     },
     {
@@ -3195,6 +3337,7 @@
             "es": "mayotte",
             "pt": "mayotte"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -3217,6 +3360,7 @@
             "es": "mexico",
             "pt": "mexico"
         },
+        "ddi": "52",
         "onu": true
     },
     {
@@ -3241,6 +3385,7 @@
             "es": "micronesia-estados-federados-de",
             "pt": "micronesia"
         },
+        "ddi": "691",
         "onu": true
     },
     {
@@ -3266,6 +3411,7 @@
             "es": "republica-de-moldova",
             "pt": "moldavia"
         },
+        "ddi": "373",
         "onu": true
     },
     {
@@ -3288,6 +3434,7 @@
             "es": "monaco",
             "pt": "monaco"
         },
+        "ddi": "377",
         "onu": true
     },
     {
@@ -3310,6 +3457,7 @@
             "es": "mongolia",
             "pt": "mongolia"
         },
+        "ddi": "976",
         "onu": true
     },
     {
@@ -3332,6 +3480,7 @@
             "es": "montenegro",
             "pt": "montenegro"
         },
+        "ddi": "382",
         "onu": true
     },
     {
@@ -3354,6 +3503,7 @@
             "es": "montserrat",
             "pt": "montserrat"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -3376,6 +3526,7 @@
             "es": "marruecos",
             "pt": "marrocos"
         },
+        "ddi": "212",
         "onu": true
     },
     {
@@ -3398,6 +3549,7 @@
             "es": "mozambique",
             "pt": "mocambique"
         },
+        "ddi": "258",
         "onu": true
     },
     {
@@ -3426,6 +3578,7 @@
             "es": "myanmar",
             "pt": "mianma"
         },
+        "ddi": "95",
         "onu": true
     },
     {
@@ -3448,6 +3601,7 @@
             "es": "namibia",
             "pt": "namibia"
         },
+        "ddi": "264",
         "onu": true
     },
     {
@@ -3470,6 +3624,7 @@
             "es": "nauru",
             "pt": "nauru"
         },
+        "ddi": "674",
         "onu": true
     },
     {
@@ -3492,6 +3647,7 @@
             "es": "nepal",
             "pt": "nepal"
         },
+        "ddi": "977",
         "onu": true
     },
     {
@@ -3514,6 +3670,7 @@
             "es": "paises-bajos",
             "pt": "holanda"
         },
+        "ddi": "31",
         "onu": true
     },
     {
@@ -3536,6 +3693,7 @@
             "es": "nueva-caledonia",
             "pt": "nova-caledonia"
         },
+        "ddi": "687",
         "onu": false
     },
     {
@@ -3558,6 +3716,7 @@
             "es": "nueva-zelandia",
             "pt": "nova-zelandia"
         },
+        "ddi": "64",
         "onu": true
     },
     {
@@ -3580,6 +3739,7 @@
             "es": "nicaragua",
             "pt": "nicaragua"
         },
+        "ddi": "505",
         "onu": true
     },
     {
@@ -3602,6 +3762,7 @@
             "es": "niger",
             "pt": "niger"
         },
+        "ddi": "227",
         "onu": true
     },
     {
@@ -3624,6 +3785,7 @@
             "es": "nigeria",
             "pt": "nigeria"
         },
+        "ddi": "234",
         "onu": true
     },
     {
@@ -3646,6 +3808,7 @@
             "es": "niue",
             "pt": "niue"
         },
+        "ddi": "683",
         "onu": false
     },
     {
@@ -3668,6 +3831,7 @@
             "es": "islas-norfolk",
             "pt": "ilha-norfolk"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -3690,6 +3854,7 @@
             "es": "islas-marianas-septentrionales",
             "pt": "ilhas-marianas"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -3712,6 +3877,7 @@
             "es": "noruega",
             "pt": "noruega"
         },
+        "ddi": "47",
         "onu": true
     },
     {
@@ -3734,6 +3900,7 @@
             "es": "oman",
             "pt": "oma"
         },
+        "ddi": "968",
         "onu": true
     },
     {
@@ -3756,6 +3923,7 @@
             "es": "pakistan",
             "pt": "paquistao"
         },
+        "ddi": "92",
         "onu": true
     },
     {
@@ -3778,6 +3946,7 @@
             "es": "palau",
             "pt": "palau"
         },
+        "ddi": "680",
         "onu": true
     },
     {
@@ -3800,6 +3969,7 @@
             "es": "estado-de-palestina",
             "pt": "palestina"
         },
+        "ddi": "",
         "onu": true
     },
     {
@@ -3822,6 +3992,7 @@
             "es": "panama",
             "pt": "panama"
         },
+        "ddi": "507",
         "onu": true
     },
     {
@@ -3844,6 +4015,7 @@
             "es": "papua-nueva-guinea",
             "pt": "papua-nova-guine"
         },
+        "ddi": "675",
         "onu": true
     },
     {
@@ -3866,6 +4038,7 @@
             "es": "paraguay",
             "pt": "paraguai"
         },
+        "ddi": "595",
         "onu": true
     },
     {
@@ -3888,6 +4061,7 @@
             "es": "peru",
             "pt": "peru"
         },
+        "ddi": "51",
         "onu": true
     },
     {
@@ -3910,6 +4084,7 @@
             "es": "filipinas",
             "pt": "filipinas"
         },
+        "ddi": "63",
         "onu": true
     },
     {
@@ -3934,6 +4109,7 @@
             "es": "pitcairn",
             "pt": "pitcairn"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -3956,6 +4132,7 @@
             "es": "polonia",
             "pt": "polonia"
         },
+        "ddi": "48",
         "onu": true
     },
     {
@@ -3978,6 +4155,7 @@
             "es": "portugal",
             "pt": "portugal"
         },
+        "ddi": "351",
         "onu": true
     },
     {
@@ -4000,6 +4178,7 @@
             "es": "puerto-rico",
             "pt": "porto-rico"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -4022,6 +4201,7 @@
             "es": "qatar",
             "pt": "catar"
         },
+        "ddi": "974",
         "onu": true
     },
     {
@@ -4044,6 +4224,7 @@
             "es": "reunion",
             "pt": "ilha-reuniao"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -4066,6 +4247,7 @@
             "es": "rumania",
             "pt": "romenia"
         },
+        "ddi": "40",
         "onu": true
     },
     {
@@ -4090,6 +4272,7 @@
             "es": "federacion-de-rusia",
             "pt": "russia-federacao-russa"
         },
+        "ddi": "7",
         "onu": true
     },
     {
@@ -4112,6 +4295,7 @@
             "es": "rwanda",
             "pt": "ruanda"
         },
+        "ddi": "250",
         "onu": true
     },
     {
@@ -4134,6 +4318,7 @@
             "es": "san-bartolome",
             "pt": "sao-bartolomeu"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -4158,6 +4343,7 @@
             "es": "santa-elena",
             "pt": "santa-helena"
         },
+        "ddi": "247, 290",
         "onu": false
     },
     {
@@ -4180,6 +4366,7 @@
             "es": "saint-kitts-y-nevis",
             "pt": "sao-cristovao-e-nevis"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -4202,6 +4389,7 @@
             "es": "santa-lucia",
             "pt": "santa-lucia"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -4226,6 +4414,7 @@
             "es": "san-martin-parte-francesa",
             "pt": "saint-martin-parte-francesa"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -4248,6 +4437,7 @@
             "es": "saint-pierre-y-miquelon",
             "pt": "saint-pierre-e-miquelon"
         },
+        "ddi": "508",
         "onu": false
     },
     {
@@ -4270,6 +4460,7 @@
             "es": "san-vicente-y-las-granadinas",
             "pt": "sao-vicente-e-granadinas"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -4292,6 +4483,7 @@
             "es": "samoa",
             "pt": "samoa"
         },
+        "ddi": "685",
         "onu": true
     },
     {
@@ -4314,6 +4506,7 @@
             "es": "san-marino",
             "pt": "san-marino"
         },
+        "ddi": "378",
         "onu": true
     },
     {
@@ -4336,6 +4529,7 @@
             "es": "santo-tome-y-principe",
             "pt": "sao-tome-e-principe"
         },
+        "ddi": "239",
         "onu": true
     },
     {
@@ -4358,6 +4552,7 @@
             "es": "arabia-saudita",
             "pt": "arabia-saudita"
         },
+        "ddi": "966",
         "onu": true
     },
     {
@@ -4380,6 +4575,7 @@
             "es": "senegal",
             "pt": "senegal"
         },
+        "ddi": "221",
         "onu": true
     },
     {
@@ -4402,6 +4598,7 @@
             "es": "serbia",
             "pt": "servia"
         },
+        "ddi": "381",
         "onu": true
     },
     {
@@ -4424,6 +4621,7 @@
             "es": "seychelles",
             "pt": "seichelles"
         },
+        "ddi": "248",
         "onu": true
     },
     {
@@ -4446,6 +4644,7 @@
             "es": "sierra-leona",
             "pt": "serra-leoa"
         },
+        "ddi": "232",
         "onu": true
     },
     {
@@ -4468,6 +4667,7 @@
             "es": "singapur",
             "pt": "cingapura"
         },
+        "ddi": "65",
         "onu": true
     },
     {
@@ -4492,6 +4692,7 @@
             "es": "san-martin-parte-holandes",
             "pt": "saint-martin-parte-holandesa"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -4514,6 +4715,7 @@
             "es": "eslovaquia",
             "pt": "eslovaquia"
         },
+        "ddi": "421",
         "onu": true
     },
     {
@@ -4536,6 +4738,7 @@
             "es": "eslovenia",
             "pt": "eslovenia"
         },
+        "ddi": "386",
         "onu": true
     },
     {
@@ -4558,6 +4761,7 @@
             "es": "islas-salomon",
             "pt": "ilhas-salomao"
         },
+        "ddi": "677",
         "onu": true
     },
     {
@@ -4580,6 +4784,7 @@
             "es": "somalia",
             "pt": "somalia"
         },
+        "ddi": "252",
         "onu": true
     },
     {
@@ -4602,6 +4807,7 @@
             "es": "sudafrica",
             "pt": "africa-do-sul"
         },
+        "ddi": "27",
         "onu": true
     },
     {
@@ -4624,6 +4830,7 @@
             "es": "georgia-del-sur-y-las-islas-sandwich-del-sur",
             "pt": "ilhas-georgia-do-sul-e-sandwich-do-sul"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -4646,6 +4853,7 @@
             "es": "sudan-del-sur",
             "pt": "sudao-do-sul"
         },
+        "ddi": "211",
         "onu": true
     },
     {
@@ -4668,6 +4876,7 @@
             "es": "espana",
             "pt": "espanha"
         },
+        "ddi": "34",
         "onu": true
     },
     {
@@ -4690,6 +4899,7 @@
             "es": "sri-lanka",
             "pt": "sri-lanka"
         },
+        "ddi": "94",
         "onu": true
     },
     {
@@ -4712,6 +4922,7 @@
             "es": "sudan",
             "pt": "sudao"
         },
+        "ddi": "249",
         "onu": true
     },
     {
@@ -4734,6 +4945,7 @@
             "es": "suriname",
             "pt": "suriname"
         },
+        "ddi": "597",
         "onu": true
     },
     {
@@ -4758,6 +4970,7 @@
             "es": "islas-svalbard-y-jan-mayen",
             "pt": "svalbard-e-jan-mayen-islands"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -4780,6 +4993,7 @@
             "es": "swazilandia",
             "pt": "suazilandia"
         },
+        "ddi": "268",
         "onu": true
     },
     {
@@ -4802,6 +5016,7 @@
             "es": "suecia",
             "pt": "suecia"
         },
+        "ddi": "46",
         "onu": true
     },
     {
@@ -4824,6 +5039,7 @@
             "es": "suiza",
             "pt": "suica"
         },
+        "ddi": "41",
         "onu": true
     },
     {
@@ -4848,6 +5064,7 @@
             "es": "republica-arabe-siria",
             "pt": "siria"
         },
+        "ddi": "963",
         "onu": true
     },
     {
@@ -4872,6 +5089,7 @@
             "es": "republica-de-china-taiwan",
             "pt": "taiwan"
         },
+        "ddi": "886",
         "onu": false
     },
     {
@@ -4894,6 +5112,7 @@
             "es": "tayikistan",
             "pt": "tadjiquistao"
         },
+        "ddi": "992",
         "onu": true
     },
     {
@@ -4920,6 +5139,7 @@
             "es": "republica-unida-de-tanzania",
             "pt": "tanzania"
         },
+        "ddi": "255",
         "onu": true
     },
     {
@@ -4942,6 +5162,7 @@
             "es": "tailandia",
             "pt": "tailandia"
         },
+        "ddi": "66",
         "onu": true
     },
     {
@@ -4964,6 +5185,7 @@
             "es": "timor-leste",
             "pt": "timor-leste"
         },
+        "ddi": "670",
         "onu": true
     },
     {
@@ -4977,7 +5199,9 @@
             "pt": "Togo"
         },
         "apelidos": {
-            "en": [],
+            "en": [
+                "Togolese"
+            ],
             "es": [],
             "pt": []
         },
@@ -4986,6 +5210,7 @@
             "es": "togo",
             "pt": "togo"
         },
+        "ddi": "228",
         "onu": true
     },
     {
@@ -5008,6 +5233,7 @@
             "es": "tokelau",
             "pt": "tokelau"
         },
+        "ddi": "690",
         "onu": false
     },
     {
@@ -5030,6 +5256,7 @@
             "es": "tonga",
             "pt": "tonga"
         },
+        "ddi": "676",
         "onu": true
     },
     {
@@ -5052,6 +5279,7 @@
             "es": "trinidad-y-tabago",
             "pt": "trinidad-e-tobago"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -5074,6 +5302,7 @@
             "es": "tunez",
             "pt": "tunisia"
         },
+        "ddi": "216",
         "onu": true
     },
     {
@@ -5096,6 +5325,7 @@
             "es": "turquia",
             "pt": "turquia"
         },
+        "ddi": "90",
         "onu": true
     },
     {
@@ -5118,6 +5348,7 @@
             "es": "turkmenistan",
             "pt": "turcomenistao"
         },
+        "ddi": "993",
         "onu": true
     },
     {
@@ -5140,6 +5371,7 @@
             "es": "islas-turcas-y-caicos",
             "pt": "ilhas-turks-e-caicos"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -5162,6 +5394,7 @@
             "es": "tuvalu",
             "pt": "tuvalu"
         },
+        "ddi": "688",
         "onu": true
     },
     {
@@ -5184,6 +5417,7 @@
             "es": "uganda",
             "pt": "uganda"
         },
+        "ddi": "256",
         "onu": true
     },
     {
@@ -5206,6 +5440,7 @@
             "es": "ucrania",
             "pt": "ucrania"
         },
+        "ddi": "380",
         "onu": true
     },
     {
@@ -5228,6 +5463,7 @@
             "es": "emiratos-arabes-unidos",
             "pt": "emirados-arabes-unidos"
         },
+        "ddi": "971",
         "onu": true
     },
     {
@@ -5252,6 +5488,7 @@
             "es": "reino-unido-de-gran-bretana-e-irlanda-del-norte",
             "pt": "reino-unido"
         },
+        "ddi": "44",
         "onu": true
     },
     {
@@ -5274,6 +5511,7 @@
             "es": "islas-menores-alejadas-de-estados-unidos",
             "pt": "ilhas-menores-distantes-dos-estados-unidos"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -5298,6 +5536,7 @@
             "es": "estados-unidos-de-america",
             "pt": "estados-unidos-da-america"
         },
+        "ddi": "1",
         "onu": true
     },
     {
@@ -5320,6 +5559,7 @@
             "es": "uruguay",
             "pt": "uruguai"
         },
+        "ddi": "598",
         "onu": true
     },
     {
@@ -5342,6 +5582,7 @@
             "es": "uzbekistan",
             "pt": "uzbequistao"
         },
+        "ddi": "998",
         "onu": true
     },
     {
@@ -5364,6 +5605,7 @@
             "es": "vanuatu",
             "pt": "vanuatu"
         },
+        "ddi": "678",
         "onu": true
     },
     {
@@ -5388,6 +5630,7 @@
             "es": "venezuela-republica-bolivariana-de",
             "pt": "venezuela"
         },
+        "ddi": "58",
         "onu": true
     },
     {
@@ -5412,6 +5655,7 @@
             "es": "viet-nam",
             "pt": "vietna"
         },
+        "ddi": "84",
         "onu": true
     },
     {
@@ -5434,6 +5678,7 @@
             "es": "islas-virgenes-britanicas",
             "pt": "ilhas-virgens-britanicas"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -5458,6 +5703,7 @@
             "es": "islas-virgenes-de-los-estados-unidos",
             "pt": "ilhas-virgens"
         },
+        "ddi": "1",
         "onu": false
     },
     {
@@ -5482,6 +5728,7 @@
             "es": "islas-wallis-y-futuna",
             "pt": "ilhas-wallis-e-futuna"
         },
+        "ddi": "681",
         "onu": false
     },
     {
@@ -5504,6 +5751,7 @@
             "es": "sahara-occidental",
             "pt": "saara-ocidental"
         },
+        "ddi": "",
         "onu": false
     },
     {
@@ -5526,6 +5774,7 @@
             "es": "yemen",
             "pt": "iemen"
         },
+        "ddi": "967",
         "onu": true
     },
     {
@@ -5548,6 +5797,7 @@
             "es": "zambia",
             "pt": "zambia"
         },
+        "ddi": "260",
         "onu": true
     },
     {
@@ -5570,6 +5820,7 @@
             "es": "zimbabwe",
             "pt": "zimbabue"
         },
+        "ddi": "263",
         "onu": true
     }
 ]

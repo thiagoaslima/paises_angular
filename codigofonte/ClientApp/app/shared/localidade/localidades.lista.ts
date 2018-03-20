@@ -28,6 +28,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": true
         },
         {
@@ -56,6 +57,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -84,6 +86,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "355",
             "onu": true
         },
         {
@@ -112,6 +115,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "213",
             "onu": true
         },
         {
@@ -140,6 +144,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -168,6 +173,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "376",
             "onu": true
         },
         {
@@ -196,6 +202,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "244",
             "onu": true
         },
         {
@@ -224,6 +231,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -252,6 +260,7 @@ export const localidades = {
                 "regiao": "",
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -280,6 +289,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -308,6 +318,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "54",
             "onu": true
         },
         {
@@ -336,6 +347,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "374",
             "onu": true
         },
         {
@@ -364,6 +376,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "297",
             "onu": false
         },
         {
@@ -392,6 +405,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "61",
             "onu": true
         },
         {
@@ -420,6 +434,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "43",
             "onu": true
         },
         {
@@ -448,6 +463,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "994",
             "onu": true
         },
         {
@@ -478,6 +494,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -506,6 +523,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "973",
             "onu": true
         },
         {
@@ -534,6 +552,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "880",
             "onu": true
         },
         {
@@ -562,6 +581,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -590,6 +610,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "375",
             "onu": true
         },
         {
@@ -618,6 +639,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "32",
             "onu": true
         },
         {
@@ -646,6 +668,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "501",
             "onu": true
         },
         {
@@ -674,6 +697,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "229",
             "onu": true
         },
         {
@@ -702,6 +726,7 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -730,6 +755,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "975",
             "onu": true
         },
         {
@@ -762,6 +788,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "591",
             "onu": true
         },
         {
@@ -790,6 +817,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "599",
             "onu": false
         },
         {
@@ -818,6 +846,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "387",
             "onu": true
         },
         {
@@ -846,6 +875,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "267",
             "onu": true
         },
         {
@@ -874,6 +904,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -902,6 +933,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "55",
             "onu": true
         },
         {
@@ -930,6 +962,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -964,6 +997,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "673",
             "onu": true
         },
         {
@@ -992,6 +1026,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "359",
             "onu": true
         },
         {
@@ -1020,6 +1055,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "226",
             "onu": true
         },
         {
@@ -1048,6 +1084,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "257",
             "onu": true
         },
         {
@@ -1076,6 +1113,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "238",
             "onu": true
         },
         {
@@ -1104,6 +1142,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "855",
             "onu": true
         },
         {
@@ -1132,6 +1171,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "237",
             "onu": true
         },
         {
@@ -1160,6 +1200,7 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -1188,6 +1229,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -1216,6 +1258,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "236",
             "onu": true
         },
         {
@@ -1244,6 +1287,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "235",
             "onu": true
         },
         {
@@ -1272,6 +1316,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "56",
             "onu": true
         },
         {
@@ -1306,6 +1351,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "86",
             "onu": true
         },
         {
@@ -1334,6 +1380,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -1362,6 +1409,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -1390,6 +1438,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "57",
             "onu": true
         },
         {
@@ -1418,6 +1467,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "269",
             "onu": true
         },
         {
@@ -1448,6 +1498,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "243",
             "onu": true
         },
         {
@@ -1478,6 +1529,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "242",
             "onu": true
         },
         {
@@ -1506,6 +1558,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "682",
             "onu": false
         },
         {
@@ -1534,6 +1587,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "506",
             "onu": true
         },
         {
@@ -1562,6 +1616,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "225",
             "onu": true
         },
         {
@@ -1590,6 +1645,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "385",
             "onu": true
         },
         {
@@ -1618,6 +1674,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "53",
             "onu": true
         },
         {
@@ -1646,6 +1703,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "599",
             "onu": false
         },
         {
@@ -1674,6 +1732,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "357",
             "onu": true
         },
         {
@@ -1708,6 +1767,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "420",
             "onu": true
         },
         {
@@ -1736,6 +1796,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "45",
             "onu": true
         },
         {
@@ -1764,6 +1825,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "253",
             "onu": true
         },
         {
@@ -1792,6 +1854,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -1820,6 +1883,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -1848,6 +1912,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "593",
             "onu": true
         },
         {
@@ -1876,6 +1941,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "20",
             "onu": true
         },
         {
@@ -1904,6 +1970,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "503",
             "onu": true
         },
         {
@@ -1932,6 +1999,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "240",
             "onu": true
         },
         {
@@ -1960,6 +2028,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "291",
             "onu": true
         },
         {
@@ -1988,6 +2057,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "372",
             "onu": true
         },
         {
@@ -2016,6 +2086,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "251",
             "onu": true
         },
         {
@@ -2046,6 +2117,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "500",
             "onu": false
         },
         {
@@ -2074,6 +2146,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "298",
             "onu": false
         },
         {
@@ -2102,6 +2175,7 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "679",
             "onu": true
         },
         {
@@ -2130,6 +2204,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "358",
             "onu": true
         },
         {
@@ -2158,6 +2233,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "33",
             "onu": true
         },
         {
@@ -2186,6 +2262,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "594",
             "onu": false
         },
         {
@@ -2214,6 +2291,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "689",
             "onu": false
         },
         {
@@ -2242,6 +2320,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "262",
             "onu": false
         },
         {
@@ -2270,6 +2349,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "241",
             "onu": true
         },
         {
@@ -2300,6 +2380,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "220",
             "onu": true
         },
         {
@@ -2328,6 +2409,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "995",
             "onu": true
         },
         {
@@ -2356,6 +2438,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "49",
             "onu": true
         },
         {
@@ -2384,6 +2467,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "233",
             "onu": true
         },
         {
@@ -2412,6 +2496,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "350",
             "onu": false
         },
         {
@@ -2440,6 +2525,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "30",
             "onu": true
         },
         {
@@ -2468,6 +2554,7 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "299",
             "onu": false
         },
         {
@@ -2496,6 +2583,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -2524,6 +2612,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "590",
             "onu": false
         },
         {
@@ -2552,6 +2641,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -2580,6 +2670,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "502",
             "onu": true
         },
         {
@@ -2608,6 +2699,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": 830
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -2636,6 +2728,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "224",
             "onu": true
         },
         {
@@ -2664,6 +2757,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "245",
             "onu": true
         },
         {
@@ -2692,6 +2786,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "592",
             "onu": true
         },
         {
@@ -2720,6 +2815,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "509",
             "onu": true
         },
         {
@@ -2748,6 +2844,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -2778,6 +2875,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "379, 39",
             "onu": true
         },
         {
@@ -2806,6 +2904,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "504",
             "onu": true
         },
         {
@@ -2841,6 +2940,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "852",
             "onu": false
         },
         {
@@ -2869,6 +2969,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "36",
             "onu": true
         },
         {
@@ -2897,6 +2998,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "354",
             "onu": true
         },
         {
@@ -2925,6 +3027,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "91",
             "onu": true
         },
         {
@@ -2953,6 +3056,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "62",
             "onu": true
         },
         {
@@ -2983,6 +3087,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "98",
             "onu": true
         },
         {
@@ -3011,6 +3116,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "964",
             "onu": true
         },
         {
@@ -3039,6 +3145,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "353",
             "onu": true
         },
         {
@@ -3067,6 +3174,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -3095,6 +3203,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "972",
             "onu": true
         },
         {
@@ -3123,6 +3232,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "39",
             "onu": true
         },
         {
@@ -3151,6 +3261,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -3179,6 +3290,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "81",
             "onu": true
         },
         {
@@ -3207,6 +3319,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": 830
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -3235,6 +3348,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "962",
             "onu": true
         },
         {
@@ -3263,6 +3377,7 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "7",
             "onu": true
         },
         {
@@ -3291,6 +3406,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "254",
             "onu": true
         },
         {
@@ -3319,6 +3435,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "686",
             "onu": true
         },
         {
@@ -3349,6 +3466,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "850",
             "onu": true
         },
         {
@@ -3380,6 +3498,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "82",
             "onu": true
         },
         {
@@ -3408,6 +3527,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "965",
             "onu": true
         },
         {
@@ -3436,6 +3556,7 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "996",
             "onu": true
         },
         {
@@ -3466,6 +3587,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "856",
             "onu": true
         },
         {
@@ -3494,6 +3616,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "371",
             "onu": true
         },
         {
@@ -3522,6 +3645,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "961",
             "onu": true
         },
         {
@@ -3550,6 +3674,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "266",
             "onu": true
         },
         {
@@ -3578,6 +3703,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "231",
             "onu": true
         },
         {
@@ -3606,6 +3732,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "218",
             "onu": true
         },
         {
@@ -3634,6 +3761,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "423",
             "onu": true
         },
         {
@@ -3662,6 +3790,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "370",
             "onu": true
         },
         {
@@ -3690,6 +3819,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "352",
             "onu": true
         },
         {
@@ -3718,6 +3848,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "853",
             "onu": false
         },
         {
@@ -3748,6 +3879,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "389",
             "onu": true
         },
         {
@@ -3776,6 +3908,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "261",
             "onu": true
         },
         {
@@ -3804,6 +3937,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "265",
             "onu": true
         },
         {
@@ -3832,6 +3966,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "60",
             "onu": true
         },
         {
@@ -3860,6 +3995,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "960",
             "onu": true
         },
         {
@@ -3888,6 +4024,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "223",
             "onu": true
         },
         {
@@ -3916,6 +4053,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "356",
             "onu": true
         },
         {
@@ -3944,6 +4082,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "692",
             "onu": true
         },
         {
@@ -3972,6 +4111,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "596",
             "onu": false
         },
         {
@@ -4000,6 +4140,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "222",
             "onu": true
         },
         {
@@ -4028,6 +4169,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "230",
             "onu": true
         },
         {
@@ -4056,6 +4198,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -4084,6 +4227,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "52",
             "onu": true
         },
         {
@@ -4114,6 +4258,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "691",
             "onu": true
         },
         {
@@ -4145,6 +4290,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "373",
             "onu": true
         },
         {
@@ -4173,6 +4319,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "377",
             "onu": true
         },
         {
@@ -4201,6 +4348,7 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "976",
             "onu": true
         },
         {
@@ -4229,6 +4377,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "382",
             "onu": true
         },
         {
@@ -4257,6 +4406,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -4285,6 +4435,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "212",
             "onu": true
         },
         {
@@ -4313,6 +4464,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "258",
             "onu": true
         },
         {
@@ -4347,6 +4499,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "95",
             "onu": true
         },
         {
@@ -4375,6 +4528,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "264",
             "onu": true
         },
         {
@@ -4403,6 +4557,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "674",
             "onu": true
         },
         {
@@ -4431,6 +4586,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "977",
             "onu": true
         },
         {
@@ -4459,6 +4615,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "31",
             "onu": true
         },
         {
@@ -4487,6 +4644,7 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "687",
             "onu": false
         },
         {
@@ -4515,6 +4673,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "64",
             "onu": true
         },
         {
@@ -4543,6 +4702,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "505",
             "onu": true
         },
         {
@@ -4571,6 +4731,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "227",
             "onu": true
         },
         {
@@ -4599,6 +4760,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "234",
             "onu": true
         },
         {
@@ -4627,6 +4789,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "683",
             "onu": false
         },
         {
@@ -4655,6 +4818,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -4683,6 +4847,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -4711,6 +4876,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "47",
             "onu": true
         },
         {
@@ -4739,6 +4905,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "968",
             "onu": true
         },
         {
@@ -4767,6 +4934,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "92",
             "onu": true
         },
         {
@@ -4795,6 +4963,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "680",
             "onu": true
         },
         {
@@ -4823,6 +4992,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": true
         },
         {
@@ -4851,6 +5021,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "507",
             "onu": true
         },
         {
@@ -4879,6 +5050,7 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "675",
             "onu": true
         },
         {
@@ -4907,6 +5079,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "595",
             "onu": true
         },
         {
@@ -4935,6 +5108,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "51",
             "onu": true
         },
         {
@@ -4963,6 +5137,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "63",
             "onu": true
         },
         {
@@ -4993,6 +5168,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -5021,6 +5197,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "48",
             "onu": true
         },
         {
@@ -5049,6 +5226,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "351",
             "onu": true
         },
         {
@@ -5077,6 +5255,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -5105,6 +5284,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "974",
             "onu": true
         },
         {
@@ -5133,6 +5313,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -5161,6 +5342,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "40",
             "onu": true
         },
         {
@@ -5191,6 +5373,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "7",
             "onu": true
         },
         {
@@ -5219,6 +5402,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "250",
             "onu": true
         },
         {
@@ -5247,6 +5431,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -5277,6 +5462,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "247, 290",
             "onu": false
         },
         {
@@ -5305,6 +5491,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -5333,6 +5520,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -5363,6 +5551,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -5391,6 +5580,7 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "508",
             "onu": false
         },
         {
@@ -5419,6 +5609,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -5447,6 +5638,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "685",
             "onu": true
         },
         {
@@ -5475,6 +5667,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "378",
             "onu": true
         },
         {
@@ -5503,6 +5696,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "239",
             "onu": true
         },
         {
@@ -5531,6 +5725,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "966",
             "onu": true
         },
         {
@@ -5559,6 +5754,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "221",
             "onu": true
         },
         {
@@ -5587,6 +5783,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "381",
             "onu": true
         },
         {
@@ -5615,6 +5812,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "248",
             "onu": true
         },
         {
@@ -5643,6 +5841,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "232",
             "onu": true
         },
         {
@@ -5671,6 +5870,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "65",
             "onu": true
         },
         {
@@ -5701,6 +5901,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -5729,6 +5930,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "421",
             "onu": true
         },
         {
@@ -5757,6 +5959,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "386",
             "onu": true
         },
         {
@@ -5785,6 +5988,7 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "677",
             "onu": true
         },
         {
@@ -5813,6 +6017,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "252",
             "onu": true
         },
         {
@@ -5841,6 +6046,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "27",
             "onu": true
         },
         {
@@ -5869,6 +6075,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -5897,6 +6104,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "211",
             "onu": true
         },
         {
@@ -5925,6 +6133,7 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "34",
             "onu": true
         },
         {
@@ -5953,6 +6162,7 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "94",
             "onu": true
         },
         {
@@ -5981,6 +6191,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "249",
             "onu": true
         },
         {
@@ -6009,6 +6220,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "597",
             "onu": true
         },
         {
@@ -6039,6 +6251,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -6067,6 +6280,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "268",
             "onu": true
         },
         {
@@ -6095,6 +6309,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "46",
             "onu": true
         },
         {
@@ -6123,6 +6338,7 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "41",
             "onu": true
         },
         {
@@ -6153,6 +6369,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "963",
             "onu": true
         },
         {
@@ -6183,6 +6400,7 @@ export const localidades = {
                 "regiao": "",
                 "subregiao": ""
             },
+            "ddi": "886",
             "onu": false
         },
         {
@@ -6211,6 +6429,7 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "992",
             "onu": true
         },
         {
@@ -6243,6 +6462,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "255",
             "onu": true
         },
         {
@@ -6271,6 +6491,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "66",
             "onu": true
         },
         {
@@ -6299,6 +6520,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "670",
             "onu": true
         },
         {
@@ -6312,7 +6534,9 @@ export const localidades = {
                 "pt": "Togo"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Togolese"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -6327,6 +6551,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "228",
             "onu": true
         },
         {
@@ -6355,6 +6580,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "690",
             "onu": false
         },
         {
@@ -6383,6 +6609,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "676",
             "onu": true
         },
         {
@@ -6411,6 +6638,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -6439,6 +6667,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "216",
             "onu": true
         },
         {
@@ -6467,6 +6696,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "90",
             "onu": true
         },
         {
@@ -6495,6 +6725,7 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "993",
             "onu": true
         },
         {
@@ -6523,6 +6754,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -6551,6 +6783,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "688",
             "onu": true
         },
         {
@@ -6579,6 +6812,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "256",
             "onu": true
         },
         {
@@ -6607,6 +6841,7 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "380",
             "onu": true
         },
         {
@@ -6635,6 +6870,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "971",
             "onu": true
         },
         {
@@ -6665,6 +6901,7 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "44",
             "onu": true
         },
         {
@@ -6693,6 +6930,7 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -6723,6 +6961,7 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": true
         },
         {
@@ -6751,6 +6990,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "598",
             "onu": true
         },
         {
@@ -6779,6 +7019,7 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "998",
             "onu": true
         },
         {
@@ -6807,6 +7048,7 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "678",
             "onu": true
         },
         {
@@ -6837,6 +7079,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "58",
             "onu": true
         },
         {
@@ -6867,6 +7110,7 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "84",
             "onu": true
         },
         {
@@ -6895,6 +7139,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -6925,6 +7170,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
@@ -6955,6 +7201,7 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "681",
             "onu": false
         },
         {
@@ -6983,6 +7230,7 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
@@ -7011,6 +7259,7 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "967",
             "onu": true
         },
         {
@@ -7039,6 +7288,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "260",
             "onu": true
         },
         {
@@ -7067,6 +7317,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "263",
             "onu": true
         }
     ],

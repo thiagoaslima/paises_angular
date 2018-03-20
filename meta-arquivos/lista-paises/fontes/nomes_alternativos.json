@@ -428,6 +428,19 @@
     },
     {
         "nome": {
+            "en": "Togolese"
+        },
+        "referencia_onu": "Togo",
+        "a2_code": "TG",
+        "fonte": {
+            "publicação": "List of ITU-T Recommendation E.164 assigned country codes",
+            "autor": "ITU - International Telecommunication Union",
+            "link": "https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-11-2011-PDF-E.pdf",
+            "acessadoEm": "2018-03-20"
+        }
+    },
+    {
+        "nome": {
             "en": "United Kingdom"
         },
         "referencia_onu": "United Kingdom of Great Britain and Northern Ireland",
