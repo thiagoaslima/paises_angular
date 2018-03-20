@@ -10,7 +10,7 @@ getPages()
     .then(convertDados)
     .then(prepareToUpload)
     .then(res => {
-        saveFile(null, 'teste', JSON.stringify(res, null, 4));
+        saveFile(null, 'teste2', JSON.stringify(res, null, 4));
     })
     .catch(err => {
         console.log(err);
