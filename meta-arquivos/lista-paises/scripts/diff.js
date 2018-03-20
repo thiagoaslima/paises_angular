@@ -47,11 +47,11 @@ const diff_content = {
 };
 
 const itu = ITU.reduce((agg, pais) => {
-    const teste = ISO.find(obj => obj.name_en === pais.name)
+    const teste = ISO.find(obj => obj.code_a3 === pais.code_a3)
     if (teste) {
-        agg[teste.code_a3] = pais.code;
+        agg[teste.code_a3] = pais.ddi;
     } else {
-        agg[pais.name] = pais.code;
+        agg[pais.name] = pais.ddi;
     }
     return agg;
 }, {});

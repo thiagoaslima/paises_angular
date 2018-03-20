@@ -4818,7 +4818,7 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
-            "ddi": "",
+            "ddi": "672",
             "onu": false
         },
         {
@@ -7139,7 +7139,7 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
-            "ddi": "",
+            "ddi": "1",
             "onu": false
         },
         {

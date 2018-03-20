@@ -152,10 +152,8 @@
         },
         {
             "name": "British Virgin Islands",
-            "code_a3": "",
-            "ddi": "1",
-            "timezone": "UTC-04:00",
-            "dst": ""
+            "code_a3": "VGB",
+            "ddi": "1"
         },
         {
             "name": "Brunei Darussalam",
@@ -809,9 +807,8 @@
         },
         {
             "name": "Norfolk Island",
-            "ddi": "672 3",
-            "timezone": "UTC+11:00",
-            "dst": ""
+            "code_a3": "NFK",
+            "ddi": "672"
         },
         {
             "name": "Northern Mariana Islands",
