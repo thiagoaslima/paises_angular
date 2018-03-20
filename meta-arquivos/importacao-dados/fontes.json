@@ -292,6 +292,7 @@
                 "variavel_code": "economia_19",
                 "nome": "PIB per capita",
                 "nome_publicacao": "GDP, Per Capita GDP - US Dollars",
+                "titulo_tabela": "Per capita GDP",
                 "series_publicacao": "5",
                 "post_request": {
                     "link": "https://unstats.un.org/unsd/snaama/resQuery.asp",
@@ -328,6 +329,7 @@
                 "variavel_code": "economia_18",
                 "nome": "Total do PIB",
                 "nome_publicacao": "GDP, at current prices - US Dollars",
+                "titulo_tabela": "Gross Domestic Product",
                 "series_publicacao": "5",
                 "post_request": {
                     "link": "https://unstats.un.org/unsd/snaama/resQuery.asp",

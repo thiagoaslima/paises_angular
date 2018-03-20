@@ -1,14 +1,19 @@
 const StreamArray = require('stream-json/utils/StreamArray');
 
-const slugify = require('../shared/slug');
-const { hashStream } = require('../shared/calculateHash');
-const getSigla = require('../shared/getSigla');
-const getFonteSync = require('../shared/getFonteSync');
-const fonte = getFonteSync("Human Development Report");
+const slugify = require('../shared/slugify');
+const { 
+    getFonte,
+    getSigla,
+    hashStream 
+} = require('../shared');
+
+const fonte = getFonte("Human Development Report");
 
 function filterSummary(summary) {
     const json = JSON.parse(summary);
     const nomeIndicadores = fonte.dados.map(obj => obj.nome_publicacao);
+
+    console.log('filterSummary')
 
     return json.filter(obj => nomeIndicadores.includes(obj.indicator))
         .map(indicador => {
@@ -26,10 +31,18 @@ function filterIndicators (indicatorsStream, indicadores) {
     const jsonStream = StreamArray.make();
     indicatorsStream.pipe(jsonStream.input);
 
+    console.log('filterIndicators')
+
     const values = {};
-    Object.defineProperty(values, 'ids', {
-        value: indicadores.map(o => o.id),
-        enumerable: false
+    Object.defineProperties(values, {
+        'ids': {
+            value: indicadores.map(o => o.id),
+            enumerable: false
+        },
+        'slugs': {
+            value: indicadores.map(o => o.slug),
+            enumerable: false
+        }
     });
     const hash = hashStream(indicatorsStream);
 
@@ -49,12 +62,13 @@ function convertIndicators({country, id, value, year}, values) {
         values.ids.includes(id)
         && year !== '9999' // atalho para ano mais recente
     ) {
-        let sigla = getSigla(country);    
+        let sigla = getSigla(country);
+        let slug = values.slugs[values.ids.indexOf(id)];    
 
-        if (!values[id]) { values[id] = {}; }
-        if (!values[id][year]) { values[id][year] = {}; }
+        if (!values[slug]) { values[slug] = {}; }
+        if (!values[slug][year]) { values[slug][year] = {}; }
 
-        values[id][year][sigla] = value;
+        values[slug][year][sigla] = value;
     }
 }
 

@@ -3,7 +3,8 @@ import { Localidade, Pais } from './localidade.model';
 export const localidades = {
     "paises": [
         {
-            "codigo": 4,
+            "tipo": "pais",
+            "codigo": "4",
             "slug": "afeganistao",
             "sigla": "AF",
             "sigla3": "AFG",
@@ -28,10 +29,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": true
         },
         {
-            "codigo": 248,
+            "tipo": "pais",
+            "codigo": "248",
             "slug": "ilhas-alanda",
             "sigla": "AX",
             "sigla3": "ALA",
@@ -56,10 +59,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 8,
+            "tipo": "pais",
+            "codigo": "8",
             "slug": "albania",
             "sigla": "AL",
             "sigla3": "ALB",
@@ -84,10 +89,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "355",
             "onu": true
         },
         {
-            "codigo": 12,
+            "tipo": "pais",
+            "codigo": "12",
             "slug": "argelia",
             "sigla": "DZ",
             "sigla3": "DZA",
@@ -112,10 +119,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "213",
             "onu": true
         },
         {
-            "codigo": 16,
+            "tipo": "pais",
+            "codigo": "16",
             "slug": "samoa-americana",
             "sigla": "AS",
             "sigla3": "ASM",
@@ -140,10 +149,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 20,
+            "tipo": "pais",
+            "codigo": "20",
             "slug": "andorra",
             "sigla": "AD",
             "sigla3": "AND",
@@ -168,10 +179,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "376",
             "onu": true
         },
         {
-            "codigo": 24,
+            "tipo": "pais",
+            "codigo": "24",
             "slug": "angola",
             "sigla": "AO",
             "sigla3": "AGO",
@@ -196,10 +209,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "244",
             "onu": true
         },
         {
-            "codigo": 660,
+            "tipo": "pais",
+            "codigo": "660",
             "slug": "anguilla",
             "sigla": "AI",
             "sigla3": "AIA",
@@ -224,10 +239,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 10,
+            "tipo": "pais",
+            "codigo": "10",
             "slug": "antartida",
             "sigla": "AQ",
             "sigla3": "ATA",
@@ -252,10 +269,12 @@ export const localidades = {
                 "regiao": "",
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 28,
+            "tipo": "pais",
+            "codigo": "28",
             "slug": "antigua-e-barbuda",
             "sigla": "AG",
             "sigla3": "ATG",
@@ -280,10 +299,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 32,
+            "tipo": "pais",
+            "codigo": "32",
             "slug": "argentina",
             "sigla": "AR",
             "sigla3": "ARG",
@@ -308,10 +329,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "54",
             "onu": true
         },
         {
-            "codigo": 51,
+            "tipo": "pais",
+            "codigo": "51",
             "slug": "armenia",
             "sigla": "AM",
             "sigla3": "ARM",
@@ -336,10 +359,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "374",
             "onu": true
         },
         {
-            "codigo": 533,
+            "tipo": "pais",
+            "codigo": "533",
             "slug": "aruba",
             "sigla": "AW",
             "sigla3": "ABW",
@@ -364,10 +389,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "297",
             "onu": false
         },
         {
-            "codigo": 36,
+            "tipo": "pais",
+            "codigo": "36",
             "slug": "australia",
             "sigla": "AU",
             "sigla3": "AUS",
@@ -392,10 +419,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "61",
             "onu": true
         },
         {
-            "codigo": 40,
+            "tipo": "pais",
+            "codigo": "40",
             "slug": "austria",
             "sigla": "AT",
             "sigla3": "AUT",
@@ -420,10 +449,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "43",
             "onu": true
         },
         {
-            "codigo": 31,
+            "tipo": "pais",
+            "codigo": "31",
             "slug": "azerbaijao",
             "sigla": "AZ",
             "sigla3": "AZE",
@@ -448,10 +479,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "994",
             "onu": true
         },
         {
-            "codigo": 44,
+            "tipo": "pais",
+            "codigo": "44",
             "slug": "bahamas",
             "sigla": "BS",
             "sigla3": "BHS",
@@ -478,10 +511,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 48,
+            "tipo": "pais",
+            "codigo": "48",
             "slug": "barein",
             "sigla": "BH",
             "sigla3": "BHR",
@@ -506,10 +541,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "973",
             "onu": true
         },
         {
-            "codigo": 50,
+            "tipo": "pais",
+            "codigo": "50",
             "slug": "bangladesh",
             "sigla": "BD",
             "sigla3": "BGD",
@@ -534,10 +571,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "880",
             "onu": true
         },
         {
-            "codigo": 52,
+            "tipo": "pais",
+            "codigo": "52",
             "slug": "barbados",
             "sigla": "BB",
             "sigla3": "BRB",
@@ -562,10 +601,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 112,
+            "tipo": "pais",
+            "codigo": "112",
             "slug": "bielorussia",
             "sigla": "BY",
             "sigla3": "BLR",
@@ -590,10 +631,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "375",
             "onu": true
         },
         {
-            "codigo": 56,
+            "tipo": "pais",
+            "codigo": "56",
             "slug": "belgica",
             "sigla": "BE",
             "sigla3": "BEL",
@@ -618,10 +661,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "32",
             "onu": true
         },
         {
-            "codigo": 84,
+            "tipo": "pais",
+            "codigo": "84",
             "slug": "belize",
             "sigla": "BZ",
             "sigla3": "BLZ",
@@ -646,10 +691,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "501",
             "onu": true
         },
         {
-            "codigo": 204,
+            "tipo": "pais",
+            "codigo": "204",
             "slug": "benin",
             "sigla": "BJ",
             "sigla3": "BEN",
@@ -674,10 +721,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "229",
             "onu": true
         },
         {
-            "codigo": 60,
+            "tipo": "pais",
+            "codigo": "60",
             "slug": "bermuda",
             "sigla": "BM",
             "sigla3": "BMU",
@@ -702,10 +751,12 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 64,
+            "tipo": "pais",
+            "codigo": "64",
             "slug": "butao",
             "sigla": "BT",
             "sigla3": "BTN",
@@ -730,10 +781,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "975",
             "onu": true
         },
         {
-            "codigo": 68,
+            "tipo": "pais",
+            "codigo": "68",
             "slug": "bolivia",
             "sigla": "BO",
             "sigla3": "BOL",
@@ -762,10 +815,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "591",
             "onu": true
         },
         {
-            "codigo": 535,
+            "tipo": "pais",
+            "codigo": "535",
             "slug": "bonaire-santo-eustaquio-e-saba",
             "sigla": "BQ",
             "sigla3": "BES",
@@ -790,10 +845,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "599",
             "onu": false
         },
         {
-            "codigo": 70,
+            "tipo": "pais",
+            "codigo": "70",
             "slug": "bosnia-herzegovina",
             "sigla": "BA",
             "sigla3": "BIH",
@@ -818,10 +875,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "387",
             "onu": true
         },
         {
-            "codigo": 72,
+            "tipo": "pais",
+            "codigo": "72",
             "slug": "botsuana",
             "sigla": "BW",
             "sigla3": "BWA",
@@ -846,10 +905,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "267",
             "onu": true
         },
         {
-            "codigo": 74,
+            "tipo": "pais",
+            "codigo": "74",
             "slug": "ilha-bouvet",
             "sigla": "BV",
             "sigla3": "BVT",
@@ -874,10 +935,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 76,
+            "tipo": "pais",
+            "codigo": "76",
             "slug": "brasil",
             "sigla": "BR",
             "sigla3": "BRA",
@@ -902,10 +965,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "55",
             "onu": true
         },
         {
-            "codigo": 86,
+            "tipo": "pais",
+            "codigo": "86",
             "slug": "territorio-britanico-do-oceano-indico",
             "sigla": "IO",
             "sigla3": "IOT",
@@ -930,10 +995,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 96,
+            "tipo": "pais",
+            "codigo": "96",
             "slug": "brunei",
             "sigla": "BN",
             "sigla3": "BRN",
@@ -964,10 +1031,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "673",
             "onu": true
         },
         {
-            "codigo": 100,
+            "tipo": "pais",
+            "codigo": "100",
             "slug": "bulgaria",
             "sigla": "BG",
             "sigla3": "BGR",
@@ -992,10 +1061,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "359",
             "onu": true
         },
         {
-            "codigo": 854,
+            "tipo": "pais",
+            "codigo": "854",
             "slug": "burkina-faso",
             "sigla": "BF",
             "sigla3": "BFA",
@@ -1020,10 +1091,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "226",
             "onu": true
         },
         {
-            "codigo": 108,
+            "tipo": "pais",
+            "codigo": "108",
             "slug": "burundi",
             "sigla": "BI",
             "sigla3": "BDI",
@@ -1048,10 +1121,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "257",
             "onu": true
         },
         {
-            "codigo": 132,
+            "tipo": "pais",
+            "codigo": "132",
             "slug": "cabo-verde",
             "sigla": "CV",
             "sigla3": "CPV",
@@ -1076,10 +1151,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "238",
             "onu": true
         },
         {
-            "codigo": 116,
+            "tipo": "pais",
+            "codigo": "116",
             "slug": "camboja",
             "sigla": "KH",
             "sigla3": "KHM",
@@ -1104,10 +1181,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "855",
             "onu": true
         },
         {
-            "codigo": 120,
+            "tipo": "pais",
+            "codigo": "120",
             "slug": "camaroes",
             "sigla": "CM",
             "sigla3": "CMR",
@@ -1132,10 +1211,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "237",
             "onu": true
         },
         {
-            "codigo": 124,
+            "tipo": "pais",
+            "codigo": "124",
             "slug": "canada",
             "sigla": "CA",
             "sigla3": "CAN",
@@ -1160,10 +1241,12 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 136,
+            "tipo": "pais",
+            "codigo": "136",
             "slug": "ilhas-cayman",
             "sigla": "KY",
             "sigla3": "CYM",
@@ -1188,10 +1271,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 140,
+            "tipo": "pais",
+            "codigo": "140",
             "slug": "republica-centro-africana",
             "sigla": "CF",
             "sigla3": "CAF",
@@ -1216,10 +1301,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "236",
             "onu": true
         },
         {
-            "codigo": 148,
+            "tipo": "pais",
+            "codigo": "148",
             "slug": "chade",
             "sigla": "TD",
             "sigla3": "TCD",
@@ -1244,10 +1331,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "235",
             "onu": true
         },
         {
-            "codigo": 152,
+            "tipo": "pais",
+            "codigo": "152",
             "slug": "chile",
             "sigla": "CL",
             "sigla3": "CHL",
@@ -1272,10 +1361,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "56",
             "onu": true
         },
         {
-            "codigo": 156,
+            "tipo": "pais",
+            "codigo": "156",
             "slug": "china",
             "sigla": "CN",
             "sigla3": "CHN",
@@ -1306,10 +1397,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "86",
             "onu": true
         },
         {
-            "codigo": 162,
+            "tipo": "pais",
+            "codigo": "162",
             "slug": "ilha-christmas",
             "sigla": "CX",
             "sigla3": "CXR",
@@ -1334,10 +1427,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 166,
+            "tipo": "pais",
+            "codigo": "166",
             "slug": "ilhas-cocos-keeling",
             "sigla": "CC",
             "sigla3": "CCK",
@@ -1362,10 +1457,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 170,
+            "tipo": "pais",
+            "codigo": "170",
             "slug": "colombia",
             "sigla": "CO",
             "sigla3": "COL",
@@ -1390,10 +1487,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "57",
             "onu": true
         },
         {
-            "codigo": 174,
+            "tipo": "pais",
+            "codigo": "174",
             "slug": "comores",
             "sigla": "KM",
             "sigla3": "COM",
@@ -1418,10 +1517,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "269",
             "onu": true
         },
         {
-            "codigo": 180,
+            "tipo": "pais",
+            "codigo": "180",
             "slug": "republica-democratica-do-congo",
             "sigla": "CD",
             "sigla3": "COD",
@@ -1448,10 +1549,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "243",
             "onu": true
         },
         {
-            "codigo": 178,
+            "tipo": "pais",
+            "codigo": "178",
             "slug": "congo",
             "sigla": "CG",
             "sigla3": "COG",
@@ -1478,10 +1581,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "242",
             "onu": true
         },
         {
-            "codigo": 184,
+            "tipo": "pais",
+            "codigo": "184",
             "slug": "ilhas-cook",
             "sigla": "CK",
             "sigla3": "COK",
@@ -1506,10 +1611,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "682",
             "onu": false
         },
         {
-            "codigo": 188,
+            "tipo": "pais",
+            "codigo": "188",
             "slug": "costa-rica",
             "sigla": "CR",
             "sigla3": "CRI",
@@ -1534,10 +1641,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "506",
             "onu": true
         },
         {
-            "codigo": 384,
+            "tipo": "pais",
+            "codigo": "384",
             "slug": "costa-do-marfim",
             "sigla": "CI",
             "sigla3": "CIV",
@@ -1562,10 +1671,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "225",
             "onu": true
         },
         {
-            "codigo": 191,
+            "tipo": "pais",
+            "codigo": "191",
             "slug": "croacia",
             "sigla": "HR",
             "sigla3": "HRV",
@@ -1590,10 +1701,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "385",
             "onu": true
         },
         {
-            "codigo": 192,
+            "tipo": "pais",
+            "codigo": "192",
             "slug": "cuba",
             "sigla": "CU",
             "sigla3": "CUB",
@@ -1618,10 +1731,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "53",
             "onu": true
         },
         {
-            "codigo": 531,
+            "tipo": "pais",
+            "codigo": "531",
             "slug": "curacao",
             "sigla": "CW",
             "sigla3": "CUW",
@@ -1646,10 +1761,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "599",
             "onu": false
         },
         {
-            "codigo": 196,
+            "tipo": "pais",
+            "codigo": "196",
             "slug": "chipre",
             "sigla": "CY",
             "sigla3": "CYP",
@@ -1674,10 +1791,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "357",
             "onu": true
         },
         {
-            "codigo": 203,
+            "tipo": "pais",
+            "codigo": "203",
             "slug": "republica-tcheca",
             "sigla": "CZ",
             "sigla3": "CZE",
@@ -1708,10 +1827,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "420",
             "onu": true
         },
         {
-            "codigo": 208,
+            "tipo": "pais",
+            "codigo": "208",
             "slug": "dinamarca",
             "sigla": "DK",
             "sigla3": "DNK",
@@ -1736,10 +1857,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "45",
             "onu": true
         },
         {
-            "codigo": 262,
+            "tipo": "pais",
+            "codigo": "262",
             "slug": "djibouti",
             "sigla": "DJ",
             "sigla3": "DJI",
@@ -1764,10 +1887,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "253",
             "onu": true
         },
         {
-            "codigo": 212,
+            "tipo": "pais",
+            "codigo": "212",
             "slug": "dominica",
             "sigla": "DM",
             "sigla3": "DMA",
@@ -1792,10 +1917,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 214,
+            "tipo": "pais",
+            "codigo": "214",
             "slug": "republica-dominicana",
             "sigla": "DO",
             "sigla3": "DOM",
@@ -1820,10 +1947,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 218,
+            "tipo": "pais",
+            "codigo": "218",
             "slug": "equador",
             "sigla": "EC",
             "sigla3": "ECU",
@@ -1848,10 +1977,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "593",
             "onu": true
         },
         {
-            "codigo": 818,
+            "tipo": "pais",
+            "codigo": "818",
             "slug": "egito",
             "sigla": "EG",
             "sigla3": "EGY",
@@ -1876,10 +2007,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "20",
             "onu": true
         },
         {
-            "codigo": 222,
+            "tipo": "pais",
+            "codigo": "222",
             "slug": "el-salvador",
             "sigla": "SV",
             "sigla3": "SLV",
@@ -1904,10 +2037,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "503",
             "onu": true
         },
         {
-            "codigo": 226,
+            "tipo": "pais",
+            "codigo": "226",
             "slug": "guine-equatorial",
             "sigla": "GQ",
             "sigla3": "GNQ",
@@ -1932,10 +2067,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "240",
             "onu": true
         },
         {
-            "codigo": 232,
+            "tipo": "pais",
+            "codigo": "232",
             "slug": "eritreia",
             "sigla": "ER",
             "sigla3": "ERI",
@@ -1960,10 +2097,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "291",
             "onu": true
         },
         {
-            "codigo": 233,
+            "tipo": "pais",
+            "codigo": "233",
             "slug": "estonia",
             "sigla": "EE",
             "sigla3": "EST",
@@ -1988,10 +2127,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "372",
             "onu": true
         },
         {
-            "codigo": 231,
+            "tipo": "pais",
+            "codigo": "231",
             "slug": "etiopia",
             "sigla": "ET",
             "sigla3": "ETH",
@@ -2016,10 +2157,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "251",
             "onu": true
         },
         {
-            "codigo": 238,
+            "tipo": "pais",
+            "codigo": "238",
             "slug": "ilhas-falkland",
             "sigla": "FK",
             "sigla3": "FLK",
@@ -2046,10 +2189,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "500",
             "onu": false
         },
         {
-            "codigo": 234,
+            "tipo": "pais",
+            "codigo": "234",
             "slug": "ilhas-faeroe",
             "sigla": "FO",
             "sigla3": "FRO",
@@ -2074,10 +2219,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "298",
             "onu": false
         },
         {
-            "codigo": 242,
+            "tipo": "pais",
+            "codigo": "242",
             "slug": "fiji",
             "sigla": "FJ",
             "sigla3": "FJI",
@@ -2102,10 +2249,12 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "679",
             "onu": true
         },
         {
-            "codigo": 246,
+            "tipo": "pais",
+            "codigo": "246",
             "slug": "finlandia",
             "sigla": "FI",
             "sigla3": "FIN",
@@ -2130,10 +2279,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "358",
             "onu": true
         },
         {
-            "codigo": 250,
+            "tipo": "pais",
+            "codigo": "250",
             "slug": "franca",
             "sigla": "FR",
             "sigla3": "FRA",
@@ -2158,10 +2309,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "33",
             "onu": true
         },
         {
-            "codigo": 254,
+            "tipo": "pais",
+            "codigo": "254",
             "slug": "guiana-francesa",
             "sigla": "GF",
             "sigla3": "GUF",
@@ -2186,10 +2339,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "594",
             "onu": false
         },
         {
-            "codigo": 258,
+            "tipo": "pais",
+            "codigo": "258",
             "slug": "polinesia-francesa",
             "sigla": "PF",
             "sigla3": "PYF",
@@ -2214,10 +2369,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "689",
             "onu": false
         },
         {
-            "codigo": 260,
+            "tipo": "pais",
+            "codigo": "260",
             "slug": "terras-austrais-e-antarticas-francesas",
             "sigla": "TF",
             "sigla3": "ATF",
@@ -2242,10 +2399,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "262",
             "onu": false
         },
         {
-            "codigo": 266,
+            "tipo": "pais",
+            "codigo": "266",
             "slug": "gabao",
             "sigla": "GA",
             "sigla3": "GAB",
@@ -2270,10 +2429,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "241",
             "onu": true
         },
         {
-            "codigo": 270,
+            "tipo": "pais",
+            "codigo": "270",
             "slug": "gambia",
             "sigla": "GM",
             "sigla3": "GMB",
@@ -2300,10 +2461,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "220",
             "onu": true
         },
         {
-            "codigo": 268,
+            "tipo": "pais",
+            "codigo": "268",
             "slug": "georgia",
             "sigla": "GE",
             "sigla3": "GEO",
@@ -2328,10 +2491,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "995",
             "onu": true
         },
         {
-            "codigo": 276,
+            "tipo": "pais",
+            "codigo": "276",
             "slug": "alemanha",
             "sigla": "DE",
             "sigla3": "DEU",
@@ -2356,10 +2521,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "49",
             "onu": true
         },
         {
-            "codigo": 288,
+            "tipo": "pais",
+            "codigo": "288",
             "slug": "gana",
             "sigla": "GH",
             "sigla3": "GHA",
@@ -2384,10 +2551,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "233",
             "onu": true
         },
         {
-            "codigo": 292,
+            "tipo": "pais",
+            "codigo": "292",
             "slug": "gibraltar",
             "sigla": "GI",
             "sigla3": "GIB",
@@ -2412,10 +2581,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "350",
             "onu": false
         },
         {
-            "codigo": 300,
+            "tipo": "pais",
+            "codigo": "300",
             "slug": "grecia",
             "sigla": "GR",
             "sigla3": "GRC",
@@ -2440,10 +2611,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "30",
             "onu": true
         },
         {
-            "codigo": 304,
+            "tipo": "pais",
+            "codigo": "304",
             "slug": "groenlandia",
             "sigla": "GL",
             "sigla3": "GRL",
@@ -2468,10 +2641,12 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "299",
             "onu": false
         },
         {
-            "codigo": 308,
+            "tipo": "pais",
+            "codigo": "308",
             "slug": "granada",
             "sigla": "GD",
             "sigla3": "GRD",
@@ -2496,10 +2671,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 312,
+            "tipo": "pais",
+            "codigo": "312",
             "slug": "ilha-guadalupe",
             "sigla": "GP",
             "sigla3": "GLP",
@@ -2524,10 +2701,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "590",
             "onu": false
         },
         {
-            "codigo": 316,
+            "tipo": "pais",
+            "codigo": "316",
             "slug": "guam",
             "sigla": "GU",
             "sigla3": "GUM",
@@ -2552,10 +2731,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 320,
+            "tipo": "pais",
+            "codigo": "320",
             "slug": "guatemala",
             "sigla": "GT",
             "sigla3": "GTM",
@@ -2580,10 +2761,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "502",
             "onu": true
         },
         {
-            "codigo": 831,
+            "tipo": "pais",
+            "codigo": "831",
             "slug": "guernsey",
             "sigla": "GG",
             "sigla3": "GGY",
@@ -2608,10 +2791,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": 830
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 324,
+            "tipo": "pais",
+            "codigo": "324",
             "slug": "guine",
             "sigla": "GN",
             "sigla3": "GIN",
@@ -2636,10 +2821,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "224",
             "onu": true
         },
         {
-            "codigo": 624,
+            "tipo": "pais",
+            "codigo": "624",
             "slug": "guine-bissau",
             "sigla": "GW",
             "sigla3": "GNB",
@@ -2664,10 +2851,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "245",
             "onu": true
         },
         {
-            "codigo": 328,
+            "tipo": "pais",
+            "codigo": "328",
             "slug": "guiana",
             "sigla": "GY",
             "sigla3": "GUY",
@@ -2692,10 +2881,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "592",
             "onu": true
         },
         {
-            "codigo": 332,
+            "tipo": "pais",
+            "codigo": "332",
             "slug": "haiti",
             "sigla": "HT",
             "sigla3": "HTI",
@@ -2720,10 +2911,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "509",
             "onu": true
         },
         {
-            "codigo": 334,
+            "tipo": "pais",
+            "codigo": "334",
             "slug": "ilha-heard-e-ilhas-mcdonald",
             "sigla": "HM",
             "sigla3": "HMD",
@@ -2748,10 +2941,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 336,
+            "tipo": "pais",
+            "codigo": "336",
             "slug": "vaticano",
             "sigla": "VA",
             "sigla3": "VAT",
@@ -2778,10 +2973,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "379, 39",
             "onu": true
         },
         {
-            "codigo": 340,
+            "tipo": "pais",
+            "codigo": "340",
             "slug": "honduras",
             "sigla": "HN",
             "sigla3": "HND",
@@ -2806,10 +3003,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "504",
             "onu": true
         },
         {
-            "codigo": 344,
+            "tipo": "pais",
+            "codigo": "344",
             "slug": "china-hong-kong",
             "sigla": "HK",
             "sigla3": "HKG",
@@ -2841,10 +3040,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "852",
             "onu": false
         },
         {
-            "codigo": 348,
+            "tipo": "pais",
+            "codigo": "348",
             "slug": "hungria",
             "sigla": "HU",
             "sigla3": "HUN",
@@ -2869,10 +3070,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "36",
             "onu": true
         },
         {
-            "codigo": 352,
+            "tipo": "pais",
+            "codigo": "352",
             "slug": "islandia",
             "sigla": "IS",
             "sigla3": "ISL",
@@ -2897,10 +3100,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "354",
             "onu": true
         },
         {
-            "codigo": 356,
+            "tipo": "pais",
+            "codigo": "356",
             "slug": "india",
             "sigla": "IN",
             "sigla3": "IND",
@@ -2925,10 +3130,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "91",
             "onu": true
         },
         {
-            "codigo": 360,
+            "tipo": "pais",
+            "codigo": "360",
             "slug": "indonesia",
             "sigla": "ID",
             "sigla3": "IDN",
@@ -2953,10 +3160,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "62",
             "onu": true
         },
         {
-            "codigo": 364,
+            "tipo": "pais",
+            "codigo": "364",
             "slug": "ira",
             "sigla": "IR",
             "sigla3": "IRN",
@@ -2983,10 +3192,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "98",
             "onu": true
         },
         {
-            "codigo": 368,
+            "tipo": "pais",
+            "codigo": "368",
             "slug": "iraque",
             "sigla": "IQ",
             "sigla3": "IRQ",
@@ -3011,10 +3222,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "964",
             "onu": true
         },
         {
-            "codigo": 372,
+            "tipo": "pais",
+            "codigo": "372",
             "slug": "irlanda",
             "sigla": "IE",
             "sigla3": "IRL",
@@ -3039,10 +3252,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "353",
             "onu": true
         },
         {
-            "codigo": 833,
+            "tipo": "pais",
+            "codigo": "833",
             "slug": "ilha-de-man",
             "sigla": "IM",
             "sigla3": "IMN",
@@ -3067,10 +3282,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 376,
+            "tipo": "pais",
+            "codigo": "376",
             "slug": "israel",
             "sigla": "IL",
             "sigla3": "ISR",
@@ -3095,10 +3312,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "972",
             "onu": true
         },
         {
-            "codigo": 380,
+            "tipo": "pais",
+            "codigo": "380",
             "slug": "italia",
             "sigla": "IT",
             "sigla3": "ITA",
@@ -3123,10 +3342,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "39",
             "onu": true
         },
         {
-            "codigo": 388,
+            "tipo": "pais",
+            "codigo": "388",
             "slug": "jamaica",
             "sigla": "JM",
             "sigla3": "JAM",
@@ -3151,10 +3372,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 392,
+            "tipo": "pais",
+            "codigo": "392",
             "slug": "japao",
             "sigla": "JP",
             "sigla3": "JPN",
@@ -3179,10 +3402,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "81",
             "onu": true
         },
         {
-            "codigo": 832,
+            "tipo": "pais",
+            "codigo": "832",
             "slug": "jersey",
             "sigla": "JE",
             "sigla3": "JEY",
@@ -3207,10 +3432,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": 830
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 400,
+            "tipo": "pais",
+            "codigo": "400",
             "slug": "jordania",
             "sigla": "JO",
             "sigla3": "JOR",
@@ -3235,10 +3462,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "962",
             "onu": true
         },
         {
-            "codigo": 398,
+            "tipo": "pais",
+            "codigo": "398",
             "slug": "casaquistao",
             "sigla": "KZ",
             "sigla3": "KAZ",
@@ -3263,10 +3492,12 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "7",
             "onu": true
         },
         {
-            "codigo": 404,
+            "tipo": "pais",
+            "codigo": "404",
             "slug": "quenia",
             "sigla": "KE",
             "sigla3": "KEN",
@@ -3291,10 +3522,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "254",
             "onu": true
         },
         {
-            "codigo": 296,
+            "tipo": "pais",
+            "codigo": "296",
             "slug": "kiribati",
             "sigla": "KI",
             "sigla3": "KIR",
@@ -3319,10 +3552,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "686",
             "onu": true
         },
         {
-            "codigo": 408,
+            "tipo": "pais",
+            "codigo": "408",
             "slug": "coreia-do-norte",
             "sigla": "KP",
             "sigla3": "PRK",
@@ -3349,10 +3584,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "850",
             "onu": true
         },
         {
-            "codigo": 410,
+            "tipo": "pais",
+            "codigo": "410",
             "slug": "coreia-do-sul",
             "sigla": "KR",
             "sigla3": "KOR",
@@ -3380,10 +3617,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "82",
             "onu": true
         },
         {
-            "codigo": 414,
+            "tipo": "pais",
+            "codigo": "414",
             "slug": "kuwait",
             "sigla": "KW",
             "sigla3": "KWT",
@@ -3408,10 +3647,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "965",
             "onu": true
         },
         {
-            "codigo": 417,
+            "tipo": "pais",
+            "codigo": "417",
             "slug": "quirguistao",
             "sigla": "KG",
             "sigla3": "KGZ",
@@ -3436,10 +3677,12 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "996",
             "onu": true
         },
         {
-            "codigo": 418,
+            "tipo": "pais",
+            "codigo": "418",
             "slug": "laos",
             "sigla": "LA",
             "sigla3": "LAO",
@@ -3466,10 +3709,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "856",
             "onu": true
         },
         {
-            "codigo": 428,
+            "tipo": "pais",
+            "codigo": "428",
             "slug": "letonia",
             "sigla": "LV",
             "sigla3": "LVA",
@@ -3494,10 +3739,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "371",
             "onu": true
         },
         {
-            "codigo": 422,
+            "tipo": "pais",
+            "codigo": "422",
             "slug": "libano",
             "sigla": "LB",
             "sigla3": "LBN",
@@ -3522,10 +3769,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "961",
             "onu": true
         },
         {
-            "codigo": 426,
+            "tipo": "pais",
+            "codigo": "426",
             "slug": "lesoto",
             "sigla": "LS",
             "sigla3": "LSO",
@@ -3550,10 +3799,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "266",
             "onu": true
         },
         {
-            "codigo": 430,
+            "tipo": "pais",
+            "codigo": "430",
             "slug": "liberia",
             "sigla": "LR",
             "sigla3": "LBR",
@@ -3578,10 +3829,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "231",
             "onu": true
         },
         {
-            "codigo": 434,
+            "tipo": "pais",
+            "codigo": "434",
             "slug": "libia",
             "sigla": "LY",
             "sigla3": "LBY",
@@ -3606,10 +3859,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "218",
             "onu": true
         },
         {
-            "codigo": 438,
+            "tipo": "pais",
+            "codigo": "438",
             "slug": "liechtenstein",
             "sigla": "LI",
             "sigla3": "LIE",
@@ -3634,10 +3889,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "423",
             "onu": true
         },
         {
-            "codigo": 440,
+            "tipo": "pais",
+            "codigo": "440",
             "slug": "lituania",
             "sigla": "LT",
             "sigla3": "LTU",
@@ -3662,10 +3919,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "370",
             "onu": true
         },
         {
-            "codigo": 442,
+            "tipo": "pais",
+            "codigo": "442",
             "slug": "luxemburgo",
             "sigla": "LU",
             "sigla3": "LUX",
@@ -3690,10 +3949,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "352",
             "onu": true
         },
         {
-            "codigo": 446,
+            "tipo": "pais",
+            "codigo": "446",
             "slug": "china-macao",
             "sigla": "MO",
             "sigla3": "MAC",
@@ -3718,10 +3979,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "853",
             "onu": false
         },
         {
-            "codigo": 807,
+            "tipo": "pais",
+            "codigo": "807",
             "slug": "macedonia",
             "sigla": "MK",
             "sigla3": "MKD",
@@ -3748,10 +4011,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "389",
             "onu": true
         },
         {
-            "codigo": 450,
+            "tipo": "pais",
+            "codigo": "450",
             "slug": "madagascar",
             "sigla": "MG",
             "sigla3": "MDG",
@@ -3776,10 +4041,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "261",
             "onu": true
         },
         {
-            "codigo": 454,
+            "tipo": "pais",
+            "codigo": "454",
             "slug": "malaui",
             "sigla": "MW",
             "sigla3": "MWI",
@@ -3804,10 +4071,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "265",
             "onu": true
         },
         {
-            "codigo": 458,
+            "tipo": "pais",
+            "codigo": "458",
             "slug": "malasia",
             "sigla": "MY",
             "sigla3": "MYS",
@@ -3832,10 +4101,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "60",
             "onu": true
         },
         {
-            "codigo": 462,
+            "tipo": "pais",
+            "codigo": "462",
             "slug": "maldivas",
             "sigla": "MV",
             "sigla3": "MDV",
@@ -3860,10 +4131,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "960",
             "onu": true
         },
         {
-            "codigo": 466,
+            "tipo": "pais",
+            "codigo": "466",
             "slug": "mali",
             "sigla": "ML",
             "sigla3": "MLI",
@@ -3888,10 +4161,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "223",
             "onu": true
         },
         {
-            "codigo": 470,
+            "tipo": "pais",
+            "codigo": "470",
             "slug": "malta",
             "sigla": "MT",
             "sigla3": "MLT",
@@ -3916,10 +4191,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "356",
             "onu": true
         },
         {
-            "codigo": 584,
+            "tipo": "pais",
+            "codigo": "584",
             "slug": "ilhas-marshall",
             "sigla": "MH",
             "sigla3": "MHL",
@@ -3944,10 +4221,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "692",
             "onu": true
         },
         {
-            "codigo": 474,
+            "tipo": "pais",
+            "codigo": "474",
             "slug": "martinica",
             "sigla": "MQ",
             "sigla3": "MTQ",
@@ -3972,10 +4251,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "596",
             "onu": false
         },
         {
-            "codigo": 478,
+            "tipo": "pais",
+            "codigo": "478",
             "slug": "mauritania",
             "sigla": "MR",
             "sigla3": "MRT",
@@ -4000,10 +4281,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "222",
             "onu": true
         },
         {
-            "codigo": 480,
+            "tipo": "pais",
+            "codigo": "480",
             "slug": "mauricio",
             "sigla": "MU",
             "sigla3": "MUS",
@@ -4028,10 +4311,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "230",
             "onu": true
         },
         {
-            "codigo": 175,
+            "tipo": "pais",
+            "codigo": "175",
             "slug": "mayotte",
             "sigla": "YT",
             "sigla3": "MYT",
@@ -4056,10 +4341,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 484,
+            "tipo": "pais",
+            "codigo": "484",
             "slug": "mexico",
             "sigla": "MX",
             "sigla3": "MEX",
@@ -4084,10 +4371,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "52",
             "onu": true
         },
         {
-            "codigo": 583,
+            "tipo": "pais",
+            "codigo": "583",
             "slug": "micronesia",
             "sigla": "FM",
             "sigla3": "FSM",
@@ -4114,10 +4403,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "691",
             "onu": true
         },
         {
-            "codigo": 498,
+            "tipo": "pais",
+            "codigo": "498",
             "slug": "moldavia",
             "sigla": "MD",
             "sigla3": "MDA",
@@ -4145,10 +4436,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "373",
             "onu": true
         },
         {
-            "codigo": 492,
+            "tipo": "pais",
+            "codigo": "492",
             "slug": "monaco",
             "sigla": "MC",
             "sigla3": "MCO",
@@ -4173,10 +4466,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "377",
             "onu": true
         },
         {
-            "codigo": 496,
+            "tipo": "pais",
+            "codigo": "496",
             "slug": "mongolia",
             "sigla": "MN",
             "sigla3": "MNG",
@@ -4201,10 +4496,12 @@ export const localidades = {
                 "regiao": 30,
                 "subregiao": ""
             },
+            "ddi": "976",
             "onu": true
         },
         {
-            "codigo": 499,
+            "tipo": "pais",
+            "codigo": "499",
             "slug": "montenegro",
             "sigla": "ME",
             "sigla3": "MNE",
@@ -4229,10 +4526,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "382",
             "onu": true
         },
         {
-            "codigo": 500,
+            "tipo": "pais",
+            "codigo": "500",
             "slug": "montserrat",
             "sigla": "MS",
             "sigla3": "MSR",
@@ -4257,10 +4556,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 504,
+            "tipo": "pais",
+            "codigo": "504",
             "slug": "marrocos",
             "sigla": "MA",
             "sigla3": "MAR",
@@ -4285,10 +4586,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "212",
             "onu": true
         },
         {
-            "codigo": 508,
+            "tipo": "pais",
+            "codigo": "508",
             "slug": "mocambique",
             "sigla": "MZ",
             "sigla3": "MOZ",
@@ -4313,10 +4616,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "258",
             "onu": true
         },
         {
-            "codigo": 104,
+            "tipo": "pais",
+            "codigo": "104",
             "slug": "mianma",
             "sigla": "MM",
             "sigla3": "MMR",
@@ -4347,10 +4652,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "95",
             "onu": true
         },
         {
-            "codigo": 516,
+            "tipo": "pais",
+            "codigo": "516",
             "slug": "namibia",
             "sigla": "NA",
             "sigla3": "NAM",
@@ -4375,10 +4682,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "264",
             "onu": true
         },
         {
-            "codigo": 520,
+            "tipo": "pais",
+            "codigo": "520",
             "slug": "nauru",
             "sigla": "NR",
             "sigla3": "NRU",
@@ -4403,10 +4712,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "674",
             "onu": true
         },
         {
-            "codigo": 524,
+            "tipo": "pais",
+            "codigo": "524",
             "slug": "nepal",
             "sigla": "NP",
             "sigla3": "NPL",
@@ -4431,10 +4742,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "977",
             "onu": true
         },
         {
-            "codigo": 528,
+            "tipo": "pais",
+            "codigo": "528",
             "slug": "holanda",
             "sigla": "NL",
             "sigla3": "NLD",
@@ -4459,10 +4772,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "31",
             "onu": true
         },
         {
-            "codigo": 540,
+            "tipo": "pais",
+            "codigo": "540",
             "slug": "nova-caledonia",
             "sigla": "NC",
             "sigla3": "NCL",
@@ -4487,10 +4802,12 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "687",
             "onu": false
         },
         {
-            "codigo": 554,
+            "tipo": "pais",
+            "codigo": "554",
             "slug": "nova-zelandia",
             "sigla": "NZ",
             "sigla3": "NZL",
@@ -4515,10 +4832,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "64",
             "onu": true
         },
         {
-            "codigo": 558,
+            "tipo": "pais",
+            "codigo": "558",
             "slug": "nicaragua",
             "sigla": "NI",
             "sigla3": "NIC",
@@ -4543,10 +4862,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "505",
             "onu": true
         },
         {
-            "codigo": 562,
+            "tipo": "pais",
+            "codigo": "562",
             "slug": "niger",
             "sigla": "NE",
             "sigla3": "NER",
@@ -4571,10 +4892,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "227",
             "onu": true
         },
         {
-            "codigo": 566,
+            "tipo": "pais",
+            "codigo": "566",
             "slug": "nigeria",
             "sigla": "NG",
             "sigla3": "NGA",
@@ -4599,10 +4922,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "234",
             "onu": true
         },
         {
-            "codigo": 570,
+            "tipo": "pais",
+            "codigo": "570",
             "slug": "niue",
             "sigla": "NU",
             "sigla3": "NIU",
@@ -4627,10 +4952,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "683",
             "onu": false
         },
         {
-            "codigo": 574,
+            "tipo": "pais",
+            "codigo": "574",
             "slug": "ilha-norfolk",
             "sigla": "NF",
             "sigla3": "NFK",
@@ -4655,10 +4982,12 @@ export const localidades = {
                 "regiao": 53,
                 "subregiao": ""
             },
+            "ddi": "672",
             "onu": false
         },
         {
-            "codigo": 580,
+            "tipo": "pais",
+            "codigo": "580",
             "slug": "ilhas-marianas",
             "sigla": "MP",
             "sigla3": "MNP",
@@ -4683,10 +5012,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 578,
+            "tipo": "pais",
+            "codigo": "578",
             "slug": "noruega",
             "sigla": "NO",
             "sigla3": "NOR",
@@ -4711,10 +5042,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "47",
             "onu": true
         },
         {
-            "codigo": 512,
+            "tipo": "pais",
+            "codigo": "512",
             "slug": "oma",
             "sigla": "OM",
             "sigla3": "OMN",
@@ -4739,10 +5072,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "968",
             "onu": true
         },
         {
-            "codigo": 586,
+            "tipo": "pais",
+            "codigo": "586",
             "slug": "paquistao",
             "sigla": "PK",
             "sigla3": "PAK",
@@ -4767,10 +5102,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "92",
             "onu": true
         },
         {
-            "codigo": 585,
+            "tipo": "pais",
+            "codigo": "585",
             "slug": "palau",
             "sigla": "PW",
             "sigla3": "PLW",
@@ -4795,10 +5132,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "680",
             "onu": true
         },
         {
-            "codigo": 275,
+            "tipo": "pais",
+            "codigo": "275",
             "slug": "palestina",
             "sigla": "PS",
             "sigla3": "PSE",
@@ -4823,10 +5162,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": true
         },
         {
-            "codigo": 591,
+            "tipo": "pais",
+            "codigo": "591",
             "slug": "panama",
             "sigla": "PA",
             "sigla3": "PAN",
@@ -4851,10 +5192,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 13
             },
+            "ddi": "507",
             "onu": true
         },
         {
-            "codigo": 598,
+            "tipo": "pais",
+            "codigo": "598",
             "slug": "papua-nova-guine",
             "sigla": "PG",
             "sigla3": "PNG",
@@ -4879,10 +5222,12 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "675",
             "onu": true
         },
         {
-            "codigo": 600,
+            "tipo": "pais",
+            "codigo": "600",
             "slug": "paraguai",
             "sigla": "PY",
             "sigla3": "PRY",
@@ -4907,10 +5252,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "595",
             "onu": true
         },
         {
-            "codigo": 604,
+            "tipo": "pais",
+            "codigo": "604",
             "slug": "peru",
             "sigla": "PE",
             "sigla3": "PER",
@@ -4935,10 +5282,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "51",
             "onu": true
         },
         {
-            "codigo": 608,
+            "tipo": "pais",
+            "codigo": "608",
             "slug": "filipinas",
             "sigla": "PH",
             "sigla3": "PHL",
@@ -4963,10 +5312,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "63",
             "onu": true
         },
         {
-            "codigo": 612,
+            "tipo": "pais",
+            "codigo": "612",
             "slug": "pitcairn",
             "sigla": "PN",
             "sigla3": "PCN",
@@ -4993,10 +5344,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 616,
+            "tipo": "pais",
+            "codigo": "616",
             "slug": "polonia",
             "sigla": "PL",
             "sigla3": "POL",
@@ -5021,10 +5374,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "48",
             "onu": true
         },
         {
-            "codigo": 620,
+            "tipo": "pais",
+            "codigo": "620",
             "slug": "portugal",
             "sigla": "PT",
             "sigla3": "PRT",
@@ -5049,10 +5404,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "351",
             "onu": true
         },
         {
-            "codigo": 630,
+            "tipo": "pais",
+            "codigo": "630",
             "slug": "porto-rico",
             "sigla": "PR",
             "sigla3": "PRI",
@@ -5077,10 +5434,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 634,
+            "tipo": "pais",
+            "codigo": "634",
             "slug": "catar",
             "sigla": "QA",
             "sigla3": "QAT",
@@ -5105,10 +5464,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "974",
             "onu": true
         },
         {
-            "codigo": 638,
+            "tipo": "pais",
+            "codigo": "638",
             "slug": "ilha-reuniao",
             "sigla": "RE",
             "sigla3": "REU",
@@ -5133,10 +5494,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 642,
+            "tipo": "pais",
+            "codigo": "642",
             "slug": "romenia",
             "sigla": "RO",
             "sigla3": "ROU",
@@ -5161,10 +5524,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "40",
             "onu": true
         },
         {
-            "codigo": 643,
+            "tipo": "pais",
+            "codigo": "643",
             "slug": "russia-federacao-russa",
             "sigla": "RU",
             "sigla3": "RUS",
@@ -5191,10 +5556,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "7",
             "onu": true
         },
         {
-            "codigo": 646,
+            "tipo": "pais",
+            "codigo": "646",
             "slug": "ruanda",
             "sigla": "RW",
             "sigla3": "RWA",
@@ -5219,10 +5586,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "250",
             "onu": true
         },
         {
-            "codigo": 652,
+            "tipo": "pais",
+            "codigo": "652",
             "slug": "sao-bartolomeu",
             "sigla": "BL",
             "sigla3": "BLM",
@@ -5247,10 +5616,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 654,
+            "tipo": "pais",
+            "codigo": "654",
             "slug": "santa-helena",
             "sigla": "SH",
             "sigla3": "SHN",
@@ -5277,10 +5648,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "247, 290",
             "onu": false
         },
         {
-            "codigo": 659,
+            "tipo": "pais",
+            "codigo": "659",
             "slug": "sao-cristovao-e-nevis",
             "sigla": "KN",
             "sigla3": "KNA",
@@ -5305,10 +5678,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 662,
+            "tipo": "pais",
+            "codigo": "662",
             "slug": "santa-lucia",
             "sigla": "LC",
             "sigla3": "LCA",
@@ -5333,10 +5708,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 663,
+            "tipo": "pais",
+            "codigo": "663",
             "slug": "saint-martin-parte-francesa",
             "sigla": "MF",
             "sigla3": "MAF",
@@ -5363,10 +5740,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 666,
+            "tipo": "pais",
+            "codigo": "666",
             "slug": "saint-pierre-e-miquelon",
             "sigla": "PM",
             "sigla3": "SPM",
@@ -5391,10 +5770,12 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "508",
             "onu": false
         },
         {
-            "codigo": 670,
+            "tipo": "pais",
+            "codigo": "670",
             "slug": "sao-vicente-e-granadinas",
             "sigla": "VC",
             "sigla3": "VCT",
@@ -5419,10 +5800,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 882,
+            "tipo": "pais",
+            "codigo": "882",
             "slug": "samoa",
             "sigla": "WS",
             "sigla3": "WSM",
@@ -5447,10 +5830,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "685",
             "onu": true
         },
         {
-            "codigo": 674,
+            "tipo": "pais",
+            "codigo": "674",
             "slug": "san-marino",
             "sigla": "SM",
             "sigla3": "SMR",
@@ -5475,10 +5860,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "378",
             "onu": true
         },
         {
-            "codigo": 678,
+            "tipo": "pais",
+            "codigo": "678",
             "slug": "sao-tome-e-principe",
             "sigla": "ST",
             "sigla3": "STP",
@@ -5503,10 +5890,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 17
             },
+            "ddi": "239",
             "onu": true
         },
         {
-            "codigo": 682,
+            "tipo": "pais",
+            "codigo": "682",
             "slug": "arabia-saudita",
             "sigla": "SA",
             "sigla3": "SAU",
@@ -5531,10 +5920,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "966",
             "onu": true
         },
         {
-            "codigo": 686,
+            "tipo": "pais",
+            "codigo": "686",
             "slug": "senegal",
             "sigla": "SN",
             "sigla3": "SEN",
@@ -5559,10 +5950,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "221",
             "onu": true
         },
         {
-            "codigo": 688,
+            "tipo": "pais",
+            "codigo": "688",
             "slug": "servia",
             "sigla": "RS",
             "sigla3": "SRB",
@@ -5587,10 +5980,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "381",
             "onu": true
         },
         {
-            "codigo": 690,
+            "tipo": "pais",
+            "codigo": "690",
             "slug": "seichelles",
             "sigla": "SC",
             "sigla3": "SYC",
@@ -5615,10 +6010,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "248",
             "onu": true
         },
         {
-            "codigo": 694,
+            "tipo": "pais",
+            "codigo": "694",
             "slug": "serra-leoa",
             "sigla": "SL",
             "sigla3": "SLE",
@@ -5643,10 +6040,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "232",
             "onu": true
         },
         {
-            "codigo": 702,
+            "tipo": "pais",
+            "codigo": "702",
             "slug": "cingapura",
             "sigla": "SG",
             "sigla3": "SGP",
@@ -5671,10 +6070,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "65",
             "onu": true
         },
         {
-            "codigo": 534,
+            "tipo": "pais",
+            "codigo": "534",
             "slug": "saint-martin-parte-holandesa",
             "sigla": "SX",
             "sigla3": "SXM",
@@ -5701,10 +6102,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 703,
+            "tipo": "pais",
+            "codigo": "703",
             "slug": "eslovaquia",
             "sigla": "SK",
             "sigla3": "SVK",
@@ -5729,10 +6132,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "421",
             "onu": true
         },
         {
-            "codigo": 705,
+            "tipo": "pais",
+            "codigo": "705",
             "slug": "eslovenia",
             "sigla": "SI",
             "sigla3": "SVN",
@@ -5757,10 +6162,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "386",
             "onu": true
         },
         {
-            "codigo": 90,
+            "tipo": "pais",
+            "codigo": "90",
             "slug": "ilhas-salomao",
             "sigla": "SB",
             "sigla3": "SLB",
@@ -5785,10 +6192,12 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "677",
             "onu": true
         },
         {
-            "codigo": 706,
+            "tipo": "pais",
+            "codigo": "706",
             "slug": "somalia",
             "sigla": "SO",
             "sigla3": "SOM",
@@ -5813,10 +6222,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "252",
             "onu": true
         },
         {
-            "codigo": 710,
+            "tipo": "pais",
+            "codigo": "710",
             "slug": "africa-do-sul",
             "sigla": "ZA",
             "sigla3": "ZAF",
@@ -5841,10 +6252,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "27",
             "onu": true
         },
         {
-            "codigo": 239,
+            "tipo": "pais",
+            "codigo": "239",
             "slug": "ilhas-georgia-do-sul-e-sandwich-do-sul",
             "sigla": "GS",
             "sigla3": "SGS",
@@ -5869,10 +6282,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 728,
+            "tipo": "pais",
+            "codigo": "728",
             "slug": "sudao-do-sul",
             "sigla": "SS",
             "sigla3": "SSD",
@@ -5897,10 +6312,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "211",
             "onu": true
         },
         {
-            "codigo": 724,
+            "tipo": "pais",
+            "codigo": "724",
             "slug": "espanha",
             "sigla": "ES",
             "sigla3": "ESP",
@@ -5925,10 +6342,12 @@ export const localidades = {
                 "regiao": 39,
                 "subregiao": ""
             },
+            "ddi": "34",
             "onu": true
         },
         {
-            "codigo": 144,
+            "tipo": "pais",
+            "codigo": "144",
             "slug": "sri-lanka",
             "sigla": "LK",
             "sigla3": "LKA",
@@ -5953,10 +6372,12 @@ export const localidades = {
                 "regiao": 34,
                 "subregiao": ""
             },
+            "ddi": "94",
             "onu": true
         },
         {
-            "codigo": 729,
+            "tipo": "pais",
+            "codigo": "729",
             "slug": "sudao",
             "sigla": "SD",
             "sigla3": "SDN",
@@ -5981,10 +6402,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "249",
             "onu": true
         },
         {
-            "codigo": 740,
+            "tipo": "pais",
+            "codigo": "740",
             "slug": "suriname",
             "sigla": "SR",
             "sigla3": "SUR",
@@ -6009,10 +6432,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "597",
             "onu": true
         },
         {
-            "codigo": 744,
+            "tipo": "pais",
+            "codigo": "744",
             "slug": "svalbard-e-jan-mayen-islands",
             "sigla": "SJ",
             "sigla3": "SJM",
@@ -6039,10 +6464,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 748,
+            "tipo": "pais",
+            "codigo": "748",
             "slug": "suazilandia",
             "sigla": "SZ",
             "sigla3": "SWZ",
@@ -6067,10 +6494,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 18
             },
+            "ddi": "268",
             "onu": true
         },
         {
-            "codigo": 752,
+            "tipo": "pais",
+            "codigo": "752",
             "slug": "suecia",
             "sigla": "SE",
             "sigla3": "SWE",
@@ -6095,10 +6524,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "46",
             "onu": true
         },
         {
-            "codigo": 756,
+            "tipo": "pais",
+            "codigo": "756",
             "slug": "suica",
             "sigla": "CH",
             "sigla3": "CHE",
@@ -6123,10 +6554,12 @@ export const localidades = {
                 "regiao": 155,
                 "subregiao": ""
             },
+            "ddi": "41",
             "onu": true
         },
         {
-            "codigo": 760,
+            "tipo": "pais",
+            "codigo": "760",
             "slug": "siria",
             "sigla": "SY",
             "sigla3": "SYR",
@@ -6153,10 +6586,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "963",
             "onu": true
         },
         {
-            "codigo": 158,
+            "tipo": "pais",
+            "codigo": "158",
             "slug": "taiwan",
             "sigla": "TW",
             "sigla3": "TWN",
@@ -6183,10 +6618,12 @@ export const localidades = {
                 "regiao": "",
                 "subregiao": ""
             },
+            "ddi": "886",
             "onu": false
         },
         {
-            "codigo": 762,
+            "tipo": "pais",
+            "codigo": "762",
             "slug": "tadjiquistao",
             "sigla": "TJ",
             "sigla3": "TJK",
@@ -6211,10 +6648,12 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "992",
             "onu": true
         },
         {
-            "codigo": 834,
+            "tipo": "pais",
+            "codigo": "834",
             "slug": "tanzania",
             "sigla": "TZ",
             "sigla3": "TZA",
@@ -6243,10 +6682,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "255",
             "onu": true
         },
         {
-            "codigo": 764,
+            "tipo": "pais",
+            "codigo": "764",
             "slug": "tailandia",
             "sigla": "TH",
             "sigla3": "THA",
@@ -6271,10 +6712,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "66",
             "onu": true
         },
         {
-            "codigo": 626,
+            "tipo": "pais",
+            "codigo": "626",
             "slug": "timor-leste",
             "sigla": "TL",
             "sigla3": "TLS",
@@ -6299,10 +6742,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "670",
             "onu": true
         },
         {
-            "codigo": 768,
+            "tipo": "pais",
+            "codigo": "768",
             "slug": "togo",
             "sigla": "TG",
             "sigla3": "TGO",
@@ -6312,7 +6757,9 @@ export const localidades = {
                 "pt": "Togo"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Togolese"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -6327,10 +6774,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 11
             },
+            "ddi": "228",
             "onu": true
         },
         {
-            "codigo": 772,
+            "tipo": "pais",
+            "codigo": "772",
             "slug": "tokelau",
             "sigla": "TK",
             "sigla3": "TKL",
@@ -6355,10 +6804,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "690",
             "onu": false
         },
         {
-            "codigo": 776,
+            "tipo": "pais",
+            "codigo": "776",
             "slug": "tonga",
             "sigla": "TO",
             "sigla3": "TON",
@@ -6383,10 +6834,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "676",
             "onu": true
         },
         {
-            "codigo": 780,
+            "tipo": "pais",
+            "codigo": "780",
             "slug": "trinidad-e-tobago",
             "sigla": "TT",
             "sigla3": "TTO",
@@ -6411,10 +6864,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 788,
+            "tipo": "pais",
+            "codigo": "788",
             "slug": "tunisia",
             "sigla": "TN",
             "sigla3": "TUN",
@@ -6439,10 +6894,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "216",
             "onu": true
         },
         {
-            "codigo": 792,
+            "tipo": "pais",
+            "codigo": "792",
             "slug": "turquia",
             "sigla": "TR",
             "sigla3": "TUR",
@@ -6467,10 +6924,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "90",
             "onu": true
         },
         {
-            "codigo": 795,
+            "tipo": "pais",
+            "codigo": "795",
             "slug": "turcomenistao",
             "sigla": "TM",
             "sigla3": "TKM",
@@ -6495,10 +6954,12 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "993",
             "onu": true
         },
         {
-            "codigo": 796,
+            "tipo": "pais",
+            "codigo": "796",
             "slug": "ilhas-turks-e-caicos",
             "sigla": "TC",
             "sigla3": "TCA",
@@ -6523,10 +6984,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 798,
+            "tipo": "pais",
+            "codigo": "798",
             "slug": "tuvalu",
             "sigla": "TV",
             "sigla3": "TUV",
@@ -6551,10 +7014,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "688",
             "onu": true
         },
         {
-            "codigo": 800,
+            "tipo": "pais",
+            "codigo": "800",
             "slug": "uganda",
             "sigla": "UG",
             "sigla3": "UGA",
@@ -6579,10 +7044,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "256",
             "onu": true
         },
         {
-            "codigo": 804,
+            "tipo": "pais",
+            "codigo": "804",
             "slug": "ucrania",
             "sigla": "UA",
             "sigla3": "UKR",
@@ -6607,10 +7074,12 @@ export const localidades = {
                 "regiao": 151,
                 "subregiao": ""
             },
+            "ddi": "380",
             "onu": true
         },
         {
-            "codigo": 784,
+            "tipo": "pais",
+            "codigo": "784",
             "slug": "emirados-arabes-unidos",
             "sigla": "AE",
             "sigla3": "ARE",
@@ -6635,10 +7104,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "971",
             "onu": true
         },
         {
-            "codigo": 826,
+            "tipo": "pais",
+            "codigo": "826",
             "slug": "reino-unido",
             "sigla": "GB",
             "sigla3": "GBR",
@@ -6665,10 +7136,12 @@ export const localidades = {
                 "regiao": 154,
                 "subregiao": ""
             },
+            "ddi": "44",
             "onu": true
         },
         {
-            "codigo": 581,
+            "tipo": "pais",
+            "codigo": "581",
             "slug": "ilhas-menores-distantes-dos-estados-unidos",
             "sigla": "UM",
             "sigla3": "UMI",
@@ -6693,10 +7166,12 @@ export const localidades = {
                 "regiao": 57,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 840,
+            "tipo": "pais",
+            "codigo": "840",
             "slug": "estados-unidos-da-america",
             "sigla": "US",
             "sigla3": "USA",
@@ -6723,10 +7198,12 @@ export const localidades = {
                 "regiao": 21,
                 "subregiao": ""
             },
+            "ddi": "1",
             "onu": true
         },
         {
-            "codigo": 858,
+            "tipo": "pais",
+            "codigo": "858",
             "slug": "uruguai",
             "sigla": "UY",
             "sigla3": "URY",
@@ -6751,10 +7228,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "598",
             "onu": true
         },
         {
-            "codigo": 860,
+            "tipo": "pais",
+            "codigo": "860",
             "slug": "uzbequistao",
             "sigla": "UZ",
             "sigla3": "UZB",
@@ -6779,10 +7258,12 @@ export const localidades = {
                 "regiao": 143,
                 "subregiao": ""
             },
+            "ddi": "998",
             "onu": true
         },
         {
-            "codigo": 548,
+            "tipo": "pais",
+            "codigo": "548",
             "slug": "vanuatu",
             "sigla": "VU",
             "sigla3": "VUT",
@@ -6807,10 +7288,12 @@ export const localidades = {
                 "regiao": 54,
                 "subregiao": ""
             },
+            "ddi": "678",
             "onu": true
         },
         {
-            "codigo": 862,
+            "tipo": "pais",
+            "codigo": "862",
             "slug": "venezuela",
             "sigla": "VE",
             "sigla3": "VEN",
@@ -6837,10 +7320,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 5
             },
+            "ddi": "58",
             "onu": true
         },
         {
-            "codigo": 704,
+            "tipo": "pais",
+            "codigo": "704",
             "slug": "vietna",
             "sigla": "VN",
             "sigla3": "VNM",
@@ -6867,10 +7352,12 @@ export const localidades = {
                 "regiao": 35,
                 "subregiao": ""
             },
+            "ddi": "84",
             "onu": true
         },
         {
-            "codigo": 92,
+            "tipo": "pais",
+            "codigo": "92",
             "slug": "ilhas-virgens-britanicas",
             "sigla": "VG",
             "sigla3": "VGB",
@@ -6895,10 +7382,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 850,
+            "tipo": "pais",
+            "codigo": "850",
             "slug": "ilhas-virgens",
             "sigla": "VI",
             "sigla3": "VIR",
@@ -6925,10 +7414,12 @@ export const localidades = {
                 "regiao": 419,
                 "subregiao": 29
             },
+            "ddi": "1",
             "onu": false
         },
         {
-            "codigo": 876,
+            "tipo": "pais",
+            "codigo": "876",
             "slug": "ilhas-wallis-e-futuna",
             "sigla": "WF",
             "sigla3": "WLF",
@@ -6955,10 +7446,12 @@ export const localidades = {
                 "regiao": 61,
                 "subregiao": ""
             },
+            "ddi": "681",
             "onu": false
         },
         {
-            "codigo": 732,
+            "tipo": "pais",
+            "codigo": "732",
             "slug": "saara-ocidental",
             "sigla": "EH",
             "sigla3": "ESH",
@@ -6983,10 +7476,12 @@ export const localidades = {
                 "regiao": 15,
                 "subregiao": ""
             },
+            "ddi": "",
             "onu": false
         },
         {
-            "codigo": 887,
+            "tipo": "pais",
+            "codigo": "887",
             "slug": "iemen",
             "sigla": "YE",
             "sigla3": "YEM",
@@ -7011,10 +7506,12 @@ export const localidades = {
                 "regiao": 145,
                 "subregiao": ""
             },
+            "ddi": "967",
             "onu": true
         },
         {
-            "codigo": 894,
+            "tipo": "pais",
+            "codigo": "894",
             "slug": "zambia",
             "sigla": "ZM",
             "sigla3": "ZMB",
@@ -7039,10 +7536,12 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "260",
             "onu": true
         },
         {
-            "codigo": 716,
+            "tipo": "pais",
+            "codigo": "716",
             "slug": "zimbabue",
             "sigla": "ZW",
             "sigla3": "ZWE",
@@ -7067,6 +7566,7 @@ export const localidades = {
                 "regiao": 202,
                 "subregiao": 14
             },
+            "ddi": "263",
             "onu": true
         }
     ],

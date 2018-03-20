@@ -6,6 +6,7 @@ const slug = require('../../shared/slug');
 const readFile = util.promisify(fs.readFile);
 
 const ISO = require('../fontes/ISO.json').dados;
+const ITU = require('../fontes/ITU.json').dados;
 const ONU_EN = require('../fontes/UNSD_en.json').dados;
 const ONU_ES = require('../fontes/UNSD_es.json').dados;
 const IBGE = require('../fontes/IBGE_2015.json').dados;
@@ -31,6 +32,11 @@ const mapISO = ISO.reduce((agg, obj) => {
     agg[sigla] = obj;
     return agg;
 }, {});
+const mapITU = ITU.reduce((agg, obj) => {
+    let sigla = obj["code_a3"];
+    agg[sigla] = obj;
+    return agg;
+});
 const slugMembrosONU = [].concat(ONU_MEMBROS.membros, ONU_MEMBROS.observadores.permanentes).map(slug);
 
 let regioes = {
@@ -154,7 +160,8 @@ let paises = ISO.map(obj => {
     const apelidos_pt = NOMES_ALTERNATIVOS.filter(o => o.a2_code === obj["code_a2"]).map(o => o.nome.pt).filter(Boolean);
 
     return {
-        "codigo": obj.numeric,
+        "tipo": "pais",
+        "codigo": obj.numeric.toString(),
         "slug": slug_pt,
         "sigla": obj["code_a2"],
         "sigla3": obj["code_a3"],
@@ -179,6 +186,7 @@ let paises = ISO.map(obj => {
             "regiao": en ? en["Sub-region Code"] : "",
             "subregiao": en ? en["Intermediate Region Code"] : ""
         },
+        "ddi": mapITU[sigla] ? mapITU[sigla].ddi : "", 
         "onu": slugMembrosONU.indexOf(slug(nome_en)) > -1
     }
 });

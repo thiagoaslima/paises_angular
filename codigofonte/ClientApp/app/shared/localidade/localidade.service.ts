@@ -26,8 +26,8 @@ export class LocalidadeService {
     }
 
     public getPaisBySigla(sigla: string): Pais | null {
-        let property = (sigla.length === 2) ? 'sigla' : 'sigla3';
-        return this.getAllPaises().find((pais: Pais) => pais[<'sigla' | 'sigla3'>property] === sigla) || null;
+        let property: 'sigla'|'sigla3' = (sigla.length === 2) ? 'sigla' : 'sigla3';
+        return this.getAllPaises().find((pais: Pais) => pais[property] === sigla) || null;
     }
 }
 
