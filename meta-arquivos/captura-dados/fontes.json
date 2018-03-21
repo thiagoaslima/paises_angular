@@ -84,7 +84,8 @@
                 "nome_publicacao": "Paridade",
                 "secao_publicacao": "Tabela de Moedas",
                 "link": "http://www4.bcb.gov.br/pec/taxas/batch/cotacaomoedas.asp?id=txtodas",
-                "file_link": "http://www4.bcb.gov.br/Download/fechamento/20180228.csv"
+                "file_link": "http://www4.bcb.gov.br/Download/fechamento/20180228.csv",
+                "ignore": "true"
             }
         ]
     },
