@@ -35,13 +35,16 @@ export class BuscaService {
         }
         //encontra local pelo nome exato
         for (i = 0; i < places.length; i++) {
-            if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
-            var slug = transformText((<any>places[i].nome)[lang]);
-            var index = transformedText.indexOf(slug);
-            var length = slug.length;
-            if ((index == 0 || transformedText.charAt(index - 1) == '-') &&
-                (index + length == transformedText.length || transformedText.charAt(index + length) == '-')) { //match whole word
-                placesFound.push(places[i]);
+            var slugs = places[i].apelidos[lang].concat([places[i].nome[lang]]);
+            for(var j = 0; j < slugs.length; j++){
+                if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
+                var slug = transformText(slugs[j]);
+                var index = transformedText.indexOf(slug);
+                var length = slug.length;
+                if ((index == 0 || transformedText.charAt(index - 1) == '-') &&
+                    (index + length == transformedText.length || transformedText.charAt(index + length) == '-')) { //match whole word
+                    placesFound.push(places[i]);
+                }
             }
         }
         //sugere um local baseado nas últimas 4, 3, 2 ou 1 palavra(s)
@@ -52,18 +55,21 @@ export class BuscaService {
         if (textWords.length >= 2) words2 = textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
         if (textWords.length >= 1 && textWords[textWords.length - 1].length >= this.MIN_WORD_SIZE) words1 = textWords[textWords.length - 1];
         for (i = 0; i < places.length; i++) {
-            var slug = transformText((<any>places[i].nome)[lang]);
-            if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
-            if (words4 && slug.indexOf(words4) == 0) {
-                sug4.push(places[i]);
-            } else if (words3 && slug.indexOf(words3) == 0) {
-                sug3.push(places[i]);
-            } else if (words2 && slug.indexOf(words2) == 0) {
-                sug2.push(places[i]);
-            } else if (words1) {
-                var index = slug.indexOf(words1);
-                if (index == 0 || slug.charAt(index - 1) == '-') //só considera se encontrou o texto no início da palavra(não no meio)
-                    sug1.push(places[i]);
+            var slugs = places[i].apelidos[lang].concat([places[i].nome[lang]]);
+            for(var j = 0; j < slugs.length; j++){
+                if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
+                var slug = transformText(slugs[j]);
+                if (words4 && slug.indexOf(words4) == 0) {
+                    sug4.push(places[i]);
+                } else if (words3 && slug.indexOf(words3) == 0) {
+                    sug3.push(places[i]);
+                } else if (words2 && slug.indexOf(words2) == 0) {
+                    sug2.push(places[i]);
+                } else if (words1) {
+                    var index = slug.indexOf(words1);
+                    if (index == 0 || slug.charAt(index - 1) == '-') //só considera se encontrou o texto no início da palavra(não no meio)
+                        sug1.push(places[i]);
+                }
             }
         }
         //usa somente as sugestões com mais palavras (melhores)
