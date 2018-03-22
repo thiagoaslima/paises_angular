@@ -1,9 +1,12 @@
 import { Component, Input } from "@angular/core";
 
+import { Observable } from "rxjs/Observable";
 import { Subscription } from 'rxjs/Subscription';
+import { map } from "rxjs/operators/map";
+import { switchMap } from "rxjs/operators/switchMap";
 
 import { PaisesService, RouterParamsService } from "../../shared";
-import { RankingService } from "./ranking.service";
+import { MapaSectionService } from "../mapa-section.service";
 
 @Component({
     selector: 'paises-ranking',
@@ -19,7 +22,7 @@ export class RankingComponent {
     private _subscriptions: Subscription[] = [];
 
     constructor(
-        private _rankingService: RankingService,
+        private _mapaSectionService: MapaSectionService,
         private _routerParams: RouterParamsService
     ) { }
 
@@ -28,15 +31,19 @@ export class RankingComponent {
             this.paisSelecionado = params.pais ? params.pais : "";
         });
 
-        const indicadorSubscription = this._rankingService.indicador$.subscribe(indicador => {
+        const dadosSubscription = this._routerParams.params$.pipe(
+            map(({params}) => parseInt(params.indicador, 10)),
+            switchMap(indicadorId => Observable.zip([
+                    this._mapaSectionService.getIndicador(indicadorId),
+                    this._mapaSectionService.getRanking(indicadorId)
+                ])
+            )
+        ).subscribe(([indicador, ranking]) => {
             this.indicador = indicador;
-        });
+            this.dados = ranking;
+        })
 
-        const valoresSubscription = this._rankingService.valores$.subscribe(valores => {
-            this.dados = valores;
-        });
-
-        this._subscriptions.push(paisSubscription, indicadorSubscription, valoresSubscription);
+        this._subscriptions.push(paisSubscription, dadosSubscription);
     }
 
     ngOnDestroy() {

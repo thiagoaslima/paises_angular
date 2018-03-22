@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/zip';
 import { map } from 'rxjs/operators/map';
+import { switchMap } from 'rxjs/operators/switchMap';
 import { zip } from 'rxjs/operators/zip';
 import { tap } from 'rxjs/operators/tap';
 
@@ -12,27 +13,24 @@ import { RequestService } from '../request.service';
 import { PaisesEnum } from './paises.enum';
 import { chunkArray, flattenArray } from '../../../utils';
 import { LocalidadeService } from '../localidade/localidade.service';
-import { ResultadosIndicador, MetadataIndicador } from './interfaces';
+import { Ranking, ResultadosIndicador, MetadataIndicador } from './interfaces';
 
 @Injectable()
 export class PaisesService extends RequestService {
 
     constructor(
         _httpClient: HttpClient,
-        private _localidadeService: LocalidadeService
+        private _localidadeService: LocalidadeService,
+        @Inject('SPECIAL_VALUES') private _specialValues: { cases: {[key: string]: string}, values: {[key: string]: string}  }
     ) {
         super(_httpClient);
     }
 
     getSintese(siglaPais: string) {
-        const metadataParams = new HttpParams().set('scope', 'one');
-
-        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1', metadataParams)
-            .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
+        const metadataObservable = this.getMetadataIndicador(1, 'one');
 
         const resultadosObservable: Observable<ResultadosIndicador[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
             .pipe(map(resultados => resultados.map(this.toResultadoModel)));
-
 
         return metadataObservable.pipe(
             zip(resultadosObservable),
@@ -40,8 +38,9 @@ export class PaisesService extends RequestService {
         );
     }
 
-    getMetadataIndicador(indicadorId: number) {
-        return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`)
+    getMetadataIndicador(indicadorId: number, scope = 'sub') {
+        const metadataParams = new HttpParams().set('scope', scope);
+        return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`, metadataParams)
             .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
     }
 
@@ -63,44 +62,21 @@ export class PaisesService extends RequestService {
         );
     }
 
-    /*
-     * TODO
-     * refatorar servicor para oferecer uma API compatível
-     */
-    getRanking(indicadorId: number): Observable<ResultadosIndicador[]> {
-        console.time("getRanking");
-        const periodos = ["2018", "2017", "2016", "2015", "2014", "2014-2016", "2013-2015", "2012-2014", "2010-2015", "-"].join("|");
-        const siglas = this._localidadeService.getAllSiglas();
-        const conjuntos = chunkArray(siglas, Math.ceil(siglas.length / 5));
-
-        return Observable.zip(
-            ...conjuntos.map(siglas => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodos}/indicadores/${indicadorId}/resultados/${siglas.join('|')}`))
-        ).pipe(
-            tap(_ => console.timeEnd("getRanking")),
-            tap(_ => console.time("rankingProcess")),
-            map((resposta: any[]) => {
-                resposta = flattenArray(resposta);
-
-                let resultados = resposta
-                    .reduce((agg, obj) => {
-                        agg = agg.concat(obj.res);
-                        return agg;
-                    }, [])
-                    .reduce((agg: any, obj: any) => {
-                        agg[obj.localidade] = obj;
-                        return agg;
-                    }, {});
-
-                let arr = Object.keys(resultados).reduce((agg: any, key: any) => {
-                    let model = this.toResultadoModel({ id: indicadorId, res: [resultados[key]] });
-                    agg = agg.concat(model);
-                    return agg;
-                }, [] as any[]);
-
-                return arr;
-            }),
-            tap(_ => console.timeEnd("rankingProcess")),
+    getRanking(indicadorId: number): Observable<Ranking> {
+        const metadataIndicador = this.getMetadataIndicador(indicadorId, 'one');
+        const periodoMaisRecente = metadataIndicador.pipe(
+            map(indicador => indicador[0]),
+            map(indicador => indicador.fontes.map((fonte: any) => fonte.periodo).sort()),
+            map(periodos => periodos.slice(-1))
         )
+
+        return periodoMaisRecente.pipe(
+            switchMap(periodo => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodo}/indicadores/${indicadorId}/ranking?natureza=1`)),
+            map(ranking => ranking.res = ranking.res.map((obj: any) => {
+                delete obj['#'];
+                return obj;
+            }))
+        );
     }
 
     flatMetadata(metadatas: any[]): any[] {
@@ -148,7 +124,7 @@ export class PaisesService extends RequestService {
 
         let valorMaisRecente = Object.keys(valoresValidos).reduce((agg, periodo) => {
             if (
-                !PaisesService.isSpecialValue(valoresValidos[periodo]) && 
+                !this.isSpecialValue(valoresValidos[periodo]) &&
                 periodo > agg.periodo
             ) {
                 agg.periodo = periodo;
@@ -171,15 +147,8 @@ export class PaisesService extends RequestService {
         };
     }
 
-    static isSpecialValue(valor: string) {
-        switch (valor) {
-            case "99999999999999":
-            case "99999999999998":
-                return true
-
-            default:
-                return false;
-        }
+    isSpecialValue(valor: string) {
+        return Boolean(this._specialValues.cases[valor])
     }
 
 }

@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 
 import { Subscription } from "rxjs/Subscription";
 import { map } from 'rxjs/operators/map';
+import { switchMap } from 'rxjs/operators/switchMap';
+
 
 import { 
     MalhaService, 
@@ -11,6 +13,7 @@ import {
     PlatformDetectionService
 } from "../shared";
 import { RankingService } from "./ranking/ranking.service";
+import { MapaSectionService } from "./mapa-section.service";
 
 
 @Component({
@@ -36,8 +39,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
     public linkUrl = ["."];
 
     constructor(
-        private _malhaService: MalhaService,
-        private _rankingService: RankingService,
+        private _mapaSectionService: MapaSectionService,
         private _localidadeService: LocalidadeService,
         private _routerParams: RouterParamsService,
         platform: PlatformDetectionService
@@ -47,21 +49,22 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         const routerParamsSubscription = this._routerParams.params$.subscribe(({params}) => {         
-            this._rankingService.updateService(parseInt(params.indicador, 10))          
             this.pais = params.pais ? this._localidadeService.getPaisBySlug(params.pais) : null;
-
             this.linkUrl = params.indicador ? [".", "ranking", params.indicador] : ["."]
         });
 
-        const malhaSubscription = this._rankingService.valores$.subscribe(valores => {
-            this.malha = this._malhaService.getMalhaGeoJSON(valores);
-        });
+        const malhaSubscription = this._routerParams.params$.pipe(
+            map( ({params}) => parseInt(params.indicador, 10)),
+            switchMap(indicadorId => this._mapaSectionService.getMapa(indicadorId))
+        ).subscribe((malha:any) => { 
+            debugger; 
+            this.malha = malha;
+        })
 
         this._subscriptions.push(malhaSubscription, routerParamsSubscription);
     }
 
     ngOnDestroy() {
         this._subscriptions.forEach(subscription => subscription.unsubscribe());
-        this._rankingService.updateService();
     }
 }

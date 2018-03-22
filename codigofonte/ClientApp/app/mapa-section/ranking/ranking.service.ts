@@ -101,6 +101,6 @@ export class RankingService {
     }
 
     isValidValue(valor: string) {
-        return Boolean(valor) && !PaisesService.isSpecialValue(valor);
+        return Boolean(valor) && !this._paisesService.isSpecialValue(valor);
     }
 }

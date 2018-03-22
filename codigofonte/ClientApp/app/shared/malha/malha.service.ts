@@ -85,7 +85,7 @@ export class MalhaService {
     };
 
     constructor() {
-        this._resetMalha();
+        this._setMalhaProperties();
         this.geojson = T.feature(this.topojson, this.topojson.objects.countries);
     }
 
@@ -130,7 +130,7 @@ export class MalhaService {
     }
 
 
-    private _resetMalha() {
+    private _setMalhaProperties() {
         this.topojson.objects.countries.geometries.forEach((geometry: any) => {
             const { mostrar } = geometry.properties;
 

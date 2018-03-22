@@ -9,10 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app-component/app.component';
 import { CoreModule } from "./core/core.module";
+import { cases, values } from './shared/specialCases.value';
 
 @NgModule({
     declarations: [
         AppComponent
+    ],
+    providers: [
+        { provide: 'SPECIAL_VALUES', useValue: {cases, values} }
     ],
     imports: [
         CommonModule,

@@ -10,6 +10,7 @@ import { RankingModule } from './ranking/ranking.module';
 import { SharedModule } from '../shared';
 import { MapaSectionComponent } from './mapa-section.component';
 import { RankingService } from './ranking/ranking.service';
+import { MapaSectionService } from './mapa-section.service';
 
 const routes: Routes = [
     {
@@ -46,7 +47,8 @@ const routes: Routes = [
         SinteseHomeComponent
     ],
     providers: [
-        RankingService
+        RankingService,
+        MapaSectionService
     ],
     entryComponents: [
         
