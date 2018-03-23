@@ -1,4 +1,5 @@
 [
+    // Síntese
     {
         "fonte": "The World Factbook",
         "autor": "CIA - Central Intelligence Agency",
@@ -119,6 +120,7 @@
         ]
     },
 
+    // ECONOMIA
     {
         "fonte": "World Development Indicators",
         "autor": "The World Bank",
@@ -273,6 +275,22 @@
                 "id_publicacao": "53903",
                 "tema_publicacao": "Saúde",
                 "link": "http://hdr.undp.org/en/indicators/53906"
+            },
+            {
+                "variavel_code": "indicadoressociais_13",
+                "nome": "Esperança de vida ao nascer",
+                "nome_publicacao": "Life expectancy at birth (years)",
+                "id_publicacao": "69206",
+                "tema_publicacao": "Saúde",
+                "link": "http://hdr.undp.org/en/indicators/69206"
+            },
+            {
+                "variavel_code": "indicadoressociais_10",
+                "nome": "Índice de desenvolvimento humano",
+                "nome_publicacao": "Human Development Index (HDI)",
+                "id_publicacao": "137506",
+                "tema_publicacao": "Índice de desenvolvimento humano",
+                "link": "http://hdr.undp.org/en/indicators/137506"
             }
         ]
     },
@@ -400,5 +418,10 @@
                 ]
             }
         ]
+    },
+
+    // INDICADORES SOCIAIS
+    {
+
     }
 ]
