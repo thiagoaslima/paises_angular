@@ -88,6 +88,10 @@
 	font-size: 13px;
 }
 
+.paisSelecionado {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
 /*desktop*/
 @media only screen and (min-width : 568px) {
 	.ranking {

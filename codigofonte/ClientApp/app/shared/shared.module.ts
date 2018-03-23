@@ -18,9 +18,10 @@ import { ResultadoPipe } from './resultado.pipe';
 import { L10NPipe } from './l10n.pipe';
 
 
-export function platformDetectionFactory(platform_id: Object) {
+export function platformDetectionFactory(platform_id: string) {
     return new PlatformDetectionService(platform_id);
 }
+
 @NgModule({
     imports: [CommonModule],
     declarations: [

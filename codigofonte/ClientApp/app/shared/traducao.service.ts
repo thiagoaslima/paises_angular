@@ -1,6 +1,8 @@
 import { Injectable, Optional, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
+export type LANGUAGES = 'pt' | 'es' | 'en';
+
 @Injectable()
 export class TraducaoService {
 

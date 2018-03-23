@@ -1,11 +1,6 @@
-<!-->logo ODS<-->
-<logo-ods></logo-ods>
-
-<div *ngIf="isBrowser" leaflet 
-    [leafletLayers]="[geojsonLayer]" 
+<div leaflet 
+    [leafletLayers]="leafletLayers" 
     [leafletOptions]="mapOptions" 
-    [leafletFitBounds]="paisSelecionado.bounds"
+    [leafletFitBounds]="paisSelecionado.layer?.getBounds()"
     (leafletMapReady)="onMapReady($event)">
 </div>
-
-<router-outlet></router-outlet>

@@ -47,7 +47,7 @@ export class DadosPaisService {
                         if (resultado) {
 
                             resultado.valores.forEach((valor: string, idx: number) => {
-                                if (!PaisesService.isSpecialValue(valor)) {
+                                if (!this._paisesService.isSpecialValue(valor)) {
                                     valores.push(valor);
                                     periodos.push(resultado.periodos[idx]);
                                 }
