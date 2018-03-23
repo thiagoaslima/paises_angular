@@ -1,6 +1,5 @@
 import { Injectable, Inject } from "@angular/core";
 import { RouterParamsService } from "../shared/router-params.service";
-import { RankingService } from "./ranking/ranking.service";
 import { PaisesService } from "../shared/paises-service/paises.service";
 import { LocalidadeService } from "../shared/localidade/localidade.service";
 import { MalhaService } from "../shared/malha/malha.service";
@@ -8,7 +7,6 @@ import { Ranking } from "../shared/paises-service/interfaces/Ranking";
 
 import { Observable } from "rxjs/Observable";
 import { map } from "rxjs/operators/map";
-import { switchMap } from "rxjs/operators/switchMap";
 
 @Injectable()
 export class MapaSectionService {
@@ -27,10 +25,9 @@ export class MapaSectionService {
     }
 
     getMapa(indicadorId: number) {
-        debugger;
         if (indicadorId) {
             return this.getRanking(indicadorId).pipe(
-                switchMap(ranking => this._malhaService.getMalhaGeoJSON(ranking))
+                map(ranking => this._malhaService.getMalhaGeoJSON(ranking))
             );
         }
         return Observable.of(this._malhaService.getMalhaGeoJSON());
@@ -67,7 +64,11 @@ export class MapaSectionService {
 
                     }, { comDados: [] as any[], semDados: [] as any[] })
 
-                return lista.comDados.sort((a, b) => b.posicao - a.posicao).concat(lista.semDados.sort((a, b) => a.slug.pt > b.slug.pt ? -1 : 1))
+                    lista.comDados.sort((a, b) => a.posicao !== b.posicao ? a.posicao - b.posicao : a.pais.slug > b.pais.slug ? 1 : -1);
+                    lista.semDados.sort((a, b) => a.pais.slug > b.pais.slug ? 1 : -1)
+
+
+                return [].concat(...lista.comDados, ...lista.semDados);
             })
         )
     }

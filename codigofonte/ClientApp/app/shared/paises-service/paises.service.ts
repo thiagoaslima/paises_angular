@@ -21,7 +21,7 @@ export class PaisesService extends RequestService {
     constructor(
         _httpClient: HttpClient,
         private _localidadeService: LocalidadeService,
-        @Inject('SPECIAL_VALUES') private _specialValues: { cases: {[key: string]: string}, values: {[key: string]: string}  }
+        @Inject('SPECIAL_VALUES') private _specialValues: { cases: { [key: string]: string }, values: { [key: string]: string } }
     ) {
         super(_httpClient);
     }
@@ -30,7 +30,7 @@ export class PaisesService extends RequestService {
         const metadataObservable = this.getMetadataIndicador(1, 'one');
 
         const resultadosObservable: Observable<ResultadosIndicador[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel)));
+            .pipe(map(resultados => resultados.map(this.toResultadoModel.bind(this))));
 
         return metadataObservable.pipe(
             zip(resultadosObservable),
@@ -72,10 +72,7 @@ export class PaisesService extends RequestService {
 
         return periodoMaisRecente.pipe(
             switchMap(periodo => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodo}/indicadores/${indicadorId}/ranking?natureza=1`)),
-            map(ranking => ranking.res = ranking.res.map((obj: any) => {
-                delete obj['#'];
-                return obj;
-            }))
+            map(array => array[0])
         );
     }
 
@@ -113,7 +110,6 @@ export class PaisesService extends RequestService {
     }
 
     toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }) {
-        const that = this;
         let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
             if (resultado.res[0].res[periodo]) {
                 agg[periodo] = resultado.res[0].res[periodo];

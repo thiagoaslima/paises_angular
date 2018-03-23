@@ -12,7 +12,6 @@ import {
     Pais,
     PlatformDetectionService
 } from "../shared";
-import { RankingService } from "./ranking/ranking.service";
 import { MapaSectionService } from "./mapa-section.service";
 
 
@@ -57,7 +56,6 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
             map( ({params}) => parseInt(params.indicador, 10)),
             switchMap(indicadorId => this._mapaSectionService.getMapa(indicadorId))
         ).subscribe((malha:any) => { 
-            debugger; 
             this.malha = malha;
         })
 

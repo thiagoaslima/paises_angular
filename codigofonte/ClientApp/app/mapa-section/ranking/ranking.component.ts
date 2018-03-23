@@ -4,6 +4,7 @@ import { Observable } from "rxjs/Observable";
 import { Subscription } from 'rxjs/Subscription';
 import { map } from "rxjs/operators/map";
 import { switchMap } from "rxjs/operators/switchMap";
+import { zip } from "rxjs/operators/zip";
 
 import { PaisesService, RouterParamsService } from "../../shared";
 import { MapaSectionService } from "../mapa-section.service";
@@ -33,10 +34,9 @@ export class RankingComponent {
 
         const dadosSubscription = this._routerParams.params$.pipe(
             map(({params}) => parseInt(params.indicador, 10)),
-            switchMap(indicadorId => Observable.zip([
-                    this._mapaSectionService.getIndicador(indicadorId),
-                    this._mapaSectionService.getRanking(indicadorId)
-                ])
+            switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId).pipe(
+                    zip(this._mapaSectionService.getRanking(indicadorId))
+                )
             )
         ).subscribe(([indicador, ranking]) => {
             this.indicador = indicador;
