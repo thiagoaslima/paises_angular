@@ -1,49 +1,53 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
+import { Observable } from "rxjs/Observable";
 import { Subscription } from 'rxjs/Subscription';
+import { map } from "rxjs/operators/map";
+import { switchMap } from "rxjs/operators/switchMap";
+import { zip } from "rxjs/operators/zip";
 
 import { PaisesService, RouterParamsService } from "../../shared";
-import { RankingService } from "./ranking.service";
+import { MapaSectionService } from "../mapa-section.service";
 
 @Component({
     selector: 'paises-ranking',
     templateUrl: './ranking.component.html',
-    styleUrls: ['./ranking.component.css'],
-    providers: [RankingService]
+    styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent {
+    public paisSelecionado = "";
+    
     public dados = [] as any[];
     public indicador: any;
 
-    private _subscriptions: {
-        [key: string]: Subscription
-    } =  Object.create(null);
+    private _subscriptions: Subscription[] = [];
 
     constructor(
-        private _routeParams: RouterParamsService,
-        private _rankingService: RankingService
+        private _mapaSectionService: MapaSectionService,
+        private _routerParams: RouterParamsService
     ) { }
 
     ngOnInit() {
-        this._subscriptions.params = this._routeParams.params$.subscribe(({ params }: {params:any}) => {            
-            
-            if (params.indicador) {
-                const indicadorId = parseInt(params.indicador, 10);
+        const paisSubscription = this._routerParams.params$.subscribe(({params}) => {
+            this.paisSelecionado = params.pais ? params.pais : "";
+        });
 
-                this._rankingService
-                    .getValores(indicadorId)
-                    .subscribe(res => { 
-                        this.dados = Array.from(res.values()); 
-                        console.log(this.dados);
-                    });
-
-                this._rankingService.getIndicador(indicadorId)
-                    .subscribe(nome => { this.indicador = nome; });
-            }
+        const dadosSubscription = this._routerParams.params$.pipe(
+            map(({params}) => parseInt(params.indicador, 10)),
+            switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId).pipe(
+                    zip(this._mapaSectionService.getRanking(indicadorId))
+                )
+            )
+        ).subscribe(([indicador, ranking]) => {
+            this.indicador = indicador;
+            this.dados = ranking;
         })
+
+        this._subscriptions.push(paisSubscription, dadosSubscription);
     }
 
     ngOnDestroy() {
-        Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
+        this._subscriptions.forEach(subscription => subscription.unsubscribe());
     }
+
 }

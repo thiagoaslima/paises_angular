@@ -48,15 +48,15 @@
             </thead>
 
             <tbody class="ranking__table-body">
-                <tr *ngFor="let pais of dados">
+                <tr *ngFor="let obj of dados" [class.paisSelecionado]="obj.pais.slug === paisSelecionado">
                     <td class="ranking__table__posicao">
-                        {{ pais.posicao }}
+                        {{ obj.posicao }}
                     </td>
                     <td class="ranking__table__pais">
-                        <a href="#">{{ pais.pais.nome.pt }}</a>
+                        <a href="#">{{ obj.pais.nome.pt }}</a>
                     </td>
                     <td class="ranking__table__unidade">
-                        {{ pais.valor }}
+                        {{ obj.valor }}
                     </td>
                 </tr>
             </tbody>

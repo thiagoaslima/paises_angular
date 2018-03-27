@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { transformText } from '../../utils';
 import { LocalidadeService } from './localidade/localidade.service';
+import { LANGUAGES } from './traducao.service';
 
 @Injectable()
 export class BuscaService {
@@ -16,7 +17,7 @@ export class BuscaService {
     /*
         Método público de busca.
     */
-    public search(text: string, lang = "pt") {
+    public search(text: string, lang: LANGUAGES = "pt") {
         var i;
         var placesFound = [];
         var transformedText = transformText(text);
@@ -35,7 +36,10 @@ export class BuscaService {
         }
         //encontra local pelo nome exato
         for (i = 0; i < places.length; i++) {
-            var slugs = places[i].apelidos[lang].concat([places[i].nome[lang]]);
+            var local = places[i];
+            var apelidos: string[] = local.apelidos[lang];
+            var nome = local.nome[lang];
+            var slugs = apelidos.concat([nome]);
             for(var j = 0; j < slugs.length; j++){
                 if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
                 var slug = transformText(slugs[j]);
@@ -55,7 +59,10 @@ export class BuscaService {
         if (textWords.length >= 2) words2 = textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
         if (textWords.length >= 1 && textWords[textWords.length - 1].length >= this.MIN_WORD_SIZE) words1 = textWords[textWords.length - 1];
         for (i = 0; i < places.length; i++) {
-            var slugs = places[i].apelidos[lang].concat([places[i].nome[lang]]);
+            var local = places[i];
+            var apelidos: string[] = local.apelidos[lang];
+            var nome = local.nome[lang];
+            var slugs = apelidos.concat([nome]);
             for(var j = 0; j < slugs.length; j++){
                 if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
                 var slug = transformText(slugs[j]);

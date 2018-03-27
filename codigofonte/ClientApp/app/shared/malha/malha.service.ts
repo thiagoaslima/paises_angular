@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { topojson } from './paises.topojson';
 
 import * as T from 'topojson';
-import { Localidade } from "../localidade/localidade.model";
+import { Pais } from "../localidade";
 
 @Injectable()
 export class MalhaService {
@@ -32,7 +32,7 @@ export class MalhaService {
             fillOpacity: 1
         },
         uninteractive: {
-            fillColor: '#505050',
+            fillColor: '#606060',
             weight: 0,
             opacity: 1,
             color: 'rgb(78,78,78)',
@@ -82,43 +82,55 @@ export class MalhaService {
             color: 'rgb(78,78,78)',
             fillOpacity: 1
         }
-    }
+    };
 
     constructor() {
+        this._setMalhaProperties();
         this.geojson = T.feature(this.topojson, this.topojson.objects.countries);
     }
 
     public getMalhaTopoJSON() {
-        return Object.assign({}, this.topojson);
+        return this.topojson;
     }
 
-    public getMalhaGeoJSON() {
-        return Object.assign({}, this.geojson);
+    public getMalhaGeoJSON(valores?: Array<{ pais: Pais, valor: string }>): any {
+        if (!valores || valores.length === 0) {
+            return this.geojson;
+        }
+
+        return this.updateMalhaGeoJSON(valores);
     }
 
-    public updateMalhaGeoJSON(valores: Array<{pais: Localidade, valor: string}>) {
-        let geojson = this.getMalhaGeoJSON();
+    public updateMalhaGeoJSON(valores: Array<{ pais: Pais, valor: string }>) {
+        let geojson = Object.assign({}, this.geojson);
 
         const scales = this._makeScales(valores);
         const valoresMap = valores.reduce((agg, obj) => {
-            agg[obj.pais.slug] = obj;
+            agg[obj.pais.sigla] = obj;
             return agg;
-        }, {} as {[slug: string]: {pais: Localidade, valor: string}});
+        }, {} as { [sigla: string]: { pais: Pais, valor: string } });
 
         geojson.features = geojson.features.map((feature: any) => {
+            feature = JSON.parse(JSON.stringify(feature));
+
             const { sigla, mostrar } = feature.properties;
-            
-            if (mostrar) { 
+
+            if (mostrar) {
                 let scale = this._getScale(valoresMap[sigla].valor, scales);
-                //@ts-ignore
-                feature.properties.style.default = this.polygonsStyles[scale];
+                if (scale) {
+                    //@ts-ignore
+                    feature.properties.style.default = this.polygonsStyles[scale];
+                }
             }
-            
-            return feature; 
+
+            return feature;
         });
+
+        return geojson;
     }
 
-    public resetMalha() {
+
+    private _setMalhaProperties() {
         this.topojson.objects.countries.geometries.forEach((geometry: any) => {
             const { mostrar } = geometry.properties;
 
@@ -130,7 +142,7 @@ export class MalhaService {
         });
     }
 
-    private _makeScales(valores: Array<{pais: Localidade, valor: string}>) {
+    private _makeScales(valores: Array<{ pais: Pais, valor: string }>) {
         const _setValues = new Set(valores.map(obj => obj.valor).sort().reverse());
         const _values = Array.from(_setValues.values()).filter(Boolean);
         let sep = [];

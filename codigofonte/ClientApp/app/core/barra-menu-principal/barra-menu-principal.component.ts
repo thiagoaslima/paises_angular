@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { BuscaService, TraducaoService } from '../../shared';
+import { LANGUAGES } from '../../shared/traducao.service';
 
 @Component({
     selector: 'barra-menu-principal',
@@ -19,7 +20,7 @@ export class BarraMenuPrincipalComponent {
     constructor(private _buscaService: BuscaService, private _traducaoService:TraducaoService) { }
 
     busca(event: any) {
-        this.resultados = this._buscaService.search(event.target.value, this.lang);
+        this.resultados = this._buscaService.search(event.target.value, <LANGUAGES>this.lang);
     }
 
     limpaResultados() {

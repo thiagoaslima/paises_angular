@@ -17,10 +17,10 @@ import { GraficoComponent } from './grafico/grafico.component';
 import { ResultadoPipe } from './resultado.pipe';
 import { L10NPipe } from './l10n.pipe';
 
-
 export function platformDetectionFactory(platform_id: Object) {
     return new PlatformDetectionService(platform_id.toString());
 }
+
 @NgModule({
     imports: [CommonModule],
     declarations: [
