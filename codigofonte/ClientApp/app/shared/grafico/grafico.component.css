@@ -7,6 +7,7 @@
 .grafico__svg{
     width: 100%;
     height: auto;
+    padding: 10px 20px;
 }
 
 .grafico__eixo-x{
@@ -22,7 +23,7 @@
 
 .grafico__rotulo{
     fill: #4D4D4D;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .grafico__ponto{
@@ -90,15 +91,15 @@
 .grafico__valor{
     margin: 0;
     text-align: right;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
 }
 
 .grafico__valor-metadata{
     margin: 0;
     text-align: right;
-    font-size: 0.8em;
-    font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
 }
 
 /*legenda*/

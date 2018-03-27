@@ -3,7 +3,7 @@
     <!--barra de título-->
     <div class="card__barra-titulo" [class.card__barra-titulo--ativo]="cardAberto" (click)="cardAberto = !cardAberto">
         <h3 class="card__titulo">{{ tema.tema }}</h3>
-        <button class="card__titulo-icone-flip" (click)="mostrarTabela=!mostrarTabela"><img src="../../../img/flip-icon.svg"></button>
+        <!--<button class="card__titulo-icone-flip" (click)="mostrarTabela=!mostrarTabela"><img src="../../../img/flip-icon.svg"></button>-->
         <i class="fa fa-plus card__titulo-icone" aria-hidden="true" *ngIf="!cardAberto"></i>
         <i class="fa fa-minus card__titulo-icone" aria-hidden="true" *ngIf="cardAberto"></i>
     </div>
@@ -50,6 +50,16 @@
             </table>
         </div>
         <!--rodapé-->
+        <div class="card__rodape">
+            <div class="card__rodape-buttons-container">
+                <button class="card__rodape-buttom" (click)="mostrarTabela=!mostrarTabela">{{mostrarTabela ? 'Grafico' : 'Tabela'}}</button>
+                <button class="card__rodape-buttom">Fontes</button>
+            </div>
+            <button class="card__rodape-buttom-comparar">
+                <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
+                Comparar Países
+            </button>
+        </div>
         <!--<div class="card__rodape">
             <p class="card__fonte">
                 <span class="card__fonte-titulo">FONTE</span>:
