@@ -420,8 +420,21 @@
         ]
     },
 
-    // INDICADORES SOCIAIS
     {
-
+        "fonte": "Food security indicators",
+        "autor": "Food and Agriculture Organization of the United Nations",
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.Wr1P7P0lFoM",
+        "dados": [
+            {
+                "id": 62973,
+                "variavel_code": "indicadoressociais_13",
+                "nome": "Calorias consumidas",
+                "nome_publicacao": "Dietary energy supply",
+                "tabela_publicacao": "A_9",
+                "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.Wr1P7P0lFoM"
+            }
+        ]
     }
 ]
