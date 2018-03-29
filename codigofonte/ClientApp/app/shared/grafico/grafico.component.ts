@@ -9,8 +9,8 @@ import { ResultadoPipe } from '../resultado.pipe';
 export class GraficoComponent {
 
     LARGURA_GRAFICO = 320;
-    ALTURA_GRAFICO = 240;
-    POSICAO_EIXO_X = 220
+    ALTURA_GRAFICO = 180;
+    POSICAO_EIXO_X = 160
     OFFSET_TOPO = 10; //offset usado no topo para impedir que os pontos de valor máximo sejam clipados
     ALTURA_AREA_DADOS = this.POSICAO_EIXO_X - this.OFFSET_TOPO; //altura da área usada para mostrar os pontos do gráfico
     LARGURA_ROTULO = 28; //largura aproximada dos rótulos do eixo X
