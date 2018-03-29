@@ -1,5 +1,4 @@
 [
-    // Síntese
     {
         "fonte": "The World Factbook",
         "autor": "CIA - Central Intelligence Agency",
@@ -120,7 +119,7 @@
         ]
     },
 
-    // ECONOMIA
+
     {
         "fonte": "World Development Indicators",
         "autor": "The World Bank",
