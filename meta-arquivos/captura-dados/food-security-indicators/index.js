@@ -1,9 +1,9 @@
-var xlsx = require('xlsx');
-var { getDados } = require('./getDados');
-var { filterDados } = require('./filterDados');
+const xlsx = require('xlsx');
+const { getDados } = require('./getDados');
+const { filterDados } = require('./filterDados');
+const { prepareToUpload } = require('./convertDados');
 
 getDados()
     .then(filterDados)
-    .then(json => {
-        console.log(json) /*?*/
-    });
+    .then(prepareToUpload)
+    .then(console.log.bind(console));

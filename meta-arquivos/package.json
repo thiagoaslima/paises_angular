@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./importacao-dados/postinstall.js",
+    "postinstall": "node ./postinstall.js",
     "test": "mocha \"importacao-dados/tests/**/*.js\" --recursive --colors"
   },
   "keywords": [],
