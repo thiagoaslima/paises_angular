@@ -1,6 +1,7 @@
 [
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "4",
         "slug": "afeganistao",
         "sigla": "AF",
@@ -25,6 +26,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "248",
         "slug": "ilhas-alanda",
         "sigla": "AX",
@@ -49,6 +51,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "8",
         "slug": "albania",
         "sigla": "AL",
@@ -73,6 +76,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "12",
         "slug": "argelia",
         "sigla": "DZ",
@@ -97,6 +101,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "16",
         "slug": "samoa-americana",
         "sigla": "AS",
@@ -121,6 +126,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "20",
         "slug": "andorra",
         "sigla": "AD",
@@ -145,6 +151,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "24",
         "slug": "angola",
         "sigla": "AO",
@@ -169,6 +176,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "660",
         "slug": "anguilla",
         "sigla": "AI",
@@ -193,6 +201,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "10",
         "slug": "antartida",
         "sigla": "AQ",
@@ -217,6 +226,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "28",
         "slug": "antigua-e-barbuda",
         "sigla": "AG",
@@ -241,6 +251,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "32",
         "slug": "argentina",
         "sigla": "AR",
@@ -265,6 +276,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "51",
         "slug": "armenia",
         "sigla": "AM",
@@ -289,6 +301,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "533",
         "slug": "aruba",
         "sigla": "AW",
@@ -313,6 +326,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "36",
         "slug": "australia",
         "sigla": "AU",
@@ -337,6 +351,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "40",
         "slug": "austria",
         "sigla": "AT",
@@ -361,6 +376,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "31",
         "slug": "azerbaijao",
         "sigla": "AZ",
@@ -385,6 +401,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "44",
         "slug": "bahamas",
         "sigla": "BS",
@@ -411,6 +428,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "48",
         "slug": "barein",
         "sigla": "BH",
@@ -435,6 +453,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "50",
         "slug": "bangladesh",
         "sigla": "BD",
@@ -459,6 +478,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "52",
         "slug": "barbados",
         "sigla": "BB",
@@ -483,6 +503,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "112",
         "slug": "bielorussia",
         "sigla": "BY",
@@ -507,6 +528,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "56",
         "slug": "belgica",
         "sigla": "BE",
@@ -531,6 +553,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "84",
         "slug": "belize",
         "sigla": "BZ",
@@ -555,6 +578,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "204",
         "slug": "benin",
         "sigla": "BJ",
@@ -579,6 +603,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "60",
         "slug": "bermuda",
         "sigla": "BM",
@@ -603,6 +628,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "64",
         "slug": "butao",
         "sigla": "BT",
@@ -627,6 +653,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "68",
         "slug": "bolivia",
         "sigla": "BO",
@@ -655,6 +682,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "535",
         "slug": "bonaire-santo-eustaquio-e-saba",
         "sigla": "BQ",
@@ -679,6 +707,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "70",
         "slug": "bosnia-herzegovina",
         "sigla": "BA",
@@ -703,6 +732,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "72",
         "slug": "botsuana",
         "sigla": "BW",
@@ -727,6 +757,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "74",
         "slug": "ilha-bouvet",
         "sigla": "BV",
@@ -751,6 +782,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "76",
         "slug": "brasil",
         "sigla": "BR",
@@ -775,6 +807,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "86",
         "slug": "territorio-britanico-do-oceano-indico",
         "sigla": "IO",
@@ -799,6 +832,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "96",
         "slug": "brunei",
         "sigla": "BN",
@@ -829,6 +863,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "100",
         "slug": "bulgaria",
         "sigla": "BG",
@@ -853,6 +888,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "854",
         "slug": "burkina-faso",
         "sigla": "BF",
@@ -877,6 +913,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "108",
         "slug": "burundi",
         "sigla": "BI",
@@ -901,6 +938,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "132",
         "slug": "cabo-verde",
         "sigla": "CV",
@@ -925,6 +963,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "116",
         "slug": "camboja",
         "sigla": "KH",
@@ -949,6 +988,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "120",
         "slug": "camaroes",
         "sigla": "CM",
@@ -973,6 +1013,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "124",
         "slug": "canada",
         "sigla": "CA",
@@ -997,6 +1038,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "136",
         "slug": "ilhas-cayman",
         "sigla": "KY",
@@ -1021,6 +1063,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "140",
         "slug": "republica-centro-africana",
         "sigla": "CF",
@@ -1045,6 +1088,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "148",
         "slug": "chade",
         "sigla": "TD",
@@ -1069,6 +1113,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "152",
         "slug": "chile",
         "sigla": "CL",
@@ -1093,6 +1138,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "156",
         "slug": "china",
         "sigla": "CN",
@@ -1123,6 +1169,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "162",
         "slug": "ilha-christmas",
         "sigla": "CX",
@@ -1147,6 +1194,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "166",
         "slug": "ilhas-cocos-keeling",
         "sigla": "CC",
@@ -1171,6 +1219,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "170",
         "slug": "colombia",
         "sigla": "CO",
@@ -1195,6 +1244,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "174",
         "slug": "comores",
         "sigla": "KM",
@@ -1219,6 +1269,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "180",
         "slug": "republica-democratica-do-congo",
         "sigla": "CD",
@@ -1245,6 +1296,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "178",
         "slug": "congo",
         "sigla": "CG",
@@ -1271,6 +1323,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "184",
         "slug": "ilhas-cook",
         "sigla": "CK",
@@ -1295,6 +1348,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "188",
         "slug": "costa-rica",
         "sigla": "CR",
@@ -1319,6 +1373,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "384",
         "slug": "costa-do-marfim",
         "sigla": "CI",
@@ -1343,6 +1398,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "191",
         "slug": "croacia",
         "sigla": "HR",
@@ -1367,6 +1423,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "192",
         "slug": "cuba",
         "sigla": "CU",
@@ -1391,6 +1448,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "531",
         "slug": "curacao",
         "sigla": "CW",
@@ -1415,6 +1473,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "196",
         "slug": "chipre",
         "sigla": "CY",
@@ -1439,6 +1498,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "203",
         "slug": "republica-tcheca",
         "sigla": "CZ",
@@ -1469,6 +1529,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "208",
         "slug": "dinamarca",
         "sigla": "DK",
@@ -1493,6 +1554,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "262",
         "slug": "djibouti",
         "sigla": "DJ",
@@ -1517,6 +1579,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "212",
         "slug": "dominica",
         "sigla": "DM",
@@ -1541,6 +1604,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "214",
         "slug": "republica-dominicana",
         "sigla": "DO",
@@ -1565,6 +1629,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "218",
         "slug": "equador",
         "sigla": "EC",
@@ -1589,6 +1654,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "818",
         "slug": "egito",
         "sigla": "EG",
@@ -1613,6 +1679,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "222",
         "slug": "el-salvador",
         "sigla": "SV",
@@ -1637,6 +1704,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "226",
         "slug": "guine-equatorial",
         "sigla": "GQ",
@@ -1661,6 +1729,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "232",
         "slug": "eritreia",
         "sigla": "ER",
@@ -1685,6 +1754,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "233",
         "slug": "estonia",
         "sigla": "EE",
@@ -1709,6 +1779,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "231",
         "slug": "etiopia",
         "sigla": "ET",
@@ -1733,6 +1804,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "238",
         "slug": "ilhas-falkland",
         "sigla": "FK",
@@ -1759,6 +1831,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "234",
         "slug": "ilhas-faeroe",
         "sigla": "FO",
@@ -1783,6 +1856,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "242",
         "slug": "fiji",
         "sigla": "FJ",
@@ -1807,6 +1881,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "246",
         "slug": "finlandia",
         "sigla": "FI",
@@ -1831,6 +1906,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "250",
         "slug": "franca",
         "sigla": "FR",
@@ -1855,6 +1931,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "254",
         "slug": "guiana-francesa",
         "sigla": "GF",
@@ -1879,6 +1956,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "258",
         "slug": "polinesia-francesa",
         "sigla": "PF",
@@ -1903,6 +1981,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "260",
         "slug": "terras-austrais-e-antarticas-francesas",
         "sigla": "TF",
@@ -1927,6 +2006,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "266",
         "slug": "gabao",
         "sigla": "GA",
@@ -1951,6 +2031,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "270",
         "slug": "gambia",
         "sigla": "GM",
@@ -1977,6 +2058,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "268",
         "slug": "georgia",
         "sigla": "GE",
@@ -2001,6 +2083,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "276",
         "slug": "alemanha",
         "sigla": "DE",
@@ -2025,6 +2108,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "288",
         "slug": "gana",
         "sigla": "GH",
@@ -2049,6 +2133,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "292",
         "slug": "gibraltar",
         "sigla": "GI",
@@ -2073,6 +2158,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "300",
         "slug": "grecia",
         "sigla": "GR",
@@ -2097,6 +2183,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "304",
         "slug": "groenlandia",
         "sigla": "GL",
@@ -2121,6 +2208,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "308",
         "slug": "granada",
         "sigla": "GD",
@@ -2145,6 +2233,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "312",
         "slug": "ilha-guadalupe",
         "sigla": "GP",
@@ -2169,6 +2258,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "316",
         "slug": "guam",
         "sigla": "GU",
@@ -2193,6 +2283,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "320",
         "slug": "guatemala",
         "sigla": "GT",
@@ -2217,6 +2308,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "831",
         "slug": "guernsey",
         "sigla": "GG",
@@ -2241,6 +2333,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "324",
         "slug": "guine",
         "sigla": "GN",
@@ -2265,6 +2358,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "624",
         "slug": "guine-bissau",
         "sigla": "GW",
@@ -2289,6 +2383,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "328",
         "slug": "guiana",
         "sigla": "GY",
@@ -2313,6 +2408,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "332",
         "slug": "haiti",
         "sigla": "HT",
@@ -2337,6 +2433,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "334",
         "slug": "ilha-heard-e-ilhas-mcdonald",
         "sigla": "HM",
@@ -2361,6 +2458,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "336",
         "slug": "vaticano",
         "sigla": "VA",
@@ -2387,6 +2485,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "340",
         "slug": "honduras",
         "sigla": "HN",
@@ -2411,6 +2510,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "344",
         "slug": "china-hong-kong",
         "sigla": "HK",
@@ -2442,6 +2542,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "348",
         "slug": "hungria",
         "sigla": "HU",
@@ -2466,6 +2567,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "352",
         "slug": "islandia",
         "sigla": "IS",
@@ -2490,6 +2592,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "356",
         "slug": "india",
         "sigla": "IN",
@@ -2514,6 +2617,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "360",
         "slug": "indonesia",
         "sigla": "ID",
@@ -2538,6 +2642,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "364",
         "slug": "ira",
         "sigla": "IR",
@@ -2564,6 +2669,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "368",
         "slug": "iraque",
         "sigla": "IQ",
@@ -2588,6 +2694,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "372",
         "slug": "irlanda",
         "sigla": "IE",
@@ -2612,6 +2719,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "833",
         "slug": "ilha-de-man",
         "sigla": "IM",
@@ -2636,6 +2744,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "376",
         "slug": "israel",
         "sigla": "IL",
@@ -2660,6 +2769,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "380",
         "slug": "italia",
         "sigla": "IT",
@@ -2684,6 +2794,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "388",
         "slug": "jamaica",
         "sigla": "JM",
@@ -2708,6 +2819,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "392",
         "slug": "japao",
         "sigla": "JP",
@@ -2732,6 +2844,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "832",
         "slug": "jersey",
         "sigla": "JE",
@@ -2756,6 +2869,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "400",
         "slug": "jordania",
         "sigla": "JO",
@@ -2780,6 +2894,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "398",
         "slug": "casaquistao",
         "sigla": "KZ",
@@ -2804,6 +2919,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "404",
         "slug": "quenia",
         "sigla": "KE",
@@ -2828,6 +2944,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "296",
         "slug": "kiribati",
         "sigla": "KI",
@@ -2852,6 +2969,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "408",
         "slug": "coreia-do-norte",
         "sigla": "KP",
@@ -2878,6 +2996,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "410",
         "slug": "coreia-do-sul",
         "sigla": "KR",
@@ -2905,6 +3024,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "414",
         "slug": "kuwait",
         "sigla": "KW",
@@ -2929,6 +3049,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "417",
         "slug": "quirguistao",
         "sigla": "KG",
@@ -2953,6 +3074,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "418",
         "slug": "laos",
         "sigla": "LA",
@@ -2979,6 +3101,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "428",
         "slug": "letonia",
         "sigla": "LV",
@@ -3003,6 +3126,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "422",
         "slug": "libano",
         "sigla": "LB",
@@ -3027,6 +3151,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "426",
         "slug": "lesoto",
         "sigla": "LS",
@@ -3051,6 +3176,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "430",
         "slug": "liberia",
         "sigla": "LR",
@@ -3075,6 +3201,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "434",
         "slug": "libia",
         "sigla": "LY",
@@ -3099,6 +3226,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "438",
         "slug": "liechtenstein",
         "sigla": "LI",
@@ -3123,6 +3251,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "440",
         "slug": "lituania",
         "sigla": "LT",
@@ -3147,6 +3276,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "442",
         "slug": "luxemburgo",
         "sigla": "LU",
@@ -3171,6 +3301,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "446",
         "slug": "china-macao",
         "sigla": "MO",
@@ -3195,6 +3326,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "807",
         "slug": "macedonia",
         "sigla": "MK",
@@ -3221,6 +3353,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "450",
         "slug": "madagascar",
         "sigla": "MG",
@@ -3245,6 +3378,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "454",
         "slug": "malaui",
         "sigla": "MW",
@@ -3269,6 +3403,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "458",
         "slug": "malasia",
         "sigla": "MY",
@@ -3293,6 +3428,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "462",
         "slug": "maldivas",
         "sigla": "MV",
@@ -3317,6 +3453,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "466",
         "slug": "mali",
         "sigla": "ML",
@@ -3341,6 +3478,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "470",
         "slug": "malta",
         "sigla": "MT",
@@ -3365,6 +3503,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "584",
         "slug": "ilhas-marshall",
         "sigla": "MH",
@@ -3389,6 +3528,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "474",
         "slug": "martinica",
         "sigla": "MQ",
@@ -3413,6 +3553,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "478",
         "slug": "mauritania",
         "sigla": "MR",
@@ -3437,6 +3578,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "480",
         "slug": "mauricio",
         "sigla": "MU",
@@ -3461,6 +3603,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "175",
         "slug": "mayotte",
         "sigla": "YT",
@@ -3485,6 +3628,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "484",
         "slug": "mexico",
         "sigla": "MX",
@@ -3509,6 +3653,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "583",
         "slug": "micronesia",
         "sigla": "FM",
@@ -3535,6 +3680,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "498",
         "slug": "moldavia",
         "sigla": "MD",
@@ -3562,6 +3708,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "492",
         "slug": "monaco",
         "sigla": "MC",
@@ -3586,6 +3733,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "496",
         "slug": "mongolia",
         "sigla": "MN",
@@ -3610,6 +3758,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "499",
         "slug": "montenegro",
         "sigla": "ME",
@@ -3634,6 +3783,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "500",
         "slug": "montserrat",
         "sigla": "MS",
@@ -3658,6 +3808,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "504",
         "slug": "marrocos",
         "sigla": "MA",
@@ -3682,6 +3833,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "508",
         "slug": "mocambique",
         "sigla": "MZ",
@@ -3706,6 +3858,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "104",
         "slug": "mianma",
         "sigla": "MM",
@@ -3736,6 +3889,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "516",
         "slug": "namibia",
         "sigla": "NA",
@@ -3760,6 +3914,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "520",
         "slug": "nauru",
         "sigla": "NR",
@@ -3784,6 +3939,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "524",
         "slug": "nepal",
         "sigla": "NP",
@@ -3808,6 +3964,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "528",
         "slug": "holanda",
         "sigla": "NL",
@@ -3832,6 +3989,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "540",
         "slug": "nova-caledonia",
         "sigla": "NC",
@@ -3856,6 +4014,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "554",
         "slug": "nova-zelandia",
         "sigla": "NZ",
@@ -3880,6 +4039,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "558",
         "slug": "nicaragua",
         "sigla": "NI",
@@ -3904,6 +4064,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "562",
         "slug": "niger",
         "sigla": "NE",
@@ -3928,6 +4089,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "566",
         "slug": "nigeria",
         "sigla": "NG",
@@ -3952,6 +4114,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "570",
         "slug": "niue",
         "sigla": "NU",
@@ -3976,6 +4139,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "574",
         "slug": "ilha-norfolk",
         "sigla": "NF",
@@ -4000,6 +4164,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "580",
         "slug": "ilhas-marianas",
         "sigla": "MP",
@@ -4024,6 +4189,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "578",
         "slug": "noruega",
         "sigla": "NO",
@@ -4048,6 +4214,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "512",
         "slug": "oma",
         "sigla": "OM",
@@ -4072,6 +4239,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "586",
         "slug": "paquistao",
         "sigla": "PK",
@@ -4096,6 +4264,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "585",
         "slug": "palau",
         "sigla": "PW",
@@ -4120,6 +4289,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "275",
         "slug": "palestina",
         "sigla": "PS",
@@ -4144,6 +4314,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "591",
         "slug": "panama",
         "sigla": "PA",
@@ -4168,6 +4339,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "598",
         "slug": "papua-nova-guine",
         "sigla": "PG",
@@ -4192,6 +4364,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "600",
         "slug": "paraguai",
         "sigla": "PY",
@@ -4216,6 +4389,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "604",
         "slug": "peru",
         "sigla": "PE",
@@ -4240,6 +4414,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "608",
         "slug": "filipinas",
         "sigla": "PH",
@@ -4264,6 +4439,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "612",
         "slug": "pitcairn",
         "sigla": "PN",
@@ -4290,6 +4466,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "616",
         "slug": "polonia",
         "sigla": "PL",
@@ -4314,6 +4491,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "620",
         "slug": "portugal",
         "sigla": "PT",
@@ -4338,6 +4516,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "630",
         "slug": "porto-rico",
         "sigla": "PR",
@@ -4362,6 +4541,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "634",
         "slug": "catar",
         "sigla": "QA",
@@ -4386,6 +4566,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "638",
         "slug": "ilha-reuniao",
         "sigla": "RE",
@@ -4410,6 +4591,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "642",
         "slug": "romenia",
         "sigla": "RO",
@@ -4434,6 +4616,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "643",
         "slug": "russia-federacao-russa",
         "sigla": "RU",
@@ -4460,6 +4643,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "646",
         "slug": "ruanda",
         "sigla": "RW",
@@ -4484,6 +4668,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "652",
         "slug": "sao-bartolomeu",
         "sigla": "BL",
@@ -4508,6 +4693,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "654",
         "slug": "santa-helena",
         "sigla": "SH",
@@ -4534,6 +4720,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "659",
         "slug": "sao-cristovao-e-nevis",
         "sigla": "KN",
@@ -4558,6 +4745,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "662",
         "slug": "santa-lucia",
         "sigla": "LC",
@@ -4582,6 +4770,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "663",
         "slug": "saint-martin-parte-francesa",
         "sigla": "MF",
@@ -4608,6 +4797,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "666",
         "slug": "saint-pierre-e-miquelon",
         "sigla": "PM",
@@ -4632,6 +4822,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "670",
         "slug": "sao-vicente-e-granadinas",
         "sigla": "VC",
@@ -4656,6 +4847,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "882",
         "slug": "samoa",
         "sigla": "WS",
@@ -4680,6 +4872,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "674",
         "slug": "san-marino",
         "sigla": "SM",
@@ -4704,6 +4897,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "678",
         "slug": "sao-tome-e-principe",
         "sigla": "ST",
@@ -4728,6 +4922,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "682",
         "slug": "arabia-saudita",
         "sigla": "SA",
@@ -4752,6 +4947,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "686",
         "slug": "senegal",
         "sigla": "SN",
@@ -4776,6 +4972,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "688",
         "slug": "servia",
         "sigla": "RS",
@@ -4800,6 +4997,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "690",
         "slug": "seichelles",
         "sigla": "SC",
@@ -4824,6 +5022,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "694",
         "slug": "serra-leoa",
         "sigla": "SL",
@@ -4848,6 +5047,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "702",
         "slug": "cingapura",
         "sigla": "SG",
@@ -4872,6 +5072,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "534",
         "slug": "saint-martin-parte-holandesa",
         "sigla": "SX",
@@ -4898,6 +5099,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "703",
         "slug": "eslovaquia",
         "sigla": "SK",
@@ -4922,6 +5124,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "705",
         "slug": "eslovenia",
         "sigla": "SI",
@@ -4946,6 +5149,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "90",
         "slug": "ilhas-salomao",
         "sigla": "SB",
@@ -4970,6 +5174,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "706",
         "slug": "somalia",
         "sigla": "SO",
@@ -4994,6 +5199,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "710",
         "slug": "africa-do-sul",
         "sigla": "ZA",
@@ -5018,6 +5224,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "239",
         "slug": "ilhas-georgia-do-sul-e-sandwich-do-sul",
         "sigla": "GS",
@@ -5042,6 +5249,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "728",
         "slug": "sudao-do-sul",
         "sigla": "SS",
@@ -5066,6 +5274,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "724",
         "slug": "espanha",
         "sigla": "ES",
@@ -5090,6 +5299,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "144",
         "slug": "sri-lanka",
         "sigla": "LK",
@@ -5114,6 +5324,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "729",
         "slug": "sudao",
         "sigla": "SD",
@@ -5138,6 +5349,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "740",
         "slug": "suriname",
         "sigla": "SR",
@@ -5162,6 +5374,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "744",
         "slug": "svalbard-e-jan-mayen-islands",
         "sigla": "SJ",
@@ -5188,6 +5401,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "748",
         "slug": "suazilandia",
         "sigla": "SZ",
@@ -5212,6 +5426,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "752",
         "slug": "suecia",
         "sigla": "SE",
@@ -5236,6 +5451,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "756",
         "slug": "suica",
         "sigla": "CH",
@@ -5260,6 +5476,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "760",
         "slug": "siria",
         "sigla": "SY",
@@ -5286,6 +5503,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "158",
         "slug": "taiwan",
         "sigla": "TW",
@@ -5312,6 +5530,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "762",
         "slug": "tadjiquistao",
         "sigla": "TJ",
@@ -5336,6 +5555,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "834",
         "slug": "tanzania",
         "sigla": "TZ",
@@ -5364,6 +5584,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "764",
         "slug": "tailandia",
         "sigla": "TH",
@@ -5388,6 +5609,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "626",
         "slug": "timor-leste",
         "sigla": "TL",
@@ -5412,6 +5634,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "768",
         "slug": "togo",
         "sigla": "TG",
@@ -5438,6 +5661,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "772",
         "slug": "tokelau",
         "sigla": "TK",
@@ -5462,6 +5686,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "776",
         "slug": "tonga",
         "sigla": "TO",
@@ -5486,6 +5711,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "780",
         "slug": "trinidad-e-tobago",
         "sigla": "TT",
@@ -5510,6 +5736,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "788",
         "slug": "tunisia",
         "sigla": "TN",
@@ -5534,6 +5761,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "792",
         "slug": "turquia",
         "sigla": "TR",
@@ -5558,6 +5786,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "795",
         "slug": "turcomenistao",
         "sigla": "TM",
@@ -5582,6 +5811,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "796",
         "slug": "ilhas-turks-e-caicos",
         "sigla": "TC",
@@ -5606,6 +5836,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "798",
         "slug": "tuvalu",
         "sigla": "TV",
@@ -5630,6 +5861,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "800",
         "slug": "uganda",
         "sigla": "UG",
@@ -5654,6 +5886,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "804",
         "slug": "ucrania",
         "sigla": "UA",
@@ -5678,6 +5911,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "784",
         "slug": "emirados-arabes-unidos",
         "sigla": "AE",
@@ -5702,6 +5936,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "826",
         "slug": "reino-unido",
         "sigla": "GB",
@@ -5728,6 +5963,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "581",
         "slug": "ilhas-menores-distantes-dos-estados-unidos",
         "sigla": "UM",
@@ -5752,6 +5988,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "840",
         "slug": "estados-unidos-da-america",
         "sigla": "US",
@@ -5778,6 +6015,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "858",
         "slug": "uruguai",
         "sigla": "UY",
@@ -5802,6 +6040,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "860",
         "slug": "uzbequistao",
         "sigla": "UZ",
@@ -5826,6 +6065,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "548",
         "slug": "vanuatu",
         "sigla": "VU",
@@ -5850,6 +6090,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "862",
         "slug": "venezuela",
         "sigla": "VE",
@@ -5876,6 +6117,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "704",
         "slug": "vietna",
         "sigla": "VN",
@@ -5902,6 +6144,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "92",
         "slug": "ilhas-virgens-britanicas",
         "sigla": "VG",
@@ -5926,6 +6169,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "850",
         "slug": "ilhas-virgens",
         "sigla": "VI",
@@ -5952,6 +6196,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "876",
         "slug": "ilhas-wallis-e-futuna",
         "sigla": "WF",
@@ -5978,6 +6223,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "732",
         "slug": "saara-ocidental",
         "sigla": "EH",
@@ -6002,6 +6248,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "887",
         "slug": "iemen",
         "sigla": "YE",
@@ -6026,6 +6273,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "894",
         "slug": "zambia",
         "sigla": "ZM",
@@ -6050,6 +6298,7 @@
     },
     {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": "716",
         "slug": "zimbabue",
         "sigla": "ZW",

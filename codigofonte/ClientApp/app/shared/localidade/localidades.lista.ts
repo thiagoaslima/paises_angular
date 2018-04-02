@@ -4,6 +4,7 @@ export const localidades = {
     "paises": [
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "4",
             "slug": "afeganistao",
             "sigla": "AF",
@@ -34,6 +35,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "248",
             "slug": "ilhas-alanda",
             "sigla": "AX",
@@ -64,6 +66,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "8",
             "slug": "albania",
             "sigla": "AL",
@@ -94,6 +97,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "12",
             "slug": "argelia",
             "sigla": "DZ",
@@ -124,6 +128,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "16",
             "slug": "samoa-americana",
             "sigla": "AS",
@@ -154,6 +159,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "20",
             "slug": "andorra",
             "sigla": "AD",
@@ -184,6 +190,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "24",
             "slug": "angola",
             "sigla": "AO",
@@ -214,6 +221,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "660",
             "slug": "anguilla",
             "sigla": "AI",
@@ -244,6 +252,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "10",
             "slug": "antartida",
             "sigla": "AQ",
@@ -274,6 +283,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "28",
             "slug": "antigua-e-barbuda",
             "sigla": "AG",
@@ -304,6 +314,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "32",
             "slug": "argentina",
             "sigla": "AR",
@@ -334,6 +345,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "51",
             "slug": "armenia",
             "sigla": "AM",
@@ -364,6 +376,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "533",
             "slug": "aruba",
             "sigla": "AW",
@@ -394,6 +407,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "36",
             "slug": "australia",
             "sigla": "AU",
@@ -424,6 +438,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "40",
             "slug": "austria",
             "sigla": "AT",
@@ -454,6 +469,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "31",
             "slug": "azerbaijao",
             "sigla": "AZ",
@@ -484,6 +500,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "44",
             "slug": "bahamas",
             "sigla": "BS",
@@ -516,6 +533,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "48",
             "slug": "barein",
             "sigla": "BH",
@@ -546,6 +564,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "50",
             "slug": "bangladesh",
             "sigla": "BD",
@@ -576,6 +595,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "52",
             "slug": "barbados",
             "sigla": "BB",
@@ -606,6 +626,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "112",
             "slug": "bielorussia",
             "sigla": "BY",
@@ -636,6 +657,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "56",
             "slug": "belgica",
             "sigla": "BE",
@@ -666,6 +688,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "84",
             "slug": "belize",
             "sigla": "BZ",
@@ -696,6 +719,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "204",
             "slug": "benin",
             "sigla": "BJ",
@@ -726,6 +750,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "60",
             "slug": "bermuda",
             "sigla": "BM",
@@ -756,6 +781,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "64",
             "slug": "butao",
             "sigla": "BT",
@@ -786,6 +812,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "68",
             "slug": "bolivia",
             "sigla": "BO",
@@ -820,6 +847,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "535",
             "slug": "bonaire-santo-eustaquio-e-saba",
             "sigla": "BQ",
@@ -850,6 +878,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "70",
             "slug": "bosnia-herzegovina",
             "sigla": "BA",
@@ -880,6 +909,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "72",
             "slug": "botsuana",
             "sigla": "BW",
@@ -910,6 +940,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "74",
             "slug": "ilha-bouvet",
             "sigla": "BV",
@@ -940,6 +971,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "76",
             "slug": "brasil",
             "sigla": "BR",
@@ -970,6 +1002,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "86",
             "slug": "territorio-britanico-do-oceano-indico",
             "sigla": "IO",
@@ -1000,6 +1033,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "96",
             "slug": "brunei",
             "sigla": "BN",
@@ -1036,6 +1070,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "100",
             "slug": "bulgaria",
             "sigla": "BG",
@@ -1066,6 +1101,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "854",
             "slug": "burkina-faso",
             "sigla": "BF",
@@ -1096,6 +1132,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "108",
             "slug": "burundi",
             "sigla": "BI",
@@ -1126,6 +1163,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "132",
             "slug": "cabo-verde",
             "sigla": "CV",
@@ -1156,6 +1194,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "116",
             "slug": "camboja",
             "sigla": "KH",
@@ -1186,6 +1225,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "120",
             "slug": "camaroes",
             "sigla": "CM",
@@ -1216,6 +1256,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "124",
             "slug": "canada",
             "sigla": "CA",
@@ -1246,6 +1287,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "136",
             "slug": "ilhas-cayman",
             "sigla": "KY",
@@ -1276,6 +1318,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "140",
             "slug": "republica-centro-africana",
             "sigla": "CF",
@@ -1306,6 +1349,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "148",
             "slug": "chade",
             "sigla": "TD",
@@ -1336,6 +1380,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "152",
             "slug": "chile",
             "sigla": "CL",
@@ -1366,6 +1411,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "156",
             "slug": "china",
             "sigla": "CN",
@@ -1402,6 +1448,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "162",
             "slug": "ilha-christmas",
             "sigla": "CX",
@@ -1432,6 +1479,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "166",
             "slug": "ilhas-cocos-keeling",
             "sigla": "CC",
@@ -1462,6 +1510,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "170",
             "slug": "colombia",
             "sigla": "CO",
@@ -1492,6 +1541,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "174",
             "slug": "comores",
             "sigla": "KM",
@@ -1522,6 +1572,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "180",
             "slug": "republica-democratica-do-congo",
             "sigla": "CD",
@@ -1554,6 +1605,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "178",
             "slug": "congo",
             "sigla": "CG",
@@ -1586,6 +1638,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "184",
             "slug": "ilhas-cook",
             "sigla": "CK",
@@ -1616,6 +1669,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "188",
             "slug": "costa-rica",
             "sigla": "CR",
@@ -1646,6 +1700,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "384",
             "slug": "costa-do-marfim",
             "sigla": "CI",
@@ -1676,6 +1731,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "191",
             "slug": "croacia",
             "sigla": "HR",
@@ -1706,6 +1762,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "192",
             "slug": "cuba",
             "sigla": "CU",
@@ -1736,6 +1793,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "531",
             "slug": "curacao",
             "sigla": "CW",
@@ -1766,6 +1824,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "196",
             "slug": "chipre",
             "sigla": "CY",
@@ -1796,6 +1855,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "203",
             "slug": "republica-tcheca",
             "sigla": "CZ",
@@ -1832,6 +1892,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "208",
             "slug": "dinamarca",
             "sigla": "DK",
@@ -1862,6 +1923,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "262",
             "slug": "djibouti",
             "sigla": "DJ",
@@ -1892,6 +1954,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "212",
             "slug": "dominica",
             "sigla": "DM",
@@ -1922,6 +1985,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "214",
             "slug": "republica-dominicana",
             "sigla": "DO",
@@ -1952,6 +2016,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "218",
             "slug": "equador",
             "sigla": "EC",
@@ -1982,6 +2047,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "818",
             "slug": "egito",
             "sigla": "EG",
@@ -2012,6 +2078,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "222",
             "slug": "el-salvador",
             "sigla": "SV",
@@ -2042,6 +2109,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "226",
             "slug": "guine-equatorial",
             "sigla": "GQ",
@@ -2072,6 +2140,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "232",
             "slug": "eritreia",
             "sigla": "ER",
@@ -2102,6 +2171,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "233",
             "slug": "estonia",
             "sigla": "EE",
@@ -2132,6 +2202,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "231",
             "slug": "etiopia",
             "sigla": "ET",
@@ -2162,6 +2233,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "238",
             "slug": "ilhas-falkland",
             "sigla": "FK",
@@ -2194,6 +2266,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "234",
             "slug": "ilhas-faeroe",
             "sigla": "FO",
@@ -2224,6 +2297,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "242",
             "slug": "fiji",
             "sigla": "FJ",
@@ -2254,6 +2328,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "246",
             "slug": "finlandia",
             "sigla": "FI",
@@ -2284,6 +2359,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "250",
             "slug": "franca",
             "sigla": "FR",
@@ -2314,6 +2390,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "254",
             "slug": "guiana-francesa",
             "sigla": "GF",
@@ -2344,6 +2421,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "258",
             "slug": "polinesia-francesa",
             "sigla": "PF",
@@ -2374,6 +2452,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "260",
             "slug": "terras-austrais-e-antarticas-francesas",
             "sigla": "TF",
@@ -2404,6 +2483,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "266",
             "slug": "gabao",
             "sigla": "GA",
@@ -2434,6 +2514,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "270",
             "slug": "gambia",
             "sigla": "GM",
@@ -2466,6 +2547,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "268",
             "slug": "georgia",
             "sigla": "GE",
@@ -2496,6 +2578,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "276",
             "slug": "alemanha",
             "sigla": "DE",
@@ -2526,6 +2609,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "288",
             "slug": "gana",
             "sigla": "GH",
@@ -2556,6 +2640,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "292",
             "slug": "gibraltar",
             "sigla": "GI",
@@ -2586,6 +2671,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "300",
             "slug": "grecia",
             "sigla": "GR",
@@ -2616,6 +2702,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "304",
             "slug": "groenlandia",
             "sigla": "GL",
@@ -2646,6 +2733,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "308",
             "slug": "granada",
             "sigla": "GD",
@@ -2676,6 +2764,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "312",
             "slug": "ilha-guadalupe",
             "sigla": "GP",
@@ -2706,6 +2795,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "316",
             "slug": "guam",
             "sigla": "GU",
@@ -2736,6 +2826,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "320",
             "slug": "guatemala",
             "sigla": "GT",
@@ -2766,6 +2857,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "831",
             "slug": "guernsey",
             "sigla": "GG",
@@ -2796,6 +2888,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "324",
             "slug": "guine",
             "sigla": "GN",
@@ -2826,6 +2919,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "624",
             "slug": "guine-bissau",
             "sigla": "GW",
@@ -2856,6 +2950,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "328",
             "slug": "guiana",
             "sigla": "GY",
@@ -2886,6 +2981,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "332",
             "slug": "haiti",
             "sigla": "HT",
@@ -2916,6 +3012,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "334",
             "slug": "ilha-heard-e-ilhas-mcdonald",
             "sigla": "HM",
@@ -2946,6 +3043,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "336",
             "slug": "vaticano",
             "sigla": "VA",
@@ -2978,6 +3076,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "340",
             "slug": "honduras",
             "sigla": "HN",
@@ -3008,6 +3107,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "344",
             "slug": "china-hong-kong",
             "sigla": "HK",
@@ -3045,6 +3145,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "348",
             "slug": "hungria",
             "sigla": "HU",
@@ -3075,6 +3176,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "352",
             "slug": "islandia",
             "sigla": "IS",
@@ -3105,6 +3207,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "356",
             "slug": "india",
             "sigla": "IN",
@@ -3135,6 +3238,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "360",
             "slug": "indonesia",
             "sigla": "ID",
@@ -3165,6 +3269,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "364",
             "slug": "ira",
             "sigla": "IR",
@@ -3197,6 +3302,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "368",
             "slug": "iraque",
             "sigla": "IQ",
@@ -3227,6 +3333,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "372",
             "slug": "irlanda",
             "sigla": "IE",
@@ -3257,6 +3364,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "833",
             "slug": "ilha-de-man",
             "sigla": "IM",
@@ -3287,6 +3395,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "376",
             "slug": "israel",
             "sigla": "IL",
@@ -3317,6 +3426,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "380",
             "slug": "italia",
             "sigla": "IT",
@@ -3347,6 +3457,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "388",
             "slug": "jamaica",
             "sigla": "JM",
@@ -3377,6 +3488,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "392",
             "slug": "japao",
             "sigla": "JP",
@@ -3407,6 +3519,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "832",
             "slug": "jersey",
             "sigla": "JE",
@@ -3437,6 +3550,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "400",
             "slug": "jordania",
             "sigla": "JO",
@@ -3467,6 +3581,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "398",
             "slug": "casaquistao",
             "sigla": "KZ",
@@ -3497,6 +3612,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "404",
             "slug": "quenia",
             "sigla": "KE",
@@ -3527,6 +3643,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "296",
             "slug": "kiribati",
             "sigla": "KI",
@@ -3557,6 +3674,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "408",
             "slug": "coreia-do-norte",
             "sigla": "KP",
@@ -3589,6 +3707,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "410",
             "slug": "coreia-do-sul",
             "sigla": "KR",
@@ -3622,6 +3741,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "414",
             "slug": "kuwait",
             "sigla": "KW",
@@ -3652,6 +3772,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "417",
             "slug": "quirguistao",
             "sigla": "KG",
@@ -3682,6 +3803,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "418",
             "slug": "laos",
             "sigla": "LA",
@@ -3714,6 +3836,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "428",
             "slug": "letonia",
             "sigla": "LV",
@@ -3744,6 +3867,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "422",
             "slug": "libano",
             "sigla": "LB",
@@ -3774,6 +3898,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "426",
             "slug": "lesoto",
             "sigla": "LS",
@@ -3804,6 +3929,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "430",
             "slug": "liberia",
             "sigla": "LR",
@@ -3834,6 +3960,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "434",
             "slug": "libia",
             "sigla": "LY",
@@ -3864,6 +3991,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "438",
             "slug": "liechtenstein",
             "sigla": "LI",
@@ -3894,6 +4022,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "440",
             "slug": "lituania",
             "sigla": "LT",
@@ -3924,6 +4053,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "442",
             "slug": "luxemburgo",
             "sigla": "LU",
@@ -3954,6 +4084,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "446",
             "slug": "china-macao",
             "sigla": "MO",
@@ -3984,6 +4115,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "807",
             "slug": "macedonia",
             "sigla": "MK",
@@ -4016,6 +4148,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "450",
             "slug": "madagascar",
             "sigla": "MG",
@@ -4046,6 +4179,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "454",
             "slug": "malaui",
             "sigla": "MW",
@@ -4076,6 +4210,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "458",
             "slug": "malasia",
             "sigla": "MY",
@@ -4106,6 +4241,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "462",
             "slug": "maldivas",
             "sigla": "MV",
@@ -4136,6 +4272,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "466",
             "slug": "mali",
             "sigla": "ML",
@@ -4166,6 +4303,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "470",
             "slug": "malta",
             "sigla": "MT",
@@ -4196,6 +4334,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "584",
             "slug": "ilhas-marshall",
             "sigla": "MH",
@@ -4226,6 +4365,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "474",
             "slug": "martinica",
             "sigla": "MQ",
@@ -4256,6 +4396,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "478",
             "slug": "mauritania",
             "sigla": "MR",
@@ -4286,6 +4427,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "480",
             "slug": "mauricio",
             "sigla": "MU",
@@ -4316,6 +4458,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "175",
             "slug": "mayotte",
             "sigla": "YT",
@@ -4346,6 +4489,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "484",
             "slug": "mexico",
             "sigla": "MX",
@@ -4376,6 +4520,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "583",
             "slug": "micronesia",
             "sigla": "FM",
@@ -4408,6 +4553,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "498",
             "slug": "moldavia",
             "sigla": "MD",
@@ -4441,6 +4587,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "492",
             "slug": "monaco",
             "sigla": "MC",
@@ -4471,6 +4618,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "496",
             "slug": "mongolia",
             "sigla": "MN",
@@ -4501,6 +4649,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "499",
             "slug": "montenegro",
             "sigla": "ME",
@@ -4531,6 +4680,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "500",
             "slug": "montserrat",
             "sigla": "MS",
@@ -4561,6 +4711,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "504",
             "slug": "marrocos",
             "sigla": "MA",
@@ -4591,6 +4742,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "508",
             "slug": "mocambique",
             "sigla": "MZ",
@@ -4621,6 +4773,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "104",
             "slug": "mianma",
             "sigla": "MM",
@@ -4657,6 +4810,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "516",
             "slug": "namibia",
             "sigla": "NA",
@@ -4687,6 +4841,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "520",
             "slug": "nauru",
             "sigla": "NR",
@@ -4717,6 +4872,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "524",
             "slug": "nepal",
             "sigla": "NP",
@@ -4747,6 +4903,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "528",
             "slug": "holanda",
             "sigla": "NL",
@@ -4777,6 +4934,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "540",
             "slug": "nova-caledonia",
             "sigla": "NC",
@@ -4807,6 +4965,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "554",
             "slug": "nova-zelandia",
             "sigla": "NZ",
@@ -4837,6 +4996,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "558",
             "slug": "nicaragua",
             "sigla": "NI",
@@ -4867,6 +5027,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "562",
             "slug": "niger",
             "sigla": "NE",
@@ -4897,6 +5058,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "566",
             "slug": "nigeria",
             "sigla": "NG",
@@ -4927,6 +5089,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "570",
             "slug": "niue",
             "sigla": "NU",
@@ -4957,6 +5120,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "574",
             "slug": "ilha-norfolk",
             "sigla": "NF",
@@ -4987,6 +5151,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "580",
             "slug": "ilhas-marianas",
             "sigla": "MP",
@@ -5017,6 +5182,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "578",
             "slug": "noruega",
             "sigla": "NO",
@@ -5047,6 +5213,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "512",
             "slug": "oma",
             "sigla": "OM",
@@ -5077,6 +5244,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "586",
             "slug": "paquistao",
             "sigla": "PK",
@@ -5107,6 +5275,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "585",
             "slug": "palau",
             "sigla": "PW",
@@ -5137,6 +5306,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "275",
             "slug": "palestina",
             "sigla": "PS",
@@ -5167,6 +5337,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "591",
             "slug": "panama",
             "sigla": "PA",
@@ -5197,6 +5368,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "598",
             "slug": "papua-nova-guine",
             "sigla": "PG",
@@ -5227,6 +5399,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "600",
             "slug": "paraguai",
             "sigla": "PY",
@@ -5257,6 +5430,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "604",
             "slug": "peru",
             "sigla": "PE",
@@ -5287,6 +5461,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "608",
             "slug": "filipinas",
             "sigla": "PH",
@@ -5317,6 +5492,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "612",
             "slug": "pitcairn",
             "sigla": "PN",
@@ -5349,6 +5525,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "616",
             "slug": "polonia",
             "sigla": "PL",
@@ -5379,6 +5556,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "620",
             "slug": "portugal",
             "sigla": "PT",
@@ -5409,6 +5587,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "630",
             "slug": "porto-rico",
             "sigla": "PR",
@@ -5439,6 +5618,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "634",
             "slug": "catar",
             "sigla": "QA",
@@ -5469,6 +5649,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "638",
             "slug": "ilha-reuniao",
             "sigla": "RE",
@@ -5499,6 +5680,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "642",
             "slug": "romenia",
             "sigla": "RO",
@@ -5529,6 +5711,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "643",
             "slug": "russia-federacao-russa",
             "sigla": "RU",
@@ -5561,6 +5744,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "646",
             "slug": "ruanda",
             "sigla": "RW",
@@ -5591,6 +5775,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "652",
             "slug": "sao-bartolomeu",
             "sigla": "BL",
@@ -5621,6 +5806,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "654",
             "slug": "santa-helena",
             "sigla": "SH",
@@ -5653,6 +5839,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "659",
             "slug": "sao-cristovao-e-nevis",
             "sigla": "KN",
@@ -5683,6 +5870,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "662",
             "slug": "santa-lucia",
             "sigla": "LC",
@@ -5713,6 +5901,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "663",
             "slug": "saint-martin-parte-francesa",
             "sigla": "MF",
@@ -5745,6 +5934,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "666",
             "slug": "saint-pierre-e-miquelon",
             "sigla": "PM",
@@ -5775,6 +5965,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "670",
             "slug": "sao-vicente-e-granadinas",
             "sigla": "VC",
@@ -5805,6 +5996,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "882",
             "slug": "samoa",
             "sigla": "WS",
@@ -5835,6 +6027,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "674",
             "slug": "san-marino",
             "sigla": "SM",
@@ -5865,6 +6058,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "678",
             "slug": "sao-tome-e-principe",
             "sigla": "ST",
@@ -5895,6 +6089,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "682",
             "slug": "arabia-saudita",
             "sigla": "SA",
@@ -5925,6 +6120,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "686",
             "slug": "senegal",
             "sigla": "SN",
@@ -5955,6 +6151,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "688",
             "slug": "servia",
             "sigla": "RS",
@@ -5985,6 +6182,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "690",
             "slug": "seichelles",
             "sigla": "SC",
@@ -6015,6 +6213,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "694",
             "slug": "serra-leoa",
             "sigla": "SL",
@@ -6045,6 +6244,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "702",
             "slug": "cingapura",
             "sigla": "SG",
@@ -6075,6 +6275,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "534",
             "slug": "saint-martin-parte-holandesa",
             "sigla": "SX",
@@ -6107,6 +6308,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "703",
             "slug": "eslovaquia",
             "sigla": "SK",
@@ -6137,6 +6339,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "705",
             "slug": "eslovenia",
             "sigla": "SI",
@@ -6167,6 +6370,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "90",
             "slug": "ilhas-salomao",
             "sigla": "SB",
@@ -6197,6 +6401,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "706",
             "slug": "somalia",
             "sigla": "SO",
@@ -6227,6 +6432,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "710",
             "slug": "africa-do-sul",
             "sigla": "ZA",
@@ -6257,6 +6463,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "239",
             "slug": "ilhas-georgia-do-sul-e-sandwich-do-sul",
             "sigla": "GS",
@@ -6287,6 +6494,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "728",
             "slug": "sudao-do-sul",
             "sigla": "SS",
@@ -6317,6 +6525,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "724",
             "slug": "espanha",
             "sigla": "ES",
@@ -6347,6 +6556,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "144",
             "slug": "sri-lanka",
             "sigla": "LK",
@@ -6377,6 +6587,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "729",
             "slug": "sudao",
             "sigla": "SD",
@@ -6407,6 +6618,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "740",
             "slug": "suriname",
             "sigla": "SR",
@@ -6437,6 +6649,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "744",
             "slug": "svalbard-e-jan-mayen-islands",
             "sigla": "SJ",
@@ -6469,6 +6682,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "748",
             "slug": "suazilandia",
             "sigla": "SZ",
@@ -6499,6 +6713,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "752",
             "slug": "suecia",
             "sigla": "SE",
@@ -6529,6 +6744,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "756",
             "slug": "suica",
             "sigla": "CH",
@@ -6559,6 +6775,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "760",
             "slug": "siria",
             "sigla": "SY",
@@ -6591,6 +6808,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "158",
             "slug": "taiwan",
             "sigla": "TW",
@@ -6623,6 +6841,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "762",
             "slug": "tadjiquistao",
             "sigla": "TJ",
@@ -6653,6 +6872,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "834",
             "slug": "tanzania",
             "sigla": "TZ",
@@ -6687,6 +6907,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "764",
             "slug": "tailandia",
             "sigla": "TH",
@@ -6717,6 +6938,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "626",
             "slug": "timor-leste",
             "sigla": "TL",
@@ -6747,6 +6969,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "768",
             "slug": "togo",
             "sigla": "TG",
@@ -6779,6 +7002,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "772",
             "slug": "tokelau",
             "sigla": "TK",
@@ -6809,6 +7033,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "776",
             "slug": "tonga",
             "sigla": "TO",
@@ -6839,6 +7064,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "780",
             "slug": "trinidad-e-tobago",
             "sigla": "TT",
@@ -6869,6 +7095,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "788",
             "slug": "tunisia",
             "sigla": "TN",
@@ -6899,6 +7126,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "792",
             "slug": "turquia",
             "sigla": "TR",
@@ -6929,6 +7157,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "795",
             "slug": "turcomenistao",
             "sigla": "TM",
@@ -6959,6 +7188,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "796",
             "slug": "ilhas-turks-e-caicos",
             "sigla": "TC",
@@ -6989,6 +7219,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "798",
             "slug": "tuvalu",
             "sigla": "TV",
@@ -7019,6 +7250,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "800",
             "slug": "uganda",
             "sigla": "UG",
@@ -7049,6 +7281,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "804",
             "slug": "ucrania",
             "sigla": "UA",
@@ -7079,6 +7312,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "784",
             "slug": "emirados-arabes-unidos",
             "sigla": "AE",
@@ -7109,6 +7343,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "826",
             "slug": "reino-unido",
             "sigla": "GB",
@@ -7141,6 +7376,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "581",
             "slug": "ilhas-menores-distantes-dos-estados-unidos",
             "sigla": "UM",
@@ -7171,6 +7407,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "840",
             "slug": "estados-unidos-da-america",
             "sigla": "US",
@@ -7203,6 +7440,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "858",
             "slug": "uruguai",
             "sigla": "UY",
@@ -7233,6 +7471,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "860",
             "slug": "uzbequistao",
             "sigla": "UZ",
@@ -7263,6 +7502,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "548",
             "slug": "vanuatu",
             "sigla": "VU",
@@ -7293,6 +7533,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "862",
             "slug": "venezuela",
             "sigla": "VE",
@@ -7325,6 +7566,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "704",
             "slug": "vietna",
             "sigla": "VN",
@@ -7357,6 +7599,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "92",
             "slug": "ilhas-virgens-britanicas",
             "sigla": "VG",
@@ -7387,6 +7630,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "850",
             "slug": "ilhas-virgens",
             "sigla": "VI",
@@ -7419,6 +7663,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "876",
             "slug": "ilhas-wallis-e-futuna",
             "sigla": "WF",
@@ -7451,6 +7696,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "732",
             "slug": "saara-ocidental",
             "sigla": "EH",
@@ -7481,6 +7727,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "887",
             "slug": "iemen",
             "sigla": "YE",
@@ -7511,6 +7758,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "894",
             "slug": "zambia",
             "sigla": "ZM",
@@ -7541,6 +7789,7 @@ export const localidades = {
         },
         {
             "tipo": "pais",
+            "onu_type": "country or area",
             "codigo": "716",
             "slug": "zimbabue",
             "sigla": "ZW",
@@ -7570,9 +7819,10 @@ export const localidades = {
             "onu": true
         }
     ],
-    "regioes": {
-        "World": {
+    "regioes": [
+        {
             "tipo": "mundo",
+            "onu_type": "global",
             "slug": "mundo",
             "nome": {
                 "en": "World",
@@ -7587,8 +7837,9 @@ export const localidades = {
             "codigo": 1,
             "parent": null
         },
-        "Northern Africa": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "norte-da-africa",
             "nome": {
                 "en": "Northern Africa",
@@ -7603,8 +7854,9 @@ export const localidades = {
             "codigo": 15,
             "parent": 2
         },
-        "Africa": {
-            "tipo": "subregiao",
+        {
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": "africa",
             "nome": {
                 "en": "Africa",
@@ -7619,8 +7871,9 @@ export const localidades = {
             "codigo": 2,
             "parent": 1
         },
-        "Eastern Africa": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "africa-oriental",
             "nome": {
                 "en": "Eastern Africa",
@@ -7635,8 +7888,9 @@ export const localidades = {
             "codigo": 14,
             "parent": 202
         },
-        "Sub-Saharan Africa": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "africa-subsaariana",
             "nome": {
                 "en": "Sub-Saharan Africa",
@@ -7651,8 +7905,9 @@ export const localidades = {
             "codigo": 202,
             "parent": 2
         },
-        "Middle Africa": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "africa-central",
             "nome": {
                 "en": "Middle Africa",
@@ -7667,8 +7922,9 @@ export const localidades = {
             "codigo": 17,
             "parent": 202
         },
-        "Southern Africa": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "africa-austral",
             "nome": {
                 "en": "Southern Africa",
@@ -7683,8 +7939,9 @@ export const localidades = {
             "codigo": 18,
             "parent": 202
         },
-        "Western Africa": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "africa-ocidental",
             "nome": {
                 "en": "Western Africa",
@@ -7699,8 +7956,9 @@ export const localidades = {
             "codigo": 11,
             "parent": 202
         },
-        "Caribbean": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "caribe",
             "nome": {
                 "en": "Caribbean",
@@ -7715,8 +7973,9 @@ export const localidades = {
             "codigo": 29,
             "parent": 419
         },
-        "Latin America and the Caribbean": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "america-latina-e-o-caribe",
             "nome": {
                 "en": "Latin America and the Caribbean",
@@ -7731,8 +7990,9 @@ export const localidades = {
             "codigo": 419,
             "parent": 19
         },
-        "Americas": {
-            "tipo": "subregiao",
+        {
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": "america",
             "nome": {
                 "en": "Americas",
@@ -7747,8 +8007,9 @@ export const localidades = {
             "codigo": 19,
             "parent": 1
         },
-        "Central America": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "america-central",
             "nome": {
                 "en": "Central America",
@@ -7763,8 +8024,9 @@ export const localidades = {
             "codigo": 13,
             "parent": 419
         },
-        "South America": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "america-do-sul",
             "nome": {
                 "en": "South America",
@@ -7779,8 +8041,9 @@ export const localidades = {
             "codigo": 5,
             "parent": 419
         },
-        "Northern America": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "america-do-norte",
             "nome": {
                 "en": "Northern America",
@@ -7795,8 +8058,9 @@ export const localidades = {
             "codigo": 21,
             "parent": 19
         },
-        "Central Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "asia-central",
             "nome": {
                 "en": "Central Asia",
@@ -7811,8 +8075,9 @@ export const localidades = {
             "codigo": 143,
             "parent": 142
         },
-        "Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": "asia",
             "nome": {
                 "en": "Asia",
@@ -7827,8 +8092,9 @@ export const localidades = {
             "codigo": 142,
             "parent": 1
         },
-        "Eastern Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "asia-oriental",
             "nome": {
                 "en": "Eastern Asia",
@@ -7843,8 +8109,9 @@ export const localidades = {
             "codigo": 30,
             "parent": 142
         },
-        "South-eastern Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "sudeste-asiatico",
             "nome": {
                 "en": "South-eastern Asia",
@@ -7859,8 +8126,9 @@ export const localidades = {
             "codigo": 35,
             "parent": 142
         },
-        "Southern Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "asia-meridional",
             "nome": {
                 "en": "Southern Asia",
@@ -7875,8 +8143,9 @@ export const localidades = {
             "codigo": 34,
             "parent": 142
         },
-        "Western Asia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "asia-ocidental",
             "nome": {
                 "en": "Western Asia",
@@ -7891,8 +8160,9 @@ export const localidades = {
             "codigo": 145,
             "parent": 142
         },
-        "Eastern Europe": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "europa-oriental",
             "nome": {
                 "en": "Eastern Europe",
@@ -7907,8 +8177,9 @@ export const localidades = {
             "codigo": 151,
             "parent": 150
         },
-        "Europe": {
-            "tipo": "subregiao",
+        {
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": "europa",
             "nome": {
                 "en": "Europe",
@@ -7923,8 +8194,9 @@ export const localidades = {
             "codigo": 150,
             "parent": 1
         },
-        "Northern Europe": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "europa-setentrional",
             "nome": {
                 "en": "Northern Europe",
@@ -7939,8 +8211,9 @@ export const localidades = {
             "codigo": 154,
             "parent": 150
         },
-        "Channel Islands": {
+        {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": "ilhas-do-canal-ilhas-anglo-normandas",
             "nome": {
                 "en": "Channel Islands",
@@ -7955,8 +8228,9 @@ export const localidades = {
             "codigo": 830,
             "parent": 154
         },
-        "Southern Europe": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "europa-meridional",
             "nome": {
                 "en": "Southern Europe",
@@ -7971,8 +8245,9 @@ export const localidades = {
             "codigo": 39,
             "parent": 150
         },
-        "Western Europe": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "europa-ocidental",
             "nome": {
                 "en": "Western Europe",
@@ -7987,8 +8262,9 @@ export const localidades = {
             "codigo": 155,
             "parent": 150
         },
-        "Australia and New Zealand": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "australia-e-nova-zelandia",
             "nome": {
                 "en": "Australia and New Zealand",
@@ -8003,8 +8279,9 @@ export const localidades = {
             "codigo": 53,
             "parent": 9
         },
-        "Oceania": {
-            "tipo": "subregiao",
+        {
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": "oceania",
             "nome": {
                 "en": "Oceania",
@@ -8019,8 +8296,9 @@ export const localidades = {
             "codigo": 9,
             "parent": 1
         },
-        "Melanesia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "melanesia",
             "nome": {
                 "en": "Melanesia",
@@ -8035,8 +8313,9 @@ export const localidades = {
             "codigo": 54,
             "parent": 9
         },
-        "Micronesia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "micronesia",
             "nome": {
                 "en": "Micronesia",
@@ -8051,8 +8330,9 @@ export const localidades = {
             "codigo": 57,
             "parent": 9
         },
-        "Polynesia": {
-            "tipo": "subregiao",
+        {
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": "polinesia",
             "nome": {
                 "en": "Polynesia",
@@ -8067,5 +8347,5 @@ export const localidades = {
             "codigo": 61,
             "parent": 9
         }
-    }
+    ]
 }
