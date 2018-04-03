@@ -431,7 +431,72 @@
                 "nome": "Calorias consumidas",
                 "nome_publicacao": "Dietary energy supply",
                 "tabela_publicacao": "A_9",
-                "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.Wr1P7P0lFoM"
+                "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.Wr1P7P0lFoM",
+                "obs": [
+                    "Dados extraídos de arquivo cujo link está na página acima"
+                ]
+            },
+            {
+                "id": 62971,
+                "variavel_code": "indicadoressociais_12",
+                "nome": "População subnutrida",
+                "nome_publicacao": "Prevalence of Undernourishment",
+                "tabela_publicacao": "I_2.3",
+                "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.Wr1P7P0lFoM",
+                "obs": [
+                    "Dados extraídos de arquivo cujo link está na página acima"
+                ]
+            }
+        ]
+    },
+
+    {
+        "fonte": "Uis Unesco",
+        "autor": "UNESCO Institute of Statistics",
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "http://uis.unesco.org/",
+        "dados": [
+            {
+                "id": 62972,
+                "variavel_code": "indicadoressociais_17",
+                "nome": "Taxa bruta de matrículas para todos os níveis de ensino",
+                "nome_publicacao": "Gross enrolment ratio by level of education - Primary to tertiary education",
+                "link": "http://uis.unesco.org/indicator/edu-part-er-ger",
+                "api_link": "https://api.uis.unesco.org/sdmx/data/UNESCO,EDU_NON_FINANCE,1.0/GER.PT.L1T8.._T.............?format=csv-:-semicolon-true-x&startPeriod={periodStart}&endPeriod={periodEnd}&locale=en&subscription-key=a1a2cd5ab4d1447e86c7000b61fcdaf6",
+                "obs": [
+                    "Substituir {periodStart} e {periodEnd}",
+                    "A consulta limita 2000 registros por vez. Separar a pesquisa em pesquisas deste tamanho caso seja feita via javascript"
+                ]
+            },
+            {
+                "id": 62974,
+                "variavel_code": "indicadoressociais_16",
+                "nome": "Taxa bruta de matrículas para todos os níveis de ensino",
+                "nome_publicacao": "Literacy rate by age group - 15 years and over",
+                "link": "http://uis.unesco.org/indicator/edu-lit-lr-age_group",
+                "api_link": "https://api.uis.unesco.org/sdmx/data/UNESCO,EDU_NON_FINANCE,2.0/LR.PT..._T.Y_GE15...............?format=csv-:-semicolon-true-x&startPeriod={periodStart}&endPeriod={periodEnd}&locale=en&subscription-key=a1a2cd5ab4d1447e86c7000b61fcdaf6",
+                "obs": [
+                    "Substituir {periodStart} e {periodEnd}",
+                    "A consulta limita 2000 registros por vez. Separar a pesquisa em pesquisas deste tamanho caso seja feita via javascript"
+                ]
+            }
+        ]
+    },
+
+    {
+        "fonte": "JMP",
+        "autor": "Unicef",
+        "periodicidade": "anual",
+        "teste": "mensal",
+        "link": "https://washdata.org/data",
+        "dados": [
+            {
+                "id": 62969,
+                "variavel_code": "indicadoressociais_14",
+                "nome": "População com acesso a água potável",
+                "nome_publicacao": "Drinking Water - Safely managed (or basic) water status",
+                "api_link": "https://api.washdata.org/estimates/country?country[]=AFG&country[]=ALB&country[]=DZA&country[]=ASM&country[]=AND&country[]=AGO&country[]=AIA&country[]=ATG&country[]=ARG&country[]=ARM&country[]=ABW&country[]=AUS&country[]=AUT&country[]=AZE&country[]=BHS&country[]=BHR&country[]=BGD&country[]=BRB&country[]=BLR&country[]=BEL&country[]=BLZ&country[]=BEN&country[]=BMU&country[]=BTN&country[]=BOL&country[]=BIH&country[]=BWA&country[]=BRA&country[]=VGB&country[]=BRN&country[]=BGR&country[]=BFA&country[]=BDI&country[]=CPV&country[]=KHM&country[]=CMR&country[]=CAN&country[]=CYM&country[]=CAF&country[]=TCD&country[]=CHI&country[]=CHL&country[]=CHN&country[]=HKG&country[]=MAC&country[]=COL&country[]=COM&country[]=COG&country[]=COK&country[]=CRI&country[]=HRV&country[]=CUB&country[]=CUW&country[]=CYP&country[]=CZE&country[]=CIV&country[]=PRK&country[]=COD&country[]=DNK&country[]=DJI&country[]=DMA&country[]=DOM&country[]=ECU&country[]=EGY&country[]=SLV&country[]=GNQ&country[]=ERI&country[]=EST&country[]=ETH&country[]=FLK&country[]=FRO&country[]=FJI&country[]=FIN&country[]=FRA&country[]=GUF&country[]=PYF&country[]=GAB&country[]=GMB&country[]=GEO&country[]=DEU&country[]=GHA&country[]=GIB&country[]=GRC&country[]=GRL&country[]=GRD&country[]=GLP&country[]=GUM&country[]=GTM&country[]=GIN&country[]=GNB&country[]=GUY&country[]=HTI&country[]=HND&country[]=HUN&country[]=ISL&country[]=IND&country[]=IDN&country[]=IRN&country[]=IRQ&country[]=IRL&country[]=IMN&country[]=ISR&country[]=ITA&country[]=JAM&country[]=JPN&country[]=JOR&country[]=KAZ&country[]=KEN&country[]=KIR&country[]=KWT&country[]=KGZ&country[]=LAO&country[]=LVA&country[]=LBN&country[]=LSO&country[]=LBR&country[]=LBY&country[]=LIE&country[]=LTU&country[]=LUX&country[]=MDG&country[]=MWI&country[]=MYS&country[]=MDV&country[]=MLI&country[]=MLT&country[]=MHL&country[]=MTQ&country[]=MRT&country[]=MUS&country[]=MYT&country[]=MEX&country[]=FSM&country[]=MCO&country[]=MNG&country[]=MNE&country[]=MSR&country[]=MAR&country[]=MOZ&country[]=MMR&country[]=NAM&country[]=NRU&country[]=NPL&country[]=NLD&country[]=NCL&country[]=NZL&country[]=NIC&country[]=NER&country[]=NGA&country[]=NIU&country[]=MNP&country[]=NOR&country[]=OMN&country[]=PAK&country[]=PLW&country[]=PAN&country[]=PNG&country[]=PRY&country[]=PER&country[]=PHL&country[]=POL&country[]=PRT&country[]=PRI&country[]=QAT&country[]=KOR&country[]=MDA&country[]=ROU&country[]=RUS&country[]=RWA&country[]=REU&country[]=SHN&country[]=KNA&country[]=LCA&country[]=SPM&country[]=VCT&country[]=WSM&country[]=SMR&country[]=STP&country[]=SAU&country[]=SEN&country[]=SRB&country[]=SYC&country[]=SLE&country[]=SGP&country[]=SXM&country[]=SVK&country[]=SVN&country[]=SLB&country[]=SOM&country[]=ZAF&country[]=SSD&country[]=ESP&country[]=LKA&country[]=SDN&country[]=SUR&country[]=SWZ&country[]=SWE&country[]=CHE&country[]=SYR&country[]=TJK&country[]=THA&country[]=MKD&country[]=TLS&country[]=TGO&country[]=TKL&country[]=TON&country[]=TTO&country[]=TUN&country[]=TUR&country[]=TKM&country[]=TCA&country[]=TUV&country[]=UGA&country[]=UKR&country[]=ARE&country[]=GBR&country[]=TZA&country[]=VIR&country[]=USA&country[]=URY&country[]=UZB&country[]=VUT&country[]=VEN&country[]=VNM&country[]=WLF&country[]=PSE&country[]=YEM&country[]=ZMB&country[]=ZWE&residence[]=total&service_level[]=Basic%20service&service_level[]=At%20least%20basic&service_level[]=Safely%20managed%20service&service_type[]=Drinking%20water&year[]=2000&year[]=2001&year[]=2002&year[]=2003&year[]=2004&year[]=2005&year[]=2006&year[]=2007&year[]=2008&year[]=2009&year[]=2010&year[]=2011&year[]=2012&year[]=2013&year[]=2014&year[]=2015",
             }
         ]
     }
