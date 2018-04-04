@@ -38,15 +38,18 @@
     font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
     font-weight: normal;
     color: #fff;
+    font-size: 0.9em
 }
 
 .dados-pais__sintese-valor{
+    font-size: 0.9em;
     padding: 8px 16px;
     color: #fff;
 }
 
 .dados-pais__sintese-titulo-container{
     display: table;
+    margin: 0 20px;
 }
 
 .dados-pais__sintese-voltar{

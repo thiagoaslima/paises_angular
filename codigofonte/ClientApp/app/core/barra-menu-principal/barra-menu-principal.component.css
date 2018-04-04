@@ -14,13 +14,17 @@
 }
 
 .cabecalho__logo{
-    margin: 0 0 0 5px;
+    margin: 0 0 0 0;
     display: inline-block;
+    width: 25%;
+    text-align: right;
+    min-width: 180px;
+    padding-right: 10px;
 }
 
 .cabecalho__logo-imagem{
     height: 30px;
-    margin-top: -10px;
+    margin-top: -8px;
 }
 
 .cabecalho__campo-busca-container{
@@ -54,6 +58,7 @@
     text-align: left;
     list-style: none;
     padding: 15px 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .cabecalho__sugestao-item{
@@ -74,7 +79,16 @@
     border: none;
     cursor: pointer;
 	background-color:transparent;
-    padding: 10px 10px 0 10px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+
+.cabecalho__menu-button-label{
+    color: #fff;
+    font-size: 2em;
+    margin: -15px 5px 0px 0px;
+    display: inline-block;
 }
 
 .cabecalho__menu-icone{
@@ -101,6 +115,7 @@
     text-align: left;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: 0.8em;
 }
 
 .cabecalho__menu-item--separator{
@@ -120,23 +135,22 @@
 @media only screen and (min-width : 568px) {
     .cabecalho{
         height: 50px;
-        text-align: center;
+        padding-top: 2px;
     }
 
     .cabecalho__logo{
-        margin: 0 20px 0 0;
     }
 
     .cabecalho__logo-imagem{
         height: 30px;
-        margin-top: -5px;
+        margin-top: -2px;
     }
 
     .cabecalho__campo-busca-container{
         display: inline-block;
         position: relative;
-        width: 55%;
-        top: -2px;
+        width: 58%;
+        top: initial;
     }
 
     .cabecalho__campo-busca{
@@ -147,10 +161,7 @@
         border-radius: 10px;
     }
 
-    .cabecalho__menu-button{
-        border: none;
-        cursor: pointer;
-        background-color:transparent;
-        padding: 15px 10px 0 15px;
+    .cabecalho__menu-button-label{
+        margin: -5px 10px 0px 0px;
     }
 }

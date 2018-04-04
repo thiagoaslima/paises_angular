@@ -85,7 +85,7 @@
 /*valor*/
 
 .grafico__valor-container{
-    padding-right: 18px;
+    padding: 0 18px;
 }
 
 .grafico__valor{
