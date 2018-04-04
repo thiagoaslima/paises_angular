@@ -9,11 +9,22 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true, // Workaround for https://github.com/angular/angular/issues/17863. Remove this if you upgrade to a fixed version of Angular.
     "strict": true,
-    "lib": [ "es6", "dom", "es2017" ],
-    "types": [ "webpack-env" ]
+    "lib": [
+      "es6",
+      "dom",
+      "es2017"
+    ],
+    "types": [
+      "webpack-env"
+    ]
   },
-  "exclude": [ "bin", "node_modules" ],
-  "atom": { "rewriteTsconfig": false },
+  "exclude": [
+    "bin",
+    "node_modules"
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  },
   "angularCompilerOptions": {
     "entryModule": "ClientApp/app/app.module.server#AppModule"
   }

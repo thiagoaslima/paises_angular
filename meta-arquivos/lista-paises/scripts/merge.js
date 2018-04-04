@@ -42,6 +42,7 @@ const slugMembrosONU = [].concat(ONU_MEMBROS.membros, ONU_MEMBROS.observadores.p
 let regioes = {
     "World": {
         "tipo": "mundo",
+        "onu_type": "global",
         "slug": "mundo",
         "nome": {
             "en": "World",
@@ -72,6 +73,7 @@ ONU_EN.forEach((obj) => {
 
         regioes[obj["Intermediate Region Name"]] = {
             "tipo": "subregiao",
+            "onu_type": "intermediate region",
             "slug": slug_pt,
             "nome": {
                 "en": obj["Intermediate Region Name"],
@@ -97,7 +99,8 @@ ONU_EN.forEach((obj) => {
         const slug_pt = slug(nome_pt);
 
         regioes[obj["Sub-region Name"]] = {
-            "tipo": "subregiao",
+            "tipo": "regiao",
+            "onu_type": "sub-region",
             "slug": slug_pt,
             "nome": {
                 "en": obj["Sub-region Name"],
@@ -123,7 +126,8 @@ ONU_EN.forEach((obj) => {
         const slug_pt = slug(nome_pt);
 
         regioes[obj["Region Name"]] = {
-            "tipo": "subregiao",
+            "tipo": "continente",
+            "onu_type": "region",
             "slug": slug_pt,
             "nome": {
                 "en": obj["Region Name"],
@@ -141,6 +145,8 @@ ONU_EN.forEach((obj) => {
     }
 
 });
+
+regioes = Object.keys(regioes).map(key => regioes[key]);
 
 
 let paises = ISO.map(obj => {
@@ -161,6 +167,7 @@ let paises = ISO.map(obj => {
 
     return {
         "tipo": "pais",
+        "onu_type": "country or area",
         "codigo": obj.numeric.toString(),
         "slug": slug_pt,
         "sigla": obj["code_a2"],
