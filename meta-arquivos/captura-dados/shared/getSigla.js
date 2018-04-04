@@ -1,4 +1,4 @@
-const slugify = require('../shared/slugify');
+const { slugify } = require('../shared/slugify');
 const DICIONARIO = require('../../lista-paises/compilado/nomeen_sigla_dicionario.json');
 
 function getSigla(name) {
@@ -6,4 +6,4 @@ function getSigla(name) {
     return DICIONARIO[slug];
 }
 
-module.exports = getSigla;
+module.exports = { getSigla };

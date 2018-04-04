@@ -9,4 +9,4 @@ function slugify(str) {
     });
 }
 
-module.exports = slugify;
+module.exports = { slugify };

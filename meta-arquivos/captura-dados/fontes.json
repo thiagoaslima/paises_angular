@@ -394,6 +394,11 @@
                 "nome": "Mulheres de 15 anos ou mais de idade economicamente ativas",
                 "nome_publicacao": "Labour force participation rate by sex and age -- ILO modelled estimates, July 2017 (%) - Female",
                 "link": "http://www.ilo.org/ilostat/faces/oracle/webcenter/portalapp/pagehierarchy/Page27.jspx?subject=ILOEST&indicator=EAP_2WAP_SEX_AGE_RT&datasetCode=A&collectionCode=ILOEST&_afrLoop=1409750336344794&_afrWindowMode=0&_afrWindowId=null#!%40%40%3Findicator%3DEAP_2WAP_SEX_AGE_RT%26_afrWindowId%3Dnull%26subject%3DILOEST%26_afrLoop%3D1409750336344794%26datasetCode%3DA%26collectionCode%3DILOEST%26_afrWindowMode%3D0%26_adf.ctrl-state%3D1rev8qygq_125",
+                "file_link": "http://www.ilo.org/ilostat-files/WEB_bulk_download/indicator/EAP_2WAP_SEX_AGE_RT_A.csv.gz",
+                "file_colunas": {
+                    "classif1": "AGE_YTHADULT_YGE15",
+                    "sex": "SEX_F"
+                },
                 "obs": [
                 ]
             },
@@ -403,6 +408,11 @@
                 "nome": "População de 15 anos ou mais de idade economicamente ativa",
                 "nome_publicacao": "Labour force participation rate by sex and age -- ILO modelled estimates, July 2017 (%) - Total",
                 "link": "http://www.ilo.org/ilostat/faces/oracle/webcenter/portalapp/pagehierarchy/Page27.jspx?subject=ILOEST&indicator=EAP_2WAP_SEX_AGE_RT&datasetCode=A&collectionCode=ILOEST&_afrLoop=1409750336344794&_afrWindowMode=0&_afrWindowId=null#!%40%40%3Findicator%3DEAP_2WAP_SEX_AGE_RT%26_afrWindowId%3Dnull%26subject%3DILOEST%26_afrLoop%3D1409750336344794%26datasetCode%3DA%26collectionCode%3DILOEST%26_afrWindowMode%3D0%26_adf.ctrl-state%3D1rev8qygq_125",
+                "file_link": "http://www.ilo.org/ilostat-files/WEB_bulk_download/indicator/EAP_2WAP_SEX_AGE_RT_A.csv.gz",
+                "file_colunas": {
+                    "classif1": "AGE_YTHADULT_YGE15",
+                    "sex": "SEX_T"
+                },
                 "obs": [
                 ]
             }
