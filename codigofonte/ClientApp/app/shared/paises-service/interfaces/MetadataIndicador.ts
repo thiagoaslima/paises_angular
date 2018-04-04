@@ -1,5 +1,6 @@
 export interface MetadataIndicador {
     id: number;
+    posicao: string;
     indicador: string;
     unidade: {
         identificador: string,

@@ -26,7 +26,7 @@ export class CardComponent {
                 valor = unidade.identificador
             }
             if(unidade.multiplicador && unidade.multiplicador != "" && unidade.multiplicador != "1"){
-                valor += " x " + unidade.multiplicador;
+                valor += " × " + unidade.multiplicador;
             }
         }
         return valor;

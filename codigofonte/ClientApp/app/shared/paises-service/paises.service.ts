@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators/tap';
 
 import { RequestService } from '../request.service';
 import { PaisesEnum } from './paises.enum';
-import { chunkArray, flattenArray } from '../../../utils';
+import { chunkArray, flattenArray, objArrayToMap } from '../../../utils';
 import { LocalidadeService } from '../localidade/localidade.service';
 import { Ranking, ResultadosIndicador, MetadataIndicador } from './interfaces';
 
@@ -29,12 +29,16 @@ export class PaisesService extends RequestService {
     getSintese(siglaPais: string) {
         const metadataObservable = this.getMetadataIndicador(1, 'one');
 
-        const resultadosObservable: Observable<ResultadosIndicador[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map(this.toResultadoModel.bind(this))));
+        const resultadosObservable: Observable<any[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`);
+        //.pipe(map(resultados => resultados.map(this.toResultadoModel.bind(this))));
 
         return metadataObservable.pipe(
             zip(resultadosObservable),
-            map(([metadata, resultados]) => ({ metadata, resultados }))
+            map(([metadata, resultadosRaw]) => {
+                const metadataMap = objArrayToMap(metadata);
+                const resultados = resultadosRaw.map(res => this.toResultadoModel(metadataMap[res.id], res))
+                return { metadata, resultados };
+            })
         );
     }
 
@@ -50,15 +54,20 @@ export class PaisesService extends RequestService {
     }
 
     getTodosDados(siglaPais: string) {
-        const metadataObservable = this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
+        const metadataObservable = this.getMetadataIndicador(0); //this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
 
-        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
-            .pipe(map(resultados => resultados.map((res: any) => this.toResultadoModel(res))));
+        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`).pipe(
+            map(resultados => resultados.filter((obj: any) => ['2', '8', '9'].indexOf(obj.posicao) === -1))
+        );
 
 
         return metadataObservable.pipe(
             zip(resultadosObservable),
-            map(([metadata, resultados]) => ({ metadata, resultados }))
+            map(([metadata, resultadosRaw]) => {
+                const metadataMap = objArrayToMap(metadata);
+                const resultados = resultadosRaw.map((res: any) => this.toResultadoModel(metadataMap[res.id], res))
+                return { metadata, resultados };
+            })
         );
     }
 
@@ -93,6 +102,7 @@ export class PaisesService extends RequestService {
     toMetadataModel(metadata: any) {
         return {
             id: metadata.id,
+            posicao: metadata.posicao,
             indicador: metadata.indicador,
             unidade: metadata.unidade ? {
                 identificador: metadata.unidade.id,
@@ -106,32 +116,27 @@ export class PaisesService extends RequestService {
             notas: metadata.nota,
             fontes: metadata.fonte,
             pai: metadata.pai
-        };
+        } as MetadataIndicador;
     }
 
-    toResultadoModel(resultado: { id: number, res: { localidade: string, res: any }[] }) {
-        let valoresValidos = Object.keys(resultado.res[0].res).reduce((agg, periodo) => {
-            if (resultado.res[0].res[periodo]) {
-                agg[periodo] = resultado.res[0].res[periodo];
-            }
+    toResultadoModel(metadata: MetadataIndicador, resultado: { id: number, res: { localidade: string, res: any }[] }) {
+        let periodos = metadata.fontes && metadata.fontes.length > 0
+            ? metadata.fontes.map(fonte => fonte.periodo).sort()
+            : ['-'];
 
-            return agg;
-        }, {} as { [periodo: string]: string });
+        let valores = periodos.map(periodo => resultado.res[0].res[periodo]);
 
-        let valorMaisRecente = Object.keys(valoresValidos).reduce((agg, periodo) => {
+        let valorMaisRecente = valores.reduce((agg, valor, idx) => {
             if (
-                !this.isSpecialValue(valoresValidos[periodo]) &&
-                periodo > agg.periodo
+                !this.isSpecialValue(valor) &&
+                periodos[idx] > agg.periodo
             ) {
-                agg.periodo = periodo;
-                agg.valor = valoresValidos[periodo];
+                agg.periodo = periodos[idx];
+                agg.valor = valor;
             }
 
             return agg;
         }, { periodo: "", valor: '' });
-
-        let periodos = Object.keys(valoresValidos).sort();
-        let valores = periodos.map(periodo => valoresValidos[periodo]);
 
         return {
             id: resultado.id,
@@ -140,7 +145,7 @@ export class PaisesService extends RequestService {
             localidade: resultado.res[0].localidade,
             valores,
             periodos
-        };
+        } as ResultadosIndicador;
     }
 
     isSpecialValue(valor: string) {

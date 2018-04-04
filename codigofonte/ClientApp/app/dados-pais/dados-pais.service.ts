@@ -27,58 +27,61 @@ export class DadosPaisService {
             PaisesEnum.temas.ambiente,
             PaisesEnum.temas.populacao,
             PaisesEnum.temas.telefonia,
-            PaisesEnum.temas.olimpicos
+            // PaisesEnum.temas.olimpicos
         ];
 
         return this._paisesService.getTodosDados(siglaPais).pipe(
-            map(response => {
+            map(({ metadata, resultados }) => {
                 console.time('#dadosPais process');
-                const resultadosMap = objArrayToMap(response.resultados);
+                const resultadosMap = objArrayToMap(resultados);
 
-                let dados = temas.map(tema => {
-                    const parent = response.metadata.find((obj: any) => obj.posicao === tema.toString());
-                    let metadata = this._paisesService.flatMetadata(parent.children).map(this._paisesService.toMetadataModel)
+                const dados = temas.reduce((agg, tema) => {
+                    const item = metadata.find(obj => obj.posicao === tema.toString());
+                    const nomeTema = item ? item.indicador : "";
 
-                    let values = metadata.map(obj => {
-                        let resultado = resultadosMap[obj.id];
-                        let valores: string[] = [];
-                        let periodos: string[] = [];
+                    agg[tema] = {
+                        tema: nomeTema,
+                        valores: []
+                    }
+                    return agg;
+                }, {} as { [key: number]: any });
 
-                        if (resultado) {
+                for (let met of metadata) {
+                    if (met.posicao.length === 1) { continue; }
+                    let tema = parseInt(met.posicao.split('.')[0], 10);
+                    if (temas.indexOf(tema) === -1) { continue; }
 
-                            resultado.valores.forEach((valor: string, idx: number) => {
-                                if (!this._paisesService.isSpecialValue(valor)) {
-                                    valores.push(valor);
-                                    periodos.push(resultado.periodos[idx]);
-                                }
-                            });
+                    let resultado = resultadosMap[met.id];
+                    let valores: string[] = [];
+                    let periodos: string[] = [];
 
-                            if (valores.length > 5) {
-                                valores.length = 5;
-                                periodos.length = 5;
+                    if (resultado) {
+                        resultado.valores.forEach((valor: string, idx: number) => {
+                            if (!this._paisesService.isSpecialValue(valor)) {
+                                valores.push(valor);
+                                periodos.push(resultado.periodos[idx]);
                             }
-                        }
-
-                        return {
-                            titulo: obj.indicador,
-                            valores: valores,
-                            periodos: periodos,
-                            unidade: obj.unidade,
-                            fontes: obj.fontes
-                        };
-
-                    }).sort((a, b) => a.titulo > b.titulo ? -1 : 1);
-
-                    return {
-                        tema: parent.indicador,
-                        valores: values
+                        });
                     }
 
-                });
+                    let obj = {
+                        titulo: met.indicador,
+                        valores: valores,
+                        periodos: periodos,
+                        unidade: met.unidade,
+                        fontes: met.fontes
+                    };
+
+                    dados[tema].valores.push(obj)
+                }
 
                 console.timeEnd('#dadosPais process');
-
-                return dados;
+                
+                return Object.keys(dados).map(key => {
+                    let obj = dados[parseInt(key, 10)];
+                    obj.valores.sort((a: any, b: any) => a.titulo > b.titulo ? -1 : 1);
+                    return obj;
+                });;
             })
         );
     }
