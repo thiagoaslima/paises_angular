@@ -66,6 +66,7 @@ export class DadosPaisService {
                     }
 
                     let obj = {
+                        id: met.id,
                         titulo: met.indicador,
                         valores: valores,
                         periodos: periodos,
