@@ -17,9 +17,9 @@
         </div>
         <!--gráfico-->
         <grafico *ngIf="!mostrarTabela"
-            [rotulosX]="tema.valores[graficoAtual].periodos"
+            [rotulosX]="tema.valores[graficoAtual].periodos.slice(-5)"
             [rotulosY]="[getUnidade(tema.valores[graficoAtual].unidade)]"
-            [dados]="[tema.valores[graficoAtual].valores]">
+            [dados]="[tema.valores[graficoAtual].valores.slice(-5)]">
         </grafico>
         <!--tabela mobile-->
         <!--<div class="card__tabela-mobile-container">
@@ -51,14 +51,20 @@
         </div>
         <!--rodapé-->
         <div class="card__rodape">
-            <div class="card__rodape-buttons-container">
+            <!--<div class="card__rodape-buttons-container">
                 <button class="card__rodape-buttom" (click)="mostrarTabela=!mostrarTabela">{{mostrarTabela ? 'Grafico' : 'Tabela'}}</button>
                 <button class="card__rodape-buttom">Fonte</button>
+            </div>-->
+            <div class="card__rodape-buttons-container">
+                <p class="card__fonte" *ngFor="let fonte of tema?.valores[graficoAtual]?.fontes[0]?.fontes">
+                    <span class="card__fonte-titulo">Fonte:</span>
+                    <a class="card__fonte-link" [href]="getLinkFonte(fonte)" target="_blank" rel="noopener noreferrer">{{ getTextoFonte(fonte) }}</a>
+                </p>
             </div>
-            <button class="card__rodape-buttom-comparar">
+            <a class="card__rodape-buttom-comparar" [routerLink]="'/ranking/' + 1 + '/' + pais?.slug">
                 <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
                 Comparar Países
-            </button>
+            </a>
         </div>
         <!--<div class="card__rodape">
             <p class="card__fonte">

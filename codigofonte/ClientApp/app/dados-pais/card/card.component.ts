@@ -10,6 +10,8 @@ export class CardComponent {
 
     @Input() tema: any;
 
+    @Input() pais: any;
+
     graficoAtual = 0;
 
     cardAberto = false;
@@ -29,7 +31,23 @@ export class CardComponent {
                 valor += " × " + unidade.multiplicador;
             }
         }
+        // console.log('>>>>>>>>>>>>', this.tema);
         return valor;
+    }
+
+    getTextoFonte(fonte:any){
+        if(fonte){
+            return fonte.split('Disponível em:')[0];
+        }
+        return '';
+    }
+
+    getLinkFonte(fonte:any){
+        if(fonte){
+            let link = fonte.split('Disponível em:')[1].split('Acesso em:')[0].replace('<', '').replace('>.', '').trim();
+            return link;
+        }
+        return '';
     }
 
 }

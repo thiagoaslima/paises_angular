@@ -22,7 +22,7 @@
     <div class="dados-pais__sintese">
         <!--capa-->
         <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrcCover + ')'">
-            <a [href]="imageLink" class="dados-pais__sintese-capa-link">
+            <a [href]="imageLink" target="_blank" rel="noopener noreferrer" class="dados-pais__sintese-capa-link">
                 <i class="fa fa-question-circle dados-pais__sintese-capa-icon"></i>
             </a>
         </div>
@@ -66,7 +66,7 @@
     </div>
     <!--cards container-->
     <div class="dados-pais__cards-container">
-        <card *ngFor="let t of temas" [tema]="t"></card>
+        <card *ngFor="let t of temas" [tema]="t" [pais]="pais"></card>
     </div>
     <!--tabelas-->
     <!--<div>
