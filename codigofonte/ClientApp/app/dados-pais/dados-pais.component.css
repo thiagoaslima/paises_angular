@@ -207,6 +207,7 @@
 
     .dados-pais__sintese-capa-icon{
         color: white;
+        filter: drop-shadow(2px 2px 5px black);
     }
 
     .dados-pais__sintese-voltar{
