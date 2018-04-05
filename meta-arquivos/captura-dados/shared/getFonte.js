@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const slugify = require('./slugify');
+const { slugify } = require('./slugify');
 
 const readFile = util.promisify(fs.readFile);
 

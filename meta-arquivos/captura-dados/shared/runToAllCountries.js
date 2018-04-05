@@ -8,4 +8,4 @@ function runToAllCountries(map) {
     }, {});
 }
 
-module.exports = runToAllCountries;
+module.exports = { runToAllCountries };

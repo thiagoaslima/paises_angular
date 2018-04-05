@@ -5,6 +5,6 @@ const _readFile = util.promisify(fs.readFile);
 
 function readFile(path, options) {
     return _readFile(path, options).catch(err => null);
-} 
+}
 
-module.exports = readFile;
+module.exports = { readFile };

@@ -1,41 +1,75 @@
+const path = require("path");
+const fs = require("fs");
+const request = require("request-promise-native");
 const {
     getFonte,
     getSigla,
     getVariavelCode,
     runToAllCountries,
+    saveFile,
     slugify
 } = require('../shared');
 
 const fonte = getFonte("National Accounts Main Aggregates Database, Basic Data Selection");
 
 function prepareToUpload(dados) {
-    const content = [];
-    Object.keys(dados).forEach(slug => {
-        let code = getVariavelCode("National Accounts Main Aggregates Database, Basic Data Selection", slug);
-        Object.keys(dados[slug]).forEach(periodo => {
-            let obj = runToAllCountries(dados[slug][periodo]);
-            let array = Object.keys(obj).map(sigla => `"${sigla}";"${obj[sigla]}"`);
-            let item = [`"";${code}`].concat(array).join("\n");
-            content.push(item);
-        })
+    return dados.map(obj => {
+        let allCountries = runToAllCountries(obj.content);
+        let array = Object.keys(allCountries).map(sigla => `"${sigla}";"${allCountries[sigla]}"`);
+        obj.content = [`"";${obj.variavel}`].concat(array).join("\n");
+        return obj;
     })
-    return content;
+}
+
+function upload(dados) {
+    const folder = path.resolve(__dirname, 'csv');
+
+    dados.forEach(obj => {
+        const filename = obj.variavel + '-' + obj.periodo;
+        saveFile(folder, filename, obj.content).then(res => {
+            let formData = {
+                file: fs.createReadStream(path.join(folder, filename))
+            }
+            request
+                .post({
+                    url: `http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/${obj.periodo}/resultados?publicacao=`,
+                    formData
+                }, )
+                .then(res => console.log('success', filename, res))
+                .catch(err => console.log('error', filename, err));
+        })
+    });
+
+    return dados;
 }
 
 function convertDados(json) {
-    let content = {};
+    let content = [];
 
     json.forEach(array => {
         let [head, ...tail] = array;
         const indicador = fonte.dados.find(obj => obj.titulo_tabela === head[3]);
         const slug = slugify(indicador.nome);
-        content[slug] = createYearsProperties(tail);
+        const id = indicador.id;
+        const variavel = indicador.variavel_code;
+
+        let mapByPeriod = createYearsProperties(tail);
 
         tail.forEach(obj => {
             let [name, year, currency, value] = Object.values(obj);
             let item = convertTableItem(name, value, slug);
-            content[slug][year][item.sigla] = item.valor;
+            if (!mapByPeriod[year]) { mapByPeriod[year] = {}; }
+            mapByPeriod[year][item.sigla] = item.valor;
         });
+
+        Object.keys(mapByPeriod).forEach(period => {
+            content.push({
+                id,
+                variavel,
+                periodo: period,
+                content: mapByPeriod[period]
+            });
+        })
     });
 
     return content;
@@ -52,8 +86,7 @@ function convertTableItem(name, value, slugIndicador) {
     return { sigla, valor };
 }
 
-function createYearsProperties(array) {
-    const obj = {};
+function createYearsProperties(array, obj = {}) {
     let lastName = "";
 
     for (let i = 0; i < array.length; i++) {
@@ -66,4 +99,4 @@ function createYearsProperties(array) {
     return obj;
 }
 
-module.exports = { convertDados, prepareToUpload }
+module.exports = { convertDados, prepareToUpload, upload }

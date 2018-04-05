@@ -12,4 +12,4 @@ const getPais = {
     }
 }
 
-module.exports = getPais;
+module.exports = { getPais };

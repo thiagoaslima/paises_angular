@@ -2,24 +2,35 @@ const fs = require('fs');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
-function saveData(folder, fileName, content) {
-    if (!folder) {
-        return fs.writeFile(fileName, content, 'utf8', (err) => {
-            if (err) throw err;
-            console.log(fileName, ' saved successfully');
-        })
-    }
-
-    return mkdirp(folder, '0777', (err) => {
-        if (!err || (err && err.code === 'EEXIST')) {
-            return fs.writeFile(path.resolve(folder, fileName), content, 'utf8', (err) => {
-                if (err) throw err;
+function saveFile(folder, fileName, content) {
+    return new Promise((resolve, reject) => {
+        if (!folder) {
+            fs.writeFile(fileName, content, 'utf8', (err) => {
+                if (err) reject(err);
                 console.log(fileName, ' saved successfully');
+                resolve({
+                    fileName,
+                    saved: true
+                })
             })
         } else {
-            throw err;
+            mkdirp(folder, '0777', (err) => {
+                if (!err || (err && err.code === 'EEXIST')) {
+                    fs.writeFile(path.resolve(folder, fileName), content, 'utf8', (err) => {
+                        if (err) reject(err);
+                        console.log(fileName, ' saved successfully');
+                        resolve({
+                            fileName,
+                            saved: true
+                        })
+                    })
+                } else {
+                    reject(err);
+                }
+            })
         }
+
     })
 }
 
-module.exports = saveData;
+module.exports = { saveFile };

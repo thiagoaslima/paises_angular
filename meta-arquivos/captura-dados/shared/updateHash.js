@@ -1,8 +1,8 @@
 const path = require('path')
-const readFile = require('../shared/readFile');
-const saveFile = require('../shared/saveFile');
+const { readFile } = require('./readFile');
+const { saveFile } = require('./saveFile');
 
-function updateHash(hash, file) {  
+function updateHash(hash, file) {
     return readFile(file).then(oldHash => {
         const areEqual = (hash == oldHash);
         if (!areEqual) {

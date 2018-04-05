@@ -27,7 +27,7 @@ export class DadosPaisService {
             PaisesEnum.temas.ambiente,
             PaisesEnum.temas.populacao,
             PaisesEnum.temas.telefonia,
-            // PaisesEnum.temas.olimpicos
+            PaisesEnum.temas.saude
         ];
 
         return this._paisesService.getTodosDados(siglaPais).pipe(
@@ -47,9 +47,10 @@ export class DadosPaisService {
                 }, {} as { [key: number]: any });
 
                 for (let met of metadata) {
-                    if (met.posicao.length === 1) { continue; }
-                    let tema = parseInt(met.posicao.split('.')[0], 10);
-                    if (temas.indexOf(tema) === -1) { continue; }
+                    let posicao = met.posicao.split('.');
+                    if (posicao.length === 1) { continue; }
+                    let temaId = parseInt(posicao[0], 10);
+                    if (temas.indexOf(temaId) === -1) { continue; }
 
                     let resultado = resultadosMap[met.id];
                     let valores: string[] = [];
@@ -65,6 +66,7 @@ export class DadosPaisService {
                     }
 
                     let obj = {
+                        id: met.id,
                         titulo: met.indicador,
                         valores: valores,
                         periodos: periodos,
@@ -72,7 +74,7 @@ export class DadosPaisService {
                         fontes: met.fontes
                     };
 
-                    dados[tema].valores.push(obj)
+                    dados[temaId].valores.push(obj)
                 }
 
                 console.timeEnd('#dadosPais process');
