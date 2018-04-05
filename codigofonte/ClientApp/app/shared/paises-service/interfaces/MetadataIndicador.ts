@@ -9,5 +9,5 @@ export interface MetadataIndicador {
     },
     notas: string[],
     fontes: Array<{ periodo: string, fontes: string[] }>,
-    pai: number
+    pai: number|null
 }

@@ -45,7 +45,10 @@ export class PaisesService extends RequestService {
     getMetadataIndicador(indicadorId: number, scope = 'sub') {
         const metadataParams = new HttpParams().set('scope', scope);
         return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`, metadataParams)
-            .pipe(map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)));
+            .pipe(
+                map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)),
+                map(this._hackTemaSaude)
+            );
     }
 
     getHistorico(siglaPais: string): Observable<{ pais: string, periodo: string, indicador: number, valor: string, valor_en: string }> {
@@ -54,18 +57,25 @@ export class PaisesService extends RequestService {
     }
 
     getTodosDados(siglaPais: string) {
-        const metadataObservable = this.getMetadataIndicador(0); //this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
+        const metadataObservable = this.getMetadataIndicador(0).pipe(
+            map(resultados => resultados.filter((obj: any) => ['2', '8', '9'].indexOf(obj.posicao.charAt(0)) === -1))
+        ); //this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
 
-        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`).pipe(
-            map(resultados => resultados.filter((obj: any) => ['2', '8', '9'].indexOf(obj.posicao) === -1))
-        );
-
+        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
 
         return metadataObservable.pipe(
             zip(resultadosObservable),
             map(([metadata, resultadosRaw]) => {
-                const metadataMap = objArrayToMap(metadata);
-                const resultados = resultadosRaw.map((res: any) => this.toResultadoModel(metadataMap[res.id], res))
+                const resultadosMap = objArrayToMap(resultadosRaw);
+                
+                const resultados = metadata.reduce((agg, meta: any) => {
+                    const resultado = resultadosMap[meta.id];
+                    if (resultado) {
+                        agg.push(this.toResultadoModel(meta, resultado))
+                    }
+                    return agg;
+                }, [] as ResultadosIndicador[]);
+
                 return { metadata, resultados };
             })
         );
@@ -114,8 +124,8 @@ export class PaisesService extends RequestService {
                     multiplicador: 1
                 },
             notas: metadata.nota,
-            fontes: metadata.fonte,
-            pai: metadata.pai
+            fontes: metadata.fonte || [],
+            pai: metadata.pai || null
         } as MetadataIndicador;
     }
 
@@ -150,6 +160,62 @@ export class PaisesService extends RequestService {
 
     isSpecialValue(valor: string) {
         return Boolean(this._specialValues.cases[valor])
+    }
+
+    _hackTemaSaude(metadata: MetadataIndicador[]) {
+        const indicadores = {
+            62973: {
+                id: 62973,
+                posicao: "100.1",
+                indicador: "Calorias consumidas"
+            },
+            62967: {
+                id: 62967,
+                posicao: "100.2",
+                indicador: "Esperança de vida ao nascer"
+            },
+            62971: {
+                id: 62971,
+                posicao: "100.3",
+                indicador: "População subnutrida"
+            },
+            62986: {
+                id: 62986,
+                posicao: "100.4",
+                indicador: "Taxa bruta de mortalidade"
+            },
+            62987: {
+                id: 62987,
+                posicao: "100.5",
+                indicador: "Taxa bruta de natalidade"
+            }
+        } as {[key: number]: any};
+
+        let shouldInclude = true;
+        metadata.forEach(meta => {
+            if (indicadores[meta.id]) {
+                meta.posicao = indicadores[meta.id].posicao;
+
+                if (shouldInclude) {
+                    shouldInclude = false;
+                    metadata.unshift({
+                        id: 0,
+                        indicador: 'Saúde',
+                        posicao: '100',
+                        notas: [],
+                        fontes: [],
+                        unidade: {
+                            identificador: "",
+                            classe: "",
+                            multiplicador: 1
+                        },
+                        pai: null
+                    } as MetadataIndicador)
+                }
+            }
+        })
+
+        return metadata;
     }
 
 }

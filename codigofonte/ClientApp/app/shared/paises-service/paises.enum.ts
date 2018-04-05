@@ -8,7 +8,8 @@ export module PaisesEnum {
         populacao = 6,
         telefonia = 7,
         ODM = 8,
-        ODS = 9
+        ODS = 9,
+        saude = 100
     }
 
     export enum sintese {
