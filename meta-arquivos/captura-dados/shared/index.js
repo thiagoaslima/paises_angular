@@ -4,6 +4,8 @@ const { flatten, flattenOneLevel } = require('./flatten');
 const { getFonte, getVariavelCode } = require('./getFonte');
 const { getPais } = require('./getPais');
 const { getSigla } = require('./getSigla');
+const { Logger } = require('./Logger');
+const { postFileToDatabase } = require('./postFileToDatabase');
 const { readFile } = require('./readFile');
 const { removeFolderFiles } = require('./removeFolderFiles');
 const { runToAllCountries } = require('./runToAllCountries');
@@ -22,6 +24,8 @@ module.exports = {
     hashFile,
     hashStream,
     hashString,
+    Logger,
+    postFileToDatabase,
     readFile,
     removeFolderFiles,
     runToAllCountries,

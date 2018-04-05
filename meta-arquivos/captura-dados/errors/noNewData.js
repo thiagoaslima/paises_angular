@@ -1,10 +1,10 @@
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#Tipos_de_erro_customizados
-function AllOldDataError(message) {
-    this.name = 'OldData';
+function NoNewData(message) {
+    this.name = 'NoNewData';
     this.message = message || 'Não há dados novos a serem coletados';
     this.stack = (new Error()).stack;
 }
-AllOldDataError.prototype = Object.create(AllOldDataError.prototype);
-AllOldDataError.prototype.constructor = AllOldDataError;
+NoNewData.prototype = Object.create(NoNewData.prototype);
+NoNewData.prototype.constructor = NoNewData;
 
-module.exports = AllOldDataError;
+module.exports = { NoNewData };

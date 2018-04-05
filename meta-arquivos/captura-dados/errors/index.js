@@ -1,5 +1,7 @@
-const AllOldDataError = require('./allOldData');
+const { NoNewData } = require('./noNewData');
+const { NoResponseError } = require('./noResponseError');
 
-module.exports = { 
-    AllOldDataError
+module.exports = {
+    NoNewData,
+    NoResponseError
 }

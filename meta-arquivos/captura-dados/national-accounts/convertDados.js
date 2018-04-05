@@ -34,7 +34,7 @@ function upload(dados) {
                 .post({
                     url: `http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/${obj.periodo}/resultados?publicacao=`,
                     formData
-                }, )
+                })
                 .then(res => console.log('success', filename, res))
                 .catch(err => console.log('error', filename, err));
         })
@@ -49,6 +49,11 @@ function convertDados(json) {
     json.forEach(array => {
         let [head, ...tail] = array;
         const indicador = fonte.dados.find(obj => obj.titulo_tabela === head[3]);
+        
+        if (!indicador) {
+            debugger;
+        }
+
         const slug = slugify(indicador.nome);
         const id = indicador.id;
         const variavel = indicador.variavel_code;

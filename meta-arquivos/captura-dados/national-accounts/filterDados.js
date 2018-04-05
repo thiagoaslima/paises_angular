@@ -1,4 +1,4 @@
-const cheerio =  require('cheerio');
+const cheerio = require('cheerio');
 const tabletojson = require('tabletojson');
 const { flattenOneLevel } = require('../shared')
 
@@ -8,10 +8,15 @@ function filterTables(pages) {
 };
 
 function _extractTables(pages) {
-    return pages.map(page => {
-        const $ = cheerio.load(page);
-        return $('table').get(7);
-    });
+    return pages
+        .map(page => {
+            const $ = cheerio.load(page);
+            const table = $('table').get(7);
+            return cheerio(table).find('.amaheader').length > 0
+                ? table
+                : null
+        })
+        .filter(Boolean);
 }
 
 function _convertJSON(cheerioTables) {
