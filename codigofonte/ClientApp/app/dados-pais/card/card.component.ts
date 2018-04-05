@@ -31,7 +31,6 @@ export class CardComponent {
                 valor += " × " + unidade.multiplicador;
             }
         }
-        // console.log('>>>>>>>>>>>>', this.tema);
         return valor;
     }
 
