@@ -5,7 +5,7 @@ const { getVariavelCode, runToAllCountries, saveFile } = require('../shared');
 const { errorHandler } = require("../errors/errorHandler");
 const { logger } = require("./logger");
 
-logger.verbose('Initiating National Accounts Extraction');
+logger.verbose('Iniciando processo de atualização de National Accounts');
 
 getPages()
     .then(compareHashes)
@@ -18,6 +18,5 @@ getPages()
         saveFile(null, 'teste2', JSON.stringify(res, null, 4));
     })
     .catch(err => {
-        debugger;
         errorHandler(logger)(err);
     });

@@ -1,10 +1,11 @@
 const { hashFile, hashStream, hashString } = require('./calculateHash');
 const { convertEncoding } = require('./convertEncoding');
 const { flatten, flattenOneLevel } = require('./flatten');
-const { getFonte, getVariavelCode } = require('./getFonte');
+const { getFonte, getFonteById, getVariavelCode } = require('./getFonte');
 const { getPais } = require('./getPais');
 const { getSigla } = require('./getSigla');
 const { Logger } = require('./Logger');
+const { moveFile } = require('./moveFile');
 const { postFileToDatabase } = require('./postFileToDatabase');
 const { readFile } = require('./readFile');
 const { removeFolderFiles } = require('./removeFolderFiles');
@@ -18,6 +19,7 @@ module.exports = {
     flatten,
     flattenOneLevel,
     getFonte,
+    getFonteById,
     getPais,
     getSigla,
     getVariavelCode,
@@ -25,6 +27,7 @@ module.exports = {
     hashStream,
     hashString,
     Logger,
+    moveFile,
     postFileToDatabase,
     readFile,
     removeFolderFiles,

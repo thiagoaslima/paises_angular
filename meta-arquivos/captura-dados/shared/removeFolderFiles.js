@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { FolderDoNotExist } = require("../errors");
 
-function removeFolderFiles(dirPath, removeSelf = true) {
+function removeFolderFiles(dirPath, removeSelf = false) {
     try {
         const files = fs.readdirSync(dirPath);
 
@@ -20,9 +20,7 @@ function removeFolderFiles(dirPath, removeSelf = true) {
         }
     } catch (err) {
         if (err.code === "ENOENT") {
-            throw new FolderDoNotExist(
-                `A pasta ${dirPath} não existe, portanto não é possível apagá-la.`
-            );
+            return;
         }
 
         throw err;

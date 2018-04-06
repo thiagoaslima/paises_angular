@@ -10,6 +10,7 @@ const {
     saveFile,
     slugify
 } = require('../shared');
+const { logger } = require("./logger");
 
 const fonte = getFonte("National Accounts Main Aggregates Database, Basic Data Selection");
 
@@ -24,12 +25,12 @@ function prepareToUpload(dados) {
 
 function upload(dados, idx = 0) {
     const folder = path.resolve(__dirname, 'csv');
-    
+
     const obj = dados[idx];
     const periodo = obj.periodo;
     const filename = obj.variavel + '-' + obj.periodo + '.csv';
     const filepath = path.join(folder, filename);
-
+debugger;
     return saveFile(folder, filename, obj.content).then(res => {
         return postFileToDatabase(periodo, filepath).then(res => {
             logger.info(`O arquivo ${filename} foi salvo com sucesso`);
@@ -50,7 +51,7 @@ function convertDados(json) {
     json.forEach(array => {
         let [head, ...tail] = array;
         const indicador = fonte.dados.find(obj => obj.titulo_tabela === head[3]);
-        
+
         if (!indicador) {
             debugger;
         }
