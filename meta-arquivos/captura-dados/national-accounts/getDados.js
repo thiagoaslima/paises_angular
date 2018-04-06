@@ -62,14 +62,14 @@ function buildRequestParams(link, data, periodos) {
 
 function getPage({ link, options }, tentativas = 0) {
     const MAX_TENTATIVAS = 5;
-    logger.info(`tentativa ${tentativas + 1}: abrindo requisição ${JSON.stringify(options.form)}`);
+    logger.verbose(`tentativa ${tentativas + 1}: abrindo requisição ${JSON.stringify(options.form)}`);
 
     return request.post(link, options)
         .then(convertEncoding)
         .then(buffer => buffer.toString().replace('charset=iso-8859-1', 'charset=utf-8'))
         .catch(err => {
             if (tentativas < MAX_TENTATIVAS) {
-                logger.warn(`tentativa ${tentativas + 1}: erro no acesso aos dados da requisição ${JSON.stringify(options.form)}`);
+                logger.info(`tentativa ${tentativas + 1}: erro no acesso aos dados da requisição ${JSON.stringify(options.form)}`);
                 return getPage({ link, options }, ++tentativas);
             } else {
                 logger.warn(`tentativa ${tentativas + 1}: Não foi possível acessar resposta da requisição ${JSON.stringify(options.form)}`);
@@ -85,6 +85,7 @@ function compareHashes(pages) {
         const areEqual = hashes.every((hash, idx) => hash === oldHashes[idx]);
 
         if (!areEqual) {
+            logger.verbose('Hashes diferem. Há dados novos que devem ser capturados.');
             saveFile(null, 'hashes.json', JSON.stringify(hashes));
             return pages;
         } else {
@@ -94,18 +95,33 @@ function compareHashes(pages) {
 }
 
 function savePages(pages) {
-    const folder = path.resolve(__dirname, 'original');
-    removeFolderFiles(folder);
+    const folder = path.resolve(__dirname, 'originais');
+    logger.verbose('gravando páginas para registro');
+
+    try {
+        removeFolderFiles(folder);
+        logger.verbose('pasta com arquivos originais apagada');
+    } catch (err) {
+        switch (err.name) {
+            case 'FolderDoNotExist':
+                break;
+            default:
+                throw err;
+        }
+    }
 
     fonte.dados.forEach((dados, idx) => {
         const { nome } = dados;
         periodos.forEach((periodo, index) => {
-            saveFile(folder, slugify(nome) + '-' + periodo.join('-') + '.html', pages[idx * periodos.length + index]);
+            const filename = slugify(nome) + '-' + periodo.join('-') + '.html';
+            saveFile(folder, filename, pages[idx * periodos.length + index])
+                .then( ({fileName, saved}) => {
+                    logger.info(`O arquivo ${fileName} foi gravado com sucesso`);
+                });
         })
     });
 
     return pages;
 }
-
 
 module.exports = { getPages, compareHashes, savePages };

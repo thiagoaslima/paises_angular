@@ -5,6 +5,8 @@ const { getVariavelCode, runToAllCountries, saveFile } = require('../shared');
 const { errorHandler } = require("../errors/errorHandler");
 const { logger } = require("./logger");
 
+logger.verbose('Initiating National Accounts Extraction');
+
 getPages()
     .then(compareHashes)
     .then(savePages)
