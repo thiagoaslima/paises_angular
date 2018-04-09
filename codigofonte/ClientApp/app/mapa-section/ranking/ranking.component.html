@@ -11,7 +11,7 @@
 
         <div class="ranking__barra-titulo">
             <span class="button ranking__voltar mobile-only">‹</span>
-            <h2 class="ranking__titulo">{{ indicador?.nome }}</h2>
+            <h2 class="ranking__titulo">{{ indicador?.indicador }}</h2>
         </div>
     </div>
 
@@ -47,8 +47,8 @@
                 </tr>
             </thead>
 
-            <tbody class="ranking__table-body">
-                <tr *ngFor="let obj of dados" [class.paisSelecionado]="obj.pais.slug === paisSelecionado">
+            <tbody #scrollEl class="ranking__table-body">
+                <tr [attr.id]="obj.pais.slug" #cty *ngFor="let obj of dados" [class.paisSelecionado]="obj.pais.slug === paisSelecionado">
                     <td class="ranking__table__posicao">
                         {{ obj.posicao }}
                     </td>
