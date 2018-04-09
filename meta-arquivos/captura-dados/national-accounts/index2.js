@@ -5,6 +5,7 @@ const {
     extractContent,
     getPages,
     logger,
+    prepareCSVContent,
     saveNewPages,
     saveNewCsv,
     upload
@@ -15,6 +16,7 @@ getPages()
     .then(saveNewPages)
     .then(extractContent)
     .then(applyAllCountries)
+    .then(prepareCSVContent)
     .then(saveNewCsv)
     .then(upload)
     .catch(err => {

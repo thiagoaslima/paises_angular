@@ -12,6 +12,7 @@ function upload(array, idx = 0) {
     const csvFilepath = getCSVPathToUpload(csvFilename);
     const pageFilename = buildPageFilename(slug, periodo);
 
+    logger.info(`Enviando o arquivo ${csvFilename}.`);
     return postFileToDatabase(periodo, csvFilepath).then(res => {
         logger.info(`O arquivo ${csvFilename} foi salvo com sucesso`);
 
@@ -23,11 +24,25 @@ function upload(array, idx = 0) {
             // move html to current
             setPageAsCurrent(pageFilename)
         ])
+        .then(_ => {
+            logger.info(`Os arquivos relativos a ${csvFilename} foram atualizados corretamente.`);
+        })
+        .catch(err => {
+            logger.error(`Erro nos arquivos relativos a ${csvFilename}`, err);
+        })
     }).then(_ => {
         if (++idx < array.length) {
             return upload(array, idx);
         } else {
-            logger.info(`Todos os arquivos foram salvos com sucesso`);
+            // logger.info(`Todos os arquivos foram salvos com sucesso`);
+            return array;
+        }
+    }).catch(err => {
+        logger.error(`Erro no arquivo ${csvFilename}. Dados não atualizados`, err)
+        if (++idx < array.length) {
+            return upload(array, idx);
+        } else {
+            //logger.info(`Todos os arquivos foram salvos com sucesso`);
             return array;
         }
     })

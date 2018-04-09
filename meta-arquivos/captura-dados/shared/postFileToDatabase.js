@@ -1,6 +1,13 @@
 const fs = require("fs");
 const request = require("request-promise-native");
 
+/**
+ * 
+ * @param { number |string } periodo 
+ * @param { string } filepath 
+ * @param { number= } tentativas 
+ * @returns { Promise<{ file:string, saved: boolean }> }
+ */
 function postFileToDatabase(periodo, filepath, tentativas = 0) {
     const MAX_TENTATIVAS = 5;
 

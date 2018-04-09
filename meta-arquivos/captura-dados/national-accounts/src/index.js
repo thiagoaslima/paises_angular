@@ -5,7 +5,7 @@ const { compareHashes, updateHashes } = require("./manageHashes").manageHash;
 const { extractContent } = require("./extractInfo");
 const { getPages } = require("./getPages");
 const { buildPageFilename, saveNewPages, setPageAsCurrent } = require("./managePageFiles").managePageFiles;
-const { buildCSVFilename, getCSVPathToUpload, saveNewCsv, setCSVAsCurrent } = require("./manageCSVFiles").manageCSVFiles;
+const { buildCSVFilename, getCSVPathToUpload, prepareCSVContent, saveNewCsv, setCSVAsCurrent } = require("./manageCSVFiles").manageCSVFiles;
 const { upload } = require("./upload");
 
 exports.functions = {
@@ -19,6 +19,7 @@ exports.functions = {
     getPages,
     logger,
     periodos,
+    prepareCSVContent,
     saveNewPages,
     saveNewCsv,
     setCSVAsCurrent,

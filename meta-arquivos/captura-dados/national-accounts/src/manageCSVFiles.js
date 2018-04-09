@@ -33,7 +33,7 @@ function saveNewCsv(array) {
     const foldernameMessage = path.relative(path.resolve(__dirname,'..'), folders.new);
     let promises = array.map(obj => {
         const filename = buildCSVFilename(obj.slug, obj.periodo);
-        return saveFile(folders.new, filename, JSON.stringify(obj.content, null, 4)).then(({ fileName, saved }) => {
+        return saveFile(folders.new, filename, obj.content).then(({ fileName, saved }) => {
             logger.info(`O arquivo ${fileName} foi gravado com sucesso na pasta ${foldernameMessage}`);
         });
     });
@@ -50,6 +50,13 @@ function buildCSVFilename(slug, periodo) {
     return slug + '-' + periodo.toString(10) + '.csv';
 }
 
+function prepareCSVContent(array) {
+    return array.map(obj => {
+        obj.content = [`"";"${obj.variavel}"`].concat(Object.keys(obj.content).map(sigla => `"${sigla}";"${obj.content[sigla]}"`)).join("\n");
+        return obj;
+    });
+}
+
 function getCSVPathToUpload(filename) {
     return path.join(folders.new, filename);
 }
@@ -58,4 +65,4 @@ function setCSVAsCurrent(filename) {
     return moveFile(path.join(folders.new, filename), path.join(folders.current, filename));
 }
 
-exports.manageCSVFiles = { saveNewCsv, getCSVPathToUpload, buildCSVFilename, setCSVAsCurrent };
+exports.manageCSVFiles = { buildCSVFilename, getCSVPathToUpload, prepareCSVContent, saveNewCsv, setCSVAsCurrent };

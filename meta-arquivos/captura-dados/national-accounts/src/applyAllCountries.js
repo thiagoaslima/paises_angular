@@ -9,8 +9,6 @@ const { runToAllCountries } = require("../../shared");
  * @param { Content[] } array
  */
 function applyAllCountries(array) {
-    debugger;
-
     return array.map(obj => {
         obj.content = runToAllCountries(obj.content);
         return obj;
