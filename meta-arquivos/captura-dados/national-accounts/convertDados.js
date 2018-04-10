@@ -5,10 +5,12 @@ const {
     getFonte,
     getSigla,
     getVariavelCode,
+    postFileToDatabase,
     runToAllCountries,
     saveFile,
     slugify
 } = require('../shared');
+const { logger } = require("./logger");
 
 const fonte = getFonte("National Accounts Main Aggregates Database, Basic Data Selection");
 
@@ -21,26 +23,26 @@ function prepareToUpload(dados) {
     })
 }
 
-function upload(dados) {
+function upload(dados, idx = 0) {
     const folder = path.resolve(__dirname, 'csv');
 
-    dados.forEach(obj => {
-        const filename = obj.variavel + '-' + obj.periodo;
-        saveFile(folder, filename, obj.content).then(res => {
-            let formData = {
-                file: fs.createReadStream(path.join(folder, filename))
+    const obj = dados[idx];
+    const periodo = obj.periodo;
+    const filename = obj.variavel + '-' + obj.periodo + '.csv';
+    const filepath = path.join(folder, filename);
+debugger;
+    return saveFile(folder, filename, obj.content).then(res => {
+        return postFileToDatabase(periodo, filepath).then(res => {
+            logger.info(`O arquivo ${filename} foi salvo com sucesso`);
+
+            if (++idx < dados.length) {
+                return upload(dados, idx);
+            } else {
+                logger.info(`Todos os arquivos foram salvos com sucesso`);
+                return dados;
             }
-            request
-                .post({
-                    url: `http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/${obj.periodo}/resultados?publicacao=`,
-                    formData
-                }, )
-                .then(res => console.log('success', filename, res))
-                .catch(err => console.log('error', filename, err));
         })
     });
-
-    return dados;
 }
 
 function convertDados(json) {
@@ -49,6 +51,11 @@ function convertDados(json) {
     json.forEach(array => {
         let [head, ...tail] = array;
         const indicador = fonte.dados.find(obj => obj.titulo_tabela === head[3]);
+
+        if (!indicador) {
+            debugger;
+        }
+
         const slug = slugify(indicador.nome);
         const id = indicador.id;
         const variavel = indicador.variavel_code;

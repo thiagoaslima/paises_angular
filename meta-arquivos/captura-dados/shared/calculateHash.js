@@ -30,15 +30,13 @@ function hashFile(path) {
 function hashString(str) {
     const shasum = crypto.createHash(algorithm);
 
-    return new Promise((resolve, reject) => {
-        try {
-            shasum.update(str)
-            var hash = shasum.digest('hex');
-            resolve(hash);
-        } catch(err) {
-            reject(err);
-        }
-    });
+    try {
+        shasum.update(str)
+        var hash = shasum.digest('hex');
+        return hash;
+    } catch(err) {
+        throw err;
+    }
 }
 
 function hashStream(stream) {

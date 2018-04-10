@@ -1,5 +1,5 @@
 const request = require('request-promise-native');
-const { AllOldDataError } = require('../errors')
+const { NoNewData } = require('../errors')
 const { getFonte, saveFile } = require('../shared');
 const fonte = getFonte("Human Development Report");
 const oldHash = require('./hash.json');
@@ -19,7 +19,7 @@ function compareHashes({hash, values}) {
         saveFile(null, 'hash.json', JSON.stringify(hash));
         return values
     } else {
-        throw new AllOldDataError();
+        throw new NoNewData();
     }
 }
 

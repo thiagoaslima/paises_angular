@@ -1,6 +1,7 @@
 const fs = require("fs");
+const { FolderDoNotExist } = require("../errors");
 
-function removeFolderFiles(dirPath, removeSelf = true) {
+function removeFolderFiles(dirPath, removeSelf = false) {
     try {
         const files = fs.readdirSync(dirPath);
 
@@ -10,7 +11,7 @@ function removeFolderFiles(dirPath, removeSelf = true) {
 
                 fs.statSync(filePath).isFile()
                     ? fs.unlinkSync(filePath)
-                    : rmDir(filePath);
+                    : removeFolderFiles(filePath);
             });
         }
 
@@ -18,10 +19,11 @@ function removeFolderFiles(dirPath, removeSelf = true) {
             fs.rmdirSync(dirPath);
         }
     } catch (err) {
-        if (err.code !== "ENOENT") {
-            console.log(err);
+        if (err.code === "ENOENT") {
+            return;
         }
-        return;
+
+        throw err;
     }
 
 };

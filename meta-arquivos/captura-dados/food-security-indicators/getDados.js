@@ -1,7 +1,7 @@
 const request = require('request-promise-native');
 const cheerio = require('cheerio');
 const xlsx = require('xlsx');
-const { AllOldDataError } = require('../errors')
+const { NoNewData } = require('../errors')
 const { getFonte, saveFile } = require('../shared');
 const fonte = getFonte("Food security indicators");
 

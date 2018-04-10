@@ -7,18 +7,16 @@ function saveFile(folder, fileName, content) {
         if (!folder) {
             fs.writeFile(fileName, content, 'utf8', (err) => {
                 if (err) reject(err);
-                console.log(fileName, ' saved successfully');
                 resolve({
                     fileName,
                     saved: true
-                })
+                });
             })
         } else {
             mkdirp(folder, '0777', (err) => {
                 if (!err || (err && err.code === 'EEXIST')) {
                     fs.writeFile(path.resolve(folder, fileName), content, 'utf8', (err) => {
                         if (err) reject(err);
-                        console.log(fileName, ' saved successfully');
                         resolve({
                             fileName,
                             saved: true
