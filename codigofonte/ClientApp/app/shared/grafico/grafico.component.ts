@@ -18,6 +18,7 @@ export class GraficoComponent {
 
     valor: any = null;
     metadata: any = null;
+    indexSelecionado = -1;
 
     @Input() rotulosX = [];
 
@@ -98,7 +99,7 @@ export class GraficoComponent {
         if(!this.existemDados()) return " ";
         if(this.valor){
             return this.valor;
-        }else if(this.dados.length == 1){
+        }else if(this.dados.length > 0){
             let valor = this.dados[0][this.dados[0].length - 1];
             return valor ? (<any>valor).toString() : " ";
         }
@@ -109,22 +110,35 @@ export class GraficoComponent {
         if(!this.existemDados()) return " ";
         if(this.metadata){
             return this.metadata;
-        }else if(this.dados.length == 1){
-            return this.rotulosY[0] + " (" + this.rotulosX[this.rotulosX.length - 1] + ")";
+        }else if(this.rotulosY.length > 0){
+            return this.rotulosY[0];
         }
         return " ";
     }
 
-    mostraValor(indexX: any, indexY: any){
-        if(!this.existemDados() || !this.dados[indexY][indexX]) return;
-        this.valor = (<any>this.dados[indexY][indexX]).toString();
-        this.metadata = this.rotulosY[indexY] + " (" + this.rotulosX[indexX] + ")";
+    getIndexSelecionado(){
+        if(!this.existemDados()) return -1;
+        if(this.indexSelecionado > -1){
+            return this.indexSelecionado;
+        }
+        return this.rotulosX.length - 1;
     }
 
-    escondeValor(){
+    setaValorMouse(event: any, grafico: any){
         if(!this.existemDados()) return;
+        var rect = grafico.getBoundingClientRect();
+        var x = event.clientX - rect.left; //x position within the element.
+        var y = event.clientY - rect.top;  //y position within the element.
+
+        this.indexSelecionado = Math.floor(x / (rect.width / this.rotulosX.length));
+        this.valor = this.dados[0] && this.dados[0][this.indexSelecionado] ? this.dados[0][this.indexSelecionado] : "";
+        this.metadata = this.rotulosY.length > 0 ? this.rotulosY[0] : "";
+    }
+
+    resetValor(){
         this.valor = null;
         this.metadata = null;
+        this.indexSelecionado = -1;
     }
 
 }

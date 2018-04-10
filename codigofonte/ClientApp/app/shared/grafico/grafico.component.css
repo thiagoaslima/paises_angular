@@ -40,46 +40,35 @@
 .grafico__cor--0{
     background-color:  #3ECCA7;
     stroke: #3ECCA7;
-}
-
-.grafico__cor--0:hover{
     fill: #3ECCA7;
 }
 
 .grafico__cor--1{
     background-color:  #E7D766;
     stroke: #E7D766;
-}
-
-.grafico__cor--1:hover{
     fill: #E7D766;
 }
 
 .grafico__cor--2{
     background-color: #A27E56;
     stroke: #A27E56;
-}
-
-.grafico__cor--2:hover{
     fill: #A27E56;
 }
 
 .grafico__cor--3{
     background-color: #949494;
     stroke: #949494;
-}
-
-.grafico__cor--3:hover{
     fill: #949494;
 }
 
 .grafico__cor--4{
     background-color: #42E695; 
     stroke: #42E695;
+    fill: #42E695;
 }
 
-.grafico__cor--4:hover{
-    fill: #42E695;
+.grafico__no-fill{
+    fill: white;
 }
 
 /*valor*/

@@ -5,7 +5,7 @@
         <p class="grafico__valor-metadata">&nbsp; {{ getMetadata() }}</p>
     </div>
     <!-->grafico<-->
-    <svg [attr.viewBox]="'0 0 ' + LARGURA_GRAFICO + ' ' + ALTURA_GRAFICO" class="grafico__svg">
+    <svg [attr.viewBox]="'0 0 ' + LARGURA_GRAFICO + ' ' + ALTURA_GRAFICO" class="grafico__svg" #grafico (mousemove)="setaValorMouse($event, grafico)" (mouseleave)="resetValor()">
         <!--eixo x-->
         <line x1="0" [attr.y1]="POSICAO_EIXO_X" [attr.x2]="LARGURA_GRAFICO" [attr.y2]="POSICAO_EIXO_X" class="grafico__eixo-x"/>
 
@@ -28,7 +28,7 @@
             <!--ponto-->
             <ng-template ngFor let-valor let-i="index" [ngForOf]="dado">
                 <circle *ngIf="valorValido(getY(i, j))" [attr.cx]="getX(i, 0)" [attr.cy]="getY(i, j)" r="4px"
-                    [ngClass]="'grafico__ponto grafico__cor--' + j" (mouseenter)="mostraValor(i, j)" (mouseleave)="escondeValor()"/>
+                    [ngClass]="'grafico__ponto grafico__cor--' + j" [class.grafico__no-fill]='getIndexSelecionado() != i'/>
             </ng-template>
         </g>
     </svg>
