@@ -11,6 +11,8 @@ import { PaisesService, RouterParamsService } from "../../shared";
 import { MapaSectionService } from "../mapa-section.service";
 import { OnInit, OnDestroy } from "@angular/core/src/metadata/lifecycle_hooks";
 
+import { ResultadoPipe } from "../../shared/resultado.pipe";
+
 
 @Component({
     selector: 'paises-ranking',
