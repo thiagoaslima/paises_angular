@@ -1,6 +1,8 @@
 <div class="sintese main-layer">
     <!--barra de título-->
     <div class="sintese__barra-titulo">
+        <!--título-->
+        <h2 class="sintese__titulo" [title]="pais?.nome.pt">{{ pais?.nome.pt }}</h2>
         <!--botão de fechar-->
         <a class="button sintese__botao-fechar" routerLink="/mapa">
             <!-- <button class="sintese__botao-fechar"> -->
@@ -15,7 +17,7 @@
             <img alt="bandeira" [src]="imageSrc" class="sintese__bandeira-imagem">
         </div>
         <!--título-->
-        <h2 class="sintese__titulo">{{ pais?.nome.pt }}</h2>
+        <!--<h2 class="sintese__titulo">{{ pais?.nome.pt }}</h2>-->
 
         <!--tabela de valores-->      
         <table class="sintese__tabela"> 
