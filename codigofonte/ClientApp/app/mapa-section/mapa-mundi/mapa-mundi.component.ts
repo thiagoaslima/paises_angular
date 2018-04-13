@@ -72,6 +72,7 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
     private _paisLayerMap: Map<string, L.Layer>;
     private _subscriptions: Subscription[] = [];
     private _escala: string[] = [];
+    private _openTooltipLayers = [] as any[];
 
     constructor(
         private _router: Router,
@@ -185,7 +186,7 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
 
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
         if (feature.properties.mostrar) {
-            // this._handleTooltip(feature, layer);
+            this._handleTooltip(feature, layer);
             this._onClickMap(layer);
             this._onHoverLayer(feature, layer);
         }
@@ -201,7 +202,7 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
 
                 const style = that.paisSelecionado.slug === slug
                     ? 'selected' : 'default';
-                
+
                 that._setLayerStyle(layer, style);
             }
         });
@@ -217,6 +218,54 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
             }
         });
     }
+
+    private _createAndShowTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer, latlng: L.LatLng, tryouts = 0) {
+        const that = this;
+
+        let tooltip;
+        if (layer.getTooltip()) {
+            tooltip = layer.getTooltip()
+        } else {
+            tooltip = L.tooltip({
+                sticky: true,
+                interactive: false
+            })
+                .setLatLng(latlng)
+                .setContent(feature.properties.nome.pt)
+
+            layer.bindTooltip(tooltip);
+        }
+
+        layer.openTooltip();
+
+        this._ngzone.runOutsideAngular(() =>
+            requestAnimationFrame(() => {
+                if (!layer.isTooltipOpen()) {
+                    layer.unbindTooltip();
+                    this._createAndShowTooltip(feature, layer, latlng, tryouts + 1);
+                }
+            })
+        );
+    }
+    private _handleTooltip(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
+        const that = this;
+        layer.on({
+            tooltipopen: (evt: any) => {
+                that._openTooltipLayers.push(layer);
+            },
+            tooltipclose: (evt: any) => {
+                that._openTooltipLayers = that._openTooltipLayers.filter(obj => obj !== layer);
+            },
+            mouseover: (evt: any) => {
+                that._openTooltipLayers.forEach(layer => layer.closeTooltip());
+                this._createAndShowTooltip(feature, layer, evt.latlng)
+            },
+            mouseout: () => {
+                layer.closeTooltip();
+            }
+        });
+    }
+
 
 }
 
