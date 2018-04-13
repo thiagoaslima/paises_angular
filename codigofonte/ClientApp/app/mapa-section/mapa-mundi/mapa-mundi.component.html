@@ -4,3 +4,13 @@
     [leafletFitBounds]="paisSelecionado.layer?.getBounds()"
     (leafletMapReady)="onMapReady($event)">
 </div>
+
+<div class="mapa-legenda" *ngIf="escala.length > 0">
+    <h4 class="mapa-legenda-title">Legenda</h4>
+    <div class="mapa-legenda-nivel" *ngFor="let item of escala; let idx = index; let last = last; let len = count ">
+        <div class="mapa-legenda-cor" [ngClass]="'scale' + (last ? 0 : (1 + idx))"></div>
+        <p class="mapa-legenda-marcador">
+            <span class="mapa-legenda-texto">{{item | resultado}}</span>
+        </p>
+    </div>
+</div>

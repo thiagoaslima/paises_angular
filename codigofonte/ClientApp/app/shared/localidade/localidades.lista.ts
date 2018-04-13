@@ -36,37 +36,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "248",
-            "slug": "ilhas-alanda",
-            "sigla": "AX",
-            "sigla3": "ALA",
-            "nome": {
-                "en": "Åland Islands",
-                "es": "Islas Åland",
-                "pt": "Ilhas Alanda"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "aland-islands",
-                "es": "islas-aland",
-                "pt": "ilhas-alanda"
-            },
-            "parent": 154,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "8",
             "slug": "albania",
             "sigla": "AL",
@@ -129,37 +98,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "16",
-            "slug": "samoa-americana",
-            "sigla": "AS",
-            "sigla3": "ASM",
-            "nome": {
-                "en": "American Samoa",
-                "es": "Samoa Americana",
-                "pt": "Samoa Americana"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "american-samoa",
-                "es": "samoa-americana",
-                "pt": "samoa-americana"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "20",
             "slug": "andorra",
             "sigla": "AD",
@@ -218,68 +156,6 @@ export const localidades = {
             },
             "ddi": "244",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "660",
-            "slug": "anguilla",
-            "sigla": "AI",
-            "sigla3": "AIA",
-            "nome": {
-                "en": "Anguilla",
-                "es": "Anguila",
-                "pt": "Anguilla"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "anguilla",
-                "es": "anguila",
-                "pt": "anguilla"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "10",
-            "slug": "antartida",
-            "sigla": "AQ",
-            "sigla3": "ATA",
-            "nome": {
-                "en": "Antarctica",
-                "es": "Antártida",
-                "pt": "Antártida"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "antarctica",
-                "es": "antartida",
-                "pt": "antartida"
-            },
-            "parent": 1,
-            "parents": {
-                "continente": "",
-                "regiao": "",
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -373,37 +249,6 @@ export const localidades = {
             },
             "ddi": "374",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "533",
-            "slug": "aruba",
-            "sigla": "AW",
-            "sigla3": "ABW",
-            "nome": {
-                "en": "Aruba",
-                "es": "Aruba",
-                "pt": "Aruba"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "aruba",
-                "es": "aruba",
-                "pt": "aruba"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "297",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -751,37 +596,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "60",
-            "slug": "bermuda",
-            "sigla": "BM",
-            "sigla3": "BMU",
-            "nome": {
-                "en": "Bermuda",
-                "es": "Bermuda",
-                "pt": "Bermuda"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "bermuda",
-                "es": "bermuda",
-                "pt": "bermuda"
-            },
-            "parent": 21,
-            "parents": {
-                "continente": 19,
-                "regiao": 21,
-                "subregiao": ""
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "64",
             "slug": "butao",
             "sigla": "BT",
@@ -848,37 +662,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "535",
-            "slug": "bonaire-santo-eustaquio-e-saba",
-            "sigla": "BQ",
-            "sigla3": "BES",
-            "nome": {
-                "en": "Bonaire, Sint Eustatius and Saba",
-                "es": "Bonaire, San Eustaquio y Saba",
-                "pt": "Bonaire, Santo Eustáquio e Saba"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "bonaire-sint-eustatius-and-saba",
-                "es": "bonaire-san-eustaquio-y-saba",
-                "pt": "bonaire-santo-eustaquio-e-saba"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "599",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "70",
             "slug": "bosnia-herzegovina",
             "sigla": "BA",
@@ -941,37 +724,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "74",
-            "slug": "ilha-bouvet",
-            "sigla": "BV",
-            "sigla3": "BVT",
-            "nome": {
-                "en": "Bouvet Island",
-                "es": "Isla Bouvet",
-                "pt": "Ilha Bouvet"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "bouvet-island",
-                "es": "isla-bouvet",
-                "pt": "ilha-bouvet"
-            },
-            "parent": 5,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 5
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "76",
             "slug": "brasil",
             "sigla": "BR",
@@ -999,37 +751,6 @@ export const localidades = {
             },
             "ddi": "55",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "86",
-            "slug": "territorio-britanico-do-oceano-indico",
-            "sigla": "IO",
-            "sigla3": "IOT",
-            "nome": {
-                "en": "British Indian Ocean Territory",
-                "es": "Territorio Británico del Océano Índico",
-                "pt": "Território Britânico do Oceano Índico"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "british-indian-ocean-territory",
-                "es": "territorio-britanico-del-oceano-indico",
-                "pt": "territorio-britanico-do-oceano-indico"
-            },
-            "parent": 14,
-            "parents": {
-                "continente": 2,
-                "regiao": 202,
-                "subregiao": 14
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -1288,37 +1009,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "136",
-            "slug": "ilhas-cayman",
-            "sigla": "KY",
-            "sigla3": "CYM",
-            "nome": {
-                "en": "Cayman Islands",
-                "es": "Islas Caimán",
-                "pt": "Ilhas Cayman"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "cayman-islands",
-                "es": "islas-caiman",
-                "pt": "ilhas-cayman"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "140",
             "slug": "republica-centro-africana",
             "sigla": "CF",
@@ -1445,68 +1135,6 @@ export const localidades = {
             },
             "ddi": "86",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "162",
-            "slug": "ilha-christmas",
-            "sigla": "CX",
-            "sigla3": "CXR",
-            "nome": {
-                "en": "Christmas Island",
-                "es": "Isla de Navidad",
-                "pt": "Ilha Christmas"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "christmas-island",
-                "es": "isla-de-navidad",
-                "pt": "ilha-christmas"
-            },
-            "parent": 53,
-            "parents": {
-                "continente": 9,
-                "regiao": 53,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "166",
-            "slug": "ilhas-cocos-keeling",
-            "sigla": "CC",
-            "sigla3": "CCK",
-            "nome": {
-                "en": "Cocos (Keeling) Islands",
-                "es": "Islas Cocos (Keeling)",
-                "pt": "Ilhas Cocos (Keeling)"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "cocos-keeling-islands",
-                "es": "islas-cocos-keeling",
-                "pt": "ilhas-cocos-keeling"
-            },
-            "parent": 53,
-            "parents": {
-                "continente": 9,
-                "regiao": 53,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -1639,37 +1267,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "184",
-            "slug": "ilhas-cook",
-            "sigla": "CK",
-            "sigla3": "COK",
-            "nome": {
-                "en": "Cook Islands",
-                "es": "Islas Cook",
-                "pt": "Ilhas Cook"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "cook-islands",
-                "es": "islas-cook",
-                "pt": "ilhas-cook"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "682",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "188",
             "slug": "costa-rica",
             "sigla": "CR",
@@ -1790,37 +1387,6 @@ export const localidades = {
             },
             "ddi": "53",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "531",
-            "slug": "curacao",
-            "sigla": "CW",
-            "sigla3": "CUW",
-            "nome": {
-                "en": "Curaçao",
-                "es": "Curaçao",
-                "pt": "Curaçao"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "curacao",
-                "es": "curacao",
-                "pt": "curacao"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "599",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -2234,70 +1800,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "238",
-            "slug": "ilhas-falkland",
-            "sigla": "FK",
-            "sigla3": "FLK",
-            "nome": {
-                "en": "Falkland Islands (Malvinas)",
-                "es": "Islas Malvinas (Falkland)",
-                "pt": "Ilhas Falkland"
-            },
-            "apelidos": {
-                "en": [
-                    "Falkland Islands (Islas Malvinas)"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "falkland-islands-malvinas",
-                "es": "islas-malvinas-falkland",
-                "pt": "ilhas-falkland"
-            },
-            "parent": 5,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 5
-            },
-            "ddi": "500",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "234",
-            "slug": "ilhas-faeroe",
-            "sigla": "FO",
-            "sigla3": "FRO",
-            "nome": {
-                "en": "Faroe Islands",
-                "es": "Islas Feroe",
-                "pt": "Ilhas Faeroe"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "faroe-islands",
-                "es": "islas-feroe",
-                "pt": "ilhas-faeroe"
-            },
-            "parent": 154,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": ""
-            },
-            "ddi": "298",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "242",
             "slug": "fiji",
             "sigla": "FJ",
@@ -2387,99 +1889,6 @@ export const localidades = {
             },
             "ddi": "33",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "254",
-            "slug": "guiana-francesa",
-            "sigla": "GF",
-            "sigla3": "GUF",
-            "nome": {
-                "en": "French Guiana",
-                "es": "Guayana Francesa",
-                "pt": "Guiana Francesa"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "french-guiana",
-                "es": "guayana-francesa",
-                "pt": "guiana-francesa"
-            },
-            "parent": 5,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 5
-            },
-            "ddi": "594",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "258",
-            "slug": "polinesia-francesa",
-            "sigla": "PF",
-            "sigla3": "PYF",
-            "nome": {
-                "en": "French Polynesia",
-                "es": "Polinesia Francesa",
-                "pt": "Polinésia Francesa"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "french-polynesia",
-                "es": "polinesia-francesa",
-                "pt": "polinesia-francesa"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "689",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "260",
-            "slug": "terras-austrais-e-antarticas-francesas",
-            "sigla": "TF",
-            "sigla3": "ATF",
-            "nome": {
-                "en": "French Southern Territories",
-                "es": "Territorio de las Tierras Australes Francesas",
-                "pt": "Terras Austrais e Antárticas Francesas"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "french-southern-territories",
-                "es": "territorio-de-las-tierras-australes-francesas",
-                "pt": "terras-austrais-e-antarticas-francesas"
-            },
-            "parent": 14,
-            "parents": {
-                "continente": 2,
-                "regiao": 202,
-                "subregiao": 14
-            },
-            "ddi": "262",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -2641,37 +2050,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "292",
-            "slug": "gibraltar",
-            "sigla": "GI",
-            "sigla3": "GIB",
-            "nome": {
-                "en": "Gibraltar",
-                "es": "Gibraltar",
-                "pt": "Gibraltar"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "gibraltar",
-                "es": "gibraltar",
-                "pt": "gibraltar"
-            },
-            "parent": 39,
-            "parents": {
-                "continente": 150,
-                "regiao": 39,
-                "subregiao": ""
-            },
-            "ddi": "350",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "300",
             "slug": "grecia",
             "sigla": "GR",
@@ -2699,37 +2077,6 @@ export const localidades = {
             },
             "ddi": "30",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "304",
-            "slug": "groenlandia",
-            "sigla": "GL",
-            "sigla3": "GRL",
-            "nome": {
-                "en": "Greenland",
-                "es": "Groenlandia",
-                "pt": "Groenlândia"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "greenland",
-                "es": "groenlandia",
-                "pt": "groenlandia"
-            },
-            "parent": 21,
-            "parents": {
-                "continente": 19,
-                "regiao": 21,
-                "subregiao": ""
-            },
-            "ddi": "299",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -2765,68 +2112,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "312",
-            "slug": "ilha-guadalupe",
-            "sigla": "GP",
-            "sigla3": "GLP",
-            "nome": {
-                "en": "Guadeloupe",
-                "es": "Guadalupe",
-                "pt": "Ilha Guadalupe"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "guadeloupe",
-                "es": "guadalupe",
-                "pt": "ilha-guadalupe"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "590",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "316",
-            "slug": "guam",
-            "sigla": "GU",
-            "sigla3": "GUM",
-            "nome": {
-                "en": "Guam",
-                "es": "Guam",
-                "pt": "Guam"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "guam",
-                "es": "guam",
-                "pt": "guam"
-            },
-            "parent": 57,
-            "parents": {
-                "continente": 9,
-                "regiao": 57,
-                "subregiao": ""
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "320",
             "slug": "guatemala",
             "sigla": "GT",
@@ -2854,37 +2139,6 @@ export const localidades = {
             },
             "ddi": "502",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "831",
-            "slug": "guernsey",
-            "sigla": "GG",
-            "sigla3": "GGY",
-            "nome": {
-                "en": "Guernsey",
-                "es": "Guernsey",
-                "pt": "Guernsey"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "guernsey",
-                "es": "guernsey",
-                "pt": "guernsey"
-            },
-            "parent": 830,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": 830
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -3013,37 +2267,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "334",
-            "slug": "ilha-heard-e-ilhas-mcdonald",
-            "sigla": "HM",
-            "sigla3": "HMD",
-            "nome": {
-                "en": "Heard Island and McDonald Islands",
-                "es": "Islas Heard y McDonald",
-                "pt": "Ilha Heard e Ilhas McDonald"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "heard-island-and-mcdonald-islands",
-                "es": "islas-heard-y-mcdonald",
-                "pt": "ilha-heard-e-ilhas-mcdonald"
-            },
-            "parent": 53,
-            "parents": {
-                "continente": 9,
-                "regiao": 53,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "336",
             "slug": "vaticano",
             "sigla": "VA",
@@ -3104,44 +2327,6 @@ export const localidades = {
             },
             "ddi": "504",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "344",
-            "slug": "china-hong-kong",
-            "sigla": "HK",
-            "sigla3": "HKG",
-            "nome": {
-                "en": "China, Hong Kong Special Administrative Region",
-                "es": "China, región administrativa especial de Hong Kong",
-                "pt": "China, Hong Kong"
-            },
-            "apelidos": {
-                "en": [
-                    "China, Hong Kong SAR",
-                    "Hong Kong, China (SAR)"
-                ],
-                "es": [
-                    "Hong Kong"
-                ],
-                "pt": [
-                    "Hong Kong"
-                ]
-            },
-            "slugs": {
-                "en": "china-hong-kong-special-administrative-region",
-                "es": "china-region-administrativa-especial-de-hong-kong",
-                "pt": "china-hong-kong"
-            },
-            "parent": 30,
-            "parents": {
-                "continente": 142,
-                "regiao": 30,
-                "subregiao": ""
-            },
-            "ddi": "852",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -3365,37 +2550,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "833",
-            "slug": "ilha-de-man",
-            "sigla": "IM",
-            "sigla3": "IMN",
-            "nome": {
-                "en": "Isle of Man",
-                "es": "Isla de Man",
-                "pt": "Ilha de Man"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "isle-of-man",
-                "es": "isla-de-man",
-                "pt": "ilha-de-man"
-            },
-            "parent": 154,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "376",
             "slug": "israel",
             "sigla": "IL",
@@ -3516,37 +2670,6 @@ export const localidades = {
             },
             "ddi": "81",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "832",
-            "slug": "jersey",
-            "sigla": "JE",
-            "sigla3": "JEY",
-            "nome": {
-                "en": "Jersey",
-                "es": "Jersey",
-                "pt": "Jersey"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "jersey",
-                "es": "jersey",
-                "pt": "jersey"
-            },
-            "parent": 830,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": 830
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -4085,37 +3208,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "446",
-            "slug": "china-macao",
-            "sigla": "MO",
-            "sigla3": "MAC",
-            "nome": {
-                "en": "China, Macao Special Administrative Region",
-                "es": "China, región administrativa especial de Macao",
-                "pt": "China, Macao"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "china-macao-special-administrative-region",
-                "es": "china-region-administrativa-especial-de-macao",
-                "pt": "china-macao"
-            },
-            "parent": 30,
-            "parents": {
-                "continente": 142,
-                "regiao": 30,
-                "subregiao": ""
-            },
-            "ddi": "853",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "807",
             "slug": "macedonia",
             "sigla": "MK",
@@ -4366,37 +3458,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "474",
-            "slug": "martinica",
-            "sigla": "MQ",
-            "sigla3": "MTQ",
-            "nome": {
-                "en": "Martinique",
-                "es": "Martinica",
-                "pt": "Martinica"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "martinique",
-                "es": "martinica",
-                "pt": "martinica"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "596",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "478",
             "slug": "mauritania",
             "sigla": "MR",
@@ -4455,37 +3516,6 @@ export const localidades = {
             },
             "ddi": "230",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "175",
-            "slug": "mayotte",
-            "sigla": "YT",
-            "sigla3": "MYT",
-            "nome": {
-                "en": "Mayotte",
-                "es": "Mayotte",
-                "pt": "Mayotte"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "mayotte",
-                "es": "mayotte",
-                "pt": "mayotte"
-            },
-            "parent": 14,
-            "parents": {
-                "continente": 2,
-                "regiao": 202,
-                "subregiao": 14
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -4677,37 +3707,6 @@ export const localidades = {
             },
             "ddi": "382",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "500",
-            "slug": "montserrat",
-            "sigla": "MS",
-            "sigla3": "MSR",
-            "nome": {
-                "en": "Montserrat",
-                "es": "Montserrat",
-                "pt": "Montserrat"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "montserrat",
-                "es": "montserrat",
-                "pt": "montserrat"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -4935,37 +3934,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "540",
-            "slug": "nova-caledonia",
-            "sigla": "NC",
-            "sigla3": "NCL",
-            "nome": {
-                "en": "New Caledonia",
-                "es": "Nueva Caledonia",
-                "pt": "Nova Caledônia"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "new-caledonia",
-                "es": "nueva-caledonia",
-                "pt": "nova-caledonia"
-            },
-            "parent": 54,
-            "parents": {
-                "continente": 9,
-                "regiao": 54,
-                "subregiao": ""
-            },
-            "ddi": "687",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "554",
             "slug": "nova-zelandia",
             "sigla": "NZ",
@@ -5086,99 +4054,6 @@ export const localidades = {
             },
             "ddi": "234",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "570",
-            "slug": "niue",
-            "sigla": "NU",
-            "sigla3": "NIU",
-            "nome": {
-                "en": "Niue",
-                "es": "Niue",
-                "pt": "Niue"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "niue",
-                "es": "niue",
-                "pt": "niue"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "683",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "574",
-            "slug": "ilha-norfolk",
-            "sigla": "NF",
-            "sigla3": "NFK",
-            "nome": {
-                "en": "Norfolk Island",
-                "es": "Islas Norfolk",
-                "pt": "Ilha Norfolk"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "norfolk-island",
-                "es": "islas-norfolk",
-                "pt": "ilha-norfolk"
-            },
-            "parent": 53,
-            "parents": {
-                "continente": 9,
-                "regiao": 53,
-                "subregiao": ""
-            },
-            "ddi": "672",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "580",
-            "slug": "ilhas-marianas",
-            "sigla": "MP",
-            "sigla3": "MNP",
-            "nome": {
-                "en": "Northern Mariana Islands",
-                "es": "Islas Marianas Septentrionales",
-                "pt": "Ilhas Marianas"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "northern-mariana-islands",
-                "es": "islas-marianas-septentrionales",
-                "pt": "ilhas-marianas"
-            },
-            "parent": 57,
-            "parents": {
-                "continente": 9,
-                "regiao": 57,
-                "subregiao": ""
-            },
-            "ddi": "1",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -5493,39 +4368,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "612",
-            "slug": "pitcairn",
-            "sigla": "PN",
-            "sigla3": "PCN",
-            "nome": {
-                "en": "Pitcairn",
-                "es": "Pitcairn",
-                "pt": "Pitcairn"
-            },
-            "apelidos": {
-                "en": [
-                    "Pitcairn Islands"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "pitcairn",
-                "es": "pitcairn",
-                "pt": "pitcairn"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "616",
             "slug": "polonia",
             "sigla": "PL",
@@ -5588,37 +4430,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "630",
-            "slug": "porto-rico",
-            "sigla": "PR",
-            "sigla3": "PRI",
-            "nome": {
-                "en": "Puerto Rico",
-                "es": "Puerto Rico",
-                "pt": "Porto Rico"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "puerto-rico",
-                "es": "puerto-rico",
-                "pt": "porto-rico"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "634",
             "slug": "catar",
             "sigla": "QA",
@@ -5646,37 +4457,6 @@ export const localidades = {
             },
             "ddi": "974",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "638",
-            "slug": "ilha-reuniao",
-            "sigla": "RE",
-            "sigla3": "REU",
-            "nome": {
-                "en": "Réunion",
-                "es": "Reunión",
-                "pt": "Ilha Reunião"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "reunion",
-                "es": "reunion",
-                "pt": "ilha-reuniao"
-            },
-            "parent": 14,
-            "parents": {
-                "continente": 2,
-                "regiao": 202,
-                "subregiao": 14
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -5776,70 +4556,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "652",
-            "slug": "sao-bartolomeu",
-            "sigla": "BL",
-            "sigla3": "BLM",
-            "nome": {
-                "en": "Saint Barthélemy",
-                "es": "San Bartolomé",
-                "pt": "São Bartolomeu"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "saint-barthelemy",
-                "es": "san-bartolome",
-                "pt": "sao-bartolomeu"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "654",
-            "slug": "santa-helena",
-            "sigla": "SH",
-            "sigla3": "SHN",
-            "nome": {
-                "en": "Saint Helena",
-                "es": "Santa Elena",
-                "pt": "Santa Helena"
-            },
-            "apelidos": {
-                "en": [
-                    "Saint Helena, Ascension, and Tristan da Cunha"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "saint-helena",
-                "es": "santa-elena",
-                "pt": "santa-helena"
-            },
-            "parent": 11,
-            "parents": {
-                "continente": 2,
-                "regiao": 202,
-                "subregiao": 11
-            },
-            "ddi": "247, 290",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "659",
             "slug": "sao-cristovao-e-nevis",
             "sigla": "KN",
@@ -5898,70 +4614,6 @@ export const localidades = {
             },
             "ddi": "1",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "663",
-            "slug": "saint-martin-parte-francesa",
-            "sigla": "MF",
-            "sigla3": "MAF",
-            "nome": {
-                "en": "Saint Martin (French Part)",
-                "es": "San Martín (parte francesa)",
-                "pt": "Saint Martin (parte francesa)"
-            },
-            "apelidos": {
-                "en": [
-                    "Saint Martin"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "saint-martin-french-part",
-                "es": "san-martin-parte-francesa",
-                "pt": "saint-martin-parte-francesa"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "666",
-            "slug": "saint-pierre-e-miquelon",
-            "sigla": "PM",
-            "sigla3": "SPM",
-            "nome": {
-                "en": "Saint Pierre and Miquelon",
-                "es": "Saint Pierre y Miquelon",
-                "pt": "Saint Pierre e Miquelon"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "saint-pierre-and-miquelon",
-                "es": "saint-pierre-y-miquelon",
-                "pt": "saint-pierre-e-miquelon"
-            },
-            "parent": 21,
-            "parents": {
-                "continente": 19,
-                "regiao": 21,
-                "subregiao": ""
-            },
-            "ddi": "508",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -6276,39 +4928,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "534",
-            "slug": "saint-martin-parte-holandesa",
-            "sigla": "SX",
-            "sigla3": "SXM",
-            "nome": {
-                "en": "Sint Maarten (Dutch part)",
-                "es": "San Martín (parte holandés)",
-                "pt": "Saint Martin (parte holandesa)"
-            },
-            "apelidos": {
-                "en": [
-                    "Sint Maarten"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "sint-maarten-dutch-part",
-                "es": "san-martin-parte-holandes",
-                "pt": "saint-martin-parte-holandesa"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "703",
             "slug": "eslovaquia",
             "sigla": "SK",
@@ -6460,37 +5079,6 @@ export const localidades = {
             },
             "ddi": "27",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "239",
-            "slug": "ilhas-georgia-do-sul-e-sandwich-do-sul",
-            "sigla": "GS",
-            "sigla3": "SGS",
-            "nome": {
-                "en": "South Georgia and the South Sandwich Islands",
-                "es": "Georgia del Sur y las Islas Sandwich del Sur",
-                "pt": "Ilhas Geórgia do Sul e Sandwich do Sul"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "south-georgia-and-the-south-sandwich-islands",
-                "es": "georgia-del-sur-y-las-islas-sandwich-del-sur",
-                "pt": "ilhas-georgia-do-sul-e-sandwich-do-sul"
-            },
-            "parent": 5,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 5
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -6650,39 +5238,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "744",
-            "slug": "svalbard-e-jan-mayen-islands",
-            "sigla": "SJ",
-            "sigla3": "SJM",
-            "nome": {
-                "en": "Svalbard and Jan Mayen Islands",
-                "es": "Islas Svalbard y Jan Mayen",
-                "pt": "Svalbard e Jan Mayen Islands"
-            },
-            "apelidos": {
-                "en": [
-                    "Svalbard"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "svalbard-and-jan-mayen-islands",
-                "es": "islas-svalbard-y-jan-mayen",
-                "pt": "svalbard-e-jan-mayen-islands"
-            },
-            "parent": 154,
-            "parents": {
-                "continente": 150,
-                "regiao": 154,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "748",
             "slug": "suazilandia",
             "sigla": "SZ",
@@ -6805,39 +5360,6 @@ export const localidades = {
             },
             "ddi": "963",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "158",
-            "slug": "taiwan",
-            "sigla": "TW",
-            "sigla3": "TWN",
-            "nome": {
-                "en": "Taiwan (Province of China)",
-                "es": "República de China (Taiwán)",
-                "pt": "Taiwan"
-            },
-            "apelidos": {
-                "en": [
-                    "Taiwan"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "taiwan-province-of-china",
-                "es": "republica-de-china-taiwan",
-                "pt": "taiwan"
-            },
-            "parent": "",
-            "parents": {
-                "continente": "",
-                "regiao": "",
-                "subregiao": ""
-            },
-            "ddi": "886",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -7003,37 +5525,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "772",
-            "slug": "tokelau",
-            "sigla": "TK",
-            "sigla3": "TKL",
-            "nome": {
-                "en": "Tokelau",
-                "es": "Tokelau",
-                "pt": "Tokelau"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "tokelau",
-                "es": "tokelau",
-                "pt": "tokelau"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "690",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "776",
             "slug": "tonga",
             "sigla": "TO",
@@ -7185,37 +5676,6 @@ export const localidades = {
             },
             "ddi": "993",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "796",
-            "slug": "ilhas-turks-e-caicos",
-            "sigla": "TC",
-            "sigla3": "TCA",
-            "nome": {
-                "en": "Turks and Caicos Islands",
-                "es": "Islas Turcas y Caicos",
-                "pt": "Ilhas Turks e Caicos"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "turks-and-caicos-islands",
-                "es": "islas-turcas-y-caicos",
-                "pt": "ilhas-turks-e-caicos"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -7373,37 +5833,6 @@ export const localidades = {
             },
             "ddi": "44",
             "onu": true
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "581",
-            "slug": "ilhas-menores-distantes-dos-estados-unidos",
-            "sigla": "UM",
-            "sigla3": "UMI",
-            "nome": {
-                "en": "United States Minor Outlying Islands",
-                "es": "Islas menores alejadas de Estados Unidos",
-                "pt": "Ilhas Menores Distantes dos Estados Unidos"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "united-states-minor-outlying-islands",
-                "es": "islas-menores-alejadas-de-estados-unidos",
-                "pt": "ilhas-menores-distantes-dos-estados-unidos"
-            },
-            "parent": 57,
-            "parents": {
-                "continente": 9,
-                "regiao": 57,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
         },
         {
             "tipo": "pais",
@@ -7600,134 +6029,6 @@ export const localidades = {
         {
             "tipo": "pais",
             "onu_type": "country or area",
-            "codigo": "92",
-            "slug": "ilhas-virgens-britanicas",
-            "sigla": "VG",
-            "sigla3": "VGB",
-            "nome": {
-                "en": "British Virgin Islands",
-                "es": "Islas Vírgenes Británicas",
-                "pt": "Ilhas Virgens Britânicas"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "british-virgin-islands",
-                "es": "islas-virgenes-britanicas",
-                "pt": "ilhas-virgens-britanicas"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "850",
-            "slug": "ilhas-virgens",
-            "sigla": "VI",
-            "sigla3": "VIR",
-            "nome": {
-                "en": "United States Virgin Islands",
-                "es": "Islas Vírgenes de los Estados Unidos",
-                "pt": "Ilhas Virgens"
-            },
-            "apelidos": {
-                "en": [
-                    "Virgin Islands"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "united-states-virgin-islands",
-                "es": "islas-virgenes-de-los-estados-unidos",
-                "pt": "ilhas-virgens"
-            },
-            "parent": 29,
-            "parents": {
-                "continente": 19,
-                "regiao": 419,
-                "subregiao": 29
-            },
-            "ddi": "1",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "876",
-            "slug": "ilhas-wallis-e-futuna",
-            "sigla": "WF",
-            "sigla3": "WLF",
-            "nome": {
-                "en": "Wallis and Futuna Islands",
-                "es": "Islas Wallis y Futuna",
-                "pt": "Ilhas Wallis e Futuna"
-            },
-            "apelidos": {
-                "en": [
-                    "Wallis and Futuna"
-                ],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "wallis-and-futuna-islands",
-                "es": "islas-wallis-y-futuna",
-                "pt": "ilhas-wallis-e-futuna"
-            },
-            "parent": 61,
-            "parents": {
-                "continente": 9,
-                "regiao": 61,
-                "subregiao": ""
-            },
-            "ddi": "681",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
-            "codigo": "732",
-            "slug": "saara-ocidental",
-            "sigla": "EH",
-            "sigla3": "ESH",
-            "nome": {
-                "en": "Western Sahara",
-                "es": "Sáhara Occidental",
-                "pt": "Saara Ocidental"
-            },
-            "apelidos": {
-                "en": [],
-                "es": [],
-                "pt": []
-            },
-            "slugs": {
-                "en": "western-sahara",
-                "es": "sahara-occidental",
-                "pt": "saara-ocidental"
-            },
-            "parent": 15,
-            "parents": {
-                "continente": 2,
-                "regiao": 15,
-                "subregiao": ""
-            },
-            "ddi": "",
-            "onu": false
-        },
-        {
-            "tipo": "pais",
-            "onu_type": "country or area",
             "codigo": "887",
             "slug": "iemen",
             "sigla": "YE",
@@ -7817,535 +6118,6 @@ export const localidades = {
             },
             "ddi": "263",
             "onu": true
-        }
-    ],
-    "regioes": [
-        {
-            "tipo": "mundo",
-            "onu_type": "global",
-            "slug": "mundo",
-            "nome": {
-                "en": "World",
-                "es": "Mundo",
-                "pt": "Mundo"
-            },
-            "slugs": {
-                "en": "world",
-                "es": "mundo",
-                "pt": "mundo"
-            },
-            "codigo": 1,
-            "parent": null
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "norte-da-africa",
-            "nome": {
-                "en": "Northern Africa",
-                "es": "África septentrional",
-                "pt": "Norte da África"
-            },
-            "slugs": {
-                "en": "northern-africa",
-                "es": "africa-septentrional",
-                "pt": "norte-da-africa"
-            },
-            "codigo": 15,
-            "parent": 2
-        },
-        {
-            "tipo": "continente",
-            "onu_type": "region",
-            "slug": "africa",
-            "nome": {
-                "en": "Africa",
-                "es": "África",
-                "pt": "África"
-            },
-            "slugs": {
-                "en": "africa",
-                "es": "africa",
-                "pt": "africa"
-            },
-            "codigo": 2,
-            "parent": 1
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "africa-oriental",
-            "nome": {
-                "en": "Eastern Africa",
-                "es": "África oriental",
-                "pt": "África Oriental"
-            },
-            "slugs": {
-                "en": "eastern-africa",
-                "es": "africa-oriental",
-                "pt": "africa-oriental"
-            },
-            "codigo": 14,
-            "parent": 202
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "africa-subsaariana",
-            "nome": {
-                "en": "Sub-Saharan Africa",
-                "es": "África Subsahariana",
-                "pt": "África Subsaariana"
-            },
-            "slugs": {
-                "en": "sub-saharan-africa",
-                "es": "africa-subsahariana",
-                "pt": "africa-subsaariana"
-            },
-            "codigo": 202,
-            "parent": 2
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "africa-central",
-            "nome": {
-                "en": "Middle Africa",
-                "es": "África central",
-                "pt": "África Central"
-            },
-            "slugs": {
-                "en": "middle-africa",
-                "es": "africa-central",
-                "pt": "africa-central"
-            },
-            "codigo": 17,
-            "parent": 202
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "africa-austral",
-            "nome": {
-                "en": "Southern Africa",
-                "es": "África meridional",
-                "pt": "África Austral"
-            },
-            "slugs": {
-                "en": "southern-africa",
-                "es": "africa-meridional",
-                "pt": "africa-austral"
-            },
-            "codigo": 18,
-            "parent": 202
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "africa-ocidental",
-            "nome": {
-                "en": "Western Africa",
-                "es": "África occidental",
-                "pt": "África Ocidental"
-            },
-            "slugs": {
-                "en": "western-africa",
-                "es": "africa-occidental",
-                "pt": "africa-ocidental"
-            },
-            "codigo": 11,
-            "parent": 202
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "caribe",
-            "nome": {
-                "en": "Caribbean",
-                "es": "El Caribe",
-                "pt": "Caribe"
-            },
-            "slugs": {
-                "en": "caribbean",
-                "es": "el-caribe",
-                "pt": "caribe"
-            },
-            "codigo": 29,
-            "parent": 419
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "america-latina-e-o-caribe",
-            "nome": {
-                "en": "Latin America and the Caribbean",
-                "es": "América Latina y el Caribe",
-                "pt": "América Latina e o Caribe"
-            },
-            "slugs": {
-                "en": "latin-america-and-the-caribbean",
-                "es": "america-latina-y-el-caribe",
-                "pt": "america-latina-e-o-caribe"
-            },
-            "codigo": 419,
-            "parent": 19
-        },
-        {
-            "tipo": "continente",
-            "onu_type": "region",
-            "slug": "america",
-            "nome": {
-                "en": "Americas",
-                "es": "Américas",
-                "pt": "América"
-            },
-            "slugs": {
-                "en": "americas",
-                "es": "americas",
-                "pt": "america"
-            },
-            "codigo": 19,
-            "parent": 1
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "america-central",
-            "nome": {
-                "en": "Central America",
-                "es": "América central",
-                "pt": "América Central"
-            },
-            "slugs": {
-                "en": "central-america",
-                "es": "america-central",
-                "pt": "america-central"
-            },
-            "codigo": 13,
-            "parent": 419
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "america-do-sul",
-            "nome": {
-                "en": "South America",
-                "es": "América del Sur",
-                "pt": "América do Sul"
-            },
-            "slugs": {
-                "en": "south-america",
-                "es": "america-del-sur",
-                "pt": "america-do-sul"
-            },
-            "codigo": 5,
-            "parent": 419
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "america-do-norte",
-            "nome": {
-                "en": "Northern America",
-                "es": "América septentrional",
-                "pt": "América do Norte"
-            },
-            "slugs": {
-                "en": "northern-america",
-                "es": "america-septentrional",
-                "pt": "america-do-norte"
-            },
-            "codigo": 21,
-            "parent": 19
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "asia-central",
-            "nome": {
-                "en": "Central Asia",
-                "es": "Asia central",
-                "pt": "Ásia Central"
-            },
-            "slugs": {
-                "en": "central-asia",
-                "es": "asia-central",
-                "pt": "asia-central"
-            },
-            "codigo": 143,
-            "parent": 142
-        },
-        {
-            "tipo": "continente",
-            "onu_type": "region",
-            "slug": "asia",
-            "nome": {
-                "en": "Asia",
-                "es": "Asia",
-                "pt": "Ásia"
-            },
-            "slugs": {
-                "en": "asia",
-                "es": "asia",
-                "pt": "asia"
-            },
-            "codigo": 142,
-            "parent": 1
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "asia-oriental",
-            "nome": {
-                "en": "Eastern Asia",
-                "es": "Asia oriental",
-                "pt": "Ásia Oriental"
-            },
-            "slugs": {
-                "en": "eastern-asia",
-                "es": "asia-oriental",
-                "pt": "asia-oriental"
-            },
-            "codigo": 30,
-            "parent": 142
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "sudeste-asiatico",
-            "nome": {
-                "en": "South-eastern Asia",
-                "es": "Asia sudoriental",
-                "pt": "Sudeste Asiático"
-            },
-            "slugs": {
-                "en": "south-eastern-asia",
-                "es": "asia-sudoriental",
-                "pt": "sudeste-asiatico"
-            },
-            "codigo": 35,
-            "parent": 142
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "asia-meridional",
-            "nome": {
-                "en": "Southern Asia",
-                "es": "Asia meridional",
-                "pt": "Ásia Meridional"
-            },
-            "slugs": {
-                "en": "southern-asia",
-                "es": "asia-meridional",
-                "pt": "asia-meridional"
-            },
-            "codigo": 34,
-            "parent": 142
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "asia-ocidental",
-            "nome": {
-                "en": "Western Asia",
-                "es": "Asia occidental",
-                "pt": "Ásia Ocidental"
-            },
-            "slugs": {
-                "en": "western-asia",
-                "es": "asia-occidental",
-                "pt": "asia-ocidental"
-            },
-            "codigo": 145,
-            "parent": 142
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "europa-oriental",
-            "nome": {
-                "en": "Eastern Europe",
-                "es": "Europa oriental",
-                "pt": "Europa Oriental"
-            },
-            "slugs": {
-                "en": "eastern-europe",
-                "es": "europa-oriental",
-                "pt": "europa-oriental"
-            },
-            "codigo": 151,
-            "parent": 150
-        },
-        {
-            "tipo": "continente",
-            "onu_type": "region",
-            "slug": "europa",
-            "nome": {
-                "en": "Europe",
-                "es": "Europa",
-                "pt": "Europa"
-            },
-            "slugs": {
-                "en": "europe",
-                "es": "europa",
-                "pt": "europa"
-            },
-            "codigo": 150,
-            "parent": 1
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "europa-setentrional",
-            "nome": {
-                "en": "Northern Europe",
-                "es": "Europa septentrional",
-                "pt": "Europa Setentrional"
-            },
-            "slugs": {
-                "en": "northern-europe",
-                "es": "europa-septentrional",
-                "pt": "europa-setentrional"
-            },
-            "codigo": 154,
-            "parent": 150
-        },
-        {
-            "tipo": "subregiao",
-            "onu_type": "intermediate region",
-            "slug": "ilhas-do-canal-ilhas-anglo-normandas",
-            "nome": {
-                "en": "Channel Islands",
-                "es": "Islas Anglonormandas",
-                "pt": "Ilhas do Canal (Ilhas Anglo-Normandas)"
-            },
-            "slugs": {
-                "en": "channel-islands",
-                "es": "islas-anglonormandas",
-                "pt": "ilhas-do-canal-ilhas-anglo-normandas"
-            },
-            "codigo": 830,
-            "parent": 154
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "europa-meridional",
-            "nome": {
-                "en": "Southern Europe",
-                "es": "Europa meridional",
-                "pt": "Europa Meridional"
-            },
-            "slugs": {
-                "en": "southern-europe",
-                "es": "europa-meridional",
-                "pt": "europa-meridional"
-            },
-            "codigo": 39,
-            "parent": 150
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "europa-ocidental",
-            "nome": {
-                "en": "Western Europe",
-                "es": "Europa occidental",
-                "pt": "Europa Ocidental"
-            },
-            "slugs": {
-                "en": "western-europe",
-                "es": "europa-occidental",
-                "pt": "europa-ocidental"
-            },
-            "codigo": 155,
-            "parent": 150
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "australia-e-nova-zelandia",
-            "nome": {
-                "en": "Australia and New Zealand",
-                "es": "Australia y Nueva Zelandia",
-                "pt": "Austrália e Nova Zelândia"
-            },
-            "slugs": {
-                "en": "australia-and-new-zealand",
-                "es": "australia-y-nueva-zelandia",
-                "pt": "australia-e-nova-zelandia"
-            },
-            "codigo": 53,
-            "parent": 9
-        },
-        {
-            "tipo": "continente",
-            "onu_type": "region",
-            "slug": "oceania",
-            "nome": {
-                "en": "Oceania",
-                "es": "Oceanía",
-                "pt": "Oceania"
-            },
-            "slugs": {
-                "en": "oceania",
-                "es": "oceania",
-                "pt": "oceania"
-            },
-            "codigo": 9,
-            "parent": 1
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "melanesia",
-            "nome": {
-                "en": "Melanesia",
-                "es": "Melanesia",
-                "pt": "Melanésia"
-            },
-            "slugs": {
-                "en": "melanesia",
-                "es": "melanesia",
-                "pt": "melanesia"
-            },
-            "codigo": 54,
-            "parent": 9
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "micronesia",
-            "nome": {
-                "en": "Micronesia",
-                "es": "Micronesia",
-                "pt": "Micronésia"
-            },
-            "slugs": {
-                "en": "micronesia",
-                "es": "micronesia",
-                "pt": "micronesia"
-            },
-            "codigo": 57,
-            "parent": 9
-        },
-        {
-            "tipo": "regiao",
-            "onu_type": "sub-region",
-            "slug": "polinesia",
-            "nome": {
-                "en": "Polynesia",
-                "es": "Polinesia",
-                "pt": "Polinésia"
-            },
-            "slugs": {
-                "en": "polynesia",
-                "es": "polinesia",
-                "pt": "polinesia"
-            },
-            "codigo": 61,
-            "parent": 9
         }
     ]
 }

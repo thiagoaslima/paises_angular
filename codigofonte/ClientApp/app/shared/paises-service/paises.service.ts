@@ -169,26 +169,26 @@ export class PaisesService extends RequestService {
                 posicao: "100.1",
                 indicador: "Calorias consumidas"
             },
-            62967: {
-                id: 62967,
-                posicao: "100.2",
-                indicador: "Esperança de vida ao nascer"
-            },
+            // 62967: {
+            //     id: 62967,
+            //     posicao: "100.2",
+            //     indicador: "Esperança de vida ao nascer"
+            // },
             62971: {
                 id: 62971,
                 posicao: "100.3",
                 indicador: "População subnutrida"
             },
-            62986: {
-                id: 62986,
-                posicao: "100.4",
-                indicador: "Taxa bruta de mortalidade"
-            },
-            62987: {
-                id: 62987,
-                posicao: "100.5",
-                indicador: "Taxa bruta de natalidade"
-            }
+            // 62986: {
+            //     id: 62986,
+            //     posicao: "100.4",
+            //     indicador: "Taxa bruta de mortalidade"
+            // },
+            // 62987: {
+            //     id: 62987,
+            //     posicao: "100.5",
+            //     indicador: "Taxa bruta de natalidade"
+            // }
         } as {[key: number]: any};
 
         let shouldInclude = true;

@@ -45,10 +45,19 @@ import { map } from 'rxjs/operators/map';
         'class': 'bg-layer'
     }
 })
-export class MapaMundiComponent implements  OnDestroy, OnChanges {
+export class MapaMundiComponent implements OnDestroy, OnChanges {
     @Input() malha: L.GeoJSON | null = null;
     @Input() pais: Pais | null = null;
     @Input() link = ["."];
+    @Input()
+    set escala(array: string[]) {
+        this._escala = array && array.length > 0
+            ? ['0'].concat(array.slice(0))
+            : [];
+    }
+    get escala() {
+        return this._escala;
+    }
 
     public mapOptions = MAP_STYLES.options;
     public leafletLayers: L.Layer[] = [];
@@ -57,18 +66,19 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
         layer: <any>null
     };
 
-    private _map$ = new BehaviorSubject<L.Map|null>(null);
+    private _map$ = new BehaviorSubject<L.Map | null>(null);
     private _pais$ = new BehaviorSubject<Pais | null>(null);
-    private _topology$ = new BehaviorSubject<G.GeoJsonObject|undefined>(undefined);
+    private _topology$ = new BehaviorSubject<G.GeoJsonObject | undefined>(undefined);
     private _paisLayerMap: Map<string, L.Layer>;
     private _subscriptions: Subscription[] = [];
+    private _escala: string[] = [];
 
     constructor(
         private _router: Router,
         private _route: ActivatedRoute,
         private _changeDetector: ChangeDetectorRef,
         private _ngzone: NgZone
-    ) {}
+    ) { }
 
     ngOnInit() {
         const buildGeoJsonMap$ = Observable.combineLatest(this._map$, this._topology$)
@@ -83,8 +93,8 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
             })
         );
 
-        const leafletLayersSubscription = geoJson$.subscribe(geoJsonLayer => { 
-            this.leafletLayers.push(geoJsonLayer); 
+        const leafletLayersSubscription = geoJson$.subscribe(geoJsonLayer => {
+            this.leafletLayers.push(geoJsonLayer);
             this._updatePaisLayerMap(geoJsonLayer);
         })
 
@@ -126,7 +136,7 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
         const { style, slug } = feature.properties;
 
         if (feature.properties.slug === this.paisSelecionado.slug) {
-            return style.selected;
+            return Object.assign({}, style.default, style.selected);
         }
 
         return style.default;
@@ -148,15 +158,15 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
             : null;
     }
 
-    private _selectPais(slugPais: string, layerPais: L.Layer|null) {
+    private _selectPais(slugPais: string, layerPais: L.Layer | null) {
         if (this.paisSelecionado.layer) {
             this._setLayerStyle(this.paisSelecionado.layer, 'default');
         }
-        
+
         if (layerPais) {
             this._setLayerStyle(layerPais, 'selected');
         }
-        
+
         this.paisSelecionado = {
             slug: slugPais,
             layer: layerPais
@@ -165,7 +175,12 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
 
     private _setLayerStyle(layer: any, styleKey: string) {
         const style = layer.feature.properties.style;
-        layer.setStyle(style[styleKey]);
+
+        const newStyle = styleKey === 'selected'
+            ? Object.assign({}, style.default, style.selected)
+            : style[styleKey];
+
+        layer.setStyle(newStyle);
     }
 
     private _setOnEachFeatureListeners(feature: GeoJSON.Feature<GeoJSON.GeometryObject, any>, layer: L.Layer) {
@@ -182,11 +197,12 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
         layer.on({
             mouseover: () => layer.setStyle(MAP_STYLES.polygons.hover),
             mouseout: () => {
-                const {slug, style} = feature.properties;
+                const { slug } = feature.properties;
 
-                that.paisSelecionado.slug == slug
-                    ? layer.setStyle(style.selected)
-                    : layer.setStyle(style.default)
+                const style = that.paisSelecionado.slug === slug
+                    ? 'selected' : 'default';
+                
+                that._setLayerStyle(layer, style);
             }
         });
     }
@@ -198,7 +214,7 @@ export class MapaMundiComponent implements  OnDestroy, OnChanges {
                 that._ngzone.run(() => {
                     this._router.navigate(this.link.concat(evt.target.feature.properties.slug), { relativeTo: this._route })
                 });
-			}
+            }
         });
     }
 

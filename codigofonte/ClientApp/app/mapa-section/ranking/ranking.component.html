@@ -5,7 +5,7 @@
         <!--título-->
         <h2 class="ranking__titulo">{{ indicador?.indicador }}</h2>
         <!--botão de fechar-->
-        <a class="button ranking__botao-fechar" routerLink="/mapa">
+        <a class="button ranking__botao-fechar" [routerLink]="'/dados/' + paisSelecionado" queryParamsHandling="preserve">
             <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
         </a>
     </div>
@@ -39,7 +39,7 @@
                     {{ obj.posicao }}
                 </td>
                 <td class="ranking__tabela-corpo-celula celula-grande">
-                    <a class="ranking__tabela-link" href="#">{{ obj.pais.nome.pt }}</a>
+                    <a class="ranking__tabela-link" [routerLink]="['..',obj.pais.slug]" queryParamsHandling="preserve">{{ obj.pais.nome.pt }}</a>
                 </td>
                 <td class="ranking__tabela-corpo-celula celula-pequena">
                     {{ obj.valor | resultado }}

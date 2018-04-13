@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
 import { topojson } from './paises.topojson';
 
 import * as T from 'topojson';
@@ -25,8 +25,8 @@ export class MalhaService {
             fillOpacity: 1
         },
         selected: {
-            fillColor: '#DDDDDD',
-            weight: 0,
+            strokeColor: '#E6E6E6',
+            weight: 6,
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1
@@ -84,7 +84,9 @@ export class MalhaService {
         }
     };
 
-    constructor() {
+    constructor(
+        @Inject('SPECIAL_VALUES') private _specialValues: { values: { [key: string]: string } }
+    ) {
         this._setMalhaProperties();
         this.geojson = T.feature(this.topojson, this.topojson.objects.countries);
     }
@@ -93,18 +95,21 @@ export class MalhaService {
         return this.topojson;
     }
 
-    public getMalhaGeoJSON(valores?: Array<{ pais: Pais, valor: string }>): any {
+    public getMalhaGeoJSON(valores?: Array<{ pais: Pais, valor: string }>, scale?: number[]): any {
         if (!valores || valores.length === 0) {
             return this.geojson;
         }
 
-        return this.updateMalhaGeoJSON(valores);
+        if (valores && scale) {
+            return this.updateMalhaGeoJSON(valores, scale);
+        } else{
+            throw new Error('No scale parameter set');
+        }
     }
 
-    public updateMalhaGeoJSON(valores: Array<{ pais: Pais, valor: string }>) {
+    public updateMalhaGeoJSON(valores: Array<{ pais: Pais, valor: string }>, scales: number[]) {
         let geojson = Object.assign({}, this.geojson);
 
-        const scales = this._makeScales(valores);
         const valoresMap = valores.reduce((agg, obj) => {
             agg[obj.pais.sigla] = obj;
             return agg;
@@ -116,7 +121,7 @@ export class MalhaService {
             const { sigla, mostrar } = feature.properties;
 
             if (mostrar) {
-                let scale = this._getScale(valoresMap[sigla].valor, scales);
+                let scale = this._getScale(parseFloat(valoresMap[sigla].valor), scales);
                 if (scale) {
                     //@ts-ignore
                     feature.properties.style.default = this.polygonsStyles[scale];
@@ -142,31 +147,34 @@ export class MalhaService {
         });
     }
 
-    private _makeScales(valores: Array<{ pais: Pais, valor: string }>) {
-        const _setValues = new Set(valores.map(obj => obj.valor).sort().reverse());
-        const _values = Array.from(_setValues.values()).filter(Boolean);
-        let sep = [];
+    public makeScales(valores: Array<{ pais: Pais, valor: string }>, totalNiveis = 4) {
+        const _setValues = new Set(valores.map(obj => parseFloat(obj.valor)));
+        const _values = Array.from(_setValues.values()).filter(Boolean).sort((a,b) => b - a);
+        if (_values[0].toString(10) === this._specialValues.values.NAO_DISPONIVEL) {
+            _values.shift();
+        }
+        let graus = [_values[0]];
 
-        let div = Math.floor(_values.length / 5);
-        sep[0] = _values[div];
-        sep[1] = _values[div * 2];
-        sep[2] = _values[div * 3];
-        sep[3] = _values[div * 4];
+        let qtdeItensPorNivel = Math.floor(_values.length / totalNiveis + 1);
 
-        return sep;
+        for(let idx = 1; idx < totalNiveis; idx++) {
+            graus.push(_values[qtdeItensPorNivel * idx+1]);
+        }
+
+        return graus.reverse();
     }
 
-    private _getScale(value: string, scales: string[]) {
+    private _getScale(value: number, scales: number[]) {
         if (!value) {
             return 'scaleNoData';
         }
 
-        let scale = 5;
+        let scale = scales.length;
 
         for (let idx = 0; idx < scales.length; idx++) {
             let currentScale = scales[idx];
 
-            if (value >= currentScale) {
+            if (value <= currentScale) {
                 scale = idx + 1;
                 break;
             }

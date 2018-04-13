@@ -400,7 +400,7 @@ fs.writeFile(
     path.resolve('../../../codigofonte/ClientApp/app/shared/localidade', 'localidades.lista.ts'),
     `import { Localidade, Pais } from './localidade.model';
 
-export const localidades = ${JSON.stringify({ paises, regioes }, null, 4)}`,
+export const localidades = ${JSON.stringify({ paises: paises.filter(pais => pais.onu) }, null, 4)}`,
     (err) => {
         if (err) { console.log('ERRO', 'localidades.lista não foi atualizada', err) }
         console.log('localidades.lista atualizada');

@@ -1,7 +1,10 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 
 import { Subscription } from "rxjs/Subscription";
+import { distinctUntilChanged } from 'rxjs/operators/distinctUntilChanged';
+import { filter } from 'rxjs/operators/filter';
 import { map } from 'rxjs/operators/map';
+import { tap } from 'rxjs/operators/tap';
 import { switchMap } from 'rxjs/operators/switchMap';
 
 
@@ -13,6 +16,7 @@ import {
     PlatformDetectionService
 } from "../shared";
 import { MapaSectionService } from "./mapa-section.service";
+
 
 
 @Component({
@@ -36,6 +40,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
     public malha: any;
     public pais: Pais|null = null;
     public linkUrl = ["."];
+    public escala = [] as number[];
 
     constructor(
         private _mapaSectionService: MapaSectionService,
@@ -52,14 +57,34 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
             this.linkUrl = params.indicador ? [".", "ranking", params.indicador] : ["."]
         });
 
-        const malhaSubscription = this._routerParams.params$.pipe(
+        const indicadorObservable = this._routerParams.params$.pipe(
             map( ({params}) => parseInt(params.indicador, 10)),
-            switchMap(indicadorId => this._mapaSectionService.getMapa(indicadorId))
+            distinctUntilChanged()
+        );
+        
+        const malhaComDadosSubscription = indicadorObservable.pipe(
+            filter(Boolean),
+            switchMap(indicadorId => this._mapaSectionService.getRanking(indicadorId)),
+            map(ranking => {
+                const escala = this._mapaSectionService.getScale(ranking);
+                const malha = this._mapaSectionService.getMapa(ranking, escala);
+                console.log('Redesenhou mapa');
+                return {escala, malha};
+            })
+        ).subscribe(({escala, malha}) => { 
+            this.malha = malha;
+            this.escala = escala;
+        });
+
+        const malhaSemDadosSubscription = indicadorObservable.pipe(
+            filter(id => !id),
+            map(_ => this._mapaSectionService.getMapa())
         ).subscribe((malha:any) => { 
             this.malha = malha;
-        })
+            this.escala = [];
+        });
 
-        this._subscriptions.push(malhaSubscription, routerParamsSubscription);
+        this._subscriptions.push(malhaComDadosSubscription, malhaSemDadosSubscription, routerParamsSubscription);
     }
 
     ngOnDestroy() {
