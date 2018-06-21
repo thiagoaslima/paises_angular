@@ -1,0 +1,56 @@
+<div class="comparar main-layer">
+    <!--barra de título-->
+    <div class="comparar__barra-titulo">
+        <!--título-->
+        <h2 class="comparar__titulo">Comparar Países</h2>
+        <!--botão de fechar-->
+        <a class="button comparar__botao-fechar" routerLink="/mapa">
+            <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i>
+        </a>
+    </div>
+    <!--dados-->
+    <div class="comparar__info-container">
+        <!--lista de países-->
+        <div class="comparar__seletor-pais-container">
+            <div class="comparar__filtro-pais-container">
+                <input class="comparar__filtro-pais" type="text"/>
+            </div>
+            <p class="comparar__filtro-info">Selecione até 5 países</p>
+            <ul class="comparar__lista-pais">
+                <li class="comparar__lista-item-pais" *ngFor="let pais of paises; let i = index">
+                    <input type="checkbox" [disabled]="!paisesSelecionados[i] && numPaisesSelecionados() >= 5" (change)="paisesSelecionados[i] = !paisesSelecionados[i]; update();"/> {{ pais.nome[lang] }}
+                </li>
+            </ul>
+        </div>
+        <div class="comparar__dados-container">
+            <div class="comparar__botoes-container">
+                <button class="comparar__botao">Imprimir</button>
+                <button class="comparar__botao">Donwload</button>
+            </div>
+            <!--comboboxes-->
+            <div class="comparar__select-container">
+                <select class="comparar__select" (change)="setTitulo($event)">
+                    <option *ngFor="let titulo of getTitulos(); let i = index" [selected]="i == tituloAtual">
+                        {{ titulo.indicador }}
+                    </option>
+                </select>
+                <select class="comparar__select" (change)="setSubtitulo($event)">
+                    <option *ngFor="let subtitulo of getSubtitulos(tituloAtual); let i = index" [selected]="i == subtituloAtual">
+                        {{ subtitulo.indicador }}
+                    </option>
+                </select>
+            </div>
+            <!--grafico-->
+            <div class="comparar__grafico-container">
+                
+                <grafico
+                    [rotulosX]="getPeriodos()"
+                    [rotulosY]="getLegenda()"
+                    [dados]="getValores()"
+                    [unidade]="getUnidade()"
+                    [mostrarLegenda]="true">
+                </grafico>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,8 +18,11 @@
         <!--gráfico-->
         <grafico *ngIf="!mostrarTabela"
             [rotulosX]="tema.valores[graficoAtual].periodos.slice(-5)"
-            [rotulosY]="[getUnidade(tema.valores[graficoAtual].unidade)]"
-            [dados]="[tema.valores[graficoAtual].valores.slice(-5)]">
+            [rotulosY]="['']"
+            [unidade]="getUnidade(tema.valores[graficoAtual].unidade)"
+            [dados]="[tema.valores[graficoAtual].valores.slice(-5)]"
+            [mostrarLegenda]="false"
+        >
         </grafico>
         <!--tabela mobile-->
         <!--<div class="card__tabela-mobile-container">
