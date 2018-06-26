@@ -8,11 +8,9 @@ import { ResultadoPipe } from '../resultado.pipe';
 })
 export class GraficoComponent {
 
-    LARGURA_GRAFICO = 320;
-    ALTURA_GRAFICO = 180;
-    POSICAO_EIXO_X = 160
+    //POSICAO_EIXO_X = this.ALTURA_GRAFICO - 20;
+    //ALTURA_AREA_DADOS = this.POSICAO_EIXO_X - this.OFFSET_TOPO; //altura da área usada para mostrar os pontos do gráfico
     OFFSET_TOPO = 10; //offset usado no topo para impedir que os pontos de valor máximo sejam clipados
-    ALTURA_AREA_DADOS = this.POSICAO_EIXO_X - this.OFFSET_TOPO; //altura da área usada para mostrar os pontos do gráfico
     LARGURA_ROTULO = 28; //largura aproximada dos rótulos do eixo X
     ALTURA_ROTULO = 14; //largura aproximada dos rótulos do eixo X
     CHAR_WIDTH = 6;
@@ -32,6 +30,17 @@ export class GraficoComponent {
     @Input() unidade = '';
 
     @Input() mostrarLegenda = false;
+
+    @Input() LARGURA_GRAFICO = 320;
+    @Input() ALTURA_GRAFICO = 180;
+
+    get POSICAO_EIXO_X(){
+        return this.ALTURA_GRAFICO - 20;
+    }
+
+    get ALTURA_AREA_DADOS(){ //altura da área usada para mostrar os pontos do gráfico
+        return this.POSICAO_EIXO_X - this.OFFSET_TOPO;
+    }
 
     existemDados(){
         return (this.rotulosX && this.rotulosX.length) && 

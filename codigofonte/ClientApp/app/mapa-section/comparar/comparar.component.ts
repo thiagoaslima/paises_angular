@@ -4,6 +4,8 @@ import { LocalidadeService } from "../../shared/localidade";
 import { TraducaoService } from "../../shared";
 import { PaisesService } from "../../shared/paises-service";
 
+import {transformText} from "../../../utils/transformText";
+
 @Component({
     selector: 'paises-comparar',
     templateUrl: './comparar.component.html',
@@ -12,6 +14,8 @@ import { PaisesService } from "../../shared/paises-service";
 export class CompararComponent {
 
     paises:any = [];
+
+    paisesRemovidos:any = [];
 
     paisesSelecionados:any = [];
 
@@ -64,6 +68,15 @@ export class CompararComponent {
                 this.resultados['resultados'] = this.resultados['resultados'].concat(resultados['resultados']);
                 //console.log(this.resultados);
             });
+        }
+    }
+
+    filtrarPaises(event:any){
+        for(let i = 0; i < this.paises.length; i++){
+            if(transformText(this.paises[i].nome[this.lang]).indexOf(transformText(event.srcElement.value)) >= 0)
+                this.paisesRemovidos[i] = false;
+            else
+                this.paisesRemovidos[i] = true;
         }
     }
 

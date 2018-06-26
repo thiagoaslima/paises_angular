@@ -13,20 +13,25 @@
         <!--lista de países-->
         <div class="comparar__seletor-pais-container">
             <div class="comparar__filtro-pais-container">
-                <input class="comparar__filtro-pais" type="text"/>
+                <input class="comparar__filtro-pais" type="text" (input)="filtrarPaises($event);"/>
             </div>
             <p class="comparar__filtro-info">Selecione até 5 países</p>
             <ul class="comparar__lista-pais">
-                <li class="comparar__lista-item-pais" *ngFor="let pais of paises; let i = index">
-                    <input type="checkbox" [disabled]="!paisesSelecionados[i] && numPaisesSelecionados() >= 5" (change)="paisesSelecionados[i] = !paisesSelecionados[i]; update();"/> {{ pais.nome[lang] }}
-                </li>
+                <ng-template ngFor let-pais [ngForOf]="paises" let-i="index">
+                    <li class="comparar__lista-item-pais" *ngIf="!paisesRemovidos[i]">
+                            <input type="checkbox"
+                                [checked]="paisesSelecionados[i]"
+                                [disabled]="!paisesSelecionados[i] && numPaisesSelecionados() >= 5"
+                                (change)="paisesSelecionados[i] = !paisesSelecionados[i]; update();"/> {{ pais.nome[lang] }}
+                    </li>
+                </ng-template>
             </ul>
         </div>
         <div class="comparar__dados-container">
-            <div class="comparar__botoes-container">
+            <!--<div class="comparar__botoes-container">
                 <button class="comparar__botao">Imprimir</button>
                 <button class="comparar__botao">Donwload</button>
-            </div>
+            </div>-->
             <!--comboboxes-->
             <div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
@@ -48,7 +53,9 @@
                     [rotulosY]="getLegenda()"
                     [dados]="getValores()"
                     [unidade]="getUnidade()"
-                    [mostrarLegenda]="true">
+                    [mostrarLegenda]="true"
+                    [LARGURA_GRAFICO]="640"
+                    [ALTURA_GRAFICO]="320">
                 </grafico>
             </div>
         </div>
