@@ -8,23 +8,39 @@ import { ResultadoPipe } from '../resultado.pipe';
 })
 export class GraficoComponent {
 
-    LARGURA_GRAFICO = 320;
-    ALTURA_GRAFICO = 180;
-    POSICAO_EIXO_X = 160
+    //POSICAO_EIXO_X = this.ALTURA_GRAFICO - 20;
+    //ALTURA_AREA_DADOS = this.POSICAO_EIXO_X - this.OFFSET_TOPO; //altura da área usada para mostrar os pontos do gráfico
     OFFSET_TOPO = 10; //offset usado no topo para impedir que os pontos de valor máximo sejam clipados
-    ALTURA_AREA_DADOS = this.POSICAO_EIXO_X - this.OFFSET_TOPO; //altura da área usada para mostrar os pontos do gráfico
     LARGURA_ROTULO = 28; //largura aproximada dos rótulos do eixo X
     ALTURA_ROTULO = 14; //largura aproximada dos rótulos do eixo X
+    CHAR_WIDTH = 6;
 
     valor: any = null;
     metadata: any = null;
     indexSelecionado = -1;
+
+    tooltip: any = null;
 
     @Input() rotulosX = [];
 
     @Input() rotulosY = [];
 
     @Input() dados = [[]];
+
+    @Input() unidade = '';
+
+    @Input() mostrarLegenda = false;
+
+    @Input() LARGURA_GRAFICO = 320;
+    @Input() ALTURA_GRAFICO = 180;
+
+    get POSICAO_EIXO_X(){
+        return this.ALTURA_GRAFICO - 20;
+    }
+
+    get ALTURA_AREA_DADOS(){ //altura da área usada para mostrar os pontos do gráfico
+        return this.POSICAO_EIXO_X - this.OFFSET_TOPO;
+    }
 
     existemDados(){
         return (this.rotulosX && this.rotulosX.length) && 
@@ -88,7 +104,10 @@ export class GraficoComponent {
     }
 
     valorValido(valor: any){
-        if(!this.existemDados() || isNaN(valor) || valor == 0){
+        //console.log(valor);
+        if(!this.existemDados() || isNaN(valor) || valor == 0 || 
+            (valor == '99999999999991' || valor == '99999999999992' || valor == '99999999999993' || valor == '99999999999994' ||
+            valor == '99999999999995' || valor == '99999999999996' || valor == '99999999999997' || valor == '99999999999998' || valor == '99999999999999')){
             return false;
         }else{
             return true;
@@ -133,6 +152,43 @@ export class GraficoComponent {
         this.indexSelecionado = Math.floor(x / (rect.width / this.rotulosX.length));
         this.valor = this.dados[0] && this.dados[0][this.indexSelecionado] ? this.dados[0][this.indexSelecionado] : "";
         this.metadata = this.rotulosY.length > 0 ? this.rotulosY[0] : "";
+    }
+
+    setTooltip(event: any, grafico: any){
+        if(!this.existemDados()) return;
+        
+        let rect = grafico.getBoundingClientRect();
+        let mouse_x = (event.clientX - rect.left) * (this.LARGURA_GRAFICO / rect.width); //x position within the element.
+        let mouse_y = (event.clientY - rect.top) * (this.ALTURA_GRAFICO / rect.height);  //y position within the element.
+
+        let min_dist = Number.MAX_VALUE;
+        this.tooltip = null;
+
+        // console.log(mouse_x, mouse_y, rect.width, rect.height);
+
+        for(let i = 0; i < this.dados.length; i++){
+            for(let j = 0; j < this.dados[i].length; j++){
+                let x = this.getX(j, 0);
+                let y = this.getY(j, i);
+
+                let dist = (mouse_x - x) * (mouse_x - x) + (mouse_y - y) * (mouse_y - y);
+
+                if(dist <= min_dist){
+                    min_dist = dist;
+                    this.tooltip = {
+                        x: x / this.LARGURA_GRAFICO * 100,
+                        y: y / this.ALTURA_GRAFICO * 100,
+                        valor: this.dados[i][j],
+                        rotulo: this.rotulosY[i]
+                    };
+                    //console.log(min_dist);
+                }
+            }
+        }
+    }
+
+    resetTooltip(){
+        this.tooltip = null;
     }
 
     resetValor(){
