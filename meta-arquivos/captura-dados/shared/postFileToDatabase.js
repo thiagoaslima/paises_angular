@@ -17,10 +17,15 @@ function postFileToDatabase(periodo, filepath, tentativas = 0) {
 
     return request
         .post({
+            'auth': {
+                'user': '****',
+                'pass': '***',
+                'sendImmediately': true
+            },
             url: `http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/${periodo}/resultados?publicacao=`,
             formData
         })
-        .then(res => ({file: filepath, saved: true}))
+        .then(res => ({ file: filepath, saved: true }))
         .catch(err => {
             if (tentativas < MAX_TENTATIVAS) {
                 return postFileToDatabase(periodo, filepath, ++tentativas);
