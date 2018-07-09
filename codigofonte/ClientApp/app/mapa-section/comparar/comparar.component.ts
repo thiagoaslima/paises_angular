@@ -14,19 +14,12 @@ import {transformText} from "../../../utils/transformText";
 export class CompararComponent {
 
     paises:any = [];
-
     paisesRemovidos:any = [];
-
     paisesSelecionados:any = [];
-
     lang:string;
-
     resultados:any = {};
-
     tituloAtual = 0;
-
     subtituloAtual = 0;
-
     legenda:any = [];
 
     constructor(
