@@ -3,6 +3,7 @@ import { topojson } from './paises.topojson';
 
 import * as T from 'topojson';
 import { Pais } from "../localidade";
+import { getNumberPrecision } from "../../../utils/getNumberPrecision";
 
 @Injectable()
 export class MalhaService {
@@ -38,6 +39,54 @@ export class MalhaService {
             color: 'rgb(78,78,78)',
             fillOpacity: 1,
             className: 'no-interaction'
+        },
+
+        scale11: {
+            fillColor: '#fee5d9'
+        },
+        scale12: {
+            fillColor: '#fcae91'
+        },
+        scale13: {
+            fillColor: '#fb6a4a'
+        },
+        scale14: {
+            fillColor: '#de2d26'
+        },
+        scale15: {
+            fillColor: '#a50f15'
+        },
+
+        scale21: {
+            fillColor: '#f2f0f7'
+        },
+        scale22: {
+            fillColor: '#cbc9e2'
+        },
+        scale23: {
+            fillColor: '#9e9ac8'
+        },
+        scale24: {
+            fillColor: '#756bb1'
+        },
+        scale25: {
+            fillColor: '#54278f'
+        },
+
+        scale31: {
+            fillColor: '#eff3ff'
+        },
+        scale32: {
+            fillColor: '#bdd7e7'
+        },
+        scale33: {
+            fillColor: '#6baed6'
+        },
+        scale34: {
+            fillColor: '#3182bd'
+        },
+        scale35: {
+            fillColor: '#08519c'
         },
 
         scale1: {
@@ -85,7 +134,7 @@ export class MalhaService {
     };
 
     constructor(
-        @Inject('SPECIAL_VALUES') private _specialValues: { values: { [key: string]: string } }
+        @Inject('SPECIAL_VALUES') private _specialValues: { cases: { [key: string]: string }, values: { [key: string]: string } }
     ) {
         this._setMalhaProperties();
         this.geojson = T.feature(this.topojson, this.topojson.objects.countries);
@@ -147,27 +196,37 @@ export class MalhaService {
         });
     }
 
-    public makeScales(valores: Array<{ pais: Pais, valor: string }>, totalNiveis = 4) {
-        const _setValues = new Set(valores.map(obj => parseFloat(obj.valor)));
-        const _values = Array.from(_setValues.values()).filter(Boolean).sort((a,b) => b - a);
-        if (_values[0].toString(10) === this._specialValues.values.NAO_DISPONIVEL) {
-            _values.shift();
+    public makeScales(valores: Array<{ pais: Pais, valor: string }>) {
+        debugger;
+        const valoresNumericos = valores.filter(obj => !this._specialValues.cases[obj.valor]).map(obj => parseFloat(obj.valor));
+        const _setValues = new Set(valoresNumericos);
+        const _values = Array.from(_setValues.values()).sort((a,b) => a - b);
+        const precision = Math.max(..._values.map(getNumberPrecision));
+        const qtdeClasses = Math.ceil(Math.sqrt(_values.length));
+        let faixasDeValor = (_values[_values.length -1] - _values[0])/qtdeClasses;
+        faixasDeValor = parseFloat(faixasDeValor.toPrecision(precision));
+
+        const classes = [];
+        
+        for(let idx = 0; idx <= qtdeClasses; idx++) {
+            let valor = _values[0] + (faixasDeValor * idx);
+            classes.push(parseFloat(valor.toPrecision(precision)));
         }
-        let graus = [_values[0]];
 
-        let qtdeItensPorNivel = Math.floor(_values.length / totalNiveis + 1);
-
-        for(let idx = 1; idx < totalNiveis; idx++) {
-            graus.push(_values[qtdeItensPorNivel * idx+1]);
-        }
-
-        return graus.reverse();
+        return classes;
     }
 
     private _getScale(value: number, scales: number[]) {
         if (!value) {
             return 'scaleNoData';
         }
+
+        let grupos = [];
+        let len = scales.length;
+        if (len <= 3) {
+            grupos = ['11', '21', '31']
+        }
+        
 
         let scale = scales.length;
 

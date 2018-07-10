@@ -127,7 +127,7 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
 
     onMapReady(map: L.Map) {
         map.invalidateSize();
-        map.fitWorld({ maxZoom: 8 });
+        map.fitWorld({ maxZoom: 4 });
         map.setMaxBounds(new L.LatLngBounds(new L.LatLng(-60, -179), new L.LatLng(90, 179)));
 
         this._map$.next(map);

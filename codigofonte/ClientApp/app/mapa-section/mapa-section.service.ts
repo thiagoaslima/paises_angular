@@ -81,7 +81,9 @@ export class MapaSectionService {
     }
 
     /*
-     *   Corrige o valor da propriedade posição, para levar em conta apenas os países membros da ONU e não todos os países cadastrados na base
+     * Corrige o valor da propriedade posição, 
+     * para levar em conta apenas os países membros da ONU 
+     * e não todos os países cadastrados na base
     */
     _corrigePosicao(
         agg: { lastPosicao: string, currentPosicao: number, naMesmaPosicao: number, lista: Array<{ pais: Pais, posicao: string, valor: string }> },

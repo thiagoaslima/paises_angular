@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" action="http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/{{periodo}}/resultados?publicacao=">
+        <input id='periodo' type="text" name="period">
+        <input type="file">
+
+    </form>
+    <button id="submit">Enviar</button>
+
+    <div id="result"></div>
+
+    <script>
+        var form = document.querySelector('form');
+        var submit = document.querySelector('#submit');
+        var p = document.getElementById('periodo');
+
+        p.addEventListener('change', function (evt) {
+            var url = "http://pesquisas.producao.ibge.gov.br/api/pesquisas/10071/periodos/{{periodo}}/resultados?publicacao=";
+            url = url.replace('{{periodo}}', this.value.trim());
+            form.action = url;
+        });
+        submit.addEventListener('click', function (evt) {
+            evt.preventDefault()
+            var formData = new FormData();
+            var file = form.querySelector('[type="file"]').files[0];
+            formData.append('file', file);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader('Content-Type', file.type);
+            xhr.withCredentials = true;
+
+            xhr.onreadystatechange = function () {
+                console.log(arguments)
+                document.getElementById("result").innerText = xhr.responseText
+            };
+
+            xhr.send(formData);
+        });
+        form.addEventListener('submit', function (evt) {
+            e.preventDefault()
+            var data = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                console.log(arguments);
+                document.getElementById("result").innerText = xhr.responseText
+            };
+
+            xhr.open(form.method, form.action);
+            xhr.send(data);
+        });
+    </script>
+</body>
+
+</html>

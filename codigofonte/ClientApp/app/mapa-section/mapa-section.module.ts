@@ -17,6 +17,10 @@ const routes: Routes = [
         component: MapaSectionComponent,
         children: [
             {
+                path: 'comparar/:indicador',
+                component: CompararComponent
+            },
+            {
                 path: 'ranking/:indicador',
                 component: RankingComponent
             },

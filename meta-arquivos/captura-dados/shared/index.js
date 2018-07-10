@@ -1,6 +1,7 @@
 const { hashFile, hashStream, hashString } = require('./calculateHash');
 const { convertEncoding } = require('./convertEncoding');
 const { flatten, flattenOneLevel } = require('./flatten');
+const { getFolderContentList } = require('./getFolderContentList');
 const { getFonte, getFonteById, getVariavelCode } = require('./getFonte');
 const { getPais } = require('./getPais');
 const { getSigla } = require('./getSigla');
@@ -18,6 +19,7 @@ module.exports = {
     convertEncoding,
     flatten,
     flattenOneLevel,
+    getFolderContentList,
     getFonte,
     getFonteById,
     getPais,

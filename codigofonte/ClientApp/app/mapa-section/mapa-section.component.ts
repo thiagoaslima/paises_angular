@@ -53,22 +53,21 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         const routerParamsSubscription = this._routerParams.params$.subscribe(({params}) => {         
-            this.pais = params.pais ? this._localidadeService.getPaisBySlug(params.pais) : null;
+            this.pais = this._localidadeService.getPaisBySlug(params.pais);
             this.linkUrl = params.indicador ? [".", "ranking", params.indicador] : ["."]
         });
 
-        const indicadorObservable = this._routerParams.params$.pipe(
+        const indicadorObservable$ = this._routerParams.params$.pipe(
             map( ({params}) => parseInt(params.indicador, 10)),
             distinctUntilChanged()
         );
         
-        const malhaComDadosSubscription = indicadorObservable.pipe(
+        const malhaComDadosSubscription = indicadorObservable$.pipe(
             filter(Boolean),
             switchMap(indicadorId => this._mapaSectionService.getRanking(indicadorId)),
             map(ranking => {
                 const escala = this._mapaSectionService.getScale(ranking);
                 const malha = this._mapaSectionService.getMapa(ranking, escala);
-                console.log('Redesenhou mapa');
                 return {escala, malha};
             })
         ).subscribe(({escala, malha}) => { 
@@ -76,7 +75,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
             this.escala = escala;
         });
 
-        const malhaSemDadosSubscription = indicadorObservable.pipe(
+        const malhaSemDadosSubscription = indicadorObservable$.pipe(
             filter(id => !id),
             map(_ => this._mapaSectionService.getMapa())
         ).subscribe((malha:any) => { 
