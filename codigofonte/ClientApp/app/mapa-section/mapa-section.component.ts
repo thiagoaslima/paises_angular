@@ -40,7 +40,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
     public malha: any;
     public pais: Pais|null = null;
     public linkUrl = ["."];
-    public escala = [] as number[];
+    public escala = {values: [], classes: []} as {values: number[], classes: string[]};
 
     constructor(
         private _mapaSectionService: MapaSectionService,
@@ -67,7 +67,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
             switchMap(indicadorId => this._mapaSectionService.getRanking(indicadorId)),
             map(ranking => {
                 const escala = this._mapaSectionService.getScale(ranking);
-                const malha = this._mapaSectionService.getMapa(ranking, escala);
+                const malha = this._mapaSectionService.getMapa(ranking, escala.values);
                 return {escala, malha};
             })
         ).subscribe(({escala, malha}) => { 
@@ -80,7 +80,7 @@ export class MapaSectionComponent implements OnInit, OnDestroy {
             map(_ => this._mapaSectionService.getMapa())
         ).subscribe((malha:any) => { 
             this.malha = malha;
-            this.escala = [];
+            this.escala = {values: [], classes: []};
         });
 
         this._subscriptions.push(malhaComDadosSubscription, malhaSemDadosSubscription, routerParamsSubscription);

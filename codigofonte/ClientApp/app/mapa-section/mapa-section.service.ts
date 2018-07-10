@@ -34,7 +34,11 @@ export class MapaSectionService {
     }
 
     getScale(ranking: Array<{ pais: Pais, valor: string }>) {
-        return this._malhaService.makeScales(ranking);
+        const values = this._malhaService.makeScales(ranking);
+        return {
+            classes: this._malhaService.getScaleClasses(values),
+            values
+        };
     }
 
     getRanking(indicadorId: number): Observable<{ pais: Pais, posicao: string, valor: string }[]> {

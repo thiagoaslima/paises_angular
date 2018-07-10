@@ -42,51 +42,111 @@ export class MalhaService {
         },
 
         scale11: {
-            fillColor: '#fee5d9'
+            fillColor: '#fee5d9',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale12: {
-            fillColor: '#fcae91'
+            fillColor: '#fcae91',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale13: {
-            fillColor: '#fb6a4a'
+            fillColor: '#fb6a4a',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale14: {
-            fillColor: '#de2d26'
+            fillColor: '#de2d26',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale15: {
-            fillColor: '#a50f15'
+            fillColor: '#a50f15',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
 
         scale21: {
-            fillColor: '#f2f0f7'
+            fillColor: '#f2f0f7',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale22: {
-            fillColor: '#cbc9e2'
+            fillColor: '#cbc9e2',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale23: {
-            fillColor: '#9e9ac8'
+            fillColor: '#9e9ac8',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale24: {
-            fillColor: '#756bb1'
+            fillColor: '#756bb1',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale25: {
-            fillColor: '#54278f'
+            fillColor: '#54278f',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
 
         scale31: {
-            fillColor: '#eff3ff'
+            fillColor: '#eff3ff',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale32: {
-            fillColor: '#bdd7e7'
+            fillColor: '#bdd7e7',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale33: {
-            fillColor: '#6baed6'
+            fillColor: '#6baed6',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale34: {
-            fillColor: '#3182bd'
+            fillColor: '#3182bd',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
         scale35: {
-            fillColor: '#08519c'
+            fillColor: '#08519c',
+            weight: 1,
+            opacity: 1,
+            color: 'rgb(78,78,78)',
+            fillOpacity: 1
         },
 
         scale1: {
@@ -151,7 +211,7 @@ export class MalhaService {
 
         if (valores && scale) {
             return this.updateMalhaGeoJSON(valores, scale);
-        } else{
+        } else {
             throw new Error('No scale parameter set');
         }
     }
@@ -171,6 +231,7 @@ export class MalhaService {
 
             if (mostrar) {
                 let scale = this._getScale(parseFloat(valoresMap[sigla].valor), scales);
+
                 if (scale) {
                     //@ts-ignore
                     feature.properties.style.default = this.polygonsStyles[scale];
@@ -197,49 +258,73 @@ export class MalhaService {
     }
 
     public makeScales(valores: Array<{ pais: Pais, valor: string }>) {
-        debugger;
-        const valoresNumericos = valores.filter(obj => !this._specialValues.cases[obj.valor]).map(obj => parseFloat(obj.valor));
+        const valoresNumericos = valores
+            .filter(obj => !this._specialValues.cases[obj.valor])
+            .map(obj => parseFloat(obj.valor));
+
         const _setValues = new Set(valoresNumericos);
-        const _values = Array.from(_setValues.values()).sort((a,b) => a - b);
-        const precision = Math.max(..._values.map(getNumberPrecision));
-        const qtdeClasses = Math.ceil(Math.sqrt(_values.length));
-        let faixasDeValor = (_values[_values.length -1] - _values[0])/qtdeClasses;
-        faixasDeValor = parseFloat(faixasDeValor.toPrecision(precision));
+        const _values = Array.from(_setValues.values()).sort((a, b) => a - b);
+        const { quantidade, range, precision } = this._buildClassesDeValores(_values);
 
         const classes = [];
-        
-        for(let idx = 0; idx <= qtdeClasses; idx++) {
-            let valor = _values[0] + (faixasDeValor * idx);
+
+        for (let idx = 0; idx <= quantidade; idx++) {
+            let valor = _values[0] + (range * idx);
             classes.push(parseFloat(valor.toPrecision(precision)));
         }
 
         return classes;
     }
 
-    private _getScale(value: number, scales: number[]) {
+    public getScaleClasses(scales: number[]) {
+        let len = (scales.length - 1) / 3;
+
+        let grupos: string[] = [];
+        for (let idx = 0; idx < len; idx++) {
+            grupos.push('1' + (idx + 1), '2' + (idx + 1), '3' + (idx + 1));
+        }
+
+        return grupos;
+    }
+
+    private _buildClassesDeValores(valores: Array<number>) {
+        const precision = Math.max(...valores.map(getNumberPrecision));
+        const qtdeClasses = this._getQuantidadeDeClasses(valores);
+        let rangeClasse = (valores[valores.length - 1] - valores[0]) / qtdeClasses;
+        rangeClasse = parseFloat(rangeClasse.toPrecision(precision));
+
+        return {
+            quantidade: qtdeClasses,
+            range: rangeClasse,
+            precision
+        };
+    }
+
+    private _getQuantidadeDeClasses(_values: number[]) {
+        let qtdeClasses = Math.ceil(Math.sqrt(_values.length));
+        while (qtdeClasses % 3 !== 0) {
+            qtdeClasses++;
+        }
+        return qtdeClasses;
+    }
+
+    private _getScale(value: number, classes: number[]) {
         if (!value) {
             return 'scaleNoData';
         }
 
-        let grupos = [];
-        let len = scales.length;
-        if (len <= 3) {
-            grupos = ['11', '21', '31']
-        }
-        
+       const grupos = this.getScaleClasses(classes);
 
-        let scale = scales.length;
+        let scale = classes.length;
+        let idx;
 
-        for (let idx = 0; idx < scales.length; idx++) {
-            let currentScale = scales[idx];
-
-            if (value <= currentScale) {
-                scale = idx + 1;
+        for (idx = 0; idx < classes.length; idx++) {
+            if (value <= classes[idx]) {
                 break;
             }
         }
 
-        return 'scale' + scale;
+        return 'scale' + grupos[idx];
     }
 
 }

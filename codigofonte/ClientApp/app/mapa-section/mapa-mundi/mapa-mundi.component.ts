@@ -50,10 +50,8 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
     @Input() pais: Pais | null = null;
     @Input() link = ["."];
     @Input()
-    set escala(array: string[]) {
-        this._escala = array && array.length > 0
-            ? ['0'].concat(array.slice(0))
-            : [];
+    set escala(escala: {values: number[], classes: string[]}) {
+        this._escala = escala;
     }
     get escala() {
         return this._escala;
@@ -71,7 +69,7 @@ export class MapaMundiComponent implements OnDestroy, OnChanges {
     private _topology$ = new BehaviorSubject<G.GeoJsonObject | undefined>(undefined);
     private _paisLayerMap: Map<string, L.Layer>;
     private _subscriptions: Subscription[] = [];
-    private _escala: string[] = [];
+    private _escala: {values: number[], classes: string[]} = {values: [], classes: []};
     private _openTooltipLayers = [] as any[];
 
     constructor(
