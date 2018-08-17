@@ -1,7 +1,7 @@
 export const MAP_STYLES = {
     options: {
-        zoom: 4,
-        maxZoom: 6,
+        zoom: 3,
+        maxZoom: 5,
         minZoom: 3
     },
 
