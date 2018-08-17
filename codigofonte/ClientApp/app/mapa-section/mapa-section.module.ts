@@ -25,9 +25,13 @@ const routes: Routes = [
                 component: RankingComponent
             },
             {
+                path: 'comparar',
+                component: CompararComponent
+            },
+            {
                 path: ':pais',
                 component: SinteseHomeComponent
-            }
+            },
         ]
     }
 ];
