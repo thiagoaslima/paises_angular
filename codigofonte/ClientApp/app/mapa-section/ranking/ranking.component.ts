@@ -44,7 +44,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
         this.rankingObservable = this._routerParams.params$.pipe(
             map(({ params }) => parseInt(params.indicador, 10)),
             switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId).pipe(
-                zip(this._mapaSectionService.getRanking(indicadorId))
+                // zip(this._mapaSectionService.getRanking(indicadorId))
             )
             )
         )

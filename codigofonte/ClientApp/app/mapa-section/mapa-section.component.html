@@ -1,5 +1,9 @@
 <!--<logo-ods></logo-ods>-->
 
-<mapa-mundi *ngIf="isBrowser" [pais]="pais" [malha]="malha" [link]="linkUrl" [escala]="escala"></mapa-mundi>
+<mapa-mundi *ngIf="isBrowser" 
+    [pais]="pais$ | async" 
+    [link]="link$ | async" 
+    [malha]="malha">
+</mapa-mundi>
 
 <router-outlet></router-outlet>
