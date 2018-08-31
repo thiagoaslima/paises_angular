@@ -42,7 +42,7 @@ import { map } from 'rxjs/operators/map';
         './mapa-mundi.component.css'
     ],
     host: {
-        'class': 'bg-layer'
+        'class': 'bg-layer '
     }
 })
 export class MapaMundiComponent implements OnDestroy, OnChanges {
