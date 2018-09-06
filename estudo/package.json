@@ -19,5 +19,8 @@
     "topojson": "^3.0.2",
     "topojson-server": "^3.0.0",
     "turf": "^3.0.14"
+  },
+  "dependencies": {
+    "puppeteer": "^1.5.0"
   }
 }
