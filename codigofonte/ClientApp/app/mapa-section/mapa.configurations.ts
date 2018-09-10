@@ -1,5 +1,3 @@
-import { latLng } from "leaflet";
-
 export const MAP_STYLES = {
     options: {
         zoom: 3,
@@ -11,7 +9,6 @@ export const MAP_STYLES = {
 
     polygons: {
         default: {
-            fillColor: '#757575',
             weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
@@ -19,16 +16,16 @@ export const MAP_STYLES = {
         },
     
         hover: {
-            fillColor: '#909090',
-            weight: 0,
+            fillColor: '#a9a9a9',
+            weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1
         },
 
         selected: {
-            fillColor: '#DDDDDD',
-            weight: 0,
+            fillColor: '#A9A9A9',
+            weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1

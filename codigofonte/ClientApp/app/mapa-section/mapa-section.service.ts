@@ -3,14 +3,10 @@ import { RouterParamsService } from "../shared/router-params.service";
 import { PaisesService } from "../shared/paises-service/paises.service";
 import { LocalidadeService } from "../shared/localidade/localidade.service";
 import { MalhaService } from "../shared/malha/malha.service";
-import { Ranking } from "../shared/paises-service/interfaces/Ranking";
 
-import { Observable } from "rxjs/Observable";
-import { map } from "rxjs/operators/map";
-import { Pais } from "../shared/index";
 import { MAP_STYLES } from "./mapa.configurations";
 
-import { GeoJsonObject, Feature, GeometryCollection, FeatureCollection } from "geojson";
+import { Feature, FeatureCollection } from "geojson";
 
 @Injectable()
 export class MapaSectionService {
