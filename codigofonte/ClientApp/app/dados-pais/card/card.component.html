@@ -65,14 +65,13 @@
                 </p>
             </div>
             <div style="display: flex; flex-direction: row">
-            <a style="width: 50%" class="card__rodape-buttom-comparar" [routerLink]="'/mapa/comparar'">
-                <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
-                Comparar Países
-            </a>
-            
-                <a style="width: 50%" class="card__rodape-buttom-comparar" [routerLink]="'/mapa/ranking/' + tema?.valores[graficoAtual]?.id + '/' + pais?.slug">
+                <!--<a style="width: 50%" class="card__rodape-buttom-comparar" [routerLink]="'/mapa/comparar'">
                     <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
-                    
+                    Comparar Países
+                </a>-->
+                
+                <a style="width: 100%" class="card__rodape-buttom-comparar" [routerLink]="'/mapa/ranking/' + tema?.valores[graficoAtual]?.id + '/' + pais?.slug">
+                    <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
                     Ver no mapa
                 </a>
             </div>
