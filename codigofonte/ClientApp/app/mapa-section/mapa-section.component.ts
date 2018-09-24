@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 import { Subscription } from "rxjs/Subscription";
-import { distinctUntilChanged, map } from 'rxjs/operators';
+import { distinctUntilChanged, map, filter, switchMap, zip, tap, flatMap } from 'rxjs/operators';
 
 import {
     MalhaService,
@@ -11,6 +11,7 @@ import {
     PlatformDetectionService
 } from "../shared";
 import { MapaSectionService } from "./mapa-section.service";
+import { RankingComponent } from "./ranking/ranking.component";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -23,7 +24,10 @@ import { MapaSectionService } from "./mapa-section.service";
             top: 0;
         }
     `],
-    host: {'class': 'bg-layer area-aplicacao'}
+    host: {'class': 'bg-layer area-aplicacao'},
+    entryComponents: [
+        RankingComponent
+    ]
 })
 export class MapaSectionComponent  {
     public isBrowser: boolean;
@@ -40,6 +44,23 @@ export class MapaSectionComponent  {
 
     link$ = this.indicador$.pipe(
         map(indicador => indicador ? [".", "ranking", indicador] : ["."])
+    );
+
+    public indicadorObj$ = this.indicador$.pipe(
+        filter(Boolean),
+        switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId)
+            .pipe(map(indicador => indicador[0]))
+        ),
+        filter(Boolean)
+    );
+
+    dados$ = this.indicadorObj$.pipe(
+        flatMap(indicador => {
+            return this._mapaSectionService.getRanking(indicador.id)
+        }),
+        tap(resp => {
+            this.malha = this._mapaSectionService.getMapaRanking(resp);
+        })
     );
 
     constructor(

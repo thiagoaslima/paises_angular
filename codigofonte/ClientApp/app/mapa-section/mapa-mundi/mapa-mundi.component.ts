@@ -29,6 +29,15 @@ export enum CSS_CLASSES {
 })
 export class MapaMundiComponent {
     @Input() link: string[] = [];
+    @Input() set dados(values: any) {
+        // values.ordem.forEach((sigla: string) => {
+        //     const obj = values.paises[sigla];
+        //     const layer = this._layers.get(sigla);
+
+        //     // debugger;
+        // })
+    } 
+
     
     @Input() set pais(value: Pais) {
         const layerArray = value ? this._layers.get(value.sigla3) || [] : [];
@@ -113,6 +122,10 @@ export class MapaMundiComponent {
     private _featureStyle(context: any, feature: any) {
         const { style, sigla } = feature.properties;
 
+        if (style.fillColor) {
+            return style;
+        }
+
         if (!context._localidadeService.getPaisBySigla(sigla)) {
             return Object.assign({}, style, { className: CSS_CLASSES.IGNORE });
         }
@@ -157,7 +170,9 @@ export class MapaMundiComponent {
         const pais = context._localidadeService.getPaisBySigla(feature.properties.sigla);
         
         if (pais) {
-            const msg = pais.nome.pt + (feature.properties.nota ? ` (${feature.properties.nota.pt})` : "");
+            debugger;
+            const msg = pais.nome.pt + (feature.properties.nota ? ` (${feature.properties.nota.pt})` : "") + 
+                (feature.properties.valor ? `<br /> <strong>${feature.properties.valor}</strong>` : "");
             layer.bindTooltip(msg);
 
             layer.on({
