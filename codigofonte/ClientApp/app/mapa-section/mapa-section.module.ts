@@ -18,11 +18,11 @@ const routes: Routes = [
         children: [
             {
                 path: 'ranking/:indicador',
-                component: RankingComponent
+                // component: null
             },
             {
                 path: 'ranking/:indicador/:pais',
-                component: RankingComponent
+                // component: null
             },
             {
                 path: 'comparar',
@@ -54,7 +54,7 @@ const routes: Routes = [
         MapaSectionService
     ],
     entryComponents: [
-        
+        RankingComponent
     ]
 })
 export class MapaSectionModule { }

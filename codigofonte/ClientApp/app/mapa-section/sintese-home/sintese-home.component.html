@@ -12,6 +12,8 @@
     </div>
     <!--dados-->
     <div class="sintese__info-container">
+        <ng-container *ngIf="pais && temDados && !loading">
+
         <!--bandeira-->
         <div class="sintese__bandeira-container">
             <img alt="bandeira" [src]="imageSrc" class="sintese__bandeira-imagem">
@@ -32,5 +34,11 @@
         <div class="sintese__leia-mais">
             <a [routerLink]="'/dados/' + pais?.slug" class="sintese__leia-mais-link">Leia mais</a>
         </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="pais && !temDados && !loading">
+        <p class="sintese__tabela-nome">Não há dados sobre o país ou território escolhido</p>
+    </ng-container>
     </div>
 </div>

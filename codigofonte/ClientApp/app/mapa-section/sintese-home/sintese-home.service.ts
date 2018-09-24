@@ -42,7 +42,7 @@ export class SinteseHomeService {
 
                     return {
                         titulo: metadataMap[id].indicador,
-                        valor: resultadosMap[id].valorMaisRecente,
+                        valor: resultadosMap[id] ? resultadosMap[id].valorMaisRecente : null,
                         unidade
                     };
                 })

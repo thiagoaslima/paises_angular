@@ -7,7 +7,7 @@ import { map } from "rxjs/operators/map";
 import { switchMap } from "rxjs/operators/switchMap";
 import { zip } from "rxjs/operators/zip";
 
-import { PaisesService, RouterParamsService } from "../../shared";
+import { PaisesService, RouterParamsService, Pais, MetadataIndicador } from "../../shared";
 import { MapaSectionService } from "../mapa-section.service";
 import { OnInit, OnDestroy } from "@angular/core/src/metadata/lifecycle_hooks";
 
@@ -20,14 +20,38 @@ import { ResultadoPipe } from "../../shared/resultado.pipe";
     styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
+    @Input() set indicador(obj: MetadataIndicador | null) {
+        this.unidade = obj ? obj.unidade.identificador : '';
+        this.nomeIndicador = obj ? obj.indicador : '';
+        this._indicador = obj;
+    };
+    get indicador (){
+        return this._indicador;
+    }
+
+    @Input() pais: Pais | null = null;
+    @Input() 
+    set dados(values) {
+        //@ts-ignore
+        this._dados = values && values.ordem.length 
+            //@ts-ignore
+            ? values.ordem.map((sigla: string) => values.paises[sigla])
+            : [];
+    }
+    get dados() {
+        return this._dados;
+    }
+    
+    unidade = '';
+    nomeIndicador = '';
+    private _indicador: MetadataIndicador | null = null;
+
     @ViewChild('scrollEl') public scrollElement: ElementRef;
     @ViewChildren("cty") public countries: QueryList<ElementRef>
     public paisSelecionado = "";
 
-    public dados = [] as any[];
-    public indicador: any;
-
     private _subscriptions: Subscription[] = [];
+    private _dados = [];
     private rankingObservable: Observable<any>
 
     constructor(
@@ -37,6 +61,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     ) { }
 
     ngOnInit() {
+        /*
         const paisSubscription = this._routerParams.params$.subscribe(({ params }) => {
             this.paisSelecionado = params.pais ? params.pais : "";
         });
@@ -44,21 +69,23 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
         this.rankingObservable = this._routerParams.params$.pipe(
             map(({ params }) => parseInt(params.indicador, 10)),
             switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId).pipe(
-                zip(this._mapaSectionService.getRanking(indicadorId))
+                // zip(this._mapaSectionService.getRanking(indicadorId))
             )
             )
         )
 
         const dadosSubscription = this.rankingObservable.subscribe(([indicador, ranking]) => {
-            this.indicador = indicador[0];
+            // this.indicador = indicador[0];
             this.dados = ranking;
         })
 
         this._subscriptions.push(paisSubscription, dadosSubscription);
+        */
     }
 
 
     ngAfterViewInit() {
+        /*
         (<any>window)["countries"] = this.countries;
         const scrollSubscription = this.countries.changes.pipe(
             zip(this.rankingObservable)
@@ -68,10 +95,11 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
             }
         });
         this._subscriptions.push(scrollSubscription);
+        */
     }
 
     ngOnDestroy() {
-        this._subscriptions.forEach(subscription => subscription.unsubscribe());
+        // this._subscriptions.forEach(subscription => subscription.unsubscribe());
     }
 
     scrollTo(elementId: string) {

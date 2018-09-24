@@ -13,12 +13,14 @@ import { ResultadoPipe } from "../../shared/resultado.pipe";
     templateUrl: './sintese-home.component.html',
     styleUrls: ['./sintese-home.component.css'],
     providers: [SinteseHomeService],
-	changeDetection: ChangeDetectionStrategy.OnPush
+	// changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SinteseHomeComponent implements OnInit, OnDestroy {
     public pais: Pais | null = null;
     public imageSrc = ''
     public itens = <any[]>[];
+    public loading = false;
+    public temDados = false;
 
     private _subscriptions: {
         [key: string]: Subscription
@@ -39,13 +41,21 @@ export class SinteseHomeComponent implements OnInit, OnDestroy {
 
             if (pais) {
                 this.pais = pais;
-
+                this.loading = true;
                 this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
-					this._changeDetector.detectChanges();
+                    this.loading = false;
+					this.temDados = this.itens.length > 0 && this.itens.some(item => {
+                        return item && item.valor;
+                    });
+                    this._changeDetector.detectChanges();
                 });
             } else {
                 this.pais = null;
+                this.itens = [];
+                this.loading = false;
+                this.temDados = false;
+                this._changeDetector.detectChanges();
             }
 
         });
