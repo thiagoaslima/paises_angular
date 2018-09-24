@@ -1,7 +1,17 @@
 <!--<logo-ods></logo-ods>-->
 
-<paises-comparar></paises-comparar>
+<mapa-mundi *ngIf="isBrowser" 
+    [pais]="pais$ | async" 
+    [link]="link$ | async" 
+    [malha]="malha"
+    [dados]="dados$ | async">
+</mapa-mundi>
 
-<mapa-mundi *ngIf="isBrowser" [pais]="pais" [malha]="malha" [link]="linkUrl" [escala]="escala"></mapa-mundi>
+<paises-ranking *ngIf="indicadorObj$ | async" 
+    [pais]="pais$ | async"
+    [indicador]="indicadorObj$ | async"  
+    [dados]="dados$ | async">
+</paises-ranking>
+
 
 <router-outlet></router-outlet>

@@ -1,11 +1,11 @@
 <section class="ranking main-layer">
-
+       
     <!--barra de título-->
     <div class="ranking__cabecalho">
         <!--título-->
-        <h2 class="ranking__titulo">{{ indicador?.indicador }}</h2>
+        <h2 class="ranking__titulo">{{ nomeIndicador }}</h2>
         <!--botão de fechar-->
-        <a class="button ranking__botao-fechar" [routerLink]="'/dados/' + paisSelecionado" queryParamsHandling="preserve">
+        <a class="button ranking__botao-fechar" [routerLink]="'/dados/' + pais.slug" queryParamsHandling="preserve">
             <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
         </a>
     </div>
@@ -28,21 +28,22 @@
                     País <i class="fa fa-sort-desc" aria-hidden="true"></i>
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-pequena">
-                    {{ indicador?.unidade?.identificador }}
+                    {{ unidade }}
                 </th>
             </tr>
         </thead>
         <!--corpo da tabela-->
+
         <tbody #scrollEl class="ranking__tabela-corpo">
-            <tr class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais.slug === paisSelecionado" [attr.id]="obj.pais.slug" #cty *ngFor="let obj of dados">
+            <tr class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug" #cty *ngFor="let obj of dados">
                 <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
-                    {{ obj.posicao }}
+                    {{ obj?.posicao }}
                 </td>
                 <td class="ranking__tabela-corpo-celula celula-grande">
-                    <a class="ranking__tabela-link" [routerLink]="['..',obj.pais.slug]" queryParamsHandling="preserve">{{ obj.pais.nome.pt }}</a>
+                    <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
                 </td>
                 <td class="ranking__tabela-corpo-celula celula-pequena">
-                    {{ obj.valor | resultado }}
+                    {{ obj?.valor | resultado }}
                 </td>
             </tr>
         </tbody>
