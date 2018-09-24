@@ -64,7 +64,14 @@
                     <a class="card__fonte-link" [href]="getLinkFonte(fonte)" target="_blank" rel="noopener noreferrer">{{ getTextoFonte(fonte) }}</a>
                 </p>
             </div>
-            <a class="card__rodape-buttom-comparar" [routerLink]="'/mapa/ranking/' + tema?.valores[graficoAtual]?.id + '/' + pais?.slug">
+            <!--
+                <a class="card__rodape-buttom-comparar" [routerLink]="'/mapa/ranking/' + tema?.valores[graficoAtual]?.id + '/' + pais?.slug">
+                    <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
+                    
+                    Comparar Países
+                </a>
+            -->
+            <a class="card__rodape-buttom-comparar" [routerLink]="'/mapa/comparar'">
                 <i class="fa fa-signal card__rodape-icon" aria-hidden="true"></i>
                 Comparar Países
             </a>
