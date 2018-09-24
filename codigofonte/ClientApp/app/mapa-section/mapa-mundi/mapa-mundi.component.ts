@@ -29,15 +29,7 @@ export enum CSS_CLASSES {
 })
 export class MapaMundiComponent {
     @Input() link: string[] = [];
-    @Input() set dados(values: any) {
-        // values.ordem.forEach((sigla: string) => {
-        //     const obj = values.paises[sigla];
-        //     const layer = this._layers.get(sigla);
-
-        //     // debugger;
-        // })
-    } 
-
+    @Input() dados: any = null;
     
     @Input() set pais(value: Pais) {
         const layerArray = value ? this._layers.get(value.sigla3) || [] : [];
