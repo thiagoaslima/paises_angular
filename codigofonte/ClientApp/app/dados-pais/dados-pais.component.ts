@@ -82,9 +82,16 @@ export class DadosPaisComponent {
 
     setImageSrc(pais: Pais | null) {
         if (pais) {
-            this.imageSrc = 'img/bandeiras/' + pais.sigla.toUpperCase() + '.gif';
-            this.imageSrcCover = 'img/capas/' + pais.sigla.toUpperCase() + '.jpg';
-            this.imageLink = linksCapas[pais.sigla.toUpperCase()];
+            let sigla = pais.sigla.toUpperCase();
+
+            //bandeira
+            this.imageSrc = 'img/bandeiras/' + sigla + '.gif';
+            
+            //decide qual capa usar para o país (randomicamente)
+            //os links das capas começam com 1(não zero)
+            let rand = Math.round((linksCapas[sigla].length - 1) * Math.random()) + 1;
+            this.imageSrcCover = 'img/capas/' + sigla + rand.toString() + '.jpg';
+            this.imageLink = linksCapas[sigla][rand - 1];
         } else {
             this.imageSrc = '';
             this.imageSrcCover = '';

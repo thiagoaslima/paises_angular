@@ -25,6 +25,10 @@ export class LocalidadeService {
         return PAISES_BY_ID[slug] || null;
     }
 
+    public getPaisByNome(nome: string, idioma: "en" | "es" | "pt" = "pt"): Pais | null {
+        return this.getAllPaises().find(pais => pais.nome[idioma] === nome) || null;
+    }
+
     public getPaisBySigla(sigla: string): Pais | null {
         let property: 'sigla'|'sigla3' = (sigla.length === 2) ? 'sigla' : 'sigla3';
         return this.getAllPaises().find((pais: Pais) => pais[property] === sigla) || null;

@@ -11,7 +11,7 @@
     overflow: hidden;
     background-color: #4F4F4F;
 }
-
+ 
 @media only screen and (min-width : 568px) {
 
 }
@@ -69,40 +69,4 @@
     font-size: 0;
     height: 15px;
     display: block;
-}
-
-.scale0 {
-    background-color: transparent;
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scale1 {
-    background-color: rgb(191,238,143);
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scale2 {
-    background-color: rgb(66,230,149);
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scale3 {
-    background-color: rgb(62,204,167);
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scale4 {
-    background-color: rgb(59,178,184);
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scale5 {
-    background-color: rgb(103,112,129);
-    opacity: 1;
-    color: rgb(78,78,78);
-}
-.scaleNoData {
-    background-color: rgb(222,215,207);
-    opacity: 1;
-    color: rgb(78,78,78);
 }
