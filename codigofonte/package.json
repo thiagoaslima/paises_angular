@@ -11,7 +11,7 @@
     "dev:serve": "./node_modules/.bin/webpack-dev-server --content-base wwwroot/ --history-api-fallback",
     "start": "./node_modules/.bin/concurrently \"npm run dev:build\" \"npm run dev:serve\"",
     "start:prerender": "./node_modules/.bin/concurrently \"npm run dev:build\" \"dotnet run\"",
-    "build": "npm run webpack --env.prod --config webpack.config.vendor.js && npm run webpack --env.prod --config webpack.config.js",
+    "build": "npm run webpack --config webpack.config.vendor.js && npm run webpack --config webpack.config.js",
     "version": "./node_modules/.bin/ibge-version ./ClientApp/app/version.json",
     "hello_world": "echo \"Hello, World!\""
   },
