@@ -1,0 +1,3 @@
+paiseshomolog.ibge.gov.br
+
+https://192.168.152.79:8888
