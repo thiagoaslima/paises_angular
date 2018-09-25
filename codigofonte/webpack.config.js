@@ -16,7 +16,6 @@ module.exports = (env) => {
             chunkFilename: '[name]-chunk.js',
             publicPath: 'dist/' // Webpack dev middleware, if enabled, handles requests for this URL prefix
         },
-        target: 'node',
         module: {
             rules: [
                 { test: /\.ts$/, include: /ClientApp/, use: isDevBuild ? ['awesome-typescript-loader?silent=true', 'angular-router-loader', 'angular2-template-loader'] : '@ngtools/webpack' },
@@ -41,7 +40,6 @@ module.exports = (env) => {
     const clientBundleConfig = merge(sharedConfig, {
         entry: { 'main-client': './ClientApp/boot.browser.ts' },
         output: { path: path.join(__dirname, clientBundleOutputDir) },
-        target: 'node',
         plugins: [
             new webpack.DllReferencePlugin({
                 context: __dirname,
