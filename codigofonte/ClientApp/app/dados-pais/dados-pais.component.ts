@@ -68,6 +68,14 @@ export class DadosPaisComponent {
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
                     this.temas = resultados;
                     // this._changeDetector.detectChanges();
+                    
+                    //organiza os dados em orde alfabética pelo título
+                    for(let i = 0; i < this.temas.length; i++){
+                        this.temas[i].valores.sort(function(a:any, b:any){
+                            return a['titulo'].localeCompare(b['titulo']);
+                        });
+                    }
+                    //console.log(this.temas);
                 });
                 
             } else {

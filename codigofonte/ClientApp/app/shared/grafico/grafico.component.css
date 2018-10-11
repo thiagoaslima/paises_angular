@@ -135,6 +135,10 @@
     font-family: "RobotoRegular", Helvetica, Arial, sans-serif;
 }
 
+.grafico__legenda-nome-sem-dados{
+    text-decoration: line-through;
+}
+
 .grafico_grafico-container{
     position: relative;
 }

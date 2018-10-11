@@ -78,6 +78,8 @@
 	padding: 7px;
     font-size: 0.8em;
     font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+	max-width: 800px;
+    width: 100%;
 }
 
 .comparar__filtro-pais-container{

@@ -37,6 +37,13 @@
             <!--comboboxes-->
             <div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
+                    <option *ngFor="let item of getTitulos(); let i = index" [selected]="i == tituloAtual">
+                        {{ item.indicador }}
+                    </option>
+                </select>
+            </div>
+            <!--<div class="comparar__select-container">
+                <select class="comparar__select" (change)="setTitulo($event)">
                     <option *ngFor="let titulo of getTitulos(); let i = index" [selected]="i == tituloAtual">
                         {{ titulo.indicador }}
                     </option>
@@ -46,8 +53,9 @@
                         {{ subtitulo.indicador }}
                     </option>
                 </select>
-            </div>
+            </div>-->
             <!--grafico-->
+
             <div class="comparar__grafico-container">
                 
                 <grafico

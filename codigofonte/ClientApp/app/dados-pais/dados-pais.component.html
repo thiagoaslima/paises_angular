@@ -38,9 +38,9 @@
             </div>
             <table class="dados-pais__sintese-tabela">
                 <tbody>
-                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens">
+                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens; let i = index">
                         <th class="dados-pais__sintese-nome">{{ item.titulo }}</th>
-                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }}</td>
+                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }} <span *ngIf="i == 1" class="dados-pais__sintese-valor-km">Km<sup class="dados-pais__sintese-valor-km">2</sup></span></td>
                     </tr>
                 </tbody>
             </table>

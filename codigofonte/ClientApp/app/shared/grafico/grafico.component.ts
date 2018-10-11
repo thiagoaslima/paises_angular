@@ -49,6 +49,15 @@ export class GraficoComponent {
             (this.dados[0] && this.dados[0].length);
     }
 
+    existemDadosEspecificos(index:any){
+        for(let i = 0; i < this.dados[index].length; i++){
+            //console.log(this.dados[index][i]);
+            if(this.dados[index][i])
+                return true;
+        }
+        return false;
+    }
+
     //calcula a posição X dos elementos e dos pontos do gráfico, distribuindo e centralizando-os.
     getX(indexX: any, largura: any){
         if(!this.existemDados()) return 0;

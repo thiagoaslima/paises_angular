@@ -47,6 +47,11 @@
     color: #fff;
 }
 
+.dados-pais__sintese-valor-km{
+    font-size: 0.9em;
+    color: #fff;
+}
+
 .dados-pais__sintese-titulo-container{
     display: table;
     margin: 0 20px;
@@ -122,6 +127,7 @@
 
 .dados-pais__historico-paragrafos-container--aberto{
     display: block;
+    overflow: hidden;
 }
 
 .dados-pais__historico-degrade{
@@ -265,6 +271,10 @@
     }
 
     .dados-pais__sintese-valor{
+        color: #4f4f4f;
+    }
+
+    .dados-pais__sintese-valor-km{
         color: #4f4f4f;
     }
 

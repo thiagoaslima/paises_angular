@@ -1,4 +1,7 @@
-import { Component, Input, Inject, OnInit } from "@angular/core";
+import { Component, Injectable, Optional, PLATFORM_ID, Input, Inject, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
+import { Router} from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 import { LocalidadeService } from "../../shared/localidade";
 import { TraducaoService } from "../../shared";
@@ -13,6 +16,8 @@ import {transformText} from "../../../utils/transformText";
 })
 export class CompararComponent {
 
+    private isBrowser: boolean;
+
     paises:any = [];
     paisesRemovidos:any = [];
     paisesSelecionados:any = [];
@@ -22,11 +27,19 @@ export class CompararComponent {
     subtituloAtual = 0;
     legenda:any = [];
 
+    queryParams:any = {};
+
     constructor(
         private _localidadeService: LocalidadeService,
         private _traducaoService: TraducaoService,
-        private _paisesService: PaisesService
+        private _paisesService: PaisesService,
+        private _route: ActivatedRoute,
+        private _router: Router,
+        private _changeDetector: ChangeDetectorRef,
+        @Inject(PLATFORM_ID) platformId: any
     ){
+        this.isBrowser = isPlatformBrowser(platformId);
+
         this.lang = this._traducaoService.lang;
         
         this.paises = this._localidadeService.getAllPaises().sort((a:any, b:any) => { //lista países em ordem alfabética
@@ -39,10 +52,27 @@ export class CompararComponent {
     }
 
     update(){
+        /*
+            TODO:
+            -pegar o país e o indicador da query string para colocar um valor inicial no gráfico (depois reativar o botão de comparação dos cards)
+            -versão mobile
+        */
+
+        let siglas = this._route.snapshot.queryParams['paises'];
+        if(siglas){
+            siglas = siglas.split(',');
+        }else{
+            siglas = [];
+        }
+
+        if(siglas.length > 5) siglas = siglas.slice(0, 5);
+
+        //console.log(siglas);
+
         //coletas as siglas dos países selecionados
-        let siglas = [];
+        //let siglas = [];
         for(let i = 0; i < this.paisesSelecionados.length; i++){
-            if(this.paisesSelecionados[i] == true){
+            if(this.paisesSelecionados[i] == true && siglas.indexOf(this.paises[i].sigla) < 0){
                 siglas.push(this.paises[i].sigla);
             }
         }
@@ -59,10 +89,29 @@ export class CompararComponent {
                     if(this.resultados['resultados'][i].localidade == resultados['resultados'][0].localidade)
                         return;
                 this.resultados['resultados'] = this.resultados['resultados'].concat(resultados['resultados']);
+                
                 //console.log(this.resultados);
+
+                this._changeDetector.detectChanges();
             });
         }
     }
+
+    /*getURL(sigla:any){
+        let path = '';
+        let paises:any = this._route.snapshot.queryParams['paises'];
+        if(paises){
+            paises = paises.split(',');
+            let index = paises.indexOf(sigla);
+            if(index < 0)
+                paises.push(sigla);
+            else
+                paises.splice(index, 1);
+            return {paises: paises.join(',')};
+        }else{
+            return {paises: sigla};
+        }
+    }*/
 
     filtrarPaises(event:any){
         for(let i = 0; i < this.paises.length; i++){
@@ -76,8 +125,23 @@ export class CompararComponent {
     //dados das combobox
 
     getTitulos(){
-         let result = [];
+         let result:any = [];
+
          if(this.resultados && this.resultados.metadata){
+            let metadata:any = this.resultados['metadata'];
+            let prefix:any = {};
+            for(let i = 0; i < metadata.length; i++){
+                if(metadata[i].posicao.split('.').length == 1){
+                    prefix[metadata[i].posicao] = metadata[i].indicador;
+                }else{
+                    if(metadata[i].posicao.split('.')[0] == '1') continue;
+                    result.push(metadata[i]); //TODO: modificar o titulo concatenando com o titulo do indicador pai (ex.: economia, educação...)
+                    //console.log(metadata[i]);
+                }
+            }
+        }
+
+        /*if(this.resultados && this.resultados.metadata){
             for(let i = 0; i < this.resultados.metadata.length; i++){
                 let posicaoArray = this.resultados.metadata[i].posicao.split('.');
                 if(posicaoArray.length == 1 &&
@@ -85,12 +149,13 @@ export class CompararComponent {
                     result.push(this.resultados.metadata[i]);
                 }
             }
-        }
+        }*/
+
         //console.log(result);
         return result;
     }
 
-    getSubtitulos(titulo:number){
+    /*getSubtitulos(titulo:number){
          let result = [];
          if(this.resultados && this.resultados.metadata){
             let titulos = this.getTitulos();
@@ -104,20 +169,34 @@ export class CompararComponent {
             }
         }
         return result;
-    }
+    }*/
 
     getId(){
-        let subtitulos = this.getSubtitulos(this.tituloAtual);
+        /*let subtitulos = this.getSubtitulos(this.tituloAtual);
         if(subtitulos && subtitulos.length > this.subtituloAtual){
             return subtitulos[this.subtituloAtual].id;
+        }*/
+
+        let titulos = this.getTitulos();
+        if(titulos && titulos.length > this.tituloAtual){
+            return titulos[this.tituloAtual].id;
         }
         return 0;
     }
 
     getUnidade(){
-        let subtitulos = this.getSubtitulos(this.tituloAtual);
+        /*let subtitulos = this.getSubtitulos(this.tituloAtual);
         if(subtitulos && subtitulos.length > this.subtituloAtual){
             let unidade = subtitulos[this.subtituloAtual].unidade;
+            if(unidade && unidade.multiplicador == 1)
+                return unidade.identificador;
+            else
+                return unidade.identificador + ' x ' + unidade.multiplicador;
+        }*/
+
+        let titulos = this.getTitulos();
+        if(titulos && titulos.length > this.tituloAtual){
+            let unidade = titulos[this.tituloAtual].unidade;
             if(unidade && unidade.multiplicador == 1)
                 return unidade.identificador;
             else
@@ -131,9 +210,9 @@ export class CompararComponent {
         this.subtituloAtual = 0;
     }
 
-    setSubtitulo(event:any){
+    /*setSubtitulo(event:any){
         this.subtituloAtual = event.target.selectedIndex;
-    }
+    }*/
 
     //dados para o gráfico
 
