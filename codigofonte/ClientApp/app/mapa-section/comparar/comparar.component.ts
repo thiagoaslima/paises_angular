@@ -23,11 +23,8 @@ export class CompararComponent {
     paisesSelecionados:any = [];
     lang:string;
     resultados:any = {};
-    tituloAtual = 0;
-    subtituloAtual = 0;
-    legenda:any = [];
 
-    queryParams:any = {};
+    indicador = 0;
 
     constructor(
         private _localidadeService: LocalidadeService,
@@ -48,6 +45,23 @@ export class CompararComponent {
     }
 
     ngOnInit() {
+        /*seleciona o pais que veio na query string da url*/
+        let sigla = this._route.snapshot.queryParams['pais'];
+        if(sigla){
+            for(let i = 0; i < this.paises.length; i++){
+                if(this.paises[i].sigla == sigla.toUpperCase()){
+                    this.paisesSelecionados[i] = true;
+                    break;
+                }
+            }
+        }
+
+        /*seta o indicador que veio na querystring da url*/
+        let indicador = this._route.snapshot.queryParams['indicador'];
+        if(indicador){
+            this.indicador = indicador;
+        }
+
         this.update();
     }
 
@@ -58,19 +72,8 @@ export class CompararComponent {
             -versão mobile
         */
 
-        let siglas = this._route.snapshot.queryParams['paises'];
-        if(siglas){
-            siglas = siglas.split(',');
-        }else{
-            siglas = [];
-        }
-
-        if(siglas.length > 5) siglas = siglas.slice(0, 5);
-
-        //console.log(siglas);
-
         //coletas as siglas dos países selecionados
-        //let siglas = [];
+        let siglas = [];
         for(let i = 0; i < this.paisesSelecionados.length; i++){
             if(this.paisesSelecionados[i] == true && siglas.indexOf(this.paises[i].sigla) < 0){
                 siglas.push(this.paises[i].sigla);
@@ -97,22 +100,6 @@ export class CompararComponent {
         }
     }
 
-    /*getURL(sigla:any){
-        let path = '';
-        let paises:any = this._route.snapshot.queryParams['paises'];
-        if(paises){
-            paises = paises.split(',');
-            let index = paises.indexOf(sigla);
-            if(index < 0)
-                paises.push(sigla);
-            else
-                paises.splice(index, 1);
-            return {paises: paises.join(',')};
-        }else{
-            return {paises: sigla};
-        }
-    }*/
-
     filtrarPaises(event:any){
         for(let i = 0; i < this.paises.length; i++){
             if(transformText(this.paises[i].nome[this.lang]).indexOf(transformText(event.srcElement.value)) >= 0)
@@ -137,6 +124,11 @@ export class CompararComponent {
                     if(metadata[i].posicao.split('.')[0] == '1') continue;
                     result.push(metadata[i]); //TODO: modificar o titulo concatenando com o titulo do indicador pai (ex.: economia, educação...)
                     //console.log(metadata[i]);
+                    
+                    /*valor default para indicador*/
+                    if(this.indicador == 0){
+                        this.indicador = metadata[i].id;
+                    }
                 }
             }
         }
@@ -155,6 +147,14 @@ export class CompararComponent {
         return result;
     }
 
+    setTitulo(event:any){
+        let index = event.target.selectedIndex;
+        let titulos = this.getTitulos();
+        if(titulos && titulos.length > index){
+            this.indicador = titulos[index].id;
+        }
+    }
+
     /*getSubtitulos(titulo:number){
          let result = [];
          if(this.resultados && this.resultados.metadata){
@@ -171,57 +171,27 @@ export class CompararComponent {
         return result;
     }*/
 
-    getId(){
-        /*let subtitulos = this.getSubtitulos(this.tituloAtual);
-        if(subtitulos && subtitulos.length > this.subtituloAtual){
-            return subtitulos[this.subtituloAtual].id;
-        }*/
-
-        let titulos = this.getTitulos();
-        if(titulos && titulos.length > this.tituloAtual){
-            return titulos[this.tituloAtual].id;
-        }
-        return 0;
-    }
-
     getUnidade(){
-        /*let subtitulos = this.getSubtitulos(this.tituloAtual);
-        if(subtitulos && subtitulos.length > this.subtituloAtual){
-            let unidade = subtitulos[this.subtituloAtual].unidade;
-            if(unidade && unidade.multiplicador == 1)
-                return unidade.identificador;
-            else
-                return unidade.identificador + ' x ' + unidade.multiplicador;
-        }*/
-
         let titulos = this.getTitulos();
-        if(titulos && titulos.length > this.tituloAtual){
-            let unidade = titulos[this.tituloAtual].unidade;
-            if(unidade && unidade.multiplicador == 1)
-                return unidade.identificador;
-            else
-                return unidade.identificador + ' x ' + unidade.multiplicador;
+        for(let i = 0; i < titulos.length; i++){
+            if(titulos[i].id == this.indicador){
+                let unidade = titulos[i].unidade;
+                if(unidade && unidade.multiplicador == 1)
+                    return unidade.identificador;
+                else
+                    return unidade.identificador + ' x ' + unidade.multiplicador;
+            }
         }
         return '';
     }
-
-    setTitulo(event:any){
-        this.tituloAtual = event.target.selectedIndex;
-        this.subtituloAtual = 0;
-    }
-
-    /*setSubtitulo(event:any){
-        this.subtituloAtual = event.target.selectedIndex;
-    }*/
 
     //dados para o gráfico
 
     getPeriodos(){
         let result:Array<any> = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados, this.resultados.resultados.length > 0){
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     return this.resultados.resultados[i].periodos.slice(-5);
                 }
             }
@@ -241,16 +211,14 @@ export class CompararComponent {
 
     getLegenda(){
         let result:Array<any> = [];
-        this.legenda = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados){
             //deixa as linhas do gráfico em ordem alfabética de siglas
             this.resultados.resultados.sort( (a: any, b: any) => {
                return a['localidade'].localeCompare(b['localidade']);
             });
             //encontra os resultados desejados
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     let localidade:any = this._localidadeService.getPaisBySigla(this.resultados.resultados[i].localidade);
                     let nome:any = localidade ? localidade.nome[this.lang] : "";
                     result.push(nome);
@@ -263,16 +231,14 @@ export class CompararComponent {
 
     getValores(){
         let result:Array<any> = [];
-        this.legenda = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados){
             //deixa as linhas do gráfico em ordem alfabética de siglas
             this.resultados.resultados.sort( (a: any, b: any) => {
                return a['localidade'].localeCompare(b['localidade']);
             });
             //encontra os resultados desejados
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     result.push(this.resultados.resultados[i].valores.slice(-5));
                 }
             }

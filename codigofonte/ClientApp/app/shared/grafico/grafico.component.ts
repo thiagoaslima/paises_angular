@@ -115,7 +115,7 @@ export class GraficoComponent {
     valorValido(valor: any){
         //console.log(valor);
         if(!this.existemDados() || isNaN(valor) || valor == 0 || 
-            (valor == '99999999999991' || valor == '99999999999992' || valor == '99999999999993' || valor == '99999999999994' ||
+            (valor == null || valor == '' || valor == '-' || valor == '99999999999991' || valor == '99999999999992' || valor == '99999999999993' || valor == '99999999999994' ||
             valor == '99999999999995' || valor == '99999999999996' || valor == '99999999999997' || valor == '99999999999998' || valor == '99999999999999')){
             return false;
         }else{
@@ -184,13 +184,17 @@ export class GraficoComponent {
 
                 if(dist <= min_dist){
                     min_dist = dist;
-                    this.tooltip = {
-                        x: x / this.LARGURA_GRAFICO * 100,
-                        y: y / this.ALTURA_GRAFICO * 100,
-                        valor: this.dados[i][j],
-                        rotulo: this.rotulosY[i]
-                    };
-                    //console.log(min_dist);
+                    if(!this.valorValido(this.dados[i][j])){
+                        this.tooltip = null;
+                    }else{
+                        this.tooltip = {
+                            x: x / this.LARGURA_GRAFICO * 100,
+                            y: y / this.ALTURA_GRAFICO * 100,
+                            valor: this.dados[i][j],
+                            rotulo: this.rotulosY[i]
+                        };
+                        //console.log(min_dist);
+                    }
                 }
             }
         }

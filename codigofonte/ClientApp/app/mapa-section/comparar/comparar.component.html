@@ -37,7 +37,7 @@
             <!--comboboxes-->
             <div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
-                    <option *ngFor="let item of getTitulos(); let i = index" [selected]="i == tituloAtual">
+                    <option *ngFor="let item of getTitulos(); let i = index" [selected]="item.id == indicador">
                         {{ item.indicador }}
                     </option>
                 </select>
