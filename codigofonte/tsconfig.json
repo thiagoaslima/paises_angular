@@ -1,31 +1,28 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
     "module": "es2015",
     "moduleResolution": "node",
-    "target": "es5",
-    "sourceMap": true,
-    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true, // Workaround for https://github.com/angular/angular/issues/17863. Remove this if you upgrade to a fixed version of Angular.
-    "strict": true,
-    "lib": [
-      "es6",
-      "dom",
-      "es2017"
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "types": [
-      "webpack-env"
-    ]
-  },
-  "exclude": [
-    "bin",
-    "node_modules"
-  ],
-  "atom": {
-    "rewriteTsconfig": false
-  },
-  "angularCompilerOptions": {
-    "entryModule": "ClientApp/app/app.module.server#AppModule"
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@root/*": ["app/root/*"],
+      "@lang/*": ["app/language/*"],
+      "@env/*": ["environments/*"],
+      "@styles/*": ["styles/*"]
+    } 
   }
 }

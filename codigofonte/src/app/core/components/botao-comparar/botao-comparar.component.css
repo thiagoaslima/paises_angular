@@ -1,0 +1,24 @@
+/*desktop*/
+botao-comparar {
+    display: inline-block;
+    font: 'Roboto', Helvetica, Arial;
+    color: inherit;
+}
+
+@media only screen and (min-width : 568px) {
+
+    /*barra de menu*/
+
+    .dados-pais__menu-link{
+        text-transform: uppercase;
+    }
+
+    .dados-pais__menu-link:hover{
+        color: lightgrey;
+    }
+
+    .dados-pais__menu-icon{
+        color: #00D1A3;
+    }
+
+}

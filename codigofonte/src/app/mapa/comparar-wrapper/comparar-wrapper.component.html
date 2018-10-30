@@ -1,0 +1,54 @@
+<!---->
+<div class="comparar main-layer">
+
+    <!--barra de título-->
+    <div class="comparar__barra-titulo">
+        <!--título-->
+        <h2 class="comparar__titulo">{{ TITULO_MODAL }}</h2>
+        <!--botão de fechar-->
+        <a class="button comparar__botao-fechar" routerLink="/mapa">
+            <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i>
+        </a>
+    </div>
+
+     <!--dados-->
+     <div class="comparar__info-container">
+         <seletor-paises [selecionados]="selecionados$ | async" [paises]="paises$ | async"></seletor-paises>
+
+         <div class="comparar__dados-container">
+            <!--<div class="comparar__botoes-container">
+                <button class="comparar__botao">Imprimir</button>
+                <button class="comparar__botao">Donwload</button>
+            </div>-->
+            <!--comboboxes-->
+            <div class="comparar__select-container">
+                <paises-select class="comparar__select" [dados]="temas$ | async" [selecionado]="temaSelecionado$ | async" (alter)="setTema($event)"></paises-select>
+                <paises-select class="comparar__select" [dados]="indicadores$ | async" [selecionado]="indicadorSelecionado$ | async" (alter)="setIndicador($event)"></paises-select>
+            </div>
+            <!--grafico-->
+            <div class="comparar__grafico-container">
+                
+                <!--
+                <paises-grafico
+                    [rotulosX]="getPeriodos()"
+                    [rotulosY]="getLegenda()"
+                    [dados]="getValores()"
+                    [unidade]="getUnidade()"
+                    [mostrarLegenda]="true"
+                    [LARGURA_GRAFICO]="640"
+                    [ALTURA_GRAFICO]="320">
+                </paises-grafico>
+                -->
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- 
+<pre>{{ temas$ | async | json }}</pre>
+<pre>{{ selecionados$ | async | json }}</pre>
+<pre>{{ indicadores$ | async | json }}</pre> 
+-->
