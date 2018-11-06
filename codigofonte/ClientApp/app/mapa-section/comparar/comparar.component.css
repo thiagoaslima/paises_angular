@@ -13,10 +13,10 @@
 	position: absolute;
 	border: 1px solid #9f9f9f;
 	background-color: rgba(255, 255, 255, 0.8);
-	top: 32px;
-	bottom: 32px;
-	right: 54px;
-	left: 54px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
 }
 
 .comparar__barra-titulo{
@@ -48,27 +48,41 @@
 }
 
 .comparar__info-container{
-	padding: 10px;
+	padding: 0px;
 	width: 100%;
 	height: calc(100% - 32px);
+	overflow-y: auto;
 }
 
 .comparar__seletor-pais-container{
-	width: 20%;
-	height: 100%;
-	float: left;
 	background-color: #f4f4f4;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 86px;
+	display: none;
+}
+
+.comparar__seletor-pais-container--ativo{
+	display: initial;
+}
+
+.comparar__abrir-seletor-icone{
+	position: absolute;
+    right: 15px;
+	top: 35%;
+    color: #777;
 }
 
 .comparar__dados-container{
-	width: calc(80% - 10px);
-	height: 100%;
-	float: right;
+	
 }
 
 .comparar__select-container{
 	text-align: center;
-	padding: 7px;
+	margin: 7px;
 }
 
 .comparar__select{
@@ -100,10 +114,7 @@
 }
 
 .comparar__filtro-info{
-	padding: 7px;
-	font-size: 0.8em;
-	margin: 0;
-	height: 32px;
+	display: none;
 }
 
 .comparar__lista-pais{
@@ -111,7 +122,7 @@
 	padding: 0;
 	margin: 0;
 	overflow-y: auto;
-    height: calc(100% - 74px);
+	height: calc(100% - 42px);
 }
 
 .comparar__lista-item-pais{
@@ -138,6 +149,34 @@
     margin: 64px auto;
 }
 
+.comparar__grafico-desktop{
+	display: none;
+}
+
+.comparar__grafico-mobile{
+	display: block;
+}
+
+.comparar__abrir-seletor-pais{
+	padding-left: 15px;
+    background-color: white;
+    border-bottom: 1px solid #6bd1b4;
+    transition: 0.4s;
+    position: relative;
+    cursor: pointer;
+	display: relative;
+	line-height: 54px;
+	position: relative;
+}
+
+.comparar__abrir-seletor-pais:hover{
+	background-color: #42e695;
+}
+
+.comparar__abrir-seletor-pais--ativo{
+	background-color: #42e695;
+}
+
 /*desktop*/
 @media only screen and (min-width : 568px) {
 
@@ -146,6 +185,58 @@
 		bottom: 32px;
 		right: 54px;
 		left: 54px;
+	}
+
+	.comparar__info-container{
+		padding: 10px;
+	}
+
+	.comparar__seletor-pais-container{
+		width: 20%;
+		height: 100%;
+		float: left;
+		background-color: #f4f4f4;
+		position: relative;
+		top: 0;
+		display: initial;
+	}
+
+	.comparar__dados-container{
+		width: calc(80% - 10px);
+		height: 100%;
+		float: right;
+	}
+
+	.comparar__select-container{
+		padding: 7px;
+		margin: 0;
+	}
+
+	.comparar__filtro-info{
+		padding: 7px;
+		font-size: 0.8em;
+		margin: 0;
+		height: 32px;
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.comparar__grafico-desktop{
+		display: block;
+	}
+
+	.comparar__grafico-mobile{
+		display: none;
+	}
+
+	.comparar__abrir-seletor-pais{
+		display: none;
+	}
+
+	.comparar__lista-pais{
+		height: calc(100% - 74px);
 	}
 
 }

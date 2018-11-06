@@ -13,9 +13,14 @@
     <!--dados-->
     <div class="comparar__info-container">
         <!--lista de países-->
-        <div class="comparar__seletor-pais-container">
+        <div class="comparar__abrir-seletor-pais" [class.comparar__abrir-seletor-pais--ativo]="mostrarListaPaises" (click)="mostrarListaPaises=!mostrarListaPaises">
+            Selecione até 5 países
+            <i class="fa fa-plus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="!mostrarListaPaises"></i>
+            <i class="fa fa-minus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="mostrarListaPaises"></i>
+        </div>
+        <div class="comparar__seletor-pais-container" [class.comparar__seletor-pais-container--ativo]="mostrarListaPaises">
             <div class="comparar__filtro-pais-container">
-                <input class="comparar__filtro-pais" type="text" (input)="filtrarPaises($event);"/>
+                <input class="comparar__filtro-pais" type="text" placeholder="Buscar país" (input)="filtrarPaises($event);"/>
             </div>
             <p class="comparar__filtro-info">Selecione até 5 países</p>
             <ul class="comparar__lista-pais">
@@ -57,8 +62,7 @@
             <!--grafico-->
 
             <div class="comparar__grafico-container">
-                
-                <grafico
+                <grafico class="comparar__grafico-desktop"
                     [rotulosX]="getPeriodos()"
                     [rotulosY]="getLegenda()"
                     [dados]="getValores()"
@@ -66,6 +70,16 @@
                     [mostrarLegenda]="true"
                     [LARGURA_GRAFICO]="640"
                     [ALTURA_GRAFICO]="320">
+                </grafico>
+
+                <grafico class="comparar__grafico-mobile"
+                    [rotulosX]="getPeriodos()"
+                    [rotulosY]="getLegenda()"
+                    [dados]="getValores()"
+                    [unidade]="getUnidade()"
+                    [mostrarLegenda]="true"
+                    [LARGURA_GRAFICO]="320"
+                    [ALTURA_GRAFICO]="240">
                 </grafico>
             </div>
         </div>

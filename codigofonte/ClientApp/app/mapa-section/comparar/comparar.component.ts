@@ -26,6 +26,8 @@ export class CompararComponent {
 
     indicador = 0;
 
+    mostrarListaPaises = false;
+
     constructor(
         private _localidadeService: LocalidadeService,
         private _traducaoService: TraducaoService,
