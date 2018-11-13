@@ -13,7 +13,7 @@
     <!--dados-->
     <div class="comparar__info-container">
         <!--lista de países-->
-        <div class="comparar__abrir-seletor-pais" [class.comparar__abrir-seletor-pais--ativo]="mostrarListaPaises" (click)="mostrarListaPaises=!mostrarListaPaises">
+        <div class="comparar__abrir-seletor-pais" (click)="mostrarListaPaises=true">
             Selecione até 5 países
             <i class="fa fa-plus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="!mostrarListaPaises"></i>
             <i class="fa fa-minus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="mostrarListaPaises"></i>
@@ -33,6 +33,7 @@
                     </li>
                 </ng-template>
             </ul>
+            <button class="comparar__fechar-seletor-pais" (click)="mostrarListaPaises=false">Comparar</button>
         </div>
         <div class="comparar__dados-container">
             <!--<div class="comparar__botoes-container">
@@ -43,7 +44,7 @@
             <div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
                     <option *ngFor="let item of getTitulos(); let i = index" [selected]="item.id == indicador">
-                        {{ item.indicador }}
+                        {{ item.titulo }}
                     </option>
                 </select>
             </div>
