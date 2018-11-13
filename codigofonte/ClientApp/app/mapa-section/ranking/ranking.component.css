@@ -17,6 +17,14 @@
 	background-color: #3f3f3f;
 }
 
+.ranking__opcoes {
+	font-size: 0.8em;
+    text-transform: uppercase;
+	padding-left: 10px;
+	float: left;
+	padding-top: 6px;
+}
+
 .ranking__titulo {
 	font-size: 0.9em;
     text-transform: uppercase;
@@ -66,7 +74,8 @@
 .ranking__tabela {
 	border-collapse: collapse;
 	display: block;
-    height: calc(100% - 64px);
+	height: calc(100% - 64px);
+	margin-top: 10px;
 }
 
 .ranking__tabela-cabecalho {
