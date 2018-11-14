@@ -68,12 +68,6 @@ export class CompararComponent {
     }
 
     update(){
-        /*
-            TODO:
-            -pegar o país e o indicador da query string para colocar um valor inicial no gráfico (depois reativar o botão de comparação dos cards)
-            -versão mobile
-        */
-
         //coletas as siglas dos países selecionados
         let siglas = [];
         for(let i = 0; i < this.paisesSelecionados.length; i++){
@@ -123,27 +117,22 @@ export class CompararComponent {
                 if(metadata[i].posicao.split('.').length == 1){
                     prefix[metadata[i].posicao] = metadata[i].indicador;
                 }else{
-                    if(metadata[i].posicao.split('.')[0] == '1') continue;
+                    if(metadata[i].posicao.split('.')[0] == '1') continue; //1 é a sintese, ignorar...
+                    metadata[i].titulo = prefix[metadata[i].posicao.split('.')[0]] + ' - ' + metadata[i].indicador;
                     result.push(metadata[i]); //TODO: modificar o titulo concatenando com o titulo do indicador pai (ex.: economia, educação...)
                     //console.log(metadata[i]);
-                    
+
                     /*valor default para indicador*/
                     if(this.indicador == 0){
                         this.indicador = metadata[i].id;
                     }
                 }
             }
+            //ordena os itens em ordem alfabetica baseando-se no título
+            result.sort(function(a:any, b:any){
+                return a.titulo.localeCompare(b.titulo);
+            });
         }
-
-        /*if(this.resultados && this.resultados.metadata){
-            for(let i = 0; i < this.resultados.metadata.length; i++){
-                let posicaoArray = this.resultados.metadata[i].posicao.split('.');
-                if(posicaoArray.length == 1 &&
-                    posicaoArray[0] != '1'){ //ignora a posição 1 que é a sintese
-                    result.push(this.resultados.metadata[i]);
-                }
-            }
-        }*/
 
         //console.log(result);
         return result;
@@ -156,22 +145,6 @@ export class CompararComponent {
             this.indicador = titulos[index].id;
         }
     }
-
-    /*getSubtitulos(titulo:number){
-         let result = [];
-         if(this.resultados && this.resultados.metadata){
-            let titulos = this.getTitulos();
-            if(titulos.length > titulo){
-                for(let i = 0; i < this.resultados.metadata.length; i++){
-                    let posicaoArray = this.resultados.metadata[i].posicao.split('.');
-                    if(posicaoArray.length > 1 && posicaoArray[0] == titulos[titulo].posicao){
-                        result.push(this.resultados.metadata[i]);
-                    }
-                }
-            }
-        }
-        return result;
-    }*/
 
     getUnidade(){
         let titulos = this.getTitulos();
