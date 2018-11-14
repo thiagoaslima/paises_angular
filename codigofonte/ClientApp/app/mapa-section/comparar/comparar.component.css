@@ -240,3 +240,27 @@
 	}
 
 }
+
+@media print {
+	.comparar{
+		background-color: #fff;
+		border: none;
+	}
+
+	.comparar__titulo{
+		display: none;
+	}
+
+	.comparar__abrir-seletor-pais{
+		display: none;
+	}
+
+	.comparar__icone-fechar, .comparar__botao-fechar{
+		display: none;
+	}
+	.comparar__select{
+		font-size: 27px;
+		border: none;
+		background-color: #fff;
+	}
+}
