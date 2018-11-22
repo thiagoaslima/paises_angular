@@ -23,9 +23,13 @@ export class TraducaoService {
                 this.lang = url.substr(url.indexOf('lang=') + 5, 2);
             }else if(sessionStorage.getItem('lang')){
                 this.lang = sessionStorage.getItem('lang');
-            }else if(navigator.language){
-                this.lang = navigator.language.substr(0,2).toLowerCase();
-            }else{
+            }
+            // As pessoas muitas vezes usam o navegador em inglês pq é a instalação padrão.
+            // O próprio IBGE é um exemplo disto.
+            // else if(navigator.language){
+            //     this.lang = navigator.language.substr(0,2).toLowerCase();
+            // }
+            else{
                 this.lang = 'pt';
             }
         }
