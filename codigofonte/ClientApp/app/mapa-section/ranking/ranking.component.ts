@@ -1,17 +1,29 @@
-import { Component, Input, Inject, ElementRef, AfterViewInit, ViewChildren, ViewChild, QueryList } from "@angular/core";
+import {
+    Component,
+    Input,
+    Inject,
+    ElementRef,
+    ViewChildren,
+    ViewChild,
+    QueryList,
+    OnInit,
+    OnDestroy,
+    ContentChildren,
+    AfterContentInit,
+    AfterViewInit
+} from "@angular/core";
 import { DOCUMENT } from "@angular/common";
 
-import { Observable } from "rxjs/Observable";
-import { Subscription } from 'rxjs/Subscription';
+import { Observable, Subscription, Subject } from "rxjs";
 import { map } from "rxjs/operators/map";
 import { switchMap } from "rxjs/operators/switchMap";
 import { zip } from "rxjs/operators/zip";
-
-import { PaisesService, RouterParamsService, Pais, MetadataIndicador } from "../../shared";
-import { MapaSectionService } from "../mapa-section.service";
-import { OnInit, OnDestroy } from "@angular/core/src/metadata/lifecycle_hooks";
+import { combineLatest, distinctUntilChanged, takeUntil } from "rxjs/operators";
 
 import { ResultadoPipe } from "../../shared/resultado.pipe";
+import { PaisesService, RouterParamsService, Pais, MetadataIndicador } from "../../shared";
+import { MapaSectionService } from "../mapa-section.service";
+
 
 
 @Component({
@@ -25,34 +37,37 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
         this.nomeIndicador = obj ? obj.indicador : '';
         this._indicador = obj;
     };
-    get indicador (){
+    get indicador() {
         return this._indicador;
     }
 
     @Input() pais: Pais | null = null;
-    @Input() 
+    @Input()
     set dados(values) {
+        debugger;
         //@ts-ignore
-        this._dados = values && values.ordem.length 
+        this._dados = values && values.ordem.length
             //@ts-ignore
             ? values.ordem.map((sigla: string) => values.paises[sigla])
             : [];
+        this.dados$.next(this._dados);
     }
     get dados() {
         return this._dados;
     }
-    
+
     unidade = '';
     nomeIndicador = '';
     private _indicador: MetadataIndicador | null = null;
 
     @ViewChild('scrollEl') public scrollElement: ElementRef;
-    @ViewChildren("cty") public countries: QueryList<ElementRef>
+    @ViewChildren('cty') public countries: QueryList<ElementRef>
     public paisSelecionado = "";
 
-    private _subscriptions: Subscription[] = [];
     private _dados = [];
-    private rankingObservable: Observable<any>
+    private rankingObservable: Observable<any>;
+    private destroy$ = new Subject<void>();
+    private dados$ = new Subject<any>();
 
     constructor(
         private _hostElement: ElementRef,
@@ -85,24 +100,27 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
 
 
     ngAfterViewInit() {
-        /*
-        (<any>window)["countries"] = this.countries;
-        const scrollSubscription = this.countries.changes.pipe(
-            zip(this.rankingObservable)
-        ).subscribe(_ => {
-            if (this.paisSelecionado) {
-                this.scrollTo(this.paisSelecionado);
-            }
+        // Escuta a rota e a criação da tabela para fazer o scroll 
+        // da div até a linha do país selecionado
+        this._routerParams.params$.pipe(
+            map(({ params }) => params.pais || null),
+            distinctUntilChanged(),
+            combineLatest(this.countries.changes),
+            takeUntil(this.destroy$),
+        ).subscribe((data: any) => {
+            debugger;
+            const [slug] = data;
+            if (slug) this.scrollTo(slug);
         });
-        this._subscriptions.push(scrollSubscription);
-        */
     }
 
+
     ngOnDestroy() {
-        // this._subscriptions.forEach(subscription => subscription.unsubscribe());
+        this.destroy$.next();
     }
 
     scrollTo(elementId: string) {
+        debugger;
         const elementRef = this.countries.find(ref => ref.nativeElement.id === elementId);
         if (elementRef) {
             this.scrollElement.nativeElement.scrollTop = elementRef.nativeElement.offsetTop - 39 /* .ranking__table-head height */;

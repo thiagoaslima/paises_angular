@@ -82,7 +82,6 @@ export class MapaSectionService {
             valor = obj ? parseFloat(obj.valor) : null;
             if (valor) {
               idx = 0;
-              debugger;
               while (values.divisores[idx] && valor < values.divisores[idx]) {
                 idx++;
               }

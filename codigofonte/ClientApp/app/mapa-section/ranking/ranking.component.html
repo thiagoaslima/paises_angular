@@ -1,5 +1,5 @@
 <section class="ranking main-layer">
-       
+
     <!--barra de título-->
     <div class="ranking__cabecalho">
         <!--título-->
@@ -8,7 +8,7 @@
         <a class="button ranking__botao-fechar" [routerLink]="'/dados/' + pais.slug" queryParamsHandling="preserve">
             <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
         </a>
-    </div> 
+    </div>
 
     <div class='ranking__opcoes'>
         <select>
@@ -50,18 +50,20 @@
         <!--corpo da tabela-->
 
         <tbody #scrollEl class="ranking__tabela-corpo">
-            <tr class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug" #cty *ngFor="let obj of dados">
-                <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
-                    {{ obj?.posicao }}
-                </td>
-                <td class="ranking__tabela-corpo-celula celula-grande">
-                    <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
-                </td>
-                <td class="ranking__tabela-corpo-celula celula-pequena">
-                    {{ obj?.valor | resultado }}
-                </td>
-            </tr>
+            <ng-container *ngFor="let obj of dados">
+                <tr #cty class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug">
+                    <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
+                        {{ obj?.posicao }}
+                    </td>
+                    <td class="ranking__tabela-corpo-celula celula-grande">
+                        <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
+                    </td>
+                    <td class="ranking__tabela-corpo-celula celula-pequena">
+                        {{ obj?.valor | resultado }}
+                    </td>
+                </tr>
+            </ng-container>
         </tbody>
     </table>
-    
+
 </section>

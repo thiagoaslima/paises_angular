@@ -6,6 +6,4 @@
 <paises-ranking *ngIf="indicadorObj$ | async" [pais]="pais$ | async" [indicador]="indicadorObj$ | async" [dados]="dados$ | async">
 </paises-ranking>
 
-<!-- <legenda-ranking *ngIf="indicadorObj$ | async" [dados]="dados$ | async"></legenda-ranking> -->
-
-<router-outlet></router-outlet>
+<router-outlet *ngIf="!(indicadorObj$ | async)"></router-outlet>
