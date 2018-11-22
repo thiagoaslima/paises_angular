@@ -1,17 +1,13 @@
-<div leaflet 
-    [leafletLayers]="leafletLayers"
-    [leafletOptions]="mapOptions"
-    (leafletMapReady)="onMapReady($event)">
+<div leaflet [leafletLayers]="leafletLayers" [leafletOptions]="mapOptions" (leafletMapReady)="onMapReady($event)">
 </div>
 
-<!-- 
+
 <div class="mapa-legenda" *ngIf="dados && dados.faixas.length > 0">
     <h4 class="mapa-legenda-title">Legenda</h4>
     <div class="mapa-legenda-nivel" *ngFor="let item of dados.faixas; let idx = index; let last = last; let len = count ">
-        <div class="mapa-legenda-cor" style="{background-color: {{ item }} }" [ngClass]="'scale' + (last ? 0 : (1 + idx))"></div>
+        <div class="mapa-legenda-cor" [ngClass]="'l-' + (dados.faixas.length - idx) + '-' + dados.faixas.length"></div>
         <p class="mapa-legenda-marcador">
-            <span class="mapa-legenda-texto">{{ dados.divisores[idx].toPrecision(2) | resultado}}</span>
+            <span class="mapa-legenda-texto">mais de {{ dados.divisores[idx].toPrecision(2) | resultado}}</span>
         </p>
     </div>
-</div>  -->
-
+</div>

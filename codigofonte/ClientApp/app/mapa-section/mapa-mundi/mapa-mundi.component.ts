@@ -78,9 +78,7 @@ export class MapaMundiComponent {
         private _ngzone: NgZone,
         private _localidadeService: LocalidadeService,
         private _decimalPipe: DecimalPipe
-    ) {
-        
-    }
+    ) { }
 
     onMapReady(map: L.Map) {
         this._map = map;
@@ -88,7 +86,6 @@ export class MapaMundiComponent {
         map.invalidateSize();
         map.setMaxBounds(L.latLngBounds(L.latLng(-200, -200), L.latLng(360, 300)));
         
-
         if (this._selecteds.length > 0) {
             map.fitBounds(this._selecteds[0].getBounds());
         } else {
@@ -167,7 +164,6 @@ export class MapaMundiComponent {
         const pais = context._localidadeService.getPaisBySigla(feature.properties.sigla);
         
         if (pais) {
-debugger
             const msg = pais.nome.pt + (feature.properties.nota ? ` (${feature.properties.nota.pt})` : "") + 
                 (feature.properties.valor ? `<br /> <strong><small>${this._decimalPipe.transform(feature.properties.valor)}<small></strong>` : "");
             layer.bindTooltip(msg);
