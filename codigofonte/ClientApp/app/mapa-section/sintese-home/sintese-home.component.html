@@ -24,9 +24,9 @@
         <!--tabela de valores-->      
         <table class="sintese__tabela"> 
             <tbody>
-                <tr class="sintese__tabela-linha" *ngFor="let item of itens">
+                <tr class="sintese__tabela-linha" *ngFor="let item of itens; let i = index">
                     <th class="sintese__tabela-nome">{{ item.titulo }}</th>
-                    <td class="sintese__tabela-valor">{{ item.valor | resultado }}</td>
+                    <td class="sintese__tabela-valor">{{ item.valor | resultado }}<span *ngIf="i == 1" class="sintese__tabela-valor">Km<sup>2</sup></span></td>
                 </tr>
             </tbody>
         </table>

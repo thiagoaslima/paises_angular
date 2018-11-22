@@ -1,4 +1,6 @@
-<div class="comparar main-layer">
+<div class="comparar__underlay main-layer">
+
+<div class="comparar">
     <!--barra de título-->
     <div class="comparar__barra-titulo">
         <!--título-->
@@ -11,9 +13,14 @@
     <!--dados-->
     <div class="comparar__info-container">
         <!--lista de países-->
-        <div class="comparar__seletor-pais-container">
+        <div class="comparar__abrir-seletor-pais" (click)="mostrarListaPaises=true">
+            Selecione até 5 países
+            <i class="fa fa-plus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="!mostrarListaPaises"></i>
+            <i class="fa fa-minus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="mostrarListaPaises"></i>
+        </div>
+        <div class="comparar__seletor-pais-container" [class.comparar__seletor-pais-container--ativo]="mostrarListaPaises">
             <div class="comparar__filtro-pais-container">
-                <input class="comparar__filtro-pais" type="text" (input)="filtrarPaises($event);"/>
+                <input class="comparar__filtro-pais" type="text" placeholder="Buscar país" (input)="filtrarPaises($event);"/>
             </div>
             <p class="comparar__filtro-info">Selecione até 5 países</p>
             <ul class="comparar__lista-pais">
@@ -26,6 +33,7 @@
                     </li>
                 </ng-template>
             </ul>
+            <button class="comparar__fechar-seletor-pais" (click)="mostrarListaPaises=false">Comparar</button>
         </div>
         <div class="comparar__dados-container">
             <!--<div class="comparar__botoes-container">
@@ -34,6 +42,13 @@
             </div>-->
             <!--comboboxes-->
             <div class="comparar__select-container">
+                <select class="comparar__select" (change)="setTitulo($event)">
+                    <option *ngFor="let item of getTitulos(); let i = index" [selected]="item.id == indicador">
+                        {{ item.titulo }}
+                    </option>
+                </select>
+            </div>
+            <!--<div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
                     <option *ngFor="let titulo of getTitulos(); let i = index" [selected]="i == tituloAtual">
                         {{ titulo.indicador }}
@@ -44,11 +59,11 @@
                         {{ subtitulo.indicador }}
                     </option>
                 </select>
-            </div>
+            </div>-->
             <!--grafico-->
+
             <div class="comparar__grafico-container">
-                
-                <grafico
+                <grafico class="comparar__grafico-desktop"
                     [rotulosX]="getPeriodos()"
                     [rotulosY]="getLegenda()"
                     [dados]="getValores()"
@@ -57,7 +72,19 @@
                     [LARGURA_GRAFICO]="640"
                     [ALTURA_GRAFICO]="320">
                 </grafico>
+
+                <grafico class="comparar__grafico-mobile"
+                    [rotulosX]="getPeriodos()"
+                    [rotulosY]="getLegenda()"
+                    [dados]="getValores()"
+                    [unidade]="getUnidade()"
+                    [mostrarLegenda]="true"
+                    [LARGURA_GRAFICO]="320"
+                    [ALTURA_GRAFICO]="240">
+                </grafico>
             </div>
         </div>
     </div>
+</div>
+
 </div>

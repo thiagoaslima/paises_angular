@@ -26,8 +26,10 @@
 @media only screen and (min-width : 568px) {
 
     .home__image{
-        width: 230px;
+        width: 770px;
         height: auto;
+        margin-left: 60px;
+        margin-top: 90px;
     }
 
     .home__texto{

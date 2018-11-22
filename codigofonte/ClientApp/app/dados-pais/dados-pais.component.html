@@ -13,7 +13,7 @@
             <a href="#" class="dados-pais__menu-link">{{'dados-pais__download' | l10n}}</a>
         </li>
         <li class="dados-pais__menu-item dados-pais__menu-item--right">
-            <a href="#" class="dados-pais__menu-link">
+            <a routerLink="/mapa/comparar" class="dados-pais__menu-link">
                 <i class="fa fa-signal dados-pais__menu-icon" aria-hidden="true"></i> {{'dados-pais__comparar-paises' | l10n}}
             </a>
         </li>
@@ -22,6 +22,9 @@
     <div class="dados-pais__sintese">
         <!--capa-->
         <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrcCover + ')'">
+            <button (click)="fotoAnterior()" class="dados-pais__sintese-capa-botao-anterior"><i class="fa fa-chevron-left dados-pais__sintese-capa-icon-anterior"></i></button>
+            <button (click)="fotoProxima()" class="dados-pais__sintese-capa-botao-proximo"><i class="fa fa-chevron-right dados-pais__sintese-capa-icon-proximo"></i></button>
+
             <a [href]="imageLink" target="_blank" rel="noopener noreferrer" class="dados-pais__sintese-capa-link">
                 <i class="fa fa-question-circle dados-pais__sintese-capa-icon"></i>
             </a>
@@ -35,9 +38,9 @@
             </div>
             <table class="dados-pais__sintese-tabela">
                 <tbody>
-                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens">
+                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens; let i = index">
                         <th class="dados-pais__sintese-nome">{{ item.titulo }}</th>
-                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }}</td>
+                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }} <span *ngIf="i == 1" class="dados-pais__sintese-valor-km">Km<sup class="dados-pais__sintese-valor-km">2</sup></span></td>
                     </tr>
                 </tbody>
             </table>

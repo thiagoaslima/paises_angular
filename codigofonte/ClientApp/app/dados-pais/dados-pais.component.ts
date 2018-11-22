@@ -30,6 +30,9 @@ export class DadosPaisComponent {
 
     historico_aberto = false;
 
+    fotoAtual = 0;
+    fotosTotal = 0;
+
     private _subscriptions: {
         [key: string]: Subscription
     } =  Object.create(null);
@@ -44,13 +47,13 @@ export class DadosPaisComponent {
 
     ngOnInit() {
         this._subscriptions.params = this._routerParams.params$.subscribe(({ params, url }) => {
-            
             let pais = this._localidadeService.getPaisBySlug(params.pais);
             this.itens.length = 0;
-            this.setImageSrc(pais);
-
             if (pais) {
                 this.pais = pais;
+
+                this.fotosTotal = linksCapas[pais.sigla.toUpperCase()].length;
+                this.setImageSrc();
 
                 this._sinteseService.getSintese(pais.sigla).subscribe((resultados: any) => {
                     this.itens.push(...resultados);
@@ -65,6 +68,14 @@ export class DadosPaisComponent {
                 this._dadosPaisService.getDados(pais.sigla).subscribe(resultados => {
                     this.temas = resultados;
                     // this._changeDetector.detectChanges();
+                    
+                    //organiza os dados em orde alfabética pelo título
+                    for(let i = 0; i < this.temas.length; i++){
+                        this.temas[i].valores.sort(function(a:any, b:any){
+                            return a['titulo'].localeCompare(b['titulo']);
+                        });
+                    }
+                    //console.log(this.temas);
                 });
                 
             } else {
@@ -80,22 +91,40 @@ export class DadosPaisComponent {
         Object.keys(this._subscriptions).forEach(key => this._subscriptions[key].unsubscribe());
     }
 
-    setImageSrc(pais: Pais | null) {
-        if (pais) {
-            let sigla = pais.sigla.toUpperCase();
+    setImageSrc() {
+        if (this.pais) {
+            let sigla = this.pais.sigla.toUpperCase();
 
             //bandeira
             this.imageSrc = 'img/bandeiras/' + sigla + '.gif';
             
+            //capa e info da capa
+            this.imageSrcCover = 'img/capas/' + sigla + (this.fotoAtual + 1) + '.jpg'; //fotos começam com 1 e não zero
+            this.imageLink = linksCapas[sigla][this.fotoAtual];
+
             //decide qual capa usar para o país (randomicamente)
             //os links das capas começam com 1(não zero)
-            let rand = Math.round((linksCapas[sigla].length - 1) * Math.random()) + 1;
-            this.imageSrcCover = 'img/capas/' + sigla + rand.toString() + '.jpg';
-            this.imageLink = linksCapas[sigla][rand - 1];
+            //let rand = Math.round((linksCapas[sigla].length - 1) * Math.random()) + 1;
+            //this.imageSrcCover = 'img/capas/' + sigla + rand.toString() + '.jpg';
+            //this.imageLink = linksCapas[sigla][rand - 1];
         } else {
             this.imageSrc = '';
             this.imageSrcCover = '';
             this.imageLink = '';
+        }
+    }
+
+    fotoAnterior(){
+        if(this.fotoAtual - 1 >= 0){
+            this.fotoAtual -= 1;
+            this.setImageSrc();
+        }
+    }
+
+    fotoProxima(){
+        if(this.fotoAtual + 1 < this.fotosTotal){
+            this.fotoAtual += 1;
+            this.setImageSrc();
         }
     }
 }

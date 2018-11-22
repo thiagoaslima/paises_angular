@@ -1,4 +1,7 @@
-import { Component, Input, Inject, OnInit } from "@angular/core";
+import { Component, Injectable, Optional, PLATFORM_ID, Input, Inject, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
+import { Router} from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 import { LocalidadeService } from "../../shared/localidade";
 import { TraducaoService } from "../../shared";
@@ -13,20 +16,29 @@ import {transformText} from "../../../utils/transformText";
 })
 export class CompararComponent {
 
+    private isBrowser: boolean;
+
     paises:any = [];
     paisesRemovidos:any = [];
     paisesSelecionados:any = [];
     lang:string;
     resultados:any = {};
-    tituloAtual = 0;
-    subtituloAtual = 0;
-    legenda:any = [];
+
+    indicador = 0;
+
+    mostrarListaPaises = false;
 
     constructor(
         private _localidadeService: LocalidadeService,
         private _traducaoService: TraducaoService,
-        private _paisesService: PaisesService
+        private _paisesService: PaisesService,
+        private _route: ActivatedRoute,
+        private _router: Router,
+        private _changeDetector: ChangeDetectorRef,
+        @Inject(PLATFORM_ID) platformId: any
     ){
+        this.isBrowser = isPlatformBrowser(platformId);
+
         this.lang = this._traducaoService.lang;
         
         this.paises = this._localidadeService.getAllPaises().sort((a:any, b:any) => { //lista países em ordem alfabética
@@ -35,6 +47,23 @@ export class CompararComponent {
     }
 
     ngOnInit() {
+        /*seleciona o pais que veio na query string da url*/
+        let sigla = this._route.snapshot.queryParams['pais'];
+        if(sigla){
+            for(let i = 0; i < this.paises.length; i++){
+                if(this.paises[i].sigla == sigla.toUpperCase()){
+                    this.paisesSelecionados[i] = true;
+                    break;
+                }
+            }
+        }
+
+        /*seta o indicador que veio na querystring da url*/
+        let indicador = this._route.snapshot.queryParams['indicador'];
+        if(indicador){
+            this.indicador = indicador;
+        }
+
         this.update();
     }
 
@@ -42,7 +71,7 @@ export class CompararComponent {
         //coletas as siglas dos países selecionados
         let siglas = [];
         for(let i = 0; i < this.paisesSelecionados.length; i++){
-            if(this.paisesSelecionados[i] == true){
+            if(this.paisesSelecionados[i] == true && siglas.indexOf(this.paises[i].sigla) < 0){
                 siglas.push(this.paises[i].sigla);
             }
         }
@@ -59,7 +88,10 @@ export class CompararComponent {
                     if(this.resultados['resultados'][i].localidade == resultados['resultados'][0].localidade)
                         return;
                 this.resultados['resultados'] = this.resultados['resultados'].concat(resultados['resultados']);
+                
                 //console.log(this.resultados);
+
+                this._changeDetector.detectChanges();
             });
         }
     }
@@ -76,63 +108,56 @@ export class CompararComponent {
     //dados das combobox
 
     getTitulos(){
-         let result = [];
+         let result:any = [];
+
          if(this.resultados && this.resultados.metadata){
-            for(let i = 0; i < this.resultados.metadata.length; i++){
-                let posicaoArray = this.resultados.metadata[i].posicao.split('.');
-                if(posicaoArray.length == 1 &&
-                    posicaoArray[0] != '1'){ //ignora a posição 1 que é a sintese
-                    result.push(this.resultados.metadata[i]);
+            let metadata:any = this.resultados['metadata'];
+            let prefix:any = {};
+            for(let i = 0; i < metadata.length; i++){
+                if(metadata[i].posicao.split('.').length == 1){
+                    prefix[metadata[i].posicao] = metadata[i].indicador;
+                }else{
+                    if(metadata[i].posicao.split('.')[0] == '1') continue; //1 é a sintese, ignorar...
+                    metadata[i].titulo = prefix[metadata[i].posicao.split('.')[0]] + ' - ' + metadata[i].indicador;
+                    result.push(metadata[i]); //TODO: modificar o titulo concatenando com o titulo do indicador pai (ex.: economia, educação...)
+                    //console.log(metadata[i]);
+
+                    /*valor default para indicador*/
+                    if(this.indicador == 0){
+                        this.indicador = metadata[i].id;
+                    }
                 }
             }
+            //ordena os itens em ordem alfabetica baseando-se no título
+            result.sort(function(a:any, b:any){
+                return a.titulo.localeCompare(b.titulo);
+            });
         }
+
         //console.log(result);
         return result;
     }
 
-    getSubtitulos(titulo:number){
-         let result = [];
-         if(this.resultados && this.resultados.metadata){
-            let titulos = this.getTitulos();
-            if(titulos.length > titulo){
-                for(let i = 0; i < this.resultados.metadata.length; i++){
-                    let posicaoArray = this.resultados.metadata[i].posicao.split('.');
-                    if(posicaoArray.length > 1 && posicaoArray[0] == titulos[titulo].posicao){
-                        result.push(this.resultados.metadata[i]);
-                    }
-                }
-            }
+    setTitulo(event:any){
+        let index = event.target.selectedIndex;
+        let titulos = this.getTitulos();
+        if(titulos && titulos.length > index){
+            this.indicador = titulos[index].id;
         }
-        return result;
-    }
-
-    getId(){
-        let subtitulos = this.getSubtitulos(this.tituloAtual);
-        if(subtitulos && subtitulos.length > this.subtituloAtual){
-            return subtitulos[this.subtituloAtual].id;
-        }
-        return 0;
     }
 
     getUnidade(){
-        let subtitulos = this.getSubtitulos(this.tituloAtual);
-        if(subtitulos && subtitulos.length > this.subtituloAtual){
-            let unidade = subtitulos[this.subtituloAtual].unidade;
-            if(unidade && unidade.multiplicador == 1)
-                return unidade.identificador;
-            else
-                return unidade.identificador + ' x ' + unidade.multiplicador;
+        let titulos = this.getTitulos();
+        for(let i = 0; i < titulos.length; i++){
+            if(titulos[i].id == this.indicador){
+                let unidade = titulos[i].unidade;
+                if(unidade && unidade.multiplicador == 1)
+                    return unidade.identificador;
+                else
+                    return unidade.identificador + ' x ' + unidade.multiplicador;
+            }
         }
         return '';
-    }
-
-    setTitulo(event:any){
-        this.tituloAtual = event.target.selectedIndex;
-        this.subtituloAtual = 0;
-    }
-
-    setSubtitulo(event:any){
-        this.subtituloAtual = event.target.selectedIndex;
     }
 
     //dados para o gráfico
@@ -140,9 +165,8 @@ export class CompararComponent {
     getPeriodos(){
         let result:Array<any> = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados, this.resultados.resultados.length > 0){
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     return this.resultados.resultados[i].periodos.slice(-5);
                 }
             }
@@ -162,16 +186,14 @@ export class CompararComponent {
 
     getLegenda(){
         let result:Array<any> = [];
-        this.legenda = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados){
             //deixa as linhas do gráfico em ordem alfabética de siglas
             this.resultados.resultados.sort( (a: any, b: any) => {
                return a['localidade'].localeCompare(b['localidade']);
             });
             //encontra os resultados desejados
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     let localidade:any = this._localidadeService.getPaisBySigla(this.resultados.resultados[i].localidade);
                     let nome:any = localidade ? localidade.nome[this.lang] : "";
                     result.push(nome);
@@ -184,16 +206,14 @@ export class CompararComponent {
 
     getValores(){
         let result:Array<any> = [];
-        this.legenda = [];
         if(this.resultados && this.resultados.metadata && this.resultados.resultados){
             //deixa as linhas do gráfico em ordem alfabética de siglas
             this.resultados.resultados.sort( (a: any, b: any) => {
                return a['localidade'].localeCompare(b['localidade']);
             });
             //encontra os resultados desejados
-            let id = this.getId();
             for(let i = 0; i < this.resultados.resultados.length; i++){
-                if(this.resultados.resultados[i].id == id){
+                if(this.resultados.resultados[i].id == this.indicador){
                     result.push(this.resultados.resultados[i].valores.slice(-5));
                 }
             }
