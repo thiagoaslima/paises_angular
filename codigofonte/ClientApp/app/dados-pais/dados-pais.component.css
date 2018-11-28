@@ -156,7 +156,6 @@
 @media only screen and (min-width : 568px) {
 
     /*barra de menu*/
-
     .dados-pais__menu{
         display: block;
         background-color: #3f3f3f;
@@ -347,4 +346,17 @@
         margin-top: 20px;
     }
 
+}
+
+
+/*impressão*/
+@media print {
+    .dados-pais__historico-icone{
+        display: none;
+    }
+
+    .dados-pais__historico-paragrafos-container{
+        display: block;
+        overflow: hidden;
+    }
 }

@@ -10,11 +10,7 @@ import { Pais } from "../shared";
 import { map } from "rxjs/operators";
 import { Ranking } from "../shared/paises-service/interfaces";
 
-const RANGE_COLORS = {
-  azuis: ["#eff3ff", "#c6dbef", "#9ecae1", "#6baed6", "#3182bd", "#08519c"],
-  verdes: ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#31a354", "#006d2c"],
-  vermelhos: ["#fee5d9", "#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
-};
+
 @Injectable()
 export class MapaSectionService {
   private _malha: {
@@ -74,18 +70,18 @@ export class MapaSectionService {
       geojson: {
         type: malha.type,
         features: malha.features.map((feature: Feature<any>) => {
-          //@ts-ignore
-          const pais = this._localidadeService.getPaisBySigla(feature.properties
-            .sigla as string);
+          const pais = feature && feature.properties 
+            ? this._localidadeService.getPaisBySigla(feature.properties.sigla as string) 
+            : null;
           let idx = null;
           let valor = null;
 
           if (pais) {
             const sigla = pais.sigla;
             const obj = values.paises[sigla];
-            idx = 0;
-            if (obj) {
-              valor = parseFloat(obj.valor);
+            valor = obj ? parseFloat(obj.valor) : null;
+            if (valor) {
+              idx = 0;
               while (values.divisores[idx] && valor < values.divisores[idx]) {
                 idx++;
               }
@@ -101,9 +97,10 @@ export class MapaSectionService {
               coordinates: [...feature.geometry.coordinates]
             }
           };
+
 //debugger
+
           if (idx !== null) {
-            // @ts-ignore
             _feature.properties.style = Object.assign(
               {},
               _feature.properties.style,
@@ -115,6 +112,14 @@ export class MapaSectionService {
             _feature.properties = Object.assign({}, _feature.properties, {
               valor: valor
             });
+          } else {
+             _feature.properties.style = Object.assign(
+              {},
+              _feature.properties.style,
+              {
+                fillColor: 'rgb(95, 95, 95)'
+              }
+            );
           }
 
           return _feature;
@@ -172,7 +177,7 @@ export class MapaSectionService {
     );
     const valores = Array.from(set);
 
-    const nCategories = Math.min(Math.sqrt(valores.length), 15);
+    const nCategories = Math.min(Math.sqrt(valores.length), 7);
     const faixas = this.setDivisions(nCategories);
 
     const maxValue = valores[0] > 0 ? valores[0] * 1.1 : valores[0] * 0.95;
@@ -186,120 +191,27 @@ export class MapaSectionService {
     const divisores = Array(faixas.length)
       .fill(1)
       .map((_, idx) => {
-        return maxValue - intervalo * idx;
+        return maxValue - intervalo * (idx+1);
       });
 
     return { faixas, divisores };
   }
 
-  setDivisions(n: number) {
-    const { azuis, vermelhos, verdes } = RANGE_COLORS;
+  setDivisions(n: number): string[] {
+    // Cores retiradas de:
+    // http://colorbrewer2.org/#type=sequential&scheme=Greens&n=3
+    const RANGE_COLORS = [
+      ['#31a354'],
+      ['#a1d99b', '#31a354'],
+      ['#e5f5e0', '#a1d99b', '#31a354'],
+      ["#edf8e9", "#bae4b3", "#74c476", "#238b45"],
+      ["#edf8e9", "#bae4b3", "#74c476", "#31a354", "#006d2c"],
+      ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#31a354", "#006d2c"],
+      ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#005a32"],
+      ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#005a32"],
+      ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"]
+    ];
 
-    switch (n) {
-      case 2:
-        n = 3;
-        break;
-      case 7:
-        n = 8;
-        break;
-      case 11:
-        n = 12;
-        break;
-      case 13:
-        n = 15;
-        break;
-      case 14:
-        n = 15;
-        break;
-    }
-
-    switch (n) {
-      case 3:
-        return [azuis[1], azuis[2], azuis[3]];
-
-      case 4:
-        return [azuis[1], azuis[2], azuis[3], azuis[4]];
-
-      case 5:
-        return azuis;
-
-      case 6:
-        return [verdes[1], verdes[2], verdes[3], azuis[1], azuis[2], azuis[3]];
-
-      case 8:
-        return [
-          verdes[1],
-          verdes[2],
-          verdes[3],
-          verdes[4],
-          azuis[1],
-          azuis[2],
-          azuis[3],
-          azuis[4]
-        ];
-
-      case 9:
-        return [
-          verdes[1],
-          verdes[2],
-          verdes[3],
-          azuis[1],
-          azuis[2],
-          azuis[3],
-          vermelhos[1],
-          vermelhos[2],
-          vermelhos[3]
-        ];
-
-      case 10:
-        return [
-          verdes[0],
-          verdes[1],
-          verdes[2],
-          verdes[3],
-          verdes[4],
-          azuis[0],
-          azuis[1],
-          azuis[2],
-          azuis[3],
-          azuis[4]
-        ];
-
-      case 12:
-        return [
-          verdes[1],
-          verdes[2],
-          verdes[3],
-          verdes[4],
-          azuis[1],
-          azuis[2],
-          azuis[3],
-          azuis[4],
-          vermelhos[1],
-          vermelhos[2],
-          vermelhos[3],
-          vermelhos[4]
-        ];
-
-      case 15:
-      default:
-        return [
-          verdes[0],
-          verdes[1],
-          verdes[2],
-          verdes[3],
-          verdes[4],
-          azuis[0],
-          azuis[1],
-          azuis[2],
-          azuis[3],
-          azuis[4],
-          vermelhos[0],
-          vermelhos[1],
-          vermelhos[2],
-          vermelhos[3],
-          vermelhos[4]
-        ];
-    }
+    return RANGE_COLORS[n-1].slice(0).reverse();
   }
 }

@@ -4,11 +4,13 @@ import {
     ChangeDetectionStrategy,
     NgZone,
 } from '@angular/core';
+import { DecimalPipe } from "@angular/common";
 import { Router, ActivatedRoute } from "@angular/router";
 
 import {
     Pais,
-    LocalidadeService
+    LocalidadeService,
+    TraducaoService
 } from '../../shared';
 
 import * as L from "leaflet";
@@ -74,15 +76,16 @@ export class MapaMundiComponent {
         private _router: Router,
         private _route: ActivatedRoute,
         private _ngzone: NgZone,
-        private _localidadeService: LocalidadeService
-    ) {}
+        private _localidadeService: LocalidadeService,
+        private _decimalPipe: DecimalPipe
+    ) { }
 
     onMapReady(map: L.Map) {
         this._map = map;
 
         map.invalidateSize();
-        map.setMaxBounds(L.latLngBounds(L.latLng(-50, -175), L.latLng(90, 179)));
-
+        map.setMaxBounds(L.latLngBounds(L.latLng(-200, -200), L.latLng(360, 300)));
+        
         if (this._selecteds.length > 0) {
             map.fitBounds(this._selecteds[0].getBounds());
         } else {
@@ -139,15 +142,15 @@ export class MapaMundiComponent {
     }
 
     private _onClickMap(layer: L.Layer) {
+        debugger;
         const that = this;
         layer.on({
             click: (evt) => {
                 that._ngzone.run(() => {
                     const pais = this._localidadeService.getPaisBySigla(evt.target.feature.properties.sigla);
-                    
+                    debugger;
                     if (pais) { 
-                        // @ts-ignore
-                        this._map.fitBounds(layer.getBounds()); 
+                        this._map && this._map.fitBounds((<any>layer).getBounds()); 
                         this._router.navigate(
                             this.link.concat(pais.slug), 
                             { relativeTo: this._route }
@@ -162,9 +165,11 @@ export class MapaMundiComponent {
         const pais = context._localidadeService.getPaisBySigla(feature.properties.sigla);
         
         if (pais) {
+
             //debugger;
+
             const msg = pais.nome.pt + (feature.properties.nota ? ` (${feature.properties.nota.pt})` : "") + 
-                (feature.properties.valor ? `<br /> <strong>${feature.properties.valor}</strong>` : "");
+                (feature.properties.valor ? `<br /> <strong><small>${this._decimalPipe.transform(feature.properties.valor)}<small></strong>` : "");
             layer.bindTooltip(msg);
 
             layer.on({

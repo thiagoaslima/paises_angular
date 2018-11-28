@@ -132,7 +132,7 @@
 
 /*desktop*/
 
-@media only screen and (min-width : 568px) {
+@media only screen and (min-width : 568px), print {
     .cabecalho{
         height: 50px;
         padding-top: 2px;
@@ -164,4 +164,30 @@
     .cabecalho__menu-button-label{
         margin: -5px 10px 0px 0px;
     }
+}
+
+
+/*Versão para impressão*/
+
+@media print{
+    .cabecalho{
+        position: relative;
+    }
+
+    .gradiente {
+        background: #3bb2b8 !important;
+        background: -webkit-linear-gradient(left, #3bb2b8, #42e695) !important;
+        background: -o-linear-gradient(right, #3bb2b8, #42e695) !important;
+        background: -moz-linear-gradient(right, #3bb2b8, #42e695) !important;
+        background: linear-gradient(to right, #3bb2b8, #42e695) !important;
+    }
+
+    .cabecalho__menu-button{
+        display: none;
+    }
+
+    .cabecalho__campo-busca-container{
+        display: none;
+    }
+    
 }
