@@ -46,6 +46,7 @@
     "expose-loader": "0.7.3",
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "1.1.6",
+    "file-saver": "^2.0.0-rc.4",
     "html-loader": "0.5.5",
     "ibge-version": "^0.1.2",
     "isomorphic-fetch": "2.2.1",

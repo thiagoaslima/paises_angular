@@ -9,6 +9,8 @@ import { DadosPaisService } from './dados-pais.service';
 
 import { linksCapas } from '../shared/links-capas';
 
+const FileSaver = require('file-saver');
+
 @Component({
     selector: 'dados-pais',
     templateUrl: './dados-pais.component.html',
@@ -126,5 +128,36 @@ export class DadosPaisComponent {
             this.fotoAtual += 1;
             this.setImageSrc();
         }
+    }
+
+    download(){
+        //dados da síntese
+        let csv = 'Síntese\nTitulo,Valor\n';
+        for(let i = 0; i < this.itens.length; i++)
+            csv += this.itens[i]['titulo'] + ',' + this.itens[i]['valor'] + ' ' + this.itens[i]['unidade'] + '\n';
+        csv += 'historico,"';
+        for(let i = 0; i < this.historico.length; i++){
+            if(i > 0) csv += '\n';
+            csv += this.historico[i];
+        }
+        csv += '"';
+
+        //dados dos gráficos
+        csv += '\n\nDados\n';
+        for(let i = 0; i < this.temas.length; i++){
+            let tema = this.temas[i];
+            csv += 'tema,' + tema.tema + '\n'
+            for(let j = 0; j < tema.valores.length; j++){
+                let valor = tema.valores[j];
+                csv += 'titulo,' + valor.titulo + '\n';
+            }
+        }
+
+        //download
+        //let blob = new Blob([csv], { type: "text/csv" });
+        //FileSaver.saveAs(blob, "dados_pais.csv");
+
+        console.log(csv);
+        console.log(this.temas);
     }
 }

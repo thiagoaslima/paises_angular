@@ -101,7 +101,7 @@ export class MapaSectionService {
               coordinates: [...feature.geometry.coordinates]
             }
           };
-debugger
+//debugger
           if (idx !== null) {
             // @ts-ignore
             _feature.properties.style = Object.assign(
