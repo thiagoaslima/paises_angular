@@ -97,7 +97,9 @@ export class MapaSectionService {
               coordinates: [...feature.geometry.coordinates]
             }
           };
-        
+
+//debugger
+
           if (idx !== null) {
             _feature.properties.style = Object.assign(
               {},

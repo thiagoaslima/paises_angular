@@ -119,7 +119,7 @@ export class CompararComponent {
                 }else{
                     if(metadata[i].posicao.split('.')[0] == '1') continue; //1 é a sintese, ignorar...
                     metadata[i].titulo = prefix[metadata[i].posicao.split('.')[0]] + ' - ' + metadata[i].indicador;
-                    result.push(metadata[i]); //TODO: modificar o titulo concatenando com o titulo do indicador pai (ex.: economia, educação...)
+                    result.push(metadata[i]);
                     //console.log(metadata[i]);
 
                     /*valor default para indicador*/

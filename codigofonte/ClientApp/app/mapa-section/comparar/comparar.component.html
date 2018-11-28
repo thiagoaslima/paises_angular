@@ -48,20 +48,7 @@
                     </option>
                 </select>
             </div>
-            <!--<div class="comparar__select-container">
-                <select class="comparar__select" (change)="setTitulo($event)">
-                    <option *ngFor="let titulo of getTitulos(); let i = index" [selected]="i == tituloAtual">
-                        {{ titulo.indicador }}
-                    </option>
-                </select>
-                <select class="comparar__select" (change)="setSubtitulo($event)">
-                    <option *ngFor="let subtitulo of getSubtitulos(tituloAtual); let i = index" [selected]="i == subtituloAtual">
-                        {{ subtitulo.indicador }}
-                    </option>
-                </select>
-            </div>-->
             <!--grafico-->
-
             <div class="comparar__grafico-container">
                 <grafico class="comparar__grafico-desktop"
                     [rotulosX]="getPeriodos()"

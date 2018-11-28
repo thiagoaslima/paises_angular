@@ -173,13 +173,15 @@
         float: right;
     }
 
-    .dados-pais__menu-link{
+    .dados-pais__menu-botao{
         color: #fff;
         text-transform: uppercase;
         font-size: 0.8em;
+        background: none;
+        border: none;
     }
 
-    .dados-pais__menu-link:hover{
+    .dados-pais__menu-botao:hover{
         color: lightgrey;
     }
 

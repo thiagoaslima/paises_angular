@@ -165,6 +165,9 @@ export class MapaMundiComponent {
         const pais = context._localidadeService.getPaisBySigla(feature.properties.sigla);
         
         if (pais) {
+
+            //debugger;
+
             const msg = pais.nome.pt + (feature.properties.nota ? ` (${feature.properties.nota.pt})` : "") + 
                 (feature.properties.valor ? `<br /> <strong><small>${this._decimalPipe.transform(feature.properties.valor)}<small></strong>` : "");
             layer.bindTooltip(msg);
