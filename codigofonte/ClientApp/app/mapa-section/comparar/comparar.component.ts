@@ -25,6 +25,7 @@ export class CompararComponent {
     resultados:any = {};
 
     indicador = 0;
+    categoria = 0;
 
     mostrarListaPaises = false;
 
@@ -91,6 +92,9 @@ export class CompararComponent {
                 
                 //console.log(this.resultados);
 
+                //seta a categoria (saude, economia, populacao...)
+                this.setCategoriaIndicador(this.indicador);
+
                 this._changeDetector.detectChanges();
             });
         }
@@ -107,7 +111,7 @@ export class CompararComponent {
 
     //dados das combobox
 
-    getTitulos(){
+    /*getTitulos(){
          let result:any = [];
 
          if(this.resultados && this.resultados.metadata){
@@ -122,7 +126,7 @@ export class CompararComponent {
                     result.push(metadata[i]);
                     //console.log(metadata[i]);
 
-                    /*valor default para indicador*/
+                    //valor default para indicador
                     if(this.indicador == 0){
                         this.indicador = metadata[i].id;
                     }
@@ -136,21 +140,98 @@ export class CompararComponent {
 
         //console.log(result);
         return result;
+    }*/
+
+    setCategoriaIndicador(indicador:any){
+        if(this.categoria == 0 && this.resultados && this.resultados.metadata){
+            let metadata:any = this.resultados['metadata'];
+            for(let i = 0; i < metadata.length; i++){
+                if(metadata[i].id == indicador){
+                    this.categoria = metadata[i].posicao.split('.')[0];
+                }
+            }
+        }
+    }
+
+    getTitulo(){
+        let result:any = [];
+
+         if(this.resultados && this.resultados.metadata){
+            let metadata:any = this.resultados['metadata'];
+            let prefix:any = {};
+            for(let i = 0; i < metadata.length; i++){
+                let posicao = metadata[i].posicao.split('.');
+                if(posicao[0] == '1') continue; //1 é a sintese, ignorar...
+                if(posicao.length == 1){
+                    result.push(metadata[i]);
+
+                    /*valor default para indicador*/
+                    if(this.categoria == 0){
+                        this.categoria = posicao[0];
+                    }
+                }
+            }
+            //ordena os itens em ordem alfabetica baseando-se no título
+            /*result.sort(function(a:any, b:any){
+                return a.indicador.localeCompare(b.indicador);
+            });*/
+        }
+
+        //console.log(result);
+        return result;
+    }
+
+    getSubtitulo(){
+        let result:any = [];
+
+        if(this.resultados && this.resultados.metadata){
+            let metadata:any = this.resultados['metadata'];
+            for(let i = 0; i < metadata.length; i++){
+                let posicao = metadata[i].posicao.split('.');
+                if(posicao.length > 1){
+                    if(posicao[0] == '1') continue; //1 é a sintese, ignorar...
+                    if(posicao[0] != this.categoria) continue;
+                    result.push(metadata[i]);
+                    //console.log(metadata[i]);
+
+                    /*valor default para indicador*/
+                    if(this.indicador == 0){
+                        this.indicador = metadata[i].id;
+                    }
+                }
+            }
+            //ordena os itens em ordem alfabetica baseando-se no título
+            /*result.sort(function(a:any, b:any){
+                return a.indicador.localeCompare(b.indicador);
+            });*/
+        }
+
+        //console.log(result);
+        return result;
     }
 
     setTitulo(event:any){
         let index = event.target.selectedIndex;
-        let titulos = this.getTitulos();
+        let titulos = this.getTitulo();
         if(titulos && titulos.length > index){
-            this.indicador = titulos[index].id;
+            this.categoria = titulos[index].posicao.split('.')[0];
+            this.indicador = 0;
+        }
+    }
+
+    setSubtitulo(event:any){
+        let index = event.target.selectedIndex;
+        let subtitulos = this.getSubtitulo();
+        if(subtitulos && subtitulos.length > index){
+            this.indicador = subtitulos[index].id;
         }
     }
 
     getUnidade(){
-        let titulos = this.getTitulos();
-        for(let i = 0; i < titulos.length; i++){
-            if(titulos[i].id == this.indicador){
-                let unidade = titulos[i].unidade;
+        let subtitulos = this.getSubtitulo();
+        for(let i = 0; i < subtitulos.length; i++){
+            if(subtitulos[i].id == this.indicador){
+                let unidade = subtitulos[i].unidade;
                 if(unidade && unidade.multiplicador == 1)
                     return unidade.identificador;
                 else

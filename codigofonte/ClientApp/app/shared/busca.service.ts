@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { transformText } from '../../utils';
 import { LocalidadeService } from './localidade/localidade.service';
+import { PaisesService } from "./paises-service";
 import { LANGUAGES } from './traducao.service';
 
 @Injectable()
@@ -11,7 +12,8 @@ export class BuscaService {
     MIN_WORD_SIZE = 3;
 
     constructor(
-        private _localidadeService: LocalidadeService
+        private _localidadeService: LocalidadeService,
+        private _paisesService: PaisesService
     ) { }
 
     /*
