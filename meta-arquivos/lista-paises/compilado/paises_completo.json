@@ -1421,7 +1421,8 @@
             },
             "apelidos": {
                 "en": [
-                    "China, People's Republic of"
+                    "China, People's Republic of",
+                    "China, mainland"
                 ],
                 "es": [
                     "República Popular China"
@@ -4093,7 +4094,9 @@
                 "pt": "China, Macao"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "China, Macao SAR"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -5315,7 +5318,9 @@
                 "pt": "Palestina"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Palestine"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -6818,7 +6823,8 @@
             },
             "apelidos": {
                 "en": [
-                    "Taiwan"
+                    "Taiwan",
+                    "Taiwan Province of China"
                 ],
                 "es": [],
                 "pt": []
@@ -7011,7 +7017,9 @@
                 "pt": "Tokelau"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Tokelau (Associated Member)"
+                ],
                 "es": [],
                 "pt": []
             },
