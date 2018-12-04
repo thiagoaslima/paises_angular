@@ -191,6 +191,10 @@
 
     /*sintese*/
 
+    .dados-pais__sintese-titulo-container{
+        margin: 0 20px 0 0;
+    }
+
     .dados-pais__sintese{
         background-color: transparent;
         padding-top: 0px;
