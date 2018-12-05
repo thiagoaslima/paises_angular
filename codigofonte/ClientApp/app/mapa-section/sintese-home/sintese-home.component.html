@@ -1,14 +1,16 @@
 <div class="sintese main-layer">
     <!--barra de título-->
     <div class="sintese__barra-titulo">
-        <!--título-->
-        <h2 class="sintese__titulo" [title]="pais?.nome.pt">{{ pais?.nome.pt }}</h2>
         <!--botão de fechar-->
         <a class="button sintese__botao-fechar" routerLink="/mapa">
             <!-- <button class="sintese__botao-fechar"> -->
                 <i class="fa fa-times sintese__icone-fechar" aria-hidden="true"></i>
             <!-- </button> -->
         </a>
+    </div>
+    <!--abas-->
+    <div>
+        <span class="sintese__tab">Síntese</span><a class="sintese__tab sintese__tab--right-disabled" [routerLink]="'/mapa/ranking/' + pais?.slug">Ranking</a>
     </div>
     <!--dados-->
     <div class="sintese__info-container">
@@ -18,8 +20,9 @@
         <div class="sintese__bandeira-container">
             <img alt="bandeira" [src]="imageSrc" class="sintese__bandeira-imagem">
         </div>
+
         <!--título-->
-        <!--<h2 class="sintese__titulo">{{ pais?.nome.pt }}</h2>-->
+        <h2 class="sintese__titulo" [title]="pais?.nome.pt">{{ pais?.nome.pt }}</h2>
 
         <!--tabela de valores-->      
         <table class="sintese__tabela"> 
@@ -32,7 +35,7 @@
         </table>
         <!--leia mais-->
         <div class="sintese__leia-mais">
-            <a [routerLink]="'/dados/' + pais?.slug" class="sintese__leia-mais-link">Leia mais</a>
+            <a [routerLink]="'/dados/' + pais?.slug" class="sintese__leia-mais-link">Mais sobre o país</a>
         </div>
 
     </ng-container>

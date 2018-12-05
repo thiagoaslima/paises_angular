@@ -5,6 +5,13 @@
     background-color: rgba(0,0,0,0.75);
 }
 
+.home__image{
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
 .home__texto{
     color:#fff;
     font-size: 1.1em;
@@ -26,10 +33,9 @@
 @media only screen and (min-width : 568px) {
 
     .home__image{
-        width: 770px;
+        max-width: 480px;
         height: auto;
-        margin-left: 60px;
-        margin-top: 90px;
+        padding-top: 80px;
     }
 
     .home__texto{

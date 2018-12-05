@@ -70,9 +70,22 @@
     background-color: #F2F2F2;
 }
 
+.cabecalho__idioma-container{
+    float: right;
+    margin-top: 9px;
+    margin-right: 15px;
+}
+
+.cabecalho__idioma-button{
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
 .cabecalho__menu-container{
     position: relative;
-	float:right;
+	float: right;
 }
 
 .cabecalho__menu-button{
@@ -149,7 +162,7 @@
     .cabecalho__campo-busca-container{
         display: inline-block;
         position: relative;
-        width: 58%;
+        width: 55%;
         top: initial;
     }
 
@@ -163,6 +176,12 @@
 
     .cabecalho__menu-button-label{
         margin: -5px 10px 0px 0px;
+    }
+
+    .cabecalho__idioma-container{
+        float: right;
+        margin-top: 12px;
+        margin-right: 15px;
     }
 }
 
