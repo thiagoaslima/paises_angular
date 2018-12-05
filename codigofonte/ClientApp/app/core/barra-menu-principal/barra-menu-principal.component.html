@@ -16,9 +16,11 @@
     </div>
     <!--seleção de idioma-->
     <div class="cabecalho__idioma-container">
-        <button class="cabecalho__idioma-button">EN</button>
-        |
-        <button class="cabecalho__idioma-button">ES</button>
+        <button class="cabecalho__idioma-button" (click)="lang = 'pt'" *ngIf="lang!='pt'">PT</button>
+        <span *ngIf="lang=='es'">|</span>
+        <button class="cabecalho__idioma-button" (click)="lang = 'en'" *ngIf="lang!='en'">EN</button>
+        <span *ngIf="lang=='pt'||lang=='en'">|</span>
+        <button class="cabecalho__idioma-button" (click)="lang = 'es'" *ngIf="lang!='es'">ES</button>
     </div>
     <!-->menu<-->
     <!--<div class="cabecalho__menu-container altura2" [class.altura2]="mostraMenu==true">

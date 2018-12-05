@@ -42,7 +42,7 @@ export class CompararComponent {
 
         this.lang = this._traducaoService.lang;
         
-        this.paises = this._localidadeService.getAllPaises().sort((a:any, b:any) => { //lista países em ordem alfabética
+        this.paises = this._localidadeService.getAllPaises().filter(pais => pais.onu).sort((a:any, b:any) => { //lista países em ordem alfabética
             return a.nome[this.lang].localeCompare(b.nome[this.lang]);
         });
     }

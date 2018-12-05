@@ -24,7 +24,7 @@ export class BuscaService {
         var placesFound = [];
         var transformedText = transformText(text);
         var textWords = transformedText.split('-');
-        var places = this._localidadeService.getAllPaises() as any;
+        var places = this._localidadeService.getAllPaises().filter(pais => pais.onu) as any;
         //encontra local via ddi
         for (i = 0; i < textWords.length; i++) {
             if (!isNaN(parseFloat(textWords[i]))) {
