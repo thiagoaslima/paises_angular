@@ -11,18 +11,26 @@
     </div>
 
     <div class='ranking__opcoes'>
-        <select>
-            <option value="">Taxa de Alfabetiza...</option>
-            <option value="">Taxa bruta de matrícu...</option>
-            <option value="">Índice de desenvolvim...</option>
-        </select>
 
-        <select>
-            <option value="">2010</option>
-            <option value="">2011</option>
-            <option value="">2012</option>
-            <option value="">2013</option>
-        </select>
+        <!-- <p>{{ indicadores | json }}</p> -->
+        <!-- <ng-container *ngIf="temas$ | async as temas"> -->
+            <select #s1 (change)="selectTema(s1.value)">
+                <option *ngFor="let tema of temas$ | async"
+                    [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
+            </select>
+        <!-- </ng-container> -->
+        
+        <!-- <ng-container *ngIf="indicadores$ | async as indicadores"> -->
+            <select #s2 (change)="selectIndicador(s2.value)">
+                <option *ngFor="let indicador of indicadores"
+                    [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
+            </select>
+        <!-- </ng-container> -->
+
+         <select #s3 (change)="selectAno(s3.value)">
+            <option *ngFor="let periodo of periodos"
+                [value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
+        </select> 
     </div>
 
     <!--barra de menu-->

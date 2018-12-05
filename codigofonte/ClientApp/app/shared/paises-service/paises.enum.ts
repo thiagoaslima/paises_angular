@@ -1,15 +1,15 @@
 export module PaisesEnum {
     export enum temas {
         sintese = 1,
-        olimpicos = 2,
-        economia = 3,
-        sociais = 4,
-        ambiente = 5,
-        populacao = 6,
-        telefonia = 7,
-        ODM = 8,
-        ODS = 9,
-        saude = 100
+        olimpicos = -1,
+        economia = 2,
+        sociais = 3,
+        ambiente = 4,
+        populacao = 5,
+        telefonia = 6,
+        ODM = -2,
+        ODS = -3,
+        saude = 7
     }
 
     export enum sintese {
@@ -18,5 +18,9 @@ export module PaisesEnum {
         idioma = 62943,
         localizacao = 62944,
         moeda = 62945
+    }
+
+    export enum populacao {
+        populacao_total = 62985
     }
 }

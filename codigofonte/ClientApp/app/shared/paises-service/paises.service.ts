@@ -1,221 +1,327 @@
-import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable, Inject } from "@angular/core";
+import { Http } from "@angular/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
+ 
+import { Observable } from "rxjs/Observable";
+import "rxjs/add/observable/zip";
+import { map } from "rxjs/operators/map";
+import { switchMap } from "rxjs/operators/switchMap";
+import { zip } from "rxjs/operators/zip";
+import { tap } from "rxjs/operators/tap";
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/zip';
-import { map } from 'rxjs/operators/map';
-import { switchMap } from 'rxjs/operators/switchMap';
-import { zip } from 'rxjs/operators/zip';
-import { tap } from 'rxjs/operators/tap';
+import { RequestService } from "../request.service";
+import { PaisesEnum } from "./paises.enum";
+import { chunkArray, flattenArray, objArrayToMap } from "../../../utils";
+import { LocalidadeService } from "../localidade/localidade.service";
+import { Ranking, ResultadosIndicador, MetadataIndicador } from "./interfaces";
+import { BasicLRUCache, RxSimpleCache } from "../cache/index";
 
-import { RequestService } from '../request.service';
-import { PaisesEnum } from './paises.enum';
-import { chunkArray, flattenArray, objArrayToMap } from '../../../utils';
-import { LocalidadeService } from '../localidade/localidade.service';
-import { Ranking, ResultadosIndicador, MetadataIndicador } from './interfaces';
+const cache = new BasicLRUCache(100);
+const TEMA_SAUDE = {
+  id: 0,
+  indicador: "Saúde",
+  posicao: PaisesEnum.temas.saude.toString(),
+  notas: [],
+  fontes: [],
+  unidade: {
+    identificador: "",
+    classe: "",
+    multiplicador: 1
+  },
+  pai: null
+} as MetadataIndicador;
 
 @Injectable()
 export class PaisesService extends RequestService {
-
-    constructor(
-        _httpClient: HttpClient,
-        private _localidadeService: LocalidadeService,
-        @Inject('SPECIAL_VALUES') private _specialValues: { cases: { [key: string]: string }, values: { [key: string]: string } }
-    ) {
-        super(_httpClient);
+  constructor(
+    _httpClient: HttpClient,
+    private _localidadeService: LocalidadeService,
+    @Inject("SPECIAL_VALUES")
+    private _specialValues: {
+      cases: { [key: string]: string };
+      values: { [key: string]: string };
     }
+  ) {
+    super(_httpClient);
+  }
 
-    getSintese(siglaPais: string) {
-        const metadataObservable = this.getMetadataIndicador(1, 'one');
+  @RxSimpleCache({
+    cache
+  })
+  getSintese(siglaPais: string) {
+    const metadataObservable = this.getMetadataIndicador(1, "one");
 
-        const resultadosObservable: Observable<any[]> = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`);
-        //.pipe(map(resultados => resultados.map(this.toResultadoModel.bind(this))));
+    const resultadosObservable: Observable<any[]> = this.request(
+      `https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/1/resultados/${siglaPais}`
+    );
+    //.pipe(map(resultados => resultados.map(this.toResultadoModel.bind(this))));
 
-        return metadataObservable.pipe(
-            zip(resultadosObservable),
-            map(([metadata, resultadosRaw]) => {
-                const metadataMap = objArrayToMap(metadata);
-                const resultados = resultadosRaw.map(res => this.toResultadoModel(metadataMap[res.id], res))
-                return { metadata, resultados };
-            })
+    return metadataObservable.pipe(
+      zip(resultadosObservable),
+      map(([metadata, resultadosRaw]) => {
+        const metadataMap = objArrayToMap(metadata);
+        const resultados = resultadosRaw.map(res =>
+          this.toResultadoModel(metadataMap[res.id], res)
         );
-    }
+        return { metadata, resultados };
+      })
+    );
+  }
 
-    getMetadataIndicador(indicadorId: number, scope = 'sub') {
-        const metadataParams = new HttpParams().set('scope', scope);
-        return this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`, metadataParams)
-            .pipe(
-                map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)),
-                map(this._hackTemaSaude)
-            );
-    }
-
-    getHistorico(siglaPais: string): Observable<{ pais: string, periodo: string, indicador: number, valor: string, valor_en: string }> {
-        return this.request(`https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`)
-            .pipe(map((response: any[]) => response.find(obj => obj.indicador === 44)))
-    }
-
-    getTodosDados(siglaPais: string) {
-        const metadataObservable = this.getMetadataIndicador(0).pipe(
-            map(resultados => resultados.filter((obj: any) => ['2', '8', '9'].indexOf(obj.posicao.charAt(0)) === -1))
-        ); //this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
-
-        const resultadosObservable = this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`)
-
-        return metadataObservable.pipe(
-            zip(resultadosObservable),
-            map(([metadata, resultadosRaw]) => {
-                const resultadosMap = objArrayToMap(resultadosRaw);
-                
-                const resultados = metadata.reduce((agg, meta: any) => {
-                    const resultado = resultadosMap[meta.id];
-                    if (resultado) {
-                        agg.push(this.toResultadoModel(meta, resultado))
-                    }
-                    return agg;
-                }, [] as ResultadosIndicador[]);
-
-                return { metadata, resultados };
-            })
+  @RxSimpleCache({
+    cache,
+    customKey: "temas"
+  })
+  getTemas() {
+    return this.getMetadataIndicador(0, "one").pipe(
+      map(temas => {
+        return temas.filter(
+          tema =>
+            ![
+              PaisesEnum.temas.sintese,
+              PaisesEnum.temas.olimpicos,
+              PaisesEnum.temas.ODM,
+              PaisesEnum.temas.ODS
+            ].includes(Number(tema.posicao))
         );
+      }),
+      map(temas => temas.concat(TEMA_SAUDE))
+    );
+  }
+
+  @RxSimpleCache({
+    cache
+  })
+  getIndicadores(temaId: number) {
+    let _temaId = temaId;
+    if (temaId === PaisesEnum.temas.saude) {
+      _temaId = PaisesEnum.temas.sociais;
     }
+    return this.getMetadataIndicador(_temaId, "sub").map(indicadores => {
+      // Necessária essa conferencia para tirar o primeiro nivel (que é o próprio tema) e garantir a exibicao do tema saude, que nao existe na base de dados
+      return indicadores.filter(
+        indicador =>
+          indicador.posicao.length > 1 &&
+          indicador.posicao.startsWith(String(temaId))
+      );
+    });
+  }
 
-    getRanking(indicadorId: number): Observable<Ranking> {
-        const metadataIndicador = this.getMetadataIndicador(indicadorId, 'one');
-        const periodoMaisRecente = metadataIndicador.pipe(
-            map(indicador => indicador[0]),
-            map(indicador => indicador.fontes.map((fonte: any) => fonte.periodo).sort()),
-            map(periodos => periodos.slice(-1))
-        )
+  @RxSimpleCache({
+    cache
+  })
+  getMetadataIndicador(indicadorId: number, scope = "sub") {
+    const metadataParams = new HttpParams().set("scope", scope);
+    return this.request(
+      `https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/${indicadorId}`,
+      metadataParams
+    ).pipe(
+      map(metadata => this.flatMetadata(metadata).map(this.toMetadataModel)),
+      map(this._hackTemaSaude),
+      tap(val => {
+        console.log(val);
+      })
+    );
+  }
 
-        return periodoMaisRecente.pipe(
-            switchMap(periodo => this.request(`https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${periodo}/indicadores/${indicadorId}/ranking?natureza=1`)),
-            map(array => array[0])
-        );
-    }
+  @RxSimpleCache({
+    cache
+  })
+  getHistorico(
+    siglaPais: string
+  ): Observable<{
+    pais: string;
+    periodo: string;
+    indicador: number;
+    valor: string;
+    valor_en: string;
+  }> {
+    return this.request(
+      `https://servicodados.ibge.gov.br/api/v1/paises/olimpicos/valores/pais/${siglaPais}`
+    ).pipe(
+      map((response: any[]) => response.find(obj => obj.indicador === 44))
+    );
+  }
 
-    flatMetadata(metadatas: any[]): any[] {
-        let flatMetadatas: any[] = [];
+  @RxSimpleCache({
+    cache
+  })
+  getTodosDados(siglaPais: string) {
+    const metadataObservable = this.getMetadataIndicador(0);
+    // .pipe(
+    //   map(resultados =>
+    //     resultados.filter(
+    //       (obj: any) => ["2", "8", "9"].indexOf(obj.posicao.charAt(0)) === -1
+    //     )
+    //   )
+    // );
+    //this.request('https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0');
 
-        metadatas.forEach((metadata) => {
-            flatMetadatas.push(metadata);
-            flatMetadatas.push(...this.flatMetadata(metadata.children).map((m) => {
-                m.pai = metadata.id;
-                return m;
-            }));
-        });
+    const resultadosObservable = this.request(
+      `https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/indicadores/0/resultados/${siglaPais}`
+    );
 
-        return flatMetadatas;
-    }
+    return metadataObservable.pipe(
+      zip(resultadosObservable),
+      map(([metadata, resultadosRaw]) => {
+        const resultadosMap = objArrayToMap(resultadosRaw);
 
-    toMetadataModel(metadata: any) {
-        return {
-            id: metadata.id,
-            posicao: metadata.posicao,
-            indicador: metadata.indicador,
-            unidade: metadata.unidade ? {
-                identificador: metadata.unidade.id,
-                classe: metadata.unidade.classe,
-                multiplicador: metadata.unidade.multiplicador
-            } : {
-                    identificador: "",
-                    classe: "",
-                    multiplicador: 1
-                },
-            notas: metadata.nota,
-            fontes: metadata.fonte || [],
-            pai: metadata.pai || null
-        } as MetadataIndicador;
-    }
-
-    toResultadoModel(metadata: MetadataIndicador, resultado: { id: number, res: { localidade: string, res: any }[] }) {
-        let periodos = metadata.fontes && metadata.fontes.length > 0
-            ? metadata.fontes.map(fonte => fonte.periodo).sort()
-            : ['-'];
-
-        let valores = periodos.map(periodo => resultado.res[0].res[periodo]);
-
-        let valorMaisRecente = valores.reduce((agg, valor, idx) => {
-            if (
-                !this.isSpecialValue(valor) &&
-                periodos[idx] > agg.periodo
-            ) {
-                agg.periodo = periodos[idx];
-                agg.valor = valor;
+        const resultados = metadata.reduce(
+          (agg, meta: any) => {
+            const resultado = resultadosMap[meta.id];
+            if (resultado) {
+              agg.push(this.toResultadoModel(meta, resultado));
             }
-
             return agg;
-        }, { periodo: "", valor: '' });
+          },
+          [] as ResultadosIndicador[]
+        );
 
-        return {
-            id: resultado.id,
-            valorMaisRecente: valorMaisRecente.valor,
-            periodoMaisRecente: valorMaisRecente.periodo,
-            localidade: resultado.res[0].localidade,
-            valores,
-            periodos
-        } as ResultadosIndicador;
-    }
+        return { metadata, resultados };
+      })
+    );
+  }
 
-    isSpecialValue(valor: string) {
-        return Boolean(this._specialValues.cases[valor])
-    }
+  @RxSimpleCache({
+    cache
+  })
+  getRanking(indicadorId: number, scope = "one", period?: string): Observable<Ranking> {
+    debugger;
+    const metadataIndicador = this.getMetadataIndicador(indicadorId, scope);
+    const periodoMaisRecente = metadataIndicador.pipe(
+      map(indicador => indicador[0]),
+      map(indicador =>
+        indicador.fontes.map((fonte: any) => fonte.periodo).sort()
+      ),
+      map(periodos => periodos.slice(-1))
+    );
 
-    _hackTemaSaude(metadata: MetadataIndicador[]) {
-        const indicadores = {
-            62973: {
-                id: 62973,
-                posicao: "100.1",
-                indicador: "Calorias consumidas"
-            },
-            // 62967: {
-            //     id: 62967,
-            //     posicao: "100.2",
-            //     indicador: "Esperança de vida ao nascer"
-            // },
-            62971: {
-                id: 62971,
-                posicao: "100.3",
-                indicador: "População subnutrida"
-            },
-            // 62986: {
-            //     id: 62986,
-            //     posicao: "100.4",
-            //     indicador: "Taxa bruta de mortalidade"
-            // },
-            // 62987: {
-            //     id: 62987,
-            //     posicao: "100.5",
-            //     indicador: "Taxa bruta de natalidade"
-            // }
-        } as {[key: number]: any};
+    return periodoMaisRecente.pipe(
+      switchMap(periodo =>
+        this.request(
+          `https://servicodados.ibge.gov.br/api/v1/pesquisas/10071/periodos/${period || periodo}/indicadores/${indicadorId}/ranking?natureza=1`
+        )
+      ),
+      map(array => array[0])
+    );
+  }
 
-        let shouldInclude = true;
-        metadata.forEach(meta => {
-            if (indicadores[meta.id]) {
-                meta.posicao = indicadores[meta.id].posicao;
+  flatMetadata(metadatas: any[]): any[] {
+    let flatMetadatas: any[] = [];
 
-                if (shouldInclude) {
-                    shouldInclude = false;
-                    metadata.unshift({
-                        id: 0,
-                        indicador: 'Saúde',
-                        posicao: '100',
-                        notas: [],
-                        fontes: [],
-                        unidade: {
-                            identificador: "",
-                            classe: "",
-                            multiplicador: 1
-                        },
-                        pai: null
-                    } as MetadataIndicador)
-                }
-            }
+    metadatas.forEach(metadata => {
+      flatMetadatas.push(metadata);
+      flatMetadatas.push(
+        ...this.flatMetadata(metadata.children).map(m => {
+          m.pai = metadata.id;
+          return m;
         })
+      );
+    });
 
-        return metadata;
-    }
+    return flatMetadatas;
+  }
 
+  toMetadataModel(metadata: any) {
+    return {
+      id: metadata.id,
+      posicao: metadata.posicao,
+      indicador: metadata.indicador,
+      unidade: metadata.unidade
+        ? {
+            identificador: metadata.unidade.id,
+            classe: metadata.unidade.classe,
+            multiplicador: metadata.unidade.multiplicador
+          }
+        : {
+            identificador: "",
+            classe: "",
+            multiplicador: 1
+          },
+      notas: metadata.nota,
+      fontes: metadata.fonte || [],
+      pai: metadata.pai || null
+    } as MetadataIndicador;
+  }
+
+  toResultadoModel(
+    metadata: MetadataIndicador,
+    resultado: { id: number; res: { localidade: string; res: any }[] }
+  ) {
+    let periodos =
+      metadata.fontes && metadata.fontes.length > 0
+        ? metadata.fontes.map(fonte => fonte.periodo).sort()
+        : ["-"];
+
+    let valores = periodos.map(periodo => resultado.res[0].res[periodo]);
+
+    let valorMaisRecente = valores.reduce(
+      (agg, valor, idx) => {
+        if (!this.isSpecialValue(valor) && periodos[idx] > agg.periodo) {
+          agg.periodo = periodos[idx];
+          agg.valor = valor;
+        }
+
+        return agg;
+      },
+      { periodo: "", valor: "" }
+    );
+
+    return {
+      id: resultado.id,
+      valorMaisRecente: valorMaisRecente.valor,
+      periodoMaisRecente: valorMaisRecente.periodo,
+      localidade: resultado.res[0].localidade,
+      valores,
+      periodos
+    } as ResultadosIndicador;
+  }
+
+  isSpecialValue(valor: string) {
+    return Boolean(this._specialValues.cases[valor]);
+  }
+
+  _hackTemaSaude(metadata: MetadataIndicador[]) {
+    const indicadores = {
+      62973: {
+        id: 62973,
+        posicao: PaisesEnum.temas.saude + ".1",
+        indicador: "Calorias consumidas"
+      },
+      // 62967: {
+      //     id: 62967,
+      //     posicao: "100.2",
+      //     indicador: "Esperança de vida ao nascer"
+      // },
+      62971: {
+        id: 62971,
+        posicao: PaisesEnum.temas.saude + ".2",
+        indicador: "População subnutrida"
+      }
+      // 62986: {
+      //     id: 62986,
+      //     posicao: "100.4",
+      //     indicador: "Taxa bruta de mortalidade"
+      // },
+      // 62987: {
+      //     id: 62987,
+      //     posicao: "100.5",
+      //     indicador: "Taxa bruta de natalidade"
+      // }
+    } as { [key: number]: any };
+
+    let shouldInclude = true;
+    metadata.forEach(meta => {
+      if (indicadores[meta.id]) {
+        meta.posicao = indicadores[meta.id].posicao;
+
+        if (shouldInclude) {
+          shouldInclude = false;
+          metadata.unshift(TEMA_SAUDE);
+        }
+      }
+    });
+
+    return metadata;
+  }
 }
