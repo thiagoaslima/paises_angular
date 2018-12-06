@@ -39,12 +39,11 @@ export class MapaSectionComponent  {
     
     private indicador$ = this._routerParams.params$.pipe(
         map(({ url, queryParams }) => {
-            debugger; 
             if (queryParams.indicador) {
                 return parseInt(queryParams.indicador, 10)
             } 
 
-            if (url.indexOf('ranking')) {
+            if (url.indexOf('ranking') >= 0) {
                 return INDICADOR_DEFAULT;
             }
         }),

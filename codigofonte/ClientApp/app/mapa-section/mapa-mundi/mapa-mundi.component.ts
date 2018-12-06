@@ -81,6 +81,7 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
 
   indicador: MetadataIndicador;
   private destroy$ = new Subject<void>();
+
   private _selecteds: any[] = [];
   private _layers = new Map<string, L.Layer[]>();
   private _map: L.Map | null = null;
@@ -153,29 +154,8 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
       return style;
     }
 
-<<<<<<< HEAD
-    private _onClickMap(layer: L.Layer) {
-       // debugger;
-        const that = this;
-        layer.on({
-            click: (evt) => {
-                that._ngzone.run(() => {
-                    const pais = this._localidadeService.getPaisBySigla(evt.target.feature.properties.sigla);
-                    //debugger;
-                    if (pais) { 
-                        this._map && this._map.fitBounds((<any>layer).getBounds()); 
-                        this._router.navigate(
-                            this.link.concat(pais.slug), 
-                            { relativeTo: this._route }
-                        )
-                    }
-                });
-            }
-        });
-=======
     if (!context._localidadeService.getPaisBySigla(sigla)) {
       return Object.assign({}, style, { className: CSS_CLASSES.IGNORE });
->>>>>>> 1769ea434f4a86e7041a15b4839c64174bcc3e1a
     }
 
     return Object.assign({}, style, { className: CSS_CLASSES.NORMAL });
@@ -204,9 +184,12 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
           );
           if (pais) {
             this._map && this._map.fitBounds((<any>layer).getBounds());
-            this._router.navigate(this.link.concat(pais.slug), {
-              relativeTo: this._route
-            });
+            this._router.navigate(
+              this.link ? this.link.concat(pais.slug) : [".", pais.slug],
+              {
+                relativeTo: this._route
+              }
+            );
           }
         });
       }
