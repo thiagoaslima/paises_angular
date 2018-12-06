@@ -511,7 +511,7 @@
             {
                 "id": 62974,
                 "variavel_code": "indicadoressociais_16",
-                "nome": "Taxa bruta de matrículas para todos os níveis de ensino",
+                "nome": "Taxa bruta de matrículas 15 ou mais anos de idade",
                 "nome_publicacao": "Literacy rate by age group - 15 years and over",
                 "link": "http://uis.unesco.org/indicator/edu-lit-lr-age_group",
                 "api_link": "https://api.uis.unesco.org/sdmx/data/UNESCO,EDU_NON_FINANCE,2.0/LR.PT..._T.Y_GE15...............?format=csv-:-semicolon-true-x&startPeriod={periodStart}&endPeriod={periodEnd}&locale=en&subscription-key=a1a2cd5ab4d1447e86c7000b61fcdaf6",

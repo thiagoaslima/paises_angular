@@ -42,17 +42,19 @@ export class CompararComponent {
 
         this.lang = this._traducaoService.lang;
         
-        this.paises = this._localidadeService.getAllPaises().sort((a:any, b:any) => { //lista países em ordem alfabética
+        this.paises = this._localidadeService.getAllPaises().filter(pais => pais.onu).sort((a:any, b:any) => { //lista países em ordem alfabética
             return a.nome[this.lang].localeCompare(b.nome[this.lang]);
         });
     }
 
     ngOnInit() {
-        /*seleciona o pais que veio na query string da url*/
-        let sigla = this._route.snapshot.queryParams['pais'];
-        if(sigla){
+        /*seleciona o pais que veio string da url*/
+        //let sigla = this._route.snapshot.queryParams['pais'];
+        let url = this._route.snapshot.url;
+        let slug = url[url.length - 1].path;
+        if(slug){
             for(let i = 0; i < this.paises.length; i++){
-                if(this.paises[i].sigla == sigla.toUpperCase()){
+                if(this.paises[i].slug == slug){
                     this.paisesSelecionados[i] = true;
                     break;
                 }

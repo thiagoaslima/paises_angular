@@ -10,7 +10,6 @@ import { Pais } from "../shared";
 import { map } from "rxjs/operators";
 import { Ranking } from "../shared/paises-service/interfaces";
 
-
 @Injectable()
 export class MapaSectionService {
   private _malha: {
@@ -70,9 +69,11 @@ export class MapaSectionService {
       geojson: {
         type: malha.type,
         features: malha.features.map((feature: Feature<any>) => {
-          const pais = feature && feature.properties 
-            ? this._localidadeService.getPaisBySigla(feature.properties.sigla as string) 
-            : null;
+          const pais =
+            feature && feature.properties
+              ? this._localidadeService.getPaisBySigla(feature.properties
+                  .sigla as string)
+              : null;
           let idx = null;
           let valor = null;
 
@@ -98,8 +99,6 @@ export class MapaSectionService {
             }
           };
 
-//debugger
-
           if (idx !== null) {
             _feature.properties.style = Object.assign(
               {},
@@ -113,11 +112,11 @@ export class MapaSectionService {
               valor: valor
             });
           } else {
-             _feature.properties.style = Object.assign(
+            _feature.properties.style = Object.assign(
               {},
               _feature.properties.style,
               {
-                fillColor: 'rgb(95, 95, 95)'
+                fillColor: "rgb(95, 95, 95)"
               }
             );
           }
@@ -130,8 +129,8 @@ export class MapaSectionService {
     return this._malha.geojson;
   }
 
-  getRanking(indicadorId: number) {
-    return this._paisesService.getRanking(indicadorId).pipe(
+  getRanking(indicadorId: number, period?: string) {
+    return this._paisesService.getRanking(indicadorId, "one", period).pipe(
       map(ranking => {
         const { faixas, divisores } = this.calculateRanges(ranking);
         return { ranking, faixas, divisores };
@@ -148,7 +147,7 @@ export class MapaSectionService {
           }
         };
 
-        const values = ranking.res.reduce((agg, obj) => {
+        const values = ranking.res.reduce((agg: any, obj: any) => {
           agg.ordem.push(obj.localidade);
           agg.paises[obj.localidade] = {
             pais: this._localidadeService.getPaisBySigla(obj.localidade),
@@ -159,6 +158,19 @@ export class MapaSectionService {
           };
           return agg;
         }, initialState);
+
+        const todosPaises = this._localidadeService.getAllPaises();
+
+        todosPaises.forEach(pais => {
+          if (!values.paises[pais.sigla] && pais.onu) {
+            values.ordem.push(pais.sigla);
+            values.paises[pais.sigla] = {
+              pais,
+              posicao: "-",
+              valor: "-"
+            };
+          }
+        });
 
         return {
           ...values,
@@ -191,7 +203,7 @@ export class MapaSectionService {
     const divisores = Array(faixas.length)
       .fill(1)
       .map((_, idx) => {
-        return maxValue - intervalo * (idx+1);
+        return maxValue - intervalo * (idx + 1);
       });
 
     return { faixas, divisores };
@@ -201,17 +213,44 @@ export class MapaSectionService {
     // Cores retiradas de:
     // http://colorbrewer2.org/#type=sequential&scheme=Greens&n=3
     const RANGE_COLORS = [
-      ['#31a354'],
-      ['#a1d99b', '#31a354'],
-      ['#e5f5e0', '#a1d99b', '#31a354'],
+      ["#31a354"],
+      ["#a1d99b", "#31a354"],
+      ["#e5f5e0", "#a1d99b", "#31a354"],
       ["#edf8e9", "#bae4b3", "#74c476", "#238b45"],
       ["#edf8e9", "#bae4b3", "#74c476", "#31a354", "#006d2c"],
       ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#31a354", "#006d2c"],
-      ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#005a32"],
-      ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#005a32"],
-      ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"]
+      [
+        "#edf8e9",
+        "#c7e9c0",
+        "#a1d99b",
+        "#74c476",
+        "#41ab5d",
+        "#238b45",
+        "#005a32"
+      ],
+      [
+        "#f7fcf5",
+        "#e5f5e0",
+        "#c7e9c0",
+        "#a1d99b",
+        "#74c476",
+        "#41ab5d",
+        "#238b45",
+        "#005a32"
+      ],
+      [
+        "#f7fcf5",
+        "#e5f5e0",
+        "#c7e9c0",
+        "#a1d99b",
+        "#74c476",
+        "#41ab5d",
+        "#238b45",
+        "#006d2c",
+        "#00441b"
+      ]
     ];
 
-    return RANGE_COLORS[n-1].slice(0).reverse();
+    return RANGE_COLORS[n - 1].slice(0).reverse();
   }
 }

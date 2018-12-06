@@ -176,13 +176,23 @@
     .dados-pais__menu-botao{
         color: #fff;
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 0.9em;
         background: none;
         border: none;
+        text-decoration: none;
     }
 
     .dados-pais__menu-botao:hover{
         color: lightgrey;
+    }
+
+    .dados-pais__menu-botao--ativo{
+        color: #3ecca7;
+        cursor: default;
+    }
+
+    .dados-pais__menu-botao--ativo:hover{
+        color: #3ecca7;
     }
 
     .dados-pais__menu-icon{

@@ -12,6 +12,7 @@ import {
 } from "../shared";
 import { MapaSectionService } from "./mapa-section.service";
 import { RankingComponent } from "./ranking/ranking.component";
+import { combineLatest } from "rxjs/observable/combineLatest";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -37,6 +38,10 @@ export class MapaSectionComponent  {
         map(({ params }) => parseInt(params.indicador, 10)),
         distinctUntilChanged()
     );
+
+    private ano$ = this._routerParams.params$.pipe(
+        map((params) => params.queryParams.ano)
+    )
     
     pais$ = this._routerParams.params$.pipe(
         map(obj => this._localidadeService.getPaisBySlug(obj.params.pais))
@@ -54,9 +59,12 @@ export class MapaSectionComponent  {
         filter(Boolean)
     );
 
-    dados$ = this.indicadorObj$.pipe(
-        flatMap(indicador => {
-            return this._mapaSectionService.getRanking(indicador.id)
+    dados$ = combineLatest(
+        this.indicadorObj$, this.ano$
+    ).pipe(
+        flatMap(([indicador, ano]) => {
+            debugger
+            return this._mapaSectionService.getRanking(indicador.id, ano)
         }),
         tap(resp => {
             this.malha = this._mapaSectionService.getMapaRanking(resp);
