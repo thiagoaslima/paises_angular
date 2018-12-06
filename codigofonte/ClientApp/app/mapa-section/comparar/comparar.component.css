@@ -61,12 +61,16 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	top: 86px;
+	top: 56px;
 	display: none;
 }
 
 .comparar__seletor-pais-container--ativo{
 	display: initial;
+}
+
+.comparar__info-pais-atual{
+	display: none;
 }
 
 .comparar__abrir-seletor-icone{
@@ -279,7 +283,7 @@
 	}
 
 	.comparar__lista-pais{
-		height: calc(100% - 74px);
+		height: calc(100% - 180px);
 		padding-left: 25px;
 		padding-right: 4px;
 		font-size: 1.2em;
