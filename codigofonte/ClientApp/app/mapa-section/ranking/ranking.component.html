@@ -1,67 +1,82 @@
 <section class="ranking main-layer">
 
-    <!--barra de título-->
-    <div class="ranking__cabecalho">
-        <!--título-->
-        <h2 class="ranking__titulo">{{ nomeIndicador }}</h2>
-        <!--botão de fechar-->
-        <a class="button ranking__botao-fechar" [routerLink]="'/dados/' + pais.slug" queryParamsHandling="preserve">
-            <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
-        </a>
+    <!--botão de fechar-->
+    <a class="button ranking__botao-fechar" routerLink="/mapa" queryParamsHandling="preserve">
+        <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
+    </a>
+    
+    <!--abas-->
+    <div>
+        <a class="ranking__tab ranking__tab--left-disabled" [routerLink]="'/mapa/' + pais?.slug">Síntese</a><span class="ranking__tab">Ranking</span>
     </div>
+
+    <!--conteúdo-->
+    <div class="ranking__conteudo-container">
 
     <div class='ranking__opcoes'>
 
         <!-- <p>{{ indicadores | json }}</p> -->
         <!-- <ng-container *ngIf="temas$ | async as temas"> -->
-            <select #s1 (change)="selectTema(s1.value)">
+            <select #s1 (change)="selectTema(s1.value)" class="ranking__combobox">
                 <option *ngFor="let tema of temas$ | async"
                     [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
             </select>
         <!-- </ng-container> -->
         
         <!-- <ng-container *ngIf="indicadores$ | async as indicadores"> -->
-            <select #s2 (change)="selectIndicador(s2.value)">
+            <select #s2 (change)="selectIndicador(s2.value)" class="ranking__combobox">
                 <option *ngFor="let indicador of indicadores"
                     [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
             </select>
         <!-- </ng-container> -->
 
-         <select #s3 (change)="selectAno(s3.value)">
+         <select #s3 (change)="selectAno(s3.value)" class="ranking__combobox">
             <option *ngFor="let periodo of periodos"
                 [value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
         </select> 
     </div>
 
     <!--barra de menu-->
-    <ul class="ranking__menu">
+    <!--<ul class="ranking__menu">
         <li class="ranking__menu-item">IMPRIMIR</li>
         <li class="ranking__menu-item">DOWNLOAD</li>
-    </ul>
+    </ul>-->
 
     <!--tabela-->
     <table class="ranking__tabela">
         <!--cabecalho da tabela-->
         <thead class="ranking__tabela-cabecalho">
+            <!--titulos das colunas-->
             <tr class="ranking__tabela-cabecalho-linha">
                 <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena">
-                    Posição <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    Posição <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-grande">
-                    País <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                    País <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-pequena">
                     {{ unidade }}
                 </th>
             </tr>
+            <!--celula de destaque-->
+            <tr class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura">
+                <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena texto-branco">
+                    1°
+                </th>
+                <th class="ranking__tabela-cabecalho-celula celula-grande texto-branco">
+                    Brasil
+                </th>
+                <th class="ranking__tabela-cabecalho-celula celula-pequena texto-branco">
+                    valor
+                </th>
+            </tr>
         </thead>
         <!--corpo da tabela-->
-
         <tbody #scrollEl class="ranking__tabela-corpo">
             <ng-container *ngFor="let obj of dados">
                 <tr #cty class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug">
                     <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
-                        {{ obj?.posicao }}
+                        {{ obj?.posicao }}°
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
                         <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
@@ -73,5 +88,12 @@
             </ng-container>
         </tbody>
     </table>
+
+    <!--leia mais-->
+    <div class="ranking__comparar">
+        <a [routerLink]="'/comparar/' + pais?.slug" class="ranking__comparar-link">Comparar países</a>
+    </div>
+
+    </div>
 
 </section>
