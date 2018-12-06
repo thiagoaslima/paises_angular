@@ -11,7 +11,10 @@ import {
     PlatformDetectionService
 } from "../shared";
 import { MapaSectionService } from "./mapa-section.service";
-import { RankingComponent } from "./ranking/ranking.component";
+import {
+  RankingComponent,
+  INDICADOR_DEFAULT
+} from "./ranking/ranking.component";
 import { combineLatest } from "rxjs/observable/combineLatest";
 
 @Component({
@@ -35,7 +38,17 @@ export class MapaSectionComponent  {
     public malha = this._mapaSectionService.getMapa();
     
     private indicador$ = this._routerParams.params$.pipe(
-        map(({ params }) => parseInt(params.indicador, 10)),
+        map(({ url, queryParams }) => {
+            debugger; 
+            if (queryParams.indicador) {
+                return parseInt(queryParams.indicador, 10)
+            } 
+
+            if (url.indexOf('ranking')) {
+                return INDICADOR_DEFAULT;
+            }
+        }),
+        filter(Boolean),
         distinctUntilChanged()
     );
 

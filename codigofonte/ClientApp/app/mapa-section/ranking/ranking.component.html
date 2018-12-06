@@ -12,25 +12,20 @@
 
     <div class='ranking__opcoes'>
 
-        <!-- <p>{{ indicadores | json }}</p> -->
-        <!-- <ng-container *ngIf="temas$ | async as temas"> -->
-            <select #s1 (change)="selectTema(s1.value)">
+        <select #s1 (change)="selectTema(s1.value)">
                 <option *ngFor="let tema of temas$ | async"
                     [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
             </select>
-        <!-- </ng-container> -->
-        
-        <!-- <ng-container *ngIf="indicadores$ | async as indicadores"> -->
-            <select #s2 (change)="selectIndicador(s2.value)">
+
+        <select #s2 (change)="selectIndicador(s2.value)">
                 <option *ngFor="let indicador of indicadores"
                     [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
             </select>
-        <!-- </ng-container> -->
 
-         <select #s3 (change)="selectAno(s3.value)">
+        <select #s3 (change)="selectAno(s3.value)">
             <option *ngFor="let periodo of periodos"
                 [value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
-        </select> 
+        </select>
     </div>
 
     <!--barra de menu-->
@@ -64,7 +59,7 @@
                         {{ obj?.posicao }}
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
-                        <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
+                        <a class="ranking__tabela-link" [routerLink]="['mapa', 'ranking', obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-pequena">
                         {{ obj?.valor | resultado }}

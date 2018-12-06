@@ -12,6 +12,8 @@ import { Ranking } from "../shared/paises-service/interfaces";
 
 @Injectable()
 export class MapaSectionService {
+  private MAX_RANKING_DIVISIONS = 6;
+
   private _malha: {
     original: boolean;
     modified: boolean;
@@ -148,9 +150,15 @@ export class MapaSectionService {
         };
 
         const values = ranking.res.reduce((agg: any, obj: any) => {
+          const pais = this._localidadeService.getPaisBySigla(obj.localidade);
+
+          if (!pais || !pais.onu) {
+            return agg;
+          }
+
           agg.ordem.push(obj.localidade);
           agg.paises[obj.localidade] = {
-            pais: this._localidadeService.getPaisBySigla(obj.localidade),
+            pais,
             posicao: obj.ranking,
             valor: this._specialValues.values[obj.res]
               ? this._specialValues.values[obj.res]
@@ -189,7 +197,10 @@ export class MapaSectionService {
     );
     const valores = Array.from(set);
 
-    const nCategories = Math.min(Math.sqrt(valores.length), 7);
+    const nCategories = Math.min(
+      Math.sqrt(valores.length),
+      this.MAX_RANKING_DIVISIONS
+    );
     const faixas = this.setDivisions(nCategories);
 
     const maxValue = valores[0] > 0 ? valores[0] * 1.1 : valores[0] * 0.95;
@@ -213,42 +224,12 @@ export class MapaSectionService {
     // Cores retiradas de:
     // http://colorbrewer2.org/#type=sequential&scheme=Greens&n=3
     const RANGE_COLORS = [
-      ["#31a354"],
-      ["#a1d99b", "#31a354"],
-      ["#e5f5e0", "#a1d99b", "#31a354"],
-      ["#edf8e9", "#bae4b3", "#74c476", "#238b45"],
-      ["#edf8e9", "#bae4b3", "#74c476", "#31a354", "#006d2c"],
-      ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#31a354", "#006d2c"],
-      [
-        "#edf8e9",
-        "#c7e9c0",
-        "#a1d99b",
-        "#74c476",
-        "#41ab5d",
-        "#238b45",
-        "#005a32"
-      ],
-      [
-        "#f7fcf5",
-        "#e5f5e0",
-        "#c7e9c0",
-        "#a1d99b",
-        "#74c476",
-        "#41ab5d",
-        "#238b45",
-        "#005a32"
-      ],
-      [
-        "#f7fcf5",
-        "#e5f5e0",
-        "#c7e9c0",
-        "#a1d99b",
-        "#74c476",
-        "#41ab5d",
-        "#238b45",
-        "#006d2c",
-        "#00441b"
-      ]
+      ["#00EB8D"],
+      ["#00EB8D", "#4D6F82"],
+      ["#B1F383", "#00EB8D", "#4D6F82"],
+      ["#E0D7CE", "#B1F383", "#00EB8D", "#4D6F82"],
+      ["#E0D7CE", "#B1F383", "#00EB8D", "#00D0A5", "#4D6F82"],
+      ["#E0D7CE", "#B1F383", "#00EB8D", "#00D0A5", "#00B5BA", "#4D6F82"]
     ];
 
     return RANGE_COLORS[n - 1].slice(0).reverse();
