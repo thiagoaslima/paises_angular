@@ -28,12 +28,11 @@
                 <option *ngFor="let indicador of indicadores"
                     [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
             </select>
-        <!-- </ng-container> -->
 
          <select #s3 (change)="selectAno(s3.value)" class="ranking__combobox">
             <option *ngFor="let periodo of periodos"
                 [value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
-        </select> 
+        </select>
     </div>
 
     <!--barra de menu-->
@@ -79,7 +78,7 @@
                         {{ obj?.posicao }}°
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
-                        <a class="ranking__tabela-link" [routerLink]="['..',obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
+                        <a class="ranking__tabela-link" [routerLink]="['mapa', 'ranking', obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-pequena">
                         {{ obj?.valor | resultado }}

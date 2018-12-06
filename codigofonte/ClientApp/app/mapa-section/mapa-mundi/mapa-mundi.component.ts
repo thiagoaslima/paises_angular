@@ -2,15 +2,27 @@ import {
   Component,
   Input,
   ChangeDetectionStrategy,
-  NgZone
+  NgZone,
+  OnInit,
+  OnDestroy
 } from "@angular/core";
 import { DecimalPipe } from "@angular/common";
 import { Router, ActivatedRoute } from "@angular/router";
 
-import { Pais, LocalidadeService, TraducaoService } from "../../shared";
+import {
+  Pais,
+  LocalidadeService,
+  TraducaoService,
+  RouterParamsService,
+  MetadataIndicador,
+  PaisesService
+} from "../../shared";
 
 import * as L from "leaflet";
 import { MAP_STYLES } from "../mapa.configurations";
+import { takeUntil, map, flatMap, distinctUntilChanged } from "rxjs/operators";
+import { Subject } from "rxjs/Subject";
+import { INDICADOR_DEFAULT } from "../ranking/ranking.component";
 
 export enum CSS_CLASSES {
   SELECTED = "leaflet--selected-layer",
@@ -25,7 +37,7 @@ export enum CSS_CLASSES {
   styleUrls: ["./mapa-mundi.component.css"],
   host: { class: "bg-layer" }
 })
-export class MapaMundiComponent {
+export class MapaMundiComponent implements OnInit, OnDestroy {
   @Input() link: string[] = [];
   @Input() dados: any = null;
 
@@ -67,6 +79,9 @@ export class MapaMundiComponent {
   public mapOptions = MAP_STYLES.options;
   public leafletLayers: L.LayerGroup[] = [];
 
+  indicador: MetadataIndicador;
+  private destroy$ = new Subject<void>();
+
   private _selecteds: any[] = [];
   private _layers = new Map<string, L.Layer[]>();
   private _map: L.Map | null = null;
@@ -75,10 +90,28 @@ export class MapaMundiComponent {
   constructor(
     private _router: Router,
     private _route: ActivatedRoute,
+    private _routerParams: RouterParamsService,
     private _ngzone: NgZone,
     private _localidadeService: LocalidadeService,
+    private _paisesService: PaisesService,
     private _decimalPipe: DecimalPipe
   ) {}
+
+  ngOnInit() {
+    this._routerParams.params$
+      .pipe(
+        takeUntil(this.destroy$),
+        map(params => params.queryParams),
+        map(queryParams => Number(queryParams.indicador) || INDICADOR_DEFAULT),
+        distinctUntilChanged(),
+        flatMap(id => this._paisesService.getMetadataIndicador(id, "one"))
+      )
+      .subscribe(indicador => (this.indicador = indicador[0]));
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+  }
 
   onMapReady(map: L.Map) {
     this._map = map;
@@ -151,9 +184,12 @@ export class MapaMundiComponent {
           );
           if (pais) {
             this._map && this._map.fitBounds((<any>layer).getBounds());
-            this._router.navigate(this.link.concat(pais.slug), {
-              relativeTo: this._route
-            });
+            this._router.navigate(
+              this.link ? this.link.concat(pais.slug) : [".", pais.slug],
+              {
+                relativeTo: this._route
+              }
+            );
           }
         });
       }
@@ -172,7 +208,9 @@ export class MapaMundiComponent {
         (feature.properties.valor
           ? `<br /> <strong><small>${this._decimalPipe.transform(
               feature.properties.valor
-            )}<small></strong>`
+            )} ${this.indicador
+              ? this.indicador.unidade.identificador
+              : ""}<small></strong>`
           : "");
       layer.bindTooltip(msg);
 

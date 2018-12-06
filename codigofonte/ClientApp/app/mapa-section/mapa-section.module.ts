@@ -23,7 +23,7 @@ const routes: Routes = [
                 component: CompararComponent
             },
             {
-                path: 'ranking/:indicador',
+                path: 'ranking/:pais',
                 // component: null
             },
             {

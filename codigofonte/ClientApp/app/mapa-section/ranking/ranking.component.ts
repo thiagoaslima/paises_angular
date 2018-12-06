@@ -38,8 +38,8 @@ import {
 import { MapaSectionService } from "../mapa-section.service";
 import { take } from "rxjs/operator/take";
 
-const TEMA_DEFAULT = PaisesEnum.temas.populacao;
-const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
+export const TEMA_DEFAULT = PaisesEnum.temas.populacao;
+export const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
 
 @Component({
   selector: "paises-ranking",
@@ -105,8 +105,10 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     this._routerParams.params$
       .pipe(takeUntil(this.destroy$), map(params => params.queryParams))
       .subscribe(queryParams => {
+        debugger;
         this.indicadorId = Number(queryParams.indicador) || INDICADOR_DEFAULT;
         this.temaId = Number(queryParams.tema) || TEMA_DEFAULT;
+        this.ano = queryParams.ano;
         this.selectTema(this.temaId);
       });
   }
@@ -155,7 +157,8 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
       .map(indicador => indicador.fontes.map(fonte => fonte.periodo))[0];
 
     this._router.navigate([], {
-      queryParams: { tema: this.temaId, indicador: id },
+      queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
+      preserveQueryParams: true,
       relativeTo: this._route,
       skipLocationChange: true
     });
