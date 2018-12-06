@@ -44,7 +44,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     @Input() pais: Pais | null = null;
     @Input()
     set dados(values) {
-        debugger;
+        //debugger;
         //@ts-ignore
         this._dados = values && values.ordem.length
             //@ts-ignore
@@ -108,7 +108,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
             combineLatest(this.countries.changes),
             takeUntil(this.destroy$),
         ).subscribe((data: any) => {
-            debugger;
+          //  debugger;
             const [slug] = data;
             if (slug) this.scrollTo(slug);
         });
@@ -120,7 +120,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     }
 
     scrollTo(elementId: string) {
-        debugger;
+        // debugger;
         const elementRef = this.countries.find(ref => ref.nativeElement.id === elementId);
         if (elementRef) {
             this.scrollElement.nativeElement.scrollTop = elementRef.nativeElement.offsetTop - 39 /* .ranking__table-head height */;

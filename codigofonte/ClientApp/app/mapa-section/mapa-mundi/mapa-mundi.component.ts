@@ -142,13 +142,13 @@ export class MapaMundiComponent {
     }
 
     private _onClickMap(layer: L.Layer) {
-        debugger;
+       // debugger;
         const that = this;
         layer.on({
             click: (evt) => {
                 that._ngzone.run(() => {
                     const pais = this._localidadeService.getPaisBySigla(evt.target.feature.properties.sigla);
-                    debugger;
+                    //debugger;
                     if (pais) { 
                         this._map && this._map.fitBounds((<any>layer).getBounds()); 
                         this._router.navigate(
