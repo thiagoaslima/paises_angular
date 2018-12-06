@@ -2,16 +2,19 @@
 
 <div class="comparar">
     <!--barra de título-->
-    <div class="comparar__barra-titulo">
+    
+    <!-- <div class="comparar__barra-titulo"> -->
         <!--título-->
-        <h2 class="comparar__titulo">Comparar Países</h2>
+    <!--    <h2 class="comparar__titulo">Comparar Países</h2> -->
         <!--botão de fechar-->
-        <a class="button comparar__botao-fechar" routerLink="/mapa">
-            <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i>
-        </a>
-    </div>
+    <!--    <a class="button comparar__botao-fechar" routerLink="/mapa"> -->
+    <!--        <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i> -->
+    <!--    </a> -->
+    <!-- </div> -->
+
+
     <!--dados-->
-    <div class="comparar__info-container">
+    <!-- <div class="comparar__info-container"> -->
         <!--lista de países-->
         <div class="comparar__abrir-seletor-pais" (click)="mostrarListaPaises=true">
             Selecione até 5 países
@@ -19,6 +22,12 @@
             <i class="fa fa-minus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="mostrarListaPaises"></i>
         </div>
         <div class="comparar__seletor-pais-container" [class.comparar__seletor-pais-container--ativo]="mostrarListaPaises">
+            <div class="comparar__info-pais-atual"> 
+                
+                <img src='https://ichef.bbci.co.uk/news/320/cpsprodpb/13CAD/production/_104396018_bandeiraimperialdobrasilusadade1822a1889foiinspiraoparaatualbandeiranacional.reproduoportalplanalto..png' class='comparar__info-pais-atual__bandeira'> 
+                Brasil
+
+            </div>
             <div class="comparar__filtro-pais-container">
                 <input class="comparar__filtro-pais" type="text" placeholder="Buscar país" (input)="filtrarPaises($event);"/>
             </div>
@@ -47,6 +56,7 @@
                         {{ item.indicador }}
                     </option>
                 </select>
+                <br/>
                 <select class="comparar__select" (change)="setSubtitulo($event)">
                     <option *ngFor="let item of getSubtitulo(); let i = index" [selected]="item.id == indicador">
                         {{ item.indicador }}
@@ -81,7 +91,7 @@
                 </grafico>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 
 </div>

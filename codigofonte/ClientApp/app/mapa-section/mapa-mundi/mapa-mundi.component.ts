@@ -153,8 +153,29 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
       return style;
     }
 
+<<<<<<< HEAD
+    private _onClickMap(layer: L.Layer) {
+       // debugger;
+        const that = this;
+        layer.on({
+            click: (evt) => {
+                that._ngzone.run(() => {
+                    const pais = this._localidadeService.getPaisBySigla(evt.target.feature.properties.sigla);
+                    //debugger;
+                    if (pais) { 
+                        this._map && this._map.fitBounds((<any>layer).getBounds()); 
+                        this._router.navigate(
+                            this.link.concat(pais.slug), 
+                            { relativeTo: this._route }
+                        )
+                    }
+                });
+            }
+        });
+=======
     if (!context._localidadeService.getPaisBySigla(sigla)) {
       return Object.assign({}, style, { className: CSS_CLASSES.IGNORE });
+>>>>>>> 1769ea434f4a86e7041a15b4839c64174bcc3e1a
     }
 
     return Object.assign({}, style, { className: CSS_CLASSES.NORMAL });
