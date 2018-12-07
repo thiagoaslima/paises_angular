@@ -233,11 +233,7 @@ export class MapaSectionService {
       ["#E0D7CE", "#B1F383", "#00EB8D", "#00D0A5", "#00B5BA", "#4D6F82"]
     ];
 
-    const range = RANGE_COLORS[n - 1];
-
-    if (!range) {
-      debugger;
-    }
+    const range = n ? RANGE_COLORS[n - 1] : RANGE_COLORS[0];
 
     return range.slice(0).reverse();
   }

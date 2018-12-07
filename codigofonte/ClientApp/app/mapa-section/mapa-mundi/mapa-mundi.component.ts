@@ -189,8 +189,9 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
           if (pais) {
             this._map && this._map.fitBounds((<any>layer).getBounds());
             this._router.navigate(
-              this.link ? this.link.concat(pais.slug) : [".", pais.slug],
+              this.link ? /* this.link.concat(pais.slug) */ ["..", pais.slug] : [".", pais.slug],
               {
+                queryParamsHandling: "preserve",
                 relativeTo: this._route
               }
             );

@@ -58,15 +58,15 @@
                 </th>
             </tr>
             <!--celula de destaque-->
-            <tr class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura">
+            <tr class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura" *ngIf="selecionado">
                 <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena texto-branco">
-                    1°
+                    {{ selecionado?.posicao }}
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-grande texto-branco">
-                    Brasil
+                    {{ selecionado?.pais.nome.pt }}
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-pequena texto-branco">
-                    valor
+                    {{ selecionado?.valor | resultado }}
                 </th>
             </tr>
         </thead>
@@ -78,7 +78,8 @@
                         {{ obj?.posicao }}°
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
-                        <a class="ranking__tabela-link" [routerLink]="['..', obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
+                        <a class="ranking__tabela-link" [routerLink]="['..', obj.pais?.slug]" 
+                            queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-pequena">
                         {{ obj?.valor | resultado }}
