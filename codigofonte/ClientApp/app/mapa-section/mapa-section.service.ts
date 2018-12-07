@@ -148,7 +148,8 @@ export class MapaSectionService {
             };
           }
         };
-
+        
+        let pos = 1;
         const values = ranking.res.reduce((agg: any, obj: any) => {
           const pais = this._localidadeService.getPaisBySigla(obj.localidade);
 
@@ -159,7 +160,7 @@ export class MapaSectionService {
           agg.ordem.push(obj.localidade);
           agg.paises[obj.localidade] = {
             pais,
-            posicao: obj.ranking,
+            posicao: pos++,
             valor: this._specialValues.values[obj.res]
               ? this._specialValues.values[obj.res]
               : obj.res
@@ -198,7 +199,7 @@ export class MapaSectionService {
     const valores = Array.from(set);
 
     const nCategories = Math.min(
-      Math.sqrt(valores.length),
+      Math.ceil(Math.sqrt(valores.length)),
       this.MAX_RANKING_DIVISIONS
     );
     const faixas = this.setDivisions(nCategories);
@@ -232,6 +233,12 @@ export class MapaSectionService {
       ["#E0D7CE", "#B1F383", "#00EB8D", "#00D0A5", "#00B5BA", "#4D6F82"]
     ];
 
-    return RANGE_COLORS[n - 1].slice(0).reverse();
+    const range = RANGE_COLORS[n - 1];
+
+    if (!range) {
+      debugger;
+    }
+
+    return range.slice(0).reverse();
   }
 }

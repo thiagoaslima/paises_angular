@@ -81,9 +81,10 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
   indicadores: MetadataIndicador[] = [];
   periodos: string[] = [];
 
-  indicadorId: number;
-  temaId: number;
-  ano: string;
+  indicadorId: number | null;
+  temaId: number | null;
+  ano: string | null;
+  pristine = true;
 
   private _indicador: MetadataIndicador | null = null;
   private _dados = [];
@@ -105,11 +106,11 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     this._routerParams.params$
       .pipe(takeUntil(this.destroy$), map(params => params.queryParams))
       .subscribe(queryParams => {
-        debugger;
         this.indicadorId = Number(queryParams.indicador) || INDICADOR_DEFAULT;
         this.temaId = Number(queryParams.tema) || TEMA_DEFAULT;
         this.ano = queryParams.ano;
-        this.selectTema(this.temaId);
+        this.getIndicadores(this.temaId);
+        this.pristine = true;
       });
   }
 
@@ -133,11 +134,11 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     this.destroy$.next();
   }
 
-  selectTema(id: number) {
-    id = Number(id);
-    this.temaId = id;
-    this._paisesService.getIndicadores(id).subscribe(indicadores => {
-      this.indicadores = indicadores;
+  getIndicadores(temaId: number) {
+    this._paisesService.getIndicadores(temaId).subscribe(indicadores => {
+      this.indicadores = [
+        { indicador: "Selecione um indicador" } as MetadataIndicador
+      ].concat(indicadores);
 
       if (this.indicadorId) {
         const indicador = this.indicadores.find(
@@ -150,27 +151,63 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     });
   }
 
+  selectTema(id: number) {
+    id = Number(id);
+    this.temaId = id;
+    this.indicadorId = null;
+    this.ano = null;
+    this.pristine = false;
+    this.periodos = [];
+    this.getIndicadores(id);
+  }
+
   selectIndicador(id: number) {
     id = Number(id);
-    this.periodos = this.indicadores
-      .filter(indicador => indicador.id == id)
-      .map(indicador => indicador.fontes.map(fonte => fonte.periodo))[0];
+    this.pristine = false;
+    this.indicadorId = id;
+    this.ano = null;
+    this.updatePeriodos(
+      this.indicadores.find(indicador => indicador.id === id)
+    );
+    // this.periodos = this.indicadores
+    //   .filter(indicador => indicador.id == id)
+    //   .map(indicador => ['Selecione o período desejado'].concat(indicador.fontes.map(fonte => fonte.periodo))[0]);
 
-    this._router.navigate([], {
-      queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
-      preserveQueryParams: true,
-      relativeTo: this._route,
-      skipLocationChange: true
-    });
+    // this._router.navigate([], {
+    //   queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
+    //   queryParamsHandling: 'merge',
+    //   relativeTo: this._route,
+    //   skipLocationChange: true
+    // });
+  }
+
+  selectAno(ano: string) {
+    this.ano = ano;
+    this.pristine = false;
+
+    if (this.temaId && this.indicadorId && this.ano) {
+      this._router.navigate([], {
+        queryParams: {
+          tema: this.temaId,
+          indicador: this.indicadorId,
+          ano: this.ano
+        },
+        queryParamsHandling: "merge",
+        relativeTo: this._route
+      });
+    }
   }
 
   updatePeriodos(indicador: any) {
     this.periodos = indicador
-      ? indicador.fontes
-          .map((fonte: any) => fonte.periodo)
-          .sort()
-          .reverse()
+      ? ["Selecione o período desejado"].concat(
+          indicador.fontes
+            .map((fonte: any) => fonte.periodo)
+            .sort()
+            .reverse()
+        )
       : [];
+    this._cdr.markForCheck();
   }
 
   scrollTo(elementId: string) {

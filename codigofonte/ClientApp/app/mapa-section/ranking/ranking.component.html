@@ -1,7 +1,7 @@
 <section class="ranking main-layer">
 
     <!--botão de fechar-->
-    <a class="button ranking__botao-fechar" routerLink="/mapa" queryParamsHandling="preserve">
+    <a class="button ranking__botao-fechar" [routerLink]="['/mapa']" [queryParams]="{indicador: null, tema: null, ano: null}" queryParamsHandling="merge">
         <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
     </a>
     
@@ -15,23 +15,23 @@
 
     <div class='ranking__opcoes'>
 
-        <!-- <p>{{ indicadores | json }}</p> -->
-        <!-- <ng-container *ngIf="temas$ | async as temas"> -->
-            <select #s1 (change)="selectTema(s1.value)" class="ranking__combobox">
-                <option *ngFor="let tema of temas$ | async"
-                    [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
-            </select>
-        <!-- </ng-container> -->
-        
-        <!-- <ng-container *ngIf="indicadores$ | async as indicadores"> -->
-            <select #s2 (change)="selectIndicador(s2.value)" class="ranking__combobox">
-                <option *ngFor="let indicador of indicadores"
-                    [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
-            </select>
+        <select #s1 (change)="selectTema(s1.value)" class="ranking__combobox">
+            <option *ngFor="let tema of temas$ | async"
+                [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
+        </select>
+
+        <select #s2 (change)="selectIndicador(s2.value)" class="ranking__combobox">
+            <ng-container *ngFor="let indicador of indicadores; let first = first">
+            <option *ngIf="first && !pristine" disabled selected>{{ indicador.indicador }}</option>
+            <option *ngIf="!first" [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
+            </ng-container>
+        </select>
 
          <select #s3 (change)="selectAno(s3.value)" class="ranking__combobox">
-            <option *ngFor="let periodo of periodos"
-                [value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
+             <ng-container *ngFor="let periodo of periodos; let first = first">
+                <option *ngIf="first && !pristine" disabled selected>{{ periodo }}</option>
+                <option *ngIf="!first"[value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
+            </ng-container>
         </select>
     </div>
 
@@ -78,7 +78,7 @@
                         {{ obj?.posicao }}°
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
-                        <a class="ranking__tabela-link" [routerLink]="['mapa', 'ranking', obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
+                        <a class="ranking__tabela-link" [routerLink]="['..', obj.pais?.slug]" queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-pequena">
                         {{ obj?.valor | resultado }}
@@ -90,7 +90,7 @@
 
     <!--leia mais-->
     <div class="ranking__comparar">
-        <a [routerLink]="'/comparar/' + pais?.slug" class="ranking__comparar-link">Comparar países</a>
+        <a [routerLink]="['/mapa', 'comparar', pais?.slug]" class="ranking__comparar-link">Comparar países</a>
     </div>
 
     </div>

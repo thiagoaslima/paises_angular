@@ -10,7 +10,8 @@
     </div>
     <!--abas-->
     <div>
-        <span class="sintese__tab">Síntese</span><a class="sintese__tab sintese__tab--right-disabled" [routerLink]="'/mapa/ranking/' + pais?.slug">Ranking</a>
+        <span class="sintese__tab">Síntese</span><!--
+        --><a class="sintese__tab sintese__tab--right-disabled" [routerLink]="'/mapa/ranking/' + pais?.slug" [queryParams]="{indicador: linkIndicador, tema: linkTema, ano: linkAno}" queryParamsHandling="merge">Ranking</a>
     </div>
     <!--dados-->
     <div class="sintese__info-container">
