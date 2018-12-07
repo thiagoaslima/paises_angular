@@ -19,6 +19,7 @@ export class CompararComponent {
     private isBrowser: boolean;
 
     paises:any = [];
+    pais:any;
     paisesRemovidos:any = [];
     paisesSelecionados:any = [];
     lang:string;
@@ -56,6 +57,7 @@ export class CompararComponent {
             for(let i = 0; i < this.paises.length; i++){
                 if(this.paises[i].slug == slug){
                     this.paisesSelecionados[i] = true;
+                    this.pais = this.paises[i];
                     break;
                 }
             }
