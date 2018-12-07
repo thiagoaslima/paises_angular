@@ -26,6 +26,6 @@ while(ano < anoCorrente) {
 }
 
 anos.forEach(ano => {
-    const content = [",indicadoressociais_13"].concat(Object.keys(dados).map(key => `"${key}","${dados[key][ano] || ""}"`));
+    const content = [";indicadoressociais_13"].concat(Object.keys(dados).map(key => `"${key}";"${dados[key][ano] || ""}"`));
     fs.writeFileSync(path.resolve(__dirname, 'carga', `calorias_consumidas_${ano}.csv`), content.join('\n'), 'utf-8');
 })
