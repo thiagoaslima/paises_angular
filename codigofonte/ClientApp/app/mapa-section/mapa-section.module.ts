@@ -15,31 +15,45 @@ import { MapaSectionService } from './mapa-section.service';
 
 const routes: Routes = [
     {
+        path: 'comparar/:indicador',
+        component: CompararComponent
+    },
+    {
+        path: 'ranking/:pais',
+        component: MapaSectionComponent
+    },
+    {
         path: '',
         component: MapaSectionComponent,
         children: [
-            {
-                path: 'comparar/:indicador',
-                component: CompararComponent
-            },
-            {
-                path: 'ranking/:pais',
-                // component: null
-            },
-            {
-                path: 'ranking/:indicador/:pais',
-                // component: null
-            },
-            {
-                path: 'comparar',
-                component: CompararComponent
-            },
             {
                 path: ':pais',
                 component: SinteseHomeComponent
             },
         ]
-    }
+    },
+    // {
+    //     path: '',
+    //     component: MapaSectionComponent,
+    //     children: [
+    //         {
+    //             path: 'ranking/:pais',
+    //             // component: null
+    //         },
+    //         {
+    //             path: 'ranking/:indicador/:pais',
+    //             // component: null
+    //         },
+    //         {
+    //             path: 'comparar',
+    //             component: CompararComponent
+    //         },
+    //         {
+    //             path: ':pais',
+    //             component: SinteseHomeComponent
+    //         },
+    //     ]
+    // }
 ];
 
 registerLocaleData(localePt, 'pt');

@@ -26,6 +26,6 @@ while(ano < anoCorrente) {
 }
 
 anos.forEach(ano => {
-    const content = [",indicadoressociais_12"].concat(Object.keys(dados).map(key => `"${key}","${dados[key][String(ano)].toString().replace(',', '.')}"`));
+    const content = [";indicadoressociais_12"].concat(Object.keys(dados).map(key => `"${key}";"${dados[key][String(ano)].toString().replace(',', '.')}"`));
     fs.writeFileSync(path.resolve(__dirname, 'carga', `pop_subnutrida_${ano}.csv`), content.join('\n'), 'utf-8');
 })

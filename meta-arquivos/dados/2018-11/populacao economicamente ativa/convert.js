@@ -29,6 +29,6 @@ while (ano <= anoCorrente) {
 }
 
 anos.forEach(ano => {
-    const content = [",economia_20"].concat(Object.keys(dados).map(key => `"${key}","${dados[key][ano].replace(',','.')}"`));
+    const content = [";economia_20"].concat(Object.keys(dados).map(key => `"${key}";"${dados[key][ano].replace(',','.')}"`));
     fs.writeFileSync(path.resolve(__dirname, 'carga', `pop_ativa_${ano}.csv`), content.join('\n'), 'utf-8');
 })

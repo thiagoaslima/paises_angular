@@ -17,14 +17,18 @@ import { DOCUMENT } from "@angular/common";
 import { ActivatedRoute, Router } from "@angular/router";
 
 import { Observable, Subscription, Subject } from "rxjs";
-import { map } from "rxjs/operators/map";
-import { switchMap } from "rxjs/operators/switchMap";
-import { zip } from "rxjs/operators/zip";
+import { combineLatest } from "rxjs/observable/combineLatest";
+
 import {
-  combineLatest,
+  combineLatest as combineLatestOperator,
   distinctUntilChanged,
   takeUntil,
-  tap
+  tap,
+  filter,
+  take,
+  zip,
+  switchMap,
+  map
 } from "rxjs/operators";
 
 import { ResultadoPipe } from "../../shared/resultado.pipe";
@@ -33,10 +37,10 @@ import {
   RouterParamsService,
   Pais,
   MetadataIndicador,
-  PaisesEnum
+  PaisesEnum,
+  LocalidadeService
 } from "../../shared";
 import { MapaSectionService } from "../mapa-section.service";
-import { take } from "rxjs/operator/take";
 
 export const TEMA_DEFAULT = PaisesEnum.temas.populacao;
 export const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
@@ -47,6 +51,9 @@ export const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
   styleUrls: ["./ranking.component.css"]
 })
 export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
+  pais$ = new Subject<Pais | null>();
+  dados$ = new Subject<any>();
+
   @Input()
   set indicador(obj: MetadataIndicador | null) {
     this.unidade = obj ? obj.unidade.identificador : "";
@@ -57,13 +64,23 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     return this._indicador;
   }
 
-  @Input() pais: Pais | null = null;
+  @Input()
+  set pais(pais: Pais | null) {
+    this._pais = pais;
+    this.pais$.next(pais);
+  }
+  get pais() {
+    return this._pais;
+  }
   @Input()
   set dados(values: any) {
     this._dados =
       values && values.ordem.length
         ? values.ordem.map((sigla: string) => values.paises[sigla])
         : [];
+
+    this.selecionado = this._pais && values ? values.paises[this._pais.sigla] : null;
+
     this.dados$.next(this._dados);
   }
   get dados() {
@@ -78,18 +95,21 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
   nomeIndicador = "";
   tema$ = new Subject<number>();
   temas$ = this._paisesService.getTemas();
+
+  selecionado = null;
   indicadores: MetadataIndicador[] = [];
   periodos: string[] = [];
 
-  indicadorId: number;
-  temaId: number;
-  ano: string;
+  indicadorId: number | null;
+  temaId: number | null;
+  ano: string | null;
+  pristine = true;
 
+  private _pais: Pais | null = null;
   private _indicador: MetadataIndicador | null = null;
   private _dados = [];
   private rankingObservable: Observable<any>;
   private destroy$ = new Subject<void>();
-  private dados$ = new Subject<any>();
 
   constructor(
     private _hostElement: ElementRef,
@@ -105,39 +125,39 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     this._routerParams.params$
       .pipe(takeUntil(this.destroy$), map(params => params.queryParams))
       .subscribe(queryParams => {
-        debugger;
         this.indicadorId = Number(queryParams.indicador) || INDICADOR_DEFAULT;
         this.temaId = Number(queryParams.tema) || TEMA_DEFAULT;
         this.ano = queryParams.ano;
-        this.selectTema(this.temaId);
+        this.getIndicadores(this.temaId);
+        this.pristine = true;
       });
   }
 
   ngAfterViewInit() {
     // Escuta a rota e a criação da tabela para fazer o scroll
     // da div até a linha do país selecionado
-    this._routerParams.params$
-      .pipe(
-        map(({ params }) => params.pais || null),
-        distinctUntilChanged(),
-        combineLatest(this.countries.changes),
-        takeUntil(this.destroy$)
-      )
-      .subscribe((data: any) => {
-        const [slug] = data;
-        if (slug) this.scrollTo(slug);
-      });
+    // this._routerParams.params$
+    //   .pipe(
+    //     map(({ params }) => params.pais || null),
+    //     distinctUntilChanged(),
+    //     combineLatestOperator(this.countries.changes),
+    //     takeUntil(this.destroy$)
+    //   )
+    //   .subscribe((data: any) => {
+    //     const [slug] = data;
+    //     if (slug) this.scrollTo(slug);
+    //   });
   }
 
   ngOnDestroy() {
     this.destroy$.next();
   }
 
-  selectTema(id: number) {
-    id = Number(id);
-    this.temaId = id;
-    this._paisesService.getIndicadores(id).subscribe(indicadores => {
-      this.indicadores = indicadores;
+  getIndicadores(temaId: number) {
+    this._paisesService.getIndicadores(temaId).subscribe(indicadores => {
+      this.indicadores = [
+        { indicador: "Selecione um indicador" } as MetadataIndicador
+      ].concat(indicadores);
 
       if (this.indicadorId) {
         const indicador = this.indicadores.find(
@@ -150,27 +170,63 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     });
   }
 
+  selectTema(id: number) {
+    id = Number(id);
+    this.temaId = id;
+    this.indicadorId = null;
+    this.ano = null;
+    this.pristine = false;
+    this.periodos = [];
+    this.getIndicadores(id);
+  }
+
   selectIndicador(id: number) {
     id = Number(id);
-    this.periodos = this.indicadores
-      .filter(indicador => indicador.id == id)
-      .map(indicador => indicador.fontes.map(fonte => fonte.periodo))[0];
+    this.pristine = false;
+    this.indicadorId = id;
+    this.ano = null;
+    this.updatePeriodos(
+      this.indicadores.find(indicador => indicador.id === id)
+    );
+    // this.periodos = this.indicadores
+    //   .filter(indicador => indicador.id == id)
+    //   .map(indicador => ['Selecione o período desejado'].concat(indicador.fontes.map(fonte => fonte.periodo))[0]);
 
-    this._router.navigate([], {
-      queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
-      preserveQueryParams: true,
-      relativeTo: this._route,
-      skipLocationChange: true
-    });
+    // this._router.navigate([], {
+    //   queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
+    //   queryParamsHandling: 'merge',
+    //   relativeTo: this._route,
+    //   skipLocationChange: true
+    // });
+  }
+
+  selectAno(ano: string) {
+    this.ano = ano;
+    this.pristine = false;
+
+    if (this.temaId && this.indicadorId && this.ano) {
+      this._router.navigate([], {
+        queryParams: {
+          tema: this.temaId,
+          indicador: this.indicadorId,
+          ano: this.ano
+        },
+        queryParamsHandling: "merge",
+        relativeTo: this._route
+      });
+    }
   }
 
   updatePeriodos(indicador: any) {
     this.periodos = indicador
-      ? indicador.fontes
-          .map((fonte: any) => fonte.periodo)
-          .sort()
-          .reverse()
+      ? ["Selecione o período desejado"].concat(
+          indicador.fontes
+            .map((fonte: any) => fonte.periodo)
+            .sort()
+            .reverse()
+        )
       : [];
+    this._cdr.markForCheck();
   }
 
   scrollTo(elementId: string) {

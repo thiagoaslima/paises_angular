@@ -5,16 +5,17 @@
 </div>
 
 
-<div class="mapa-legenda" *ngIf="dados && dados.faixas.length > 0">
-    <h4 class="mapa-legenda-title">Legenda</h4>
-    <ng-container *ngFor="let item of dados.faixas; let idx = index; let first = first; let last = last; let len = count">
+<div class="mapa-legenda" *ngIf="indicador">
+    <h4 class="mapa-legenda-title">{{ indicador?.indicador }} {{ ano ? '('+ ano + ')' : '' }}</h4>
+    <ng-container *ngFor="let item of dados?.faixas; let idx = index; let first = first; let last = last; let len = count">
     <div class="mapa-legenda-nivel">
-        <div class="mapa-legenda-cor" [ngClass]="'l-' + (dados.faixas.length - idx) + '-' + dados.faixas.length"></div>
+        <div class="mapa-legenda-cor" [ngClass]="'l-' + (dados?.faixas?.length - idx) + '-' + dados?.faixas?.length"></div>
         <p class="mapa-legenda-marcador">
             <span class="mapa-legenda-texto">
-                <ng-container *ngIf="!first">mais de</ng-container>
-                <ng-container *ngIf="first">menos de</ng-container>
-                {{ dados.divisores[idx].toPrecision(2) | resultado}} {{ indicador?.unidade?.identificador }}
+                mais de
+                <!-- <ng-container *ngIf="!first">mais de</ng-container>
+                <ng-container *ngIf="first">menos de</ng-container> -->
+                {{ dados?.divisores[idx]?.toPrecision(2) | resultado}} {{ indicador?.unidade?.identificador }}
             </span>
         </p>
     </div>

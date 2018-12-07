@@ -56,6 +56,10 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
       });
     }
 
+    if (this._pais && this._map) {
+      this._map.fitBounds(this._selecteds[0].getBounds());
+    }
+
     this._pais = value || null;
   }
 
@@ -78,8 +82,9 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
 
   public mapOptions = MAP_STYLES.options;
   public leafletLayers: L.LayerGroup[] = [];
+  public ano = '';
 
-  indicador: MetadataIndicador;
+  @Input() indicador: MetadataIndicador | null = null;
   private destroy$ = new Subject<void>();
 
   private _selecteds: any[] = [];
@@ -102,11 +107,10 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroy$),
         map(params => params.queryParams),
-        map(queryParams => Number(queryParams.indicador) || INDICADOR_DEFAULT),
+        map(queryParams => queryParams.ano),
         distinctUntilChanged(),
-        flatMap(id => this._paisesService.getMetadataIndicador(id, "one"))
       )
-      .subscribe(indicador => (this.indicador = indicador[0]));
+      .subscribe(ano => (this.ano = ano));
   }
 
   ngOnDestroy() {
@@ -185,8 +189,9 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
           if (pais) {
             this._map && this._map.fitBounds((<any>layer).getBounds());
             this._router.navigate(
-              this.link ? this.link.concat(pais.slug) : [".", pais.slug],
+              this.link ? /* this.link.concat(pais.slug) */ ["..", pais.slug] : [".", pais.slug],
               {
+                queryParamsHandling: "preserve",
                 relativeTo: this._route
               }
             );

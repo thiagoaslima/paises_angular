@@ -118,6 +118,10 @@
 	flex-direction: column;
 }
 
+.comparar__info-pais-atual{
+	display: none;
+}
+
 .comparar__abrir-seletor-icone{
 	position: absolute;
     right: 15px;

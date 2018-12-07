@@ -186,7 +186,6 @@ export class PaisesService extends RequestService {
     cache
   })
   getRanking(indicadorId: number, scope = "one", period?: string): Observable<Ranking> {
-    debugger;
     const metadataIndicador = this.getMetadataIndicador(indicadorId, scope);
     const periodoMaisRecente = metadataIndicador.pipe(
       map(indicador => indicador[0]),
