@@ -45,9 +45,7 @@ export class PaisesService extends RequestService {
     super(_httpClient);
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getSintese(siglaPais: string) {
     const metadataObservable = this.getMetadataIndicador(1, "one");
 
@@ -68,10 +66,7 @@ export class PaisesService extends RequestService {
     );
   }
 
-  @RxSimpleCache({
-    cache,
-    customKey: "temas"
-  })
+  
   getTemas() {
     return this.getMetadataIndicador(0, "one").pipe(
       map(temas => {
@@ -89,9 +84,7 @@ export class PaisesService extends RequestService {
     );
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getIndicadores(temaId: number) {
     let _temaId = temaId;
     if (temaId === PaisesEnum.temas.saude) {
@@ -107,9 +100,7 @@ export class PaisesService extends RequestService {
     });
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getMetadataIndicador(indicadorId: number, scope = "sub") {
     const metadataParams = new HttpParams().set("scope", scope);
     return this.request(
@@ -124,9 +115,7 @@ export class PaisesService extends RequestService {
     );
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getHistorico(
     siglaPais: string
   ): Observable<{
@@ -143,9 +132,7 @@ export class PaisesService extends RequestService {
     );
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getTodosDados(siglaPais: string) {
     const metadataObservable = this.getMetadataIndicador(0);
     // .pipe(
@@ -182,9 +169,7 @@ export class PaisesService extends RequestService {
     );
   }
 
-  @RxSimpleCache({
-    cache
-  })
+  
   getRanking(indicadorId: number, scope = "one", period?: string): Observable<Ranking> {
     const metadataIndicador = this.getMetadataIndicador(indicadorId, scope);
     const periodoMaisRecente = metadataIndicador.pipe(

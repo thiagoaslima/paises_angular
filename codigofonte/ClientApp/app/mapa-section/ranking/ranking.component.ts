@@ -123,7 +123,8 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
 
   ngOnInit() {
     this._routerParams.params$
-      .pipe(takeUntil(this.destroy$), map(params => params.queryParams))
+      .takeUntil(this.destroy$)
+      .map(params => params.queryParams)
       .subscribe(queryParams => {
         this.indicadorId = Number(queryParams.indicador) || INDICADOR_DEFAULT;
         this.temaId = Number(queryParams.tema) || TEMA_DEFAULT;

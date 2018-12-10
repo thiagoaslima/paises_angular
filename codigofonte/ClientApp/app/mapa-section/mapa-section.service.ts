@@ -148,23 +148,43 @@ export class MapaSectionService {
             };
           }
         };
-        
-        let pos = 1;
-        const values = ranking.res.reduce((agg: any, obj: any) => {
+
+        let pos = 0;
+        let idxComp = 0;
+        let n = 0;
+        let lastPosicao: number;
+        const values = ranking.res.reduce((agg: any, obj: any, idx: number) => {
           const pais = this._localidadeService.getPaisBySigla(obj.localidade);
 
           if (!pais || !pais.onu) {
             return agg;
           }
 
+          let posicao: number;
+          if (idx === 0) {
+            posicao = ++pos;
+          } else if (ranking.res[idxComp].res === obj.res) {
+            posicao = pos;
+            n++;
+            idxComp = idx;
+          } else {
+            posicao = ++pos + n;
+            n = 0;
+            idxComp = idx;
+          }
+
+          lastPosicao = posicao;
+
           agg.ordem.push(obj.localidade);
           agg.paises[obj.localidade] = {
             pais,
-            posicao: pos++,
+            posicao,
             valor: this._specialValues.values[obj.res]
               ? this._specialValues.values[obj.res]
               : obj.res
           };
+
+          
           return agg;
         }, initialState);
 

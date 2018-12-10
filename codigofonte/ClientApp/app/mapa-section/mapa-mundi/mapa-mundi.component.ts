@@ -20,7 +20,7 @@ import {
 
 import * as L from "leaflet";
 import { MAP_STYLES } from "../mapa.configurations";
-import { takeUntil, map, flatMap, distinctUntilChanged } from "rxjs/operators";
+import { takeUntil, map, distinctUntilChanged } from "rxjs/operators";
 import { Subject } from "rxjs/Subject";
 import { INDICADOR_DEFAULT } from "../ranking/ranking.component";
 
@@ -189,7 +189,7 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
           if (pais) {
             this._map && this._map.fitBounds((<any>layer).getBounds());
             this._router.navigate(
-              this.link ? /* this.link.concat(pais.slug) */ ["..", pais.slug] : [".", pais.slug],
+              this._router.url.indexOf('ranking')>= 0 ? ["/mapa", "ranking", pais.slug] : ["/mapa", pais.slug],
               {
                 queryParamsHandling: "preserve",
                 relativeTo: this._route
