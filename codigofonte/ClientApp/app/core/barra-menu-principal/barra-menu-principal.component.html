@@ -4,7 +4,7 @@
         <a routerLink="/"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
     </h1>
     <!-->campo de busca com lista de sugestões<-->
-    <div class="cabecalho__campo-busca-container" [class.altura2]="resultados && resultados.length>0">
+    <div class="cabecalho__campo-busca-container" [class.popup-layer]="resultados && resultados.length>0">
         <div class="overlay" *ngIf="resultados && resultados.length>0" (click)="limpaResultados()"></div>
         <input type="search" class="cabecalho__campo-busca" autocomplete="off" (focus)="busca($event)" (input)="busca($event)">
         <i class="fa fa-search cabecalho__campo-busca-icone" aria-hidden="true"></i>

@@ -7,9 +7,6 @@ import { LANGUAGES } from '../../shared/traducao.service';
     selector: 'barra-menu-principal',
     templateUrl: './barra-menu-principal.component.html',
     styleUrls: ['./barra-menu-principal.component.css'],
-    host: {
-        'class': 'main-layer'
-    }
 })
 export class BarraMenuPrincipalComponent {
 
