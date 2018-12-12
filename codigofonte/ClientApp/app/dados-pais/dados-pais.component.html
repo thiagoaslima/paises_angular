@@ -3,7 +3,7 @@
     <ul class="dados-pais__menu">
         <li class="dados-pais__menu-item">
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
-            <a routerLink="/mapa" class="dados-pais__menu-botao">Voltar ao mapa</a>
+            <a [routerLink]="'/mapa/' + pais?.slug" class="dados-pais__menu-botao">Voltar ao mapa</a>
         </li>
 
         <li class="dados-pais__menu-item">

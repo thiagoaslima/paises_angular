@@ -3,7 +3,7 @@
     <ul class="comparar__menu">
         <li class="comparar__menu-item">
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
-            <a routerLink="/mapa" class="comparar__menu-botao">Voltar ao mapa</a>
+            <a [routerLink]="'/mapa/' + pais?.slug" class="comparar__menu-botao">Voltar ao mapa</a>
         </li>
 
         <li class="comparar__menu-item">

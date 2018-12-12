@@ -225,6 +225,9 @@
 
 	.ranking {
 		width: 400px;
+		top: 50px;
+		bottom: 50px;
+		right: 50px;
 	}
 
 }
