@@ -142,11 +142,8 @@
 	color: #4f4f4f;
 	font-size: 1em;
 	line-height: 32px;
-    padding: 0 10px;
-    white-space: nowrap;
-	text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    padding: 5px 10px;
+    white-space: normal;
 }
 
 .ranking__tabela-corpo {
@@ -224,7 +221,7 @@
 @media only screen and (min-width : 568px) {
 
 	.ranking {
-		width: 400px;
+		width: 480px;
 		top: 50px;
 		bottom: 50px;
 		right: 50px;

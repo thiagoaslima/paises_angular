@@ -1,7 +1,7 @@
 /*mobile*/
 
 .sintese{
-	width: 400px;
+	width: 480px;
 	position: absolute;
 	top: 50px;
 	right: calc(50% - 200px);
@@ -72,6 +72,7 @@
 .sintese__bandeira-imagem{
 	width: 100%;
 	height: auto;
+	max-height: 300px;
 }
 
 .sintese__tabela{
