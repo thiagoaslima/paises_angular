@@ -71,7 +71,6 @@ export class MapaSectionService {
       geojson: {
         type: malha.type,
         features: malha.features.map((feature: Feature<any>) => {
-          debugger;
           const pais =
             feature && feature.properties
               ? this._localidadeService.getPaisBySigla(feature.properties
@@ -224,11 +223,7 @@ export class MapaSectionService {
     );
 
     const faixas = this.setDivisions(nCategories);
-    debugger;
-    console.time('Divisores');
     const divisores = this.calcularDivisores([], valores, faixas.length);
-    console.timeEnd('Divisores');
-    console.log({faixas, divisores})
 
     return { faixas, divisores };
   }
