@@ -71,6 +71,7 @@ export class MapaSectionService {
       geojson: {
         type: malha.type,
         features: malha.features.map((feature: Feature<any>) => {
+          debugger;
           const pais =
             feature && feature.properties
               ? this._localidadeService.getPaisBySigla(feature.properties
@@ -184,7 +185,6 @@ export class MapaSectionService {
               : obj.res
           };
 
-          
           return agg;
         }, initialState);
 
@@ -222,23 +222,61 @@ export class MapaSectionService {
       Math.ceil(Math.sqrt(valores.length)),
       this.MAX_RANKING_DIVISIONS
     );
+
     const faixas = this.setDivisions(nCategories);
+    debugger;
+    console.time('Divisores');
+    const divisores = this.calcularDivisores([], valores, faixas.length);
+    console.timeEnd('Divisores');
+    console.log({faixas, divisores})
 
+    return { faixas, divisores };
+  }
+
+  calcularDivisores(marcadores: number[] = [], valores: number[], divisoes: number): number[] {
     const maxValue = valores[0] > 0 ? valores[0] * 1.1 : valores[0] * 0.95;
-
     const minValue =
       valores[valores.length - 1] > 0
         ? valores[valores.length - 1] * 0.95
         : valores[valores.length - 1] * 1.1;
 
-    const intervalo = (maxValue - minValue) / faixas.length;
-    const divisores = Array(faixas.length)
+    const intervalo = (maxValue - minValue) / divisoes;
+    const divisores = Array(divisoes)
       .fill(1)
       .map((_, idx) => {
         return maxValue - intervalo * (idx + 1);
       });
 
-    return { faixas, divisores };
+    let i = 0;
+    let j = 0;
+    for(i = 0; i < divisores.length; i++) {
+        const high = i > 0 ? divisores[i-1] : Infinity;
+        const low = divisores[i];
+        
+        let hasItemInRange = false;
+
+        // Como os valores ja estao ordenados, podemos iterar pelo array 
+        // e interrom,per quando achamos um valor da próxima faixa.
+        // Ao tentarmos validar a próxima faixa, continuamos do valor onde paramos; 
+        // não é necessário reiniciar o array
+        for (j; j < valores.length; j++) {
+          if (valores[j] >= low && valores[j] <= high) {
+            hasItemInRange = true;
+          }
+          if (valores[j] < low) {
+            break;
+          }
+        }
+
+        if (hasItemInRange) {
+          marcadores.push(divisores[i]);
+          divisoes--;
+        } else {
+          return this.calcularDivisores(marcadores, valores.slice(j), divisoes);
+        }
+    }
+    
+    return marcadores;
   }
 
   setDivisions(n: number): string[] {
