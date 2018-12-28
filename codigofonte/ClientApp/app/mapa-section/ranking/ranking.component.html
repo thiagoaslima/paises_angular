@@ -47,7 +47,7 @@
         <thead class="ranking__tabela-cabecalho">
             <!--titulos das colunas-->
             <tr class="ranking__tabela-cabecalho-linha">
-                <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena">
+                <th class="ranking__tabela-cabecalho-celula texto-centro celula-mini celula-min--texto">
                     Posição <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-grande">
@@ -59,7 +59,7 @@
             </tr>
             <!--celula de destaque-->
             <tr class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura" *ngIf="selecionado">
-                <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena texto-branco">
+                <th class="ranking__tabela-cabecalho-celula texto-centro celula-mini texto-branco">
                     {{ selecionado?.posicao }}°
                 </th>
                 <th class="ranking__tabela-cabecalho-celula celula-grande texto-branco">
@@ -74,7 +74,7 @@
         <tbody #scrollEl class="ranking__tabela-corpo">
             <ng-container *ngFor="let obj of dados">
                 <tr #cty class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug">
-                    <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
+                    <td class="ranking__tabela-corpo-celula texto-centro celula-mini">
                         {{ obj?.posicao }}°
                     </td>
                     <td class="ranking__tabela-corpo-celula celula-grande">
