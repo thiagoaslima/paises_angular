@@ -87,8 +87,8 @@ export class DadosPaisComponent {
             //bandeira
             this.imageSrc = 'img/bandeiras/' + sigla + '.gif';
             
-            //decide qual capa usar para o país (randomicamente)
-            //os links das capas começam com 1(não zero)
+            // decide qual capa usar para o país (randomicamente)
+            // os links das capas começam com 1(não zero)
             let rand = Math.round((linksCapas[sigla].length - 1) * Math.random()) + 1;
             this.imageSrcCover = 'img/capas/' + sigla + rand.toString() + '.jpg';
             this.imageLink = linksCapas[sigla][rand - 1];
