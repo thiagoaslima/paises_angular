@@ -10,6 +10,7 @@ import { map, filter, distinctUntilChanged } from "rxjs/operators";
 export class TranslateService {
     current$: BehaviorSubject<string>;
     languages$: BehaviorSubject<AppSupportedLanguage[]>;
+    dictionaries: { [languageId: string]: { [term: string]: string } };
 
     constructor(
         @Inject(TranslateServiceConfig) private config: TranslateConfig,
@@ -31,5 +32,12 @@ export class TranslateService {
                 distinctUntilChanged()
             )
             .subscribe(lang => this.current$.next(lang));
+    }
+
+    translateSync(term: string) {
+        const current = this.current$.getValue();
+        const translation = this.dictionaries[current][term];
+
+        return translation || term;
     }
 }
