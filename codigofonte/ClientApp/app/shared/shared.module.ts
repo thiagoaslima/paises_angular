@@ -25,7 +25,7 @@ export function platformDetectionFactory(platform_id: Object) {
 @NgModule({
     imports: [
         BasicCacheModule,
-        CommonModule
+        CommonModule,
     ],
     declarations: [
         LogoODSComponent,

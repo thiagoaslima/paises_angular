@@ -9,6 +9,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app-component/app.component";
 import { CoreModule } from "./core/core.module";
 import { cases, values } from "./shared/specialCases.value";
+import { TranslateModule } from "./translate/translate.module";
 
 @NgModule({
     declarations: [AppComponent],
@@ -19,7 +20,32 @@ import { cases, values } from "./shared/specialCases.value";
         FormsModule,
         CoreModule,
         AppRoutingModule,
-        SharedModule.forRoot()
+        SharedModule.forRoot(),
+        TranslateModule.forRoot({
+            languages: [
+                {
+                    id: 'pt',
+                    text: 'pt',
+                    fullname: 'Português Brasileiro',
+                    default: true
+                },
+                {
+                    id: 'en',
+                    text: 'en',
+                    fullname: 'Englidh',
+                },
+                {
+                    id: 'es',
+                    text: 'es',
+                    fullname: 'Español',
+                }
+            ],
+            dictionaries: {
+                pt: require('../locale/paises-pt.json'),
+                en: require('../locale/paises-en.json'),
+                es: require('../locale/paises-es.json'),
+            }
+        })
     ]
 })
 export class AppModuleShared {
