@@ -1,52 +1,50 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-    selector: 'card',
-    templateUrl: './card.component.html',
-    styleUrls: ['./card.component.css']
+    selector: "card",
+    templateUrl: "./card.component.html",
+    styleUrls: ["./card.component.css"]
 })
-
 export class CardComponent {
-
     @Input() tema: any;
-
     @Input() pais: any;
 
     graficoAtual = 0;
-
     cardAberto = false;
     mostrarTabela = false;
 
-    setGrafico(event: any){
+    setGrafico(event: any) {
         this.graficoAtual = event.target.selectedIndex;
     }
 
-    getUnidade(unidade: any){
+    getUnidade(unidade: any) {
         let valor = "";
-        if(unidade){
-            if(unidade.identificador){
-                valor = unidade.identificador
+        if (unidade) {
+            if (unidade.identificador) {
+                valor = unidade.identificador;
             }
-            if(unidade.multiplicador && unidade.multiplicador != "" && unidade.multiplicador != "1"){
+            if (
+                unidade.multiplicador &&
+                unidade.multiplicador != "" &&
+                unidade.multiplicador != "1"
+            ) {
                 valor += " × " + unidade.multiplicador;
             }
         }
         return valor;
     }
 
-    getTextoFonte(fonte:any){
-        if(fonte){
-            return fonte.split('Disponível em:')[0];
-        }
-        return '';
+    getTextoFonte(fonte: any) {
+        return fonte || "";
     }
 
-    getLinkFonte(fonte:any){
-        if(fonte){
-            let link = fonte.split('Disponível em:')[1].split('Acesso em:')[0].replace('<', '').replace('>.', '').trim();
-            return link;
+    getLinkFonte(fonte: any) {
+        if (fonte) {
+            // Encontra qualquer conjunto de caracteres começando por < (inclusive) até encontrar um > (exclusive)
+            const regex = /<.+?(?=>)/gm;
+            const link = fonte.match(regex);
+            return link[0] ? link[0].replace("<", "") : "";
         }
-        return '';
+        return "";
     }
-
 }

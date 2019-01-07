@@ -84,7 +84,33 @@
     },
     {
         "nome": {
-            "en":"China, Hong Kong SAR",
+            "en": "China, mainland"
+        },
+        "referencia_onu": "China",
+        "a2_code": "CN",
+        "fonte": {
+            "publicacao": "Food security indicators",
+            "autor": "FAO",
+            "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.W_6-AbQ-fUK",
+            "acessadoEm": "2018-11-27"
+        }
+    },
+    {
+        "nome": {
+            "en": "China, Macao SAR"
+        },
+        "referencia_onu": "China, Macao Special Administrative Region",
+        "a2_code": "MO",
+        "fonte": {
+            "publicacao": "Food security indicators",
+            "autor": "FAO",
+            "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.W_6-AbQ-fUK",
+            "acessadoEm": "2018-11-27"
+        }
+    },
+    {
+        "nome": {
+            "en": "China, Hong Kong SAR",
             "es": "Hong Kong",
             "pt": "Hong Kong"
         },
@@ -298,6 +324,19 @@
     },
     {
         "nome": {
+            "en": "Palestine"
+        },
+        "referencia_onu": "State of Palestine",
+        "a2_code": "PS",
+        "fonte": {
+            "publicacao": "Food security indicators",
+            "autor": "FAO",
+            "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.W_6-AbQ-fUK",
+            "acessadoEm": "2018-11-27"
+        }
+    },
+    {
+        "nome": {
             "en": "Pitcairn Islands"
         },
         "referencia_onu": "Pitcairn",
@@ -403,6 +442,19 @@
     },
     {
         "nome": {
+            "en": "Taiwan Province of China"
+        },
+        "referencia_onu": "China",
+        "a2_code": "TW",
+        "fonte": {
+            "publicacao": "Food security indicators",
+            "autor": "FAO",
+            "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.W_6-AbQ-fUK",
+            "acessadoEm": "2018-11-27"
+        }
+    },
+    {
+        "nome": {
             "en": "Tanzania"
         },
         "referencia_onu": "United Republic of Tanzania",
@@ -437,6 +489,19 @@
             "autor": "ITU - International Telecommunication Union",
             "link": "https://www.itu.int/dms_pub/itu-t/opb/sp/T-SP-E.164D-11-2011-PDF-E.pdf",
             "acessadoEm": "2018-03-20"
+        }
+    },
+    {
+        "nome": {
+            "en": "Tokelau (Associated Member)"
+        },
+        "referencia_onu": "Tokelau",
+        "a2_code": "TK",
+        "fonte": {
+            "publicacao": "Food security indicators",
+            "autor": "FAO",
+            "link": "http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.W_6-AbQ-fUK",
+            "acessadoEm": "2018-11-27"
         }
     },
     {

@@ -7,21 +7,21 @@ export const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: './home/home.module#HomeModule' },
   { path: 'mapa', loadChildren: './mapa-section/mapa-section.module#MapaSectionModule' },
   {
-    path: 'dados/:pais', canActivate: [isPaisGuard], children: [
+    path: 'dados/:pais', children: [
       { path: '', loadChildren: './dados-pais/dados-pais.module#DadosPaisModule' }
     ]
   },
-  { 
-    path: ':indicadorORpais',
-    pathMatch: 'full',
-    canActivate: [RouteParametersGuard],
-    component: AppComponent
-  }
+  // { 
+  //   path: ':indicadorORpais',
+  //   pathMatch: 'full',
+  //   canActivate: [RouteParametersGuard],
+  //   component: AppComponent
+  // }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { enableTracing: false })
+    RouterModule.forRoot(routes, { useHash: true, enableTracing: true })
   ],
   exports: [
     RouterModule

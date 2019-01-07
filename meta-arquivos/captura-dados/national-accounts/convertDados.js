@@ -30,7 +30,6 @@ function upload(dados, idx = 0) {
     const periodo = obj.periodo;
     const filename = obj.variavel + '-' + obj.periodo + '.csv';
     const filepath = path.join(folder, filename);
-debugger;
     return saveFile(folder, filename, obj.content).then(res => {
         return postFileToDatabase(periodo, filepath).then(res => {
             logger.info(`O arquivo ${filename} foi salvo com sucesso`);
@@ -52,9 +51,9 @@ function convertDados(json) {
         let [head, ...tail] = array;
         const indicador = fonte.dados.find(obj => obj.titulo_tabela === head[3]);
 
-        if (!indicador) {
-            debugger;
-        }
+        // if (!indicador) {
+        //     debugger;
+        // }
 
         const slug = slugify(indicador.nome);
         const id = indicador.id;

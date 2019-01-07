@@ -1,112 +1,243 @@
-import { Component, Input, Inject, ElementRef, AfterViewInit, ViewChildren, ViewChild, QueryList } from "@angular/core";
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  Inject,
+  ElementRef,
+  ViewChildren,
+  ViewChild,
+  QueryList,
+  OnInit,
+  OnDestroy,
+  ContentChildren,
+  AfterContentInit,
+  AfterViewInit
+} from "@angular/core";
 import { DOCUMENT } from "@angular/common";
+import { ActivatedRoute, Router } from "@angular/router";
 
-import { Observable } from "rxjs/Observable";
-import { Subscription } from 'rxjs/Subscription';
-import { map } from "rxjs/operators/map";
-import { switchMap } from "rxjs/operators/switchMap";
-import { zip } from "rxjs/operators/zip";
+import { Observable, Subscription, Subject } from "rxjs";
+import { combineLatest } from "rxjs/observable/combineLatest";
 
-import { PaisesService, RouterParamsService, Pais, MetadataIndicador } from "../../shared";
-import { MapaSectionService } from "../mapa-section.service";
-import { OnInit, OnDestroy } from "@angular/core/src/metadata/lifecycle_hooks";
+import {
+  combineLatest as combineLatestOperator,
+  distinctUntilChanged,
+  takeUntil,
+  tap,
+  filter,
+  take,
+  zip,
+  switchMap,
+  map
+} from "rxjs/operators";
 
 import { ResultadoPipe } from "../../shared/resultado.pipe";
+import {
+  PaisesService,
+  RouterParamsService,
+  Pais,
+  MetadataIndicador,
+  PaisesEnum,
+  LocalidadeService
+} from "../../shared";
+import { MapaSectionService } from "../mapa-section.service";
 
+export const TEMA_DEFAULT = PaisesEnum.temas.populacao;
+export const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
 
 @Component({
-    selector: 'paises-ranking',
-    templateUrl: './ranking.component.html',
-    styleUrls: ['./ranking.component.css']
+  selector: "paises-ranking",
+  templateUrl: "./ranking.component.html",
+  styleUrls: ["./ranking.component.css"]
 })
 export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
-    @Input() set indicador(obj: MetadataIndicador | null) {
-        this.unidade = obj ? obj.unidade.identificador : '';
-        this.nomeIndicador = obj ? obj.indicador : '';
-        this._indicador = obj;
-    };
-    get indicador (){
-        return this._indicador;
+  pais$ = new Subject<Pais | null>();
+  dados$ = new Subject<any>();
+
+  @Input()
+  set indicador(obj: MetadataIndicador | null) {
+    this.unidade = obj ? obj.unidade.identificador : "";
+    this.nomeIndicador = obj ? obj.indicador : "";
+    this._indicador = obj;
+  }
+  get indicador() {
+    return this._indicador;
+  }
+
+  @Input()
+  set pais(pais: Pais | null) {
+    this._pais = pais;
+    this.pais$.next(pais);
+  }
+  get pais() {
+    return this._pais;
+  }
+  @Input()
+  set dados(values: any) {
+    this._dados =
+      values && values.ordem.length
+        ? values.ordem.map((sigla: string) => values.paises[sigla])
+        : [];
+
+    this.selecionado = this._pais && values ? values.paises[this._pais.sigla] : null;
+
+    this.dados$.next(this._dados);
+  }
+  get dados() {
+    return this._dados;
+  }
+
+  @ViewChild("scrollEl") public scrollElement: ElementRef;
+  @ViewChildren("cty") public countries: QueryList<ElementRef>;
+  public paisSelecionado = "";
+
+  unidade = "";
+  nomeIndicador = "";
+  tema$ = new Subject<number>();
+  temas$ = this._paisesService.getTemas();
+
+  selecionado = null;
+  indicadores: MetadataIndicador[] = [];
+  periodos: string[] = [];
+
+  indicadorId: number | null;
+  temaId: number | null;
+  ano: string | null;
+  pristine = true;
+
+  private _pais: Pais | null = null;
+  private _indicador: MetadataIndicador | null = null;
+  private _dados = [];
+  private rankingObservable: Observable<any>;
+  private destroy$ = new Subject<void>();
+
+  constructor(
+    private _hostElement: ElementRef,
+    private _mapaSectionService: MapaSectionService,
+    private _routerParams: RouterParamsService,
+    private _paisesService: PaisesService,
+    private _router: Router,
+    private _route: ActivatedRoute,
+    private _cdr: ChangeDetectorRef
+  ) {}
+
+  ngOnInit() {
+    this._routerParams.params$
+      .takeUntil(this.destroy$)
+      .map(params => params.queryParams)
+      .subscribe(queryParams => {
+        this.indicadorId = Number(queryParams.indicador) || INDICADOR_DEFAULT;
+        this.temaId = Number(queryParams.tema) || TEMA_DEFAULT;
+        this.ano = queryParams.ano;
+        this.getIndicadores(this.temaId);
+        this.pristine = true;
+      });
+  }
+
+  ngAfterViewInit() {
+    // Escuta a rota e a criação da tabela para fazer o scroll
+    // da div até a linha do país selecionado
+    // this._routerParams.params$
+    //   .pipe(
+    //     map(({ params }) => params.pais || null),
+    //     distinctUntilChanged(),
+    //     combineLatestOperator(this.countries.changes),
+    //     takeUntil(this.destroy$)
+    //   )
+    //   .subscribe((data: any) => {
+    //     const [slug] = data;
+    //     if (slug) this.scrollTo(slug);
+    //   });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+  }
+
+  getIndicadores(temaId: number) {
+    this._paisesService.getIndicadores(temaId).subscribe(indicadores => {
+      this.indicadores = [
+        { indicador: "Selecione um indicador" } as MetadataIndicador
+      ].concat(indicadores);
+
+      if (this.indicadorId) {
+        const indicador = this.indicadores.find(
+          indicador => indicador.id == this.indicadorId
+        );
+        this.updatePeriodos(indicador);
+      }
+
+      this._cdr.markForCheck();
+    });
+  }
+
+  selectTema(id: number) {
+    id = Number(id);
+    this.temaId = id;
+    this.indicadorId = null;
+    this.ano = null;
+    this.pristine = false;
+    this.periodos = [];
+    this.getIndicadores(id);
+  }
+
+  selectIndicador(id: number) {
+    id = Number(id);
+    this.pristine = false;
+    this.indicadorId = id;
+    this.ano = null;
+    this.updatePeriodos(
+      this.indicadores.find(indicador => indicador.id === id)
+    );
+    // this.periodos = this.indicadores
+    //   .filter(indicador => indicador.id == id)
+    //   .map(indicador => ['Selecione o período desejado'].concat(indicador.fontes.map(fonte => fonte.periodo))[0]);
+
+    // this._router.navigate([], {
+    //   queryParams: { tema: this.temaId, indicador: id, ano: this.ano },
+    //   queryParamsHandling: 'merge',
+    //   relativeTo: this._route,
+    //   skipLocationChange: true
+    // });
+  }
+
+  selectAno(ano: string) {
+    this.ano = ano;
+    this.pristine = false;
+
+    if (this.temaId && this.indicadorId && this.ano) {
+      this._router.navigate([], {
+        queryParams: {
+          tema: this.temaId,
+          indicador: this.indicadorId,
+          ano: this.ano
+        },
+        queryParamsHandling: "merge",
+        relativeTo: this._route
+      });
     }
+  }
 
-    @Input() pais: Pais | null = null;
-    @Input() 
-    set dados(values) {
-        //@ts-ignore
-        this._dados = values && values.ordem.length 
-            //@ts-ignore
-            ? values.ordem.map((sigla: string) => values.paises[sigla])
-            : [];
-    }
-    get dados() {
-        return this._dados;
-    }
-    
-    unidade = '';
-    nomeIndicador = '';
-    private _indicador: MetadataIndicador | null = null;
-
-    @ViewChild('scrollEl') public scrollElement: ElementRef;
-    @ViewChildren("cty") public countries: QueryList<ElementRef>
-    public paisSelecionado = "";
-
-    private _subscriptions: Subscription[] = [];
-    private _dados = [];
-    private rankingObservable: Observable<any>
-
-    constructor(
-        private _hostElement: ElementRef,
-        private _mapaSectionService: MapaSectionService,
-        private _routerParams: RouterParamsService
-    ) { }
-
-    ngOnInit() {
-        /*
-        const paisSubscription = this._routerParams.params$.subscribe(({ params }) => {
-            this.paisSelecionado = params.pais ? params.pais : "";
-        });
-
-        this.rankingObservable = this._routerParams.params$.pipe(
-            map(({ params }) => parseInt(params.indicador, 10)),
-            switchMap(indicadorId => this._mapaSectionService.getIndicador(indicadorId).pipe(
-                // zip(this._mapaSectionService.getRanking(indicadorId))
-            )
-            )
+  updatePeriodos(indicador: any) {
+    this.periodos = indicador
+      ? ["Selecione o período desejado"].concat(
+          indicador.fontes
+            .map((fonte: any) => fonte.periodo)
+            .sort()
+            .reverse()
         )
+      : [];
+    this._cdr.markForCheck();
+  }
 
-        const dadosSubscription = this.rankingObservable.subscribe(([indicador, ranking]) => {
-            // this.indicador = indicador[0];
-            this.dados = ranking;
-        })
-
-        this._subscriptions.push(paisSubscription, dadosSubscription);
-        */
+  scrollTo(elementId: string) {
+    const elementRef = this.countries.find(
+      ref => ref.nativeElement.id === elementId
+    );
+    if (elementRef) {
+      this.scrollElement.nativeElement.scrollTop =
+        elementRef.nativeElement.offsetTop -
+        39 /* .ranking__table-head height */;
     }
-
-
-    ngAfterViewInit() {
-        /*
-        (<any>window)["countries"] = this.countries;
-        const scrollSubscription = this.countries.changes.pipe(
-            zip(this.rankingObservable)
-        ).subscribe(_ => {
-            if (this.paisSelecionado) {
-                this.scrollTo(this.paisSelecionado);
-            }
-        });
-        this._subscriptions.push(scrollSubscription);
-        */
-    }
-
-    ngOnDestroy() {
-        // this._subscriptions.forEach(subscription => subscription.unsubscribe());
-    }
-
-    scrollTo(elementId: string) {
-        const elementRef = this.countries.find(ref => ref.nativeElement.id === elementId);
-        if (elementRef) {
-            this.scrollElement.nativeElement.scrollTop = elementRef.nativeElement.offsetTop - 39 /* .ranking__table-head height */;
-        }
-    }
-
+  }
 }

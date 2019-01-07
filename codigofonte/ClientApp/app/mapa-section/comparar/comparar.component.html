@@ -1,32 +1,72 @@
 <div class="comparar main-layer">
-    <!--barra de título-->
-    <div class="comparar__barra-titulo">
-        <!--título-->
-        <h2 class="comparar__titulo">Comparar Países</h2>
-        <!--botão de fechar-->
-        <a class="button comparar__botao-fechar" routerLink="/mapa">
-            <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i>
-        </a>
-    </div>
-    <!--dados-->
+    <!--barra de menu-->
+    <ul class="comparar__menu">
+        <li class="comparar__menu-item">
+            <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
+            <a [routerLink]="'/mapa/' + pais?.slug" class="comparar__menu-botao">Voltar ao mapa</a>
+        </li>
+
+        <li class="comparar__menu-item">
+            <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
+            <a [routerLink]="'/dados/' + pais?.slug" class="comparar__menu-botao">Sobre o país</a>
+        </li>
+
+        <li class="comparar__menu-item">
+            <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
+            <span class="comparar__menu-botao comparar__menu-botao--ativo">Comparar países</span>
+        </li>
+    </ul>
+
+    <!--janela de comparação-->
     <div class="comparar__info-container">
+        <!--barra de título-->
+        <!-- <div class="comparar__barra-titulo"> -->
+            <!--título-->
+        <!--    <h2 class="comparar__titulo">Comparar Países</h2> -->
+            <!--botão de fechar-->
+        <!--    <a class="button comparar__botao-fechar" routerLink="/mapa"> -->
+        <!--        <i class="fa fa-times comparar__icone-fechar" aria-hidden="true"></i> -->
+        <!--    </a> -->
+        <!-- </div> -->
+        
         <!--lista de países-->
-        <div class="comparar__seletor-pais-container">
-            <div class="comparar__filtro-pais-container">
-                <input class="comparar__filtro-pais" type="text" (input)="filtrarPaises($event);"/>
+        <!--botão mobile para mostrar a lista de paises-->
+        <div class="comparar__abrir-seletor-pais" (click)="mostrarListaPaises=true">
+            Selecione até 5 países
+            <i class="fa fa-plus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="!mostrarListaPaises"></i>
+            <i class="fa fa-minus comparar__abrir-seletor-icone" aria-hidden="true" *ngIf="mostrarListaPaises"></i>
+        </div>
+        <!--container da lista dos países-->
+        <div class="comparar__seletor-pais-container" [class.comparar__seletor-pais-container--ativo]="mostrarListaPaises">
+            <!--bandeira e nome do país atual-->
+            <div class="comparar__pais-atual-container"> 
+                <img [src]="'img/bandeiras/' + pais?.sigla.toUpperCase() + '.gif'" class="comparar__pais-atual-bandeira"> 
+                <h2 class="comparar__pais-atual-nome">{{ pais?.nome.pt }}</h2>
             </div>
+            <!--filtro de paises-->
+            <div class="comparar__filtro-pais-container">
+                <input class="comparar__filtro-pais" type="text" placeholder="Buscar país" (input)="filtrarPaises($event);"/>
+            </div>
+            <!--info-->
             <p class="comparar__filtro-info">Selecione até 5 países</p>
+            <!--lista de países-->
             <ul class="comparar__lista-pais">
                 <ng-template ngFor let-pais [ngForOf]="paises" let-i="index">
                     <li class="comparar__lista-item-pais" *ngIf="!paisesRemovidos[i]">
-                            <input type="checkbox"
+                            <label class="comparar__lista-nome-pais">
+                                <input type="checkbox"
                                 [checked]="paisesSelecionados[i]"
                                 [disabled]="!paisesSelecionados[i] && numPaisesSelecionados() >= 5"
-                                (change)="paisesSelecionados[i] = !paisesSelecionados[i]; update();"/> {{ pais.nome[lang] }}
+                                (change)="paisesSelecionados[i] = !paisesSelecionados[i]; update();"/>
+                                {{ pais.nome[lang] }}
+                            </label>
                     </li>
                 </ng-template>
             </ul>
+            <!--botão mobile para fechar a lista de seleção de países-->
+            <button class="comparar__fechar-seletor-pais" (click)="mostrarListaPaises=false">Comparar</button>
         </div>
+        <!--container do gráfico-->
         <div class="comparar__dados-container">
             <!--<div class="comparar__botoes-container">
                 <button class="comparar__botao">Imprimir</button>
@@ -35,20 +75,26 @@
             <!--comboboxes-->
             <div class="comparar__select-container">
                 <select class="comparar__select" (change)="setTitulo($event)">
-                    <option *ngFor="let titulo of getTitulos(); let i = index" [selected]="i == tituloAtual">
-                        {{ titulo.indicador }}
+                    <option *ngFor="let item of getTitulo(); let i = index" [selected]="item.posicao.split('.')[0] == categoria">
+                        {{ item.indicador }}
                     </option>
                 </select>
+                <br/>
                 <select class="comparar__select" (change)="setSubtitulo($event)">
-                    <option *ngFor="let subtitulo of getSubtitulos(tituloAtual); let i = index" [selected]="i == subtituloAtual">
-                        {{ subtitulo.indicador }}
+                    <option *ngFor="let item of getSubtitulo(); let i = index" [selected]="item.id == indicador">
+                        {{ item.indicador }}
                     </option>
                 </select>
+                <!--select class="comparar__select" (change)="setTitulo($event)">
+                    <option *ngFor="let item of getTitulos(); let i = index" [selected]="item.id == indicador">
+                        {{ item.titulo }}
+                    </option>
+                </select-->
             </div>
             <!--grafico-->
             <div class="comparar__grafico-container">
-                
-                <grafico
+                <!--desktop-->
+                <grafico class="comparar__grafico-desktop"
                     [rotulosX]="getPeriodos()"
                     [rotulosY]="getLegenda()"
                     [dados]="getValores()"
@@ -56,6 +102,16 @@
                     [mostrarLegenda]="true"
                     [LARGURA_GRAFICO]="640"
                     [ALTURA_GRAFICO]="320">
+                </grafico>
+                <!--mobile-->
+                <grafico class="comparar__grafico-mobile"
+                    [rotulosX]="getPeriodos()"
+                    [rotulosY]="getLegenda()"
+                    [dados]="getValores()"
+                    [unidade]="getUnidade()"
+                    [mostrarLegenda]="true"
+                    [LARGURA_GRAFICO]="320"
+                    [ALTURA_GRAFICO]="240">
                 </grafico>
             </div>
         </div>

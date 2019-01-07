@@ -47,6 +47,11 @@
     color: #fff;
 }
 
+.dados-pais__sintese-valor-km{
+    font-size: 0.9em;
+    color: #fff;
+}
+
 .dados-pais__sintese-titulo-container{
     display: table;
     margin: 0 20px;
@@ -122,6 +127,7 @@
 
 .dados-pais__historico-paragrafos-container--aberto{
     display: block;
+    overflow: hidden;
 }
 
 .dados-pais__historico-degrade{
@@ -150,7 +156,6 @@
 @media only screen and (min-width : 568px) {
 
     /*barra de menu*/
-
     .dados-pais__menu{
         display: block;
         background-color: #3f3f3f;
@@ -168,14 +173,26 @@
         float: right;
     }
 
-    .dados-pais__menu-link{
+    .dados-pais__menu-botao{
         color: #fff;
         text-transform: uppercase;
-        font-size: 0.8em;
+        font-size: 0.9em;
+        background: none;
+        border: none;
+        text-decoration: none;
     }
 
-    .dados-pais__menu-link:hover{
+    .dados-pais__menu-botao:hover{
         color: lightgrey;
+    }
+
+    .dados-pais__menu-botao--ativo{
+        color: #3ecca7;
+        cursor: default;
+    }
+
+    .dados-pais__menu-botao--ativo:hover{
+        color: #3ecca7;
     }
 
     .dados-pais__menu-icon{
@@ -183,6 +200,10 @@
     }
 
     /*sintese*/
+
+    .dados-pais__sintese-titulo-container{
+        margin: 0 20px 0 0;
+    }
 
     .dados-pais__sintese{
         background-color: transparent;
@@ -206,7 +227,37 @@
     }
 
     .dados-pais__sintese-capa-icon{
-        color: white;
+        color: rgba(255,255,255,0.7);
+        filter: drop-shadow(2px 2px 5px black);
+    }
+
+    .dados-pais__sintese-capa-botao-anterior{
+        background: none;
+        border: none;
+        position: absolute;
+        left: 10px;
+        top: calc(50% - 20px);
+    }
+
+    .dados-pais__sintese-capa-botao-proximo{
+        background: none;
+        border: none;
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 20px);
+    }
+
+    .dados-pais__sintese-capa-icon-anterior{
+        color: rgba(255,255,255,0.7);
+        font-size: 40px;
+        font-weight: lighter;
+        filter: drop-shadow(2px 2px 5px black);
+    }
+
+    .dados-pais__sintese-capa-icon-proximo{
+        color: rgba(255,255,255,0.7);
+        font-size: 40px;
+        font-weight: lighter;
         filter: drop-shadow(2px 2px 5px black);
     }
 
@@ -235,6 +286,10 @@
     }
 
     .dados-pais__sintese-valor{
+        color: #4f4f4f;
+    }
+
+    .dados-pais__sintese-valor-km{
         color: #4f4f4f;
     }
 
@@ -305,4 +360,17 @@
         margin-top: 20px;
     }
 
+}
+
+
+/*impressão*/
+@media print {
+    .dados-pais__historico-icone{
+        display: none;
+    }
+
+    .dados-pais__historico-paragrafos-container{
+        display: block;
+        overflow: hidden;
+    }
 }

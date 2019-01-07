@@ -159,8 +159,8 @@
     font-size: 0.8em;
 }
 
-/*desktop*/
-@media only screen and (min-width : 568px) {
+/*desktop e impressão*/
+@media screen and (min-width : 568px), print {
 
     .card{
         width: 45%;
@@ -220,4 +220,11 @@
         width: 30%;
     }
 
+}
+
+/*impressão*/
+@media print {
+    .card__rodape-buttom-comparar{
+        display: none;
+    }
 }

@@ -45,12 +45,13 @@
     </div>
     <!--legenda-->
     <div class="grafico__legenda" *ngIf="rotulosY != null && mostrarLegenda">
-        <div class="grafico__legenda-item" *ngFor="let rotulo of rotulosY; let i = index">
-            <div class="grafico__legenda-icone">
+        <div class="grafico__legenda-item" *ngFor="let rotulo of rotulosY; let i = index" [title]="!existemDadosEspecificos(i)?'Sem dados para exibir':''">
+            <div class="grafico__legenda-icone" *ngIf="existemDadosEspecificos(i)">
                 <span [ngClass]="'grafico__legenda-barra grafico__cor--' + i" ></span>
                 <span [ngClass]="'grafico__legenda-circulo grafico__cor--' + i"></span>
             </div>
-            <span class="grafico__legenda-nome">{{ rotulo }}</span>
+            <i class="fa fa-times grafico__legenda-icone-sem-dados" *ngIf="!existemDadosEspecificos(i)"></i>
+            <span class="grafico__legenda-nome" [class.grafico__legenda-nome-sem-dados]="!existemDadosEspecificos(i)">{{ rotulo }}</span>
         </div>
     </div>
 </div>
