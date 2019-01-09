@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Routes, RouterModule } from "@angular/router";
 
-import { HomeComponent } from '../home/home.component';
-
-import { SharedModule } from '../shared';
+import { HomeComponent } from "../home/home.component";
+import { SharedModule } from "../shared";
+import { TranslateModule } from "../translate/translate.module";
 
 const routes: Routes = [
     {
-        path: '',
-        pathMatch: 'full',
-        component: HomeComponent,
+        path: "",
+        pathMatch: "full",
+        component: HomeComponent
     }
 ];
 
@@ -18,11 +18,10 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
+        TranslateModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [
-        HomeComponent
-    ],
+    declarations: [HomeComponent],
     providers: []
 })
-export class HomeModule { }
+export class HomeModule {}

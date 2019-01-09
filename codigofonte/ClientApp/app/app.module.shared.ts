@@ -24,27 +24,28 @@ import { TranslateModule } from "./translate/translate.module";
         TranslateModule.forRoot({
             languages: [
                 {
-                    id: 'pt',
-                    text: 'pt',
-                    fullname: 'Português Brasileiro',
+                    id: "pt",
+                    text: "pt",
+                    fullname: "Português Brasileiro",
                     default: true
                 },
                 {
-                    id: 'en',
-                    text: 'en',
-                    fullname: 'Englidh',
+                    id: "en",
+                    text: "en",
+                    fullname: "English"
                 },
                 {
-                    id: 'es',
-                    text: 'es',
-                    fullname: 'Español',
+                    id: "es",
+                    text: "es",
+                    fullname: "Español"
                 }
             ],
             dictionaries: {
-                pt: require('../locale/paises-pt.json'),
-                en: require('../locale/paises-en.json'),
-                es: require('../locale/paises-es.json'),
-            }
+                pt: require("../locale/paises-pt.json"),
+                en: require("../locale/paises-en.json"),
+                es: require("../locale/paises-es.json")
+            },
+            enableTracing: true
         })
     ]
 })

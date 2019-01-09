@@ -1,15 +1,20 @@
+export interface ObjectWithTranslation {
+    [languageId: string]: string;
+}
+
 export interface AppSupportedLanguage {
-  id: string;
-  text: string;
-  fullname?: string;
-  default?: boolean;
+    id: string;
+    text: string;
+    fullname?: string;
+    default?: boolean;
 }
 
 export interface TranslateDictionary {
-  [term: string]: string;
+    [term: string]: string;
 }
 
 export interface TranslateConfig {
-  languages: AppSupportedLanguage[];
-  dictionaries: { [languageId: string]: TranslateDictionary };
+    languages: AppSupportedLanguage[];
+    dictionaries: { [languageId: string]: TranslateDictionary };
+    enableTracing?: boolean;
 }

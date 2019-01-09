@@ -1,11 +1,10 @@
-<!-->logo ODS<-->
-<!--<logo-ods></logo-ods>-->
-
 <p class="home__texto">
     <img src="/img/logo_home.png" class="home__image">
 </p>
 <p class="home__texto">
-    {{ "HOME_TEXTO_APRESENTACAO" | translate }}
+    {{ "HOME_TEXTO_APRESENTACAO" | translate | async }}
     <br><br>
-    <a class="home__botao" routerLink="mapa">Comece a usar</a>
+    <a class="home__botao" routerLink="mapa">
+        {{ "HOME_BOTAO" | translate | async }}
+    </a>
 </p>

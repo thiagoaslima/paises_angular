@@ -1,0 +1,47 @@
+import { Injectable } from "@angular/core";
+import {
+    CanActivate,
+    CanActivateChild,
+    ActivatedRoute,
+    ActivatedRouteSnapshot,
+    RouterStateSnapshot,
+    Router
+} from "@angular/router";
+import { TranslateService } from "./translate.service";
+
+@Injectable()
+export class TranslateGuard implements CanActivate, CanActivateChild {
+    constructor(private service: TranslateService, private router: Router) {}
+
+    canActivate(
+        activatedRoute: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ) {
+        debugger;
+        return this._guard(state);
+    }
+    canActivateChild(
+        activatedRoute: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ) {
+        debugger;
+        return this._guard(state);
+    }
+
+    _guard(state: RouterStateSnapshot) {
+        debugger;
+        const urlTree = this.router.parseUrl(state.url);
+        const lang = urlTree.queryParamMap.get("lang");
+
+        if (!lang && this.service.isOnDefaultLanguage) {
+            return true;
+        }
+
+        if (lang && this.service.isCurrentLanguage(lang)) {
+            return true;
+        }
+
+        this.service.changeLocation(state.url);
+        return false;
+    }
+}
