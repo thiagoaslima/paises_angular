@@ -190,8 +190,19 @@
 	background-color: rgba(0, 0, 0, 0.65);
 }
 
+
+.celula-mini{
+	width: 15%;
+}
+
+.celula-min--texto{
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .celula-pequena{
-	width: 25%;
+	width: 35%;
 }
 
 .celula-grande{
