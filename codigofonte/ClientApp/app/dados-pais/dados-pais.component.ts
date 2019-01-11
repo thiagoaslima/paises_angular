@@ -79,7 +79,6 @@ export class DadosPaisComponent {
                     this._dadosPaisService
                         .getDados(pais.sigla)
                         .subscribe(resultados => {
-                            debugger;
                             this.temas = resultados;
                             // this._changeDetector.detectChanges();
 

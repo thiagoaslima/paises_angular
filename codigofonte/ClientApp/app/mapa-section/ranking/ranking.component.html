@@ -1,99 +1,167 @@
 <section class="ranking main-layer">
-
     <!--botão de fechar-->
-    <a class="button ranking__botao-fechar" [routerLink]="['/mapa']" [queryParams]="{indicador: null, tema: null, ano: null}" queryParamsHandling="merge">
+    <a
+        class="button ranking__botao-fechar"
+        [routerLink]="['/mapa']"
+        [queryParams]="{ indicador: null, tema: null, ano: null }"
+        queryParamsHandling="merge"
+    >
         <i class="fa fa-times ranking__icone-fechar" aria-hidden="true"></i>
     </a>
-    
+
     <!--abas-->
     <div>
-        <a class="ranking__tab ranking__tab--left-disabled" [routerLink]="'/mapa/' + pais?.slug">Síntese</a><span class="ranking__tab">Ranking</span>
+        <a
+            class="ranking__tab ranking__tab--left-disabled"
+            [routerLink]="'/mapa/' + pais?.slug"
+            >{{ "Síntese" | translate | async }}</a
+        ><span class="ranking__tab">{{ "Ranking" | translate | async }}</span>
     </div>
 
     <!--conteúdo-->
     <div class="ranking__conteudo-container">
+        <div class="ranking__opcoes">
+            <select
+                #s1
+                (change)="selectTema(s1.value)"
+                class="ranking__combobox"
+            >
+                <option
+                    *ngFor="let tema of (temas$ | async)"
+                    [value]="tema.posicao"
+                    [selected]="tema.posicao == temaId"
+                    >{{ tema.indicador | translate | async }}</option
+                >
+            </select>
 
-    <div class='ranking__opcoes'>
+            <select
+                #s2
+                (change)="selectIndicador(s2.value)"
+                class="ranking__combobox"
+            >
+                <ng-container
+                    *ngFor="let indicador of indicadores; let first = first"
+                >
+                    <option *ngIf="first && !pristine" disabled selected>{{
+                        indicador.indicador | translate | async
+                    }}</option>
+                    <option
+                        *ngIf="!first"
+                        [value]="indicador.id"
+                        [selected]="indicador.id == indicadorId"
+                        >{{ indicador.indicador | translate | async }}</option
+                    >
+                </ng-container>
+            </select>
 
-        <select #s1 (change)="selectTema(s1.value)" class="ranking__combobox">
-            <option *ngFor="let tema of temas$ | async"
-                [value]="tema.posicao" [selected]="tema.posicao == temaId">{{ tema.indicador }}</option>
-        </select>
+            <select
+                #s3
+                (change)="selectAno(s3.value)"
+                class="ranking__combobox"
+            >
+                <ng-container
+                    *ngFor="let periodo of periodos; let first = first"
+                >
+                    <option *ngIf="first && !pristine" disabled selected>{{
+                        periodo
+                    }}</option>
+                    <option
+                        *ngIf="!first"
+                        [value]="periodo"
+                        [selected]="periodo == ano"
+                        >{{ periodo }}</option
+                    >
+                </ng-container>
+            </select>
+        </div>
 
-        <select #s2 (change)="selectIndicador(s2.value)" class="ranking__combobox">
-            <ng-container *ngFor="let indicador of indicadores; let first = first">
-            <option *ngIf="first && !pristine" disabled selected>{{ indicador.indicador }}</option>
-            <option *ngIf="!first" [value]="indicador.id" [selected]="indicador.id == indicadorId">{{ indicador.indicador }}</option>
-            </ng-container>
-        </select>
-
-         <select #s3 (change)="selectAno(s3.value)" class="ranking__combobox">
-             <ng-container *ngFor="let periodo of periodos; let first = first">
-                <option *ngIf="first && !pristine" disabled selected>{{ periodo }}</option>
-                <option *ngIf="!first"[value]="periodo" [selected]="periodo == ano">{{ periodo }}</option>
-            </ng-container>
-        </select>
-    </div>
-
-    <!--barra de menu-->
-    <!--<ul class="ranking__menu">
+        <!--barra de menu-->
+        <!--<ul class="ranking__menu">
         <li class="ranking__menu-item">IMPRIMIR</li>
         <li class="ranking__menu-item">DOWNLOAD</li>
     </ul>-->
 
-    <!--tabela-->
-    <table class="ranking__tabela">
-        <!--cabecalho da tabela-->
-        <thead class="ranking__tabela-cabecalho">
-            <!--titulos das colunas-->
-            <tr class="ranking__tabela-cabecalho-linha">
-                <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena">
-                    Posição <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
-                </th>
-                <th class="ranking__tabela-cabecalho-celula celula-grande">
-                    País <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
-                </th>
-                <th class="ranking__tabela-cabecalho-celula celula-pequena">
-                    {{ unidade }}
-                </th>
-            </tr>
-            <!--celula de destaque-->
-            <tr class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura" *ngIf="selecionado">
-                <th class="ranking__tabela-cabecalho-celula texto-centro celula-pequena texto-branco">
-                    {{ selecionado?.posicao }}°
-                </th>
-                <th class="ranking__tabela-cabecalho-celula celula-grande texto-branco">
-                    {{ selecionado?.pais.nome.pt }}
-                </th>
-                <th class="ranking__tabela-cabecalho-celula celula-pequena texto-branco">
-                    {{ selecionado?.valor | resultado }}
-                </th>
-            </tr>
-        </thead>
-        <!--corpo da tabela-->
-        <tbody #scrollEl class="ranking__tabela-corpo">
-            <ng-container *ngFor="let obj of dados">
-                <tr #cty class="ranking__tabela-corpo-linha" [class.linha-selecionada]="obj.pais?.slug === pais?.slug" [attr.id]="obj?.pais?.slug">
-                    <td class="ranking__tabela-corpo-celula texto-centro celula-pequena">
-                        {{ obj?.posicao }}°
-                    </td>
-                    <td class="ranking__tabela-corpo-celula celula-grande">
-                        <a class="ranking__tabela-link" [routerLink]="['..', obj.pais?.slug]" 
-                            queryParamsHandling="preserve">{{ obj.pais?.nome.pt }}</a>
-                    </td>
-                    <td class="ranking__tabela-corpo-celula celula-pequena">
-                        {{ obj?.valor | resultado }}
-                    </td>
+        <!--tabela-->
+        <table class="ranking__tabela">
+            <!--cabecalho da tabela-->
+            <thead class="ranking__tabela-cabecalho">
+                <!--titulos das colunas-->
+                <tr class="ranking__tabela-cabecalho-linha">
+                    <th
+                        class="ranking__tabela-cabecalho-celula texto-centro celula-pequena"
+                    >
+                        {{ "Posição" | translate | async }}
+                        <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
+                    </th>
+                    <th class="ranking__tabela-cabecalho-celula celula-grande">
+                        {{ "País" | translate | async }}
+                        <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
+                    </th>
+                    <th class="ranking__tabela-cabecalho-celula celula-pequena">
+                        {{ unidade }}
+                    </th>
                 </tr>
-            </ng-container>
-        </tbody>
-    </table>
+                <!--celula de destaque-->
+                <tr
+                    class="ranking__tabela-cabecalho-linha ranking__tabela-cabecalho-linha--escura"
+                    *ngIf="selecionado"
+                >
+                    <th
+                        class="ranking__tabela-cabecalho-celula texto-centro celula-pequena texto-branco"
+                    >
+                        {{ selecionado?.posicao }}°
+                    </th>
+                    <th
+                        class="ranking__tabela-cabecalho-celula celula-grande texto-branco"
+                    >
+                        {{ selecionado?.pais.nome | translate | async }}
+                    </th>
+                    <th
+                        class="ranking__tabela-cabecalho-celula celula-pequena texto-branco"
+                    >
+                        {{ selecionado?.valor | resultado }}
+                    </th>
+                </tr>
+            </thead>
+            <!--corpo da tabela-->
+            <tbody #scrollEl class="ranking__tabela-corpo">
+                <ng-container *ngFor="let obj of dados">
+                    <tr
+                        #cty
+                        class="ranking__tabela-corpo-linha"
+                        [class.linha-selecionada]="
+                            obj.pais?.slug === pais?.slug
+                        "
+                        [attr.id]="obj?.pais?.slug"
+                    >
+                        <td
+                            class="ranking__tabela-corpo-celula texto-centro celula-pequena"
+                        >
+                            {{ obj?.posicao }}°
+                        </td>
+                        <td class="ranking__tabela-corpo-celula celula-grande">
+                            <a
+                                class="ranking__tabela-link"
+                                [routerLink]="['..', obj.pais?.slug]"
+                                queryParamsHandling="preserve"
+                                >{{ obj.pais?.nome | translate | async }}</a
+                            >
+                        </td>
+                        <td class="ranking__tabela-corpo-celula celula-pequena">
+                            {{ obj?.valor | resultado }}
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
 
-    <!--leia mais-->
-    <div class="ranking__comparar">
-        <a [routerLink]="['/mapa', 'comparar', pais?.slug]" class="ranking__comparar-link">Comparar países</a>
+        <!--leia mais-->
+        <div class="ranking__comparar">
+            <a
+                [routerLink]="['/mapa', 'comparar', pais?.slug]"
+                class="ranking__comparar-link"
+                >{{ "Comparar países" | translate | async }}</a
+            >
+        </div>
     </div>
-
-    </div>
-
 </section>

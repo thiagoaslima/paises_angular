@@ -10,26 +10,18 @@ import {
 import { TranslateService } from "./translate.service";
 
 @Injectable()
-export class TranslateGuard implements CanActivate, CanActivateChild {
+export class TranslateGuard implements CanActivate {
     constructor(private service: TranslateService, private router: Router) {}
 
     canActivate(
         activatedRoute: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ) {
-        debugger;
         return this._guard(state);
     }
-    canActivateChild(
-        activatedRoute: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-    ) {
-        debugger;
-        return this._guard(state);
-    }
+   
 
     _guard(state: RouterStateSnapshot) {
-        debugger;
         const urlTree = this.router.parseUrl(state.url);
         const lang = urlTree.queryParamMap.get("lang");
 

@@ -6,10 +6,11 @@ import { SharedModule } from "../shared";
 import { DadosPaisComponent } from "./dados-pais.component";
 import { DadosPaisService } from "./dados-pais.service";
 import { CardComponent } from "./card/card.component";
+import { TranslateModule } from "../translate/translate.module";
 
 const routes: Routes = [
     {
-        path: '',
+        path: "",
         component: DadosPaisComponent
     }
 ];
@@ -18,16 +19,10 @@ const routes: Routes = [
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        TranslateModule
     ],
-    declarations: [
-        DadosPaisComponent,
-        CardComponent
-    ],
-    providers: [
-        DadosPaisService
-    ]
+    declarations: [DadosPaisComponent, CardComponent],
+    providers: [DadosPaisService]
 })
-export class DadosPaisModule {
-
-}
+export class DadosPaisModule {}

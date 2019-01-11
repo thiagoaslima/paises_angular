@@ -12,6 +12,8 @@ import { TranslateService } from "../../translate/translate.service";
 export class BarraMenuPrincipalComponent {
     resultados: Array<any> = [];
     idiomas = this.translateService.languages;
+    currentLanguage$ = this.translateService.currentId$;
+
     mostraMenu = false;
 
     constructor(
@@ -36,7 +38,6 @@ export class BarraMenuPrincipalComponent {
     }
 
     mudarIdioma(idioma: string) {
-        debugger;
         this.translateService.updateLanguage(idioma);
         // this._traducaoService.lang = idioma;
     }

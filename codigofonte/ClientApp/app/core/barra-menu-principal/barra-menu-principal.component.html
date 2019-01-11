@@ -18,11 +18,8 @@
             </div>
             <!--seleção de idioma, versão final-->
             <div class="cabecalho__idioma-container">
-                <button *ngFor="let idioma of idiomas" class="cabecalho__idioma-button" [title]="idioma.fullname" (click)="mudarIdioma(idioma.id)">{{ idioma.id | uppercase }}</button>
-                <span>|</span>
-                <!-- <button class="cabecalho__idioma-button" (click)="lang = 'en'" *ngIf="lang!='en'">EN</button>
-                <span *ngIf="lang=='pt'||lang=='en'">|</span>
-                <button class="cabecalho__idioma-button" (click)="lang = 'es'" *ngIf="lang!='es'">ES</button> -->
+                <button *ngFor="let idioma of idiomas" class="cabecalho__idioma-button" [class.cabecalho__idioma-button__selected]="idioma.id == (currentLanguage$ | async)"
+                    [title]="idioma.fullname" (click)="mudarIdioma(idioma.id)">{{ idioma.id | uppercase }}</button>
             </div>
 
 

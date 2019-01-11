@@ -1,65 +1,45 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
-import { CommonModule, DecimalPipe, registerLocaleData } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import localePt from '@angular/common/locales/pt';
-import localeEs from '@angular/common/locales/es';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LOCALE_ID, NgModule } from "@angular/core";
+import { CommonModule, DecimalPipe, registerLocaleData } from "@angular/common";
+import { Routes, RouterModule } from "@angular/router";
+import localePt from "@angular/common/locales/pt";
+import localeEs from "@angular/common/locales/es";
+import { LeafletModule } from "@asymmetrik/ngx-leaflet";
 
-import { MapaMundiComponent } from './mapa-mundi/mapa-mundi.component';
-import { SinteseHomeComponent } from './sintese-home/sintese-home.component';
-import { RankingComponent } from './ranking/ranking.component';
-import { CompararComponent } from './comparar/comparar.component';
-import { SharedModule, TraducaoService } from '../shared';
-import { MapaSectionComponent } from './mapa-section.component';
-import { MapaSectionService } from './mapa-section.service';
+import { MapaMundiComponent } from "./mapa-mundi/mapa-mundi.component";
+import { SinteseHomeComponent } from "./sintese-home/sintese-home.component";
+import { RankingComponent } from "./ranking/ranking.component";
+import { CompararComponent } from "./comparar/comparar.component";
+import { SharedModule } from "../shared";
+import { MapaSectionComponent } from "./mapa-section.component";
+import { MapaSectionService } from "./mapa-section.service";
+import { TranslateService } from "../translate/translate.service";
+import { TranslateModule } from "../translate/translate.module";
 
 const routes: Routes = [
     {
-        path: 'comparar/:indicador',
+        path: "comparar/:indicador",
         component: CompararComponent
     },
     {
-        path: 'ranking/:pais',
+        path: "ranking/:pais",
         component: MapaSectionComponent
     },
     {
-        path: '',
+        path: "",
         component: MapaSectionComponent,
         children: [
             {
-                path: ':pais',
+                path: ":pais",
                 component: SinteseHomeComponent
-            },
+            }
         ]
-    },
-    // {
-    //     path: '',
-    //     component: MapaSectionComponent,
-    //     children: [
-    //         {
-    //             path: 'ranking/:pais',
-    //             // component: null
-    //         },
-    //         {
-    //             path: 'ranking/:indicador/:pais',
-    //             // component: null
-    //         },
-    //         {
-    //             path: 'comparar',
-    //             component: CompararComponent
-    //         },
-    //         {
-    //             path: ':pais',
-    //             component: SinteseHomeComponent
-    //         },
-    //     ]
-    // }
+    }
 ];
 
-registerLocaleData(localePt, 'pt');
-registerLocaleData(localeEs, 'es');
-export function getLocale(traducaoService: TraducaoService) {
-    return traducaoService.lang;
+registerLocaleData(localePt, "pt");
+registerLocaleData(localeEs, "es");
+export function getLocale(traducaoService: TranslateService) {
+    return traducaoService.currentLanguage.id;
 }
 
 @NgModule({
@@ -67,7 +47,8 @@ export function getLocale(traducaoService: TraducaoService) {
         CommonModule,
         SharedModule,
         RouterModule.forChild(routes),
-        LeafletModule.forRoot()
+        LeafletModule.forRoot(),
+        TranslateModule
     ],
     declarations: [
         RankingComponent,
@@ -78,15 +59,13 @@ export function getLocale(traducaoService: TraducaoService) {
     ],
     providers: [
         {
-            provide: LOCALE_ID, 
+            provide: LOCALE_ID,
             useFactory: getLocale,
-            deps: [TraducaoService]
+            deps: [TranslateService]
         },
         MapaSectionService,
         DecimalPipe
     ],
-    entryComponents: [
-        RankingComponent
-    ]
+    entryComponents: [RankingComponent]
 })
-export class MapaSectionModule { }
+export class MapaSectionModule {}

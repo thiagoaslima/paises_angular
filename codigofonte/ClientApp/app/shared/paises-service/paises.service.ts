@@ -144,7 +144,6 @@ export class PaisesService extends RequestService {
         return metadataObservable.pipe(
             zip(resultadosObservable),
             map(([metadata, resultadosRaw]) => {
-                debugger;
                 const resultadosMap = objArrayToMap(resultadosRaw);
 
                 const resultados = metadata.reduce(

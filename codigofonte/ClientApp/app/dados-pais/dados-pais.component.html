@@ -3,19 +3,30 @@
     <ul class="dados-pais__menu">
         <li class="dados-pais__menu-item">
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
-            <a [routerLink]="'/mapa/' + pais?.slug" class="dados-pais__menu-botao">Voltar ao mapa</a>
+            <a
+                [routerLink]="'/mapa/' + pais?.slug"
+                class="dados-pais__menu-botao"
+                >{{ "Voltar ao mapa" | translate | async }}</a
+            >
         </li>
 
         <li class="dados-pais__menu-item">
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
-            <span class="dados-pais__menu-botao dados-pais__menu-botao--ativo">Sobre o país</span>
+            <span
+                class="dados-pais__menu-botao dados-pais__menu-botao--ativo"
+                >{{ "Sobre o país" | translate | async }}</span
+            >
         </li>
 
         <li class="dados-pais__menu-item">
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
-            <a [routerLink]="'/mapa/comparar/' + pais?.slug" class="dados-pais__menu-botao">Comparar países</a>
+            <a
+                [routerLink]="'/mapa/comparar/' + pais?.slug"
+                class="dados-pais__menu-botao"
+                >{{ "Comparar países" | translate | async }}</a
+            >
         </li>
-        
+
         <!--li class="dados-pais__menu-item">
             <button> class="dados-pais__menu-botao">
                 <i class="fa fa-caret-left dados-pais__menu-icon" aria-hidden="true"></i> Voltar
@@ -36,26 +47,66 @@
     <!--síntese-->
     <div class="dados-pais__sintese">
         <!--capa-->
-        <div class="dados-pais__sintese-capa" [style.background-image]="'url(' + imageSrcCover + ')'">
-            <button (click)="fotoAnterior()" class="dados-pais__sintese-capa-botao-anterior"><i class="fa fa-chevron-left dados-pais__sintese-capa-icon-anterior"></i></button>
-            <button (click)="fotoProxima()" class="dados-pais__sintese-capa-botao-proximo"><i class="fa fa-chevron-right dados-pais__sintese-capa-icon-proximo"></i></button>
+        <div
+            class="dados-pais__sintese-capa"
+            [style.background-image]="'url(' + imageSrcCover + ')'"
+        >
+            <button
+                (click)="fotoAnterior()"
+                class="dados-pais__sintese-capa-botao-anterior"
+            >
+                <i
+                    class="fa fa-chevron-left dados-pais__sintese-capa-icon-anterior"
+                ></i>
+            </button>
+            <button
+                (click)="fotoProxima()"
+                class="dados-pais__sintese-capa-botao-proximo"
+            >
+                <i
+                    class="fa fa-chevron-right dados-pais__sintese-capa-icon-proximo"
+                ></i>
+            </button>
 
-            <a [href]="imageLink" target="_blank" rel="noopener noreferrer" class="dados-pais__sintese-capa-link">
-                <i class="fa fa-question-circle dados-pais__sintese-capa-icon"></i>
+            <a
+                [href]="imageLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="dados-pais__sintese-capa-link"
+            >
+                <i
+                    class="fa fa-question-circle dados-pais__sintese-capa-icon"
+                ></i>
             </a>
         </div>
         <!--tabela da síntese-->
         <div class="dados-pais__sintese-container">
             <div class="dados-pais__sintese-titulo-container">
                 <!--<i class="fa fa-caret-left dados-pais__sintese-voltar" aria-hidden="true"></i>-->
-                <img class="dados-pais__sintese-bandeira" [src]="imageSrc">
-                <h2 class="dados-pais__sintese-titulo">{{ pais?.nome.pt }}</h2>
+                <img class="dados-pais__sintese-bandeira" [src]="imageSrc" />
+                <h2 class="dados-pais__sintese-titulo">
+                    {{ pais?.nome | translate | async }}
+                </h2>
             </div>
             <table class="dados-pais__sintese-tabela">
                 <tbody>
-                    <tr class="dados-pais__sintese-linha" *ngFor="let item of itens; let i = index">
-                        <th class="dados-pais__sintese-nome">{{ item.titulo }}</th>
-                        <td class="dados-pais__sintese-valor">{{ item.valor | resultado }} <span *ngIf="i == 1" class="dados-pais__sintese-valor-km">Km<sup class="dados-pais__sintese-valor-km">2</sup></span></td>
+                    <tr
+                        class="dados-pais__sintese-linha"
+                        *ngFor="let item of itens; let i = index"
+                    >
+                        <th class="dados-pais__sintese-nome">
+                            {{ item.titulo | translate | async }}
+                        </th>
+                        <td class="dados-pais__sintese-valor">
+                            {{ item.valor | resultado }}
+                            <span
+                                *ngIf="i == 1"
+                                class="dados-pais__sintese-valor-km"
+                                >Km<sup class="dados-pais__sintese-valor-km"
+                                    >2</sup
+                                ></span
+                            >
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -63,22 +114,59 @@
     </div>
     <!--histórico-->
     <div class="dados-pais__historico">
-        <div class="dados-pais__historico-titulo-container" [class.dados-pais__historico-titulo-container--ativo]="historico_aberto"
-            (click)="historico_aberto = !historico_aberto">
-            <h3 class="dados-pais__historico-titulo">HISTÓRICO</h3>
-            <i class="fa fa-plus dados-pais__historico-icone" aria-hidden="true" *ngIf="!historico_aberto"></i>
-            <i class="fa fa-minus dados-pais__historico-icone" aria-hidden="true" *ngIf="historico_aberto"></i>
+        <div
+            class="dados-pais__historico-titulo-container"
+            [class.dados-pais__historico-titulo-container--ativo]="
+                historico_aberto
+            "
+            (click)="historico_aberto = !historico_aberto"
+        >
+            <h3 class="dados-pais__historico-titulo">
+                {{ "HISTÓRICO" | translate | async }}
+            </h3>
+            <i
+                class="fa fa-plus dados-pais__historico-icone"
+                aria-hidden="true"
+                *ngIf="!historico_aberto"
+            ></i>
+            <i
+                class="fa fa-minus dados-pais__historico-icone"
+                aria-hidden="true"
+                *ngIf="historico_aberto"
+            ></i>
         </div>
-        <div class="dados-pais__historico-paragrafos-container" [class.dados-pais__historico-paragrafos-container--aberto]="historico_aberto">
-            <p class="dados-pais__historico-paragrafo" *ngFor="let paragrafo of historico">
+        <div
+            class="dados-pais__historico-paragrafos-container"
+            [class.dados-pais__historico-paragrafos-container--aberto]="
+                historico_aberto
+            "
+        >
+            <p
+                class="dados-pais__historico-paragrafo"
+                *ngFor="let paragrafo of historico"
+            >
                 {{ paragrafo }}
             </p>
-            <div class="dados-pais__historico-degrade" *ngIf="!historico_aberto"></div>
+            <div
+                class="dados-pais__historico-degrade"
+                *ngIf="!historico_aberto"
+            ></div>
         </div>
         <div class="dados-pais__historico-mais-container">
-            <button class="dados-pais__historico-mais" (click)="historico_aberto = !historico_aberto">
-                <span class="dados-pais__historico-mais-label" *ngIf="!historico_aberto">Mostrar mais</span>
-                <span class="dados-pais__historico-mais-label" *ngIf="historico_aberto">Mostrar menos</span>
+            <button
+                class="dados-pais__historico-mais"
+                (click)="historico_aberto = !historico_aberto"
+            >
+                <span
+                    class="dados-pais__historico-mais-label"
+                    *ngIf="!historico_aberto"
+                    >{{ "Mostrar mais" | translate | async }}</span
+                >
+                <span
+                    class="dados-pais__historico-mais-label"
+                    *ngIf="historico_aberto"
+                    >{{ "Mostrar menos" | translate | async }}</span
+                >
             </button>
         </div>
     </div>

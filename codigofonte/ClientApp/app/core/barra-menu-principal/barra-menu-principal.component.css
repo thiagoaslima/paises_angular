@@ -7,13 +7,13 @@
     top: 30px;
 }
 
-.cabecalho{
+.cabecalho {
     width: 100%;
     height: 40px;
     position: relative;
 }
 
-.cabecalho__logo{
+.cabecalho__logo {
     margin: 0 0 0 0;
     display: inline-block;
     width: 25%;
@@ -22,18 +22,18 @@
     padding-right: 10px;
 }
 
-.cabecalho__logo-imagem{
+.cabecalho__logo-imagem {
     height: 30px;
     margin-top: -8px;
 }
 
-.cabecalho__campo-busca-container{
+.cabecalho__campo-busca-container {
     position: absolute;
     width: 100%;
     top: 40px;
 }
 
-.cabecalho__campo-busca{
+.cabecalho__campo-busca {
     border: none;
     padding: 0 34px 0 10px;
     display: inline-block;
@@ -43,14 +43,14 @@
     box-sizing: border-box;
 }
 
-.cabecalho__campo-busca-icone{
+.cabecalho__campo-busca-icone {
     position: absolute;
     top: 0px;
     right: 0px;
     padding: 10px;
 }
 
-.cabecalho__sugestao{
+.cabecalho__sugestao {
     background-color: #fff;
     position: absolute;
     margin-top: 3px;
@@ -58,69 +58,82 @@
     text-align: left;
     list-style: none;
     padding: 15px 0px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-.cabecalho__sugestao-item{
+.cabecalho__sugestao-item {
     padding: 8px 24px;
     display: block;
 }
 
-.cabecalho__sugestao-item:hover{
-    background-color: #F2F2F2;
+.cabecalho__sugestao-item:hover {
+    background-color: #f2f2f2;
 }
 
-.cabecalho__idioma-container{
+.cabecalho__idioma-container {
     float: right;
     margin-top: 9px;
     margin-right: 15px;
 }
 
-.cabecalho__idioma-button{
+.cabecalho__idioma-button {
     background: none;
     border: none;
     font-weight: bold;
     font-size: 0.8em;
 }
 
-.cabecalho__menu-container{
-    position: relative;
-	float: right;
+.cabecalho__idioma-button__selected {
+    color: white;
 }
 
-.cabecalho__menu-button{
+.cabecalho__idioma-button + .cabecalho__idioma-button {
+    margin-left: 5px;
+}
+.cabecalho__idioma-button + .cabecalho__idioma-button:before {
+    content: "|";
+    margin-right: 5px;
+    color: #333;
+}
+
+.cabecalho__menu-container {
+    position: relative;
+    float: right;
+}
+
+.cabecalho__menu-button {
     border: none;
     cursor: pointer;
-	background-color:transparent;
+    background-color: transparent;
     overflow: hidden;
     width: 40px;
     height: 40px;
 }
 
-.cabecalho__menu-button-label{
+.cabecalho__menu-button-label {
     color: #fff;
     font-size: 2em;
     margin: -15px 5px 0px 0px;
     display: inline-block;
 }
 
-.cabecalho__menu-icone{
+.cabecalho__menu-icone {
     color: #fff;
     font-size: 1.5em;
 }
 
-.cabecalho__menu{
+.cabecalho__menu {
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0 0;
     list-style: none;
 }
 
-.cabecalho__menu-item{
+.cabecalho__menu-item {
     padding: 5px 10px;
     color: #4f4f4f;
     text-decoration: none;
@@ -131,65 +144,64 @@
     font-size: 0.8em;
 }
 
-.cabecalho__menu-item--separator{
+.cabecalho__menu-item--separator {
     border-bottom: 1px solid #cbcbcb;
 }
 
-.cabecalho__menu-item--highlight{
+.cabecalho__menu-item--highlight {
     font-weight: bold;
 }
 
-.cabecalho__menu-item:hover{
-    background-color: #f1f1f1
+.cabecalho__menu-item:hover {
+    background-color: #f1f1f1;
 }
 
 /*desktop*/
 
-@media only screen and (min-width : 568px), print {
-    .cabecalho{
+@media only screen and (min-width: 568px), print {
+    .cabecalho {
         height: 50px;
         padding-top: 2px;
     }
 
-    .cabecalho__logo{
+    .cabecalho__logo {
     }
 
-    .cabecalho__logo-imagem{
+    .cabecalho__logo-imagem {
         height: 30px;
         margin-top: -2px;
     }
 
-    .cabecalho__campo-busca-container{
+    .cabecalho__campo-busca-container {
         display: inline-block;
         position: relative;
         width: 55%;
         top: initial;
     }
 
-    .cabecalho__campo-busca{
+    .cabecalho__campo-busca {
         border-radius: 10px;
     }
 
-    .cabecalho__sugestao{
+    .cabecalho__sugestao {
         border-radius: 10px;
     }
 
-    .cabecalho__menu-button-label{
+    .cabecalho__menu-button-label {
         margin: -5px 10px 0px 0px;
     }
 
-    .cabecalho__idioma-container{
+    .cabecalho__idioma-container {
         float: right;
         margin-top: 12px;
         margin-right: 15px;
     }
 }
 
-
 /*Versão para impressão*/
 
-@media print{
-    .cabecalho{
+@media print {
+    .cabecalho {
         position: relative;
     }
 
@@ -201,12 +213,11 @@
         background: linear-gradient(to right, #3bb2b8, #42e695) !important;
     }
 
-    .cabecalho__menu-button{
+    .cabecalho__menu-button {
         display: none;
     }
 
-    .cabecalho__campo-busca-container{
+    .cabecalho__campo-busca-container {
         display: none;
     }
-    
 }

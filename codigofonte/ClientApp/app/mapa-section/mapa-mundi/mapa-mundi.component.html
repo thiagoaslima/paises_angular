@@ -1,30 +1,50 @@
-<div leaflet 
-    [leafletLayers]="leafletLayers" 
+<div
+    leaflet
+    [leafletLayers]="leafletLayers"
     [leafletOptions]="mapOptions"
-    (leafletMapReady)="onMapReady($event)">
-</div>
-
+    (leafletMapReady)="onMapReady($event)"
+></div>
 
 <div class="mapa-legenda" *ngIf="indicador">
-    <h4 class="mapa-legenda-title">{{ indicador?.indicador }} {{ ano ? '('+ ano + ')' : '' }}</h4>
-    <ng-container *ngFor="let item of dados?.faixas; let idx = index; let first = first; let last = last; let len = count">
-    <div class="mapa-legenda-nivel">
-        <div class="mapa-legenda-cor" [ngClass]="'l-' + (dados?.faixas?.length - idx) + '-' + dados?.faixas?.length"></div>
-        <p class="mapa-legenda-marcador">
-            <span class="mapa-legenda-texto">
-                mais de
-                <!-- <ng-container *ngIf="!first">mais de</ng-container>
+    <h4 class="mapa-legenda-title">
+        {{ indicador?.indicador | translate | async }}
+        {{ ano ? "(" + ano + ")" : "" }}
+    </h4>
+    <ng-container
+        *ngFor="
+            let item of dados?.faixas;
+            let idx = index;
+            let first = first;
+            let last = last;
+            let len = count
+        "
+    >
+        <div class="mapa-legenda-nivel">
+            <div
+                class="mapa-legenda-cor"
+                [ngClass]="
+                    'l-' +
+                    (dados?.faixas?.length - idx) +
+                    '-' +
+                    dados?.faixas?.length
+                "
+            ></div>
+            <p class="mapa-legenda-marcador">
+                <span class="mapa-legenda-texto">
+                    {{ "mais de" | translate | async }}
+                    <!-- <ng-container *ngIf="!first">mais de</ng-container>
                 <ng-container *ngIf="first">menos de</ng-container> -->
-                {{ dados?.divisores[idx]?.toPrecision(2) | resultado}} {{ indicador?.unidade?.identificador }}
-            </span>
-        </p>
-    </div>
+                    {{ (dados?.divisores)[idx]?.toPrecision(2) | resultado }}
+                    {{ indicador?.unidade?.identificador | translate | async }}
+                </span>
+            </p>
+        </div>
     </ng-container>
     <div class="mapa-legenda-nivel">
         <div class="mapa-legenda-cor l-no-value"></div>
         <p class="mapa-legenda-marcador">
             <span class="mapa-legenda-texto">
-               Sem dados para este ano
+                {{ "sem dados para este ano" | translate | async }}
             </span>
         </p>
     </div>

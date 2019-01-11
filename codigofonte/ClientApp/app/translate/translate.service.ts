@@ -1,21 +1,13 @@
 import { Injectable, Inject } from "@angular/core";
-import {
-    Router,
-    NavigationEnd,
-    RouterEvent,
-    NavigationStart
-} from "@angular/router";
+import { Router, NavigationEnd, NavigationStart } from "@angular/router";
 
-import { TranslateServiceConfig } from "./translate.module";
 import {
     TranslateConfig,
     AppSupportedLanguage,
     TranslateDictionary
 } from "./translate.models";
-import { RouterParamsService } from "../shared";
 
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
-import { combineLatest } from "rxjs/observable/combineLatest";
 import {
     map,
     distinctUntilChanged,
@@ -24,28 +16,20 @@ import {
     share,
     take
 } from "rxjs/operators";
-import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class TranslateService {
-    navigationEnd$ = new Subject<string>();
-
     private _current$ = new BehaviorSubject<string>("");
-    currentId$ = this._current$.asObservable().distinctUntilChanged();
-
     private _languages$ = new BehaviorSubject<AppSupportedLanguage[]>([]);
-    languages$ = this._languages$.asObservable().distinctUntilChanged();
-
-    dictionaries: { [languageId: string]: TranslateDictionary } = {};
-
     private DEFAULT_LANGUAGE: string;
     private enableTracing = false;
+    private dictionaries: { [languageId: string]: TranslateDictionary } = {};
+    private simplifiedDictionaries: {
+        [languageId: string]: Map<string, string>;
+    } = {};
 
-    private location$ = this.currentId$.pipe(
-        skip(1),
-        filter(Boolean),
-        distinctUntilChanged()
-    );
+    currentId$ = this._current$.asObservable().distinctUntilChanged();
+    languages$ = this._languages$.asObservable().distinctUntilChanged();
 
     get languages(): AppSupportedLanguage[] {
         return this._languages$.getValue().slice();
@@ -62,23 +46,45 @@ export class TranslateService {
         return this.DEFAULT_LANGUAGE === this._current$.getValue();
     }
 
+    private location$ = this.currentId$.pipe(
+        skip(1),
+        filter(Boolean),
+        distinctUntilChanged()
+    );
+
     constructor(
         @Inject("TranslateServiceConfig") private config: TranslateConfig,
         private router: Router
     ) {
-        const initialLang = this.config.languages.reduce(
-            (agg, language) => (language.default ? language : agg)
+        const initialLang = this.config.languages.reduce((agg, language) =>
+            language.default ? language : agg
         );
         this.DEFAULT_LANGUAGE = initialLang.id;
         this.dictionaries = config.dictionaries;
+
+        for (let language in config.dictionaries) {
+            const dict = config.dictionaries[language];
+            this.simplifiedDictionaries[language] = Object.keys(dict).reduce(
+                (map, key) => {
+                    map.set(this.simplify(key), dict[key]);
+                    return map;
+                },
+                new Map()
+            );
+        }
+
+        console.dir(this.simplifiedDictionaries);
+
         this.enableTracing = Boolean(config.enableTracing);
         this._languages$.next(this.config.languages);
 
         this.router.events
-            .pipe(filter(event => event instanceof NavigationStart), take(1))
+            .pipe(
+                filter(event => event instanceof NavigationStart),
+                take(1)
+            )
             .subscribe((event: any) => {
-                debugger;
-                this.initialize(event.url, config);
+                this.initialize(event.url);
             });
     }
 
@@ -89,11 +95,17 @@ export class TranslateService {
     translate(term: string): string {
         const current = this._current$.getValue();
         const translation = this.dictionaries[current][term];
+        const _term = this.simplify(term);
+        const simplifiedTranslation = this.simplifiedDictionaries[current].get(
+            _term
+        );
         const defaultTranslation = this.dictionaries[this.DEFAULT_LANGUAGE][
             term
         ];
 
-        return translation || defaultTranslation || term;
+        return (
+            translation || simplifiedTranslation || defaultTranslation || term
+        );
     }
 
     pluckTranslation(object: Partial<{ [languageId: string]: string }>) {
@@ -118,10 +130,9 @@ export class TranslateService {
         }
     }
 
-    private initialize(url: string, config: TranslateConfig) {
+    private initialize(url: string) {
         const urlTree = this.router.parseUrl(url);
         const langQueryParam = urlTree.queryParamMap.get("lang");
-        debugger;
 
         this._current$.next(langQueryParam || this.DEFAULT_LANGUAGE);
         this.location$.subscribe(languageId => this.updateLocation(true));
@@ -129,7 +140,6 @@ export class TranslateService {
     }
 
     private updateLocation(force = false): void {
-        debugger;
         const url = this.router.url;
         const params = this.getRerouteParams(url, force);
 
@@ -157,7 +167,6 @@ export class TranslateService {
         const routeEventAnalysis$ = this.router.events.pipe(
             filter(event => event instanceof NavigationEnd),
             map((event: any) => {
-                debugger;
                 const url = (<NavigationEnd>event).urlAfterRedirects;
 
                 return this.getRerouteParams(url);
@@ -172,12 +181,6 @@ export class TranslateService {
         routeEventAnalysis$
             .pipe(filter(({ changeLanguage }) => Boolean(changeLanguage)))
             .subscribe(params => this.updateLanguage(params.queryParams.lang));
-
-        routeEventAnalysis$
-            .pipe(filter(({ reroute }) => !Boolean(reroute)))
-            .subscribe(({ url, queryParams, fragment }) =>
-                this.navigationEnd$.next(url)
-            );
     }
 
     private shouldIncludeLangQueryParameter(
@@ -252,5 +255,16 @@ export class TranslateService {
         }
 
         this.router.navigate([url], { queryParams, fragment });
+    }
+
+    private simplify(text: string) {
+        return text
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, "-") // Replace spaces with -
+            .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+            .replace(/\-\-+/g, "-") // Replace multiple - with single -
+            .replace(/^-+/, "") // Trim - from start of text
+            .replace(/-+$/, ""); // Trim - from end of text
     }
 }

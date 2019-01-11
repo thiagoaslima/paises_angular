@@ -30,7 +30,6 @@ export class DadosPaisService {
 
         return this._paisesService.getTodosDados(siglaPais).pipe(
             map(({ metadata, resultados }) => {
-                debugger;
                 console.time("#dadosPais process");
                 const resultadosMap = objArrayToMap(resultados);
 

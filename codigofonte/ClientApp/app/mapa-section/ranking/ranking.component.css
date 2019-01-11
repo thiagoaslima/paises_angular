@@ -1,28 +1,28 @@
 /*mobile*/
 
 .ranking {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 45px 15px 25px 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 45px 15px 25px 15px;
 }
 
 /*conteúdo*/
 
-.ranking__conteudo-container{
-	background-color: #d6d6d6;
-	border: 1px solid #bdbdbd;
+.ranking__conteudo-container {
+    background-color: #d6d6d6;
+    border: 1px solid #bdbdbd;
     border-top: none;
-	height: calc(100% - 45px);
+    height: calc(100% - 45px);
 }
 
 /*tabs*/
 
-.ranking__tab{
-	background-color: #d6d6d6;
+.ranking__tab {
+    background-color: #d6d6d6;
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
@@ -31,48 +31,48 @@
     font-weight: bold;
     font-size: 1.1em;
     padding: 10px;
-	border: 1px solid #bdbdbd;
+    border: 1px solid #bdbdbd;
     border-bottom: none;
-	line-height: 24px;
+    line-height: 24px;
 }
 
-.ranking__tab--left-disabled{
-	background-color: white;
+.ranking__tab--left-disabled {
+    background-color: white;
     padding: 3px;
     position: relative;
     bottom: -7px;
-	border-bottom: 1px solid #bdbdbd;
-	border-right: none;
-	border-radius: 10px 0px 0 0;
+    border-bottom: 1px solid #bdbdbd;
+    border-right: none;
+    border-radius: 10px 0px 0 0;
 }
 
 /*comboboxes*/
 
-.ranking__combobox{
-	border: none;
+.ranking__combobox {
+    border: none;
     border-radius: 20px;
     padding: 5px;
     font-weight: bold;
-	font-size: 0.9em;
+    font-size: 0.9em;
     display: inline-block;
     width: 100%;
     margin-bottom: 5px;
-	height: 30px;
+    height: 30px;
 }
 
 /*barra de título*/
 
 .ranking__cabecalho {
-	position: relative;
-	background-color: #3f3f3f;
+    position: relative;
+    background-color: #3f3f3f;
 }
 
 .ranking__opcoes {
-	padding: 20px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
 }
 
 .ranking__titulo {
-	font-size: 0.9em;
+    font-size: 0.9em;
     text-transform: uppercase;
     color: #ffffff;
     margin: 0;
@@ -92,7 +92,7 @@
 }
 
 .ranking__icone-fechar {
-	color: #fff;
+    color: #fff;
     font-size: 1.2em;
     padding-top: 10px;
 }
@@ -100,131 +100,129 @@
 /*menu auxiliar*/
 
 .ranking__menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
 }
 
 .ranking__menu-item {
-	display: inline-block;
+    display: inline-block;
     line-height: 32px;
     padding: 0 5px;
     font-size: 0.75em;
-	font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
-	color: #4f4f4f;
-	text-transform: uppercase;
-	cursor: pointer;
+    font-family: "RobotoMedium", Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 /*tabela*/
 
 .ranking__tabela {
-	border-collapse: collapse;
-	display: block;
-	height: calc(100% - 200px);
+    border-collapse: collapse;
+    display: block;
+    height: calc(100% - 200px);
     overflow: hidden;
 }
 
 .ranking__tabela-cabecalho {
-	display: block;
+    display: block;
 }
 
-.ranking__tabela-cabecalho-linha{
-	display: block;
-	border-bottom: 1px solid #CBCBCB;
-	white-space: nowrap;
+.ranking__tabela-cabecalho-linha {
+    display: block;
+    border-bottom: 1px solid #cbcbcb;
+    white-space: nowrap;
 }
 
-.ranking__tabela-cabecalho-celula{
-	display: inline-block;
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
-	color: #4f4f4f;
-	font-size: 1em;
-	line-height: 32px;
+.ranking__tabela-cabecalho-celula {
+    display: inline-block;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+    font-size: 1em;
+    line-height: 32px;
     padding: 5px 10px;
     white-space: normal;
 }
 
 .ranking__tabela-corpo {
-	display: block;
+    display: block;
     height: calc(100% - 66px);
     overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 20px;
 }
 
-.ranking__tabela-corpo-linha{
-	display: block;
-	width: 100%;
-	white-space: nowrap;
+.ranking__tabela-corpo-linha {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
 }
 
-.ranking__tabela-corpo-celula{
-	display: inline-block;
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
-	color: #4f4f4f;
-	font-size: 1em;
+.ranking__tabela-corpo-celula {
+    display: inline-block;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+    font-size: 1em;
     padding: 5px 10px;
-	white-space: initial;
+    white-space: initial;
 }
 
-.ranking__tabela-link{
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
-	color: #4f4f4f;
-	font-size: 1em;
+.ranking__tabela-link {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: #4f4f4f;
+    font-size: 1em;
 }
 
 .linha-selecionada {
-	background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .texto-centro {
-	text-align: center;
+    text-align: center;
 }
 
 .texto-branco {
-	color: white;
+    color: white;
 }
 
 .ranking__tabela-cabecalho-linha--escura {
-	background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
-.celula-pequena{
-	width: 25%;
+.celula-pequena {
+    width: 25%;
 }
 
-.celula-grande{
-	width: 45%;
+.celula-grande {
+    width: 45%;
 }
 
 /*botão comparar*/
 
-.ranking__comparar{
-	
+.ranking__comparar {
 }
 
-.ranking__comparar-link{
-	display: block;
+.ranking__comparar-link {
+    display: block;
     text-align: center;
     padding: 12px;
     background-color: #1b4393;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.0em;
+    font-size: 1em;
     border-radius: 7px;
     margin: 10px 30px;
-	filter: drop-shadow(4px 2px 4px #bdbdbd);
+    filter: drop-shadow(4px 2px 4px #bdbdbd);
 }
 
 /*desktop*/
-@media only screen and (min-width : 568px) {
-
-	.ranking {
-		width: 480px;
-		top: 50px;
-		bottom: 50px;
-		right: 50px;
-	}
-
+@media only screen and (min-width: 568px) {
+    .ranking {
+        width: 480px;
+        top: 50px;
+        bottom: 50px;
+        right: 50px;
+    }
 }

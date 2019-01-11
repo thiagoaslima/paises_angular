@@ -4,45 +4,80 @@
         <!--botão de fechar-->
         <a class="button sintese__botao-fechar" routerLink="/mapa">
             <!-- <button class="sintese__botao-fechar"> -->
-                <i class="fa fa-times sintese__icone-fechar" aria-hidden="true"></i>
+            <i class="fa fa-times sintese__icone-fechar" aria-hidden="true"></i>
             <!-- </button> -->
         </a>
     </div>
     <!--abas-->
     <div>
-        <span class="sintese__tab">Síntese</span><!--
-        --><a class="sintese__tab sintese__tab--right-disabled" [routerLink]="'/mapa/ranking/' + pais?.slug" [queryParams]="{indicador: linkIndicador, tema: linkTema, ano: linkAno}" queryParamsHandling="merge">Ranking</a>
+        <span class="sintese__tab">{{ "Síntese" | translate | async }}</span
+        ><!--
+        --><a
+            class="sintese__tab sintese__tab--right-disabled"
+            [routerLink]="'/mapa/ranking/' + pais?.slug"
+            [queryParams]="{
+                indicador: linkIndicador,
+                tema: linkTema,
+                ano: linkAno
+            }"
+            queryParamsHandling="merge"
+            >{{ "Ranking" | translate | async }}</a
+        >
     </div>
     <!--dados-->
     <div class="sintese__info-container">
         <ng-container *ngIf="pais && temDados && !loading">
+            <!--bandeira-->
+            <div class="sintese__bandeira-container">
+                <img
+                    alt="bandeira"
+                    [src]="imageSrc"
+                    class="sintese__bandeira-imagem"
+                />
+            </div>
 
-        <!--bandeira-->
-        <div class="sintese__bandeira-container">
-            <img alt="bandeira" [src]="imageSrc" class="sintese__bandeira-imagem">
-        </div>
+            <!--título-->
+            <h2 class="sintese__titulo" [title]="pais?.nome.pt">
+                {{ pais?.nome | translate | async }}
+            </h2>
 
-        <!--título-->
-        <h2 class="sintese__titulo" [title]="pais?.nome.pt">{{ pais?.nome.pt }}</h2>
+            <!--tabela de valores-->
+            <table class="sintese__tabela">
+                <tbody>
+                    <tr
+                        class="sintese__tabela-linha"
+                        *ngFor="let item of itens; let i = index"
+                    >
+                        <th class="sintese__tabela-nome">
+                            {{ item.titulo | translate | async }}
+                        </th>
+                        <td class="sintese__tabela-valor">
+                            {{ item.valor | resultado
+                            }}<span *ngIf="i == 1" class="sintese__tabela-valor"
+                                >Km<sup>2</sup></span
+                            >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--leia mais-->
+            <div class="sintese__leia-mais">
+                <a
+                    [routerLink]="'/dados/' + pais?.slug"
+                    class="sintese__leia-mais-link"
+                    >{{ "Mais sobre o país" | translate | async }}</a
+                >
+            </div>
+        </ng-container>
 
-        <!--tabela de valores-->      
-        <table class="sintese__tabela"> 
-            <tbody>
-                <tr class="sintese__tabela-linha" *ngFor="let item of itens; let i = index">
-                    <th class="sintese__tabela-nome">{{ item.titulo }}</th>
-                    <td class="sintese__tabela-valor">{{ item.valor | resultado }}<span *ngIf="i == 1" class="sintese__tabela-valor">Km<sup>2</sup></span></td>
-                </tr>
-            </tbody>
-        </table>
-        <!--leia mais-->
-        <div class="sintese__leia-mais">
-            <a [routerLink]="'/dados/' + pais?.slug" class="sintese__leia-mais-link">Mais sobre o país</a>
-        </div>
-
-    </ng-container>
-
-    <ng-container *ngIf="pais && !temDados && !loading">
-        <p class="sintese__tabela-nome">Não há dados sobre o país ou território escolhido</p>
-    </ng-container>
+        <ng-container *ngIf="pais && !temDados && !loading">
+            <p class="sintese__tabela-nome">
+                {{
+                    "Não há dados sobre o país ou território escolhido"
+                        | translate
+                        | async
+                }}
+            </p>
+        </ng-container>
     </div>
 </div>
