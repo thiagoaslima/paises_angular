@@ -1,7 +1,6 @@
-import { NgModule, ModuleWithProviders, Injector, PLATFORM_ID } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BasicCacheModule } from "./cache/basic-cache.module";
 import { TraducaoService } from './traducao.service';
 import { PesquisasService } from './pesquisas.service';
 import { PaisesService } from './paises-service';
@@ -24,7 +23,6 @@ export function platformDetectionFactory(platform_id: Object) {
 
 @NgModule({
     imports: [
-        BasicCacheModule,
         CommonModule,
     ],
     declarations: [
