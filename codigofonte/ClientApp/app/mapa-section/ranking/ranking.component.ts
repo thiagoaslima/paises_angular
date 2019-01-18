@@ -8,27 +8,27 @@ import {
     QueryList,
     OnInit,
     OnDestroy,
-    AfterViewInit
-} from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+    AfterViewInit,
+} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { Subject } from "rxjs";
+import { Subject } from 'rxjs/Subject';
 
 import {
     PaisesService,
     RouterParamsService,
     Pais,
     MetadataIndicador,
-    PaisesEnum
-} from "../../shared";
+    PaisesEnum,
+} from '../../shared';
 
 export const TEMA_DEFAULT = PaisesEnum.temas.populacao;
 export const INDICADOR_DEFAULT = PaisesEnum.populacao.populacao_total;
 
 @Component({
-    selector: "paises-ranking",
-    templateUrl: "./ranking.component.html",
-    styleUrls: ["./ranking.component.css"]
+    selector: 'paises-ranking',
+    templateUrl: './ranking.component.html',
+    styleUrls: ['./ranking.component.css'],
 })
 export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     pais$ = new Subject<Pais | null>();
@@ -36,8 +36,8 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
 
     @Input()
     set indicador(obj: MetadataIndicador | null) {
-        this.unidade = obj ? obj.unidade.identificador : "";
-        this.nomeIndicador = obj ? obj.indicador : "";
+        this.unidade = obj ? obj.unidade.identificador : '';
+        this.nomeIndicador = obj ? obj.indicador : '';
         this._indicador = obj;
     }
     get indicador() {
@@ -68,12 +68,12 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
         return this._dados;
     }
 
-    @ViewChild("scrollEl") public scrollElement: ElementRef;
-    @ViewChildren("cty") public countries: QueryList<ElementRef>;
-    public paisSelecionado = "";
+    @ViewChild('scrollEl') public scrollElement: ElementRef;
+    @ViewChildren('cty') public countries: QueryList<ElementRef>;
+    public paisSelecionado = '';
 
-    unidade = "";
-    nomeIndicador = "";
+    unidade = '';
+    nomeIndicador = '';
     tema$ = new Subject<number>();
     temas$ = this._paisesService.getTemas();
 
@@ -136,7 +136,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     getIndicadores(temaId: number) {
         this._paisesService.getIndicadores(temaId).subscribe(indicadores => {
             this.indicadores = [
-                { indicador: "Selecione um indicador" } as MetadataIndicador
+                { indicador: 'Selecione um indicador' } as MetadataIndicador,
             ].concat(indicadores);
 
             if (this.indicadorId) {
@@ -179,17 +179,17 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
                 queryParams: {
                     tema: this.temaId,
                     indicador: this.indicadorId,
-                    ano: this.ano
+                    ano: this.ano,
                 },
-                queryParamsHandling: "merge",
-                relativeTo: this._route
+                queryParamsHandling: 'merge',
+                relativeTo: this._route,
             });
         }
     }
 
     updatePeriodos(indicador: any) {
         this.periodos = indicador
-            ? ["Selecione o período desejado"].concat(
+            ? ['Selecione o período desejado'].concat(
                   indicador.fontes
                       .map((fonte: any) => fonte.periodo)
                       .sort()

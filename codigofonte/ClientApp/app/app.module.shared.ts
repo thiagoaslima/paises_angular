@@ -51,7 +51,7 @@ import { CacheInterceptor } from './shared/cache/cache.interceptor';
                 en: require('../locale/paises-en.json'),
                 es: require('../locale/paises-es.json'),
             },
-            enableTracing: true,
+            enableTracing: false,
         }),
     ],
 })

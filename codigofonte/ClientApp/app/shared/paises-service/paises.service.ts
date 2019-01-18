@@ -105,10 +105,10 @@ export class PaisesService extends RequestService {
             map(metadata =>
                 this.flatMetadata(metadata).map(this.toMetadataModel)
             ),
-            map(this._hackTemaSaude),
-            tap(val => {
-                console.log(val);
-            })
+            map(this._hackTemaSaude)
+            // tap(val => {
+            //     console.log(val);
+            // })
         );
     }
 

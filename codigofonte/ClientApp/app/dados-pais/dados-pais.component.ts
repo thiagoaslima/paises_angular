@@ -172,7 +172,7 @@ export class DadosPaisComponent {
         //let blob = new Blob([csv], { type: "text/csv" });
         //FileSaver.saveAs(blob, "dados_pais.csv");
 
-        console.log(csv);
-        console.log(this.temas);
+        // console.log(csv);
+        // console.log(this.temas);
     }
 }

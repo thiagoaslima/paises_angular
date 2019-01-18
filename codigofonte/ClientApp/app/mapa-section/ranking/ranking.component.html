@@ -14,8 +14,8 @@
         <a
             class="ranking__tab ranking__tab--left-disabled"
             [routerLink]="'/mapa/' + pais?.slug"
-            >{{ "Síntese" | translate | async }}</a
-        ><span class="ranking__tab">{{ "Ranking" | translate | async }}</span>
+            >{{ 'Síntese' | translate | async }}</a
+        ><span class="ranking__tab">{{ 'Ranking' | translate | async }}</span>
     </div>
 
     <!--conteúdo-->
@@ -63,13 +63,13 @@
                     *ngFor="let periodo of periodos; let first = first"
                 >
                     <option *ngIf="first && !pristine" disabled selected>{{
-                        periodo
+                        periodo | translate | async
                     }}</option>
                     <option
                         *ngIf="!first"
                         [value]="periodo"
                         [selected]="periodo == ano"
-                        >{{ periodo }}</option
+                        >{{ periodo | translate | async }}</option
                     >
                 </ng-container>
             </select>
@@ -90,15 +90,15 @@
                     <th
                         class="ranking__tabela-cabecalho-celula texto-centro celula-pequena"
                     >
-                        {{ "Posição" | translate | async }}
+                        {{ 'Posição' | translate | async }}
                         <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                     </th>
                     <th class="ranking__tabela-cabecalho-celula celula-grande">
-                        {{ "País" | translate | async }}
+                        {{ 'País' | translate | async }}
                         <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                     </th>
                     <th class="ranking__tabela-cabecalho-celula celula-pequena">
-                        {{ unidade }}
+                        {{ unidade | translate | async }}
                     </th>
                 </tr>
                 <!--celula de destaque-->
@@ -160,7 +160,7 @@
             <a
                 [routerLink]="['/mapa', 'comparar', pais?.slug]"
                 class="ranking__comparar-link"
-                >{{ "Comparar países" | translate | async }}</a
+                >{{ 'Comparar países' | translate | async }}</a
             >
         </div>
     </div>

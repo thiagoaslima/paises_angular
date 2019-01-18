@@ -20,7 +20,6 @@ export class CacheService {
               type: ICacheValueType;
           }
         | undefined {
-        debugger;
         const url = request.urlWithParams;
         const cached = this.cache.get(url);
 
@@ -43,7 +42,6 @@ export class CacheService {
         response: HttpResponse<any> | Observable<any>,
         type: ICacheValueType = ICacheValueType.value
     ): void {
-        debugger;
         const url = req.urlWithParams;
         const entry = { url, response, type, lastRead: Date.now() };
         this.cache.set(url, entry);

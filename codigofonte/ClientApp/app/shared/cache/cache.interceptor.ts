@@ -18,7 +18,6 @@ export class CacheInterceptor implements HttpInterceptor {
     constructor(private cache: CacheService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler) {
-        debugger;
         let cachedResponse = this.cache.get(request);
         let tempCache: Observable<HttpEvent<any>>;
 
