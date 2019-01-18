@@ -6,7 +6,7 @@
             <a
                 [routerLink]="'/mapa/' + pais?.slug"
                 class="dados-pais__menu-botao"
-                >{{ "Voltar ao mapa" | translate | async }}</a
+                >{{ 'Voltar ao mapa' | translate | async }}</a
             >
         </li>
 
@@ -14,7 +14,7 @@
             <!--<button class="dados-pais__menu-botao">{{'dados-pais__imprimir' | l10n}}</button>-->
             <span
                 class="dados-pais__menu-botao dados-pais__menu-botao--ativo"
-                >{{ "Sobre o país" | translate | async }}</span
+                >{{ 'Sobre o país' | translate | async }}</span
             >
         </li>
 
@@ -23,7 +23,7 @@
             <a
                 [routerLink]="'/mapa/comparar/' + pais?.slug"
                 class="dados-pais__menu-botao"
-                >{{ "Comparar países" | translate | async }}</a
+                >{{ 'Comparar países' | translate | async }}</a
             >
         </li>
 
@@ -122,7 +122,7 @@
             (click)="historico_aberto = !historico_aberto"
         >
             <h3 class="dados-pais__historico-titulo">
-                {{ "HISTÓRICO" | translate | async }}
+                {{ 'HISTÓRICO' | translate | async }}
             </h3>
             <i
                 class="fa fa-plus dados-pais__historico-icone"
@@ -141,12 +141,16 @@
                 historico_aberto
             "
         >
-            <p
-                class="dados-pais__historico-paragrafo"
-                *ngFor="let paragrafo of historico"
-            >
-                {{ paragrafo }}
-            </p>
+            <ng-container *ngIf="historico.valor">
+                <p
+                    class="dados-pais__historico-paragrafo"
+                    *ngFor="
+                        let paragrafo of (historico.valor | translate | async)
+                    "
+                >
+                    {{ paragrafo }}
+                </p>
+            </ng-container>
             <div
                 class="dados-pais__historico-degrade"
                 *ngIf="!historico_aberto"
@@ -160,12 +164,12 @@
                 <span
                     class="dados-pais__historico-mais-label"
                     *ngIf="!historico_aberto"
-                    >{{ "Mostrar mais" | translate | async }}</span
+                    >{{ 'Mostrar mais' | translate | async }}</span
                 >
                 <span
                     class="dados-pais__historico-mais-label"
                     *ngIf="historico_aberto"
-                    >{{ "Mostrar menos" | translate | async }}</span
+                    >{{ 'Mostrar menos' | translate | async }}</span
                 >
             </button>
         </div>

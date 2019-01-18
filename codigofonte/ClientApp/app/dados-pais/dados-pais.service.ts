@@ -1,19 +1,19 @@
-import { Injectable } from "@angular/core";
-import { map } from "rxjs/operators/map";
-import { tap } from "rxjs/operators/tap";
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators/map';
+import { tap } from 'rxjs/operators/tap';
 
-import { PaisesEnum, PaisesService } from "../shared";
-import { objArrayToMap } from "../../utils";
+import { PaisesEnum, PaisesService } from '../shared';
+import { objArrayToMap } from '../../utils';
 
 @Injectable()
 export class DadosPaisService {
     private _dictionary: { [key: number]: string } = {
-        [PaisesEnum.temas.sintese]: "sintese",
-        [PaisesEnum.temas.economia]: "economia",
-        [PaisesEnum.temas.sociais]: "sociais",
-        [PaisesEnum.temas.ambiente]: "ambiente",
-        [PaisesEnum.temas.populacao]: "populacao",
-        [PaisesEnum.temas.telefonia]: "telefonia"
+        [PaisesEnum.temas.sintese]: 'sintese',
+        [PaisesEnum.temas.economia]: 'economia',
+        [PaisesEnum.temas.sociais]: 'sociais',
+        [PaisesEnum.temas.ambiente]: 'ambiente',
+        [PaisesEnum.temas.populacao]: 'populacao',
+        [PaisesEnum.temas.telefonia]: 'telefonia',
     };
     constructor(private _paisesService: PaisesService) {}
 
@@ -25,12 +25,12 @@ export class DadosPaisService {
             PaisesEnum.temas.ambiente,
             PaisesEnum.temas.populacao,
             PaisesEnum.temas.telefonia,
-            PaisesEnum.temas.saude
+            PaisesEnum.temas.saude,
         ];
 
         return this._paisesService.getTodosDados(siglaPais).pipe(
             map(({ metadata, resultados }) => {
-                console.time("#dadosPais process");
+                console.time('#dadosPais process');
                 const resultadosMap = objArrayToMap(resultados);
 
                 const dados = temas.reduce(
@@ -38,11 +38,11 @@ export class DadosPaisService {
                         const item = metadata.find(
                             obj => obj.posicao === tema.toString()
                         );
-                        const nomeTema = item ? item.indicador : "";
+                        const nomeTema = item ? item.indicador : '';
 
                         agg[tema] = {
                             tema: nomeTema,
-                            valores: []
+                            valores: [],
                         };
                         return agg;
                     },
@@ -50,7 +50,7 @@ export class DadosPaisService {
                 );
 
                 for (let met of metadata) {
-                    let posicao = met.posicao.split(".");
+                    let posicao = met.posicao.split('.');
                     if (posicao.length === 1) {
                         continue;
                     }
@@ -82,18 +82,18 @@ export class DadosPaisService {
                         valores: valores,
                         periodos: periodos,
                         unidade: met.unidade,
-                        fontes: met.fontes
+                        fontes: met.fontes,
                     };
 
                     dados[temaId].valores.push(obj);
                 }
 
-                console.timeEnd("#dadosPais process");
+                console.timeEnd('#dadosPais process');
 
                 return Object.keys(dados).map(key => {
                     let obj = dados[parseInt(key, 10)];
-                    obj.valores.sort(
-                        (a: any, b: any) => (a.titulo > b.titulo ? -1 : 1)
+                    obj.valores.sort((a: any, b: any) =>
+                        a.titulo > b.titulo ? -1 : 1
                     );
                     return obj;
                 });
@@ -102,14 +102,6 @@ export class DadosPaisService {
     }
 
     getHistorico(paisSigla: string) {
-        return this._paisesService.getHistorico(paisSigla).pipe(
-            map(resultado =>
-                resultado.valor
-                    .trim()
-                    .replace(/^<p>/, "")
-                    .replace(/<\/p>$/, "")
-                    .split("</p><p>")
-            )
-        );
+        return this._paisesService.getHistorico(paisSigla);
     }
 }
