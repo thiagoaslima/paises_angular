@@ -142,14 +142,26 @@
             "
         >
             <ng-container *ngIf="historico.valor">
-                <p
-                    class="dados-pais__historico-paragrafo"
+                <ng-container
                     *ngFor="
                         let paragrafo of (historico.valor | translate | async)
                     "
                 >
-                    {{ paragrafo }}
-                </p>
+                    <p
+                        *ngIf="paragrafo.trim().indexOf('http') !== 0"
+                        class="dados-pais__historico-paragrafo"
+                    >
+                        {{ paragrafo }}
+                    </p>
+                    <a
+                        style="display: inline-block"
+                        *ngIf="paragrafo.trim().indexOf('http') === 0"
+                        class="dados-pais__historico-paragrafo"
+                        [href]="paragrafo"
+                    >
+                        {{ paragrafo }}
+                    </a>
+                </ng-container>
             </ng-container>
             <div
                 class="dados-pais__historico-degrade"

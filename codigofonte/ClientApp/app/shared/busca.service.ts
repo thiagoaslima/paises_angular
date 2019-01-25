@@ -2,29 +2,25 @@ import { Injectable } from '@angular/core';
 
 import { transformText } from '../../utils';
 import { LocalidadeService } from './localidade/localidade.service';
-import { PaisesService } from "./paises-service";
-import { LANGUAGES } from './traducao.service';
 
 @Injectable()
 export class BuscaService {
-
     MAX_RESULTS = 6;
     MIN_WORD_SIZE = 3;
 
-    constructor(
-        private _localidadeService: LocalidadeService,
-        private _paisesService: PaisesService
-    ) { }
+    constructor(private _localidadeService: LocalidadeService) {}
 
     /*
         Método público de busca.
     */
-    public search(text: string, lang: LANGUAGES = "pt") {
+    public search(text: string, lang: string = 'pt') {
         var i;
-        var placesFound = [];
+        var placesFound: any[] = [];
         var transformedText = transformText(text);
         var textWords = transformedText.split('-');
-        var places = this._localidadeService.getAllPaises().filter(pais => pais.onu) as any;
+        var places = this._localidadeService
+            .getAllPaises()
+            .filter(pais => pais.onu) as any;
         //encontra local via ddi
         for (i = 0; i < textWords.length; i++) {
             if (!isNaN(parseFloat(textWords[i]))) {
@@ -42,30 +38,59 @@ export class BuscaService {
             var apelidos: string[] = local.apelidos[lang];
             var nome = local.nome[lang];
             var slugs = apelidos.concat([nome]);
-            for(var j = 0; j < slugs.length; j++){
+            for (var j = 0; j < slugs.length; j++) {
                 if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
                 var slug = transformText(slugs[j]);
                 var index = transformedText.indexOf(slug);
                 var length = slug.length;
-                if ((index == 0 || transformedText.charAt(index - 1) == '-') &&
-                    (index + length == transformedText.length || transformedText.charAt(index + length) == '-')) { //match whole word
+                if (
+                    (index == 0 || transformedText.charAt(index - 1) == '-') &&
+                    (index + length == transformedText.length ||
+                        transformedText.charAt(index + length) == '-')
+                ) {
+                    //match whole word
                     placesFound.push(places[i]);
                 }
             }
         }
         //sugere um local baseado nas últimas 4, 3, 2 ou 1 palavra(s)
         var words4, words3, words2, words1;
-        var sug4 = [], sug3 = [], sug2 = [], sug1 = [];
-        if (textWords.length >= 4) words4 = textWords[textWords.length - 4] + '-' + textWords[textWords.length - 3] + '-' + textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
-        if (textWords.length >= 3) words3 = textWords[textWords.length - 3] + '-' + textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
-        if (textWords.length >= 2) words2 = textWords[textWords.length - 2] + '-' + textWords[textWords.length - 1];
-        if (textWords.length >= 1 && textWords[textWords.length - 1].length >= this.MIN_WORD_SIZE) words1 = textWords[textWords.length - 1];
+        var sug4 = [],
+            sug3 = [],
+            sug2 = [],
+            sug1 = [];
+        if (textWords.length >= 4)
+            words4 =
+                textWords[textWords.length - 4] +
+                '-' +
+                textWords[textWords.length - 3] +
+                '-' +
+                textWords[textWords.length - 2] +
+                '-' +
+                textWords[textWords.length - 1];
+        if (textWords.length >= 3)
+            words3 =
+                textWords[textWords.length - 3] +
+                '-' +
+                textWords[textWords.length - 2] +
+                '-' +
+                textWords[textWords.length - 1];
+        if (textWords.length >= 2)
+            words2 =
+                textWords[textWords.length - 2] +
+                '-' +
+                textWords[textWords.length - 1];
+        if (
+            textWords.length >= 1 &&
+            textWords[textWords.length - 1].length >= this.MIN_WORD_SIZE
+        )
+            words1 = textWords[textWords.length - 1];
         for (i = 0; i < places.length; i++) {
             var local = places[i];
             var apelidos: string[] = local.apelidos[lang];
             var nome = local.nome[lang];
             var slugs = apelidos.concat([nome]);
-            for(var j = 0; j < slugs.length; j++){
+            for (var j = 0; j < slugs.length; j++) {
                 if (placesFound.indexOf(places[i]) >= 0) continue; //não inclui duas vezes o mesmo local no array de locais encontrados
                 var slug = transformText(slugs[j]);
                 if (words4 && slug.indexOf(words4) == 0) {
@@ -76,7 +101,8 @@ export class BuscaService {
                     sug2.push(places[i]);
                 } else if (words1) {
                     var index = slug.indexOf(words1);
-                    if (index == 0 || slug.charAt(index - 1) == '-') //só considera se encontrou o texto no início da palavra(não no meio)
+                    if (index == 0 || slug.charAt(index - 1) == '-')
+                        //só considera se encontrou o texto no início da palavra(não no meio)
                         sug1.push(places[i]);
                 }
             }
@@ -109,10 +135,13 @@ export class BuscaService {
                 }
             }
         }*/
+        // remove resultados iguais
+        placesFound = Array.from(new Set(placesFound));
+
         //remove resultados excessivos
         if (placesFound.length > this.MAX_RESULTS)
             placesFound = placesFound.slice(0, this.MAX_RESULTS);
+
         return placesFound;
     }
-
 }

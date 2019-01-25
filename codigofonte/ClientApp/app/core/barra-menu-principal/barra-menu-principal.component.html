@@ -1,31 +1,71 @@
 <header class="cabecalho gradiente">
     <!-->logo
     <-->
-        <h1 class="cabecalho__logo">
-            <a routerLink="/"><img src="../../../img/topo-logomobile.svg" class="cabecalho__logo-imagem"></a>
-        </h1>
-        <!-->campo de busca com lista de sugestões
+    <h1 class="cabecalho__logo">
+        <a routerLink="/"
+            ><img
+                src="../../../img/topo-logomobile.svg"
+                class="cabecalho__logo-imagem"
+        /></a>
+    </h1>
+    <!-->campo de busca com lista de sugestões
         <-->
-            <div class="cabecalho__campo-busca-container" [class.popup-layer]="resultados && resultados.length>0">
-                <div class="overlay" *ngIf="resultados && resultados.length>0" (click)="limpaResultados()"></div>
-                <input type="search" class="cabecalho__campo-busca" autocomplete="off" (focus)="busca($event)" (input)="busca($event)">
-                <i class="fa fa-search cabecalho__campo-busca-icone" aria-hidden="true"></i>
-                <ul class="cabecalho__sugestao" *ngIf="resultados && resultados.length>0">
-                    <li *ngFor="let resultado of resultados" (click)="limpaResultados()">
-                        <a [routerLink]="'mapa/' + resultado.slug" class="cabecalho__sugestao-item">{{ resultado.nome[lang] }}</a>
-                    </li>
-                </ul>
-            </div>
-            <!--seleção de idioma, versão final-->
-            <div class="cabecalho__idioma-container">
-                <button *ngFor="let idioma of idiomas" class="cabecalho__idioma-button" [class.cabecalho__idioma-button__selected]="idioma.id == (currentLanguage$ | async)"
-                    [title]="idioma.fullname" (click)="mudarIdioma(idioma.id)">{{ idioma.id | uppercase }}</button>
-            </div>
+    <div
+        class="cabecalho__campo-busca-container"
+        [class.popup-layer]="resultados && resultados.length > 0"
+    >
+        <div
+            class="overlay"
+            *ngIf="resultados && resultados.length > 0"
+            (click)="limpaResultados()"
+        ></div>
+        <input
+            #searchInput
+            type="search"
+            class="cabecalho__campo-busca"
+            autocomplete="off"
+            [value]="term$ | async"
+            (keyup)="busca($event.target.value)"
+        />
+        <i
+            class="fa fa-search cabecalho__campo-busca-icone"
+            aria-hidden="true"
+        ></i>
+        <ul
+            class="cabecalho__sugestao"
+            *ngIf="resultados && resultados.length > 0"
+        >
+            <li
+                class="cabecalho__sugestao__item"
+                *ngFor="let resultado of resultados"
+                (click)="limpaResultados()"
+            >
+                <a
+                    [routerLink]="'mapa/' + resultado.slug"
+                    class="cabecalho__sugestao-item"
+                    >{{ resultado.nome | translate | async }}</a
+                >
+            </li>
+        </ul>
+    </div>
+    <!--seleção de idioma, versão final-->
+    <div class="cabecalho__idioma-container">
+        <button
+            *ngFor="let idioma of idiomas"
+            class="cabecalho__idioma-button"
+            [class.cabecalho__idioma-button__selected]="
+                idioma.id == (currentLanguage$ | async)
+            "
+            [title]="idioma.fullname"
+            (click)="mudarIdioma(idioma.id)"
+        >
+            {{ idioma.id | uppercase }}
+        </button>
+    </div>
 
-
-            <!-->menu
+    <!-->menu
             <-->
-                <!--<div class="cabecalho__menu-container altura2" [class.altura2]="mostraMenu==true">
+    <!--<div class="cabecalho__menu-container altura2" [class.altura2]="mostraMenu==true">
         <div class="overlay" *ngIf="mostraMenu==true" (click)="mostraMenu=false"></div>
         <button class="cabecalho__menu-button" (click)="mostraMenu=true">
             <span class="cabecalho__menu-button-label">...</span>

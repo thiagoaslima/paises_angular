@@ -1,32 +1,105 @@
-import { Component } from "@angular/core";
+import {
+    Component,
+    ViewChild,
+    OnInit,
+    OnDestroy,
+    AfterViewInit,
+    Inject,
+    ElementRef,
+} from '@angular/core';
 
-import { BuscaService, TraducaoService } from "../../shared";
-import { LANGUAGES } from "../../shared/traducao.service";
-import { TranslateService } from "../../translate/translate.service";
+import { BuscaService } from '../../shared';
+import { TranslateService } from '../../translate/translate.service';
+import { Subject } from 'rxjs/Subject';
+import {
+    distinctUntilChanged,
+    debounceTime,
+    takeUntil,
+    filter,
+    switchMap,
+    tap,
+    take,
+} from 'rxjs/operators';
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
-    selector: "barra-menu-principal",
-    templateUrl: "./barra-menu-principal.component.html",
-    styleUrls: ["./barra-menu-principal.component.css"]
+    selector: 'barra-menu-principal',
+    templateUrl: './barra-menu-principal.component.html',
+    styleUrls: ['./barra-menu-principal.component.css'],
 })
-export class BarraMenuPrincipalComponent {
+export class BarraMenuPrincipalComponent
+    implements OnInit, OnDestroy, AfterViewInit {
     resultados: Array<any> = [];
     idiomas = this.translateService.languages;
     currentLanguage$ = this.translateService.currentId$;
 
     mostraMenu = false;
+    term$ = new Subject<string>();
+    destroy$ = new Subject<void>();
+    searching$ = new Subject<void>();
+
+    @ViewChild('searchInput') searchInput: ElementRef | null = null;
 
     constructor(
         private _buscaService: BuscaService,
-        private _traducaoService: TraducaoService,
-        private translateService: TranslateService
+        private translateService: TranslateService,
+        @Inject(DOCUMENT) private document: Document
     ) {}
 
-    busca(event: any) {
-        this.resultados = this._buscaService.search(
-            event.target.value,
-            <LANGUAGES>this.lang
-        );
+    ngOnInit() {
+        this.term$
+            .pipe(
+                debounceTime(350),
+                distinctUntilChanged(),
+                takeUntil(this.destroy$)
+            )
+            .subscribe(term => {
+                if (!term) {
+                    this.resultados = [];
+                }
+
+                this.resultados = this._buscaService.search(
+                    term,
+                    this.translateService.currentLanguage.id
+                );
+            });
+    }
+
+    ngAfterViewInit(): void {
+        if (this.document && this.searchInput) {
+            fromEvent(this.searchInput.nativeElement, 'focus')
+                .pipe(
+                    takeUntil(this.destroy$),
+                    switchMap(() => {
+                        const globalClick$ = fromEvent(this.document, 'click');
+                        return globalClick$.pipe(
+                            filter((evt: any) => {
+                                const elemClasses =
+                                    evt.target.getAttribute('class') || '';
+                                return ![
+                                    'cabecalho__campo-busca',
+                                    'cabecalho__sugestao',
+                                ].some(classname =>
+                                    elemClasses.includes(classname)
+                                );
+                            }),
+                            tap(() => this.term$.next('')),
+                            take(1)
+                        );
+                    })
+                )
+                .subscribe(() => {});
+        }
+    }
+
+    ngOnDestroy() {
+        this.destroy$.next();
+        this.destroy$.complete();
+    }
+
+    busca(term: string) {
+        this.term$.next(term);
     }
 
     limpaResultados() {
@@ -39,14 +112,9 @@ export class BarraMenuPrincipalComponent {
 
     mudarIdioma(idioma: string) {
         this.translateService.updateLanguage(idioma);
-        // this._traducaoService.lang = idioma;
     }
 
-    public set lang(value: string) {
-        this._traducaoService.lang = value;
-    }
-
-    public get lang() {
-        return this._traducaoService.lang;
+    enter() {
+        this.searching$.next();
     }
 }
