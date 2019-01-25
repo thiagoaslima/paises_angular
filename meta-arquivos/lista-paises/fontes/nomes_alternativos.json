@@ -1,6 +1,13 @@
 [
     {
         "nome": {
+            "pt": "Belarus"
+        },
+        "referencia_onu": "Bahamas",
+        "a2_code": "BY"
+    },
+    {
+        "nome": {
             "en": "Bahamas, The"
         },
         "referencia_onu": "Bahamas",
