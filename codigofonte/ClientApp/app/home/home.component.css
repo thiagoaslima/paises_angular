@@ -5,6 +5,8 @@
     background-image: url("/img/mapa-mundi.png");
     background-size: cover;
     background-position: center;
+    background-color: rgba(120,121,120,0.6);
+    background-blend-mode: multiply;
 }
 
 .home__image{
