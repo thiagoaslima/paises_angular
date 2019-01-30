@@ -516,7 +516,9 @@
         "apelidos": {
             "en": [],
             "es": [],
-            "pt": []
+            "pt": [
+                "Belarus"
+            ]
         },
         "slugs": {
             "en": "belarus",
@@ -1150,6 +1152,7 @@
         },
         "apelidos": {
             "en": [
+                "China, mainland",
                 "China, People's Republic of"
             ],
             "es": [
@@ -1806,25 +1809,29 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "238",
-        "slug": "ilhas-falkland",
+        "slug": "ilhas-malvinas",
         "sigla": "FK",
         "sigla3": "FLK",
         "nome": {
             "en": "Falkland Islands (Malvinas)",
             "es": "Islas Malvinas (Falkland)",
-            "pt": "Ilhas Falkland"
+            "pt": "Ilhas Malvinas"
         },
         "apelidos": {
             "en": [
                 "Falkland Islands (Islas Malvinas)"
             ],
-            "es": [],
-            "pt": []
+            "es": [
+                "Islas Falkland"
+            ],
+            "pt": [
+                "Ilhas Falkland"
+            ]
         },
         "slugs": {
             "en": "falkland-islands-malvinas",
             "es": "islas-malvinas-falkland",
-            "pt": "ilhas-falkland"
+            "pt": "ilhas-malvinas"
         },
         "ddi": "500",
         "onu": false
@@ -2896,23 +2903,25 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "398",
-        "slug": "casaquistao",
+        "slug": "cazaquistao",
         "sigla": "KZ",
         "sigla3": "KAZ",
         "nome": {
             "en": "Kazakhstan",
             "es": "Kazajstán",
-            "pt": "Casaquistão"
+            "pt": "Cazaquistão"
         },
         "apelidos": {
             "en": [],
             "es": [],
-            "pt": []
+            "pt": [
+                "Casaquistão"
+            ]
         },
         "slugs": {
             "en": "kazakhstan",
             "es": "kazajstan",
-            "pt": "casaquistao"
+            "pt": "cazaquistao"
         },
         "ddi": "7",
         "onu": true
@@ -2971,25 +2980,27 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "408",
-        "slug": "coreia-do-norte",
+        "slug": "republica-popular-democratica-da-coreia",
         "sigla": "KP",
         "sigla3": "PRK",
         "nome": {
             "en": "Democratic People's Republic of Korea",
             "es": "República Popular Democrática de Corea",
-            "pt": "Coréia do Norte"
+            "pt": "República Popular Democrática da Coréia"
         },
         "apelidos": {
             "en": [
                 "Korea, North"
             ],
             "es": [],
-            "pt": []
+            "pt": [
+                "Coréia do Norte"
+            ]
         },
         "slugs": {
             "en": "democratic-peoples-republic-of-korea",
             "es": "republica-popular-democratica-de-corea",
-            "pt": "coreia-do-norte"
+            "pt": "republica-popular-democratica-da-coreia"
         },
         "ddi": "850",
         "onu": true
@@ -2998,13 +3009,13 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "410",
-        "slug": "coreia-do-sul",
+        "slug": "republica-da-coreia",
         "sigla": "KR",
         "sigla3": "KOR",
         "nome": {
             "en": "Republic of Korea",
             "es": "República de Corea",
-            "pt": "Coréia do Sul"
+            "pt": "República da Coréia"
         },
         "apelidos": {
             "en": [
@@ -3012,12 +3023,14 @@
                 "Korea (Republic of)"
             ],
             "es": [],
-            "pt": []
+            "pt": [
+                "Coréia do Sul"
+            ]
         },
         "slugs": {
             "en": "republic-of-korea",
             "es": "republica-de-corea",
-            "pt": "coreia-do-sul"
+            "pt": "republica-da-coreia"
         },
         "ddi": "82",
         "onu": true
@@ -3312,7 +3325,9 @@
             "pt": "China, Macao"
         },
         "apelidos": {
-            "en": [],
+            "en": [
+                "China, Macao SAR"
+            ],
             "es": [],
             "pt": []
         },
@@ -3860,29 +3875,32 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "104",
-        "slug": "mianma",
+        "slug": "mianmar",
         "sigla": "MM",
         "sigla3": "MMR",
         "nome": {
             "en": "Myanmar",
             "es": "Myanmar",
-            "pt": "Mianma"
+            "pt": "Mianmar"
         },
         "apelidos": {
             "en": [
-                "Burma"
+                "Burma",
+                "Republic of the Union of Myanmar"
             ],
             "es": [
-                "Birmania"
+                "Birmania",
+                "República de la Unión de Myanmar"
             ],
             "pt": [
-                "Birmânia"
+                "Birmânia",
+                "República da União de Myanmar"
             ]
         },
         "slugs": {
             "en": "myanmar",
             "es": "myanmar",
-            "pt": "mianma"
+            "pt": "mianmar"
         },
         "ddi": "95",
         "onu": true
@@ -4300,7 +4318,9 @@
             "pt": "Palestina"
         },
         "apelidos": {
-            "en": [],
+            "en": [
+                "Palestine"
+            ],
             "es": [],
             "pt": []
         },
@@ -5515,7 +5535,8 @@
         },
         "apelidos": {
             "en": [
-                "Taiwan"
+                "Taiwan",
+                "Taiwan Province of China"
             ],
             "es": [],
             "pt": []
@@ -5672,7 +5693,9 @@
             "pt": "Tokelau"
         },
         "apelidos": {
-            "en": [],
+            "en": [
+                "Tokelau (Associated Member)"
+            ],
             "es": [],
             "pt": []
         },

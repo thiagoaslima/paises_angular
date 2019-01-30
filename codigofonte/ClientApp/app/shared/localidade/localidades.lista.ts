@@ -639,7 +639,9 @@ export const localidades = {
             "apelidos": {
                 "en": [],
                 "es": [],
-                "pt": []
+                "pt": [
+                    "Belarus"
+                ]
             },
             "slugs": {
                 "en": "belarus",
@@ -1423,6 +1425,7 @@ export const localidades = {
             },
             "apelidos": {
                 "en": [
+                    "China, mainland",
                     "China, People's Republic of"
                 ],
                 "es": [
@@ -2247,8 +2250,12 @@ export const localidades = {
                 "en": [
                     "Falkland Islands (Islas Malvinas)"
                 ],
-                "es": [],
-                "pt": []
+                "es": [
+                    "Islas Falkland"
+                ],
+                "pt": [
+                    "Ilhas Falkland"
+                ]
             },
             "slugs": {
                 "en": "falkland-islands-malvinas",
@@ -3583,7 +3590,7 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "398",
-            "slug": "casaquistao",
+            "slug": "cazaquistao",
             "sigla": "KZ",
             "sigla3": "KAZ",
             "nome": {
@@ -3601,7 +3608,7 @@ export const localidades = {
             "slugs": {
                 "en": "kazakhstan",
                 "es": "kazajstan",
-                "pt": "casaquistao"
+                "pt": "cazaquistao"
             },
             "parent": 143,
             "parents": {
@@ -3678,7 +3685,7 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "408",
-            "slug": "coreia-do-norte",
+            "slug": "republica-popular-democratica-da-coreia",
             "sigla": "KP",
             "sigla3": "PRK",
             "nome": {
@@ -3698,7 +3705,7 @@ export const localidades = {
             "slugs": {
                 "en": "democratic-peoples-republic-of-korea",
                 "es": "republica-popular-democratica-de-corea",
-                "pt": "coreia-do-norte"
+                "pt": "republica-popular-democratica-da-coreia"
             },
             "parent": 30,
             "parents": {
@@ -3713,7 +3720,7 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "410",
-            "slug": "coreia-do-sul",
+            "slug": "republica-da-coreia",
             "sigla": "KR",
             "sigla3": "KOR",
             "nome": {
@@ -3734,7 +3741,7 @@ export const localidades = {
             "slugs": {
                 "en": "republic-of-korea",
                 "es": "republica-de-corea",
-                "pt": "coreia-do-sul"
+                "pt": "republica-da-coreia"
             },
             "parent": 30,
             "parents": {
@@ -4101,7 +4108,9 @@ export const localidades = {
                 "pt": "China, Macao"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "China, Macao SAR"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -4792,7 +4801,7 @@ export const localidades = {
             "apelidos": {
                 "en": [
                     "Burma",
-                    "Republic of the Union of Myanmar",
+                    "Republic of the Union of Myanmar"
                 ],
                 "es": [
                     "Birmania",
@@ -4806,7 +4815,7 @@ export const localidades = {
             "slugs": {
                 "en": "myanmar",
                 "es": "myanmar",
-                "pt": "mianma"
+                "pt": "mianmar"
             },
             "parent": 35,
             "parents": {
@@ -5326,7 +5335,9 @@ export const localidades = {
                 "pt": "Palestina"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Palestine"
+                ],
                 "es": [],
                 "pt": []
             },
@@ -6829,7 +6840,8 @@ export const localidades = {
             },
             "apelidos": {
                 "en": [
-                    "Taiwan"
+                    "Taiwan",
+                    "Taiwan Province of China"
                 ],
                 "es": [],
                 "pt": []
@@ -7022,7 +7034,9 @@ export const localidades = {
                 "pt": "Tokelau"
             },
             "apelidos": {
-                "en": [],
+                "en": [
+                    "Tokelau (Associated Member)"
+                ],
                 "es": [],
                 "pt": []
             },

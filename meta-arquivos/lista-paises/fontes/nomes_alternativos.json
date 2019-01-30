@@ -211,7 +211,9 @@
     },
     {
         "nome": {
-            "en": "Falkland Islands (Islas Malvinas)"
+            "en": "Falkland Islands (Islas Malvinas)",
+            "es": "Islas Falkland",
+            "pt": "Ilhas Falkland"
         },
         "referencia_onu": "Falkland Islands (Malvinas)",
         "a2_code": "FK",
