@@ -3588,12 +3588,14 @@
             "nome": {
                 "en": "Kazakhstan",
                 "es": "Kazajstán",
-                "pt": "Casaquistão"
+                "pt": "Cazaquistão"
             },
             "apelidos": {
                 "en": [],
                 "es": [],
-                "pt": []
+                "pt": [
+                    "Casaquistão"
+                ]
             },
             "slugs": {
                 "en": "kazakhstan",
@@ -6696,7 +6698,9 @@
                 "pt": "Suazilândia"
             },
             "apelidos": {
-                "en": ["Eswatini"],
+                "en": [
+                    "Eswatini"
+                ],
                 "es": [],
                 "pt": []
             },

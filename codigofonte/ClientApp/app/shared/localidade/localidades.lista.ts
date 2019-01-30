@@ -3589,12 +3589,14 @@ export const localidades = {
             "nome": {
                 "en": "Kazakhstan",
                 "es": "Kazajstán",
-                "pt": "Casaquistão"
+                "pt": "Cazaquistão"
             },
             "apelidos": {
                 "en": [],
                 "es": [],
-                "pt": []
+                "pt": [
+                    "Casaquistão"
+                ]
             },
             "slugs": {
                 "en": "kazakhstan",
@@ -3682,14 +3684,16 @@ export const localidades = {
             "nome": {
                 "en": "Democratic People's Republic of Korea",
                 "es": "República Popular Democrática de Corea",
-                "pt": "Coréia do Norte"
+                "pt": "República Popular Democrática da Coréia"
             },
             "apelidos": {
                 "en": [
                     "Korea, North"
                 ],
                 "es": [],
-                "pt": []
+                "pt": [
+                    "Coréia do Norte"
+                ]
             },
             "slugs": {
                 "en": "democratic-peoples-republic-of-korea",
@@ -3715,7 +3719,7 @@ export const localidades = {
             "nome": {
                 "en": "Republic of Korea",
                 "es": "República de Corea",
-                "pt": "Coréia do Sul"
+                "pt": "República da Coréia"
             },
             "apelidos": {
                 "en": [
@@ -3723,7 +3727,9 @@ export const localidades = {
                     "Korea (Republic of)"
                 ],
                 "es": [],
-                "pt": []
+                "pt": [
+                    "Coréia do Sul"
+                ]
             },
             "slugs": {
                 "en": "republic-of-korea",
@@ -4775,23 +4781,26 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "104",
-            "slug": "mianma",
+            "slug": "mianmar",
             "sigla": "MM",
             "sigla3": "MMR",
             "nome": {
                 "en": "Myanmar",
                 "es": "Myanmar",
-                "pt": "Mianma"
+                "pt": "Mianmar"
             },
             "apelidos": {
                 "en": [
-                    "Burma"
+                    "Burma",
+                    "Republic of the Union of Myanmar",
                 ],
                 "es": [
-                    "Birmania"
+                    "Birmania",
+                    "República de la Unión de Myanmar"
                 ],
                 "pt": [
-                    "Birmânia"
+                    "Birmânia",
+                    "República da União de Myanmar"
                 ]
             },
             "slugs": {

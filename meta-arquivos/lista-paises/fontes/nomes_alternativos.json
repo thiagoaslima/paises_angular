@@ -65,6 +65,22 @@
     },
     {
         "nome": {
+            "en": "Republic of the Union of Myanmar",
+            "es": "República de la Unión de Myanmar",
+            "pt": "República da União de Myanmar"
+        },
+        "referencia_onu": "Myanmar",
+        "a2_code": "MM"
+    },
+    {
+        "nome": {
+            "pt": "Casaquistão"
+        },
+        "referencia_onu": "Kazakhstan",
+        "a2_code": "KZ"
+    },
+    {
+        "nome": {
             "en": "Congo, Democratic Republic of the"
         },
         "referencia_onu": "Democratic Republic of the Congo",
@@ -151,6 +167,26 @@
         },
         "referencia_onu": "China",
         "a2_code": "CN",
+        "fonte": {
+            "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
+            "autor": "United Nations Statistics Division",
+            "link": "https://unstats.un.org/unsd/snaama/selbasicFast.asp",
+            "acessadoEm": "2018-03-07"
+        }
+    },
+    {
+        "nome": {
+            "pt": "Coréia do Norte"
+        },
+        "referencia_onu": "Democratic People's Republic of Korea",
+        "a2_code": "KP"
+    },
+    {
+        "nome": {
+            "pt": "Coréia do Sul"
+        },
+        "referencia_onu": "Republic of Korea",
+        "a2_code": "KR",
         "fonte": {
             "publicacao": "National Accounts Main Aggregates Database, Basic Data Selection",
             "autor": "United Nations Statistics Division",
