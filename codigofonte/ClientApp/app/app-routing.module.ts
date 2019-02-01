@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
     isPaisGuard,
+    isPaisOnuGuard,
     isIndicadorGuard,
     RouteParametersGuard,
 } from './app-guards';
@@ -25,6 +26,7 @@ export const routes: Routes = [
                 loadChildren: './dados-pais/dados-pais.module#DadosPaisModule',
             },
         ],
+        canActivate: [isPaisOnuGuard],
     },
     // {
     //   path: ':indicadorORpais',
@@ -39,6 +41,11 @@ export const routes: Routes = [
         RouterModule.forRoot(routes, { useHash: true, enableTracing: false }),
     ],
     exports: [RouterModule],
-    providers: [isPaisGuard, isIndicadorGuard, RouteParametersGuard],
+    providers: [
+        isPaisGuard,
+        isPaisOnuGuard,
+        isIndicadorGuard,
+        RouteParametersGuard,
+    ],
 })
 export class AppRoutingModule {}
