@@ -6086,7 +6086,7 @@ export const localidades = {
             "nome": {
                 "en": "Sao Tome and Principe",
                 "es": "Santo Tomé y Príncipe",
-                "pt": "São Tome e Príncipe"
+                "pt": "São Tomé e Príncipe"
             },
             "apelidos": {
                 "en": [],
