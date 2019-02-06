@@ -314,4 +314,29 @@ export class CompararComponent {
         return result;
     }
 
+    getFonte(){
+        //encontra os resultados desejados
+        //console.log(this.resultados);
+        if(this.resultados && this.resultados.metadata && this.resultados.resultados){
+            for(let i = 0; i < this.resultados.metadata.length; i++){
+                if(this.resultados.metadata[i].id == this.indicador){
+                    if(this.resultados.metadata[i].fontes.length > 0){
+                        return this.resultados.metadata[i].fontes[0].fontes[0];
+                    }
+                }
+            }
+        }
+        return "";
+    }
+
+    getLinkFonte(fonte: any) {
+        if (fonte) {
+            // Encontra qualquer conjunto de caracteres começando por < (inclusive) até encontrar um > (exclusive)
+            const regex = /<.+?(?=>)/gm;
+            const link = fonte.match(regex);
+            return link[0] ? link[0].replace("<", "") : "";
+        }
+        return "";
+    }
+
 }

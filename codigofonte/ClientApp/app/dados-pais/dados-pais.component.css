@@ -1,7 +1,45 @@
 /*barra de menu*/
 
 .dados-pais__menu{
-    display: none;
+    background-color: #3f3f3f;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dados-pais__menu-item{
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+.dados-pais__menu-item--right{
+    float: right;
+}
+
+.dados-pais__menu-botao{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    background: none;
+    border: none;
+    text-decoration: none;
+}
+
+.dados-pais__menu-botao:hover{
+    color: lightgrey;
+}
+
+.dados-pais__menu-botao--ativo{
+    color: #3ecca7;
+    cursor: default;
+}
+
+.dados-pais__menu-botao--ativo:hover{
+    color: #3ecca7;
+}
+
+.dados-pais__menu-icon{
+    color: #00D1A3;
 }
 
 /*sintese*/
@@ -154,49 +192,13 @@
 
 /*desktop*/
 @media only screen and (min-width : 568px) {
-
-    /*barra de menu*/
-    .dados-pais__menu{
-        display: block;
-        background-color: #3f3f3f;
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-    }
-
+    /*menu*/
     .dados-pais__menu-item{
-        display: inline-block;
         padding: 15px;
     }
-
-    .dados-pais__menu-item--right{
-        float: right;
-    }
-
+    
     .dados-pais__menu-botao{
-        color: #fff;
-        text-transform: uppercase;
         font-size: 0.9em;
-        background: none;
-        border: none;
-        text-decoration: none;
-    }
-
-    .dados-pais__menu-botao:hover{
-        color: lightgrey;
-    }
-
-    .dados-pais__menu-botao--ativo{
-        color: #3ecca7;
-        cursor: default;
-    }
-
-    .dados-pais__menu-botao--ativo:hover{
-        color: #3ecca7;
-    }
-
-    .dados-pais__menu-icon{
-        color: #00D1A3;
     }
 
     /*sintese*/

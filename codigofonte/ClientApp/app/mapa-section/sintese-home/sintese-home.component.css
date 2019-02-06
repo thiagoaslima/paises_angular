@@ -1,10 +1,10 @@
 /*mobile*/
 
 .sintese{
-	width: 480px;
 	position: absolute;
-	top: 50px;
-	right: calc(50% - 200px);
+	top: 0px;
+	right: 0px;
+	left: 0px;
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 45px 15px 25px 15px;
 }
@@ -123,6 +123,9 @@
 /*desktop*/
 @media only screen and (min-width : 568px) {
 	.sintese{
+		width: 480px;
+		top: 50px;
 		right: 50px;
+		left: initial;
 	}
 }

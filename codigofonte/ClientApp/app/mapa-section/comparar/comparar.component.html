@@ -182,6 +182,17 @@
                     [ALTURA_GRAFICO]="240"
                 >
                 </grafico>
+
+                <!--fontes do gráfico-->
+                <p class="comparar__grafico-fonte-container">
+                    <strong class="comparar__grafico-fonte-titulo">Fonte:</strong>
+                    <a class="comparar__grafico-fonte-link"
+                        [href]="getLinkFonte(getFonte())"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        {{ getFonte() }}
+                    </a>
+                </p>
             </div>
         </div>
     </div>
