@@ -2,7 +2,7 @@
     <!--valor-->
     <div class="grafico__valor-container" *ngIf="!mostrarLegenda">
         <p class="grafico__valor">&nbsp; {{ getValor() | resultado }}</p>
-        <p class="grafico__valor-metadata">&nbsp; {{ unidade }}</p>
+        <p class="grafico__valor-metadata" *ngIf="existemDados()">&nbsp; {{ unidade }}</p>
     </div>
     <!-->grafico<-->
     <div class="grafico_grafico-container">
