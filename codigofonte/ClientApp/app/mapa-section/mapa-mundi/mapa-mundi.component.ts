@@ -99,15 +99,15 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
     private _localidadeService: LocalidadeService,
     private _translateService: TranslateService,
     private _decimalPipe: DecimalPipe
-  ) {}
+  ) { }
 
   ngOnInit() {
     this._routerParams.params$
       .pipe(
-        takeUntil(this.destroy$),
-        map(params => params.queryParams),
-        map(queryParams => queryParams.ano),
-        distinctUntilChanged()
+      takeUntil(this.destroy$),
+      map(params => params.queryParams),
+      map(queryParams => queryParams.ano),
+      distinctUntilChanged()
       )
       .subscribe(ano => (this.ano = ano));
   }
@@ -216,14 +216,14 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
           : '') +
         (feature.properties.valor
           ? `<br /> <strong><small>${this._decimalPipe.transform(
-              feature.properties.valor
-            )} ${
-              this.indicador
-                ? this._translateService.translate(
-                    this.indicador.unidade.identificador
-                  )
-                : ''
-            }<small></strong>`
+            feature.properties.valor
+          )} ${
+          this.indicador
+            ? this._translateService.translate(
+              this.indicador.unidade.identificador
+            )
+            : ''
+          }<small></strong>`
           : '');
       layer.bindTooltip(msg);
 

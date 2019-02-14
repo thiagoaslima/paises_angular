@@ -38,6 +38,7 @@ import { Observable } from "rxjs/Observable";
             position: absolute;
             min-height: 100%;
             top: 0;
+            bottom: 0;
         }
     `
   ],
