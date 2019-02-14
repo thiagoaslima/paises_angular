@@ -10,7 +10,7 @@
     </div>
     <!--abas-->
     <div>
-        <span class="sintese__tab">{{ "Síntese" | translate | async }}</span
+        <span class="sintese__tab">{{ 'Síntese' | translate | async }}</span
         ><!--
         --><a
             class="sintese__tab sintese__tab--right-disabled"
@@ -21,12 +21,12 @@
                 ano: linkAno
             }"
             queryParamsHandling="merge"
-            >{{ "Ranking" | translate | async }}</a
+            >{{ 'Ranking' | translate | async }}</a
         >
     </div>
     <!--dados-->
     <div class="sintese__info-container">
-        <ng-container *ngIf="pais && temDados && !loading">
+        <ng-container *ngIf="pais && pais?.onu && !loading">
             <!--bandeira-->
             <div class="sintese__bandeira-container">
                 <img
@@ -65,15 +65,15 @@
                 <a
                     [routerLink]="'/dados/' + pais?.slug"
                     class="sintese__leia-mais-link"
-                    >{{ "Mais sobre o país" | translate | async }}</a
+                    >{{ 'Mais sobre o país' | translate | async }}</a
                 >
             </div>
         </ng-container>
 
-        <ng-container *ngIf="pais && !temDados && !loading">
+        <ng-container *ngIf="!pais || !pais.onu">
             <p class="sintese__tabela-nome">
                 {{
-                    "Não há dados sobre o país ou território escolhido"
+                    'Não há dados sobre o país ou território escolhido'
                         | translate
                         | async
                 }}
