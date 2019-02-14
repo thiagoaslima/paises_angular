@@ -38,7 +38,7 @@
         "awesome-typescript-loader": "3.2.1",
         "bootstrap": "3.3.7",
         "classlist-polyfill": "1.2.0",
-        "core-js": "2.5.3",
+        "core-js": "^2.5.3",
         "css": "^2.2.4",
         "css-loader": "0.28.9",
         "es6-shim": "0.35.3",

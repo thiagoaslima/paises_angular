@@ -1,36 +1,108 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>IBGE | Países</title>
-		<base href="/" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IBGE | Países</title>
+        <base href="/" />
 
-		<script src="https://use.fontawesome.com/b472298bec.js"></script>
-		<link rel="stylesheet" href="normalize.css" />
+        <script src="https://use.fontawesome.com/b472298bec.js"></script>
+        <link rel="stylesheet" href="normalize.css" />
 
-		<link
-			rel="stylesheet"
-			href="/dist/vendor.css"
-			asp-append-version="true"
-		/>
-		<link rel="stylesheet" href="/global.css" asp-append-version="true" />
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-			integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
-			crossorigin="anonymous"
-		/>
-		<!-- 
+        <link
+            rel="stylesheet"
+            href="/dist/vendor.css"
+            asp-append-version="true"
+        />
+        <link rel="stylesheet" href="/global.css" asp-append-version="true" />
+        <!-- <link
+            rel="stylesheet"
+            href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+            integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+            crossorigin="anonymous"
+        /> -->
+        <!-- 
         <link rel="stylesheet" href="http://unpkg.com/leaflet@1.2.0/dist/leaflet.css" 
         integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
         crossorigin=""/>
     --></head>
-	<body>
-		<app-paises>Carregando...</app-paises>
+    <body>
+        <app-paises>Carregando...</app-paises>
 
-		<script src="/dist/polyfills.js"></script>
-		<script src="/dist/vendor.js" asp-append-version="true"></script>
-		<script src="/dist/main-client.js" asp-append-version="true"></script>
-	</body>
+        <script>
+            function detectIE() {
+                var ua = window.navigator.userAgent;
+
+                // Test values; Uncomment to check result …
+
+                // IE 10
+                // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+                // IE 11
+                // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+                // Edge 12 (Spartan)
+                // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+                // Edge 13
+                // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+                var msie = ua.indexOf('MSIE ');
+                if (msie > 0) {
+                    // IE 10 or older => return version number
+                    return parseInt(
+                        ua.substring(msie + 5, ua.indexOf('.', msie)),
+                        10
+                    );
+                }
+
+                var trident = ua.indexOf('Trident/');
+                if (trident > 0) {
+                    // IE 11 => return version number
+                    var rv = ua.indexOf('rv:');
+                    return parseInt(
+                        ua.substring(rv + 3, ua.indexOf('.', rv)),
+                        10
+                    );
+                }
+
+                var edge = ua.indexOf('Edge/');
+                if (edge > 0) {
+                    // Edge (IE 12+) => return version number
+                    return parseInt(
+                        ua.substring(edge + 5, ua.indexOf('.', edge)),
+                        10
+                    );
+                }
+
+                // other browser
+                return false;
+            }
+        </script>
+
+        <script id="check-ie">
+            var version = detectIE();
+
+            if (version && version < 10) {
+                var content = [
+                    '<strong>Seu navegador da web está desatualizado.</strong>',
+                    'Atualize seu navegador para ter mais segurança e velocidade, além da melhor experiência neste site',
+                ].join('<br />');
+                document.body.innerHTML = content;
+            }
+
+            if (version && version >= 10) {
+                debugger;
+                var scriptTag = document.getElementById('check-ie');
+                scriptTag.insertAdjacentHTML(
+                    'afterend',
+                    '<script src="/js/shim.min.js"><\/script>'
+                );
+            }
+        </script>
+
+        <script src="/dist/polyfills.js"></script>
+        <script src="/dist/vendor.js" asp-append-version="true"></script>
+        <script src="/dist/main-client.js" asp-append-version="true"></script>
+    </body>
 </html>
