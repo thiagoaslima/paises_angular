@@ -245,11 +245,11 @@ export class MapaSectionService {
         valores: number[],
         divisoes: number
     ): number[] {
-        const maxValue = valores[0] > 0 ? valores[0] * 1.1 : valores[0] * 0.95;
+        const maxValue = valores[0] > 0 ? valores[0] * 1.01 : valores[0] * 0.99;
         const minValue =
             valores[valores.length - 1] > 0
-                ? valores[valores.length - 1] * 0.95
-                : valores[valores.length - 1] * 1.1;
+                ? valores[valores.length - 1] * 0.99
+                : valores[valores.length - 1] * 1.01;
 
         const intervalo = (maxValue - minValue) / divisoes;
         const divisores = Array(divisoes)
@@ -260,11 +260,11 @@ export class MapaSectionService {
 
         let i = 0;
         let j = 0;
+        let firstCase = null;
+        let ocorrences = 0;
         for (i = 0; i < divisores.length; i++) {
             const high = i > 0 ? divisores[i - 1] : Infinity;
             const low = divisores[i];
-
-            let hasItemInRange = false;
 
             // Como os valores ja estao ordenados, podemos iterar pelo array
             // e interrom,per quando achamos um valor da próxima faixa.
@@ -272,20 +272,25 @@ export class MapaSectionService {
             // não é necessário reiniciar o array
             for (j; j < valores.length; j++) {
                 if (valores[j] >= low && valores[j] <= high) {
-                    hasItemInRange = true;
+                    if (!firstCase) {
+                        firstCase = j;
+                    }
+                    ocorrences++;
                 }
                 if (valores[j] < low) {
                     break;
                 }
             }
 
-            if (hasItemInRange) {
+            if (ocorrences >= 4 || j >= valores.length - 1) {
                 marcadores.push(divisores[i]);
                 divisoes--;
+                firstCase = null;
+                ocorrences = 0;
             } else {
                 return this.calcularDivisores(
                     marcadores,
-                    valores.slice(j),
+                    valores.slice(firstCase || 1),
                     divisoes
                 );
             }
@@ -308,7 +313,9 @@ export class MapaSectionService {
         // ];
 
         const RANGE_COLORS = [
-            '#7d8092',
+            // '#576794',
+            '#876857',
+            // '#7d8092',
             '#257e93',
             '#33b8c2',
             '#06aa70',
