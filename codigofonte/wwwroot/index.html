@@ -15,6 +15,7 @@
             asp-append-version="true"
         />
         <link rel="stylesheet" href="/global.css" asp-append-version="true" />
+
         <!-- <link
             rel="stylesheet"
             href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
@@ -25,7 +26,10 @@
         <link rel="stylesheet" href="http://unpkg.com/leaflet@1.2.0/dist/leaflet.css" 
         integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
         crossorigin=""/>
-    --></head>
+        -->
+
+        <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&flags=gated"></script>
+    </head>
     <body>
         <app-paises>Carregando...</app-paises>
 
@@ -84,20 +88,10 @@
             var version = detectIE();
 
             if (version && version < 10) {
-                var content = [
-                    '<strong>Seu navegador da web está desatualizado.</strong>',
-                    'Atualize seu navegador para ter mais segurança e velocidade, além da melhor experiência neste site',
-                ].join('<br />');
-                document.body.innerHTML = content;
-            }
-
-            if (version && version >= 10) {
-                debugger;
-                var scriptTag = document.getElementById('check-ie');
-                scriptTag.insertAdjacentHTML(
-                    'afterend',
-                    '<script src="/js/shim.min.js"><\/script>'
-                );
+                document.body.innerHTML = [
+                    '<style>iframe{width: 100%;min-height: 100%;} html, body {height: 100%;}</style>',
+                    '<iframe src="http://outdatedbrowser.com/pt" frameborder="0"></iframe>',
+                ].join('\n');
             }
         </script>
 
