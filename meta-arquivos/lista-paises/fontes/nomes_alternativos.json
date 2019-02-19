@@ -1,9 +1,16 @@
 [
     {
         "nome": {
-            "pt": "Belarus"
+            "pt": "República de Belarus"
         },
-        "referencia_onu": "Bahamas",
+        "referencia_onu": "Belarus",
+        "a2_code": "BY"
+    },
+    {
+        "nome": {
+            "pt": "Bielorrússia"
+        },
+        "referencia_onu": "Belarus",
         "a2_code": "BY"
     },
     {

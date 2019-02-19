@@ -505,25 +505,26 @@
         "tipo": "pais",
         "onu_type": "country or area",
         "codigo": "112",
-        "slug": "bielorussia",
+        "slug": "belarus",
         "sigla": "BY",
         "sigla3": "BLR",
         "nome": {
             "en": "Belarus",
             "es": "Belarús",
-            "pt": "Bielorússia"
+            "pt": "Belarus"
         },
         "apelidos": {
             "en": [],
             "es": [],
             "pt": [
-                "Belarus"
+                "República de Belarus",
+                "Bielorrússia"
             ]
         },
         "slugs": {
             "en": "belarus",
             "es": "belarus",
-            "pt": "bielorussia"
+            "pt": "belarus"
         },
         "ddi": "375",
         "onu": true
