@@ -883,13 +883,13 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "70",
-            "slug": "bosnia-herzegovina",
+            "slug": "bosnia-e-herzegovina",
             "sigla": "BA",
             "sigla3": "BIH",
             "nome": {
                 "en": "Bosnia and Herzegovina",
                 "es": "Bosnia y Herzegovina",
-                "pt": "Bósnia-Herzegovina"
+                "pt": "Bósnia e Herzegovina"
             },
             "apelidos": {
                 "en": [],
@@ -899,7 +899,7 @@ export const localidades = {
             "slugs": {
                 "en": "bosnia-and-herzegovina",
                 "es": "bosnia-y-herzegovina",
-                "pt": "bosnia-herzegovina"
+                "pt": "bosnia-e-herzegovina"
             },
             "parent": 39,
             "parents": {
