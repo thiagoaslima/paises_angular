@@ -188,6 +188,8 @@ export class GraficoComponent {
                         this.tooltip = null;
                     }else{
                         this.tooltip = {
+                            indexX: j,
+                            indexY: i, 
                             x: x / this.LARGURA_GRAFICO * 100,
                             y: y / this.ALTURA_GRAFICO * 100,
                             valor: this.dados[i][j],
