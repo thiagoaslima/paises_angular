@@ -126,6 +126,6 @@
 		width: 480px;
 		top: 50px;
 		right: 50px;
-		left: initial;
+		left: auto;
 	}
 }

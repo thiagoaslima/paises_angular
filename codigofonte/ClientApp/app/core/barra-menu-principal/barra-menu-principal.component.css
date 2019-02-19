@@ -20,6 +20,7 @@
     text-align: right;
     min-width: 180px;
     padding-right: 10px;
+    font-size: 32px;
 }
 
 .cabecalho__logo-imagem {
@@ -185,7 +186,7 @@
         display: inline-block;
         position: relative;
         width: 55%;
-        top: initial;
+        top: auto;
     }
 
     .cabecalho__campo-busca {

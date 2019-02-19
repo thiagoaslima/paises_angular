@@ -29,7 +29,7 @@
                 <!--ponto-->
                 <ng-template ngFor let-valor let-i="index" [ngForOf]="dado">
                     <circle *ngIf="valorValido(getY(i, j))" [attr.cx]="getX(i, 0)" [attr.cy]="getY(i, j)" r="4px"
-                        class="grafico__no-fill" [ngClass]="'grafico__ponto grafico__cor--' + j"/> 
+                        class="grafico__no-fill" [ngClass]="'grafico__ponto grafico__cor--' + j" [class.grafico__fill]="tooltip != null && tooltip.indexX == i && tooltip.indexY == j"/> 
                         <!--[class.grafico__no-fill]='getIndexSelecionado() != i'/>-->
                 </ng-template>
             </g>

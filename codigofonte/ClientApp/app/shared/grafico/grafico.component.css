@@ -1,7 +1,7 @@
 /*mobile first*/
 
 .grafico{
-
+    text-align: center;
 }
 
 .grafico__svg{
@@ -68,6 +68,10 @@
 
 .grafico__no-fill{
     fill: white;
+}
+
+.grafico__fill{
+    fill: white !important;
 }
 
 /*valor*/
@@ -179,6 +183,31 @@
 
 @media only screen and (min-width : 568px) {
     
+}
 
+/*hack para o IE que não redimensiona SVGs corretamente*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    
+    .grafico__svg{
+        height: 320px;
+    }
 
+    .grafico__tooltip-seta{
+        display: none;
+    }
+
+    .grafico__tooltip{
+        position: absolute;
+        top: -50px !important;
+        left: calc(50% - 25%) !important;
+        margin-left: 0;
+        margin-top: 0;
+        display: inline-block;
+        width: 50%;
+    }
+
+    .grafico__fill{
+        stroke: black !important;
+    }
+    
 }

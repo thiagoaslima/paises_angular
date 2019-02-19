@@ -238,7 +238,7 @@
         border: none;
         position: absolute;
         left: 10px;
-        top: calc(50% - 20px);
+        top: 100px;
     }
 
     .dados-pais__sintese-capa-botao-proximo{
@@ -246,7 +246,7 @@
         border: none;
         position: absolute;
         right: 10px;
-        top: calc(50% - 20px);
+        top: 100px;
     }
 
     .dados-pais__sintese-capa-icon-anterior{
@@ -319,13 +319,13 @@
     .dados-pais__historico-paragrafos-container{
         padding: 0px 40px;
         background-color: #f1f1f1;
-        max-height: 200px;
+        height: 200px;
         overflow: hidden;
         display: block;
     }
 
     .dados-pais__historico-paragrafos-container--aberto{
-        max-height: unset;
+        height: auto;
     }
 
     .dados-pais__historico-degrade{
