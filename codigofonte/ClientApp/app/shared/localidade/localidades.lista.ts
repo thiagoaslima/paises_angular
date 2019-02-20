@@ -914,23 +914,27 @@ export const localidades = {
             "tipo": "pais",
             "onu_type": "country or area",
             "codigo": "72",
-            "slug": "botsuana",
+            "slug": "botswana",
             "sigla": "BW",
             "sigla3": "BWA",
             "nome": {
                 "en": "Botswana",
                 "es": "Botswana",
-                "pt": "Botsuana"
+                "pt": "Botswana"
             },
             "apelidos": {
                 "en": [],
-                "es": [],
-                "pt": []
+                "es": [
+                    "Botsuana"
+                ],
+                "pt": [
+                    "Botsuana"
+                ]
             },
             "slugs": {
                 "en": "botswana",
                 "es": "botswana",
-                "pt": "botsuana"
+                "pt": "botswana"
             },
             "parent": 18,
             "parents": {

@@ -1,6 +1,14 @@
 [
     {
         "nome": {
+            "pt": "Botsuana",
+            "es": "Botsuana"
+        },
+        "referencia_onu": "Botswana",
+        "a2_code": "BW"
+    },
+    {
+        "nome": {
             "pt": "República de Belarus"
         },
         "referencia_onu": "Belarus",
