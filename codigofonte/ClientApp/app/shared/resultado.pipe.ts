@@ -77,7 +77,7 @@ export class ResultadoPipe implements PipeTransform {
             case null:
                 return '-';
             case ' ':
-                return 'Dado não disponível';
+                return 'Informação não disponível';
             default:
                 if (!isNaN(Number(value))) {
                     value = Number(value);
