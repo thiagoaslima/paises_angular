@@ -1,6 +1,6 @@
-*{
+* {
     box-sizing: border-box;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: #4f4f4f;
     margin: 0px;
@@ -40,15 +40,31 @@ h4 {
 	font-size:1.3em;
 }*/
 
-.gradiente{
+.gradiente {
     background: #3bb2b8; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, #3bb2b8,  #42e695); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #3bb2b8, #42e695); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #3bb2b8, #42e695); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #3bb2b8, #42e695); /* Standard syntax */  
+    background: -webkit-linear-gradient(
+        left,
+        #3bb2b8,
+        #42e695
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+        right,
+        #3bb2b8,
+        #42e695
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+        right,
+        #3bb2b8,
+        #42e695
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(
+        to right,
+        #3bb2b8,
+        #42e695
+    ); /* Standard syntax */
 }
 
-.overlay{
+.overlay {
     position: fixed;
     left: 0px;
     right: 0px;
@@ -56,7 +72,7 @@ h4 {
     bottom: 0px;
 }
 
-.area-aplicacao{
+.area-aplicacao {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -83,7 +99,7 @@ Classes para organizar o z-index.
 /*
     sobreescrevendo a configuração do leaflet
 */
-.leaflet-top, 
+.leaflet-top,
 .leaflet-bottom {
     z-index: 450;
 }
@@ -116,30 +132,29 @@ Classes para organizar o z-index.
 
 /*******************************************/
 
-a, a:hover, a:visited {
+a,
+a:hover,
+a:visited {
     color: #4f4f4f;
     text-decoration: none;
 }
 
 /*desktop*/
-@media only screen and (min-width : 568px) {
-
-    .area-aplicacao{
+@media only screen and (min-width: 568px) {
+    .area-aplicacao {
         width: 100%;
         min-height: calc(100% - 80px);
         top: 80px;
     }
-    
 }
 
-
 /* utils */
-@media only screen and (max-width : 567px) {
+@media only screen and (max-width: 567px) {
     .desktop-only {
         display: none;
     }
 }
-@media only screen and (min-width : 568px) {
+@media only screen and (min-width: 568px) {
     .mobile-only {
         display: none;
     }
@@ -162,3 +177,19 @@ path.leaflet--uninteractive-layer {
     cursor: default;
 }
 
+path.leaflet--uninteractive-layer.leaflet-interactive {
+    fill: #757575;
+}
+
+/* Leaflet : nota rodapé */
+.leaflet-control-attribution.leaflet-control > a {
+    font-size: 11px;
+}
+.leaflet-control-attribution.leaflet-control strong {
+    font-size: 11px;
+    font-weight: bold;
+}
+.leaflet-control-attribution.leaflet-control small {
+    font-size: 10px;
+    font-style: italic;
+}

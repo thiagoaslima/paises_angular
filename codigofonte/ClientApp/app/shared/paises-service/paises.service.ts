@@ -13,19 +13,19 @@ import { objArrayToMap } from '../../../utils';
 import { LocalidadeService } from '../localidade/localidade.service';
 import { Ranking, ResultadosIndicador, MetadataIndicador } from './interfaces';
 
-const TEMA_SAUDE = {
-    id: 0,
-    indicador: 'Saúde',
-    posicao: PaisesEnum.temas.saude.toString(),
-    notas: [],
-    fontes: [],
-    unidade: {
-        identificador: '',
-        classe: '',
-        multiplicador: 1,
-    },
-    pai: null,
-} as MetadataIndicador;
+// const TEMA_SAUDE = {
+//     id: 7,
+//     indicador: 'Saúde',
+//     posicao: PaisesEnum.temas.saude.toString(),
+//     notas: [],
+//     fontes: [],
+//     unidade: {
+//         identificador: '',
+//         classe: '',
+//         multiplicador: 1,
+//     },
+//     pai: null,
+// } as MetadataIndicador;
 
 @Injectable()
 export class PaisesService extends RequestService {
@@ -80,9 +80,9 @@ export class PaisesService extends RequestService {
 
     getIndicadores(temaId: number) {
         let _temaId = temaId;
-        if (temaId === PaisesEnum.temas.saude) {
-            _temaId = PaisesEnum.temas.sociais;
-        }
+        // if (temaId === PaisesEnum.temas.saude) {
+        //     _temaId = PaisesEnum.temas.sociais;
+        // }
         return this.getMetadataIndicador(_temaId, 'sub').map(indicadores => {
             // Necessária essa conferencia para tirar o primeiro nivel (que é o próprio tema)
             // e garantir a exibicao do tema saude, que nao existe na base de dados

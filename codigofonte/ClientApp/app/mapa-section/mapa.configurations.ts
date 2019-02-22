@@ -12,15 +12,15 @@ export const MAP_STYLES = {
             weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
-            fillOpacity: 1
+            fillOpacity: 1,
         },
-    
+
         hover: {
             fillColor: '#a9a9a9',
             weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
-            fillOpacity: 1
+            fillOpacity: 1,
         },
 
         selected: {
@@ -28,7 +28,7 @@ export const MAP_STYLES = {
             weight: 1,
             opacity: 1,
             color: 'rgb(78,78,78)',
-            fillOpacity: 1
+            fillOpacity: 1,
         },
 
         uninteractive: {
@@ -37,7 +37,7 @@ export const MAP_STYLES = {
             opacity: 1,
             color: 'rgb(78,78,78)',
             fillOpacity: 1,
-            className: 'no-interaction'
-        }
-    }
+            className: 'no-interaction',
+        },
+    },
 };
