@@ -5976,10 +5976,24 @@
         },
         "apelidos": {
             "en": [
+                "England",
+                "Scotland",
+                "Northern Ireland",
+                "Wales",
                 "United Kingdom"
             ],
-            "es": [],
-            "pt": []
+            "es": [
+                "Inglaterra",
+                "Escocia",
+                "Irlanda del Norte",
+                "Gales"
+            ],
+            "pt": [
+                "Inglaterra",
+                "Escócia",
+                "Irlanda do Norte",
+                "País de Gales"
+            ]
         },
         "slugs": {
             "en": "united-kingdom-of-great-britain-and-northern-ireland",

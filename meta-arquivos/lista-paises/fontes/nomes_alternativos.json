@@ -1,6 +1,42 @@
 [
     {
         "nome": {
+            "pt": "Inglaterra",
+            "es": "Inglaterra",
+            "en": "England"
+        },
+        "referencia_onu": "Reino Unido",
+        "a2_code": "GB"
+    },
+    {
+        "nome": {
+            "pt": "Escócia",
+            "es": "Escocia",
+            "en": "Scotland"
+        },
+        "referencia_onu": "Reino Unido",
+        "a2_code": "GB"
+    },
+    {
+        "nome": {
+            "pt": "Irlanda do Norte",
+            "es": "Irlanda del Norte",
+            "en": "Northern Ireland"
+        },
+        "referencia_onu": "Reino Unido",
+        "a2_code": "GB"
+    },
+    {
+        "nome": {
+            "pt": "País de Gales",
+            "es": "Gales",
+            "en": "Wales"
+        },
+        "referencia_onu": "Reino Unido",
+        "a2_code": "GB"
+    },
+    {
+        "nome": {
             "pt": "Botsuana",
             "es": "Botsuana"
         },
