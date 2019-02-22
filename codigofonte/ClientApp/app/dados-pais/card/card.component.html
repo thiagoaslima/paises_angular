@@ -7,6 +7,13 @@
         (click)="cardAberto = !cardAberto"
     >
         <h3 class="card__titulo">{{ tema.tema | translate | async }}</h3>
+        <download-button
+            *ngIf="(tema.tema | translate | async) as nomeTema"
+            class="card__download-btn"
+            [title]="getTitle(nomeTema) | translate | async"
+            [url]="getUrl(tema, pais)"
+        ></download-button>
+
         <!--<button class="card__titulo-icone-flip" (click)="mostrarTabela=!mostrarTabela"><img src="../../../img/flip-icon.svg"></button>-->
         <i
             class="fa fa-plus card__titulo-icone"
@@ -56,10 +63,10 @@
             <table class="card__tabela-mobile">
                 <tr class="card__tabela-mobile-linha">
                     <th class="card__tabela-mobile-titulo">
-                        {{ "Ano" | translate | async }}
+                        {{ 'Ano' | translate | async }}
                     </th>
                     <th class="card__tabela-mobile-titulo">
-                        {{ "Valor" | translate | async }}
+                        {{ 'Valor' | translate | async }}
                     </th>
                 </tr>
                 <tr
@@ -96,7 +103,7 @@
                     "
                 >
                     <span class="card__fonte-titulo">{{
-                        "Fonte:" | translate | async
+                        'Fonte:' | translate | async
                     }}</span>
                     <a
                         class="card__fonte-link"

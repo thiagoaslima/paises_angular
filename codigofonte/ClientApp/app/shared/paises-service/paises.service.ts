@@ -73,8 +73,8 @@ export class PaisesService extends RequestService {
                             PaisesEnum.temas.ODS,
                         ].includes(Number(tema.posicao))
                 );
-            }),
-            map(temas => temas.concat(TEMA_SAUDE))
+            })
+            // map(temas => temas.concat(TEMA_SAUDE))
         );
     }
 
@@ -104,8 +104,8 @@ export class PaisesService extends RequestService {
         ).pipe(
             map(metadata =>
                 this.flatMetadata(metadata).map(this.toMetadataModel)
-            ),
-            map(this._hackTemaSaude)
+            )
+            // map(this._hackTemaSaude)
             // tap(val => {
             //     console.log(val);
             // })
@@ -307,57 +307,57 @@ export class PaisesService extends RequestService {
         return Boolean(this._specialValues.cases[valor]);
     }
 
-    _hackTemaSaude(metadata: MetadataIndicador[]) {
-        const indicadores = {
-            62973: {
-                id: 62973,
-                posicao: PaisesEnum.temas.saude + '.1',
-                indicador: 'Calorias consumidas',
-            },
-            77829: {
-                id: 77829,
-                posicao: PaisesEnum.temas.saude + '.1',
-                indicador: 'Calorias consumidas',
-            },
-            // 62967: {
-            //     id: 62967,
-            //     posicao: "100.2",
-            //     indicador: "Esperança de vida ao nascer"
-            // },
-            62971: {
-                id: 62971,
-                posicao: PaisesEnum.temas.saude + '.2',
-                indicador: 'População subnutrida',
-            },
-            77834: {
-                id: 77834,
-                posicao: PaisesEnum.temas.saude + '.2',
-                indicador: 'População subnutrida',
-            },
-            // 62986: {
-            //     id: 62986,
-            //     posicao: "100.4",
-            //     indicador: "Taxa bruta de mortalidade"
-            // },
-            // 62987: {
-            //     id: 62987,
-            //     posicao: "100.5",
-            //     indicador: "Taxa bruta de natalidade"
-            // }
-        } as { [key: number]: any };
+    // _hackTemaSaude(metadata: MetadataIndicador[]) {
+    //     const indicadores = {
+    //         62973: {
+    //             id: 62973,
+    //             posicao: PaisesEnum.temas.saude + '.1',
+    //             indicador: 'Calorias consumidas',
+    //         },
+    //         77829: {
+    //             id: 77829,
+    //             posicao: PaisesEnum.temas.saude + '.1',
+    //             indicador: 'Calorias consumidas',
+    //         },
+    //         // 62967: {
+    //         //     id: 62967,
+    //         //     posicao: "100.2",
+    //         //     indicador: "Esperança de vida ao nascer"
+    //         // },
+    //         62971: {
+    //             id: 62971,
+    //             posicao: PaisesEnum.temas.saude + '.2',
+    //             indicador: 'População subnutrida',
+    //         },
+    //         77834: {
+    //             id: 77834,
+    //             posicao: PaisesEnum.temas.saude + '.2',
+    //             indicador: 'População subnutrida',
+    //         },
+    //         // 62986: {
+    //         //     id: 62986,
+    //         //     posicao: "100.4",
+    //         //     indicador: "Taxa bruta de mortalidade"
+    //         // },
+    //         // 62987: {
+    //         //     id: 62987,
+    //         //     posicao: "100.5",
+    //         //     indicador: "Taxa bruta de natalidade"
+    //         // }
+    //     } as { [key: number]: any };
 
-        let shouldInclude = true;
-        metadata.forEach(meta => {
-            if (indicadores[meta.id]) {
-                meta.posicao = indicadores[meta.id].posicao;
+    //     let shouldInclude = true;
+    //     metadata.forEach(meta => {
+    //         if (indicadores[meta.id]) {
+    //             meta.posicao = indicadores[meta.id].posicao;
 
-                if (shouldInclude) {
-                    shouldInclude = false;
-                    metadata.unshift(TEMA_SAUDE);
-                }
-            }
-        });
+    //             if (shouldInclude) {
+    //                 shouldInclude = false;
+    //                 metadata.unshift(TEMA_SAUDE);
+    //             }
+    //         }
+    //     });
 
-        return metadata;
-    }
+    //     return metadata;
+    // }
 }

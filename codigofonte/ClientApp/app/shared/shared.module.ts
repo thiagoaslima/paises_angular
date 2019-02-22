@@ -16,35 +16,31 @@ import { GraficoComponent } from './grafico/grafico.component';
 
 import { ResultadoPipe } from './resultado.pipe';
 import { L10NPipe } from './l10n.pipe';
+import { DownloadButtonComponent } from './download-button/download-button.component';
 
 export function platformDetectionFactory(platform_id: Object) {
     return new PlatformDetectionService(platform_id.toString());
 }
 
 @NgModule({
-    imports: [
-        CommonModule,
-    ],
+    imports: [CommonModule],
     declarations: [
         LogoODSComponent,
         GraficoComponent,
         ResultadoPipe,
-        L10NPipe
+        L10NPipe,
+        DownloadButtonComponent,
     ],
     exports: [
         LogoODSComponent,
         GraficoComponent,
         ResultadoPipe,
-        L10NPipe
+        L10NPipe,
+        DownloadButtonComponent,
     ],
-    providers: [
-        TraducaoService,
-        BuscaService,
-        MalhaService
-    ]
+    providers: [TraducaoService, BuscaService, MalhaService],
 })
 export class SharedModule {
-
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
@@ -53,8 +49,8 @@ export class SharedModule {
                 LocalidadeService,
                 PaisesService,
                 PesquisasService,
-                PlatformDetectionService
-            ]
+                PlatformDetectionService,
+            ],
         };
     }
 }
