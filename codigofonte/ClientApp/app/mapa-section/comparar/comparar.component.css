@@ -42,6 +42,16 @@
 	color: #3ecca7;
 }
 
+.comparar__imprimir-icone{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    padding: 15px;
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
 .comparar__pais-atual-container{
 		display: table;
 		width: 100%;
@@ -272,6 +282,10 @@
 		font-size: 0.9em;
 	}
 
+	.comparar__imprimir-icone{
+		display: inline-block;
+	}
+
 	.comparar__seletor-pais-container{
 		width: 300px;
 		height: 100%;
@@ -367,9 +381,14 @@
 	.comparar__icone-fechar, .comparar__botao-fechar{
 		display: none;
 	}
+
 	.comparar__select{
 		font-size: 27px;
 		border: none;
 		background-color: #fff;
 	}
+
+	.comparar__menu{
+        display: none;
+    }
 }

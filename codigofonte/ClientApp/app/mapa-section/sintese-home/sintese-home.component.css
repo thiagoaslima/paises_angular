@@ -129,3 +129,36 @@
 		left: auto;
 	}
 }
+
+/*impressão*/
+@media print {
+	.sintese__leia-mais-link{
+		display: none;
+	}
+
+	.sintese{
+		background-color: white !important;
+		bottom: 0;
+	}
+
+	.sintese__botao-fechar{
+		display: none;
+	}
+
+	.sintese__tab--right-disabled{
+		display: none;
+	}
+
+	.sintese__tab{
+		text-align: left;
+		border: none;
+	}
+
+	.sintese__info-container{
+		border: none;
+	}
+
+	.sintese__bandeira-imagem{
+		max-height: unset !important;
+	}
+}

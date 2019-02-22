@@ -2,3 +2,9 @@
     position: absolute;
     width: 100%;
 }
+
+@media print {
+    :host {
+        display: none !important;
+    }
+}

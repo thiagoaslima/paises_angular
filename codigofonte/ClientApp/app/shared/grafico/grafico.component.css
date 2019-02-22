@@ -211,3 +211,25 @@
     }
     
 }
+
+@media print {
+    .grafico__cor--0:first-child{
+        border: 3px solid #3ECCA7;
+    }
+
+    .grafico__cor--1:first-child{
+        border: 3px solid #E7D766;
+    }
+
+    .grafico__cor--2:first-child{
+        border: 3px solid #A27E56;
+    }
+
+    .grafico__cor--3:first-child{
+        border: 3px solid #949494;
+    }
+
+    .grafico__cor--4:first-child{
+        border: 3px solid #42E695; 
+    }
+}

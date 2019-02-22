@@ -175,4 +175,10 @@ export class DadosPaisComponent {
         // console.log(csv);
         // console.log(this.temas);
     }
+
+    print(){
+        if(window){
+            window.print();
+        }
+    }
 }

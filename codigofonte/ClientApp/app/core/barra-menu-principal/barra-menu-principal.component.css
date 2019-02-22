@@ -230,4 +230,8 @@
     .cabecalho__campo-busca-container {
         display: none;
     }
+
+    .cabecalho__idioma-container{
+        display: none;
+    }
 }

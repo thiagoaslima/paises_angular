@@ -339,4 +339,10 @@ export class CompararComponent {
         return "";
     }
 
+    print(){
+        if(window){
+            window.print();
+        }
+    }
+
 }
