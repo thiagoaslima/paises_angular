@@ -35,7 +35,13 @@
 
 .card__download-btn {
     float: right;
-    margin-top: 2px;
+    margin-top: -3px;
+    opacity: 0.4;
+    transition: opacity 0.2s ease-out;
+}
+.card__download-btn:hover {
+    opacity: 1;
+    transition-timing-function: ease-in;
 }
 
 .card__titulo-icone {

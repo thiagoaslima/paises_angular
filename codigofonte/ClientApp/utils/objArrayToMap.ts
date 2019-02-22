@@ -1,5 +1,9 @@
 import { getProperty } from './getProperty';
-export function objArrayToMap(array: Array<any>, keyPath = 'id', manyElementsAtSameProperty = false) {
+export function objArrayToMap(
+    array: Array<any>,
+    keyPath = 'id',
+    manyElementsAtSameProperty = false
+) {
     return manyElementsAtSameProperty
         ? _hashManyValues(array, keyPath)
         : _hashUniqueValue(array, keyPath);
@@ -10,12 +14,19 @@ function _hashUniqueValue(array: Array<any>, keyPath: string) {
         const label = getProperty(keyPath, item);
 
         if (isInvalidLabel(typeof label)) {
-            throw new TypeError(`A propriedade ${keyPath} do objeto deve ter valor do tipo number ou string. [tipo: ${typeof label}, elemento: ${JSON.stringify(item)}]`);
+            throw new TypeError(
+                `A propriedade ${keyPath} do objeto deve ter valor do tipo number ou string. [tipo: ${typeof label}, elemento: ${JSON.stringify(
+                    item
+                )}]`
+            );
         }
-        
 
         if (hash[label]) {
-            throw new Error(`Mais de um item possui o mesmo valor de referência. Verifique as informações ou considere utilizar a função com a flag 'manyElementsAtSameProperty'. [elemento1: ${JSON.stringify(hash[label])}, elemento2: ${JSON.stringify(item)}}]`)
+            throw new Error(
+                `Mais de um item possui o mesmo valor de referência. Verifique as informações ou considere utilizar a função com a flag 'manyElementsAtSameProperty'. [elemento1: ${JSON.stringify(
+                    hash[label]
+                )}, elemento2: ${JSON.stringify(item)}}]`
+            );
         }
 
         hash[label] = item;
@@ -27,11 +38,17 @@ function _hashManyValues(array: Array<any>, keyPath: string) {
     return array.reduce((hash, item) => {
         const label = getProperty(keyPath, item);
 
-         if (isInvalidLabel(typeof label)) {
-            throw new TypeError(`A propriedade ${keyPath} do objeto deve ter valor do tipo number ou string. [tipo: ${typeof label}, elemento: ${JSON.stringify(item)}]`);
+        if (isInvalidLabel(typeof label)) {
+            throw new TypeError(
+                `A propriedade ${keyPath} do objeto deve ter valor do tipo number ou string. [tipo: ${typeof label}, elemento: ${JSON.stringify(
+                    item
+                )}]`
+            );
         }
 
-        if (!hash[label]) { hash[label] = [] }
+        if (!hash[label]) {
+            hash[label] = [];
+        }
 
         hash[label].push(item);
         return hash;

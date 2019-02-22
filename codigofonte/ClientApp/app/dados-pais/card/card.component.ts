@@ -32,7 +32,7 @@ export class CardComponent {
 
         return `https://servicodados.ibge.gov.br/api/v1/pesquisas/10090/indicadores/${posicao}/csv/${
             pais.sigla
-        }?nocache`;
+        }`;
     }
 
     getTitle(nomeTema: any) {
