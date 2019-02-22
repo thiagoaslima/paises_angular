@@ -1,0 +1,1791 @@
+[
+  {
+    "pais": [
+      "antarctica",
+      "palestine, state of",
+      "south georgia and the south sandwich islands"
+    ],
+    "moeda_pt": "Nenhuma moeda universal",
+    "moeda_en": "No universal currency",
+    "moeda_es": "Sin divisa universal",
+    "codigo": "",
+    "numero": null
+  },
+  {
+    "pais": [
+      "albania"
+    ],
+    "moeda_pt": "Lek",
+    "moeda_en": "Lek",
+    "moeda_es": "Lek",
+    "codigo": "ALL",
+    "numero": 8
+  },
+  {
+    "pais": [
+      "algeria"
+    ],
+    "moeda_pt": "Dinar argelino",
+    "moeda_en": "Algerian Dinar",
+    "moeda_es": "Dinar argelino",
+    "codigo": "DZD",
+    "numero": 12
+  },
+  {
+    "pais": [
+      "argentina"
+    ],
+    "moeda_pt": "Peso argentino",
+    "moeda_en": "Argentine Peso",
+    "moeda_es": "Peso argentino",
+    "codigo": "ARS",
+    "numero": 32
+  },
+  {
+    "pais": [
+      "australia",
+      "christmas island",
+      "cocos (keeling) islands (the)",
+      "heard island and mcdonald islands",
+      "kiribati",
+      "nauru",
+      "norfolk island",
+      "tuvalu"
+    ],
+    "moeda_pt": "Dólar australiano",
+    "moeda_en": "Australian Dollar",
+    "moeda_es": "Dólar australiano",
+    "codigo": "AUD",
+    "numero": 36
+  },
+  {
+    "pais": [
+      "bahamas (the)"
+    ],
+    "moeda_pt": "Dólar das Bahamas",
+    "moeda_en": "Bahamian Dollar",
+    "moeda_es": "Dólar bahameño",
+    "codigo": "BSD",
+    "numero": 44
+  },
+  {
+    "pais": [
+      "bahrain"
+    ],
+    "moeda_pt": "Dinar do Bahrein",
+    "moeda_en": "Bahraini Dinar",
+    "moeda_es": "Dinar bareiní",
+    "codigo": "BHD",
+    "numero": 48
+  },
+  {
+    "pais": [
+      "bangladesh"
+    ],
+    "moeda_pt": "Taka",
+    "moeda_en": "Taka",
+    "moeda_es": "Taka",
+    "codigo": "BDT",
+    "numero": 50
+  },
+  {
+    "pais": [
+      "armenia"
+    ],
+    "moeda_pt": "Dram armênio",
+    "moeda_en": "Armenian Dram",
+    "moeda_es": "Dram armenio",
+    "codigo": "AMD",
+    "numero": 51
+  },
+  {
+    "pais": [
+      "barbados"
+    ],
+    "moeda_pt": "Dólar de Barbados",
+    "moeda_en": "Barbados Dollar",
+    "moeda_es": "Dólar de Barbados",
+    "codigo": "BBD",
+    "numero": 52
+  },
+  {
+    "pais": [
+      "bermuda"
+    ],
+    "moeda_pt": "Dólar das Bermudas",
+    "moeda_en": "Bermudian Dollar",
+    "moeda_es": "Dólar bermudeño",
+    "codigo": "BMD",
+    "numero": 60
+  },
+  {
+    "pais": [
+      "bhutan"
+    ],
+    "moeda_pt": "Ngultrum",
+    "moeda_en": "Ngultrum",
+    "moeda_es": "Ngultrum butanés",
+    "codigo": "BTN",
+    "numero": 64
+  },
+  {
+    "pais": [
+      "bolivia (plurinational state of)"
+    ],
+    "moeda_pt": "Boliviano",
+    "moeda_en": "Boliviano",
+    "moeda_es": "Boliviano",
+    "codigo": "BOB",
+    "numero": 68
+  },
+  {
+    "pais": [
+      "botswana"
+    ],
+    "moeda_pt": "Pula",
+    "moeda_en": "Pula",
+    "moeda_es": "Pula",
+    "codigo": "BWP",
+    "numero": 72
+  },
+  {
+    "pais": [
+      "belize"
+    ],
+    "moeda_pt": "Dólar de Belize",
+    "moeda_en": "Belize Dollar",
+    "moeda_es": "Dólar beliceño",
+    "codigo": "BZD",
+    "numero": 84
+  },
+  {
+    "pais": [
+      "solomon islands"
+    ],
+    "moeda_pt": "Dólar das Ilhas Salomão",
+    "moeda_en": "Solomon Islands Dollar",
+    "moeda_es": "Dólar de Islas Salomón",
+    "codigo": "SBD",
+    "numero": 90
+  },
+  {
+    "pais": [
+      "brunei darussalam"
+    ],
+    "moeda_pt": "Dólares de Brunei",
+    "moeda_en": "Brunei Dollar",
+    "moeda_es": "Dólar de Brunei",
+    "codigo": "BND",
+    "numero": 96
+  },
+  {
+    "pais": [
+      "myanmar"
+    ],
+    "moeda_pt": "Kyat",
+    "moeda_en": "Kyat",
+    "moeda_es": "Kyat birmano",
+    "codigo": "MMK",
+    "numero": 104
+  },
+  {
+    "pais": [
+      "burundi"
+    ],
+    "moeda_pt": "Franco do Burundi",
+    "moeda_en": "Burundi Franc",
+    "moeda_es": "Franco burundés",
+    "codigo": "BIF",
+    "numero": 108
+  },
+  {
+    "pais": [
+      "cambodia"
+    ],
+    "moeda_pt": "Riel",
+    "moeda_en": "Riel",
+    "moeda_es": "Riel camboyano",
+    "codigo": "KHR",
+    "numero": 116
+  },
+  {
+    "pais": [
+      "canada"
+    ],
+    "moeda_pt": "Dólar canadense",
+    "moeda_en": "Canadian Dollar",
+    "moeda_es": "Dólar canadiense",
+    "codigo": "CAD",
+    "numero": 124
+  },
+  {
+    "pais": [
+      "cabo verde"
+    ],
+    "moeda_pt": "Cabo Verde Escudo",
+    "moeda_en": "Cabo Verde Escudo",
+    "moeda_es": "Escudo caboverdiano",
+    "codigo": "CVE",
+    "numero": 132
+  },
+  {
+    "pais": [
+      "cayman islands (the)"
+    ],
+    "moeda_pt": "Dólar das Ilhas Caimã",
+    "moeda_en": "Cayman Islands Dollar",
+    "moeda_es": "Dólar de las Islas Cayman",
+    "codigo": "KYD",
+    "numero": 136
+  },
+  {
+    "pais": [
+      "sri lanka"
+    ],
+    "moeda_pt": "Rupia do Sri Lanka",
+    "moeda_en": "Sri Lanka Rupee",
+    "moeda_es": "Rupia de Sri Lanka",
+    "codigo": "LKR",
+    "numero": 144
+  },
+  {
+    "pais": [
+      "chile"
+    ],
+    "moeda_pt": "Peso chileno",
+    "moeda_en": "Chilean Peso",
+    "moeda_es": "Peso chileno",
+    "codigo": "CLP",
+    "numero": 152
+  },
+  {
+    "pais": [
+      "china"
+    ],
+    "moeda_pt": "Yuan Renminbi",
+    "moeda_en": "Yuan Renminbi",
+    "moeda_es": "Renminbi",
+    "codigo": "CNY",
+    "numero": 156
+  },
+  {
+    "pais": [
+      "colombia"
+    ],
+    "moeda_pt": "Peso colombiano",
+    "moeda_en": "Colombian Peso",
+    "moeda_es": "Peso colombiano",
+    "codigo": "COP",
+    "numero": 170
+  },
+  {
+    "pais": [
+      "comoros (the)"
+    ],
+    "moeda_pt": "Franco Comor",
+    "moeda_en": "Comoro Franc",
+    "moeda_es": "Franco comorense",
+    "codigo": "KMF",
+    "numero": 174
+  },
+  {
+    "pais": [
+      "costa rica"
+    ],
+    "moeda_pt": "Colon da Costa Rica",
+    "moeda_en": "Costa Rican Colon",
+    "moeda_es": "Colón costarricense",
+    "codigo": "CRC",
+    "numero": 188
+  },
+  {
+    "pais": [
+      "croatia"
+    ],
+    "moeda_pt": "Kuna",
+    "moeda_en": "Kuna",
+    "moeda_es": "Kuna",
+    "codigo": "HRK",
+    "numero": 191
+  },
+  {
+    "pais": [
+      "cuba"
+    ],
+    "moeda_pt": "Peso cubano",
+    "moeda_en": "Cuban Peso",
+    "moeda_es": "Peso cubano",
+    "codigo": "CUP",
+    "numero": 192
+  },
+  {
+    "pais": [
+      "czech republic (the)"
+    ],
+    "moeda_pt": "Coroa Tcheca",
+    "moeda_en": "Czech Koruna",
+    "moeda_es": "Czech Koruna",
+    "codigo": "CZK",
+    "numero": 203
+  },
+  {
+    "pais": [
+      "denmark",
+      "faroe islands (the)",
+      "greenland"
+    ],
+    "moeda_pt": "Coroa dinamarquesa",
+    "moeda_en": "Danish Krone",
+    "moeda_es": "Corona danesa",
+    "codigo": "DKK",
+    "numero": 208
+  },
+  {
+    "pais": [
+      "dominican republic (the)"
+    ],
+    "moeda_pt": "Peso dominicano",
+    "moeda_en": "Dominican Peso",
+    "moeda_es": "Peso dominicano",
+    "codigo": "DOP",
+    "numero": 214
+  },
+  {
+    "pais": [
+      "el salvador"
+    ],
+    "moeda_pt": "Cólon de El Salvador",
+    "moeda_en": "El Salvador Colon",
+    "moeda_es": "Colón",
+    "codigo": "SVC",
+    "numero": 222
+  },
+  {
+    "pais": [
+      "ethiopia"
+    ],
+    "moeda_pt": "Birr etíope",
+    "moeda_en": "Ethiopian Birr",
+    "moeda_es": "Birr etíope",
+    "codigo": "ETB",
+    "numero": 230
+  },
+  {
+    "pais": [
+      "eritrea"
+    ],
+    "moeda_pt": "Nakfa",
+    "moeda_en": "Nakfa",
+    "moeda_es": "Nakfa",
+    "codigo": "ERN",
+    "numero": 232
+  },
+  {
+    "pais": [
+      "falkland islands (the) [malvinas]"
+    ],
+    "moeda_pt": "Libra das Ilhas Falkland",
+    "moeda_en": "Falkland Islands Pound",
+    "moeda_es": "Libra malvinense",
+    "codigo": "FKP",
+    "numero": 238
+  },
+  {
+    "pais": [
+      "fiji"
+    ],
+    "moeda_pt": "Dólar de Fiji",
+    "moeda_en": "Fiji Dollar",
+    "moeda_es": "Dólar fiyiano",
+    "codigo": "FJD",
+    "numero": 242
+  },
+  {
+    "pais": [
+      "djibouti"
+    ],
+    "moeda_pt": "Franco do Djibouti",
+    "moeda_en": "Djibouti Franc",
+    "moeda_es": "Franco yibutiano",
+    "codigo": "DJF",
+    "numero": 262
+  },
+  {
+    "pais": [
+      "gambia (the)"
+    ],
+    "moeda_pt": "Dalasi",
+    "moeda_en": "Dalasi",
+    "moeda_es": "Dalasi",
+    "codigo": "GMD",
+    "numero": 270
+  },
+  {
+    "pais": [
+      "gibraltar"
+    ],
+    "moeda_pt": "Libra De Gibraltar",
+    "moeda_en": "Gibraltar Pound",
+    "moeda_es": "Libra gibraltareña",
+    "codigo": "GIP",
+    "numero": 292
+  },
+  {
+    "pais": [
+      "guatemala"
+    ],
+    "moeda_pt": "Quetzal",
+    "moeda_en": "Quetzal",
+    "moeda_es": "Quetzal",
+    "codigo": "GTQ",
+    "numero": 320
+  },
+  {
+    "pais": [
+      "guinea"
+    ],
+    "moeda_pt": "Franco da Guiné",
+    "moeda_en": "Guinea Franc",
+    "moeda_es": "Franco guineano",
+    "codigo": "GNF",
+    "numero": 324
+  },
+  {
+    "pais": [
+      "guyana"
+    ],
+    "moeda_pt": "Dólar da Guiana",
+    "moeda_en": "Guyana Dollar",
+    "moeda_es": "Dólar guyanés",
+    "codigo": "GYD",
+    "numero": 328
+  },
+  {
+    "pais": [
+      "haiti"
+    ],
+    "moeda_pt": "Gourde",
+    "moeda_en": "Gourde",
+    "moeda_es": "Gourde",
+    "codigo": "HTG",
+    "numero": 332
+  },
+  {
+    "pais": [
+      "honduras"
+    ],
+    "moeda_pt": "Lempira",
+    "moeda_en": "Lempira",
+    "moeda_es": "Lempira",
+    "codigo": "HNL",
+    "numero": 340
+  },
+  {
+    "pais": [
+      "hong kong"
+    ],
+    "moeda_pt": "Dólar de Hong Kong",
+    "moeda_en": "Hong Kong Dollar",
+    "moeda_es": "Dólar de Hong Kong",
+    "codigo": "HKD",
+    "numero": 344
+  },
+  {
+    "pais": [
+      "hungary"
+    ],
+    "moeda_pt": "Forint",
+    "moeda_en": "Forint",
+    "moeda_es": "Forinto húngaro",
+    "codigo": "HUF",
+    "numero": 348
+  },
+  {
+    "pais": [
+      "iceland"
+    ],
+    "moeda_pt": "Coroa da Islândia",
+    "moeda_en": "Iceland Krona",
+    "moeda_es": "Corona islandesa",
+    "codigo": "ISK",
+    "numero": 352
+  },
+  {
+    "pais": [
+      "bhutan",
+      "india"
+    ],
+    "moeda_pt": "Rupia indiana",
+    "moeda_en": "Indian Rupee",
+    "moeda_es": "Rupia india",
+    "codigo": "INR",
+    "numero": 356
+  },
+  {
+    "pais": [
+      "indonesia"
+    ],
+    "moeda_pt": "Rupia",
+    "moeda_en": "Rupiah",
+    "moeda_es": "Rupia indonesia",
+    "codigo": "IDR",
+    "numero": 360
+  },
+  {
+    "pais": [
+      "iran (islamic republic of)"
+    ],
+    "moeda_pt": "Rial iraniano",
+    "moeda_en": "Iranian Rial",
+    "moeda_es": "Rial iraní",
+    "codigo": "IRR",
+    "numero": 364
+  },
+  {
+    "pais": [
+      "iraq"
+    ],
+    "moeda_pt": "Dinar iraquiano",
+    "moeda_en": "Iraqi Dinar",
+    "moeda_es": "Dinar iraquí",
+    "codigo": "IQD",
+    "numero": 368
+  },
+  {
+    "pais": [
+      "israel"
+    ],
+    "moeda_pt": "Novo Sheqel israelense",
+    "moeda_en": "New Israeli Sheqel",
+    "moeda_es": "Nuevo séquel",
+    "codigo": "ILS",
+    "numero": 376
+  },
+  {
+    "pais": [
+      "jamaica"
+    ],
+    "moeda_pt": "Dólar jamaicano",
+    "moeda_en": "Jamaican Dollar",
+    "moeda_es": "Dólar jamaiquino",
+    "codigo": "JMD",
+    "numero": 388
+  },
+  {
+    "pais": [
+      "japan"
+    ],
+    "moeda_pt": "Iene",
+    "moeda_en": "Yen",
+    "moeda_es": "Yen",
+    "codigo": "JPY",
+    "numero": 392
+  },
+  {
+    "pais": [
+      "kazakhstan"
+    ],
+    "moeda_pt": "Tenge",
+    "moeda_en": "Tenge",
+    "moeda_es": "Tenge kazajo",
+    "codigo": "KZT",
+    "numero": 398
+  },
+  {
+    "pais": [
+      "jordan"
+    ],
+    "moeda_pt": "Dinar jordaniano",
+    "moeda_en": "Jordanian Dinar",
+    "moeda_es": "Dinar jordano",
+    "codigo": "JOD",
+    "numero": 400
+  },
+  {
+    "pais": [
+      "kenya"
+    ],
+    "moeda_pt": "Xelim do Quênia",
+    "moeda_en": "Kenyan Shilling",
+    "moeda_es": "Chelín keniano",
+    "codigo": "KES",
+    "numero": 404
+  },
+  {
+    "pais": [
+      "korea (the democratic people’s republic of)"
+    ],
+    "moeda_pt": "Won norte-coreano",
+    "moeda_en": "North Korean Won",
+    "moeda_es": "Won norcoreano",
+    "codigo": "KPW",
+    "numero": 408
+  },
+  {
+    "pais": [
+      "korea (the republic of)"
+    ],
+    "moeda_pt": "Won",
+    "moeda_en": "Won",
+    "moeda_es": "Won",
+    "codigo": "KRW",
+    "numero": 410
+  },
+  {
+    "pais": [
+      "kuwait"
+    ],
+    "moeda_pt": "O Dinar do Kuwait",
+    "moeda_en": "Kuwaiti Dinar",
+    "moeda_es": "Dinar kuwaití",
+    "codigo": "KWD",
+    "numero": 414
+  },
+  {
+    "pais": [
+      "kyrgyzstan"
+    ],
+    "moeda_pt": "Som",
+    "moeda_en": "Som",
+    "moeda_es": "Som",
+    "codigo": "KGS",
+    "numero": 417
+  },
+  {
+    "pais": [
+      "lao people’s democratic republic (the)"
+    ],
+    "moeda_pt": "Kip",
+    "moeda_en": "Kip",
+    "moeda_es": "Kip laosiano",
+    "codigo": "LAK",
+    "numero": 418
+  },
+  {
+    "pais": [
+      "lebanon"
+    ],
+    "moeda_pt": "Libra libanesa",
+    "moeda_en": "Lebanese Pound",
+    "moeda_es": "Libra libanesa",
+    "codigo": "LBP",
+    "numero": 422
+  },
+  {
+    "pais": [
+      "lesotho"
+    ],
+    "moeda_pt": "Loti",
+    "moeda_en": "Loti",
+    "moeda_es": "Loti",
+    "codigo": "LSL",
+    "numero": 426
+  },
+  {
+    "pais": [
+      "liberia"
+    ],
+    "moeda_pt": "Dólar liberiano",
+    "moeda_en": "Liberian Dollar",
+    "moeda_es": "Dólar liberiano",
+    "codigo": "LRD",
+    "numero": 430
+  },
+  {
+    "pais": [
+      "libya"
+    ],
+    "moeda_pt": "Dinar da Líbia",
+    "moeda_en": "Libyan Dinar",
+    "moeda_es": "Dinar libio",
+    "codigo": "LYD",
+    "numero": 434
+  },
+  {
+    "pais": [
+      "macao"
+    ],
+    "moeda_pt": "Pataca",
+    "moeda_en": "Pataca",
+    "moeda_es": "Pataca",
+    "codigo": "MOP",
+    "numero": 446
+  },
+  {
+    "pais": [
+      "malawi"
+    ],
+    "moeda_pt": "Kwacha",
+    "moeda_en": "Kwacha",
+    "moeda_es": "Kwacha malauí",
+    "codigo": "MWK",
+    "numero": 454
+  },
+  {
+    "pais": [
+      "malaysia"
+    ],
+    "moeda_pt": "Ringgit da Malásia",
+    "moeda_en": "Malaysian Ringgit",
+    "moeda_es": "Ringgit malayo",
+    "codigo": "MYR",
+    "numero": 458
+  },
+  {
+    "pais": [
+      "maldives"
+    ],
+    "moeda_pt": "Rufiyaa",
+    "moeda_en": "Rufiyaa",
+    "moeda_es": "Rupia de maldivas",
+    "codigo": "MVR",
+    "numero": 462
+  },
+  {
+    "pais": [
+      "mauritania"
+    ],
+    "moeda_pt": "Ouguiya",
+    "moeda_en": "Ouguiya",
+    "moeda_es": "Uguiya",
+    "codigo": "MRO",
+    "numero": 478
+  },
+  {
+    "pais": [
+      "mauritius"
+    ],
+    "moeda_pt": "Rupia das Maurícias",
+    "moeda_en": "Mauritius Rupee",
+    "moeda_es": "Rupia de Mauricio",
+    "codigo": "MUR",
+    "numero": 480
+  },
+  {
+    "pais": [
+      "mexico"
+    ],
+    "moeda_pt": "Peso mexicano",
+    "moeda_en": "Mexican Peso",
+    "moeda_es": "Peso mexicano",
+    "codigo": "MXN",
+    "numero": 484
+  },
+  {
+    "pais": [
+      "mongolia"
+    ],
+    "moeda_pt": "Tugrik",
+    "moeda_en": "Tugrik",
+    "moeda_es": "Tugrik",
+    "codigo": "MNT",
+    "numero": 496
+  },
+  {
+    "pais": [
+      "moldova (the republic of)"
+    ],
+    "moeda_pt": "Leão da Moldávia",
+    "moeda_en": "Moldovan Leu",
+    "moeda_es": "Leu Moldavo",
+    "codigo": "MDL",
+    "numero": 498
+  },
+  {
+    "pais": [
+      "morocco",
+      "western sahara"
+    ],
+    "moeda_pt": "Dirham marroquino",
+    "moeda_en": "Moroccan Dirham",
+    "moeda_es": "Dírham marroquí",
+    "codigo": "MAD",
+    "numero": 504
+  },
+  {
+    "pais": [
+      "oman"
+    ],
+    "moeda_pt": "Rial Omani",
+    "moeda_en": "Rial Omani",
+    "moeda_es": "Rial omaní",
+    "codigo": "OMR",
+    "numero": 512
+  },
+  {
+    "pais": [
+      "namibia"
+    ],
+    "moeda_pt": "Dólares da Namíbia",
+    "moeda_en": "Namibia Dollar",
+    "moeda_es": "Dólar de Namibia",
+    "codigo": "NAD",
+    "numero": 516
+  },
+  {
+    "pais": [
+      "nepal"
+    ],
+    "moeda_pt": "Rupia nepalesa",
+    "moeda_en": "Nepalese Rupee",
+    "moeda_es": "Rupia nepalí",
+    "codigo": "NPR",
+    "numero": 524
+  },
+  {
+    "pais": [
+      "curaçao",
+      "sint maarten (dutch part)"
+    ],
+    "moeda_pt": "Guilder das Antilhas Holandesas",
+    "moeda_en": "Netherlands Antillean Guilder",
+    "moeda_es": "Florín antillano neerlandés",
+    "codigo": "ANG",
+    "numero": 532
+  },
+  {
+    "pais": [
+      "aruba"
+    ],
+    "moeda_pt": "Florim de Aruba",
+    "moeda_en": "Aruban Florin",
+    "moeda_es": "Florín arubeño",
+    "codigo": "AWG",
+    "numero": 533
+  },
+  {
+    "pais": [
+      "vanuatu"
+    ],
+    "moeda_pt": "Vatu",
+    "moeda_en": "Vatu",
+    "moeda_es": "Vatu",
+    "codigo": "VUV",
+    "numero": 548
+  },
+  {
+    "pais": [
+      "cook islands (the)",
+      "new zealand",
+      "niue",
+      "pitcairn",
+      "tokelau"
+    ],
+    "moeda_pt": "Dólar da Nova Zelândia",
+    "moeda_en": "New Zealand Dollar",
+    "moeda_es": "Dólar de la Islas Cook",
+    "codigo": "NZD",
+    "numero": 554
+  },
+  {
+    "pais": [
+      "nicaragua"
+    ],
+    "moeda_pt": "Cordoba Oro",
+    "moeda_en": "Cordoba Oro",
+    "moeda_es": "Córdoba oro",
+    "codigo": "NIO",
+    "numero": 558
+  },
+  {
+    "pais": [
+      "nigeria"
+    ],
+    "moeda_pt": "Naira",
+    "moeda_en": "Naira",
+    "moeda_es": "Naira",
+    "codigo": "NGN",
+    "numero": 566
+  },
+  {
+    "pais": [
+      "bouvet island",
+      "norway",
+      "svalbard and jan mayen"
+    ],
+    "moeda_pt": "Coroa norueguesa",
+    "moeda_en": "Norwegian Krone",
+    "moeda_es": "Corona noruega",
+    "codigo": "NOK",
+    "numero": 578
+  },
+  {
+    "pais": [
+      "pakistan"
+    ],
+    "moeda_pt": "Rupia do Paquistão",
+    "moeda_en": "Pakistan Rupee",
+    "moeda_es": "Rupia pakistaní",
+    "codigo": "PKR",
+    "numero": 586
+  },
+  {
+    "pais": [
+      "panama"
+    ],
+    "moeda_pt": "Balboa",
+    "moeda_en": "Balboa",
+    "moeda_es": "Balboa",
+    "codigo": "PAB",
+    "numero": 590
+  },
+  {
+    "pais": [
+      "papua new guinea"
+    ],
+    "moeda_pt": "Kina",
+    "moeda_en": "Kina",
+    "moeda_es": "Kina",
+    "codigo": "PGK",
+    "numero": 598
+  },
+  {
+    "pais": [
+      "paraguay"
+    ],
+    "moeda_pt": "Guarani",
+    "moeda_en": "Guarani",
+    "moeda_es": "Guaraní",
+    "codigo": "PYG",
+    "numero": 600
+  },
+  {
+    "pais": [
+      "peru"
+    ],
+    "moeda_pt": "Nuevo Sol",
+    "moeda_en": "Nuevo Sol",
+    "moeda_es": "Nuevo Sol",
+    "codigo": "PEN",
+    "numero": 604
+  },
+  {
+    "pais": [
+      "philippines (the)"
+    ],
+    "moeda_pt": "Peso filipino",
+    "moeda_en": "Philippine Peso",
+    "moeda_es": "Peso filipino",
+    "codigo": "PHP",
+    "numero": 608
+  },
+  {
+    "pais": [
+      "qatar"
+    ],
+    "moeda_pt": "Qatari Rial",
+    "moeda_en": "Qatari Rial",
+    "moeda_es": "Riyal catarí",
+    "codigo": "QAR",
+    "numero": 634
+  },
+  {
+    "pais": [
+      "russian federation (the)"
+    ],
+    "moeda_pt": "rublo russo",
+    "moeda_en": "Russian Ruble",
+    "moeda_es": "Rublo ruso",
+    "codigo": "RUB",
+    "numero": 643
+  },
+  {
+    "pais": [
+      "rwanda"
+    ],
+    "moeda_pt": "Rwanda Franc",
+    "moeda_en": "Rwanda Franc",
+    "moeda_es": "Franco ruandés",
+    "codigo": "RWF",
+    "numero": 646
+  },
+  {
+    "pais": [
+      "saint helena, ascension and tristan da cunha"
+    ],
+    "moeda_pt": "Saint Helena Pound",
+    "moeda_en": "Saint Helena Pound",
+    "moeda_es": "Libra de Santa Helena",
+    "codigo": "SHP",
+    "numero": 654
+  },
+  {
+    "pais": [
+      "sao tome and principe"
+    ],
+    "moeda_pt": "Dobra",
+    "moeda_en": "Dobra",
+    "moeda_es": "Dobra",
+    "codigo": "STD",
+    "numero": 678
+  },
+  {
+    "pais": [
+      "saudi arabia"
+    ],
+    "moeda_pt": "Rial saudita",
+    "moeda_en": "Saudi Riyal",
+    "moeda_es": "Riyal saudí",
+    "codigo": "SAR",
+    "numero": 682
+  },
+  {
+    "pais": [
+      "seychelles"
+    ],
+    "moeda_pt": "Rúpia das Seychelles",
+    "moeda_en": "Seychelles Rupee",
+    "moeda_es": "Rupia de Seychelles",
+    "codigo": "SCR",
+    "numero": 690
+  },
+  {
+    "pais": [
+      "sierra leone"
+    ],
+    "moeda_pt": "Leone",
+    "moeda_en": "Leone",
+    "moeda_es": "Leone",
+    "codigo": "SLL",
+    "numero": 694
+  },
+  {
+    "pais": [
+      "singapore"
+    ],
+    "moeda_pt": "Dólar de Singapura",
+    "moeda_en": "Singapore Dollar",
+    "moeda_es": "Dólar de Singapur",
+    "codigo": "SGD",
+    "numero": 702
+  },
+  {
+    "pais": [
+      "viet nam"
+    ],
+    "moeda_pt": "Dong",
+    "moeda_en": "Dong",
+    "moeda_es": "Dong",
+    "codigo": "VND",
+    "numero": 704
+  },
+  {
+    "pais": [
+      "somalia"
+    ],
+    "moeda_pt": "Shilling Somali",
+    "moeda_en": "Somali Shilling",
+    "moeda_es": "Chelín somalí",
+    "codigo": "SOS",
+    "numero": 706
+  },
+  {
+    "pais": [
+      "lesotho",
+      "namibia",
+      "south africa"
+    ],
+    "moeda_pt": "Rand",
+    "moeda_en": "Rand",
+    "moeda_es": "Rand",
+    "codigo": "ZAR",
+    "numero": 710
+  },
+  {
+    "pais": [
+      "south sudan"
+    ],
+    "moeda_pt": "Libra Sudanesa do Sul",
+    "moeda_en": "South Sudanese Pound",
+    "moeda_es": "Libra sursudanesa",
+    "codigo": "SSP",
+    "numero": 728
+  },
+  {
+    "pais": [
+      "swaziland"
+    ],
+    "moeda_pt": "Lilangeni",
+    "moeda_en": "Lilangeni",
+    "moeda_es": "Lilangeni",
+    "codigo": "SZL",
+    "numero": 748
+  },
+  {
+    "pais": [
+      "sweden"
+    ],
+    "moeda_pt": "Swedish Krona",
+    "moeda_en": "Swedish Krona",
+    "moeda_es": "Corona sueca",
+    "codigo": "SEK",
+    "numero": 752
+  },
+  {
+    "pais": [
+      "liechtenstein",
+      "switzerland"
+    ],
+    "moeda_pt": "Franco suíço",
+    "moeda_en": "Swiss Franc",
+    "moeda_es": "Franco suizo",
+    "codigo": "CHF",
+    "numero": 756
+  },
+  {
+    "pais": [
+      "syrian arab republic"
+    ],
+    "moeda_pt": "Libra síria",
+    "moeda_en": "Syrian Pound",
+    "moeda_es": "Libra siria",
+    "codigo": "SYP",
+    "numero": 760
+  },
+  {
+    "pais": [
+      "thailand"
+    ],
+    "moeda_pt": "Baht",
+    "moeda_en": "Baht",
+    "moeda_es": "Baht",
+    "codigo": "THB",
+    "numero": 764
+  },
+  {
+    "pais": [
+      "tonga"
+    ],
+    "moeda_pt": "Pa’anga",
+    "moeda_en": "Pa’anga",
+    "moeda_es": "Pa’anga",
+    "codigo": "TOP",
+    "numero": 776
+  },
+  {
+    "pais": [
+      "trinidad and tobago"
+    ],
+    "moeda_pt": "Dólar de Trinidad e Tobago",
+    "moeda_en": "Trinidad and Tobago Dollar",
+    "moeda_es": "Dólar de Trinidad y Tobago",
+    "codigo": "TTD",
+    "numero": 780
+  },
+  {
+    "pais": [
+      "united arab emirates (the)"
+    ],
+    "moeda_pt": "UAE Dirham",
+    "moeda_en": "UAE Dirham",
+    "moeda_es": "Dirham DE EAU",
+    "codigo": "AED",
+    "numero": 784
+  },
+  {
+    "pais": [
+      "tunisia"
+    ],
+    "moeda_pt": "Dinar tunisino",
+    "moeda_en": "Tunisian Dinar",
+    "moeda_es": "Dinar tunecino",
+    "codigo": "TND",
+    "numero": 788
+  },
+  {
+    "pais": [
+      "uganda"
+    ],
+    "moeda_pt": "Xelim de Uganda",
+    "moeda_en": "Uganda Shilling",
+    "moeda_es": "Chelín ugandés",
+    "codigo": "UGX",
+    "numero": 800
+  },
+  {
+    "pais": [
+      "macedonia (the former yugoslav republic of)"
+    ],
+    "moeda_pt": "Denar",
+    "moeda_en": "Denar",
+    "moeda_es": "Dinar",
+    "codigo": "MKD",
+    "numero": 807
+  },
+  {
+    "pais": [
+      "egypt"
+    ],
+    "moeda_pt": "Libra egípcia",
+    "moeda_en": "Egyptian Pound",
+    "moeda_es": "Libra egipcia",
+    "codigo": "EGP",
+    "numero": 818
+  },
+  {
+    "pais": [
+      "guernsey",
+      "isle of man",
+      "jersey",
+      "united kingdom of great britain and northern ireland (the)"
+    ],
+    "moeda_pt": "Libra esterlina",
+    "moeda_en": "Pound Sterling",
+    "moeda_es": "Libra esterlina",
+    "codigo": "GBP",
+    "numero": 826
+  },
+  {
+    "pais": [
+      "tanzania, united republic of"
+    ],
+    "moeda_pt": "Xelim da Tanzânia",
+    "moeda_en": "Tanzanian Shilling",
+    "moeda_es": "Chelín tanzano",
+    "codigo": "TZS",
+    "numero": 834
+  },
+  {
+    "pais": [
+      "american samoa",
+      "bonaire, sint eustatius and saba",
+      "british indian ocean territory (the)",
+      "ecuador",
+      "el salvador",
+      "guam",
+      "haiti",
+      "marshall islands (the)",
+      "micronesia (federated states of)",
+      "northern mariana islands (the)",
+      "palau",
+      "panama",
+      "puerto rico",
+      "timor-leste",
+      "turks and caicos islands (the)",
+      "united states minor outlying islands (the)",
+      "united states of america (the)",
+      "virgin islands (british)",
+      "virgin islands (u.s.)"
+    ],
+    "moeda_pt": "Dólar americano",
+    "moeda_en": "US Dollar",
+    "moeda_es": "Dólar estadounidense",
+    "codigo": "USD",
+    "numero": 840
+  },
+  {
+    "pais": [
+      "uruguay"
+    ],
+    "moeda_pt": "Peso Uruguaio",
+    "moeda_en": "Peso Uruguayo",
+    "moeda_es": "Peso uruguayo",
+    "codigo": "UYU",
+    "numero": 858
+  },
+  {
+    "pais": [
+      "uzbekistan"
+    ],
+    "moeda_pt": "Soma do Uzbequistão",
+    "moeda_en": "Uzbekistan Sum",
+    "moeda_es": "Som uzbeko",
+    "codigo": "UZS",
+    "numero": 860
+  },
+  {
+    "pais": [
+      "samoa"
+    ],
+    "moeda_pt": "Tala",
+    "moeda_en": "Tala",
+    "moeda_es": "Tala",
+    "codigo": "WST",
+    "numero": 882
+  },
+  {
+    "pais": [
+      "yemen"
+    ],
+    "moeda_pt": "Rial Iemenita",
+    "moeda_en": "Yemeni Rial",
+    "moeda_es": "Rial yemení",
+    "codigo": "YER",
+    "numero": 886
+  },
+  {
+    "pais": [
+      "taiwan (province of china)"
+    ],
+    "moeda_pt": "Novo dólar de Taiwan",
+    "moeda_en": "New Taiwan Dollar",
+    "moeda_es": "Nuevo dólar de Taiwán",
+    "codigo": "TWD",
+    "numero": 901
+  },
+  {
+    "pais": [
+      "cuba"
+    ],
+    "moeda_pt": "Peso conversível",
+    "moeda_en": "Peso Convertible",
+    "moeda_es": "Peso convertible",
+    "codigo": "CUC",
+    "numero": 931
+  },
+  {
+    "pais": [
+      "zimbabwe"
+    ],
+    "moeda_pt": "Dólar zimbabuano",
+    "moeda_en": "Zimbabwe Dollar",
+    "moeda_es": "Dólar zimbabuense",
+    "codigo": "ZWL",
+    "numero": 932
+  },
+  {
+    "pais": [
+      "turkmenistan"
+    ],
+    "moeda_pt": "Turcomenistão New Manat",
+    "moeda_en": "Turkmenistan New Manat",
+    "moeda_es": "Manat turcomano",
+    "codigo": "TMT",
+    "numero": 934
+  },
+  {
+    "pais": [
+      "ghana"
+    ],
+    "moeda_pt": "Ghana Cedi",
+    "moeda_en": "Ghana Cedi",
+    "moeda_es": "Cedi",
+    "codigo": "GHS",
+    "numero": 936
+  },
+  {
+    "pais": [
+      "venezuela (bolivarian republic of)"
+    ],
+    "moeda_pt": "Bolívar",
+    "moeda_en": "Bolivar",
+    "moeda_es": "Bolívar",
+    "codigo": "VEF",
+    "numero": 937
+  },
+  {
+    "pais": [
+      "sudan (the)"
+    ],
+    "moeda_pt": "Libra sudanesa",
+    "moeda_en": "Sudanese Pound",
+    "moeda_es": "Libra sudanesa",
+    "codigo": "SDG",
+    "numero": 938
+  },
+  {
+    "pais": [
+      "uruguay"
+    ],
+    "moeda_pt": "Peso Uruguaio em Unidades Indexadas (URUIURUI)",
+    "moeda_en": "Uruguay Peso en Unidades Indexadas (URUIURUI)",
+    "moeda_es": "Peso uruguayo en unidades indexadas (URUIURUI)",
+    "codigo": "UYI",
+    "numero": 940
+  },
+  {
+    "pais": [
+      "serbia"
+    ],
+    "moeda_pt": "Dinar sérvio",
+    "moeda_en": "Serbian Dinar",
+    "moeda_es": "Dinar serbio",
+    "codigo": "RSD",
+    "numero": 941
+  },
+  {
+    "pais": [
+      "mozambique"
+    ],
+    "moeda_pt": "Moçambique Metical",
+    "moeda_en": "Mozambique Metical",
+    "moeda_es": "Metical mozambiqueño",
+    "codigo": "MZN",
+    "numero": 943
+  },
+  {
+    "pais": [
+      "azerbaijan"
+    ],
+    "moeda_pt": "Manat do Azerbaijão",
+    "moeda_en": "Azerbaijanian Manat",
+    "moeda_es": "Manat azerbaiyano",
+    "codigo": "AZN",
+    "numero": 944
+  },
+  {
+    "pais": [
+      "romania"
+    ],
+    "moeda_pt": "Leu romeno",
+    "moeda_en": "Romanian Leu",
+    "moeda_es": "Leu rumano",
+    "codigo": "RON",
+    "numero": 946
+  },
+  {
+    "pais": [
+      "switzerland"
+    ],
+    "moeda_pt": "WIR Euro",
+    "moeda_en": "WIR Euro",
+    "moeda_es": "WIR Euro",
+    "codigo": "CHE",
+    "numero": 947
+  },
+  {
+    "pais": [
+      "switzerland"
+    ],
+    "moeda_pt": "WIR Franc",
+    "moeda_en": "WIR Franc",
+    "moeda_es": "Franco WIR",
+    "codigo": "CHW",
+    "numero": 948
+  },
+  {
+    "pais": [
+      "turkey"
+    ],
+    "moeda_pt": "Lira turca",
+    "moeda_en": "Turkish Lira",
+    "moeda_es": "Lira turca",
+    "codigo": "TRY",
+    "numero": 949
+  },
+  {
+    "pais": [
+      "cameroon",
+      "central african republic (the)",
+      "chad",
+      "congo (the)",
+      "equatorial guinea",
+      "gabon"
+    ],
+    "moeda_pt": "CFA Franc BEAC",
+    "moeda_en": "CFA Franc BEAC",
+    "moeda_es": "Franco CFA de África Central",
+    "codigo": "XAF",
+    "numero": 950
+  },
+  {
+    "pais": [
+      "anguilla",
+      "antigua and barbuda",
+      "dominica",
+      "grenada",
+      "montserrat",
+      "saint kitts and nevis",
+      "saint lucia",
+      "saint vincent and the grenadines"
+    ],
+    "moeda_pt": "Dólar do Caribe Oriental",
+    "moeda_en": "East Caribbean Dollar",
+    "moeda_es": "Dólar del Caribe Oriental",
+    "codigo": "XCD",
+    "numero": 951
+  },
+  {
+    "pais": [
+      "benin",
+      "burkina faso",
+      "côte d'ivoire",
+      "guinea-bissau",
+      "mali",
+      "niger (the)",
+      "senegal",
+      "togo"
+    ],
+    "moeda_pt": "CFA Franco BCEAO",
+    "moeda_en": "CFA Franc BCEAO",
+    "moeda_es": "Franco CFA de África Occidental",
+    "codigo": "XOF",
+    "numero": 952
+  },
+  {
+    "pais": [
+      "french polynesia",
+      "new caledonia",
+      "wallis and futuna"
+    ],
+    "moeda_pt": "CFP Franc",
+    "moeda_en": "CFP Franc",
+    "moeda_es": "Franco CFP",
+    "codigo": "XPF",
+    "numero": 953
+  },
+  {
+    "pais": [
+      "international monetary fund (imf)"
+    ],
+    "moeda_pt": "SDR (Special Drawing Right)",
+    "moeda_en": "SDR (Special Drawing Right)",
+    "moeda_es": "SDR (Derecho Especial de Retiro)",
+    "codigo": "XDR",
+    "numero": 960
+  },
+  {
+    "pais": [
+      "member countries of the african development bank group"
+    ],
+    "moeda_pt": "Unidade de Conta do ADB",
+    "moeda_en": "ADB Unit of Account",
+    "moeda_es": "BAD UNIDAD DE CUENTAS",
+    "codigo": "XUA",
+    "numero": 965
+  },
+  {
+    "pais": [
+      "zambia"
+    ],
+    "moeda_pt": "Zambian Kwacha",
+    "moeda_en": "Zambian Kwacha",
+    "moeda_es": "Kwacha zambiano",
+    "codigo": "ZMW",
+    "numero": 967
+  },
+  {
+    "pais": [
+      "suriname"
+    ],
+    "moeda_pt": "Dólar do Suriname",
+    "moeda_en": "Surinam Dollar",
+    "moeda_es": "Dólar de Surinam",
+    "codigo": "SRD",
+    "numero": 968
+  },
+  {
+    "pais": [
+      "madagascar"
+    ],
+    "moeda_pt": "Ariary malgaxe",
+    "moeda_en": "Malagasy Ariary",
+    "moeda_es": "Ariary malgache",
+    "codigo": "MGA",
+    "numero": 969
+  },
+  {
+    "pais": [
+      "colombia"
+    ],
+    "moeda_pt": "Unidade de Valor Real",
+    "moeda_en": "Unidad de Valor Real",
+    "moeda_es": "Unidad de valor real",
+    "codigo": "COU",
+    "numero": 970
+  },
+  {
+    "pais": [
+      "afghanistan"
+    ],
+    "moeda_pt": "Afghani",
+    "moeda_en": "Afghani",
+    "moeda_es": "Afgani afgano",
+    "codigo": "AFN",
+    "numero": 971
+  },
+  {
+    "pais": [
+      "tajikistan"
+    ],
+    "moeda_pt": "Somoni",
+    "moeda_en": "Somoni",
+    "moeda_es": "Somoni",
+    "codigo": "TJS",
+    "numero": 972
+  },
+  {
+    "pais": [
+      "angola"
+    ],
+    "moeda_pt": "Kwanza",
+    "moeda_en": "Kwanza",
+    "moeda_es": "Kwanza angoleño",
+    "codigo": "AOA",
+    "numero": 973
+  },
+  {
+    "pais": [
+      "belarus"
+    ],
+    "moeda_pt": "Rublo bielorrusso",
+    "moeda_en": "Belarussian Ruble",
+    "moeda_es": "Rublo bielorruso",
+    "codigo": "BYR",
+    "numero": 974
+  },
+  {
+    "pais": [
+      "bulgaria"
+    ],
+    "moeda_pt": "Lev búlgaro",
+    "moeda_en": "Bulgarian Lev",
+    "moeda_es": "Lev",
+    "codigo": "BGN",
+    "numero": 975
+  },
+  {
+    "pais": [
+      "congo (the democratic republic of the)"
+    ],
+    "moeda_pt": "Fran congolesac",
+    "moeda_en": "Congolese Franc",
+    "moeda_es": "Franco congoleño",
+    "codigo": "CDF",
+    "numero": 976
+  },
+  {
+    "pais": [
+      "bosnia and herzegovina"
+    ],
+    "moeda_pt": "Marco conversível",
+    "moeda_en": "Convertible Mark",
+    "moeda_es": "Marco bosnioherzegovino",
+    "codigo": "BAM",
+    "numero": 977
+  },
+  {
+    "pais": [
+      "åland islands",
+      "andorra",
+      "austria",
+      "belgium",
+      "cyprus",
+      "estonia",
+      "european union",
+      "finland",
+      "france",
+      "french guiana",
+      "french southern territories (the)",
+      "germany",
+      "greece",
+      "guadeloupe",
+      "holy see (the)",
+      "ireland",
+      "italy",
+      "latvia",
+      "lithuania",
+      "luxembourg",
+      "malta",
+      "martinique",
+      "mayotte",
+      "monaco",
+      "montenegro",
+      "netherlands (the)",
+      "portugal",
+      "réunion",
+      "saint barthélemy",
+      "saint martin (french part)",
+      "saint pierre and miquelon",
+      "san marino",
+      "slovakia",
+      "slovenia",
+      "spain"
+    ],
+    "moeda_pt": "Euro",
+    "moeda_en": "Euro",
+    "moeda_es": "Euro",
+    "codigo": "EUR",
+    "numero": 978
+  },
+  {
+    "pais": [
+      "mexico"
+    ],
+    "moeda_pt": "Unidade de Investimento Mexicana (UDI)",
+    "moeda_en": "Mexican Unidad de Inversion (UDI)",
+    "moeda_es": "Unidad de Inversion Mexicana(UDI)",
+    "codigo": "MXV",
+    "numero": 979
+  },
+  {
+    "pais": [
+      "ukraine"
+    ],
+    "moeda_pt": "Hryvnia",
+    "moeda_en": "Hryvnia",
+    "moeda_es": "Grivnia",
+    "codigo": "UAH",
+    "numero": 980
+  },
+  {
+    "pais": [
+      "georgia"
+    ],
+    "moeda_pt": "Lari",
+    "moeda_en": "Lari",
+    "moeda_es": "Lari",
+    "codigo": "GEL",
+    "numero": 981
+  },
+  {
+    "pais": [
+      "bolivia (plurinational state of)"
+    ],
+    "moeda_pt": "Mvdol",
+    "moeda_en": "Mvdol",
+    "moeda_es": "Mvdol",
+    "codigo": "BOV",
+    "numero": 984
+  },
+  {
+    "pais": [
+      "poland"
+    ],
+    "moeda_pt": "Zloty",
+    "moeda_en": "Zloty",
+    "moeda_es": "Zloty",
+    "codigo": "PLN",
+    "numero": 985
+  },
+  {
+    "pais": [
+      "brazil"
+    ],
+    "moeda_pt": "Real brasileiro",
+    "moeda_en": "Brazilian Real",
+    "moeda_es": "Real brasileño",
+    "codigo": "BRL",
+    "numero": 986
+  },
+  {
+    "pais": [
+      "chile"
+    ],
+    "moeda_pt": "Unidad de Fomento",
+    "moeda_en": "Unidad de Fomento",
+    "moeda_es": "Unidad de Fomento",
+    "codigo": "CLF",
+    "numero": 990
+  },
+  {
+    "pais": [
+      "sistema unitario de compensacion regional de pagos \"sucre\""
+    ],
+    "moeda_pt": "Sucre",
+    "moeda_en": "Sucre",
+    "moeda_es": "Sucre",
+    "codigo": "XSU",
+    "numero": 994
+  },
+  {
+    "pais": [
+      "united states of america (the)"
+    ],
+    "moeda_pt": "Dólar dos EUA (dia seguinte)",
+    "moeda_en": "US Dollar (Next day)",
+    "moeda_es": "Dólar estadounidense (Next day)",
+    "codigo": "USN",
+    "numero": 997
+  }
+]

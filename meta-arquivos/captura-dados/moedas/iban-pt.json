@@ -1,0 +1,1610 @@
+[
+    {
+        "pais": "ANTÁRTICA",
+        "moeda": "Nenhuma moeda universal",
+        "codigo": "",
+        "numero": null
+    },
+    {
+        "pais": "PALESTINA",
+        "moeda": "Nenhuma moeda universal",
+        "codigo": "",
+        "numero": null
+    },
+    {
+        "pais": "GEÓRGIA DO SUL E AS ILHAS SANDWICH",
+        "moeda": "Nenhuma moeda universal",
+        "codigo": "",
+        "numero": null
+    },
+    {
+        "pais": "ALBANIA",
+        "moeda": "Lek",
+        "codigo": "ALL",
+        "numero": 8
+    },
+    {
+        "pais": "ARGÉLIA",
+        "moeda": "Dinar argelino",
+        "codigo": "DZD",
+        "numero": 12
+    },
+    {
+        "pais": "ARGENTINA",
+        "moeda": "Peso argentino",
+        "codigo": "ARS",
+        "numero": 32
+    },
+    {
+        "pais": "AUSTRÁLIA",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "ILHA DO NATAL",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "ILHAS COCOS",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "ILHAS HEARD E ILHAS McDONALD",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "KIRIBATI",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "NAURU",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "ILHA NORFOLK",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "TUVALU",
+        "moeda": "Dólar australiano",
+        "codigo": "AUD",
+        "numero": 36
+    },
+    {
+        "pais": "BAHAMAS (THE)",
+        "moeda": "Dólar das Bahamas",
+        "codigo": "BSD",
+        "numero": 44
+    },
+    {
+        "pais": "BAHREIN",
+        "moeda": "Dinar do Bahrein",
+        "codigo": "BHD",
+        "numero": 48
+    },
+    {
+        "pais": "BANGLADESH",
+        "moeda": "Taka",
+        "codigo": "BDT",
+        "numero": 50
+    },
+    {
+        "pais": "ARMÊNIA",
+        "moeda": "Dram armênio",
+        "codigo": "AMD",
+        "numero": 51
+    },
+    {
+        "pais": "BARBADOS",
+        "moeda": "Dólar de Barbados",
+        "codigo": "BBD",
+        "numero": 52
+    },
+    {
+        "pais": "BERMUDA",
+        "moeda": "Dólar das Bermudas",
+        "codigo": "BMD",
+        "numero": 60
+    },
+    {
+        "pais": "Butão",
+        "moeda": "Ngultrum",
+        "codigo": "BTN",
+        "numero": 64
+    },
+    {
+        "pais": "BOLÍVIA (ESTADO PLURINACIONAL DA)",
+        "moeda": "Boliviano",
+        "codigo": "BOB",
+        "numero": 68
+    },
+    {
+        "pais": "BOTSWANA",
+        "moeda": "Pula",
+        "codigo": "BWP",
+        "numero": 72
+    },
+    {
+        "pais": "BELIZE",
+        "moeda": "Dólar de Belize",
+        "codigo": "BZD",
+        "numero": 84
+    },
+    {
+        "pais": "ILHAS SALOMÃO",
+        "moeda": "Dólar das Ilhas Salomão",
+        "codigo": "SBD",
+        "numero": 90
+    },
+    {
+        "pais": "BRUNEI DARUSSALAM",
+        "moeda": "Dólares de Brunei",
+        "codigo": "BND",
+        "numero": 96
+    },
+    {
+        "pais": "MYANMAR",
+        "moeda": "Kyat",
+        "codigo": "MMK",
+        "numero": 104
+    },
+    {
+        "pais": "BURUNDI",
+        "moeda": "Franco do Burundi",
+        "codigo": "BIF",
+        "numero": 108
+    },
+    {
+        "pais": "CAMBODIA",
+        "moeda": "Riel",
+        "codigo": "KHR",
+        "numero": 116
+    },
+    {
+        "pais": "CANADÁ",
+        "moeda": "Dólar canadense",
+        "codigo": "CAD",
+        "numero": 124
+    },
+    {
+        "pais": "CABO VERDE",
+        "moeda": "Cabo Verde Escudo",
+        "codigo": "CVE",
+        "numero": 132
+    },
+    {
+        "pais": "ILHAS CAYMAN",
+        "moeda": "Dólar das Ilhas Caimã",
+        "codigo": "KYD",
+        "numero": 136
+    },
+    {
+        "pais": "SRI LANKA",
+        "moeda": "Rupia do Sri Lanka",
+        "codigo": "LKR",
+        "numero": 144
+    },
+    {
+        "pais": "CHILE",
+        "moeda": "Peso chileno",
+        "codigo": "CLP",
+        "numero": 152
+    },
+    {
+        "pais": "CHINA",
+        "moeda": "Yuan Renminbi",
+        "codigo": "CNY",
+        "numero": 156
+    },
+    {
+        "pais": "COLÔMBIA",
+        "moeda": "Peso colombiano",
+        "codigo": "COP",
+        "numero": 170
+    },
+    {
+        "pais": "COMOROS",
+        "moeda": "Franco Comor",
+        "codigo": "KMF",
+        "numero": 174
+    },
+    {
+        "pais": "COSTA RICA",
+        "moeda": "Colon da Costa Rica",
+        "codigo": "CRC",
+        "numero": 188
+    },
+    {
+        "pais": "CROÁCIA",
+        "moeda": "Kuna",
+        "codigo": "HRK",
+        "numero": 191
+    },
+    {
+        "pais": "CUBA",
+        "moeda": "Peso cubano",
+        "codigo": "CUP",
+        "numero": 192
+    },
+    {
+        "pais": "REPÚBLICA CHECA",
+        "moeda": "Coroa Tcheca",
+        "codigo": "CZK",
+        "numero": 203
+    },
+    {
+        "pais": "DINAMARCA",
+        "moeda": "Coroa dinamarquesa",
+        "codigo": "DKK",
+        "numero": 208
+    },
+    {
+        "pais": "ILHAS FAROE",
+        "moeda": "Coroa dinamarquesa",
+        "codigo": "DKK",
+        "numero": 208
+    },
+    {
+        "pais": "GRONELÂNDIA",
+        "moeda": "Coroa dinamarquesa",
+        "codigo": "DKK",
+        "numero": 208
+    },
+    {
+        "pais": "REPÚBLICA DOMINICANA",
+        "moeda": "Peso dominicano",
+        "codigo": "DOP",
+        "numero": 214
+    },
+    {
+        "pais": "EL SALVADOR",
+        "moeda": "Cólon de El Salvador",
+        "codigo": "SVC",
+        "numero": 222
+    },
+    {
+        "pais": "ETIÓPIA",
+        "moeda": "Birr etíope",
+        "codigo": "ETB",
+        "numero": 230
+    },
+    {
+        "pais": "ERITREA",
+        "moeda": "Nakfa",
+        "codigo": "ERN",
+        "numero": 232
+    },
+    {
+        "pais": "ILHAS FALKLAND [MALVINAS]",
+        "moeda": "Libra das Ilhas Falkland",
+        "codigo": "FKP",
+        "numero": 238
+    },
+    {
+        "pais": "FIJI",
+        "moeda": "Dólar de Fiji",
+        "codigo": "FJD",
+        "numero": 242
+    },
+    {
+        "pais": "DJIBOUTI",
+        "moeda": "Franco do Djibouti",
+        "codigo": "DJF",
+        "numero": 262
+    },
+    {
+        "pais": "GÂMBIA",
+        "moeda": "Dalasi",
+        "codigo": "GMD",
+        "numero": 270
+    },
+    {
+        "pais": "GIBRALTAR",
+        "moeda": "Libra De Gibraltar",
+        "codigo": "GIP",
+        "numero": 292
+    },
+    {
+        "pais": "GUATEMALA",
+        "moeda": "Quetzal",
+        "codigo": "GTQ",
+        "numero": 320
+    },
+    {
+        "pais": "GUINÉ",
+        "moeda": "Franco da Guiné",
+        "codigo": "GNF",
+        "numero": 324
+    },
+    {
+        "pais": "GUIANA",
+        "moeda": "Dólar da Guiana",
+        "codigo": "GYD",
+        "numero": 328
+    },
+    {
+        "pais": "HAITI",
+        "moeda": "Gourde",
+        "codigo": "HTG",
+        "numero": 332
+    },
+    {
+        "pais": "HONDURAS",
+        "moeda": "Lempira",
+        "codigo": "HNL",
+        "numero": 340
+    },
+    {
+        "pais": "HONG KONG",
+        "moeda": "Dólar de Hong Kong",
+        "codigo": "HKD",
+        "numero": 344
+    },
+    {
+        "pais": "HUNGRIA",
+        "moeda": "Forint",
+        "codigo": "HUF",
+        "numero": 348
+    },
+    {
+        "pais": "ISLÂNDIA",
+        "moeda": "Coroa da Islândia",
+        "codigo": "ISK",
+        "numero": 352
+    },
+    {
+        "pais": "Butão",
+        "moeda": "Rupia indiana",
+        "codigo": "INR",
+        "numero": 356
+    },
+    {
+        "pais": "ÍNDIA",
+        "moeda": "Rupia indiana",
+        "codigo": "INR",
+        "numero": 356
+    },
+    {
+        "pais": "INDONÉSIA",
+        "moeda": "Rupia",
+        "codigo": "IDR",
+        "numero": 360
+    },
+    {
+        "pais": "IRÃ (REPÚBLICA ISLÂMICA DO)",
+        "moeda": "Rial iraniano",
+        "codigo": "IRR",
+        "numero": 364
+    },
+    {
+        "pais": "IRAQUE",
+        "moeda": "Dinar iraquiano",
+        "codigo": "IQD",
+        "numero": 368
+    },
+    {
+        "pais": "ISRAEL",
+        "moeda": "Novo Sheqel israelense",
+        "codigo": "ILS",
+        "numero": 376
+    },
+    {
+        "pais": "JAMAICA",
+        "moeda": "Dólar jamaicano",
+        "codigo": "JMD",
+        "numero": 388
+    },
+    {
+        "pais": "JAPÃO",
+        "moeda": "Iene",
+        "codigo": "JPY",
+        "numero": 392
+    },
+    {
+        "pais": "CAZAQUISTÃO",
+        "moeda": "Tenge",
+        "codigo": "KZT",
+        "numero": 398
+    },
+    {
+        "pais": "JORDÂNIA",
+        "moeda": "Dinar jordaniano",
+        "codigo": "JOD",
+        "numero": 400
+    },
+    {
+        "pais": "QUÊNIA",
+        "moeda": "Xelim do Quênia",
+        "codigo": "KES",
+        "numero": 404
+    },
+    {
+        "pais": "CORÉIA (REPÚLICA POPULAR)",
+        "moeda": "Won norte-coreano",
+        "codigo": "KPW",
+        "numero": 408
+    },
+    {
+        "pais": "CORÉIA (REPÚBLICA DA)",
+        "moeda": "Won",
+        "codigo": "KRW",
+        "numero": 410
+    },
+    {
+        "pais": "KUWAIT",
+        "moeda": "O Dinar do Kuwait",
+        "codigo": "KWD",
+        "numero": 414
+    },
+    {
+        "pais": "QUIRGUIZISTÃO",
+        "moeda": "Som",
+        "codigo": "KGS",
+        "numero": 417
+    },
+    {
+        "pais": "LAO",
+        "moeda": "Kip",
+        "codigo": "LAK",
+        "numero": 418
+    },
+    {
+        "pais": "LÍBANO",
+        "moeda": "Libra libanesa",
+        "codigo": "LBP",
+        "numero": 422
+    },
+    {
+        "pais": "LESOTHO",
+        "moeda": "Loti",
+        "codigo": "LSL",
+        "numero": 426
+    },
+    {
+        "pais": "LIBÉRIA",
+        "moeda": "Dólar liberiano",
+        "codigo": "LRD",
+        "numero": 430
+    },
+    {
+        "pais": "LÍBIA",
+        "moeda": "Dinar da Líbia",
+        "codigo": "LYD",
+        "numero": 434
+    },
+    {
+        "pais": "MACAO",
+        "moeda": "Pataca",
+        "codigo": "MOP",
+        "numero": 446
+    },
+    {
+        "pais": "MALAWI",
+        "moeda": "Kwacha",
+        "codigo": "MWK",
+        "numero": 454
+    },
+    {
+        "pais": "MALÁSIA",
+        "moeda": "Ringgit da Malásia",
+        "codigo": "MYR",
+        "numero": 458
+    },
+    {
+        "pais": "MALDIVAS",
+        "moeda": "Rufiyaa",
+        "codigo": "MVR",
+        "numero": 462
+    },
+    {
+        "pais": "MAURITÂNIA",
+        "moeda": "Ouguiya",
+        "codigo": "MRO",
+        "numero": 478
+    },
+    {
+        "pais": "MAURÍCIA",
+        "moeda": "Rupia das Maurícias",
+        "codigo": "MUR",
+        "numero": 480
+    },
+    {
+        "pais": "MÉXICO",
+        "moeda": "Peso mexicano",
+        "codigo": "MXN",
+        "numero": 484
+    },
+    {
+        "pais": "MONGÓLIA",
+        "moeda": "Tugrik",
+        "codigo": "MNT",
+        "numero": 496
+    },
+    {
+        "pais": "MOLDÁVIA",
+        "moeda": "Leão da Moldávia",
+        "codigo": "MDL",
+        "numero": 498
+    },
+    {
+        "pais": "MARROCOS",
+        "moeda": "Dirham marroquino",
+        "codigo": "MAD",
+        "numero": 504
+    },
+    {
+        "pais": "SAARA OCIDENTAL",
+        "moeda": "Moroccan Dirham",
+        "codigo": "MAD",
+        "numero": 504
+    },
+    {
+        "pais": "OMAN",
+        "moeda": "Rial Omani",
+        "codigo": "OMR",
+        "numero": 512
+    },
+    {
+        "pais": "NAMÍBIA",
+        "moeda": "Dólares da Namíbia",
+        "codigo": "NAD",
+        "numero": 516
+    },
+    {
+        "pais": "NEPAL",
+        "moeda": "Rupia nepalesa",
+        "codigo": "NPR",
+        "numero": 524
+    },
+    {
+        "pais": "CURAÇAO",
+        "moeda": "Guilder das Antilhas Holandesas",
+        "codigo": "ANG",
+        "numero": 532
+    },
+    {
+        "pais": "SINT MAARTEN (PARTE INGLESA)",
+        "moeda": "Guilder das Antilhas Holandesas",
+        "codigo": "ANG",
+        "numero": 532
+    },
+    {
+        "pais": "ARUBA",
+        "moeda": "Florim de Aruba",
+        "codigo": "AWG",
+        "numero": 533
+    },
+    {
+        "pais": "VANUATU",
+        "moeda": "Vatu",
+        "codigo": "VUV",
+        "numero": 548
+    },
+    {
+        "pais": "ILHAS COOK",
+        "moeda": "Dólar da Nova Zelândia",
+        "codigo": "NZD",
+        "numero": 554
+    },
+    {
+        "pais": "NOVA ZELÂNDIA",
+        "moeda": "Dólar da Nova Zelândia",
+        "codigo": "NZD",
+        "numero": 554
+    },
+    {
+        "pais": "NIUE",
+        "moeda": "Dólar da Nova Zelândia",
+        "codigo": "NZD",
+        "numero": 554
+    },
+    {
+        "pais": "PITCAIRN",
+        "moeda": "Dólar da Nova Zelândia",
+        "codigo": "NZD",
+        "numero": 554
+    },
+    {
+        "pais": "TOKELAU",
+        "moeda": "Dólar da Nova Zelândia",
+        "codigo": "NZD",
+        "numero": 554
+    },
+    {
+        "pais": "NICARÁGUA",
+        "moeda": "Cordoba Oro",
+        "codigo": "NIO",
+        "numero": 558
+    },
+    {
+        "pais": "NIGÉRIA",
+        "moeda": "Naira",
+        "codigo": "NGN",
+        "numero": 566
+    },
+    {
+        "pais": "ILHA DE BOUVET",
+        "moeda": "Coroa norueguesa",
+        "codigo": "NOK",
+        "numero": 578
+    },
+    {
+        "pais": "NORUEGA",
+        "moeda": "Coroa norueguesa",
+        "codigo": "NOK",
+        "numero": 578
+    },
+    {
+        "pais": "SVALBARD E JAN MAYEN",
+        "moeda": "Coroa norueguesa",
+        "codigo": "NOK",
+        "numero": 578
+    },
+    {
+        "pais": "PAQUISTÃO",
+        "moeda": "Rupia do Paquistão",
+        "codigo": "PKR",
+        "numero": 586
+    },
+    {
+        "pais": "PANAMÁ",
+        "moeda": "Balboa",
+        "codigo": "PAB",
+        "numero": 590
+    },
+    {
+        "pais": "PAPUA NOVA GUINÉ",
+        "moeda": "Kina",
+        "codigo": "PGK",
+        "numero": 598
+    },
+    {
+        "pais": "PARAGUAI",
+        "moeda": "Guarani",
+        "codigo": "PYG",
+        "numero": 600
+    },
+    {
+        "pais": "PERU",
+        "moeda": "Nuevo Sol",
+        "codigo": "PEN",
+        "numero": 604
+    },
+    {
+        "pais": "FILIPINAS",
+        "moeda": "Peso filipino",
+        "codigo": "PHP",
+        "numero": 608
+    },
+    {
+        "pais": "QATAR",
+        "moeda": "Qatari Rial",
+        "codigo": "QAR",
+        "numero": 634
+    },
+    {
+        "pais": "FEDERAÇÃO RUSSA",
+        "moeda": "rublo russo",
+        "codigo": "RUB",
+        "numero": 643
+    },
+    {
+        "pais": "RWANDA",
+        "moeda": "Rwanda Franc",
+        "codigo": "RWF",
+        "numero": 646
+    },
+    {
+        "pais": "SAINT HELENA, ASCENSION E TRISTAN DA CUNHA",
+        "moeda": "Saint Helena Pound",
+        "codigo": "SHP",
+        "numero": 654
+    },
+    {
+        "pais": "SÃO TOMÉ E PRÍNCIPE",
+        "moeda": "Dobra",
+        "codigo": "STD",
+        "numero": 678
+    },
+    {
+        "pais": "ARÁBIA SAUDITA",
+        "moeda": "Rial saudita",
+        "codigo": "SAR",
+        "numero": 682
+    },
+    {
+        "pais": "SEYCHELLES",
+        "moeda": "Rúpia das Seychelles",
+        "codigo": "SCR",
+        "numero": 690
+    },
+    {
+        "pais": "SERRA LEOA",
+        "moeda": "Leone",
+        "codigo": "SLL",
+        "numero": 694
+    },
+    {
+        "pais": "CINGAPURA",
+        "moeda": "Dólar de Singapura",
+        "codigo": "SGD",
+        "numero": 702
+    },
+    {
+        "pais": "VIET NAM",
+        "moeda": "Dong",
+        "codigo": "VND",
+        "numero": 704
+    },
+    {
+        "pais": "SOMÁLIA",
+        "moeda": "Shilling Somali",
+        "codigo": "SOS",
+        "numero": 706
+    },
+    {
+        "pais": "LESOTHO",
+        "moeda": "Rand",
+        "codigo": "ZAR",
+        "numero": 710
+    },
+    {
+        "pais": "NAMÍBIA",
+        "moeda": "Rand",
+        "codigo": "ZAR",
+        "numero": 710
+    },
+    {
+        "pais": "ÁFRICA DO SUL",
+        "moeda": "Rand",
+        "codigo": "ZAR",
+        "numero": 710
+    },
+    {
+        "pais": "SUDÃO DO SUL",
+        "moeda": "Libra Sudanesa do Sul",
+        "codigo": "SSP",
+        "numero": 728
+    },
+    {
+        "pais": "Suazilândia",
+        "moeda": "Lilangeni",
+        "codigo": "SZL",
+        "numero": 748
+    },
+    {
+        "pais": "SUÉCIA",
+        "moeda": "Swedish Krona",
+        "codigo": "SEK",
+        "numero": 752
+    },
+    {
+        "pais": "LIECHTENSTEIN",
+        "moeda": "Franco suíço",
+        "codigo": "CHF",
+        "numero": 756
+    },
+    {
+        "pais": "SUÍÇA",
+        "moeda": "Franco suíço",
+        "codigo": "CHF",
+        "numero": 756
+    },
+    {
+        "pais": "REPÚBLICA ÁRABE DA SÍRIA",
+        "moeda": "Libra síria",
+        "codigo": "SYP",
+        "numero": 760
+    },
+    {
+        "pais": "TAILÂNDIA",
+        "moeda": "Baht",
+        "codigo": "THB",
+        "numero": 764
+    },
+    {
+        "pais": "TONGA",
+        "moeda": "Pa’anga",
+        "codigo": "TOP",
+        "numero": 776
+    },
+    {
+        "pais": "TRINIDAD E TOBAGO",
+        "moeda": "Dólar de Trinidad e Tobago",
+        "codigo": "TTD",
+        "numero": 780
+    },
+    {
+        "pais": "EMIRADOS ÁRABES UNIDOS",
+        "moeda": "UAE Dirham",
+        "codigo": "AED",
+        "numero": 784
+    },
+    {
+        "pais": "TUNÍSIA",
+        "moeda": "Dinar tunisino",
+        "codigo": "TND",
+        "numero": 788
+    },
+    {
+        "pais": "UGANDA",
+        "moeda": "Xelim de Uganda",
+        "codigo": "UGX",
+        "numero": 800
+    },
+    {
+        "pais": "MACEDÔNIA (ANTIGA REPÚBLICA JUGOSLAVA)",
+        "moeda": "Denar",
+        "codigo": "MKD",
+        "numero": 807
+    },
+    {
+        "pais": "EGITO",
+        "moeda": "Libra egípcia",
+        "codigo": "EGP",
+        "numero": 818
+    },
+    {
+        "pais": "GUERNSEY",
+        "moeda": "Libra esterlina",
+        "codigo": "GBP",
+        "numero": 826
+    },
+    {
+        "pais": "ILHA DE MAN",
+        "moeda": "Libra esterlina",
+        "codigo": "GBP",
+        "numero": 826
+    },
+    {
+        "pais": "JERSEY",
+        "moeda": "Libra esterlina",
+        "codigo": "GBP",
+        "numero": 826
+    },
+    {
+        "pais": "REINO UNIDO DA GRÃ-BRETANHA E IRLANDA DO NORTE",
+        "moeda": "Libra esterlina",
+        "codigo": "GBP",
+        "numero": 826
+    },
+    {
+        "pais": "TANZÂNIA, REPÚBLICA UNIDA",
+        "moeda": "Xelim da Tanzânia",
+        "codigo": "TZS",
+        "numero": 834
+    },
+    {
+        "pais": "SAMOA AMERICANA",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "BONAIRE, SINT EUSTATIUS E SABA",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "TERRITÓRIO OCEANO BRITÂNICO (THE)",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "EQUADOR",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "EL SALVADOR",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "GUAM",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "HAITI",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ILHAS MARSHALL",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "MICRONÉSIA (ESTADOS FEDERADOS DA)",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ILHAS MARIANAS DO NORTE",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "PALAU",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "PANAMÁ",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "PUERTO RICO",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "TIMOR-LESTE",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "TURKS E CAICOS ISLANDS",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ILHAS OUTONARES MENORES DOS ESTADOS UNIDOS",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ESTADOS UNIDOS DA AMERICA",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ILHAS VIRGENS (BRITÂNICAS)",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "ILHAS VIRGENS (EUA)",
+        "moeda": "Dólar americano",
+        "codigo": "USD",
+        "numero": 840
+    },
+    {
+        "pais": "URUGUAI",
+        "moeda": "Peso Uruguaio",
+        "codigo": "UYU",
+        "numero": 858
+    },
+    {
+        "pais": "Uzbequistão",
+        "moeda": "Soma do Uzbequistão",
+        "codigo": "UZS",
+        "numero": 860
+    },
+    {
+        "pais": "SAMOA",
+        "moeda": "Tala",
+        "codigo": "WST",
+        "numero": 882
+    },
+    {
+        "pais": "IÉMEN",
+        "moeda": "Rial Iemenita",
+        "codigo": "YER",
+        "numero": 886
+    },
+    {
+        "pais": "TAIWAN, PROVÍNCIA DA CHINA)",
+        "moeda": "Novo dólar de Taiwan",
+        "codigo": "TWD",
+        "numero": 901
+    },
+    {
+        "pais": "CUBA",
+        "moeda": "Peso conversível",
+        "codigo": "CUC",
+        "numero": 931
+    },
+    {
+        "pais": "ZIMBÁBUE",
+        "moeda": "Dólar zimbabuano",
+        "codigo": "ZWL",
+        "numero": 932
+    },
+    {
+        "pais": "Turquemenistão",
+        "moeda": "Turcomenistão New Manat",
+        "codigo": "TMT",
+        "numero": 934
+    },
+    {
+        "pais": "GANA",
+        "moeda": "Ghana Cedi",
+        "codigo": "GHS",
+        "numero": 936
+    },
+    {
+        "pais": "VENEZUELA (REPÚBLICA BOLIVARIANA DE)",
+        "moeda": "Bolívar",
+        "codigo": "VEF",
+        "numero": 937
+    },
+    {
+        "pais": "SUDÃO",
+        "moeda": "Libra sudanesa",
+        "codigo": "SDG",
+        "numero": 938
+    },
+    {
+        "pais": "URUGUAI",
+        "moeda": "Peso Uruguaio em Unidades Indexadas (URUIURUI)",
+        "codigo": "UYI",
+        "numero": 940
+    },
+    {
+        "pais": "SÉRVIA",
+        "moeda": "Dinar sérvio",
+        "codigo": "RSD",
+        "numero": 941
+    },
+    {
+        "pais": "MOÇAMBIQUE",
+        "moeda": "Moçambique Metical",
+        "codigo": "MZN",
+        "numero": 943
+    },
+    {
+        "pais": "AZERBAIJÃO",
+        "moeda": "Manat do Azerbaijão",
+        "codigo": "AZN",
+        "numero": 944
+    },
+    {
+        "pais": "ROMÊNIA",
+        "moeda": "Leu romeno",
+        "codigo": "RON",
+        "numero": 946
+    },
+    {
+        "pais": "SUÍÇA",
+        "moeda": "WIR Euro",
+        "codigo": "CHE",
+        "numero": 947
+    },
+    {
+        "pais": "SUÍÇA",
+        "moeda": "WIR Franc",
+        "codigo": "CHW",
+        "numero": 948
+    },
+    {
+        "pais": "TURQUIA",
+        "moeda": "Lira turca",
+        "codigo": "TRY",
+        "numero": 949
+    },
+    {
+        "pais": "CAMARÕES",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "REPÚBLICA CENTRO-AFRICANA",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "CHAD",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "CONGO",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "GUINÉ EQUATORIAL",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "GABÃO",
+        "moeda": "CFA Franc BEAC",
+        "codigo": "XAF",
+        "numero": 950
+    },
+    {
+        "pais": "ANGUILA",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "ANTÍGUA E BARBUDA",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "DOMINICA",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "GRENADA",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "MONTSERRAT",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "SAINT KITTS E NEVIS",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "SAINT LUCIA",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "SÃO VICENTE E GRENADINES",
+        "moeda": "Dólar do Caribe Oriental",
+        "codigo": "XCD",
+        "numero": 951
+    },
+    {
+        "pais": "BENIN",
+        "moeda": "CFA Franco BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "BURKINA FASO",
+        "moeda": "CFA Franco BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "COSTA DO MARFIM",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "GUINÉ-BISSAU",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "MALI",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "NÍGER",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "SENEGAL",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "TOGO",
+        "moeda": "CFA Franc BCEAO",
+        "codigo": "XOF",
+        "numero": 952
+    },
+    {
+        "pais": "POLINÉSIA FRANCESA",
+        "moeda": "CFP Franc",
+        "codigo": "XPF",
+        "numero": 953
+    },
+    {
+        "pais": "NOVA CALEDÔNIA",
+        "moeda": "CFP Franc",
+        "codigo": "XPF",
+        "numero": 953
+    },
+    {
+        "pais": "WALLIS E FUTUNA",
+        "moeda": "CFP Franc",
+        "codigo": "XPF",
+        "numero": 953
+    },
+    {
+        "pais": "FUNDO MONETÁRIO INTERNACIONAL (IMF)",
+        "moeda": "SDR (Special Drawing Right)",
+        "codigo": "XDR",
+        "numero": 960
+    },
+    {
+        "pais": "PAÍSES MEMBROS DO GRUPO DO BANCO AFRICANO DE DESENVOLVIMENTO",
+        "moeda": "Unidade de Conta do ADB",
+        "codigo": "XUA",
+        "numero": 965
+    },
+    {
+        "pais": "ZÂMBIA",
+        "moeda": "Zambian Kwacha",
+        "codigo": "ZMW",
+        "numero": 967
+    },
+    {
+        "pais": "SURINAME",
+        "moeda": "Dólar do Suriname",
+        "codigo": "SRD",
+        "numero": 968
+    },
+    {
+        "pais": "MADAGASCAR",
+        "moeda": "Ariary malgaxe",
+        "codigo": "MGA",
+        "numero": 969
+    },
+    {
+        "pais": "COLÔMBIA",
+        "moeda": "Unidade de Valor Real",
+        "codigo": "COU",
+        "numero": 970
+    },
+    {
+        "pais": "AFEGANISTÃO",
+        "moeda": "Afghani",
+        "codigo": "AFN",
+        "numero": 971
+    },
+    {
+        "pais": "TAJIQUISTÃO",
+        "moeda": "Somoni",
+        "codigo": "TJS",
+        "numero": 972
+    },
+    {
+        "pais": "ANGOLA",
+        "moeda": "Kwanza",
+        "codigo": "AOA",
+        "numero": 973
+    },
+    {
+        "pais": "BELARUS",
+        "moeda": "Rublo bielorrusso",
+        "codigo": "BYR",
+        "numero": 974
+    },
+    {
+        "pais": "BULGÁRIA",
+        "moeda": "Lev búlgaro",
+        "codigo": "BGN",
+        "numero": 975
+    },
+    {
+        "pais": "CONGO (REPÚBLICA DEMOCRÁTICA DO)",
+        "moeda": "Fran congolesac",
+        "codigo": "CDF",
+        "numero": 976
+    },
+    {
+        "pais": "BOSNIA E HERZEGOVINA",
+        "moeda": "Marco conversível",
+        "codigo": "BAM",
+        "numero": 977
+    },
+    {
+        "pais": "ILHAS DE ÅLAND",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ANDORRA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ÁUSTRIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "BÉLGICA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "CHIPRE",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ESTÔNIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "UNIÃO EUROPÉIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "FINLÂNDIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "FRANÇA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "GUIANA FRANCESA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "TERRITÓRIOS DO SUL FRANCÊS",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ALEMANHA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "GRÉCIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "GUADALUPE",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MAR SANTO",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "IRLANDA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ITÁLIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "LETÔNIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "LITUÂNIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "LUXEMBURGO",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MALTA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MARTINICA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MAYOTTE",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MÓNACO",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MONTENEGRO",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "PAÍSES BAIXOS",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "PORTUGAL",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "RÉUNION",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "SAINT BARTHÉLEMY",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "SÃO MARTINHO (PARTE FRANCESA)",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "SÃO PIERRE E MIQUELON",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "SAN MARINO",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ESLOVÁQUIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ESLOVÉNIA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "ESPANHA",
+        "moeda": "Euro",
+        "codigo": "EUR",
+        "numero": 978
+    },
+    {
+        "pais": "MÉXICO",
+        "moeda": "Unidade de Investimento Mexicana (UDI)",
+        "codigo": "MXV",
+        "numero": 979
+    },
+    {
+        "pais": "UCRÂNIA",
+        "moeda": "Hryvnia",
+        "codigo": "UAH",
+        "numero": 980
+    },
+    {
+        "pais": "GEÓRGIA",
+        "moeda": "Lari",
+        "codigo": "GEL",
+        "numero": 981
+    },
+    {
+        "pais": "BOLÍVIA (ESTADO PLURINACIONAL DA)",
+        "moeda": "Mvdol",
+        "codigo": "BOV",
+        "numero": 984
+    },
+    {
+        "pais": "POLÔNIA",
+        "moeda": "Zloty",
+        "codigo": "PLN",
+        "numero": 985
+    },
+    {
+        "pais": "BRASIL",
+        "moeda": "Real brasileiro",
+        "codigo": "BRL",
+        "numero": 986
+    },
+    {
+        "pais": "CHILE",
+        "moeda": "Unidad de Fomento",
+        "codigo": "CLF",
+        "numero": 990
+    },
+    {
+        "pais": "SISTEMA UNITARIO DE COMPENSACION REGIONAL DE PAGOS \"SUCRE\"",
+        "moeda": "Sucre",
+        "codigo": "XSU",
+        "numero": 994
+    },
+    {
+        "pais": "ESTADOS UNIDOS DA AMERICA",
+        "moeda": "Dólar dos EUA (dia seguinte)",
+        "codigo": "USN",
+        "numero": 997
+    }
+]
