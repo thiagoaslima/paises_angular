@@ -226,3 +226,36 @@
         right: 50px;
     }
 }
+
+/*impressão*/
+@media print {
+    .ranking {
+        background-color: white !important;
+    }
+
+    .ranking__comparar-link{
+        display: none;
+    }
+
+    .ranking__tabela{
+        height: unset;
+        overflow: auto;
+    }
+
+    .ranking__tab--left-disabled {
+        display: none;
+    }
+
+    .ranking__tab {
+        text-align: left;
+        border: none;
+   }
+
+   .ranking__botao-fechar {
+        display: none;
+    }
+
+    .ranking__conteudo-container {
+        border: none;
+    }
+}
