@@ -51,7 +51,6 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
             layerArray.forEach((layer: any) => {
                 this.selectLayer(layer, value);
                 this._selecteds.push(layer);
-                debugger;
                 layer.openTooltip();
             });
         }
@@ -270,7 +269,7 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
                 (selected && selected.sigla) || (this._pais && this._pais.sigla)
                     ? pais.sigla === (selected.sigla || this._pais!.sigla)
                     : false,
-            opacity: 0.75,
+            opacity: 0.9,
         });
     }
 
@@ -310,7 +309,6 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
 
             // layer.on({
             //     mouseup: (evt: any) => {
-            //         debugger;
             //         layer.setTooltipContent(getMsg())
             //         layer.openTooltip();
             //     },
