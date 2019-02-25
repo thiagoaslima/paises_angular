@@ -18,16 +18,21 @@ export class GraficoComponent {
     valor: any = null;
     metadata: any = null;
     indexSelecionado = -1;
-
+    dados: any = [[]];
     tooltip: any = null;
 
     @Input() rotulosX = [];
 
     @Input() rotulosY = [];
 
-    @Input() dados = [[]];
+    @Input('dados') set _dados(val:any) {
+        this.dados = val;
+        this.transformaValores();
+    }
 
     @Input() unidade = '';
+
+    prefixo = '';
 
     @Input() mostrarLegenda = false;
 
@@ -120,6 +125,21 @@ export class GraficoComponent {
             return false;
         }else{
             return true;
+        }
+    }
+
+    //tranforma os valores com prefixo (de '<' - menor que - por exemplo) em um número
+    //guarda o prefixo para exibir na frente do valor
+    transformaValores(){
+        if(!this.existemDados()) return 0;
+        this.prefixo = '';
+        for(let i = 0; i < this.dados.length; i++){
+            for(let j = 0; j < this.dados[i].length; j++){
+                if(this.dados[i][j] && this.dados[i][j].toString().charAt(0) == '<'){
+                    this.prefixo = '<';
+                    this.dados[i][j] = parseFloat(this.dados[i][j].toString().substr(1));
+                }
+            }
         }
     }
 
