@@ -44,13 +44,15 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
         const layerArray = value ? this._layers.get(value.sigla3) || [] : [];
 
         if (this._selecteds.length > 0) {
-            this._selecteds.forEach(layer => this.unselectLayer(layer));
+            this._selecteds.forEach(layer => this.unselectLayer(layer, value));
         }
 
         if (layerArray.length > 0 && this._map) {
             layerArray.forEach((layer: any) => {
-                this.selectLayer(layer);
+                this.selectLayer(layer, value);
                 this._selecteds.push(layer);
+                debugger;
+                layer.openTooltip();
             });
         }
 
@@ -77,7 +79,7 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
             },
 
             attribution:
-                'Mapa fornecido por <a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/"><strong>Natural Earth</strong> «<small>Cultural Map, 1:10m, v 4.1.0</small>»</a>.',
+                'Mapa fornecido por <a target="_blank" href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/"><strong>Natural Earth</strong> «<small>Cultural Map, 1:10m, v 4.1.0</small>»</a>.',
         });
 
         this.leafletLayers = [layer];
@@ -137,25 +139,38 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
             if (this._pais) {
                 const layers = this._layers.get(this._pais.sigla3) || [];
                 setTimeout(
-                    () => layers.forEach(layer => this.selectLayer(layer)),
+                    () =>
+                        layers.forEach(layer =>
+                            this.selectLayer(layer, this._pais!)
+                        ),
                     0
                 );
             }
         }
     }
 
-    selectLayer(layer: any) {
+    selectLayer(layer: any, newSelected: Pais) {
         if (layer) {
             const el = layer.getElement();
             el.classList.add(CSS_CLASSES.SELECTED);
             this._selecteds = [...this._selecteds, layer];
+            const pais = this._localidadeService.getPaisBySigla(
+                layer.feature.properties.sigla
+            );
+            layer.unbindTooltip();
+            this.bindTooltip(layer, pais!, newSelected);
         }
     }
 
-    unselectLayer(layer: any) {
+    unselectLayer(layer: any, newSelected: Pais) {
         if (layer) {
             const el = layer.getElement();
             el.classList.remove(CSS_CLASSES.SELECTED);
+            const pais = this._localidadeService.getPaisBySigla(
+                layer.feature.properties.sigla
+            );
+            layer.unbindTooltip();
+            this.bindTooltip(layer, pais!, newSelected);
             this._selecteds = this._selecteds.filter(
                 selected => selected !== layer
             );
@@ -217,16 +232,22 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
         });
     }
 
-    private _popup(feature: any, layer: any, context: any) {
-        const pais = context._localidadeService.getPaisBySigla(
-            feature.properties.sigla
-        );
+    private bindTooltip(layer: any, pais: Pais, selected: Pais) {
+        if (!pais) {
+            return;
+        }
+
+        const feature = layer.feature;
+        const paisNome = pais.nome;
 
         const getMsg = () => {
-            const idiomaId = this._translateService.currentLanguage.id;
+            const idiomaId = this._translateService.currentLanguage.id as
+                | 'en'
+                | 'es'
+                | 'pt';
 
             return (
-                pais.nome[idiomaId] +
+                paisNome[idiomaId] +
                 (feature.properties.nota
                     ? ` (${feature.properties.nota[idiomaId]})`
                     : '') +
@@ -244,8 +265,48 @@ export class MapaMundiComponent implements OnInit, OnDestroy {
             );
         };
 
+        layer.bindTooltip(getMsg, {
+            permanent:
+                (selected && selected.sigla) || (this._pais && this._pais.sigla)
+                    ? pais.sigla === (selected.sigla || this._pais!.sigla)
+                    : false,
+            opacity: 0.75,
+        });
+    }
+
+    private _popup(feature: any, layer: any, context: any) {
+        const pais = context._localidadeService.getPaisBySigla(
+            feature.properties.sigla
+        );
+
+        // const getMsg = () => {
+        //     const idiomaId = this._translateService.currentLanguage.id;
+
+        //     return (
+        //         pais.nome[idiomaId] +
+        //         (feature.properties.nota
+        //             ? ` (${feature.properties.nota[idiomaId]})`
+        //             : '') +
+        //         (feature.properties.valor
+        //             ? `<br /> <strong><small>${this._decimalPipe.transform(
+        //                   feature.properties.valor
+        //               )} ${
+        //                   this.indicador
+        //                       ? this._translateService.translate(
+        //                             this.indicador.unidade.identificador
+        //                         )
+        //                       : ''
+        //               }<small></strong>`
+        //             : '')
+        //     );
+        // };
+
         if (pais) {
-            layer.bindTooltip(getMsg);
+            this.bindTooltip(layer, pais, this._pais!);
+            // layer.bindTooltip(getMsg, {
+            //     permanent: this._pais ? pais.sigla === this._pais.sigla : false,
+            //     opacity: 0.75,
+            // });
 
             // layer.on({
             //     mouseup: (evt: any) => {
