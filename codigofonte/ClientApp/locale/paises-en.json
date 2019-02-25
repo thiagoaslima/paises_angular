@@ -77,5 +77,6 @@
     "mais de": "more of",
     "sem dados para este ano": "no data for this year",
     "Selecione um indicador": "Select an option",
-    "Selecione o período desejado": "Select the desired period"
+    "Selecione o período desejado": "Select the desired period",
+    "Não há dados sobre o país ou território escolhido": "No data on the chosen country or territory"
 }

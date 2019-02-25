@@ -43,14 +43,14 @@
 
 .mapa-legenda-cor {
     display: inline-block;
-    width: 15px;
+    width: 30px;
     height: 30px;
     vertical-align: middle;
 }
 
 .mapa-legenda-marcador {
     display: inline-block;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px;
     vertical-align: middle;
 }
 
@@ -230,7 +230,7 @@
     background-color: #876857;
 }
 
-.l-1-6 {
+/* .l-1-6 {
     background-color: #c6a595;
 }
 .l-2-6 {
@@ -247,6 +247,24 @@
 }
 .l-6-6 {
     background-color: #876857;
+} */
+.l-1-6 {
+    background-color: #ffffcc;
+}
+.l-2-6 {
+    background-color: #c7e9b4;
+}
+.l-3-6 {
+    background-color: #7fcdbb;
+}
+.l-4-6 {
+    background-color: #41b6c4;
+}
+.l-5-6 {
+    background-color: #2c7fb8;
+}
+.l-6-6 {
+    background-color: #40537b;
 }
 
 /*

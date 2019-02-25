@@ -312,15 +312,26 @@ export class MapaSectionService {
         // ['#E0D7CE', '#B1F383', '#00EB8D', '#00D0A5', '#00B5BA', '#4D6F82'],
         // ];
 
+        // const RANGE_COLORS = [
+        //     // '#576794',
+        //     '#876857',
+        //     // '#7d8092',
+        //     '#257e93',
+        //     '#33b8c2',
+        //     '#06aa70',
+        //     '#cadb7c',
+        //     '#c6a595',
+        // ];
+
         const RANGE_COLORS = [
             // '#576794',
-            '#876857',
+            '#40537b',
             // '#7d8092',
-            '#257e93',
-            '#33b8c2',
-            '#06aa70',
-            '#cadb7c',
-            '#c6a595',
+            '#2c7fb8',
+            '#41b6c4',
+            '#7fcdbb',
+            '#c7e9b4',
+            '#ffffcc',
         ];
 
         // const range = n ? RANGE_COLORS[n - 1] : RANGE_COLORS[0];

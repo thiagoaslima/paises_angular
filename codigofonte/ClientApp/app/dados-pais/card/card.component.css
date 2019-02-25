@@ -36,7 +36,7 @@
 .card__download-btn {
     float: right;
     margin-top: -3px;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: opacity 0.2s ease-out;
 }
 .card__download-btn:hover {
