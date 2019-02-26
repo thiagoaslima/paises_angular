@@ -1,5 +1,5 @@
 :host {
-    display: inline-block;
+    display: none;
 }
 
 [role='button'] {
@@ -27,6 +27,13 @@ span {
 [role='button']:hover {
     width: 102.5px;
     border-color: inherit;
+}
+
+/*desktop*/
+@media only screen and (min-width : 568px) {
+    :host {
+        display: inline-block;
+    }
 }
 
 @media print {
