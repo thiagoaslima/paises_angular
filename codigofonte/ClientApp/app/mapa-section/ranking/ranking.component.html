@@ -159,6 +159,7 @@
         <div class="ranking__comparar">
             <a
                 [routerLink]="['/mapa', 'comparar', pais?.slug]"
+                queryParamsHandling="preserve"
                 class="ranking__comparar-link"
                 >{{ 'Comparar países' | translate | async }}</a
             >
