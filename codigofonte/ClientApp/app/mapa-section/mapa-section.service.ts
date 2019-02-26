@@ -145,6 +145,8 @@ export class MapaSectionService {
                 return { ranking, faixas, divisores };
             }),
             map(({ ranking, faixas, divisores }) => {
+                debugger;
+
                 const initialState = {
                     ordem: [] as string[],
                     paises: {} as {
@@ -156,12 +158,9 @@ export class MapaSectionService {
                     },
                 };
 
-                let pos = 0;
-                let idxComp = 0;
-                let n = 0;
                 let lastPosicao: number;
                 const values = ranking.res.reduce(
-                    (agg: any, obj: any, idx: number) => {
+                    (agg: any, obj: any, idx: number, arr: any[]) => {
                         const pais = this._localidadeService.getPaisBySigla(
                             obj.localidade
                         );
@@ -170,18 +169,12 @@ export class MapaSectionService {
                             return agg;
                         }
 
-                        let posicao: number;
-                        if (idx === 0) {
-                            posicao = ++pos;
-                        } else if (ranking.res[idxComp].res === obj.res) {
-                            posicao = pos;
-                            n++;
-                            idxComp = idx;
-                        } else {
-                            posicao = ++pos + n;
-                            n = 0;
-                            idxComp = idx;
-                        }
+                        let posicao =
+                            idx === 0
+                                ? obj.ranking
+                                : obj.ranking === arr[idx - 1].ranking
+                                ? lastPosicao
+                                : agg.ordem.length + 1;
 
                         lastPosicao = posicao;
 
