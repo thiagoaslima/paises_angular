@@ -37,6 +37,7 @@ export enum CSS_CLASSES {
 })
 export class MapaMundiComponent implements OnInit, OnDestroy {
     @Input() link: string[] = [];
+
     @Input() dados: any = null;
 
     @Input()

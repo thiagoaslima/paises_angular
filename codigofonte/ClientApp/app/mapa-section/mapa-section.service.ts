@@ -109,7 +109,8 @@ export class MapaSectionService {
                             {},
                             _feature.properties.style,
                             {
-                                fillColor: values.faixas[idx],
+                                fillColor: `${values.faixas[idx]}`,
+                                className: `l-${6 - idx}-6`,
                             }
                         );
 

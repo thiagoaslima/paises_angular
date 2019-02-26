@@ -250,21 +250,27 @@
 } */
 .l-1-6 {
     background-color: #ffffcc;
+    fill: #ffffcc !important;
 }
 .l-2-6 {
     background-color: #c7e9b4;
+    fill: #c7e9b4 !important;
 }
 .l-3-6 {
     background-color: #7fcdbb;
+    fill: #7fcdbb !important;
 }
 .l-4-6 {
     background-color: #41b6c4;
+    fill: #41b6c4 !important;
 }
 .l-5-6 {
     background-color: #2c7fb8;
+    fill: #2c7fb8 !important;
 }
 .l-6-6 {
     background-color: #40537b;
+    fill: #40537b !important;
 }
 
 /*
