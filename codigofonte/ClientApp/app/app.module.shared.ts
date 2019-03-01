@@ -13,6 +13,16 @@ import { TranslateModule } from './translate/translate.module';
 import { CacheService } from './shared/cache/cache.service';
 import { CacheInterceptor } from './shared/cache/cache.interceptor';
 
+declare const window: any;
+
+export function getTranslation() {
+    if (!window) {
+        return {};
+    }
+
+    return window && window['TRANSLATION'];
+}
+
 @NgModule({
     declarations: [AppComponent],
     providers: [
@@ -46,11 +56,7 @@ import { CacheInterceptor } from './shared/cache/cache.interceptor';
                     fullname: 'Español',
                 },
             ],
-            dictionaries: {
-                pt: require('../locale/paises-pt.json'),
-                en: require('../locale/paises-en.json'),
-                es: require('../locale/paises-es.json'),
-            },
+            dictionaries: getTranslation(),
             enableTracing: false,
         }),
     ],
