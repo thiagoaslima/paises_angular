@@ -3,12 +3,15 @@ import { AnalyticsConfig } from './analytics.definitions';
 import { AnalyticsService } from './analytics.service';
 import { RouterModule } from '@angular/router';
 import { NoopAnalyticsService } from './noop-analytics.service';
+import { AnalyticsCustomEventDirective } from './analytics-custom-event.directive';
 
 export const analyticsConfig = new InjectionToken<AnalyticsConfig>(
     'analyticsConfig'
 );
 
 @NgModule({
+    declarations: [AnalyticsCustomEventDirective],
+    exports: [AnalyticsCustomEventDirective],
     imports: [RouterModule],
     providers: [],
 })
