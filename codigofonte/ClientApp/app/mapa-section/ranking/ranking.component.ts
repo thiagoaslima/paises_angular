@@ -37,6 +37,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     @Input()
     set indicador(obj: MetadataIndicador | null) {
         this.unidade = obj ? obj.unidade.identificador : '';
+        this.multiplicador = obj ? obj.unidade.multiplicador : 0;
         this.nomeIndicador = obj ? obj.indicador : '';
         this._indicador = obj;
     }
@@ -73,6 +74,7 @@ export class RankingComponent implements AfterViewInit, OnInit, OnDestroy {
     public paisSelecionado = '';
 
     unidade = '';
+    multiplicador = 0;
     nomeIndicador = '';
     tema$ = new Subject<number>();
     temas$ = this._paisesService.getTemas();
