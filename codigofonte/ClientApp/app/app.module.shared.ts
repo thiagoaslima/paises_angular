@@ -26,8 +26,8 @@ export function getTranslation() {
 @NgModule({
     declarations: [AppComponent],
     providers: [
-        CacheService,
-        { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
+        // CacheService,
+        // { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
         { provide: 'SPECIAL_VALUES', useValue: { cases, values } },
     ],
     imports: [
