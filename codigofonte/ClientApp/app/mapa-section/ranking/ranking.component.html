@@ -98,7 +98,8 @@
                         <!--i class="fa fa-sort-desc" aria-hidden="true"></i-->
                     </th>
                     <th class="ranking__tabela-cabecalho-celula celula-pequena">
-                        {{ unidade | translate | async }}
+                        {{ unidade | translate | async }} 
+                        <span *ngIf="multiplicador > 1" class="ranking__tabela-multiplicador"> x{{ multiplicador }} </span>
                     </th>
                 </tr>
                 <!--celula de destaque-->
