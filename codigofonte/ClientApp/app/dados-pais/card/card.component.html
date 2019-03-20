@@ -98,8 +98,9 @@
                 <p
                     class="card__fonte"
                     *ngFor="
-                        let fonte of ((tema?.valores)[graficoAtual]?.fontes)[0]
-                            ?.fontes
+                        let fonte of ((tema?.valores)[graficoAtual]?.fontes)[
+                            (tema?.valores)[graficoAtual]?.fontes?.length - 1
+                        ]?.fontes
                     "
                 >
                     <span class="card__fonte-titulo">{{
