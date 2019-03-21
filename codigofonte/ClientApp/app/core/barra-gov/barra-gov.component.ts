@@ -63,7 +63,11 @@ export class BarraGovComponent implements OnInit {
     }
 
     private loadScript(idg: number): void {
-        if (!this.SCRIPTS[idg] || this.SCRIPTS[idg].loaded) {
+        if (
+            !this.SCRIPTS[idg] ||
+            this.SCRIPTS[idg].loading ||
+            this.SCRIPTS[idg].loaded
+        ) {
             return;
         }
 
