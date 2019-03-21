@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+:host /deep/ #barra-brasil .conteudo-barra-brasil {
+    height: 30px;
+}
+
 @media print {
     :host {
         display: none !important;
